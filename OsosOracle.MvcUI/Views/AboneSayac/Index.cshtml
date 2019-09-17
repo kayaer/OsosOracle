@@ -1,0 +1,73 @@
+﻿@using OsosOracle.Framework.HtmlHelpers
+
+@{
+    ViewBag.Title = "Abone-Sayaç İşlemleri";
+}
+<div class="pull-right">
+    @Html.ButtonLink("Yeni Abone Sayaç  Ekle", "Ekle", "btn btn-xs btn-success modalizer", "fa-plus", htmlAttributes: new { Id = "btnYeniAboneSayacKayit" })
+</div>
+
+
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">Abone-Sayaç Listesi</div>
+            <div class="panel-body">
+                <table id="tblSayacModellistesi" class="table table-striped table-bordered table-hover table-responsive">
+                    <thead>
+                        <tr>
+                            <th>Kayıt No</th>
+                            <th>Model Adı </th>
+                            <th>Açıklama</th>
+                            <th style="width: 100px">İşlemler</th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+
+
+        AraFiltered();
+
+
+        function AraFiltered() {
+
+
+            $('#tblSayacModellistesi').dataTable({
+                'language': dataTableLanguage,
+                'processing': true,
+                'serverSide': true,
+                'destroy': true,
+                'columns': [
+                    { 'data': "KAYITNO" },
+                    { 'data': "TARIFE" },
+                    { 'data': "TARIFEKAYITNO" },
+                    { 'data': "Islemler", sortable: false }
+                ],
+                'ajax': {
+                    'type': 'POST',
+                    'data': $("#frmAra").serializeObject(),
+                    'url': "@Url.Action("DataTablesList", "AboneSayac")",
+                    'error': function (xhr, ajaxOptions, errorThrown) { ajaxMesajGoster(xhr.responseJSON.Mesaj); },
+                    'complete': function () { }
+                }
+
+            });
+
+        }
+
+    });
+
+
+</script>
+
+
+

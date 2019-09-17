@@ -1,0 +1,274 @@
+﻿@using OsosOracle.Framework.HtmlHelpers
+@model OsosOracle.MvcUI.Models.ENTSATISModels.ENTSATISKaydetModel
+
+@section panelHeading
+{
+
+}
+
+@using (Html.BeginForm("Yonet", "Satis", FormMethod.Post))
+{
+    @Html.HiddenFor(t => t.ENTSATIS.KAYITNO)
+
+    @Html.HiddenFor(t => t.HamData)
+
+    @Html.HiddenFor(t => t.PrmTarifeElkDetay.FIYAT1)
+    @Html.HiddenFor(t => t.PrmTarifeElkDetay.FIYAT2)
+    @Html.HiddenFor(t => t.PrmTarifeElkDetay.FIYAT3)
+    @Html.HiddenFor(t => t.PrmTarifeElkDetay.LIMIT1)
+    @Html.HiddenFor(t => t.PrmTarifeElkDetay.LIMIT2)
+    @Html.HiddenFor(t => t.PrmTarifeElkDetay.KREDIKATSAYI)
+    @Html.HiddenFor(t => t.PrmTarifeElkDetay.BAYRAM1GUN)
+    @Html.HiddenFor(t => t.PrmTarifeElkDetay.BAYRAM1AY)
+    @Html.HiddenFor(t => t.PrmTarifeElkDetay.BAYRAM1SURE)
+    @Html.HiddenFor(t => t.PrmTarifeElkDetay.BAYRAM2GUN)
+    @Html.HiddenFor(t => t.PrmTarifeElkDetay.BAYRAM2AY)
+    @Html.HiddenFor(t => t.PrmTarifeElkDetay.BAYRAM2SURE)
+    @Html.HiddenFor(t => t.PrmTarifeElkDetay.KRITIKKREDI)
+    @Html.HiddenFor(t => t.PrmTarifeElkDetay.YEDEKKREDI)
+    @Html.HiddenFor(t => t.PrmTarifeElkDetay.SABITUCRET)
+    @Html.HiddenFor(t => t.PrmTarifeElkDetay.SABAHSAAT)
+    @Html.HiddenFor(t => t.PrmTarifeElkDetay.AKSAMSAAT)
+    @Html.HiddenFor(t => t.PrmTarifeElkDetay.YUKLEMELIMIT)
+
+    @Html.HiddenFor(t => t.ElkKartYuklenecek.SayacSeriNo)
+    @Html.HiddenFor(t => t.ElkKartYuklenecek.YedekKredi)
+    @Html.HiddenFor(t => t.ElkKartYuklenecek.Fiyat1)
+    @Html.HiddenFor(t => t.ElkKartYuklenecek.Fiyat2)
+    @Html.HiddenFor(t => t.ElkKartYuklenecek.Fiyat3)
+    @Html.HiddenFor(t => t.ElkKartYuklenecek.Limit1)
+    @Html.HiddenFor(t => t.ElkKartYuklenecek.Limit2)
+    @Html.HiddenFor(t => t.ElkKartYuklenecek.YuklemeLimiti)
+    @Html.HiddenFor(t => t.ElkKartYuklenecek.AksamSaati)
+    @Html.HiddenFor(t => t.ElkKartYuklenecek.SabahSaati)
+    @Html.HiddenFor(t => t.ElkKartYuklenecek.FixCharge)
+    @Html.HiddenFor(t => t.ElkKartYuklenecek.Tatil1Gun)
+    @Html.HiddenFor(t => t.ElkKartYuklenecek.Tatil1Ay)
+    @Html.HiddenFor(t => t.ElkKartYuklenecek.Tatil1Sure)
+    @Html.HiddenFor(t => t.ElkKartYuklenecek.Tatil2Gun)
+    @Html.HiddenFor(t => t.ElkKartYuklenecek.Tatil2Ay)
+    @Html.HiddenFor(t => t.ElkKartYuklenecek.Tatil2Sure)
+    @Html.HiddenFor(t => t.ElkKartYuklenecek.KritikKredi)
+
+    <div class="form-group">
+        <button id="btnKartOku" type="button" class="btn btn-danger btn-sm">KartOku </button>
+        <button id="btnKartOkuTest" type="button" class="btn btn-danger btn-sm">KartOkuTest </button>
+    </div>
+
+
+    <div class="form-horizontal">
+        <div class="form-group form-group-sm">
+            <div class="col-sm-6">
+                <div id="okunanData"></div>
+              @*  @Html.Partial("KartOkunan")*@
+               @* @{ Html.RenderAction("KartOkunan");}*@
+            </div>
+            <div class="col-sm-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">Satis</div>
+                    <div class="panel-body">
+                        <div class="form-horizontal">
+                            <div class="form-group">
+                                <div class="col-sm-12">
+                                    <div class="col-sm-6">
+                                        @Html.TextBoxFor(t => t.GirilenTutar, new { @class = "form-control", placeholder = _T("Tutar"), Id = "txtTutar" })
+                                    </div>
+                                    <div class="col-sm-6">
+                                        @Html.TextBoxFor(t => t.ElkKartYuklenecek.AnaKredi, new { @class = "form-control", placeholder = _T("Kredi") })
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="form-group">
+                                <div class="col-sm-12">
+                                    <div class="col-sm-6">
+                                        @Html.TextBoxFor(t => t.ElkKartOkunan.AnaKredi, new { @class = "form-control", placeholder = _T("Ana Kredi") })
+                                    </div>
+                                    <div class="col-sm-6">
+                                        @Html.TextBoxFor(t => t.ElkKartOkunan.YedekKredi, new { @class = "form-control", placeholder = _T("Yedek Kredi") })
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-actions">
+
+                            <input type="submit" class="invisible" value="ElektrikHesapla" name="submitButton" id="ElektrikHesapla" />
+                            <input type="submit" class="invisible" value="KartOku" name="submitButton" id="KartOku" />
+                            <button type="submit" class="btn btn-danger btn-sm" name="submitButton" id="Kaydet" onclick="KrediYukle();">
+                                Kredi Yükle
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="clearfix">&nbsp;</div>
+
+
+            </div>
+
+        </div>
+    </div>
+}
+
+
+
+
+
+
+
+@section script
+{
+    <script type="text/javascript">
+        $(document).ready(function () {
+            //var elektrik = new ActiveXObject("SmartCard.SayacTurleri.Mcm");
+
+            $("#btnKartOku").click(function (e) {
+                var kart = AboneOku();
+                if (kart !== false) {
+                    KartDataParse(kart);
+                }
+
+            });
+
+            $("#btnKartOkuTest").click(function (e) {
+                var ogrenimUrl = "@Url.Action("KartOkunan", "Satis")";
+                $("#okunanData").load(ogrenimUrl, { hamdata: "1|111|0|b|*|1|0|0|0.0.0|1|1|1|1|0|0|0|0|0|0|10000|20000|40000|100|200|100|17|9|0|13|20|0|0|10000"  });
+
+            //    $.ajax({
+            //        url: '/Satis/KartOkunan',
+            //        method: "POST",
+            //        async: false,
+            //        data: {  hamdata: "1|111|0|b|*|1|0|0|0.0.0|1|1|1|1|0|0|0|0|0|0|10000|20000|40000|100|200|100|17|9|0|13|20|0|0|10000" },
+            //              success: function () {
+
+            //              }
+            //});
+
+
+            });
+
+            $('#txtTutar').blur(function () {
+                Hesapla();
+            });
+        });
+
+
+        function AboneOku() {
+            var elektrik = new ActiveXObject("SmartCard.SayacTurleri.ElektrikTr");
+            var result = false;
+            try {
+
+                var kartTip = elektrik.KartTipi();
+                if (kartTip === "Abone Kartı") {
+                    result = elektrik.AboneOku();
+                } else if (kartTip === "Bos Kart") {
+                    ajaxMesajGoster('Kart Boş');
+                } else {
+                    ajaxMesajGoster('Kart Bilgisi Alınamıyor');
+                }
+                return result;
+            } catch (e) {
+
+                ajaxMesajGoster(e);
+
+            }
+
+
+        }
+
+        function KartDataParse(hamdata) {
+            document.getElementById('HamData').value = hamdata;
+            document.getElementById('KartOku').click();
+        }
+        function Hesapla() {
+            document.getElementById('ElektrikHesapla').click();
+        }
+
+        function KrediYukle() {
+            var elektrik = new ActiveXObject("SmartCard.SayacTurleri.ElektrikTr");
+
+            try {
+
+                var kartTip = elektrik.KartTipi();
+                if (kartTip === "Abone Kartı") {
+                    KrediYukleKart();
+                } else if (kartTip === "Bos Kart") {
+                    ajaxMesajGoster('Kart Boş');
+                } else {
+                    ajaxMesajGoster('Kart Bilgisi Alınamıyor');
+                }
+            } catch (e) {
+
+                ajaxMesajGoster(e);
+            }
+        }
+
+        function KrediYukleKart() {
+            var elektrik = new ActiveXObject("SmartCard.SayacTurleri.ElektrikTr");
+            var result = false;
+            try {
+                result = elektrik.AboneYaz($("#@Html.IdFor(t => t.ElkKartYuklenecek.SayacSeriNo)").val(),
+                                           $("#@Html.IdFor(t => t.ElkKartYuklenecek.AnaKredi)").val(),
+                                           $("#@Html.IdFor(t => t.ElkKartYuklenecek.YedekKredi)").val(),
+                                           $("#@Html.IdFor(t => t.ElkKartYuklenecek.Fiyat1)").val(),
+                                           $("#@Html.IdFor(t => t.ElkKartYuklenecek.Fiyat2)").val(),
+                                           $("#@Html.IdFor(t => t.ElkKartYuklenecek.Fiyat3)").val(),
+                                           $("#@Html.IdFor(t => t.ElkKartYuklenecek.Limit1)").val(),
+                                           $("#@Html.IdFor(t => t.ElkKartYuklenecek.Limit2)").val(),
+                                           $("#@Html.IdFor(t => t.ElkKartYuklenecek.YuklemeLimiti)").val(),
+                                           $("#@Html.IdFor(t => t.ElkKartYuklenecek.AksamSaati)").val(),
+                                           $("#@Html.IdFor(t => t.ElkKartYuklenecek.SabahSaati)").val(),
+                                           $("#@Html.IdFor(t => t.ElkKartYuklenecek.HaftaSonuAksam)").val(),
+                                           $("#@Html.IdFor(t => t.ElkKartYuklenecek.FixCharge)").val(),
+                                           $("#@Html.IdFor(t => t.PrmTarifeElkDetay.BAYRAM1GUN)").val(),
+                                           $("#@Html.IdFor(t => t.PrmTarifeElkDetay.BAYRAM1AY)").val(),
+                                           $("#@Html.IdFor(t => t.PrmTarifeElkDetay.BAYRAM1SURE)").val(),
+                                           $("#@Html.IdFor(t => t.PrmTarifeElkDetay.BAYRAM2GUN)").val(),
+                                           $("#@Html.IdFor(t => t.PrmTarifeElkDetay.BAYRAM2AY)").val(),
+                                           $("#@Html.IdFor(t => t.PrmTarifeElkDetay.BAYRAM2SURE)").val(),
+                                           $("#@Html.IdFor(t => t.PrmTarifeElkDetay.KRITIKKREDI)").val()
+                );
+                if (result == "1") {
+                    ajaxMesajGoster('İşlem Başarılı');
+                } else {
+                    ajaxMesajGoster('İşlem Başarısız');
+                }
+            } catch (e) {
+                ajaxMesajGoster(e);
+            }
+        }
+
+
+
+        function Yazdir() {
+
+            console.log($("#@Html.IdFor(t => t.ElkKartYuklenecek.AnaKredi)").val());
+            console.log($("#@Html.IdFor(t => t.ElkKartYuklenecek.YedekKredi)").val());
+            console.log($("#@Html.IdFor(t => t.ElkKartYuklenecek.SayacSeriNo)").val());
+            console.log($("#@Html.IdFor(t => t.ElkKartYuklenecek.Fiyat1)").val());
+            console.log($("#@Html.IdFor(t => t.ElkKartYuklenecek.Fiyat2)").val());
+            console.log($("#@Html.IdFor(t => t.ElkKartYuklenecek.Fiyat3)").val());
+            console.log($("#@Html.IdFor(t => t.ElkKartYuklenecek.Limit1)").val());
+            console.log($("#@Html.IdFor(t => t.ElkKartYuklenecek.Limit2)").val());
+            console.log($("#@Html.IdFor(t => t.ElkKartYuklenecek.YuklemeLimiti)").val());
+            console.log($("#@Html.IdFor(t => t.ElkKartYuklenecek.AksamSaati)").val());
+            console.log($("#@Html.IdFor(t => t.ElkKartYuklenecek.SabahSaati)").val());
+            console.log($("#@Html.IdFor(t => t.ElkKartYuklenecek.FixCharge)").val());
+            console.log($("#@Html.IdFor(t => t.ElkKartYuklenecek.Tatil1Gun)").val());
+            console.log($("#@Html.IdFor(t => t.ElkKartYuklenecek.Tatil1Ay)").val());
+            console.log($("#@Html.IdFor(t => t.ElkKartYuklenecek.Tatil1Sure)").val());
+            console.log($("#@Html.IdFor(t => t.ElkKartYuklenecek.Tatil2Gun)").val());
+            console.log($("#@Html.IdFor(t => t.ElkKartYuklenecek.Tatil2Ay)").val());
+            console.log($("#@Html.IdFor(t => t.ElkKartYuklenecek.Tatil2Sure)").val());
+            console.log($("#@Html.IdFor(t => t.ElkKartYuklenecek.KritikKredi)").val());
+             console.log($("#@Html.IdFor(t => t.ElkKartYuklenecek.sayacBilgi)").val());
+
+        }
+
+    </script>
+
+
+}

@@ -1,0 +1,229 @@
+
+@using OsosOracle.Framework.HtmlHelpers
+@using OsosOracle.MvcUI.Infrastructure
+@using OsosOracle.MvcUI.Resources
+@model OsosOracle.MvcUI.Models.ENTSAYACSONDURUMSUModels.ENTSAYACSONDURUMSUIndexModel
+
+@section panelHeading{
+  @*  @Html.ButtonLink(_T("Yeni Sayaç Durum").ToString(), "Ekle", "btn btn-xs btn-success modalizer", "fa-plus")*@
+}
+
+@using (Html.BeginPortlet(Dil.SayacDurum, Dil.DetayliArama, "fa fa-search"))
+{
+<form id="frmAra" class="form-bordered">
+    <div class="form-group row">      
+        <div class="col-md-6">
+            @Html.AutoComplete(t => t.ENTSAYACSONDURUMSUAra.KAYITNO, Enums.AutocompleteFuction.SayacGetir, Enums.AutoCompleteType.List, Dil.Sayac)
+        </div>
+        
+    </div>
+    <div class="form-group row">
+        <div class="col-md-2">
+            <label>@Html.CheckBoxFor(t => t.ENTSAYACSONDURUMSUAra.ArizaCheck) @_T("Arıza")</label>
+        </div>
+        <div class="col-md-2">
+            <label>@Html.CheckBoxFor(t => t.ENTSAYACSONDURUMSUAra.AsiriTuketimCheck) @_T("Aşırı Tüketim")</label>
+        </div>
+        <div class="col-md-2">
+            <label>@Html.CheckBoxFor(t => t.ENTSAYACSONDURUMSUAra.Ceza1Check) @_T("Ceza1")</label>
+        </div>
+        <div class="col-md-2">
+            <label>@Html.CheckBoxFor(t => t.ENTSAYACSONDURUMSUAra.Ceza2Check) @_T("Ceza2")</label>
+        </div>
+        <div class="col-md-2">
+            <label>@Html.CheckBoxFor(t => t.ENTSAYACSONDURUMSUAra.Ceza3Check) @_T("Ceza3")</label>
+        </div>
+        <div class="col-md-2">
+            <label>@Html.CheckBoxFor(t => t.ENTSAYACSONDURUMSUAra.Ceza4Check) @_T("Ceza4")</label>
+        </div>
+    </div>
+    <div class="form-group row">
+        <div class="col-md-2">
+            <label>@Html.CheckBoxFor(t => t.ENTSAYACSONDURUMSUAra.MagnetCheck) @_T("Magnet")</label>
+        </div>
+        <div class="col-md-2">
+            <label>@Html.CheckBoxFor(t => t.ENTSAYACSONDURUMSUAra.PulseHataCheck) @_T("Pulse Hata")</label>
+        </div>
+        <div class="col-md-2">
+            <label>@Html.CheckBoxFor(t => t.ENTSAYACSONDURUMSUAra.RtcHataCheck) @_T("Rtc Hata")</label>
+        </div>
+        <div class="col-md-2">
+            <label>@Html.CheckBoxFor(t => t.ENTSAYACSONDURUMSUAra.MaxDebiCheck) @_T("Max Debi")</label>
+        </div>
+        <div class="col-md-2">
+            <label>@Html.CheckBoxFor(t => t.ENTSAYACSONDURUMSUAra.VanaCheck) @_T("Vana")</label>
+        </div>
+        <div class="col-md-2">
+            <label>@Html.CheckBoxFor(t => t.ENTSAYACSONDURUMSUAra.AnaPilBittiCheck) @_T("Ana Pil Bitti")</label>
+        </div>
+      
+    </div>
+    <div class="form-actions">
+        <button type="button" class="btn btn-primary btn-sm" id="btnAra"><i class="fa fa-search"></i> @Dil.Bul</button>
+    </div>
+</form>
+}
+
+
+<table id="tblENTSAYACSONDURUMSU" class="table table-striped table-bordered table-hover table-responsive">
+    <thead>
+        <tr>
+            <th>@Dil.SayacSeriNo</th>
+            <th>@Dil.SonOkumaTarihi</th>
+            <th>@Dil.CAP</th>
+            <th>@_T("Bağlantı Sayısı")</th>
+            @*<th>@_T("Limit1")</th>
+        <th>@_T("Limit2")</th>
+        <th>@_T("Limit3")</th>
+        <th>@_T("Limit4")</th>
+        <th>@_T("Kritik Kredi")</th>
+        <th>@_T("Fiyat1")</th>
+        <th>@_T("Fiyat2")</th>
+        <th>@_T("Fiyat3")</th>
+        <th>@_T("Fiyat4")</th>
+        <th>@_T("Fiyat5")</th>*@
+            @*<th>@_T("ARIZAA")</th>
+        <th>@_T("ARIZAK")</th>
+        <th>@_T("ARIZAP")</th>
+        <th>@_T("ARIZAPIL")</th>*@
+            <th>@_T("Borç")</th>
+            @*   <th>@_T("ITERASYON")</th>*@
+            <th>@_T("Pil Akım")</th>
+            <th>@_T("Pil Voltaj")</th>
+            @* <th>@_T("SONYUKLENENKREDITARIH")</th>*@
+            @*<th>@_T("ABONENO")</th>
+        <th>@_T("ABONETIP")</th>*@
+            @*<th>@_T("ILKPULSETARIH")</th>
+        <th>@_T("SONPULSETARIH")</th>
+        <th>@_T("BORCTARIH")</th>*@
+            <th>@_T("Max Debi")</th>
+            <th>@_T("Max Debi Sınır")</th>
+            <th>@_T("Dönem Gün")</th>
+            <th>@_T("Dönem")</th>
+            <th>@_T("Vana Açma Tarih")</th>
+            <th>@_T("Vana Kapama Tarih")</th>
+            <th>@Dil.SICAKLIK</th>
+            <th>@_T("Min Sıcaklık")</th>
+            <th>@_T("Max Sıcaklık")</th>
+            <th>@_T("Yangın Modu")</th>
+            <th>@_T("Aşırı Tüketim")</th>
+            <th>@_T("Arıza")</th>
+            @*<th>@_T("SONBILGILENDIRMEZAMANI")</th>
+        <th>@_T("PARAMETRE")</th>
+        <th>@_T("ACIKLAMA")</th>
+        <th>@_T("DURUM")</th>*@
+            <th>@_T("Kredi Bitti")</th>
+            <th>@_T("Kredi Az")</th>
+            <th>@_T("Ana Pil Bitti")</th>
+            <th>@_T("Ana Pil Zayıf")</th>
+            @* <th>@_T("SONBAGLANTIZAMAN")</th>*@
+
+            <th>@_T("Pulse Hata")</th>
+            <th>@_T("Rtc Hata")</th>
+            <th>@_T("Vana")</th>
+            <th>@_T("Ceza1")</th>
+            <th>@_T("Ceza2")</th>
+            <th>@_T("Ceza3")</th>
+            <th>@_T("Ceza4")</th>
+            <th>@_T("Magnet")</th>
+
+        </tr>
+    </thead>
+</table>
+@section script{
+    <script type="text/javascript">
+	$(document).ready(function () {
+		AraFiltered();
+		$("#btnAra").click(function(e) {
+				e.preventDefault();
+				AraFiltered();
+		});
+	});
+
+	function AraFiltered() {
+		$('#tblENTSAYACSONDURUMSU').dataTable({
+            dom: 'Blfrtip',
+            buttons: [
+                {
+                    extend: 'excel',
+                    action: newExportAction
+                }
+            ],
+            scrollX: true,
+            'language': dataTableLanguage,
+			'processing': true,
+			'serverSide': true,
+			'destroy': true,
+            'columns': [
+                {'data': "SayacSeriNo" },
+                {'data': "SONOKUMATARIH" },
+				{'data': "CAP"},
+				{'data': "BAGLANTISAYISI"},
+				//{'data': "LIMIT1"},
+				//{'data': "LIMIT2"},
+				//{'data': "LIMIT3"},
+				//{'data': "LIMIT4"},
+				//{'data': "KRITIKKREDI"},
+				//{'data': "FIYAT1"},
+				//{'data': "FIYAT2"},
+				//{'data': "FIYAT3"},
+				//{'data': "FIYAT4"},
+				//{'data': "FIYAT5"},
+				//{'data': "ARIZAA"},
+				//{'data': "ARIZAK"},
+				//{'data': "ARIZAP"},
+				//{'data': "ARIZAPIL"},
+				{'data': "BORC"},
+				//{'data': "ITERASYON"},
+				{'data': "PILAKIM"},
+				{'data': "PILVOLTAJ"},
+				//{'data': "SONYUKLENENKREDITARIH"},
+				//{'data': "ABONENO"},
+				//{'data': "ABONETIP"},
+				//{'data': "ILKPULSETARIH"},
+				//{'data': "SONPULSETARIH"},
+				//{'data': "BORCTARIH"},
+				{'data': "MAXDEBI"},
+				{'data': "MAXDEBISINIR"},
+				{'data': "DONEMGUN"},
+				{'data': "DONEM"},
+				{'data': "VANAACMATARIH"},
+				{'data': "VANAKAPAMATARIH"},
+				{'data': "SICAKLIK"},
+				{'data': "MINSICAKLIK"},
+				{'data': "MAXSICAKLIK"},
+				{'data': "YANGINMODU"},
+				{'data': "ASIRITUKETIM"},
+				{'data': "ARIZA"},
+				//{'data': "SONBILGILENDIRMEZAMANI"},
+				//{'data': "PARAMETRE"},
+				//{'data': "ACIKLAMA"},
+				//{'data': "DURUM"},
+				{'data': "KREDIBITTI"},
+				{'data': "KREDIAZ"},
+                {'data': "ANAPILBITTI" },
+                {'data': "ANAPILZAYIF" },
+				//{'data': "SONBAGLANTIZAMAN"},				
+				{'data': "PULSEHATA"},
+				{'data': "RTCHATA"},
+				{'data': "VANA"},
+				{'data': "CEZA1"},
+				{'data': "CEZA2"},
+				{'data': "CEZA3"},
+				{'data': "CEZA4"},
+				{'data': "MAGNET"}
+				
+			],
+			'ajax': {
+				'type': 'POST',
+				'data': $("#frmAra").serializeObject(),
+				'url': "@Url.Action("DataTablesList", "ENTSAYACSONDURUMSU")",
+				'error': function(xhr, ajaxOptions, errorThrown) { ajaxMesajGoster(xhr.responseJSON.Mesaj); },
+				'complete': function() { }
+		   }
+
+		});
+	 }
+
+    </script>
+}

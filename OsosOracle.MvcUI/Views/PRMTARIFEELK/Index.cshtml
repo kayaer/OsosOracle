@@ -1,0 +1,105 @@
+
+@using OsosOracle.Framework.HtmlHelpers
+@using OsosOracle.MvcUI.Infrastructure
+@model OsosOracle.MvcUI.Models.PRMTARIFEELKModels.PRMTARIFEELKIndexModel
+
+@section panelHeading{
+    @Html.ButtonLink(_T("Yeni Tarife").ToString(), "Ekle", "btn btn-xs btn-success modalizer", "fa-plus")
+}
+
+
+
+<table id="tblPRMTARIFEELK" class="table table-striped table-bordered table-hover table-responsive">
+    <thead>
+        <tr>
+            <th style="width: 30px">@_T("Id")</th>
+            <th>@_T("Kurum")</th>
+            <th>@_T("KREDIKATSAYI")</th>
+            <th>@_T("AD")</th>
+            <th>@_T("YEDEKKREDI")</th>
+            <th>@_T("KRITIKKREDI")</th>
+            <th>@_T("CARPAN")</th>
+            <th>@_T("ACIKLAMA")</th>
+            <th>@_T("DURUM")</th>
+            <th>@_T("FIYAT1")</th>
+            <th>@_T("FIYAT2")</th>
+            <th>@_T("FIYAT3")</th>
+            <th>@_T("LIMIT1")</th>
+            <th>@_T("LIMIT2")</th>
+            <th>@_T("YUKLEMELIMIT")</th>
+            <th>@_T("SABAHSAAT")</th>
+            <th>@_T("AKSAMSAAT")</th>
+            <th>@_T("HAFTASONUAKSAM")</th>
+            <th>@_T("SABITUCRET")</th>
+            <th>@_T("BAYRAM1GUN")</th>
+            <th>@_T("BAYRAM1AY")</th>
+            <th>@_T("BAYRAM1SURE")</th>
+            <th>@_T("BAYRAM2GUN")</th>
+            <th>@_T("BAYRAM2AY")</th>
+            <th>@_T("BAYRAM2SURE")</th>
+
+
+            <th style="width: 100px">@_T("İşlemler")</th>
+        </tr>
+    </thead>
+</table>
+@section script{
+    <script type="text/javascript">
+	$(document).ready(function () {
+		AraFiltered();
+		$("#btnAra").click(function(e) {
+				e.preventDefault();
+				AraFiltered();
+		});
+	});
+
+	function AraFiltered() {
+		$('#tblPRMTARIFEELK').dataTable({
+			'language': dataTableLanguage,
+			'processing': true,
+			'serverSide': true,
+			'destroy': true,
+            'columns': [
+                
+                {'data': "KAYITNO" },
+                {'data': "Kurum" },
+				{'data': "KREDIKATSAYI"},
+				{'data': "AD"},
+				{'data': "YEDEKKREDI"},
+				{'data': "KRITIKKREDI"},
+				{'data': "CARPAN"},
+				{'data': "ACIKLAMA"},
+				{'data': "DURUM"},
+				{'data': "FIYAT1"},
+				{'data': "FIYAT2"},
+				{'data': "FIYAT3"},
+				{'data': "LIMIT1"},
+				{'data': "LIMIT2"},
+				{'data': "YUKLEMELIMIT"},
+				{'data': "SABAHSAAT"},
+				{'data': "AKSAMSAAT"},
+				{'data': "HAFTASONUAKSAM"},
+				{'data': "SABITUCRET"},
+				{'data': "BAYRAM1GUN"},
+				{'data': "BAYRAM1AY"},
+				{'data': "BAYRAM1SURE"},
+				{'data': "BAYRAM2GUN"},
+				{'data': "BAYRAM2AY"},
+				{'data': "BAYRAM2SURE"},
+               
+
+				{'data': "Islemler", sortable: false}
+			],
+			'ajax': {
+				'type': 'POST',
+				'data': $("#frmAra").serializeObject(),
+				'url': "@Url.Action("DataTablesList", "PRMTARIFEELK")",
+				'error': function(xhr, ajaxOptions, errorThrown) { ajaxMesajGoster(xhr.responseJSON.Mesaj); },
+				'complete': function() { }
+		   }
+
+		});
+	 }
+
+    </script>
+}

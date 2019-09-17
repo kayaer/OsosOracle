@@ -1,0 +1,34 @@
+﻿@model OsosOracle.MvcUI.Models.ENTSATISModels.ElkKartOkunan
+
+<div class="panel panel-default">
+    <div class="panel-heading">Abone Bilgileri</div>
+    <div class="panel-body">
+        <div class="form-horizontal">
+            <div class="form-group">
+                <div class="col-sm-12">
+                    @Html.TextBoxFor(t => t.TarifeAdi, new { @class = "form-control", placeholder = _T("Tarife Adı") })
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-12">
+                    @Html.TextBoxFor(t => t.AboneNo, new { @class = "form-control", placeholder = _T("Abone No") })
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-12">
+                    @Html.TextBoxFor(t => t.SayacSeriNo, new { @class = "form-control", placeholder = _T("Sayaç Seri No") })
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-12">
+                    @Html.TextBoxFor(t => t.AnaKredi, new { @class = "form-control", placeholder = _T("Ana Kredi") })
+                </div>
+            </div><div class="form-group">
+                <div class="col-sm-12">
+                    @Html.TextBoxFor(t => t.YedekKredi, new { @class = "form-control", placeholder = _T("Yedek Kredi") })
+                </div>
+            </div>
+        </div>
+       
+    </div>
+</div>

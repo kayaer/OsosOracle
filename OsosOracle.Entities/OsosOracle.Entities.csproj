@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{77286593-40FA-440E-9C8C-2FBEC1B2A928}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OsosOracle.Entities</RootNamespace>
+    <AssemblyName>OsosOracle.Entities</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ComplexType\CONKURUMComplexTypes\CONKURUMAra.cs" />
+    <Compile Include="ComplexType\CONKURUMComplexTypes\CONKURUMDataTable.cs" />
+    <Compile Include="ComplexType\CONKURUMComplexTypes\CONKURUMDetay.cs" />
+    <Compile Include="ComplexType\CSTHUMARKAComplexTypes\CSTHUMARKAAra.cs" />
+    <Compile Include="ComplexType\CSTHUMARKAComplexTypes\CSTHUMARKADataTable.cs" />
+    <Compile Include="ComplexType\CSTHUMARKAComplexTypes\CSTHUMARKADetay.cs" />
+    <Compile Include="ComplexType\CSTHUMODELComplexTypes\CSTHUMODELAra.cs" />
+    <Compile Include="ComplexType\CSTHUMODELComplexTypes\CSTHUMODELDataTable.cs" />
+    <Compile Include="ComplexType\CSTHUMODELComplexTypes\CSTHUMODELDetay.cs" />
+    <Compile Include="ComplexType\CSTSAYACMODELComplexTypes\CSTSAYACMODELAra.cs" />
+    <Compile Include="ComplexType\CSTSAYACMODELComplexTypes\CSTSAYACMODELDataTable.cs" />
+    <Compile Include="ComplexType\CSTSAYACMODELComplexTypes\CSTSAYACMODELDetay.cs" />
+    <Compile Include="ComplexType\ENTABONEBILGIComplexTypes\ENTABONEBILGIAra.cs" />
+    <Compile Include="ComplexType\ENTABONEBILGIComplexTypes\ENTABONEBILGIDataTable.cs" />
+    <Compile Include="ComplexType\ENTABONEBILGIComplexTypes\ENTABONEBILGIDetay.cs" />
+    <Compile Include="ComplexType\ENTABONEComplexTypes\AboneAutoComplete.cs" />
+    <Compile Include="ComplexType\ENTABONEComplexTypes\AboneIslemleri.cs" />
+    <Compile Include="ComplexType\ENTABONEComplexTypes\ENTABONEAra.cs" />
+    <Compile Include="ComplexType\ENTABONEComplexTypes\ENTABONEDataTable.cs" />
+    <Compile Include="ComplexType\ENTABONEComplexTypes\ENTABONEDetay.cs" />
+    <Compile Include="ComplexType\ENTABONESAYACComplexTypes\ENTABONESAYACAra.cs" />
+    <Compile Include="ComplexType\ENTABONESAYACComplexTypes\ENTABONESAYACDataTable.cs" />
+    <Compile Include="ComplexType\ENTABONESAYACComplexTypes\ENTABONESAYACDetay.cs" />
+    <Compile Include="ComplexType\ENTHABERLESMEUNITESIComplexTypes\ENTHABERLESMEUNITESIAra.cs" />
+    <Compile Include="ComplexType\ENTHABERLESMEUNITESIComplexTypes\ENTHABERLESMEUNITESIDataTable.cs" />
+    <Compile Include="ComplexType\ENTHABERLESMEUNITESIComplexTypes\ENTHABERLESMEUNITESIDetay.cs" />
+    <Compile Include="ComplexType\ENTHUSAYACComplexTypes\ENTHUSAYACAra.cs" />
+    <Compile Include="ComplexType\ENTHUSAYACComplexTypes\ENTHUSAYACDataTable.cs" />
+    <Compile Include="ComplexType\ENTHUSAYACComplexTypes\ENTHUSAYACDetay.cs" />
+    <Compile Include="ComplexType\ENTKOMUTLARBEKLEYENComplexTypes\ENTKOMUTLARBEKLEYENAra.cs" />
+    <Compile Include="ComplexType\ENTKOMUTLARBEKLEYENComplexTypes\ENTKOMUTLARBEKLEYENDataTable.cs" />
+    <Compile Include="ComplexType\ENTKOMUTLARBEKLEYENComplexTypes\ENTKOMUTLARBEKLEYENDetay.cs" />
+    <Compile Include="ComplexType\ENTKOMUTLARSONUCLANANComplexTypes\ENTKOMUTLARSONUCLANANAra.cs" />
+    <Compile Include="ComplexType\ENTKOMUTLARSONUCLANANComplexTypes\ENTKOMUTLARSONUCLANANDataTable.cs" />
+    <Compile Include="ComplexType\ENTKOMUTLARSONUCLANANComplexTypes\ENTKOMUTLARSONUCLANANDetay.cs" />
+    <Compile Include="ComplexType\ENTKREDIKOMUTTAKIPComplexTypes\ENTKREDIKOMUTTAKIPAra.cs" />
+    <Compile Include="ComplexType\ENTKREDIKOMUTTAKIPComplexTypes\ENTKREDIKOMUTTAKIPDataTable.cs" />
+    <Compile Include="ComplexType\ENTKREDIKOMUTTAKIPComplexTypes\ENTKREDIKOMUTTAKIPDetay.cs" />
+    <Compile Include="ComplexType\ENTSATISComplexTypes\ENTSATISAra.cs" />
+    <Compile Include="ComplexType\ENTSATISComplexTypes\ENTSATISDataTable.cs" />
+    <Compile Include="ComplexType\ENTSATISComplexTypes\ENTSATISDetay.cs" />
+    <Compile Include="ComplexType\ENTSAYACComplexTypes\ENTSAYACAra.cs" />
+    <Compile Include="ComplexType\ENTSAYACComplexTypes\ENTSAYACDataTable.cs" />
+    <Compile Include="ComplexType\ENTSAYACComplexTypes\ENTSAYACDetay.cs" />
+    <Compile Include="ComplexType\ENTSAYACDURUMSUComplexTypes\ENTSAYACDURUMSUAra.cs" />
+    <Compile Include="ComplexType\ENTSAYACDURUMSUComplexTypes\ENTSAYACDURUMSUDataTable.cs" />
+    <Compile Include="ComplexType\ENTSAYACDURUMSUComplexTypes\ENTSAYACDURUMSUDetay.cs" />
+    <Compile Include="ComplexType\ENTSAYACSONDURUMSUComplexTypes\ENTSAYACSONDURUMSUAra.cs" />
+    <Compile Include="ComplexType\ENTSAYACSONDURUMSUComplexTypes\ENTSAYACSONDURUMSUDataTable.cs" />
+    <Compile Include="ComplexType\ENTSAYACSONDURUMSUComplexTypes\ENTSAYACSONDURUMSUDetay.cs" />
+    <Compile Include="ComplexType\ENTTUKETIMSUComplexTypes\ENTTUKETIMSUAra.cs" />
+    <Compile Include="ComplexType\ENTTUKETIMSUComplexTypes\ENTTUKETIMSUDataTable.cs" />
+    <Compile Include="ComplexType\ENTTUKETIMSUComplexTypes\ENTTUKETIMSUDetay.cs" />
+    <Compile Include="ComplexType\PRMTARIFEELKComplexTypes\PRMTARIFEELKAra.cs" />
+    <Compile Include="ComplexType\PRMTARIFEELKComplexTypes\PRMTARIFEELKDataTable.cs" />
+    <Compile Include="ComplexType\PRMTARIFEELKComplexTypes\PRMTARIFEELKDetay.cs" />
+    <Compile Include="ComplexType\PRMTARIFEGAZComplexTypes\PRMTARIFEGAZAra.cs" />
+    <Compile Include="ComplexType\PRMTARIFEGAZComplexTypes\PRMTARIFEGAZDataTable.cs" />
+    <Compile Include="ComplexType\PRMTARIFEGAZComplexTypes\PRMTARIFEGAZDetay.cs" />
+    <Compile Include="ComplexType\PRMTARIFEORTAKAVMComplexTypes\PRMTARIFEORTAKAVMAra.cs" />
+    <Compile Include="ComplexType\PRMTARIFEORTAKAVMComplexTypes\PRMTARIFEORTAKAVMDataTable.cs" />
+    <Compile Include="ComplexType\PRMTARIFEORTAKAVMComplexTypes\PRMTARIFEORTAKAVMDetay.cs" />
+    <Compile Include="ComplexType\PRMTARIFESUComplexTypes\PRMTARIFESUAra.cs" />
+    <Compile Include="ComplexType\PRMTARIFESUComplexTypes\PRMTARIFESUDataTable.cs" />
+    <Compile Include="ComplexType\PRMTARIFESUComplexTypes\PRMTARIFESUDetay.cs" />
+    <Compile Include="ComplexType\RPTDASHBOARDComplexTypes\RPTDASHBOARDAra.cs" />
+    <Compile Include="ComplexType\RPTDASHBOARDComplexTypes\RPTDASHBOARDDataTable.cs" />
+    <Compile Include="ComplexType\RPTDASHBOARDComplexTypes\RPTDASHBOARDDetay.cs" />
+    <Compile Include="ComplexType\SYSCSTOPERASYONComplexTypes\SYSCSTOPERASYONAra.cs" />
+    <Compile Include="ComplexType\SYSCSTOPERASYONComplexTypes\SYSCSTOPERASYONDataTable.cs" />
+    <Compile Include="ComplexType\SYSCSTOPERASYONComplexTypes\SYSCSTOPERASYONDetay.cs" />
+    <Compile Include="ComplexType\SYSGOREVComplexTypes\SYSGOREVAra.cs" />
+    <Compile Include="ComplexType\SYSGOREVComplexTypes\SYSGOREVDataTable.cs" />
+    <Compile Include="ComplexType\SYSGOREVComplexTypes\SYSGOREVDetay.cs" />
+    <Compile Include="ComplexType\SYSGOREVROLComplexTypes\SYSGOREVROLAra.cs" />
+    <Compile Include="ComplexType\SYSGOREVROLComplexTypes\SYSGOREVROLDataTable.cs" />
+    <Compile Include="ComplexType\SYSGOREVROLComplexTypes\SYSGOREVROLDetay.cs" />
+    <Compile Include="ComplexType\SYSKULLANICIComplexTypes\SYSKULLANICIAra.cs" />
+    <Compile Include="ComplexType\SYSKULLANICIComplexTypes\SYSKULLANICIDataTable.cs" />
+    <Compile Include="ComplexType\SYSKULLANICIComplexTypes\SYSKULLANICIDetay.cs" />
+    <Compile Include="ComplexType\SYSKULLANICIDETAYComplexTypes\SYSKULLANICIDETAYAra.cs" />
+    <Compile Include="ComplexType\SYSKULLANICIDETAYComplexTypes\SYSKULLANICIDETAYDataTable.cs" />
+    <Compile Include="ComplexType\SYSKULLANICIDETAYComplexTypes\SYSKULLANICIDETAYDetay.cs" />
+    <Compile Include="ComplexType\SYSMENUComplexTypes\SYSMENUAra.cs" />
+    <Compile Include="ComplexType\SYSMENUComplexTypes\SYSMENUDataTable.cs" />
+    <Compile Include="ComplexType\SYSMENUComplexTypes\SYSMENUDetay.cs" />
+    <Compile Include="ComplexType\SYSOPERASYONGOREVComplexTypes\SYSOPERASYONGOREVAra.cs" />
+    <Compile Include="ComplexType\SYSOPERASYONGOREVComplexTypes\SYSOPERASYONGOREVDataTable.cs" />
+    <Compile Include="ComplexType\SYSOPERASYONGOREVComplexTypes\SYSOPERASYONGOREVDetay.cs" />
+    <Compile Include="ComplexType\SYSROLComplexTypes\SYSROLAra.cs" />
+    <Compile Include="ComplexType\SYSROLComplexTypes\SYSROLDataTable.cs" />
+    <Compile Include="ComplexType\SYSROLComplexTypes\SYSROLDetay.cs" />
+    <Compile Include="ComplexType\SYSROLKULLANICIComplexTypes\SYSROLKULLANICIAra.cs" />
+    <Compile Include="ComplexType\SYSROLKULLANICIComplexTypes\SYSROLKULLANICIDataTable.cs" />
+    <Compile Include="ComplexType\SYSROLKULLANICIComplexTypes\SYSROLKULLANICIDetay.cs" />
+    <Compile Include="Concrete\CONKURUM.cs" />
+    <Compile Include="Concrete\CSTHUMARKA.cs" />
+    <Compile Include="Concrete\CSTHUMODEL.cs" />
+    <Compile Include="Concrete\CSTSAYACMODEL.cs" />
+    <Compile Include="Concrete\ENTABONE.cs" />
+    <Compile Include="Concrete\ENTABONEBILGI.cs" />
+    <Compile Include="Concrete\ENTABONESAYAC.cs" />
+    <Compile Include="Concrete\ENTHABERLESMEUNITESI.cs" />
+    <Compile Include="Concrete\ENTHUSAYAC.cs" />
+    <Compile Include="Concrete\ENTKOMUTLARBEKLEYEN.cs" />
+    <Compile Include="Concrete\ENTKOMUTLARSONUCLANAN.cs" />
+    <Compile Include="Concrete\ENTKREDIKOMUTTAKIP.cs" />
+    <Compile Include="Concrete\ENTSATIS.cs" />
+    <Compile Include="Concrete\ENTSAYAC.cs" />
+    <Compile Include="Concrete\ENTSAYACDURUMSU.cs" />
+    <Compile Include="Concrete\ENTSAYACSONDURUMSU.cs" />
+    <Compile Include="Concrete\ENTTUKETIMSU.cs" />
+    <Compile Include="Concrete\PRMTARIFEELK.cs" />
+    <Compile Include="Concrete\PRMTARIFEGAZ.cs" />
+    <Compile Include="Concrete\PRMTARIFEORTAKAVM.cs" />
+    <Compile Include="Concrete\PRMTARIFESU.cs" />
+    <Compile Include="Concrete\RPTDASHBOARD.cs" />
+    <Compile Include="Concrete\SYSCSTOPERASYON.cs" />
+    <Compile Include="Concrete\SYSGOREV.cs" />
+    <Compile Include="Concrete\SYSGOREVROL.cs" />
+    <Compile Include="Concrete\SYSKULLANICI.cs" />
+    <Compile Include="Concrete\SYSKULLANICIDETAY.cs" />
+    <Compile Include="Concrete\SYSMENU.cs" />
+    <Compile Include="Concrete\SYSOPERASYONGOREV.cs" />
+    <Compile Include="Concrete\SYSROL.cs" />
+    <Compile Include="Concrete\SYSROLKULLANICI.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\OsosOracle.Framework\OsosOracle.Framework.csproj">
+      <Project>{920236DA-26F5-4DCB-BBB7-DE3724BED359}</Project>
+      <Name>OsosOracle.Framework</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

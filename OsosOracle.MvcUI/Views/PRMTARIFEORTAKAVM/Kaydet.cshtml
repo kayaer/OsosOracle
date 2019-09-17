@@ -1,0 +1,175 @@
+
+@using OsosOracle.MvcUI.Infrastructure
+@using OsosOracle.Framework.HtmlHelpers
+@model OsosOracle.MvcUI.Models.PRMTARIFEORTAKAVMModels.PRMTARIFEORTAKAVMKaydetModel
+
+@section panelHeading
+{
+	
+}
+
+<div class="ajaxForm">
+
+	@using (Html.BeginForm("Kaydet", "PRMTARIFEORTAKAVM", FormMethod.Post))
+	{
+		@Html.AntiForgeryToken()
+		@Html.HiddenFor(t => t.PRMTARIFEORTAKAVM.KAYITNO)
+		@Html.HiddenFor(t => t.PRMTARIFEORTAKAVM.VERSIYON)
+		@Html.ValidationSummary(true)
+
+	         <div class="form-group">
+    @Html.TextBoxFor(t => t.PRMTARIFEORTAKAVM.AD, new { @class = "form-control int", placeholder = _T("AD") })
+    @Html.ValidationMessageFor(t => t.PRMTARIFEORTAKAVM.AD)
+
+    </div>
+
+       <div class="form-group">
+    @Html.TextBoxFor(t => t.PRMTARIFEORTAKAVM.YEDEKKREDI, new { @class = "form-control int", placeholder = _T("YEDEKKREDI") })
+    @Html.ValidationMessageFor(t => t.PRMTARIFEORTAKAVM.YEDEKKREDI)
+
+    </div>
+
+       <div class="form-group">
+    @Html.TextBoxFor(t => t.PRMTARIFEORTAKAVM.ACIKLAMA, new { @class = "form-control int", placeholder = _T("ACIKLAMA") })
+    @Html.ValidationMessageFor(t => t.PRMTARIFEORTAKAVM.ACIKLAMA)
+
+    </div>
+
+       <div class="form-group">
+    @Html.TextBoxFor(t => t.PRMTARIFEORTAKAVM.DURUM, new { @class = "form-control int", placeholder = _T("DURUM") })
+    @Html.ValidationMessageFor(t => t.PRMTARIFEORTAKAVM.DURUM)
+
+    </div>
+
+       <div class="form-group">
+    @Html.TextBoxFor(t => t.PRMTARIFEORTAKAVM.FIYAT1, new { @class = "form-control int", placeholder = _T("FIYAT1") })
+    @Html.ValidationMessageFor(t => t.PRMTARIFEORTAKAVM.FIYAT1)
+
+    </div>
+
+       <div class="form-group">
+    @Html.TextBoxFor(t => t.PRMTARIFEORTAKAVM.FIYAT2, new { @class = "form-control int", placeholder = _T("FIYAT2") })
+    @Html.ValidationMessageFor(t => t.PRMTARIFEORTAKAVM.FIYAT2)
+
+    </div>
+
+       <div class="form-group">
+    @Html.TextBoxFor(t => t.PRMTARIFEORTAKAVM.FIYAT3, new { @class = "form-control int", placeholder = _T("FIYAT3") })
+    @Html.ValidationMessageFor(t => t.PRMTARIFEORTAKAVM.FIYAT3)
+
+    </div>
+
+       <div class="form-group">
+    @Html.TextBoxFor(t => t.PRMTARIFEORTAKAVM.FIYAT4, new { @class = "form-control int", placeholder = _T("FIYAT4") })
+    @Html.ValidationMessageFor(t => t.PRMTARIFEORTAKAVM.FIYAT4)
+
+    </div>
+
+       <div class="form-group">
+    @Html.TextBoxFor(t => t.PRMTARIFEORTAKAVM.LIMIT1, new { @class = "form-control int", placeholder = _T("LIMIT1") })
+    @Html.ValidationMessageFor(t => t.PRMTARIFEORTAKAVM.LIMIT1)
+
+    </div>
+
+       <div class="form-group">
+    @Html.TextBoxFor(t => t.PRMTARIFEORTAKAVM.LIMIT2, new { @class = "form-control int", placeholder = _T("LIMIT2") })
+    @Html.ValidationMessageFor(t => t.PRMTARIFEORTAKAVM.LIMIT2)
+
+    </div>
+
+       <div class="form-group">
+    @Html.TextBoxFor(t => t.PRMTARIFEORTAKAVM.CARPAN, new { @class = "form-control int", placeholder = _T("CARPAN") })
+    @Html.ValidationMessageFor(t => t.PRMTARIFEORTAKAVM.CARPAN)
+
+    </div>
+
+       <div class="form-group">
+    @Html.TextBoxFor(t => t.PRMTARIFEORTAKAVM.SAYACCAP, new { @class = "form-control int", placeholder = _T("SAYACCAP") })
+    @Html.ValidationMessageFor(t => t.PRMTARIFEORTAKAVM.SAYACCAP)
+
+    </div>
+
+       <div class="form-group">
+    @Html.TextBoxFor(t => t.PRMTARIFEORTAKAVM.SAYACTARIH, new { @class = "form-control int", placeholder = _T("SAYACTARIH") })
+    @Html.ValidationMessageFor(t => t.PRMTARIFEORTAKAVM.SAYACTARIH)
+
+    </div>
+
+       <div class="form-group">
+    @Html.TextBoxFor(t => t.PRMTARIFEORTAKAVM.SAYACTIP, new { @class = "form-control int", placeholder = _T("SAYACTIP") })
+    @Html.ValidationMessageFor(t => t.PRMTARIFEORTAKAVM.SAYACTIP)
+
+    </div>
+
+       <div class="form-group">
+    @Html.TextBoxFor(t => t.PRMTARIFEORTAKAVM.TUKETIMKATSAYI, new { @class = "form-control int", placeholder = _T("TUKETIMKATSAYI") })
+    @Html.ValidationMessageFor(t => t.PRMTARIFEORTAKAVM.TUKETIMKATSAYI)
+
+    </div>
+
+       <div class="form-group">
+    @Html.TextBoxFor(t => t.PRMTARIFEORTAKAVM.KREDIKATSAYI, new { @class = "form-control int", placeholder = _T("KREDIKATSAYI") })
+    @Html.ValidationMessageFor(t => t.PRMTARIFEORTAKAVM.KREDIKATSAYI)
+
+    </div>
+
+       <div class="form-group">
+    @Html.TextBoxFor(t => t.PRMTARIFEORTAKAVM.BAYRAM1GUN, new { @class = "form-control int", placeholder = _T("BAYRAM1GUN") })
+    @Html.ValidationMessageFor(t => t.PRMTARIFEORTAKAVM.BAYRAM1GUN)
+
+    </div>
+
+       <div class="form-group">
+    @Html.TextBoxFor(t => t.PRMTARIFEORTAKAVM.BAYRAM1AY, new { @class = "form-control int", placeholder = _T("BAYRAM1AY") })
+    @Html.ValidationMessageFor(t => t.PRMTARIFEORTAKAVM.BAYRAM1AY)
+
+    </div>
+
+       <div class="form-group">
+    @Html.TextBoxFor(t => t.PRMTARIFEORTAKAVM.BAYRAM1SURE, new { @class = "form-control int", placeholder = _T("BAYRAM1SURE") })
+    @Html.ValidationMessageFor(t => t.PRMTARIFEORTAKAVM.BAYRAM1SURE)
+
+    </div>
+
+       <div class="form-group">
+    @Html.TextBoxFor(t => t.PRMTARIFEORTAKAVM.BAYRAM2GUN, new { @class = "form-control int", placeholder = _T("BAYRAM2GUN") })
+    @Html.ValidationMessageFor(t => t.PRMTARIFEORTAKAVM.BAYRAM2GUN)
+
+    </div>
+
+       <div class="form-group">
+    @Html.TextBoxFor(t => t.PRMTARIFEORTAKAVM.BAYRAM2AY, new { @class = "form-control int", placeholder = _T("BAYRAM2AY") })
+    @Html.ValidationMessageFor(t => t.PRMTARIFEORTAKAVM.BAYRAM2AY)
+
+    </div>
+
+       <div class="form-group">
+    @Html.TextBoxFor(t => t.PRMTARIFEORTAKAVM.BAYRAM2SURE, new { @class = "form-control int", placeholder = _T("BAYRAM2SURE") })
+    @Html.ValidationMessageFor(t => t.PRMTARIFEORTAKAVM.BAYRAM2SURE)
+
+    </div>
+
+       <div class="form-group">
+    @Html.AutoComplete(t => t.PRMTARIFEORTAKAVM.KURUMKAYITNO, Enums.AutocompleteFuction.PRMTARIFEORTAKAVMKURUMKAYITNOGetir, Enums.AutoCompleteType.List, _T("KURUMKAYITNO").ToString())
+    @Html.ValidationMessageFor(t => t.PRMTARIFEORTAKAVM.KURUMKAYITNO)
+
+    </div>
+
+
+	 
+		<div class="form-actions">
+			<button type="submit" class="btn btn-primary"><i class="fa fa-save"></i> @_T("Kaydet")</button>
+			@Html.ButtonLink(_T("Vazgeç").ToString(), "Index", "btn btn-xs btn-danger cancel", "fa-remove")
+		</div>
+	}
+</div>
+
+@section script
+{
+	<script type="text/javascript">
+		$(document).ready(function () {
+		//js kodunuzu buraya yazın	
+		});
+
+	</script>
+}

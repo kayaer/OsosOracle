@@ -1,0 +1,1146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Abone" xml:space="preserve">
+    <value>Subscriber</value>
+  </data>
+  <data name="AboneBilgileri" xml:space="preserve">
+    <value>Subscriber Information</value>
+  </data>
+  <data name="AboneIslemleri" xml:space="preserve">
+    <value>Subscriber Operation</value>
+  </data>
+  <data name="AbonelikTarihi" xml:space="preserve">
+    <value>Subcriber Creation Date</value>
+  </data>
+  <data name="AboneNo" xml:space="preserve">
+    <value>Subscriber Number</value>
+  </data>
+  <data name="AboneOku" xml:space="preserve">
+    <value>Read subscriber</value>
+  </data>
+  <data name="AboneTarih" xml:space="preserve">
+    <value>Subcriber Creation Date</value>
+  </data>
+  <data name="AboneTuru" xml:space="preserve">
+    <value>Subscriber Type</value>
+  </data>
+  <data name="AboneYap" xml:space="preserve">
+    <value>Create subscriber</value>
+  </data>
+  <data name="Acik" xml:space="preserve">
+    <value>Open</value>
+  </data>
+  <data name="Aciklama" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="Ad" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="Adres" xml:space="preserve">
+    <value>Address</value>
+  </data>
+  <data name="AksamSaati" xml:space="preserve">
+    <value>Evening Hour</value>
+  </data>
+  <data name="AnaKredi" xml:space="preserve">
+    <value>Main Credit</value>
+  </data>
+  <data name="ANAPILBITTI" xml:space="preserve">
+    <value>Out Of Battery</value>
+  </data>
+  <data name="ANAPILZAYIF" xml:space="preserve">
+    <value>Battery Low</value>
+  </data>
+  <data name="AnaSayfa" xml:space="preserve">
+    <value>Home</value>
+  </data>
+  <data name="Ara" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="AramaKriterleri" xml:space="preserve">
+    <value>Search Parameters</value>
+  </data>
+  <data name="Ariza" xml:space="preserve">
+    <value>Fault</value>
+  </data>
+  <data name="ARIZAA" xml:space="preserve">
+    <value>Error A</value>
+  </data>
+  <data name="ARIZAK" xml:space="preserve">
+    <value>Error K</value>
+  </data>
+  <data name="ArizaliSayaclar" xml:space="preserve">
+    <value>Faults Meters</value>
+  </data>
+  <data name="ARIZAP" xml:space="preserve">
+    <value>Error P</value>
+  </data>
+  <data name="ARIZAPIL" xml:space="preserve">
+    <value>Error Battery</value>
+  </data>
+  <data name="AsiriTuketim" xml:space="preserve">
+    <value>Over Consumption</value>
+  </data>
+  <data name="AvansOnay" xml:space="preserve">
+    <value>Advance Approval</value>
+  </data>
+  <data name="Ayar1Gonder" xml:space="preserve">
+    <value>Send Setting1</value>
+  </data>
+  <data name="Ayar2Gonder" xml:space="preserve">
+    <value>Send Setting2</value>
+  </data>
+  <data name="Az" xml:space="preserve">
+    <value>Low</value>
+  </data>
+  <data name="BaglantiOlanVeriOlmayacSayac" xml:space="preserve">
+    <value>With Connection But No Data Meters</value>
+  </data>
+  <data name="BAGLANTISAYISI" xml:space="preserve">
+    <value>Daily Connection Period</value>
+  </data>
+  <data name="Basarili" xml:space="preserve">
+    <value>Success</value>
+  </data>
+  <data name="Basarisiz" xml:space="preserve">
+    <value>UnSuccess</value>
+  </data>
+  <data name="BaskentGazSatis" xml:space="preserve">
+    <value>Başkent Gaz Satış Ekranı</value>
+  </data>
+  <data name="BaslangicTarih" xml:space="preserve">
+    <value>Start Date</value>
+  </data>
+  <data name="Bayram1Ay" xml:space="preserve">
+    <value>Holiday 1 Month</value>
+  </data>
+  <data name="Bayram1Gun" xml:space="preserve">
+    <value>Holiday 1 Day</value>
+  </data>
+  <data name="Bayram1Sure" xml:space="preserve">
+    <value>Holiday 1 Time</value>
+  </data>
+  <data name="Bayram2Ay" xml:space="preserve">
+    <value>Holiday 2 Month</value>
+  </data>
+  <data name="Bayram2Gun" xml:space="preserve">
+    <value>Holiday 2 Day</value>
+  </data>
+  <data name="Bayram2Sure" xml:space="preserve">
+    <value>Holiday 2 Time</value>
+  </data>
+  <data name="BayramGonder" xml:space="preserve">
+    <value>Set Out Of Shift</value>
+  </data>
+  <data name="BekleyenKomutlar" xml:space="preserve">
+    <value>Waiting Command</value>
+  </data>
+  <data name="Bekliyor" xml:space="preserve">
+    <value>Waiting</value>
+  </data>
+  <data name="BilgiKartiOku" xml:space="preserve">
+    <value>Read info card</value>
+  </data>
+  <data name="BilgiKartiYap" xml:space="preserve">
+    <value>Authority info card</value>
+  </data>
+  <data name="BilinmeyenKomut" xml:space="preserve">
+    <value>Unknown Command</value>
+  </data>
+  <data name="BirimFiyat" xml:space="preserve">
+    <value>Unit Price</value>
+  </data>
+  <data name="BitisTarih" xml:space="preserve">
+    <value>End Date</value>
+  </data>
+  <data name="Bitti" xml:space="preserve">
+    <value>Done</value>
+  </data>
+  <data name="BORC" xml:space="preserve">
+    <value>Debt</value>
+  </data>
+  <data name="CAP" xml:space="preserve">
+    <value>Meter Diameter</value>
+  </data>
+  <data name="Carpan" xml:space="preserve">
+    <value>Multiplier</value>
+  </data>
+  <data name="Cevap" xml:space="preserve">
+    <value>Answer</value>
+  </data>
+  <data name="Cevaplandı" xml:space="preserve">
+    <value>Resulted</value>
+  </data>
+  <data name="CEZA1" xml:space="preserve">
+    <value>Penalty1</value>
+  </data>
+  <data name="CEZA2" xml:space="preserve">
+    <value>Penalty2</value>
+  </data>
+  <data name="CEZA3" xml:space="preserve">
+    <value>Penalty3</value>
+  </data>
+  <data name="CEZA4" xml:space="preserve">
+    <value>Temperature Error</value>
+  </data>
+  <data name="CezaTemizle" xml:space="preserve">
+    <value>Clear penalty</value>
+  </data>
+  <data name="Cikis" xml:space="preserve">
+    <value>Exit</value>
+  </data>
+  <data name="DetayliRapor" xml:space="preserve">
+    <value>Detailed Report</value>
+  </data>
+  <data name="DonemBilgileri" xml:space="preserve">
+    <value>Period Information</value>
+  </data>
+  <data name="DonemGun" xml:space="preserve">
+    <value>Period Day</value>
+  </data>
+  <data name="Durum" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="Duzenle" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="Ekle" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="EkleSatis" xml:space="preserve">
+    <value>Add New Sales</value>
+  </data>
+  <data name="ElektrikKartSatis" xml:space="preserve">
+    <value>Electricity Sales</value>
+  </data>
+  <data name="ElektrikTarifeIslemleri" xml:space="preserve">
+    <value>Electric Tariff Operation</value>
+  </data>
+  <data name="ElektrikTarifesi" xml:space="preserve">
+    <value>Electricity</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="EnerjiDurumu" xml:space="preserve">
+    <value>Energy State</value>
+  </data>
+  <data name="EnterSatis" xml:space="preserve">
+    <value>Please enter the amount and press ENTER.</value>
+  </data>
+  <data name="Evet" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+  <data name="EvTelefonu" xml:space="preserve">
+    <value>Phone (Home)</value>
+  </data>
+  <data name="FIYAT1" xml:space="preserve">
+    <value>Price1</value>
+  </data>
+  <data name="FIYAT2" xml:space="preserve">
+    <value>Price2</value>
+  </data>
+  <data name="FIYAT3" xml:space="preserve">
+    <value>Price3</value>
+  </data>
+  <data name="FIYAT4" xml:space="preserve">
+    <value>Price4</value>
+  </data>
+  <data name="FIYAT5" xml:space="preserve">
+    <value>Price5</value>
+  </data>
+  <data name="FiyatGonder" xml:space="preserve">
+    <value>Set Price</value>
+  </data>
+  <data name="GazKartSatis" xml:space="preserve">
+    <value>Gas Card Sales</value>
+  </data>
+  <data name="GazTarifeEkle" xml:space="preserve">
+    <value>Add Gas Tariff</value>
+  </data>
+  <data name="GazTarifeIslemleri" xml:space="preserve">
+    <value>Gas Tariff Operations</value>
+  </data>
+  <data name="GazTarifesi" xml:space="preserve">
+    <value>Gas Tariff</value>
+  </data>
+  <data name="Gorev" xml:space="preserve">
+    <value>Assignment</value>
+  </data>
+  <data name="GorevAdi" xml:space="preserve">
+    <value>Task Name</value>
+  </data>
+  <data name="GorevIslemleri" xml:space="preserve">
+    <value>Assignment Processing</value>
+  </data>
+  <data name="GorevListesi" xml:space="preserve">
+    <value>Assignment List</value>
+  </data>
+  <data name="GorevRolAta" xml:space="preserve">
+    <value>Task-Rol Assignment</value>
+  </data>
+  <data name="GorevRolAtama" xml:space="preserve">
+    <value>Assignment to rol</value>
+  </data>
+  <data name="GrupBilgi" xml:space="preserve">
+    <value>Group İnformation</value>
+  </data>
+  <data name="GrupEkle" xml:space="preserve">
+    <value>Add Group</value>
+  </data>
+  <data name="GrupListesi" xml:space="preserve">
+    <value>Group List</value>
+  </data>
+  <data name="GunlukSayacBilgileri" xml:space="preserve">
+    <value>Daily Meter Consumption</value>
+  </data>
+  <data name="HaberlesenModem" xml:space="preserve">
+    <value>Dialog Modem</value>
+  </data>
+  <data name="HaberlesmeUnitesi" xml:space="preserve">
+    <value>Communication Unit</value>
+  </data>
+  <data name="haberlesmeUnitesiBilgi" xml:space="preserve">
+    <value>Communication Unit Information</value>
+  </data>
+  <data name="HaberlesmeUnitesiGrupBilgileri" xml:space="preserve">
+    <value>Communication Unit Group Information</value>
+  </data>
+  <data name="HaberlesmeUnitesiGrupListesi" xml:space="preserve">
+    <value>Communication Unit Group List</value>
+  </data>
+  <data name="HaberlesmeUnitesiIpNo" xml:space="preserve">
+    <value>Communication Unit Ip Number</value>
+  </data>
+  <data name="HaberlesmeUnitesiMarkalari" xml:space="preserve">
+    <value>Communication Unit Brand</value>
+  </data>
+  <data name="HaberlesmeUnitesiModeli" xml:space="preserve">
+    <value>Communication Unit Model</value>
+  </data>
+  <data name="HaberlesmeUnitesiSayacBilgileri" xml:space="preserve">
+    <value>Communication Unit - Meter Details</value>
+  </data>
+  <data name="HaberlesmeUnitesiSayacEkleme" xml:space="preserve">
+    <value>Communication Unit Add Meter</value>
+  </data>
+  <data name="HaberlesmeUnitesiSeriNo" xml:space="preserve">
+    <value>Communication Unit Serial No</value>
+  </data>
+  <data name="HaberlesmeUnitesiSeriNoRequired" xml:space="preserve">
+    <value>Communication Unit Serial Number Required</value>
+  </data>
+  <data name="HaberlesmeUnitesiSımNo" xml:space="preserve">
+    <value>Communication Unit Sım Number</value>
+  </data>
+  <data name="HaberlesmeUnitesiVeGrupIslemleri" xml:space="preserve">
+    <value>Communication Unit and Group Information</value>
+  </data>
+  <data name="HaberlesmeyenSayacListesi" xml:space="preserve">
+    <value>Non-communicating Meter List</value>
+  </data>
+  <data name="HaftaSonuAksam" xml:space="preserve">
+    <value>Weekend eve</value>
+  </data>
+  <data name="HARCANANKREDI" xml:space="preserve">
+    <value>Spent Credits</value>
+  </data>
+  <data name="Hayir" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="HGUN" xml:space="preserve">
+    <value>Day Of Week</value>
+  </data>
+  <data name="HibritSuTarifesi" xml:space="preserve">
+    <value>Hibrid Water Tariff</value>
+  </data>
+  <data name="HuEklendi" xml:space="preserve">
+    <value>Communication Unit Added</value>
+  </data>
+  <data name="HuModel" xml:space="preserve">
+    <value>Communication Unit Type</value>
+  </data>
+  <data name="HuSayacEkle" xml:space="preserve">
+    <value>Add Meter and CommunicationUnit Information</value>
+  </data>
+  <data name="HuSayacList" xml:space="preserve">
+    <value>List Meters</value>
+  </data>
+  <data name="iadeal" xml:space="preserve">
+    <value>Refund</value>
+  </data>
+  <data name="il" xml:space="preserve">
+    <value>City</value>
+  </data>
+  <data name="ilce" xml:space="preserve">
+    <value>County</value>
+  </data>
+  <data name="Ingilizce" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="Ip" xml:space="preserve">
+    <value>Ip</value>
+  </data>
+  <data name="Iptal" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="IsEmriOlusturuldu" xml:space="preserve">
+    <value>Work Order Created</value>
+  </data>
+  <data name="Islem" xml:space="preserve">
+    <value>Operation</value>
+  </data>
+  <data name="IslemTarihi" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="ITERASYON" xml:space="preserve">
+    <value>Iteration</value>
+  </data>
+  <data name="Kademe1Fiyat" xml:space="preserve">
+    <value>Level 1 Price</value>
+  </data>
+  <data name="Kademe2Fiyat" xml:space="preserve">
+    <value>Level 2 Price</value>
+  </data>
+  <data name="Kademe3Fiyat" xml:space="preserve">
+    <value>Level 3 Price</value>
+  </data>
+  <data name="Kademe4Fiyat" xml:space="preserve">
+    <value>Level 4 Price</value>
+  </data>
+  <data name="Kademe5Fiyat" xml:space="preserve">
+    <value>Level 5 Price</value>
+  </data>
+  <data name="KALANKREDI" xml:space="preserve">
+    <value>Remaining Credit</value>
+  </data>
+  <data name="KalibreGonder" xml:space="preserve">
+    <value>Set Caliber</value>
+  </data>
+  <data name="KalorimetreTarifeIslemleri" xml:space="preserve">
+    <value>Calorimeter Tariff Operation</value>
+  </data>
+  <data name="Kapali" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="Kapat" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="Kart" xml:space="preserve">
+    <value>Card</value>
+  </data>
+  <data name="KartBosalt" xml:space="preserve">
+    <value>Empty Card</value>
+  </data>
+  <data name="Karthazirla" xml:space="preserve">
+    <value>Create Subscriber Card</value>
+  </data>
+  <data name="KartIslemleri" xml:space="preserve">
+    <value>Card Operation</value>
+  </data>
+  <data name="KartliSatis" xml:space="preserve">
+    <value>Sales with Card</value>
+  </data>
+  <data name="KartOku" xml:space="preserve">
+    <value>Read Card</value>
+  </data>
+  <data name="KartTuruBul" xml:space="preserve">
+    <value>Find Card Type</value>
+  </data>
+  <data name="KayitNo" xml:space="preserve">
+    <value>Registration Id</value>
+  </data>
+  <data name="KimlikNo" xml:space="preserve">
+    <value>Citizenship Number</value>
+  </data>
+  <data name="KisiselBilgileri" xml:space="preserve">
+    <value>Subscriber Personel Information</value>
+  </data>
+  <data name="Komut" xml:space="preserve">
+    <value>Command</value>
+  </data>
+  <data name="KomutAciklama" xml:space="preserve">
+    <value>Command Description</value>
+  </data>
+  <data name="KomutGonder" xml:space="preserve">
+    <value>Send Command</value>
+  </data>
+  <data name="KomutIslemleri" xml:space="preserve">
+    <value>Command Operations</value>
+  </data>
+  <data name="Kredi" xml:space="preserve">
+    <value>Credit</value>
+  </data>
+  <data name="KREDIAZ" xml:space="preserve">
+    <value>Low Credit</value>
+  </data>
+  <data name="KREDIBITTI" xml:space="preserve">
+    <value>OUT OF CREDIT</value>
+  </data>
+  <data name="KrediCarpan" xml:space="preserve">
+    <value>Credit Multiplier</value>
+  </data>
+  <data name="KrediKatSayisi" xml:space="preserve">
+    <value>Credit Ratio</value>
+  </data>
+  <data name="KrediKomutTakip" xml:space="preserve">
+    <value>Credit Command</value>
+  </data>
+  <data name="KrediOku" xml:space="preserve">
+    <value>Read credit</value>
+  </data>
+  <data name="KrediSatisBilgileri" xml:space="preserve">
+    <value>Credit Sales Information</value>
+  </data>
+  <data name="KredisiAzalanSayaclar" xml:space="preserve">
+    <value>Credit Reduced Meters</value>
+  </data>
+  <data name="KredisiBitenSayaclar" xml:space="preserve">
+    <value>Credits Finished Meters</value>
+  </data>
+  <data name="KrediSifirla" xml:space="preserve">
+    <value>Reset Credit</value>
+  </data>
+  <data name="KrediYukle" xml:space="preserve">
+    <value>Load credit</value>
+  </data>
+  <data name="KRITIKKREDI" xml:space="preserve">
+    <value>Critical Credit</value>
+  </data>
+  <data name="Kullanici" xml:space="preserve">
+    <value>User</value>
+  </data>
+  <data name="KullaniciAdi" xml:space="preserve">
+    <value>User Name</value>
+  </data>
+  <data name="KullaniciAra" xml:space="preserve">
+    <value>Search User </value>
+  </data>
+  <data name="KullaniciBilgileri" xml:space="preserve">
+    <value>User Information</value>
+  </data>
+  <data name="KullaniciEkle" xml:space="preserve">
+    <value>Add User</value>
+  </data>
+  <data name="KullaniciIslemleri" xml:space="preserve">
+    <value>User Operation</value>
+  </data>
+  <data name="KullaniciListesi" xml:space="preserve">
+    <value>User List</value>
+  </data>
+  <data name="KullaniciRolEkle" xml:space="preserve">
+    <value>Assign Role to User</value>
+  </data>
+  <data name="KullaniciSayfam" xml:space="preserve">
+    <value>My Profile</value>
+  </data>
+  <data name="Kurum" xml:space="preserve">
+    <value>Organization</value>
+  </data>
+  <data name="KurumEkle" xml:space="preserve">
+    <value>Add Organization</value>
+  </data>
+  <data name="LIMIT1" xml:space="preserve">
+    <value>Limit 1</value>
+  </data>
+  <data name="LIMIT2" xml:space="preserve">
+    <value>Limit 2</value>
+  </data>
+  <data name="LIMIT3" xml:space="preserve">
+    <value>Limit 3</value>
+  </data>
+  <data name="LIMIT4" xml:space="preserve">
+    <value>Limit 4</value>
+  </data>
+  <data name="LimitGonder" xml:space="preserve">
+    <value>Set Limit</value>
+  </data>
+  <data name="Listele" xml:space="preserve">
+    <value>List</value>
+  </data>
+  <data name="LogAl" xml:space="preserve">
+    <value>Take Log</value>
+  </data>
+  <data name="LogIste" xml:space="preserve">
+    <value>Get Log</value>
+  </data>
+  <data name="Magnet" xml:space="preserve">
+    <value>Magnet</value>
+  </data>
+  <data name="Mahalle" xml:space="preserve">
+    <value>District</value>
+  </data>
+  <data name="MakbuzNo" xml:space="preserve">
+    <value>Receipt Number</value>
+  </data>
+  <data name="MAXDEBI" xml:space="preserve">
+    <value>Max Flow</value>
+  </data>
+  <data name="MAXSICAKLIK" xml:space="preserve">
+    <value>Maximum Temperature</value>
+  </data>
+  <data name="McmUretim" xml:space="preserve">
+    <value>Mcm Üretim</value>
+  </data>
+  <data name="Mekanik" xml:space="preserve">
+    <value>Mechanical</value>
+  </data>
+  <data name="MINSICAKLIK" xml:space="preserve">
+    <value>Minumum Temperature</value>
+  </data>
+  <data name="ModemCezaDurumu" xml:space="preserve">
+    <value>Modem penalty</value>
+  </data>
+  <data name="ModemeBagliSayacListesi" xml:space="preserve">
+    <value>Connection With Modem Meter List</value>
+  </data>
+  <data name="ModemEkle" xml:space="preserve">
+    <value>Add Communication Unit</value>
+  </data>
+  <data name="ModemGrupIslemleri" xml:space="preserve">
+    <value>Communication Group Operation</value>
+  </data>
+  <data name="ModemIslemleri" xml:space="preserve">
+    <value>Communication Unit Operation</value>
+  </data>
+  <data name="ModemSayacEkle" xml:space="preserve">
+    <value>Haberleşme Ünitesi Sayaç Ekleme</value>
+  </data>
+  <data name="ModemSayacList" xml:space="preserve">
+    <value>Haberleşme Ünitesine Bağlı Sayaçlar</value>
+  </data>
+  <data name="ModemSayisi" xml:space="preserve">
+    <value>Modem Number</value>
+  </data>
+  <data name="NegatifKrediYukle" xml:space="preserve">
+    <value>Load Negative Credit</value>
+  </data>
+  <data name="OKUMATARIH" xml:space="preserve">
+    <value>Reading Date</value>
+  </data>
+  <data name="OkunanSayac" xml:space="preserve">
+    <value>Reading Meter</value>
+  </data>
+  <data name="OlusturmaTarihi" xml:space="preserve">
+    <value>Created Date</value>
+  </data>
+  <data name="OnlineKrediYukle" xml:space="preserve">
+    <value>Make Online Sales</value>
+  </data>
+  <data name="OnlineSatis" xml:space="preserve">
+    <value>Online Sales</value>
+  </data>
+  <data name="Operasyon" xml:space="preserve">
+    <value>Operation</value>
+  </data>
+  <data name="OperasyonIslemleri" xml:space="preserve">
+    <value>Operation Processing</value>
+  </data>
+  <data name="OperasyonListesi" xml:space="preserve">
+    <value>Operation List</value>
+  </data>
+  <data name="OrtakTarife" xml:space="preserve">
+    <value>Common Tariff</value>
+  </data>
+  <data name="Periyot" xml:space="preserve">
+    <value>Period</value>
+  </data>
+  <data name="Pil" xml:space="preserve">
+    <value>Battery</value>
+  </data>
+  <data name="PILAKIM" xml:space="preserve">
+    <value>Battery Voltage</value>
+  </data>
+  <data name="PiliBitenSayaclar" xml:space="preserve">
+    <value>Battery Exhausted Meters</value>
+  </data>
+  <data name="PilKapakDurumu" xml:space="preserve">
+    <value>Battery Cover</value>
+  </data>
+  <data name="PILVOLTAJ" xml:space="preserve">
+    <value>UCAP Voltage</value>
+  </data>
+  <data name="PULSEHATA" xml:space="preserve">
+    <value>Pulse Error</value>
+  </data>
+  <data name="Rapor" xml:space="preserve">
+    <value>Report</value>
+  </data>
+  <data name="RaporListesi" xml:space="preserve">
+    <value>Report List</value>
+  </data>
+  <data name="Rol" xml:space="preserve">
+    <value>Rol</value>
+  </data>
+  <data name="RolEkle" xml:space="preserve">
+    <value>Add Role</value>
+  </data>
+  <data name="RolIslemleri" xml:space="preserve">
+    <value>Rol Processing</value>
+  </data>
+  <data name="RolKullaniciIslemleri" xml:space="preserve">
+    <value>Rol-User Processing</value>
+  </data>
+  <data name="RolListesi" xml:space="preserve">
+    <value>Rol List</value>
+  </data>
+  <data name="RTCHATA" xml:space="preserve">
+    <value>Rtc Error</value>
+  </data>
+  <data name="SabahSaati" xml:space="preserve">
+    <value>Morning Hour</value>
+  </data>
+  <data name="SabitUcret" xml:space="preserve">
+    <value>Fix Charge</value>
+  </data>
+  <data name="Satis" xml:space="preserve">
+    <value>Sales</value>
+  </data>
+  <data name="SatisAra" xml:space="preserve">
+    <value>Search Sale</value>
+  </data>
+  <data name="SatisBilgileri" xml:space="preserve">
+    <value>Sales Info</value>
+  </data>
+  <data name="SatisHareketkeri" xml:space="preserve">
+    <value>Purchases</value>
+  </data>
+  <data name="SatisIslemleri" xml:space="preserve">
+    <value>Sales Operation</value>
+  </data>
+  <data name="SatisKayitNo" xml:space="preserve">
+    <value>Sales Id</value>
+  </data>
+  <data name="SatisTarih" xml:space="preserve">
+    <value>Date of Sale</value>
+  </data>
+  <data name="Sayac" xml:space="preserve">
+    <value>Meter</value>
+  </data>
+  <data name="SayacAra" xml:space="preserve">
+    <value>Meter Search</value>
+  </data>
+  <data name="SayacBilgileri" xml:space="preserve">
+    <value>Meter Information</value>
+  </data>
+  <data name="SayacCeza" xml:space="preserve">
+    <value>Meter Penalty</value>
+  </data>
+  <data name="SayacDurum" xml:space="preserve">
+    <value>Meter Status</value>
+  </data>
+  <data name="SayacEkle" xml:space="preserve">
+    <value>Add Meter</value>
+  </data>
+  <data name="SayacGrupBilgileri" xml:space="preserve">
+    <value>Meters Group Information</value>
+  </data>
+  <data name="SayacGrupIslemleri" xml:space="preserve">
+    <value>Meter and Group Operations</value>
+  </data>
+  <data name="SayacGrupListesi" xml:space="preserve">
+    <value>Meter Group List</value>
+  </data>
+  <data name="SAYACID" xml:space="preserve">
+    <value>Meter Id</value>
+  </data>
+  <data name="SayacIslemleri" xml:space="preserve">
+    <value>Meter Operation</value>
+  </data>
+  <data name="SayacListesi" xml:space="preserve">
+    <value>Meter List</value>
+  </data>
+  <data name="SayacModel" xml:space="preserve">
+    <value>Meter Model</value>
+  </data>
+  <data name="SayacMontajTarih" xml:space="preserve">
+    <value>Meter Installation Date</value>
+  </data>
+  <data name="SayacRaporlari" xml:space="preserve">
+    <value>Meter Report</value>
+  </data>
+  <data name="SayacSayisi" xml:space="preserve">
+    <value>Meter Number</value>
+  </data>
+  <data name="SayacSeriNo" xml:space="preserve">
+    <value>Meter Serial Number</value>
+  </data>
+  <data name="SayacSonDurum" xml:space="preserve">
+    <value>Meter Status</value>
+  </data>
+  <data name="SayacTarifeBilgileri" xml:space="preserve">
+    <value>Meter &amp; Tariff Information</value>
+  </data>
+  <data name="SAYACTARIH" xml:space="preserve">
+    <value>Meter Date</value>
+  </data>
+  <data name="SayacVanaAc" xml:space="preserve">
+    <value>Open Valve</value>
+  </data>
+  <data name="SayacVanaKapat" xml:space="preserve">
+    <value>Close Valve</value>
+  </data>
+  <data name="SayacVerileri" xml:space="preserve">
+    <value>Meter Data</value>
+  </data>
+  <data name="Sec" xml:space="preserve">
+    <value>Select</value>
+  </data>
+  <data name="SeciliSayaclariEkle" xml:space="preserve">
+    <value>Add Selected Meters</value>
+  </data>
+  <data name="Seciniz" xml:space="preserve">
+    <value>Choose</value>
+  </data>
+  <data name="ServerBaglantiPeriyot" xml:space="preserve">
+    <value>Add server connection period</value>
+  </data>
+  <data name="ServerIpGonder" xml:space="preserve">
+    <value>Send Server Ip</value>
+  </data>
+  <data name="SICAKLIK" xml:space="preserve">
+    <value>Temperature</value>
+  </data>
+  <data name="SicaklikHata" xml:space="preserve">
+    <value>Temperature Error</value>
+  </data>
+  <data name="Sifre" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="Sil" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="SimTelNo" xml:space="preserve">
+    <value>Gsm Number</value>
+  </data>
+  <data name="SistemMesajlari" xml:space="preserve">
+    <value>System Messages</value>
+  </data>
+  <data name="SonHaberlesmeTarihi" xml:space="preserve">
+    <value>Date of last communication </value>
+  </data>
+  <data name="SonOkumaTarihi" xml:space="preserve">
+    <value>Last Reading Date</value>
+  </data>
+  <data name="Sonuc" xml:space="preserve">
+    <value>Result</value>
+  </data>
+  <data name="SonuclananKomutlar" xml:space="preserve">
+    <value>Resulted Command</value>
+  </data>
+  <data name="SONYUKLENENKREDITARIH" xml:space="preserve">
+    <value>Last Uploaded Credit Date</value>
+  </data>
+  <data name="Soyad" xml:space="preserve">
+    <value>Surname</value>
+  </data>
+  <data name="SunucuBaglantiPeriyot" xml:space="preserve">
+    <value>Server Connection Period</value>
+  </data>
+  <data name="SuTarifesi" xml:space="preserve">
+    <value>Water Tariff</value>
+  </data>
+  <data name="Tarife" xml:space="preserve">
+    <value>Tariff</value>
+  </data>
+  <data name="TarifeAdi" xml:space="preserve">
+    <value>Tariff Name</value>
+  </data>
+  <data name="TarifeEkle" xml:space="preserve">
+    <value>Add Tariff</value>
+  </data>
+  <data name="TarifeIslemleri" xml:space="preserve">
+    <value>Tariff Operation</value>
+  </data>
+  <data name="TarifeTuru" xml:space="preserve">
+    <value>Tariff</value>
+  </data>
+  <data name="TelefonNumarasi" xml:space="preserve">
+    <value>Phone Number</value>
+  </data>
+  <data name="ToplamTuketim" xml:space="preserve">
+    <value>Total Consumption</value>
+  </data>
+  <data name="TUKETIM" xml:space="preserve">
+    <value>Consumption</value>
+  </data>
+  <data name="Tuketim1" xml:space="preserve">
+    <value>Consumption1</value>
+  </data>
+  <data name="Tuketim2" xml:space="preserve">
+    <value>Consumption2</value>
+  </data>
+  <data name="Tuketim3" xml:space="preserve">
+    <value>Consumption3</value>
+  </data>
+  <data name="Tuketim4" xml:space="preserve">
+    <value>Consumption4</value>
+  </data>
+  <data name="TuketimKatsayisi" xml:space="preserve">
+    <value>Consumption Ratio</value>
+  </data>
+  <data name="TuketimLimiti" xml:space="preserve">
+    <value>Consumption Limit</value>
+  </data>
+  <data name="TumSayaclar" xml:space="preserve">
+    <value>All Meters</value>
+  </data>
+  <data name="Turkce" xml:space="preserve">
+    <value>Turkish</value>
+  </data>
+  <data name="Tutar" xml:space="preserve">
+    <value>Price</value>
+  </data>
+  <data name="Uretim" xml:space="preserve">
+    <value>Production</value>
+  </data>
+  <data name="UretimTest" xml:space="preserve">
+    <value>Production Operation</value>
+  </data>
+  <data name="VANA" xml:space="preserve">
+    <value>Valve</value>
+  </data>
+  <data name="VANAACMATARIH" xml:space="preserve">
+    <value>Valve Open Date</value>
+  </data>
+  <data name="VANAKAPAMATARIH" xml:space="preserve">
+    <value>Valve Close Date</value>
+  </data>
+  <data name="VanaKontrol" xml:space="preserve">
+    <value>Valve Control</value>
+  </data>
+  <data name="VanaPulseSure" xml:space="preserve">
+    <value>Valve pulse duration</value>
+  </data>
+  <data name="Var" xml:space="preserve">
+    <value>Available</value>
+  </data>
+  <data name="YanginModSuresi" xml:space="preserve">
+    <value>Fire Mode Duration</value>
+  </data>
+  <data name="YANGINMODU" xml:space="preserve">
+    <value>Fire Mode</value>
+  </data>
+  <data name="YazilimVersiyon" xml:space="preserve">
+    <value>Software Version</value>
+  </data>
+  <data name="YazSaati" xml:space="preserve">
+    <value>Daylight saving time</value>
+  </data>
+  <data name="YedekKredi" xml:space="preserve">
+    <value>Reserve Credit</value>
+  </data>
+  <data name="YeniGorevEkle" xml:space="preserve">
+    <value>Add New Task</value>
+  </data>
+  <data name="YeniKullaniciEkle" xml:space="preserve">
+    <value>Add New User</value>
+  </data>
+  <data name="YetkiAc" xml:space="preserve">
+    <value>Authority Open Card</value>
+  </data>
+  <data name="YetkiAcmaKartiYap" xml:space="preserve">
+    <value>Authority Open Card</value>
+  </data>
+  <data name="YetkiHazirla" xml:space="preserve">
+    <value>Prepare Authority Card</value>
+  </data>
+  <data name="YetkiIadeKartiYap" xml:space="preserve">
+    <value>Make Authorization Card prepare to return</value>
+  </data>
+  <data name="Yetkiiptal" xml:space="preserve">
+    <value>Authority Cancelation Card</value>
+  </data>
+  <data name="YetkiIslemleri" xml:space="preserve">
+    <value>Authorization Operations</value>
+  </data>
+  <data name="YetkiKapamaKartiYap" xml:space="preserve">
+    <value>Authority Close Card</value>
+  </data>
+  <data name="Yetkisiz" xml:space="preserve">
+    <value>Unauthorised</value>
+  </data>
+  <data name="Yonetim" xml:space="preserve">
+    <value>Management</value>
+  </data>
+  <data name="YuklemeLimit" xml:space="preserve">
+    <value>Loading limit</value>
+  </data>
+  <data name="İyi" xml:space="preserve">
+    <value>Fine</value>
+  </data>
+  <data name="Hosgeldiniz" xml:space="preserve">
+    <value>Welcome</value>
+  </data>
+  <data name="AboneArama" xml:space="preserve">
+    <value>Subscriber Search</value>
+  </data>
+  <data name="AboneListesi" xml:space="preserve">
+    <value>Subscriber List</value>
+  </data>
+  <data name="Bul" xml:space="preserve">
+    <value>Find</value>
+  </data>
+  <data name="YeniAboneEkle" xml:space="preserve">
+    <value>Add New Subscriber</value>
+  </data>
+  <data name="SayacTipi" xml:space="preserve">
+    <value>Meter Type</value>
+  </data>
+  <data name="DetayliArama" xml:space="preserve">
+    <value>Advanced Search</value>
+  </data>
+  <data name="Fiyat" xml:space="preserve">
+    <value>Price</value>
+  </data>
+  <data name="Limit" xml:space="preserve">
+    <value>Limit</value>
+  </data>
+  <data name="Dili" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="Kaydet" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="KurumIslemleri" xml:space="preserve">
+    <value>Corporate Transactions</value>
+  </data>
+  <data name="KurumListesi" xml:space="preserve">
+    <value>Corporate List</value>
+  </data>
+  <data name="Modem" xml:space="preserve">
+    <value>Modem</value>
+  </data>
+  <data name="Satış" xml:space="preserve">
+    <value>Sales</value>
+  </data>
+  <data name="Sayaç" xml:space="preserve">
+    <value>Meter</value>
+  </data>
+  <data name="Vazgec" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="YeniKurumEkle" xml:space="preserve">
+    <value>Add New Organization</value>
+  </data>
+  <data name="Yönetim" xml:space="preserve">
+    <value>Governance</value>
+  </data>
+</root>

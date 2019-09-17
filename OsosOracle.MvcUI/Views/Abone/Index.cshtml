@@ -1,0 +1,201 @@
+﻿@using OsosOracle.Framework.HtmlHelpers
+@using OsosOracle.MvcUI.Infrastructure
+@using OsosOracle.MvcUI.Resources
+@model  OsosOracle.MvcUI.Models.ENTABONEModels.ENTABONEIndexModel
+@{
+    ViewBag.Title = Dil.AboneIslemleri;
+}
+
+@section panelHeading{
+    @Html.ButtonLink(Dil.YeniAboneEkle, "Ekle", "btn btn-xs btn-success", "fa-plus", htmlAttributes: new { Id = "btnYeniAboneKayit" })
+    <a id="btnKartBosalt" class="btn btn-xs btn-info"> <i class="fa fa-plus"></i>  @Dil.KartBosalt </a>
+}
+
+
+
+@using (Html.BeginPortlet(Dil.AboneArama, "Detaylı Arama", "fa fa-search"))
+{
+    <form id="frmAra" class="form-bordered">
+        <div class="form-group row">
+            <div class="col-md-6">
+                @Html.AutoComplete(t => t.ENTABONEAra.KAYITNO, Enums.AutocompleteFuction.AboneGetir, Enums.AutoCompleteType.List, Dil.Abone)
+            </div>
+            <div class="col-md-6">
+                @Html.AutoComplete(t => t.ENTABONEAra.SayacKayitNo, Enums.AutocompleteFuction.SayacGetir, Enums.AutoCompleteType.List,Dil.Sayac)
+            </div>
+        </div>
+
+        <div class="form-actions">
+            <button type="button" class="btn btn-primary btn-sm" id="btnAra"><i class="fa fa-search"></i> @Dil.Bul</button>
+        </div>
+    </form>
+
+}
+
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">@Dil.AboneListesi</div>
+            <div class="panel-body">
+                <table id="tblAboneListesi" class="table table-striped table-bordered table-hover table-responsive">
+                    <thead>
+                        <tr>
+                            <th>@Dil.AboneNo</th>
+                            <th>@Dil.Ad </th>
+                            <th>@Dil.Soyad</th>
+                            <th>@Dil.Email</th>
+                            <th>Sayaç Model</th>
+                            <th>@Dil.SayacSeriNo</th>
+                            <th>@Dil.Tarife</th>
+                            <th style="width: 100px">@Dil.Islem</th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#btnKartBosalt").click(function (e) {
+            KartBosalt();
+        });
+
+        $("#btnKartHazirla").click(function (e) {
+            KartHazirla();
+        });
+
+        $("#btnAra").click(function (e) {
+
+            e.preventDefault();
+            AraFiltered();
+
+        });
+
+        AraFiltered();
+
+
+        function AraFiltered() {
+
+
+            $('#tblAboneListesi').dataTable({
+                'language': dataTableLanguage,
+                'processing': true,
+                'serverSide': true,
+                'destroy': true,
+                'columns': [
+                    { 'data': "AboneNo" },
+                    { 'data': "AD" },
+                    { 'data': "SOYAD" },
+                    { 'data': "Eposta" },
+                    { 'data': "SayacModel" },
+                    { 'data': "SayacSeriNo" },
+                    { 'data': "TarifeAdi" },
+                    { 'data': "Islemler", sortable: false }
+                ],
+                'ajax': {
+                    'type': 'POST',
+                    'data': $("#frmAra").serializeObject(),
+                    'url': "@Url.Action("DataTablesList", "Abone")",
+                    'error': function (xhr, ajaxOptions, errorThrown) { ajaxMesajGoster(xhr.responseJSON.Mesaj); },
+                    'complete': function () { }
+                }
+
+            });
+
+        }
+
+    });
+
+    function KartBosalt() {
+
+        try
+        {
+
+            var elektrik = new ActiveXObject("SmartCard.SayacTurleri.ElektrikTr");
+                var kartTip = elektrik.KartTipi();
+
+            if (kartTip == "Abone Karti" || kartTip == "Abone Kartı" || kartTip=="CBA ") {
+                var result = elektrik.AboneBosalt();
+                if (result === "1") {
+                    ajaxMesajGoster('İşlem Başarılı');
+                } else {
+                    ajaxMesajGoster('İşlem Başarısız', 'Hata');
+                }
+                return;
+            } else if (kartTip == "Bos Kart") {
+                ajaxMesajGoster('Kart Boş');
+            }
+
+            }
+            catch(ex)
+            {
+                ajaxMesajGoster(ex, 'Hata');
+            }
+
+    }
+
+    function KartHazirla(aboneKayitNo) {
+                try {
+                    var elektrik = new ActiveXObject("SmartCard.SayacTurleri.ElektrikTr");
+
+                    var request = $.ajax({
+                                           url: "@Url.Action("Tarife", "Abone")",
+                                           method: "POST",
+                                           async: true,
+                                           dataType: "json",
+                                           data: { aboneKayitNo: aboneKayitNo }
+                                         });
+                                          request.done(function (jqXHR) {
+
+                                              //Tarife Bilgileri geldi
+
+                                              var result = elektrik.AboneYap(jqXHR.ENTSAYAC.SERINO,
+                                                  jqXHR.PRMTARIFEELK.FIYAT1,
+                                                  jqXHR.PRMTARIFEELK.FIYAT2,
+                                                  jqXHR.PRMTARIFEELK.FIYAT3,
+                                                  jqXHR.PRMTARIFEELK.LIMIT1,
+                                                  jqXHR.PRMTARIFEELK.LIMIT2,
+                                                  jqXHR.PRMTARIFEELK.YUKLEMELIMIT,
+                                                  jqXHR.PRMTARIFEELK.AKSAMSAAT,
+                                                  jqXHR.PRMTARIFEELK.SABAHSAAT,
+                                                  jqXHR.PRMTARIFEELK.HAFTASONUAKSAM,
+                                                  jqXHR.PRMTARIFEELK.SABITUCRET,
+                                                  jqXHR.PRMTARIFEELK.BAYRAM1GUN,
+                                                  jqXHR.PRMTARIFEELK.BAYRAM1AY,
+                                                  jqXHR.PRMTARIFEELK.BAYRAM1SURE,
+                                                  jqXHR.PRMTARIFEELK.BAYRAM2GUN,
+                                                  jqXHR.PRMTARIFEELK.BAYRAM2AY,
+                                                  jqXHR.PRMTARIFEELK.BAYRAM2SURE,
+                                                  jqXHR.PRMTARIFEELK.KRITIKKREDI
+
+                                              );
+                                              if (result === "1") {
+                                                  ajaxMesajGoster('İşlem Başarılı');
+                                              } else {
+                                                  ajaxMesajGoster('İşlem Başarısız', 'Hata');
+                                              }
+
+                                          });
+                                         request.fail(function (jqXHR, textStatus) {
+                                             unblockUI();
+                                             var msg = jQuery.parseJSON(jqXHR.responseText);
+                                             ajaxMesajGoster(msg.Mesaj);
+                                         });
+
+
+                } catch (e) {
+                    console.log(e);
+                }
+
+    }
+
+
+</script>
+
+
+

@@ -1,0 +1,199 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CF8CA791-EAF8-4D2F-AB87-6EAB186BEAFD}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OsosOracle.DataLayer</RootNamespace>
+    <AssemblyName>OsosOracle.DataLayer</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.ManagedDataAccess, Version=4.122.18.3, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
+      <HintPath>..\packages\Oracle.ManagedDataAccess.18.3.0\lib\net40\Oracle.ManagedDataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.ManagedDataAccess.EntityFramework, Version=6.122.18.3, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
+      <HintPath>..\packages\Oracle.ManagedDataAccess.EntityFramework.18.3.0\lib\net45\Oracle.ManagedDataAccess.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Abstract\ICONKURUMDal.cs" />
+    <Compile Include="Abstract\ICSTHUMARKADal.cs" />
+    <Compile Include="Abstract\ICSTHUMODELDal.cs" />
+    <Compile Include="Abstract\ICSTSAYACMODELDal.cs" />
+    <Compile Include="Abstract\IENTABONEBILGIDal.cs" />
+    <Compile Include="Abstract\IENTABONEDal.cs" />
+    <Compile Include="Abstract\IENTABONESAYACDal.cs" />
+    <Compile Include="Abstract\IENTHABERLESMEUNITESIDal.cs" />
+    <Compile Include="Abstract\IENTHUSAYACDal.cs" />
+    <Compile Include="Abstract\IENTKOMUTLARBEKLEYENDal.cs" />
+    <Compile Include="Abstract\IENTKOMUTLARSONUCLANANDal.cs" />
+    <Compile Include="Abstract\IENTKREDIKOMUTTAKIPDal.cs" />
+    <Compile Include="Abstract\IENTSATISDal.cs" />
+    <Compile Include="Abstract\IENTSAYACDal.cs" />
+    <Compile Include="Abstract\IENTSAYACDURUMSUDal.cs" />
+    <Compile Include="Abstract\IENTSAYACSONDURUMSUDal.cs" />
+    <Compile Include="Abstract\IENTTUKETIMSUDal.cs" />
+    <Compile Include="Abstract\IPRMTARIFEELKDal.cs" />
+    <Compile Include="Abstract\IPRMTARIFEGAZDal.cs" />
+    <Compile Include="Abstract\IPRMTARIFEORTAKAVMDal.cs" />
+    <Compile Include="Abstract\IPRMTARIFESUDal.cs" />
+    <Compile Include="Abstract\IRPTDASHBOARDDal.cs" />
+    <Compile Include="Abstract\ISYSCSTOPERASYONDal.cs" />
+    <Compile Include="Abstract\ISYSGOREVDal.cs" />
+    <Compile Include="Abstract\ISYSGOREVROLDal.cs" />
+    <Compile Include="Abstract\ISYSKULLANICIDal.cs" />
+    <Compile Include="Abstract\ISYSKULLANICIDETAYDal.cs" />
+    <Compile Include="Abstract\ISYSMENUDal.cs" />
+    <Compile Include="Abstract\ISYSOPERASYONGOREVDal.cs" />
+    <Compile Include="Abstract\ISYSROLDal.cs" />
+    <Compile Include="Abstract\ISYSROLKULLANICIDal.cs" />
+    <Compile Include="Concrete\EntityFramework\AppContext.cs" />
+    <Compile Include="Concrete\EntityFramework\Dal\EfCONKURUMDal.cs" />
+    <Compile Include="Concrete\EntityFramework\Dal\EfCSTHUMARKADal.cs" />
+    <Compile Include="Concrete\EntityFramework\Dal\EfCSTHUMODELDal.cs" />
+    <Compile Include="Concrete\EntityFramework\Dal\EfCSTSAYACMODELDal.cs" />
+    <Compile Include="Concrete\EntityFramework\Dal\EfENTABONEBILGIDal.cs" />
+    <Compile Include="Concrete\EntityFramework\Dal\EfENTABONEDal.cs" />
+    <Compile Include="Concrete\EntityFramework\Dal\EfENTABONESAYACDal.cs" />
+    <Compile Include="Concrete\EntityFramework\Dal\EfENTHABERLESMEUNITESIDal.cs" />
+    <Compile Include="Concrete\EntityFramework\Dal\EfENTHUSAYACDal.cs" />
+    <Compile Include="Concrete\EntityFramework\Dal\EfENTKOMUTLARBEKLEYENDal.cs" />
+    <Compile Include="Concrete\EntityFramework\Dal\EfENTKOMUTLARSONUCLANANDal.cs" />
+    <Compile Include="Concrete\EntityFramework\Dal\EfENTKREDIKOMUTTAKIPDal.cs" />
+    <Compile Include="Concrete\EntityFramework\Dal\EfENTSATISDal.cs" />
+    <Compile Include="Concrete\EntityFramework\Dal\EfENTSAYACDal.cs" />
+    <Compile Include="Concrete\EntityFramework\Dal\EfENTSAYACDURUMSUDal.cs" />
+    <Compile Include="Concrete\EntityFramework\Dal\EfENTSAYACSONDURUMSUDal.cs" />
+    <Compile Include="Concrete\EntityFramework\Dal\EfENTTUKETIMSUDal.cs" />
+    <Compile Include="Concrete\EntityFramework\Dal\EfPRMTARIFEELKDal.cs" />
+    <Compile Include="Concrete\EntityFramework\Dal\EfPRMTARIFEGAZDal.cs" />
+    <Compile Include="Concrete\EntityFramework\Dal\EfPRMTARIFEORTAKAVMDal.cs" />
+    <Compile Include="Concrete\EntityFramework\Dal\EfPRMTARIFESUDal.cs" />
+    <Compile Include="Concrete\EntityFramework\Dal\EfRPTDASHBOARDDal.cs" />
+    <Compile Include="Concrete\EntityFramework\Dal\EfSYSCSTOPERASYONDal.cs" />
+    <Compile Include="Concrete\EntityFramework\Dal\EfSYSGOREVDal.cs" />
+    <Compile Include="Concrete\EntityFramework\Dal\EfSYSGOREVROLDal.cs" />
+    <Compile Include="Concrete\EntityFramework\Dal\EfSYSKULLANICIDal.cs" />
+    <Compile Include="Concrete\EntityFramework\Dal\EfSYSKULLANICIDETAYDal.cs" />
+    <Compile Include="Concrete\EntityFramework\Dal\EfSYSMENUDal.cs" />
+    <Compile Include="Concrete\EntityFramework\Dal\EfSYSOPERASYONGOREVDal.cs" />
+    <Compile Include="Concrete\EntityFramework\Dal\EfSYSROLDal.cs" />
+    <Compile Include="Concrete\EntityFramework\Dal\EfSYSROLKULLANICIDal.cs" />
+    <Compile Include="Concrete\EntityFramework\Entity\CONKURUMEf.cs" />
+    <Compile Include="Concrete\EntityFramework\Entity\CSTHUMARKAEf.cs" />
+    <Compile Include="Concrete\EntityFramework\Entity\CSTHUMODELEf.cs" />
+    <Compile Include="Concrete\EntityFramework\Entity\CSTSAYACMODELEf.cs" />
+    <Compile Include="Concrete\EntityFramework\Entity\ENTABONEBILGIEf.cs" />
+    <Compile Include="Concrete\EntityFramework\Entity\ENTABONEEf.cs" />
+    <Compile Include="Concrete\EntityFramework\Entity\ENTABONESAYACEf.cs" />
+    <Compile Include="Concrete\EntityFramework\Entity\ENTHABERLESMEUNITESIEf.cs" />
+    <Compile Include="Concrete\EntityFramework\Entity\ENTHUSAYACEf.cs" />
+    <Compile Include="Concrete\EntityFramework\Entity\ENTKOMUTLARBEKLEYENEf.cs" />
+    <Compile Include="Concrete\EntityFramework\Entity\ENTKOMUTLARSONUCLANANEf.cs" />
+    <Compile Include="Concrete\EntityFramework\Entity\ENTKREDIKOMUTTAKIPEf.cs" />
+    <Compile Include="Concrete\EntityFramework\Entity\ENTSATISEf.cs" />
+    <Compile Include="Concrete\EntityFramework\Entity\ENTSAYACDURUMSUEf.cs" />
+    <Compile Include="Concrete\EntityFramework\Entity\ENTSAYACEf.cs" />
+    <Compile Include="Concrete\EntityFramework\Entity\ENTSAYACSONDURUMSUEf.cs" />
+    <Compile Include="Concrete\EntityFramework\Entity\ENTTUKETIMSUEf.cs" />
+    <Compile Include="Concrete\EntityFramework\Entity\PRMTARIFEELKEf.cs" />
+    <Compile Include="Concrete\EntityFramework\Entity\PRMTARIFEGAZEf.cs" />
+    <Compile Include="Concrete\EntityFramework\Entity\PRMTARIFEORTAKAVMEf.cs" />
+    <Compile Include="Concrete\EntityFramework\Entity\PRMTARIFESUEf.cs" />
+    <Compile Include="Concrete\EntityFramework\Entity\RPTDASHBOARDEf.cs" />
+    <Compile Include="Concrete\EntityFramework\Entity\SYSCSTOPERASYONEf.cs" />
+    <Compile Include="Concrete\EntityFramework\Entity\SYSGOREVEf.cs" />
+    <Compile Include="Concrete\EntityFramework\Entity\SYSGOREVROLEf.cs" />
+    <Compile Include="Concrete\EntityFramework\Entity\SYSKULLANICIDETAYEf.cs" />
+    <Compile Include="Concrete\EntityFramework\Entity\SYSKULLANICIEf.cs" />
+    <Compile Include="Concrete\EntityFramework\Entity\SYSMENUEf.cs" />
+    <Compile Include="Concrete\EntityFramework\Entity\SYSOPERASYONGOREVEf.cs" />
+    <Compile Include="Concrete\EntityFramework\Entity\SYSROLEf.cs" />
+    <Compile Include="Concrete\EntityFramework\Entity\SYSROLKULLANICIEf.cs" />
+    <Compile Include="Concrete\EntityFramework\Mappings\CONKURUMMap.cs" />
+    <Compile Include="Concrete\EntityFramework\Mappings\CSTHUMARKAMap.cs" />
+    <Compile Include="Concrete\EntityFramework\Mappings\CSTHUMODELMap.cs" />
+    <Compile Include="Concrete\EntityFramework\Mappings\CSTSAYACMODELMap.cs" />
+    <Compile Include="Concrete\EntityFramework\Mappings\ENTABONEBILGIMap.cs" />
+    <Compile Include="Concrete\EntityFramework\Mappings\ENTABONEMap.cs" />
+    <Compile Include="Concrete\EntityFramework\Mappings\ENTABONESAYACMap.cs" />
+    <Compile Include="Concrete\EntityFramework\Mappings\ENTHABERLESMEUNITESIMap.cs" />
+    <Compile Include="Concrete\EntityFramework\Mappings\ENTHUSAYACMap.cs" />
+    <Compile Include="Concrete\EntityFramework\Mappings\ENTKOMUTLARBEKLEYENMap.cs" />
+    <Compile Include="Concrete\EntityFramework\Mappings\ENTKOMUTLARSONUCLANANMap.cs" />
+    <Compile Include="Concrete\EntityFramework\Mappings\ENTKREDIKOMUTTAKIPMap.cs" />
+    <Compile Include="Concrete\EntityFramework\Mappings\ENTSATISMap.cs" />
+    <Compile Include="Concrete\EntityFramework\Mappings\ENTSAYACDURUMSUMap.cs" />
+    <Compile Include="Concrete\EntityFramework\Mappings\ENTSAYACMap.cs" />
+    <Compile Include="Concrete\EntityFramework\Mappings\ENTSAYACSONDURUMSUMap.cs" />
+    <Compile Include="Concrete\EntityFramework\Mappings\ENTTUKETIMSUMap.cs" />
+    <Compile Include="Concrete\EntityFramework\Mappings\PRMTARIFEELKMap.cs" />
+    <Compile Include="Concrete\EntityFramework\Mappings\PRMTARIFEGAZMap.cs" />
+    <Compile Include="Concrete\EntityFramework\Mappings\PRMTARIFEORTAKAVMMap.cs" />
+    <Compile Include="Concrete\EntityFramework\Mappings\PRMTARIFESUMap.cs" />
+    <Compile Include="Concrete\EntityFramework\Mappings\RPTDASHBOARDMap.cs" />
+    <Compile Include="Concrete\EntityFramework\Mappings\SYSCSTOPERASYONMap.cs" />
+    <Compile Include="Concrete\EntityFramework\Mappings\SYSGOREVMap.cs" />
+    <Compile Include="Concrete\EntityFramework\Mappings\SYSGOREVROLMap.cs" />
+    <Compile Include="Concrete\EntityFramework\Mappings\SYSKULLANICIDETAYMap.cs" />
+    <Compile Include="Concrete\EntityFramework\Mappings\SYSKULLANICIMap.cs" />
+    <Compile Include="Concrete\EntityFramework\Mappings\SYSMENUMap.cs" />
+    <Compile Include="Concrete\EntityFramework\Mappings\SYSOPERASYONGOREVMap.cs" />
+    <Compile Include="Concrete\EntityFramework\Mappings\SYSROLKULLANICIMap.cs" />
+    <Compile Include="Concrete\EntityFramework\Mappings\SYSROLMap.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\OsosOracle.Entities\OsosOracle.Entities.csproj">
+      <Project>{77286593-40FA-440E-9C8C-2FBEC1B2A928}</Project>
+      <Name>OsosOracle.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OsosOracle.Framework\OsosOracle.Framework.csproj">
+      <Project>{920236DA-26F5-4DCB-BBB7-DE3724BED359}</Project>
+      <Name>OsosOracle.Framework</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

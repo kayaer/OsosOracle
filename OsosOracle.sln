@@ -1,0 +1,60 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OsosOracle.Entities", "OsosOracle.Entities\OsosOracle.Entities.csproj", "{77286593-40FA-440E-9C8C-2FBEC1B2A928}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OsosOracle.DataLayer", "OsosOracle.DataLayer\OsosOracle.DataLayer.csproj", "{CF8CA791-EAF8-4D2F-AB87-6EAB186BEAFD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OsosOracle.Business", "OsosOracle.Business\OsosOracle.Business.csproj", "{777941C4-E7E0-4D47-9540-10B49CF68B0A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OsosOracle.MvcUI", "OsosOracle.MvcUI\OsosOracle.MvcUI.csproj", "{5031EBE0-5F23-4D7A-9B0F-F2F36084BC7F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "OsosOracle.Framework", "OsosOracle.Framework", "{C5956E12-E66F-4508-8C1D-A9A207065681}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OsosOracle.Framework", "OsosOracle.Framework\OsosOracle.Framework.csproj", "{920236DA-26F5-4DCB-BBB7-DE3724BED359}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartCard", "nahcivanYoncaDll\SmartCard\SmartCard\SmartCard.csproj", "{995AB6B6-78BC-40C8-B269-6CDD3E3F41BE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{77286593-40FA-440E-9C8C-2FBEC1B2A928}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77286593-40FA-440E-9C8C-2FBEC1B2A928}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77286593-40FA-440E-9C8C-2FBEC1B2A928}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77286593-40FA-440E-9C8C-2FBEC1B2A928}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF8CA791-EAF8-4D2F-AB87-6EAB186BEAFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF8CA791-EAF8-4D2F-AB87-6EAB186BEAFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF8CA791-EAF8-4D2F-AB87-6EAB186BEAFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF8CA791-EAF8-4D2F-AB87-6EAB186BEAFD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{777941C4-E7E0-4D47-9540-10B49CF68B0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{777941C4-E7E0-4D47-9540-10B49CF68B0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{777941C4-E7E0-4D47-9540-10B49CF68B0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{777941C4-E7E0-4D47-9540-10B49CF68B0A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5031EBE0-5F23-4D7A-9B0F-F2F36084BC7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5031EBE0-5F23-4D7A-9B0F-F2F36084BC7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5031EBE0-5F23-4D7A-9B0F-F2F36084BC7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5031EBE0-5F23-4D7A-9B0F-F2F36084BC7F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{920236DA-26F5-4DCB-BBB7-DE3724BED359}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{920236DA-26F5-4DCB-BBB7-DE3724BED359}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{920236DA-26F5-4DCB-BBB7-DE3724BED359}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{920236DA-26F5-4DCB-BBB7-DE3724BED359}.Release|Any CPU.Build.0 = Release|Any CPU
+		{995AB6B6-78BC-40C8-B269-6CDD3E3F41BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{995AB6B6-78BC-40C8-B269-6CDD3E3F41BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{995AB6B6-78BC-40C8-B269-6CDD3E3F41BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{995AB6B6-78BC-40C8-B269-6CDD3E3F41BE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{920236DA-26F5-4DCB-BBB7-DE3724BED359} = {C5956E12-E66F-4508-8C1D-A9A207065681}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {55D3846F-EF17-4F66-AC81-B684C5066215}
+	EndGlobalSection
+EndGlobal

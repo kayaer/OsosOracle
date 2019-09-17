@@ -1,0 +1,115 @@
+@using OsosOracle.MvcUI.Models.SYSGOREVModels
+@model SYSGOREVKaydetModel
+
+@{
+    ViewBag.Title = "Görev Ekle";
+}
+
+
+@using (Html.BeginForm("Kaydet", "SYSGOREV", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    @Html.HiddenFor(t => t.SYSGOREV.KAYITNO)
+    @Html.HiddenFor(t => t.SYSGOREV.VERSIYON)
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">Operasyon Listesi</div>
+                    <div class="panel-body">
+                        <table id="tbloperasyonlistesi" class="table table-striped table-bordered table-hover table-responsive">
+                            <thead>
+                                <tr>
+                                    <th>Ad</th>
+                                    <th>Açıklama</th>
+                                    <th>Seç</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @if (Model.OperasyonListesi != null)
+                                {
+                                    for (var i = 0; i < Model.OperasyonListesi.Count; i++)
+                                    {
+                                        @Html.HiddenFor(m => @Model.OperasyonListesi[i].KayitNo)
+                                        @Html.HiddenFor(m => @Model.OperasyonListesi[i].Ad)
+                                        <tr>
+                                            <td>@Model.OperasyonListesi[i].Ad</td>
+                                            <td>@Model.OperasyonListesi[i].Aciklama</td>
+                                            <td>@Html.CheckBoxFor(modelItem => Model.OperasyonListesi[i].Secildi)</td>
+                                        </tr>
+                                    }
+                                }
+
+
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6">
+                <!-- START panel-->
+                <div class="panel panel-default">
+                    <div class="panel-heading">Görev Bilgileri</div>
+                    <div class="panel-body">
+                        <form role="form">
+                            <div class="form-group">
+
+                                @Html.TextBoxFor(m => m.SYSGOREV.AD, new { @class = "form-control", placeholder = "Görev Adı" })
+                            </div>
+                            <div class="form-group">
+
+                                @Html.TextBoxFor(m => m.SYSGOREV.ACIKLAMA, new { @class = "form-control", placeholder = "Görev Açıklaması" })
+                            </div>
+
+                            <div class="pull-right">
+                                <button type="submit" class="btn btn-sm btn-primary">Ekle</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!-- END panel-->
+            </div>
+        </div>
+
+    </div>
+
+}
+
+<script type="text/javascript">
+    $(document).ready(function () {
+
+
+        @*AraFiltered();
+
+
+        function AraFiltered() {
+
+
+            $('#tbloperasyonlistesi').dataTable({
+                'language': dataTableLanguage,
+                'processing': true,
+                'serverSide': true,
+                'destroy': true,
+                'columns': [
+                    { 'data': "Ad" },
+                    { 'data': "Aciklama" },
+
+                ],
+                'ajax': {
+                    'type': 'POST',
+                    'data': $("#frmAra").serializeObject(),
+                    'url': "@Url.Action("DataTablesListOperasyon", "Yetki")",
+                    'error': function (xhr, ajaxOptions, errorThrown) { ajaxMesajGoster(xhr.responseJSON.Mesaj); },
+                    'complete': function () { }
+                }
+
+            });
+
+        }*@
+
+    });
+
+
+</script>

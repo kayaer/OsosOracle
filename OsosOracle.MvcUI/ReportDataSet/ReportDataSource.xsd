@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ReportDataSource" targetNamespace="http://tempuri.org/ReportDataSource.xsd" xmlns:mstns="http://tempuri.org/ReportDataSource.xsd" xmlns="http://tempuri.org/ReportDataSource.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ReportDataSource" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="ReportDataSource" msprop:Generator_UserDSName="ReportDataSource">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="SatisMakbuz" msprop:Generator_TableClassName="SatisMakbuzDataTable" msprop:Generator_TableVarName="tableSatisMakbuz" msprop:Generator_TablePropName="SatisMakbuz" msprop:Generator_RowDeletingName="SatisMakbuzRowDeleting" msprop:Generator_RowChangingName="SatisMakbuzRowChanging" msprop:Generator_RowEvHandlerName="SatisMakbuzRowChangeEventHandler" msprop:Generator_RowDeletedName="SatisMakbuzRowDeleted" msprop:Generator_UserTableName="SatisMakbuz" msprop:Generator_RowChangedName="SatisMakbuzRowChanged" msprop:Generator_RowEvArgName="SatisMakbuzRowChangeEvent" msprop:Generator_RowClassName="SatisMakbuzRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="MakbuzNo" msprop:Generator_ColumnVarNameInTable="columnMakbuzNo" msprop:Generator_ColumnPropNameInRow="MakbuzNo" msprop:Generator_ColumnPropNameInTable="MakbuzNoColumn" msprop:Generator_UserColumnName="MakbuzNo" type="xs:long" minOccurs="0" />
+              <xs:element name="OdemeTarih" msprop:Generator_ColumnVarNameInTable="columnOdemeTarih" msprop:Generator_ColumnPropNameInRow="OdemeTarih" msprop:Generator_ColumnPropNameInTable="OdemeTarihColumn" msprop:Generator_UserColumnName="OdemeTarih" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="OdemeMiktar" msprop:Generator_ColumnVarNameInTable="columnOdemeMiktar" msprop:Generator_ColumnPropNameInRow="OdemeMiktar" msprop:Generator_ColumnPropNameInTable="OdemeMiktarColumn" msprop:Generator_UserColumnName="OdemeMiktar" type="xs:decimal" minOccurs="0" />
+              <xs:element name="AboneAdiSoyadi" msprop:Generator_ColumnVarNameInTable="columnAboneAdiSoyadi" msprop:Generator_ColumnPropNameInRow="AboneAdiSoyadi" msprop:Generator_ColumnPropNameInTable="AboneAdiSoyadiColumn" msprop:Generator_UserColumnName="AboneAdiSoyadi" type="xs:string" minOccurs="0" />
+              <xs:element name="AboneNo" msprop:Generator_ColumnVarNameInTable="columnAboneNo" msprop:Generator_ColumnPropNameInRow="AboneNo" msprop:Generator_ColumnPropNameInTable="AboneNoColumn" msprop:Generator_UserColumnName="AboneNo" type="xs:string" minOccurs="0" />
+              <xs:element name="SayacSeriNo" msprop:Generator_ColumnVarNameInTable="columnSayacSeriNo" msprop:Generator_ColumnPropNameInRow="SayacSeriNo" msprop:Generator_ColumnPropNameInTable="SayacSeriNoColumn" msprop:Generator_UserColumnName="SayacSeriNo" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

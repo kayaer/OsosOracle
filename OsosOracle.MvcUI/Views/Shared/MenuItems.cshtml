@@ -1,0 +1,38 @@
+﻿@using OsosOracle.Entities.ComplexType.SYSMENUComplexTypes
+@using OsosOracle.MvcUI.Resources
+@model List<SYSMENUDetay>
+
+<div class="aside-inner">
+    <nav class="sidebar" data-sidebar-anyclick-close="">
+        <ul class="nav">
+
+            @foreach (var menu in Model.OrderBy(x => x.MENUORDER))
+            {
+                if (menu.Children != null)
+                {
+                    <li>
+                        <a href="#@menu.TR" data-toggle="collapse">
+                            <em class="@menu.ICON"></em>
+                            @*<span>@menu.TR</span>*@
+                            <span>@Dil.ResourceManager.GetString(menu.TR)</span>
+                        </a>
+                        <ul id="@menu.TR" class="nav sidebar-subnav collapse" aria-expanded="false">
+                            @foreach (var childMenu in menu.Children.OrderBy(x => x.MENUORDER))
+                            {
+
+                                string menuUrl = string.Concat("~/", childMenu.AREA, "/", childMenu.CONTROLLER, "/", childMenu.ACTION);
+                                <li><a href="@Url.Content(menuUrl)">@childMenu.TR </a></li>
+                                <li><a href="@Url.Content(menuUrl)">@Dil.ResourceManager.GetString(childMenu.TR) </a></li>
+                                menuUrl = "";
+
+                            }
+                        </ul>
+
+                    </li>
+
+                }
+
+            }
+        </ul>
+    </nav>
+</div>

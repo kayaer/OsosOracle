@@ -1,0 +1,423 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Abone" xml:space="preserve">
+    <value>اشتراك</value>
+  </data>
+  <data name="AboneArama" xml:space="preserve">
+    <value>بحث المشترك</value>
+  </data>
+  <data name="AboneBilgileri" xml:space="preserve">
+    <value>معلومات الاشتراك</value>
+  </data>
+  <data name="AboneIslemleri" xml:space="preserve">
+    <value>اجراءات الاشتراك</value>
+  </data>
+  <data name="AboneListesi" xml:space="preserve">
+    <value>قائمة المشتركين</value>
+  </data>
+  <data name="AboneNo" xml:space="preserve">
+    <value>رقم الاشتراك</value>
+  </data>
+  <data name="AboneOku" xml:space="preserve">
+    <value>قراءة الاشتراك</value>
+  </data>
+  <data name="AboneTarih" xml:space="preserve">
+    <value>تاريخ الاشتراك</value>
+  </data>
+  <data name="AboneYap" xml:space="preserve">
+    <value>اضافة اشتراك</value>
+  </data>
+  <data name="Acik" xml:space="preserve">
+    <value>مفتوح</value>
+  </data>
+  <data name="Aciklama" xml:space="preserve">
+    <value>الشرح</value>
+  </data>
+  <data name="Ad" xml:space="preserve">
+    <value>الاسم</value>
+  </data>
+  <data name="Adres" xml:space="preserve">
+    <value>العنوان</value>
+  </data>
+  <data name="AnaKredi" xml:space="preserve">
+    <value>بطاقةالائتمان الرئيسية</value>
+  </data>
+  <data name="AvansOnay" xml:space="preserve">
+    <value>موافقة مسبقة</value>
+  </data>
+  <data name="Az" xml:space="preserve">
+    <value>قليل</value>
+  </data>
+  <data name="Basarili" xml:space="preserve">
+    <value>تمت العملية بنجاح</value>
+  </data>
+  <data name="Basarisiz" xml:space="preserve">
+    <value>العملية لم تكتمل</value>
+  </data>
+  <data name="Bul" xml:space="preserve">
+    <value>اكتشاف</value>
+  </data>
+  <data name="CAP" xml:space="preserve">
+    <value>قطر العداد</value>
+  </data>
+  <data name="DetayliRapor" xml:space="preserve">
+    <value>تقرير مفصل</value>
+  </data>
+  <data name="Durum" xml:space="preserve">
+    <value>الحالة</value>
+  </data>
+  <data name="Duzenle" xml:space="preserve">
+    <value>تعديل</value>
+  </data>
+  <data name="Ekle" xml:space="preserve">
+    <value>إضافة</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>البريد الإلكتروني</value>
+  </data>
+  <data name="EnerjiDurumu" xml:space="preserve">
+    <value>حالة الطاقة</value>
+  </data>
+  <data name="Evet" xml:space="preserve">
+    <value>نعم</value>
+  </data>
+  <data name="Hayir" xml:space="preserve">
+    <value>لا</value>
+  </data>
+  <data name="Hosgeldiniz" xml:space="preserve">
+    <value>أهلا وسهلا بكم</value>
+  </data>
+  <data name="Ip" xml:space="preserve">
+    <value>أي بي</value>
+  </data>
+  <data name="Iptal" xml:space="preserve">
+    <value>إلغاء</value>
+  </data>
+  <data name="Islem" xml:space="preserve">
+    <value>العملية</value>
+  </data>
+  <data name="Kapali" xml:space="preserve">
+    <value>مغلق</value>
+  </data>
+  <data name="Kart" xml:space="preserve">
+    <value>الكرت</value>
+  </data>
+  <data name="KartBosalt" xml:space="preserve">
+    <value>بطاقة فارغة</value>
+  </data>
+  <data name="Karthazirla" xml:space="preserve">
+    <value>إنشاء بطاقة</value>
+  </data>
+  <data name="KartIslemleri" xml:space="preserve">
+    <value>ادارة الكرت</value>
+  </data>
+  <data name="KimlikNo" xml:space="preserve">
+    <value>رقم الهوية</value>
+  </data>
+  <data name="Kullanici" xml:space="preserve">
+    <value>المستخدم</value>
+  </data>
+  <data name="KullaniciAdi" xml:space="preserve">
+    <value>اسم المستخدم</value>
+  </data>
+  <data name="Pil" xml:space="preserve">
+    <value>البطارية</value>
+  </data>
+  <data name="Rapor" xml:space="preserve">
+    <value>التقرير</value>
+  </data>
+  <data name="RaporListesi" xml:space="preserve">
+    <value>قائمة التقارير</value>
+  </data>
+  <data name="Rol" xml:space="preserve">
+    <value>الدور</value>
+  </data>
+  <data name="Satis" xml:space="preserve">
+    <value>مبيعات</value>
+  </data>
+  <data name="SatisBilgileri" xml:space="preserve">
+    <value>معلومات المبيعات</value>
+  </data>
+  <data name="SatisTarih" xml:space="preserve">
+    <value>تاريخ البيع</value>
+  </data>
+  <data name="Sayac" xml:space="preserve">
+    <value>العداد</value>
+  </data>
+  <data name="SayacBilgileri" xml:space="preserve">
+    <value>معلومات العداد</value>
+  </data>
+  <data name="SayacSeriNo" xml:space="preserve">
+    <value>رقم العداد الميكانيكي</value>
+  </data>
+  <data name="SayacVerileri" xml:space="preserve">
+    <value>عداد البيانات</value>
+  </data>
+  <data name="Sec" xml:space="preserve">
+    <value>اختيار</value>
+  </data>
+  <data name="Seciniz" xml:space="preserve">
+    <value>اختيار</value>
+  </data>
+  <data name="SICAKLIK" xml:space="preserve">
+    <value>درجة الحرارة</value>
+  </data>
+  <data name="Sil" xml:space="preserve">
+    <value>حذف</value>
+  </data>
+  <data name="SimTelNo" xml:space="preserve">
+    <value>رقم الشريحة</value>
+  </data>
+  <data name="SonHaberlesmeTarihi" xml:space="preserve">
+    <value>تاريخ الاتصال الأخير</value>
+  </data>
+  <data name="SonOkumaTarihi" xml:space="preserve">
+    <value>تاريخ آخر قراءة</value>
+  </data>
+  <data name="Soyad" xml:space="preserve">
+    <value>الكنية</value>
+  </data>
+  <data name="Tarife" xml:space="preserve">
+    <value>التعرفة</value>
+  </data>
+  <data name="TarifeAdi" xml:space="preserve">
+    <value>اسم التعرفة</value>
+  </data>
+  <data name="TarifeEkle" xml:space="preserve">
+    <value>أضف تعريفة</value>
+  </data>
+  <data name="TarifeIslemleri" xml:space="preserve">
+    <value>عمليات التعريفة</value>
+  </data>
+  <data name="TUKETIM" xml:space="preserve">
+    <value>استهلاك</value>
+  </data>
+  <data name="VANA" xml:space="preserve">
+    <value>الصمام</value>
+  </data>
+  <data name="VANAACMATARIH" xml:space="preserve">
+    <value>تاريخ فتح صمام</value>
+  </data>
+  <data name="VANAKAPAMATARIH" xml:space="preserve">
+    <value>تاريخ إغلاق الصمام</value>
+  </data>
+  <data name="YeniAboneEkle" xml:space="preserve">
+    <value>إضافة مشترك جديد</value>
+  </data>
+  <data name="Kredi" xml:space="preserve">
+    <value>ائتمان</value>
+  </data>
+  <data name="Kurum" xml:space="preserve">
+    <value>مؤسسة</value>
+  </data>
+  <data name="SatisIslemleri" xml:space="preserve">
+    <value>عمليا البيع</value>
+  </data>
+  <data name="SayacAra" xml:space="preserve">
+    <value>مكافحة ديسمبر</value>
+  </data>
+  <data name="SayacEkle" xml:space="preserve">
+    <value>إضافة عداد جديد</value>
+  </data>
+  <data name="SayacIslemleri" xml:space="preserve">
+    <value>عمليات مكافحة</value>
+  </data>
+  <data name="SayacModel" xml:space="preserve">
+    <value>نموذج العداد</value>
+  </data>
+  <data name="SayacTipi" xml:space="preserve">
+    <value>نوع العداد</value>
+  </data>
+  <data name="DetayliArama" xml:space="preserve">
+    <value>بحث متقدم</value>
+  </data>
+  <data name="Fiyat" xml:space="preserve">
+    <value>السعر</value>
+  </data>
+  <data name="KrediKatSayisi" xml:space="preserve">
+    <value>معامل الائتمان</value>
+  </data>
+  <data name="KRITIKKREDI" xml:space="preserve">
+    <value>الائتمان النقدي</value>
+  </data>
+  <data name="KullaniciAra" xml:space="preserve">
+    <value>البحث عن مستخدم</value>
+  </data>
+  <data name="KullaniciIslemleri" xml:space="preserve">
+    <value>إجراءات المستخدم</value>
+  </data>
+  <data name="Limit" xml:space="preserve">
+    <value>حد</value>
+  </data>
+  <data name="SabitUcret" xml:space="preserve">
+    <value>رسوم ثابتة</value>
+  </data>
+  <data name="TelefonNumarasi" xml:space="preserve">
+    <value>رقم الهاتف</value>
+  </data>
+  <data name="TuketimKatsayisi" xml:space="preserve">
+    <value>معامل الاستهلاك</value>
+  </data>
+  <data name="YedekKredi" xml:space="preserve">
+    <value>الائتمان الاحتياطي</value>
+  </data>
+  <data name="YeniKullaniciEkle" xml:space="preserve">
+    <value>إضافة مستخدم جديد</value>
+  </data>
+  <data name="Dili" xml:space="preserve">
+    <value>لغة</value>
+  </data>
+  <data name="Kaydet" xml:space="preserve">
+    <value>حفظ</value>
+  </data>
+  <data name="KayitNo" xml:space="preserve">
+    <value>رقم التسجيل</value>
+  </data>
+  <data name="Komut" xml:space="preserve">
+    <value>قيادة</value>
+  </data>
+  <data name="KurumIslemleri" xml:space="preserve">
+    <value>معاملات الشركات</value>
+  </data>
+  <data name="KurumListesi" xml:space="preserve">
+    <value>قائمة الشركات</value>
+  </data>
+  <data name="Modem" xml:space="preserve">
+    <value>مودم</value>
+  </data>
+  <data name="Satış" xml:space="preserve">
+    <value>مبيعات</value>
+  </data>
+  <data name="Sayaç" xml:space="preserve">
+    <value>متر</value>
+  </data>
+  <data name="Sifre" xml:space="preserve">
+    <value>كلمة المرور</value>
+  </data>
+  <data name="Vazgec" xml:space="preserve">
+    <value>إلغاء</value>
+  </data>
+  <data name="YeniKurumEkle" xml:space="preserve">
+    <value>أضف منظمة جديدة</value>
+  </data>
+  <data name="Yönetim" xml:space="preserve">
+    <value>إدارة</value>
+  </data>
+</root>

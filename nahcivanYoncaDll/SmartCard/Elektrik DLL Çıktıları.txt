@@ -1,0 +1,89 @@
+Elektrik DLL çıktıları:
+
+
+aBONEoKU
+
+
+            str += sprtr + devNo;
+            str += sprtr + elkAna;
+            str += sprtr + ako;
+            str += sprtr + yko;
+            str += sprtr + yeniKart;
+            str += sprtr + elkKalan;
+            str += sprtr + elkHarcanan;
+            str += sprtr + elkTarih;
+            str += sprtr + KlemensCeza;
+            str += sprtr + Ariza;
+            str += sprtr + PilZayif;
+            str += sprtr + PilBitik;
+            str += sprtr + k1Tuk;
+            str += sprtr + k2Tuk;
+            str += sprtr + k3Tuk;
+            str += sprtr + gerTuk;
+            str += sprtr + elkEkim;
+            str += sprtr + elkAralik;
+            str += sprtr + kad1;
+            str += sprtr + kad2;
+            str += sprtr + kad3;
+            str += sprtr + lim1;
+            str += sprtr + lim2;
+            str += sprtr + loadLim;
+            str += sprtr + aksam;
+            str += sprtr + sabah;
+            str += sprtr + kademe;
+            str += sprtr + hSonuAksam;
+            str += sprtr + fixCharge;
+            str += sprtr + totalFixCharge;
+            str += sprtr + yedekkredi;
+            str += sprtr + kritikkredi;
+            //str += sprtr + otherCharge;
+            //str += sprtr + otherTotalCharge;
+            //str += sprtr + dailyDebt;
+            //str += sprtr + totalDebt;
+            //str += sprtr + remainingDebt;
+            //str += sprtr + Reverse;
+            //str += sprtr + buzzerInterval;
+            //str += sprtr + buzzerDuration;
+            //str += sprtr + lowVoltage;
+            //str += sprtr + highVoltage;
+
+            FinishCard();
+
+            return "1" + str;
+        
+KrediOku
+
+            str += sprtr + devNo;
+            str += sprtr + elkAna;
+            str += sprtr + ako;
+            str += sprtr + yko;
+            str += sprtr + yeniKart;
+            str += sprtr + fixCharge;
+            str += sprtr + totalFixCharge;
+
+            return "1" + str;
+
+YetkiBilgiOku
+			
+            str += devNo + sprtr + elkKalan + sprtr + elkHarcanan + sprtr + k1Tuk + sprtr + k2Tuk + sprtr + k3Tuk + sprtr + gerTuk + sprtr + bilgi.gun + "/" + bilgi.ay + "/" + bilgi.yil + " " +
+                    bilgi.saat + ":" + bilgi.dakika + sprtr + bilgionkap.gun + "/" + bilgionkap.ay + "/" + bilgionkap.yil + sprtr + bilgisonp.gun + "/" + bilgisonp.ay + "/" + bilgisonp.yil + sprtr +
+                    bilgiarzt.gun + "/" + bilgiarzt.ay + "/" + bilgiarzt.yil + sprtr + bilgikr.gun + "/" + bilgikr.ay + "/" + bilgikr.yil + sprtr + hangigun + sprtr +
+                    kad1 + sprtr + kad2 + sprtr + kad3 + sprtr + lim1 + sprtr + lim2 + sprtr + "0" + sprtr + loadLim + sprtr + aksam + sprtr + sabah + sprtr + kademe + sprtr +
+                    KlemensCeza + sprtr + Ariza + sprtr + PilZayif + sprtr + PilBitik + sprtr + elkEkim + sprtr + elkAralik + sprtr +
+                    hSonuAksam + sprtr + fixCharge + sprtr + totalFixCharge + sprtr + kartNo + sprtr + donemTuk + sprtr + islem + sprtr + kritikkredi;
+
+
+            FinishCard();
+
+            return "1" + sprtr + str;
+			
+YetkiIadeOku
+
+	
+            return "1" + sprtr + takilmismi + sprtr + devNo + sprtr + kredi + sprtr + harcanan;
+			
+			
+        
+		
+			
+			

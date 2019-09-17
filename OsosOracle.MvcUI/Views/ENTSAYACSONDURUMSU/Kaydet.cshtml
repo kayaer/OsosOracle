@@ -1,0 +1,373 @@
+
+@using OsosOracle.MvcUI.Infrastructure
+@using OsosOracle.Framework.HtmlHelpers
+@model OsosOracle.MvcUI.Models.ENTSAYACSONDURUMSUModels.ENTSAYACSONDURUMSUKaydetModel
+
+@section panelHeading
+{
+	
+}
+
+<div class="ajaxForm">
+
+	@using (Html.BeginForm("Kaydet", "ENTSAYACSONDURUMSU", FormMethod.Post))
+	{
+		@Html.AntiForgeryToken()
+		@Html.HiddenFor(t => t.ENTSAYACSONDURUMSU.KAYITNO)
+		@Html.HiddenFor(t => t.ENTSAYACSONDURUMSU.VERSIYON)
+		@Html.ValidationSummary(true)
+
+	         <div class="form-group">
+    @Html.TextBoxFor(t => t.ENTSAYACSONDURUMSU.CAP, new { @class = "form-control int", placeholder = _T("CAP") })
+    @Html.ValidationMessageFor(t => t.ENTSAYACSONDURUMSU.CAP)
+
+    </div>
+
+       <div class="form-group">
+    @Html.TextBoxFor(t => t.ENTSAYACSONDURUMSU.BAGLANTISAYISI, new { @class = "form-control int", placeholder = _T("BAGLANTISAYISI") })
+    @Html.ValidationMessageFor(t => t.ENTSAYACSONDURUMSU.BAGLANTISAYISI)
+
+    </div>
+
+       <div class="form-group">
+    @Html.TextBoxFor(t => t.ENTSAYACSONDURUMSU.LIMIT1, new { @class = "form-control int", placeholder = _T("LIMIT1") })
+    @Html.ValidationMessageFor(t => t.ENTSAYACSONDURUMSU.LIMIT1)
+
+    </div>
+
+       <div class="form-group">
+    @Html.TextBoxFor(t => t.ENTSAYACSONDURUMSU.LIMIT2, new { @class = "form-control int", placeholder = _T("LIMIT2") })
+    @Html.ValidationMessageFor(t => t.ENTSAYACSONDURUMSU.LIMIT2)
+
+    </div>
+
+       <div class="form-group">
+    @Html.TextBoxFor(t => t.ENTSAYACSONDURUMSU.LIMIT3, new { @class = "form-control int", placeholder = _T("LIMIT3") })
+    @Html.ValidationMessageFor(t => t.ENTSAYACSONDURUMSU.LIMIT3)
+
+    </div>
+
+       <div class="form-group">
+    @Html.TextBoxFor(t => t.ENTSAYACSONDURUMSU.LIMIT4, new { @class = "form-control int", placeholder = _T("LIMIT4") })
+    @Html.ValidationMessageFor(t => t.ENTSAYACSONDURUMSU.LIMIT4)
+
+    </div>
+
+       <div class="form-group">
+    @Html.TextBoxFor(t => t.ENTSAYACSONDURUMSU.KRITIKKREDI, new { @class = "form-control int", placeholder = _T("KRITIKKREDI") })
+    @Html.ValidationMessageFor(t => t.ENTSAYACSONDURUMSU.KRITIKKREDI)
+
+    </div>
+
+       <div class="form-group">
+    @Html.TextBoxFor(t => t.ENTSAYACSONDURUMSU.FIYAT1, new { @class = "form-control int", placeholder = _T("FIYAT1") })
+    @Html.ValidationMessageFor(t => t.ENTSAYACSONDURUMSU.FIYAT1)
+
+    </div>
+
+       <div class="form-group">
+    @Html.TextBoxFor(t => t.ENTSAYACSONDURUMSU.FIYAT2, new { @class = "form-control int", placeholder = _T("FIYAT2") })
+    @Html.ValidationMessageFor(t => t.ENTSAYACSONDURUMSU.FIYAT2)
+
+    </div>
+
+       <div class="form-group">
+    @Html.TextBoxFor(t => t.ENTSAYACSONDURUMSU.FIYAT3, new { @class = "form-control int", placeholder = _T("FIYAT3") })
+    @Html.ValidationMessageFor(t => t.ENTSAYACSONDURUMSU.FIYAT3)
+
+    </div>
+
+       <div class="form-group">
+    @Html.TextBoxFor(t => t.ENTSAYACSONDURUMSU.FIYAT4, new { @class = "form-control int", placeholder = _T("FIYAT4") })
+    @Html.ValidationMessageFor(t => t.ENTSAYACSONDURUMSU.FIYAT4)
+
+    </div>
+
+       <div class="form-group">
+    @Html.TextBoxFor(t => t.ENTSAYACSONDURUMSU.FIYAT5, new { @class = "form-control int", placeholder = _T("FIYAT5") })
+    @Html.ValidationMessageFor(t => t.ENTSAYACSONDURUMSU.FIYAT5)
+
+    </div>
+
+       <div class="form-group">
+    @Html.TextBoxFor(t => t.ENTSAYACSONDURUMSU.ARIZAA, new { @class = "form-control", placeholder = _T("ARIZAA") })
+    @Html.ValidationMessageFor(t => t.ENTSAYACSONDURUMSU.ARIZAA)
+
+    </div>
+
+       <div class="form-group">
+    @Html.TextBoxFor(t => t.ENTSAYACSONDURUMSU.ARIZAK, new { @class = "form-control", placeholder = _T("ARIZAK") })
+    @Html.ValidationMessageFor(t => t.ENTSAYACSONDURUMSU.ARIZAK)
+
+    </div>
+
+       <div class="form-group">
+    @Html.TextBoxFor(t => t.ENTSAYACSONDURUMSU.ARIZAP, new { @class = "form-control", placeholder = _T("ARIZAP") })
+    @Html.ValidationMessageFor(t => t.ENTSAYACSONDURUMSU.ARIZAP)
+
+    </div>
+
+       <div class="form-group">
+    @Html.TextBoxFor(t => t.ENTSAYACSONDURUMSU.ARIZAPIL, new { @class = "form-control", placeholder = _T("ARIZAPIL") })
+    @Html.ValidationMessageFor(t => t.ENTSAYACSONDURUMSU.ARIZAPIL)
+
+    </div>
+
+       <div class="form-group">
+    @Html.TextBoxFor(t => t.ENTSAYACSONDURUMSU.BORC, new { @class = "form-control", placeholder = _T("BORC") })
+    @Html.ValidationMessageFor(t => t.ENTSAYACSONDURUMSU.BORC)
+
+    </div>
+
+       <div class="form-group">
+    @Html.TextBoxFor(t => t.ENTSAYACSONDURUMSU.ITERASYON, new { @class = "form-control int", placeholder = _T("ITERASYON") })
+    @Html.ValidationMessageFor(t => t.ENTSAYACSONDURUMSU.ITERASYON)
+
+    </div>
+
+       <div class="form-group">
+    @Html.TextBoxFor(t => t.ENTSAYACSONDURUMSU.PILAKIM, new { @class = "form-control int", placeholder = _T("PILAKIM") })
+    @Html.ValidationMessageFor(t => t.ENTSAYACSONDURUMSU.PILAKIM)
+
+    </div>
+
+       <div class="form-group">
+    @Html.TextBoxFor(t => t.ENTSAYACSONDURUMSU.PILVOLTAJ, new { @class = "form-control int", placeholder = _T("PILVOLTAJ") })
+    @Html.ValidationMessageFor(t => t.ENTSAYACSONDURUMSU.PILVOLTAJ)
+
+    </div>
+
+       <div class="form-group">
+    @Html.TextBoxFor(t => t.ENTSAYACSONDURUMSU.SONYUKLENENKREDITARIH, new { @class = "form-control int", placeholder = _T("SONYUKLENENKREDITARIH") })
+    @Html.ValidationMessageFor(t => t.ENTSAYACSONDURUMSU.SONYUKLENENKREDITARIH)
+
+    </div>
+
+       <div class="form-group">
+    @Html.TextBoxFor(t => t.ENTSAYACSONDURUMSU.ABONENO, new { @class = "form-control int", placeholder = _T("ABONENO") })
+    @Html.ValidationMessageFor(t => t.ENTSAYACSONDURUMSU.ABONENO)
+
+    </div>
+
+       <div class="form-group">
+    @Html.TextBoxFor(t => t.ENTSAYACSONDURUMSU.ABONETIP, new { @class = "form-control int", placeholder = _T("ABONETIP") })
+    @Html.ValidationMessageFor(t => t.ENTSAYACSONDURUMSU.ABONETIP)
+
+    </div>
+
+       <div class="form-group">
+    @Html.TextBoxFor(t => t.ENTSAYACSONDURUMSU.ILKPULSETARIH, new { @class = "form-control int", placeholder = _T("ILKPULSETARIH") })
+    @Html.ValidationMessageFor(t => t.ENTSAYACSONDURUMSU.ILKPULSETARIH)
+
+    </div>
+
+       <div class="form-group">
+    @Html.TextBoxFor(t => t.ENTSAYACSONDURUMSU.SONPULSETARIH, new { @class = "form-control int", placeholder = _T("SONPULSETARIH") })
+    @Html.ValidationMessageFor(t => t.ENTSAYACSONDURUMSU.SONPULSETARIH)
+
+    </div>
+
+       <div class="form-group">
+    @Html.TextBoxFor(t => t.ENTSAYACSONDURUMSU.BORCTARIH, new { @class = "form-control int", placeholder = _T("BORCTARIH") })
+    @Html.ValidationMessageFor(t => t.ENTSAYACSONDURUMSU.BORCTARIH)
+
+    </div>
+
+       <div class="form-group">
+    @Html.TextBoxFor(t => t.ENTSAYACSONDURUMSU.MAXDEBI, new { @class = "form-control int", placeholder = _T("MAXDEBI") })
+    @Html.ValidationMessageFor(t => t.ENTSAYACSONDURUMSU.MAXDEBI)
+
+    </div>
+
+       <div class="form-group">
+    @Html.TextBoxFor(t => t.ENTSAYACSONDURUMSU.MAXDEBISINIR, new { @class = "form-control int", placeholder = _T("MAXDEBISINIR") })
+    @Html.ValidationMessageFor(t => t.ENTSAYACSONDURUMSU.MAXDEBISINIR)
+
+    </div>
+
+       <div class="form-group">
+    @Html.TextBoxFor(t => t.ENTSAYACSONDURUMSU.DONEMGUN, new { @class = "form-control int", placeholder = _T("DONEMGUN") })
+    @Html.ValidationMessageFor(t => t.ENTSAYACSONDURUMSU.DONEMGUN)
+
+    </div>
+
+       <div class="form-group">
+    @Html.TextBoxFor(t => t.ENTSAYACSONDURUMSU.DONEM, new { @class = "form-control int", placeholder = _T("DONEM") })
+    @Html.ValidationMessageFor(t => t.ENTSAYACSONDURUMSU.DONEM)
+
+    </div>
+
+       <div class="form-group">
+    @Html.TextBoxFor(t => t.ENTSAYACSONDURUMSU.VANAACMATARIH, new { @class = "form-control int", placeholder = _T("VANAACMATARIH") })
+    @Html.ValidationMessageFor(t => t.ENTSAYACSONDURUMSU.VANAACMATARIH)
+
+    </div>
+
+       <div class="form-group">
+    @Html.TextBoxFor(t => t.ENTSAYACSONDURUMSU.VANAKAPAMATARIH, new { @class = "form-control int", placeholder = _T("VANAKAPAMATARIH") })
+    @Html.ValidationMessageFor(t => t.ENTSAYACSONDURUMSU.VANAKAPAMATARIH)
+
+    </div>
+
+       <div class="form-group">
+    @Html.TextBoxFor(t => t.ENTSAYACSONDURUMSU.SICAKLIK, new { @class = "form-control int", placeholder = _T("SICAKLIK") })
+    @Html.ValidationMessageFor(t => t.ENTSAYACSONDURUMSU.SICAKLIK)
+
+    </div>
+
+       <div class="form-group">
+    @Html.TextBoxFor(t => t.ENTSAYACSONDURUMSU.MINSICAKLIK, new { @class = "form-control int", placeholder = _T("MINSICAKLIK") })
+    @Html.ValidationMessageFor(t => t.ENTSAYACSONDURUMSU.MINSICAKLIK)
+
+    </div>
+
+       <div class="form-group">
+    @Html.TextBoxFor(t => t.ENTSAYACSONDURUMSU.MAXSICAKLIK, new { @class = "form-control int", placeholder = _T("MAXSICAKLIK") })
+    @Html.ValidationMessageFor(t => t.ENTSAYACSONDURUMSU.MAXSICAKLIK)
+
+    </div>
+
+       <div class="form-group">
+    @Html.TextBoxFor(t => t.ENTSAYACSONDURUMSU.YANGINMODU, new { @class = "form-control int", placeholder = _T("YANGINMODU") })
+    @Html.ValidationMessageFor(t => t.ENTSAYACSONDURUMSU.YANGINMODU)
+
+    </div>
+
+       <div class="form-group">
+    @Html.TextBoxFor(t => t.ENTSAYACSONDURUMSU.ASIRITUKETIM, new { @class = "form-control", placeholder = _T("ASIRITUKETIM") })
+    @Html.ValidationMessageFor(t => t.ENTSAYACSONDURUMSU.ASIRITUKETIM)
+
+    </div>
+
+       <div class="form-group">
+    @Html.TextBoxFor(t => t.ENTSAYACSONDURUMSU.ARIZA, new { @class = "form-control", placeholder = _T("ARIZA") })
+    @Html.ValidationMessageFor(t => t.ENTSAYACSONDURUMSU.ARIZA)
+
+    </div>
+
+       <div class="form-group">
+    @Html.DateInput(t => t.ENTSAYACSONDURUMSU.SONBILGILENDIRMEZAMANI, new { placeholder =  _T("SONBILGILENDIRMEZAMANI") })
+    @Html.ValidationMessageFor(t => t.ENTSAYACSONDURUMSU.SONBILGILENDIRMEZAMANI)
+
+    </div>
+
+       <div class="form-group">
+    @Html.TextBoxFor(t => t.ENTSAYACSONDURUMSU.PARAMETRE, new { @class = "form-control int", placeholder = _T("PARAMETRE") })
+    @Html.ValidationMessageFor(t => t.ENTSAYACSONDURUMSU.PARAMETRE)
+
+    </div>
+
+       <div class="form-group">
+    @Html.TextBoxFor(t => t.ENTSAYACSONDURUMSU.ACIKLAMA, new { @class = "form-control int", placeholder = _T("ACIKLAMA") })
+    @Html.ValidationMessageFor(t => t.ENTSAYACSONDURUMSU.ACIKLAMA)
+
+    </div>
+
+       <div class="form-group">
+    @Html.TextBoxFor(t => t.ENTSAYACSONDURUMSU.DURUM, new { @class = "form-control int", placeholder = _T("DURUM") })
+    @Html.ValidationMessageFor(t => t.ENTSAYACSONDURUMSU.DURUM)
+
+    </div>
+
+       <div class="form-group">
+    @Html.TextBoxFor(t => t.ENTSAYACSONDURUMSU.KREDIBITTI, new { @class = "form-control", placeholder = _T("KREDIBITTI") })
+    @Html.ValidationMessageFor(t => t.ENTSAYACSONDURUMSU.KREDIBITTI)
+
+    </div>
+
+       <div class="form-group">
+    @Html.TextBoxFor(t => t.ENTSAYACSONDURUMSU.KREDIAZ, new { @class = "form-control", placeholder = _T("KREDIAZ") })
+    @Html.ValidationMessageFor(t => t.ENTSAYACSONDURUMSU.KREDIAZ)
+
+    </div>
+
+       <div class="form-group">
+    @Html.TextBoxFor(t => t.ENTSAYACSONDURUMSU.ANAPILBITTI, new { @class = "form-control", placeholder = _T("ANAPILBITTI") })
+    @Html.ValidationMessageFor(t => t.ENTSAYACSONDURUMSU.ANAPILBITTI)
+
+    </div>
+
+       <div class="form-group">
+    @Html.DateInput(t => t.ENTSAYACSONDURUMSU.SONBAGLANTIZAMAN, new { placeholder =  _T("SONBAGLANTIZAMAN") })
+    @Html.ValidationMessageFor(t => t.ENTSAYACSONDURUMSU.SONBAGLANTIZAMAN)
+
+    </div>
+
+       <div class="form-group">
+    @Html.DateInput(t => t.ENTSAYACSONDURUMSU.SONOKUMATARIH, new { placeholder =  _T("SONOKUMATARIH") })
+    @Html.ValidationMessageFor(t => t.ENTSAYACSONDURUMSU.SONOKUMATARIH)
+
+    </div>
+
+       <div class="form-group">
+    @Html.TextBoxFor(t => t.ENTSAYACSONDURUMSU.PULSEHATA, new { @class = "form-control", placeholder = _T("PULSEHATA") })
+    @Html.ValidationMessageFor(t => t.ENTSAYACSONDURUMSU.PULSEHATA)
+
+    </div>
+
+       <div class="form-group">
+    @Html.TextBoxFor(t => t.ENTSAYACSONDURUMSU.RTCHATA, new { @class = "form-control", placeholder = _T("RTCHATA") })
+    @Html.ValidationMessageFor(t => t.ENTSAYACSONDURUMSU.RTCHATA)
+
+    </div>
+
+       <div class="form-group">
+    @Html.TextBoxFor(t => t.ENTSAYACSONDURUMSU.VANA, new { @class = "form-control", placeholder = _T("VANA") })
+    @Html.ValidationMessageFor(t => t.ENTSAYACSONDURUMSU.VANA)
+
+    </div>
+
+       <div class="form-group">
+    @Html.TextBoxFor(t => t.ENTSAYACSONDURUMSU.CEZA1, new { @class = "form-control", placeholder = _T("CEZA1") })
+    @Html.ValidationMessageFor(t => t.ENTSAYACSONDURUMSU.CEZA1)
+
+    </div>
+
+       <div class="form-group">
+    @Html.TextBoxFor(t => t.ENTSAYACSONDURUMSU.CEZA2, new { @class = "form-control", placeholder = _T("CEZA2") })
+    @Html.ValidationMessageFor(t => t.ENTSAYACSONDURUMSU.CEZA2)
+
+    </div>
+
+       <div class="form-group">
+    @Html.TextBoxFor(t => t.ENTSAYACSONDURUMSU.CEZA3, new { @class = "form-control", placeholder = _T("CEZA3") })
+    @Html.ValidationMessageFor(t => t.ENTSAYACSONDURUMSU.CEZA3)
+
+    </div>
+
+       <div class="form-group">
+    @Html.TextBoxFor(t => t.ENTSAYACSONDURUMSU.CEZA4, new { @class = "form-control", placeholder = _T("CEZA4") })
+    @Html.ValidationMessageFor(t => t.ENTSAYACSONDURUMSU.CEZA4)
+
+    </div>
+
+       <div class="form-group">
+    @Html.TextBoxFor(t => t.ENTSAYACSONDURUMSU.MAGNET, new { @class = "form-control", placeholder = _T("MAGNET") })
+    @Html.ValidationMessageFor(t => t.ENTSAYACSONDURUMSU.MAGNET)
+
+    </div>
+
+       <div class="form-group">
+    @Html.TextBoxFor(t => t.ENTSAYACSONDURUMSU.ANAPILZAYIF, new { @class = "form-control", placeholder = _T("ANAPILZAYIF") })
+    @Html.ValidationMessageFor(t => t.ENTSAYACSONDURUMSU.ANAPILZAYIF)
+
+    </div>
+
+
+	 
+		<div class="form-actions">
+			<button type="submit" class="btn btn-primary"><i class="fa fa-save"></i> @_T("Kaydet")</button>
+			@Html.ButtonLink(_T("Vazgeç").ToString(), "Index", "btn btn-xs btn-danger cancel", "fa-remove")
+		</div>
+	}
+</div>
+
+@section script
+{
+	<script type="text/javascript">
+		$(document).ready(function () {
+		//js kodunuzu buraya yazın	
+		});
+
+	</script>
+}
