@@ -2,10 +2,10 @@ using System;
 using OsosOracle.Entities.Concrete;
 namespace OsosOracle.Entities.ComplexType.ENTABONESAYACComplexTypes
 {
-	public class ENTABONESAYACDetay
-	{
-	
-		        public int KAYITNO { get; set; }
+    public class ENTABONESAYACDetay
+    {
+
+        public int KAYITNO { get; set; }
         public int ABONEKAYITNO { get; set; }
         public int SAYACKAYITNO { get; set; }
         public int SOKULMENEDEN { get; set; }
@@ -21,8 +21,8 @@ namespace OsosOracle.Entities.ComplexType.ENTABONESAYACComplexTypes
         public int TARIFE { get; set; }
         public DateTime TAKILMATARIH { get; set; }
         public int SONSATISKAYITNO { get; set; }
-        public DateTime SONSATISTARIH { get; set; }
+        public DateTime? SONSATISTARIH { get; set; }
 
-	}
+    }
 
 }

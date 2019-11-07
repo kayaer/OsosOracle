@@ -50,7 +50,8 @@ namespace OsosOracle.DataLayer.Concrete.EntityFramework.Dal
                     SABAHSAAT = x.EntAboneSayacEfCollection.FirstOrDefault().PrmTarifeElkEf.SABAHSAAT,
                     HAFTASONUAKSAM=x.EntAboneSayacEfCollection.FirstOrDefault().PrmTarifeElkEf.HAFTASONUAKSAM
 
-                }
+                },
+                SayacModelKayitNo=x.CstSayacModelEf.KAYITNO
 
 
             });

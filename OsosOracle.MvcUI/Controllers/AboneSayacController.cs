@@ -56,14 +56,13 @@ namespace OsosOracle.MvcUI.Controllers
             }, JsonRequestBehavior.AllowGet);
         }
 
-        public ActionResult Ekle(int? KayitNo)
+        public ActionResult Ekle(int KayitNo)
         {
-            var model = new ENTABONESAYACKaydetModel();
+            var model = new ENTABONESAYACKaydetModel() { Tip = KayitNo };
            
             return View("Kaydet", model);
         }
-
-
+        
         public ActionResult Guncelle(int sayacKayitNo)
         {
 

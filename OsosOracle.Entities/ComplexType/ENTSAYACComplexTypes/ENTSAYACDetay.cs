@@ -27,6 +27,7 @@ namespace OsosOracle.Entities.ComplexType.ENTSAYACComplexTypes
         public PRMTARIFESUDetay PrmTarifeSuDetay { get; set; }
         public PRMTARIFEELKDetay PrmTarifeElkDetay { get; set; }
         public string Kurum { get; set; }
+        public int SayacModelKayitNo { get; set; }
     }
 
 }

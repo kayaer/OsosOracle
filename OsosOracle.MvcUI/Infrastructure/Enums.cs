@@ -37,7 +37,9 @@ namespace OsosOracle.MvcUI.Infrastructure
             ModemMarkaGetir = 10,
             [Description("/CSTHUMODEL/AjaxAra")]
             ModemModelGetir = 11,
-           
+            [Description("/PRMTARIFEORTAKAVM/AjaxAra")]
+            KalorimetreTarifeGetir = 12,
+
         }
 
         public enum AutocompleteDegerFuction
@@ -64,7 +66,9 @@ namespace OsosOracle.MvcUI.Infrastructure
             ModemMarkaGetir = 10,
             [Description("/CSTHUMODEL/AjaxTekDeger")]
             ModemModelGetir = 11,
-           
+            [Description("/PRMTARIFEORTAKAVM/AjaxTekDeger")]
+            KalorimetreTarifeGetir = 12,
+
         }
 
         public enum AutocompleteCokDegerFuction
@@ -91,7 +95,9 @@ namespace OsosOracle.MvcUI.Infrastructure
             ModemMarkaGetir = 10,
             [Description("/CSTHUMODEL/AjaxCokDeger")]
             ModemModelGetir = 11,
-           
+            [Description("/PRMTARIFEORTAKAVM/AjaxCokDeger")]
+            KalorimetreTarifeGetir = 12,
+
         }
 
         public enum AutoCompleteType

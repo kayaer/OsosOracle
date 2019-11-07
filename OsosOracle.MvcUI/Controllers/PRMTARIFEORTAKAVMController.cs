@@ -27,7 +27,7 @@ namespace OsosOracle.MvcUI.Controllers
 
         public ActionResult Index()
         {
-            SayfaBaslik($"PRMTARIFEORTAKAVM İşlemleri");
+            SayfaBaslik($"Ortak Avm Tarife İşlemleri");
             var model = new PRMTARIFEORTAKAVMIndexModel();
             return View(model);
         }
@@ -76,6 +76,7 @@ namespace OsosOracle.MvcUI.Controllers
                     t.BAYRAM2AY,
                     t.BAYRAM2SURE,
                     t.KURUMKAYITNO,
+                    t.AylikBakimBedeli,
 
                     Islemler = $@"<a class='btn btn-xs btn-info modalizer' href='{Url.Action("Guncelle", "PRMTARIFEORTAKAVM", new { id = t.KAYITNO })}' title='Düzenle'><i class='fa fa-edit'></i></a>
 							   <a class='btn btn-xs btn-primary' href='{Url.Action("Detay", "PRMTARIFEORTAKAVM", new { id = t.KAYITNO })}' title='Detay'><i class='fa fa-th-list'></i></a>
@@ -90,7 +91,7 @@ namespace OsosOracle.MvcUI.Controllers
 
         public ActionResult Ekle()
         {
-            SayfaBaslik($"PRMTARIFEORTAKAVM Ekle");
+            SayfaBaslik($"Ortak Avm Tarife Ekle");
 
             var model = new PRMTARIFEORTAKAVMKaydetModel
             {
@@ -105,7 +106,7 @@ namespace OsosOracle.MvcUI.Controllers
 
         public ActionResult Guncelle(int id)
         {
-            SayfaBaslik($"PRMTARIFEORTAKAVM Güncelle");
+            SayfaBaslik($"Ortak Avm Tarife Güncelle");
 
             var model = new PRMTARIFEORTAKAVMKaydetModel
             {
@@ -120,7 +121,7 @@ namespace OsosOracle.MvcUI.Controllers
 
         public ActionResult Detay(int id)
         {
-            SayfaBaslik($"PRMTARIFEORTAKAVM Detay");
+            SayfaBaslik($"Ortak Avm Tarife Detay");
 
             var model = new PRMTARIFEORTAKAVMDetayModel
             {
@@ -135,16 +136,19 @@ namespace OsosOracle.MvcUI.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Kaydet(PRMTARIFEORTAKAVMKaydetModel pRMTARIFEORTAKAVMKaydetModel)
         {
+            pRMTARIFEORTAKAVMKaydetModel.PRMTARIFEORTAKAVM.KURUMKAYITNO = AktifKullanici.KurumKayitNo;
             if (pRMTARIFEORTAKAVMKaydetModel.PRMTARIFEORTAKAVM.KAYITNO > 0)
             {
+                pRMTARIFEORTAKAVMKaydetModel.PRMTARIFEORTAKAVM.GUNCELLEYEN = AktifKullanici.KayitNo;
                 _pRMTARIFEORTAKAVMService.Guncelle(pRMTARIFEORTAKAVMKaydetModel.PRMTARIFEORTAKAVM.List());
             }
             else
             {
+                pRMTARIFEORTAKAVMKaydetModel.PRMTARIFEORTAKAVM.OLUSTURAN = AktifKullanici.KayitNo;
                 _pRMTARIFEORTAKAVMService.Ekle(pRMTARIFEORTAKAVMKaydetModel.PRMTARIFEORTAKAVM.List());
             }
 
-            return Yonlendir(Url.Action("Index"), $"PRMTARIFEORTAKAVM kayıdı başarıyla gerçekleştirilmiştir.");
+            return Yonlendir(Url.Action("Index"), $"Ortak Avm Tarife kayıdı başarıyla gerçekleştirilmiştir.");
             //return Yonlendir(Url.Action("Detay","PRMTARIFEORTAKAVM",new{id=pRMTARIFEORTAKAVMKaydetModel.PRMTARIFEORTAKAVM.Id}), $"PRMTARIFEORTAKAVM kayıdı başarıyla gerçekleştirilmiştir.");
         }
 
@@ -152,7 +156,7 @@ namespace OsosOracle.MvcUI.Controllers
 
         public ActionResult Sil(int id)
         {
-            SayfaBaslik($"PRMTARIFEORTAKAVM Silme İşlem Onayı");
+            SayfaBaslik($"Ortak Avm Tarife Silme İşlem Onayı");
             return View("_SilOnay", new DeleteViewModel() { Id = id, RedirectUrlForCancel = $"/PRMTARIFEORTAKAVM/Index/{id}" });
         }
 
@@ -162,7 +166,7 @@ namespace OsosOracle.MvcUI.Controllers
         {
             _pRMTARIFEORTAKAVMService.Sil(model.Id.List());
 
-            return Yonlendir(Url.Action("Index"), $"PRMTARIFEORTAKAVM Başarıyla silindi");
+            return Yonlendir(Url.Action("Index"), $"Ortak Avm Tarife Başarıyla silindi");
         }
 
 

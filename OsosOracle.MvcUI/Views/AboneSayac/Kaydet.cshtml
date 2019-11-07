@@ -22,29 +22,37 @@
             @Html.AutoComplete(t => t.ENTABONESAYAC.ABONEKAYITNO, Enums.AutocompleteFuction.AboneGetir, Enums.AutoCompleteType.List, _T("Abone").ToString())
             @Html.ValidationMessageFor(t => t.ENTABONESAYAC.ABONEKAYITNO)
         </div>
-        if (System.Configuration.ConfigurationManager.AppSettings["Tarife"] == "Su")
+
+        if (Model.Tip == 1)
+        {
+            <div class="form-group">
+                @Html.AutoComplete(t => t.ENTABONESAYAC.TARIFEKAYITNO, Enums.AutocompleteFuction.KalorimetreTarifeGetir, Enums.AutoCompleteType.List, _T("Tarife").ToString())
+                @Html.ValidationMessageFor(t => t.ENTABONESAYAC.TARIFEKAYITNO)
+            </div>
+        }
+        else if (Model.Tip == 2)
         {
             <div class="form-group">
                 @Html.AutoComplete(t => t.ENTABONESAYAC.TARIFEKAYITNO, Enums.AutocompleteFuction.SuTarifeGetir, Enums.AutoCompleteType.List, _T("Tarife").ToString())
                 @Html.ValidationMessageFor(t => t.ENTABONESAYAC.TARIFEKAYITNO)
             </div>
         }
-        else
-        {
-            <div class="form-group">
-                @Html.AutoComplete(t => t.ENTABONESAYAC.TARIFEKAYITNO, Enums.AutocompleteFuction.ElektrikTarifeGetir, Enums.AutoCompleteType.List, _T("Tarife").ToString())
-                @Html.ValidationMessageFor(t => t.ENTABONESAYAC.TARIFEKAYITNO)
-            </div>
-        }
-        @*<div class="form-group">
-                @Html.TextBoxFor(t => t.ENTABONESAYAC.ABONEKAYITNO, new { @class = "form-control", placeholder = _T("Seri No") })
-                @Html.ValidationMessageFor(t => t.ENTSAYAC.SERINO)
-            </div>
-            <div class="form-group">
-                @Html.TextAreaFor(t => t.ENTSAYAC.ACIKLAMA, new { @class = "form-control", placeholder = _T("Açıklama") })
-                @Html.ValidationMessageFor(t => t.ENTSAYAC.ACIKLAMA)
 
-            </div>*@
+
+        @*if (System.Configuration.ConfigurationManager.AppSettings["Tarife"] == "Su")
+            {
+                <div class="form-group">
+                    @Html.AutoComplete(t => t.ENTABONESAYAC.TARIFEKAYITNO, Enums.AutocompleteFuction.SuTarifeGetir, Enums.AutoCompleteType.List, _T("Tarife").ToString())
+                    @Html.ValidationMessageFor(t => t.ENTABONESAYAC.TARIFEKAYITNO)
+                </div>
+            }
+            else
+            {
+                <div class="form-group">
+                    @Html.AutoComplete(t => t.ENTABONESAYAC.TARIFEKAYITNO, Enums.AutocompleteFuction.ElektrikTarifeGetir, Enums.AutoCompleteType.List, _T("Tarife").ToString())
+                    @Html.ValidationMessageFor(t => t.ENTABONESAYAC.TARIFEKAYITNO)
+                </div>
+            }*@
 
         <div class="form-actions">
             <button type="submit" class="btn btn-primary"><i class="fa fa-save"></i> @_T("Kaydet")</button>

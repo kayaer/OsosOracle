@@ -4,7 +4,9 @@
     ViewBag.Title = "Abone-Sayaç İşlemleri";
 }
 <div class="pull-right">
-    @Html.ButtonLink("Yeni Abone Sayaç  Ekle", "Ekle", "btn btn-xs btn-success modalizer", "fa-plus", htmlAttributes: new { Id = "btnYeniAboneSayacKayit" })
+   @* @Html.ButtonLink("Yeni Abone Sayaç  Ekle", "Ekle", "btn btn-xs btn-success modalizer", "fa-plus", htmlAttributes: new { Id = "btnYeniAboneSayacKayit" })*@
+    @Html.ButtonLink("Yeni Abone Sayaç  Ekle Kalorimetre", "Ekle", "btn btn-xs btn-success modalizer", "fa-plus", new { KayitNo = 1 }, htmlAttributes: new { Id = "btnYeniAboneSayacKayit" })
+    @Html.ButtonLink("Yeni Abone Sayaç  Ekle Soguk Su", "Ekle", "btn btn-xs btn-success modalizer", "fa-plus", new { KayitNo = 2 }, htmlAttributes: new { Id = "btnYeniAboneSayacKayit" })
 </div>
 
 

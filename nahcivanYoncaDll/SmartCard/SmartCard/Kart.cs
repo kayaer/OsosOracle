@@ -7,6 +7,8 @@ using System.Runtime.InteropServices;
 
 namespace SmartCard
 {
+    [ComVisible(true)]
+    [ClassInterface(ClassInterfaceType.None)]
     public class Kart : IKart
     {
         static SerialPort port = new SerialPort();

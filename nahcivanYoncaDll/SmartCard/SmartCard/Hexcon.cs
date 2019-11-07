@@ -84,7 +84,25 @@ namespace SmartCard
             return (UInt32)((dort << 24) + (uc << 16) + (iki << 8) + bir);
 
         }
+        public static Int32 Byte4toInt32(byte[] OkunacakDizi)
+        {
+            return (Int32)((OkunacakDizi[3] << 24) + (OkunacakDizi[2] << 16) + (OkunacakDizi[1] << 8) + OkunacakDizi[0]);
+        }
 
+        public static Int32 Byte4toInt32(byte[] OkunacakDizi, byte Index)
+        {
+            return (Int32)((OkunacakDizi[Index + 3] << 24) + (OkunacakDizi[Index + 2] << 16) + (OkunacakDizi[Index + 1] << 8) + OkunacakDizi[Index]);
+        }
+
+        public static UInt16 Byte2toUInt16(byte bir, byte iki)
+        {
+            return (UInt16)((iki << 8) + bir);
+        }
+
+        public static UInt16 Byte2toUInt16(byte[] OkunacakDizi, byte Index)
+        {
+            return (UInt16)((OkunacakDizi[Index + 1] << 8) + OkunacakDizi[Index]);
+        }
         public static void UInt32toByte4(UInt32 Deger, byte[] YazilacakDizi)
         {
             YazilacakDizi[3] = Convert.ToByte((Deger & 0xFF000000) >> 24);

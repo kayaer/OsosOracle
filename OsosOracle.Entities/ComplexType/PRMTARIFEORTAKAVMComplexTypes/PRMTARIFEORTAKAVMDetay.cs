@@ -2,10 +2,10 @@ using System;
 using OsosOracle.Entities.Concrete;
 namespace OsosOracle.Entities.ComplexType.PRMTARIFEORTAKAVMComplexTypes
 {
-	public class PRMTARIFEORTAKAVMDetay
-	{
-	
-		        public int KAYITNO { get; set; }
+    public class PRMTARIFEORTAKAVMDetay
+    {
+
+        public int KAYITNO { get; set; }
         public string AD { get; set; }
         public int YEDEKKREDI { get; set; }
         public string ACIKLAMA { get; set; }
@@ -35,6 +35,7 @@ namespace OsosOracle.Entities.ComplexType.PRMTARIFEORTAKAVMComplexTypes
         public int BAYRAM2SURE { get; set; }
         public int KURUMKAYITNO { get; set; }
         public string Kurum { get; set; }
+        public int? AylikBakimBedeli { get; set; }
     }
 
 }

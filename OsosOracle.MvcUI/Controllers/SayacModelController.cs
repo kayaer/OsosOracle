@@ -49,13 +49,28 @@ namespace OsosOracle.MvcUI.Controllers
                     t.KAYITNO,
                     t.AD,
                     t.ACIKLAMA,
-                    Islemler = $@"<a class='btn btn-xs btn-info ' href='{Url.Action("Guncelle", "Kurum", new { id = t.KAYITNO })}' title='Düzenle'><i class='fa fa-edit'></i></a>							 
-								<a class='btn btn-xs btn-danger modalizer ' href='{Url.Action("Sil", "Kurum", new { id = t.KAYITNO })}' title='Sil'><i class='fa fa-trash'></i></a>"
+                    Islemler = $@"<a class='btn btn-xs btn-info ' href='{Url.Action("Guncelle", "SayacModel", new { id = t.KAYITNO })}' title='Düzenle'><i class='fa fa-edit'></i></a>							 
+								<a class='btn btn-xs btn-danger modalizer ' href='{Url.Action("Sil", "SayacModel", new { id = t.KAYITNO })}' title='Sil'><i class='fa fa-trash'></i></a>"
                 }),
                 draw = dtParameterModel.Draw,
                 recordsTotal = kayitlar.ToplamKayitSayisi,
                 recordsFiltered = kayitlar.ToplamKayitSayisi
             }, JsonRequestBehavior.AllowGet);
+        }
+        public ActionResult Sil(int id)
+        {
+            SayfaBaslik("Sayaç Model Silme İşlem Onayı");
+            return View("_SilOnay", new DeleteViewModel { Id = id, RedirectUrlForCancel = $"/SayacModel/Index" });
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Sil(DeleteViewModel model)
+        {
+
+            _cstSayacModelService.Sil(model.Id.List());
+
+            return Yonlendir(Url.Action("Index"), "Sayaç Model Başarıyla Silindi");
         }
 
         public ActionResult AjaxAra(string key, CSTSAYACMODELAra cstSayacModelAra = null, int limit = 10, int baslangic = 0)

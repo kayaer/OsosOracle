@@ -1,9 +1,10 @@
 using System;
-            using OsosOracle.Framework.Entities;
-			namespace OsosOracle.Entities.Concrete
-			{
-				public class PRMTARIFEORTAKAVM :  IEntity
-				{        public int KAYITNO { get; set; }
+using OsosOracle.Framework.Entities;
+namespace OsosOracle.Entities.Concrete
+{
+    public class PRMTARIFEORTAKAVM : IEntity
+    {
+        public int KAYITNO { get; set; }
         public string AD { get; set; }
         public int YEDEKKREDI { get; set; }
         public string ACIKLAMA { get; set; }
@@ -32,5 +33,6 @@ using System;
         public int BAYRAM2AY { get; set; }
         public int BAYRAM2SURE { get; set; }
         public int KURUMKAYITNO { get; set; }
+        public int? AylikBakimBedeli { get; set; }
     }
 }

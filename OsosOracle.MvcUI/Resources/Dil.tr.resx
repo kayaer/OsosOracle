@@ -402,4 +402,64 @@
   <data name="Yönetim" xml:space="preserve">
     <value>Yönetim</value>
   </data>
+  <data name="Komut" xml:space="preserve">
+    <value>Komut</value>
+  </data>
+  <data name="Rapor" xml:space="preserve">
+    <value>Rapor</value>
+  </data>
+  <data name="Tarife" xml:space="preserve">
+    <value>Tarife</value>
+  </data>
+  <data name="Islem" xml:space="preserve">
+    <value>İşlemler</value>
+  </data>
+  <data name="KartBosalt" xml:space="preserve">
+    <value>Kart Boşalt</value>
+  </data>
+  <data name="Kredi" xml:space="preserve">
+    <value>Kredi</value>
+  </data>
+  <data name="Kurum" xml:space="preserve">
+    <value>Kurum</value>
+  </data>
+  <data name="SabitUcret" xml:space="preserve">
+    <value>Sabit Ücret</value>
+  </data>
+  <data name="SatisIslemleri" xml:space="preserve">
+    <value>Satış İşlemleri</value>
+  </data>
+  <data name="SatisTarih" xml:space="preserve">
+    <value>Satış Tarihi</value>
+  </data>
+  <data name="Sayac" xml:space="preserve">
+    <value>Sayaç</value>
+  </data>
+  <data name="SayacAra" xml:space="preserve">
+    <value>Sayaç Ara</value>
+  </data>
+  <data name="SayacEkle" xml:space="preserve">
+    <value>Yeni Sayaç</value>
+  </data>
+  <data name="SayacModel" xml:space="preserve">
+    <value>Sayaç Modeli</value>
+  </data>
+  <data name="SayacSeriNo" xml:space="preserve">
+    <value>Sayaç Seri No</value>
+  </data>
+  <data name="Soyad" xml:space="preserve">
+    <value>Soyad</value>
+  </data>
+  <data name="TarifeEkle" xml:space="preserve">
+    <value>Yeni Tarife</value>
+  </data>
+  <data name="TarifeIslemleri" xml:space="preserve">
+    <value>Tarife İşlemleri</value>
+  </data>
+  <data name="TuketimKatsayisi" xml:space="preserve">
+    <value>Tüketim Katsayı</value>
+  </data>
+  <data name="YedekKredi" xml:space="preserve">
+    <value>Yedek Kredi</value>
+  </data>
 </root>

@@ -41,7 +41,8 @@ namespace OsosOracle.DataLayer.Concrete.EntityFramework.Dal
                 BAYRAM2AY = x.BAYRAM2AY,
                 BAYRAM2SURE = x.BAYRAM2SURE,
                 KURUMKAYITNO = x.KURUMKAYITNO,
-                Kurum=x.ConKurumEf.AD
+                Kurum=x.ConKurumEf.AD,
+                AylikBakimBedeli=x.AylikBakimBedeli
 
             });
         }

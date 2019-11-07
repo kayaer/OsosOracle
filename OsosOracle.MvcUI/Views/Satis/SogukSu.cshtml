@@ -1,4 +1,5 @@
 ﻿@using OsosOracle.Framework.HtmlHelpers
+@using System.Configuration
 @model OsosOracle.MvcUI.Models.ENTSATISModels.ENTSATISKaydetModel
 
 @section panelHeading
@@ -92,26 +93,27 @@
     <script type="text/javascript">
 
         $(document).ready(function () {
-
-            var satisKaydetModel;
+            var namespace='@ConfigurationManager.AppSettings["KartNamespace"]';
+               var satisKaydetModel=@Html.Raw(Json.Encode(Model));
 
 
             $("#btnKartOku").click(function (e) {
+
                 var kart = AboneOku();
                 if (kart !== false) {
 
                     $.ajax({
-                    url: '/Satis/KartOkunanModel',
+                        url: '/Satis/KartOkunanSogukSu',
                     method: "POST",
                     async: false,
                         data: { hamdata: kart },
                         success: function (jqx) {
-                            satisKaydetModel = jqx;
-                            $("#txtAboneNo").val(satisKaydetModel.ElkKartOkunan.AboneNo);
-                            $("#txtSayacSeriNo").val(satisKaydetModel.ElkKartOkunan.SayacSeriNo);
-                            $("#txtAnaKredi").val(satisKaydetModel.ElkKartOkunan.AnaKredi);
-                            $("#txtYedekKredi").val(satisKaydetModel.ElkKartOkunan.YedekKredi);
-                            $("#txtTarife").val(satisKaydetModel.PrmTarifeElkDetay.AD);
+                            satisKaydetModel.SogukSuOkunan = jqx;
+                            //$("#txtAboneNo").val(satisKaydetModel.ElkKartOkunan.AboneNo);
+                            $("#txtSayacSeriNo").val(jqx.SayacSeriNo);
+                            $("#txtAnaKredi").val(jqx.Kredi);
+                            $("#txtYedekKredi").val(jqx.YedekKredi);
+                           // $("#txtTarife").val(jqx.CihazNo);
                         }
                     });
                 }
@@ -119,7 +121,7 @@
             });
 
             $('#txtTutar').blur(function () {
-                        var hesaplaUrl = "@Url.Action("HesaplaYeni", "Satis")";
+                        var hesaplaUrl = "@Url.Action("HesaplaSogukSu", "Satis")";
                         var girilenTutar = $("#txtTutar").val();
                         satisKaydetModel.GirilenTutar = girilenTutar;
 
@@ -130,7 +132,7 @@
                             contentType: "application/json"
                         }).done(function (res) {
                             satisKaydetModel = res;
-                            $("#txtKredi").val(satisKaydetModel.ElkKartYuklenecek.AnaKredi);
+                            $("#txtKredi").val(satisKaydetModel.SogukSuYazilacak.YuklenecekM3);
 
                             //if (satisKaydetModel.ElkKartYuklenecek.sayacBilgi == null) {
                             //    $("#txtKredi").val(satisKaydetModel.ElkKartYuklenecek.AnaKredi);
@@ -146,8 +148,8 @@
 
             $("#btnKrediYukle").click(function (e) {
 
-                KrediYukle(satisKaydetModel);
-                var satisUrl = "@Url.Action("SatisKaydet", "Satis")";
+              //  KrediYukle(satisKaydetModel);
+                var satisUrl = "@Url.Action("SatisKaydetSogukSu", "Satis")";
 
 
                 $.ajax({
@@ -164,99 +166,86 @@
                 });
             });
 
+
+
+
+
+            function AboneOku() {
+
+                var result = false;
+                try {
+                    var sogukSu = new ActiveXObject(namespace);
+                    var kartTip = sogukSu.KartTipi();
+                    if (kartTip === "Abone Kartı") {
+                        result = sogukSu.AboneOku();
+                    } else if (kartTip === "Bos Kart") {
+                        ajaxMesajGoster('Kart Boş');
+                    } else {
+                        ajaxMesajGoster('Kart Bilgisi Alınamıyor');
+                    }
+                    return result;
+                } catch (e) {
+
+                    ajaxMesajGoster(e);
+
+                }
+
+
+            }
+
+
+
+            function KrediYukle(satisKaydetModel) {
+                var sogukSu = new ActiveXObject(namespace);
+                try {
+
+                    var kartTip = sogukSu.KartTipi();
+                    if (kartTip === "Abone Kartı") {
+                        KrediYukleKart(satisKaydetModel);
+                    } else if (kartTip === "Bos Kart") {
+                        ajaxMesajGoster('Kart Boş');
+                    } else {
+                        ajaxMesajGoster('Kart Bilgisi Alınamıyor');
+                    }
+                } catch (e) {
+                    ajaxMesajGoster(e);
+                }
+            }
+
+            function KrediYukleKart(satisKaydetModel) {
+                var sogukSu = new ActiveXObject(namespace);
+                var result = false;
+                try {
+                    result = sogukSu.AboneYaz(satisKaydetModel.KalorimetreYazilacak.devno,
+                        satisKaydetModel.KalorimetreYazilacak.anakr,
+                        satisKaydetModel.KalorimetreYazilacak.yedekkr,
+                        satisKaydetModel.KalorimetreYazilacak.Bayram1Gunn,
+                        satisKaydetModel.KalorimetreYazilacak.Bayram1Ayy,
+                        satisKaydetModel.KalorimetreYazilacak.Bayram1Suree,
+                        satisKaydetModel.KalorimetreYazilacak.Bayram2Gunn,
+                        satisKaydetModel.KalorimetreYazilacak.Bayram2Ayy,
+                        satisKaydetModel.KalorimetreYazilacak.Bayram2Suree
+                    );
+                    if (result == "1") {
+                        ajaxMesajGoster('İşlem Başarılı');
+                    } else {
+                        ajaxMesajGoster('İşlem Başarısız');
+                    }
+                } catch (e) {
+                    ajaxMesajGoster(e);
+                }
+            }
+
+            function GorunumAyarla() {
+                //$("#txtAboneNo").val('');
+                $("#txtSayacSeriNo").val('');
+                $("#txtAnaKredi").val('');
+                $("#txtYedekKredi").val('');
+                $("#txtTutar").val('');
+                $("#txtKredi").val('');
+            }
+
         });
-
-
-
-
-        function AboneOku() {
-            var elektrik = new ActiveXObject("SmartCard.SayacTurleri.ElektrikTr");
-            var result = false;
-            try {
-
-                var kartTip = elektrik.KartTipi();
-                if (kartTip === "Abone Kartı") {
-                    result = elektrik.AboneOku();
-                } else if (kartTip === "Bos Kart") {
-                    ajaxMesajGoster('Kart Boş');
-                } else {
-                    ajaxMesajGoster('Kart Bilgisi Alınamıyor');
-                }
-                return result;
-            } catch (e) {
-
-                ajaxMesajGoster(e);
-
-            }
-
-
-        }
-
-
-
-        function KrediYukle(satisKaydetModel) {
-            var elektrik = new ActiveXObject("SmartCard.SayacTurleri.ElektrikTr");
-            try {
-
-                var kartTip = elektrik.KartTipi();
-                if (kartTip === "Abone Kartı") {
-                    KrediYukleKart(satisKaydetModel);
-                } else if (kartTip === "Bos Kart") {
-                    ajaxMesajGoster('Kart Boş');
-                } else {
-                    ajaxMesajGoster('Kart Bilgisi Alınamıyor');
-                }
-            } catch (e) {
-                ajaxMesajGoster(e);
-            }
-        }
-
-        function KrediYukleKart(satisKaydetModel) {
-            var elektrik = new ActiveXObject("SmartCard.SayacTurleri.ElektrikTr");
-            var result = false;
-            try {
-                result = elektrik.AboneYaz(satisKaydetModel.ElkKartYuklenecek.SayacSeriNo,
-                                           satisKaydetModel.ElkKartYuklenecek.AnaKredi,
-                                           satisKaydetModel.ElkKartYuklenecek.YedekKredi,
-                                           satisKaydetModel.PrmTarifeElkDetay.FIYAT1,
-                                           satisKaydetModel.PrmTarifeElkDetay.FIYAT2,
-                                           satisKaydetModel.PrmTarifeElkDetay.FIYAT3,
-                                           satisKaydetModel.PrmTarifeElkDetay.LIMIT1,
-                                           satisKaydetModel.PrmTarifeElkDetay.LIMIT2,
-                                           satisKaydetModel.PrmTarifeElkDetay.YUKLEMELIMIT,
-                                           satisKaydetModel.PrmTarifeElkDetay.AKSAMSAAT,
-                                           satisKaydetModel.PrmTarifeElkDetay.SABAHSAAT,
-                                           satisKaydetModel.PrmTarifeElkDetay.HAFTASONUAKSAM,
-                                           satisKaydetModel.PrmTarifeElkDetay.SABITUCRET,
-                                           satisKaydetModel.PrmTarifeElkDetay.BAYRAM1GUN,
-                                           satisKaydetModel.PrmTarifeElkDetay.BAYRAM1AY,
-                                           satisKaydetModel.PrmTarifeElkDetay.BAYRAM1SURE,
-                                           satisKaydetModel.PrmTarifeElkDetay.BAYRAM2GUN,
-                                           satisKaydetModel.PrmTarifeElkDetay.BAYRAM2AY,
-                                           satisKaydetModel.PrmTarifeElkDetay.BAYRAM2SURE,
-                                           satisKaydetModel.PrmTarifeElkDetay.KRITIKKREDI
-                );
-                if (result == "1") {
-                    ajaxMesajGoster('İşlem Başarılı');
-                } else {
-                    ajaxMesajGoster('İşlem Başarısız');
-                }
-            } catch (e) {
-                ajaxMesajGoster(e);
-            }
-        }
-
-        function GorunumAyarla() {
-            $("#txtAboneNo").val('');
-            $("#txtSayacSeriNo").val('');
-            $("#txtAnaKredi").val('');
-            $("#txtYedekKredi").val('');
-            $("#txtTutar").val('');
-            $("#txtKredi").val('');
-        }
-
-
-
 
     </script>
 

@@ -10,7 +10,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>SmartCard</RootNamespace>
     <AssemblyName>SmartCard</AssemblyName>
-    <TargetFrameworkVersion>v3.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <FileUpgradeFlags>
     </FileUpgradeFlags>
@@ -66,6 +66,7 @@
     <Compile Include="ITarife.cs" />
     <Compile Include="Kart.cs" />
     <Compile Include="OmniKart.cs" />
+    <Compile Include="OrtakAvm.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SClib\SCardAccessMode.cs" />
     <Compile Include="SClib\SCardChannelType.cs" />
@@ -87,7 +88,7 @@
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <ProjectExtensions>
     <VisualStudio>
-      <UserProperties Reactor_Enabled="1" Reactor_Commands="" Reactor_Project="" Reactor_Configuration="Release" Reactor_Output="" Reactor_Deploy="0" />
+      <UserProperties Reactor_Deploy="0" Reactor_Output="" Reactor_Configuration="Release" Reactor_Project="" Reactor_Commands="" Reactor_Enabled="1" />
     </VisualStudio>
   </ProjectExtensions>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

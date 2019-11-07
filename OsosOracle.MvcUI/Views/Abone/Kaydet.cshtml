@@ -73,10 +73,7 @@
                     @Html.AutoComplete(t => t.ENTABONESAYAC.SAYACKAYITNO, Enums.AutocompleteFuction.SayacGetir, Enums.AutoCompleteType.List, _T("Sayaç").ToString())
                     @Html.ValidationMessageFor(t => t.ENTABONESAYAC.SAYACKAYITNO)
                 </div>
-                @*<div class="col-md-4">
-                        @Html.TextBoxFor(t => t.ENTABONESAYAC.TARIFE, new { @class = "form-control int ", placeholder = _T("Telefon") })
-                        @Html.ValidationMessageFor(t => t.ENTABONEBILGI.TELEFON)
-                    </div>*@
+              
                 @if (System.Configuration.ConfigurationManager.AppSettings["Tarife"] == "Su")
                 {
                     <div class="col-md-4">

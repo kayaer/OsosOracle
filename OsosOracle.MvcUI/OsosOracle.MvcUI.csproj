@@ -1829,6 +1829,7 @@
     <Compile Include="Controllers\ENTSAYACSONDURUMSUController.cs" />
     <Compile Include="Controllers\ENTTUKETIMSUController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\KartController.cs" />
     <Compile Include="Controllers\KurumController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\PRMTARIFEELKController.cs" />
@@ -1896,6 +1897,11 @@
     <Compile Include="Models\ENTSATISModels\ENTSATISDetayModel.cs" />
     <Compile Include="Models\ENTSATISModels\ENTSATISIndexModel.cs" />
     <Compile Include="Models\ENTSATISModels\ENTSATISKaydetModel.cs" />
+    <Compile Include="Models\ENTSATISModels\KalorimetreOkunan.cs" />
+    <Compile Include="Models\ENTSATISModels\KalorimetreYazilacak.cs" />
+    <Compile Include="Models\ENTSATISModels\OrtakAvmOkunan.cs" />
+    <Compile Include="Models\ENTSATISModels\SogukSuOkunan.cs" />
+    <Compile Include="Models\ENTSATISModels\SogukSuYazilan.cs" />
     <Compile Include="Models\ENTSATISModels\TarifeElk.cs" />
     <Compile Include="Models\ENTSAYACDURUMSUModels\ENTSAYACDURUMSUDetayModel.cs" />
     <Compile Include="Models\ENTSAYACDURUMSUModels\ENTSAYACDURUMSUIndexModel.cs" />
@@ -2093,7 +2099,6 @@
     <Content Include="Views\RPTDASHBOARD\Index.cshtml" />
     <Content Include="Views\RPTDASHBOARD\Kaydet.cshtml" />
     <Content Include="Views\RPTDASHBOARD\Detay.cshtml" />
-    <Content Include="Views\Satis\KartOkunan.cshtml" />
     <Content Include="Views\Satis\KartliSatis - Copy.cshtml" />
     <Content Include="Views\ENTKOMUTLARBEKLEYEN\Detay.cshtml" />
     <Content Include="Views\ENTKOMUTLARBEKLEYEN\Index.cshtml" />
@@ -2107,6 +2112,9 @@
     <Content Include="Views\ENTSAYACSONDURUMSU\Detay.cshtml" />
     <Content Include="Views\ENTSAYACSONDURUMSU\Index.cshtml" />
     <Content Include="Views\ENTSAYACSONDURUMSU\Kaydet.cshtml" />
+    <Content Include="Views\Kart\Index.cshtml" />
+    <Content Include="Views\Satis\Kalorimetre.cshtml" />
+    <Content Include="Views\Satis\SogukSu.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
