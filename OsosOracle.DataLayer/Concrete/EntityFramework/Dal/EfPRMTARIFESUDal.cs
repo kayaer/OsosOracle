@@ -47,10 +47,11 @@ namespace OsosOracle.DataLayer.Concrete.EntityFramework.Dal
                 MAXDEBI = x.MAXDEBI,
                 KRITIKKREDI = x.KRITIKKREDI,
                 KURUMKAYITNO = x.KURUMKAYITNO,
-                BAGLANTIPERIYOT = x.BAGLANTIPERIYOT,
-                YANGINMODSURE = x.YANGINMODSURE,
+                Ctv = x.Ctv,
+                Kdv = x.Kdv,
                 BIRIMFIYAT = x.BIRIMFIYAT,
-                Kurum=x.ConKurumEf.AD
+                Kurum=x.ConKurumEf.AD,
+                AylikBakimBedeli = x.AylikBakimBedeli
 
             });
         }
@@ -82,7 +83,7 @@ namespace OsosOracle.DataLayer.Concrete.EntityFramework.Dal
                     }
                     if (!string.IsNullOrEmpty(filtre.AD))
                     {
-                        result = result.Where(x => x.AD.Contains(filtre.AD));
+                        result = result.Where(x => x.AD.ToLower().Contains(filtre.AD.ToLower()));
                     }
                     if (filtre.YEDEKKREDI != null)
                     {
@@ -192,13 +193,13 @@ namespace OsosOracle.DataLayer.Concrete.EntityFramework.Dal
                     {
                         result = result.Where(x => x.KURUMKAYITNO == filtre.KURUMKAYITNO);
                     }
-                    if (filtre.BAGLANTIPERIYOT != null)
+                    if (filtre.Ctv != null)
                     {
-                        result = result.Where(x => x.BAGLANTIPERIYOT == filtre.BAGLANTIPERIYOT);
+                        result = result.Where(x => x.Ctv == filtre.Ctv);
                     }
-                    if (filtre.YANGINMODSURE != null)
+                    if (filtre.Kdv != null)
                     {
-                        result = result.Where(x => x.YANGINMODSURE == filtre.YANGINMODSURE);
+                        result = result.Where(x => x.Kdv == filtre.Kdv);
                     }
                     if (filtre.BIRIMFIYAT != null)
                     {

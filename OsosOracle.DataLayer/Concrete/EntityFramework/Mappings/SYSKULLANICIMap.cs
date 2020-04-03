@@ -17,19 +17,18 @@ namespace OsosOracle.DataLayer.Concrete.EntityFramework.Mappings
             Property(t => t.KAYITNO).HasColumnName("KAYITNO").IsRequired();
             Property(t => t.KULLANICIAD).HasColumnName("KULLANICIAD").IsRequired();
             Property(t => t.SIFRE).HasColumnName("SIFRE").IsRequired();
-            Property(t => t.BIRIMKAYITNO).HasColumnName("BIRIMKAYITNO").IsRequired();
             Property(t => t.VERSIYON).HasColumnName("VERSIYON").IsRequired();
-            Property(t => t.OLUSTURAN).HasColumnName("OLUSTURAN");
+            Property(t => t.OLUSTURAN).HasColumnName("OLUSTURAN").IsRequired();
             Property(t => t.OLUSTURMATARIH).HasColumnName("OLUSTURMATARIH").IsRequired();
             Property(t => t.GUNCELLEYEN).HasColumnName("GUNCELLEYEN");
             Property(t => t.GUNCELLEMETARIH).HasColumnName("GUNCELLEMETARIH");
             Property(t => t.AD).HasColumnName("AD");
             Property(t => t.SOYAD).HasColumnName("SOYAD");
-            Property(t => t.GRUPKAYITNO).HasColumnName("GRUPKAYITNO");
+           
             Property(t => t.DURUM).HasColumnName("DURUM").IsRequired();
-            Property(t => t.SIFREKOD).HasColumnName("SIFREKOD").IsRequired();
+           
             Property(t => t.DIL).HasColumnName("DIL").IsRequired();
-            Property(t => t.KULLANICITUR).HasColumnName("KULLANICITUR");
+           
             Property(t => t.KURUMKAYITNO).HasColumnName("KURUMKAYITNO");
             // Relationships
             //HasOptional(t => t.SYSCSTKULLANICITURKULLANICITUREf)

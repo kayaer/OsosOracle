@@ -4,7 +4,7 @@ namespace OsosOracle.Entities.Concrete
 {
     public class PRMTARIFESU : IEntity
     {
-        public int? BORCYUZDE { get; set; }
+       
         public int KAYITNO { get; set; }
         public string AD { get; set; }
         public int YEDEKKREDI { get; set; }
@@ -26,7 +26,7 @@ namespace OsosOracle.Entities.Concrete
         public int LIMIT4 { get; set; }
         public int TUKETIMKATSAYI { get; set; }
         public int KREDIKATSAYI { get; set; }
-        public int SABITUCRET { get; set; }
+        public decimal SABITUCRET { get; set; }
         public int SAYACCAP { get; set; }
         public int AVANSONAY { get; set; }
         public int DONEMGUN { get; set; }
@@ -39,8 +39,10 @@ namespace OsosOracle.Entities.Concrete
         public int MAXDEBI { get; set; }
         public int KRITIKKREDI { get; set; }
         public int KURUMKAYITNO { get; set; }
-        public int BAGLANTIPERIYOT { get; set; }
-        public int YANGINMODSURE { get; set; }
-        public int BIRIMFIYAT { get; set; }
+        public int? BORCYUZDE { get; set; }
+        public decimal Ctv { get; set; }
+        public decimal Kdv { get; set; }
+        public decimal BIRIMFIYAT { get; set; }
+        public decimal AylikBakimBedeli { get; set; }
     }
 }

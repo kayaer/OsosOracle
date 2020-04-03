@@ -17,5 +17,13 @@ namespace OsosOracle.Entities.ComplexType.ENTSATISComplexTypes
         public int? IPTAL { get; set; }
         public int? KREDI { get; set; }
         public int? YEDEKKREDI { get; set; }
+        public string SayacSeriNo { get; set; }
+
+        public DateTime? SatisTarihBaslangic { get; set; }
+        public DateTime? SatisTarihBitis { get; set; }
+        public int? SatisTipi { get; set; }
+        public int? KurumKayitNo { get; set; }
+
+        public string Blok { get; set; }
     }
 }

@@ -12,5 +12,7 @@ namespace OsosOracle.DataLayer.Concrete.EntityFramework.Entity
         public PRMTARIFESUEf PrmTarifeSuEf { get; set; }
 
         public PRMTARIFEELKEf PrmTarifeElkEf { get; set; }
+        public PRMTARIFEKALORIMETREEf PrmKALORIMETREEf { get; set; }
+        public PRMTARIFEGAZEf PrmTarifeGazEf { get; set; }
     }
 }

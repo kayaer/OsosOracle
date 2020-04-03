@@ -36,6 +36,9 @@ namespace OsosOracle.DataLayer.Concrete.EntityFramework.Dal
                 YEDEKKREDI = x.YEDEKKREDI,
                 KURUMKAYITNO = x.KURUMKAYITNO,
                 BIRIMFIYAT = x.BIRIMFIYAT,
+                TuketimKatsayi=x.TuketimKatsayi,
+                Kdv=x.Kdv,
+                Ctv=x.Ctv,
                 Kurum=x.ConKurumEf.AD
 
             });

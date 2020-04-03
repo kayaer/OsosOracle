@@ -1,0 +1,136 @@
+
+
+@using OsosOracle.Framework.HtmlHelpers
+@model OsosOracle.MvcUI.Models.PRMTARIFEGAZModels.PRMTARIFEGAZDetayModel
+
+@section panelHeading{
+	@Html.ButtonLink(_T("Listeye Dön").ToString(), "Index", "btn btn-xs btn-info", "fa-reply")
+	@Html.ButtonLink(_T("Sil").ToString(), "Sil", "btn btn-xs btn-danger modalizer", "fa-trash", new { id = Model.PRMTARIFEGAZDetay.Id })
+	@Html.ButtonLink(_T("Düzenle").ToString(), "Guncelle","btn btn-xs btn-primary modalizer", "fa-edit", new { id = Model.PRMTARIFEGAZDetay.Id })
+
+}
+
+<div class="ajaxForm">
+
+	  
+	<div class="row static-info">
+		<div class="col-md-5 name">@_T("TUKETIMLIMIT")</div>
+		<div class="col-md-7 value">@Model.PRMTARIFEGAZDetay.TUKETIMLIMIT</div>
+	 </div>
+
+
+	<div class="row static-info">
+		<div class="col-md-5 name">@_T("SABAHSAAT")</div>
+		<div class="col-md-7 value">@Model.PRMTARIFEGAZDetay.SABAHSAAT</div>
+	 </div>
+
+
+	<div class="row static-info">
+		<div class="col-md-5 name">@_T("AKSAMSAAT")</div>
+		<div class="col-md-7 value">@Model.PRMTARIFEGAZDetay.AKSAMSAAT</div>
+	 </div>
+
+
+	<div class="row static-info">
+		<div class="col-md-5 name">@_T("PULSE")</div>
+		<div class="col-md-7 value">@Model.PRMTARIFEGAZDetay.PULSE</div>
+	 </div>
+
+
+	<div class="row static-info">
+		<div class="col-md-5 name">@_T("BAYRAM1GUN")</div>
+		<div class="col-md-7 value">@Model.PRMTARIFEGAZDetay.BAYRAM1GUN</div>
+	 </div>
+
+
+	<div class="row static-info">
+		<div class="col-md-5 name">@_T("BAYRAM1AY")</div>
+		<div class="col-md-7 value">@Model.PRMTARIFEGAZDetay.BAYRAM1AY</div>
+	 </div>
+
+
+	<div class="row static-info">
+		<div class="col-md-5 name">@_T("BAYRAM1SURE")</div>
+		<div class="col-md-7 value">@Model.PRMTARIFEGAZDetay.BAYRAM1SURE</div>
+	 </div>
+
+
+	<div class="row static-info">
+		<div class="col-md-5 name">@_T("BAYRAM2GUN")</div>
+		<div class="col-md-7 value">@Model.PRMTARIFEGAZDetay.BAYRAM2GUN</div>
+	 </div>
+
+
+	<div class="row static-info">
+		<div class="col-md-5 name">@_T("BAYRAM2SURE")</div>
+		<div class="col-md-7 value">@Model.PRMTARIFEGAZDetay.BAYRAM2SURE</div>
+	 </div>
+
+
+	<div class="row static-info">
+		<div class="col-md-5 name">@_T("BAYRAM2AY")</div>
+		<div class="col-md-7 value">@Model.PRMTARIFEGAZDetay.BAYRAM2AY</div>
+	 </div>
+
+
+	<div class="row static-info">
+		<div class="col-md-5 name">@_T("KRITIKKREDI")</div>
+		<div class="col-md-7 value">@Model.PRMTARIFEGAZDetay.KRITIKKREDI</div>
+	 </div>
+
+
+	<div class="row static-info">
+		<div class="col-md-5 name">@_T("SAYACTUR")</div>
+		<div class="col-md-7 value">@Model.PRMTARIFEGAZDetay.SAYACTUR</div>
+	 </div>
+
+
+	<div class="row static-info">
+		<div class="col-md-5 name">@_T("SAYACCAP")</div>
+		<div class="col-md-7 value">@Model.PRMTARIFEGAZDetay.SAYACCAP</div>
+	 </div>
+
+
+	<div class="row static-info">
+		<div class="col-md-5 name">@_T("AD")</div>
+		<div class="col-md-7 value">@Model.PRMTARIFEGAZDetay.AD</div>
+	 </div>
+
+
+	<div class="row static-info">
+		<div class="col-md-5 name">@_T("FIYAT1")</div>
+		<div class="col-md-7 value">@Model.PRMTARIFEGAZDetay.FIYAT1</div>
+	 </div>
+
+
+	<div class="row static-info">
+		<div class="col-md-5 name">@_T("YEDEKKREDI")</div>
+		<div class="col-md-7 value">@Model.PRMTARIFEGAZDetay.YEDEKKREDI</div>
+	 </div>
+
+
+	<div class="row static-info">
+		<div class="col-md-5 name">@_T("KURUMKAYITNO")</div>
+		<div class="col-md-7 value">@Model.PRMTARIFEGAZDetay.KURUMKAYITNO</div>
+	 </div>
+
+
+	<div class="row static-info">
+		<div class="col-md-5 name">@_T("BIRIMFIYAT")</div>
+		<div class="col-md-7 value">@Model.PRMTARIFEGAZDetay.BIRIMFIYAT</div>
+	 </div>
+
+
+	 
+	@Html.ButtonLink(_T("Vazgeç").ToString(), "Index", "btn btn-xs btn-danger cancel", "fa-remove")
+</div>
+
+@section script
+{
+	<script type="text/javascript">
+		$(document).ready(function () {
+		//js kodunuzu buraya yazın	
+		});
+
+	</script>
+}

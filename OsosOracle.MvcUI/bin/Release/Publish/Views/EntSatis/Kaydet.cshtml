@@ -1,0 +1,291 @@
+﻿@using OsosOracle.MvcUI.Resources
+@model OsosOracle.MvcUI.Models.ENTSATISModels.ENTSATISKaydetModel
+<div class="col-sm-12">
+    <button id="btnKartOku" type="button" class="btn btn-danger btn-sm">@Dil.KartOku </button>
+</div>
+
+<div class="col-sm-12">
+
+
+
+    <div class="col-sm-6">
+        <div id="user_content">
+            <div class="panel panel-default">
+                <div class="panel-heading">@Dil.AboneBilgileri</div>
+                <div class="panel-body">
+                    <div class="form-horizontal">
+                        <div class="form-group">
+                            <div class="col-md-12">
+                                @Html.TextBox("Ad", "", new { @class = "form-control", placeholder = _T("Ad") })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-12">
+                                @Html.TextBox("Ad", "", new { @class = "form-control", placeholder = _T("Soyad") })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-12">
+                                @Html.TextBox("Ad", "", new { @class = "form-control", placeholder = _T("Abone No") })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-12">
+                                @Html.TextBox("Ad", "", new { @class = "form-control", placeholder = _T("Tarife") })
+                            </div>
+                        </div>
+                        <div class="form-group hide">
+                            <div class="col-md-12">
+                                @Html.TextBox("Ad", "", new { @class = "form-control", placeholder = _T("Abone Kayıt No") })
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-6">
+        <div class="panel panel-default">
+            <div class="panel-heading">Su Sayacı</div>
+            <div class="panel-body">
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <div class="col-sm-12">
+                            <div class="col-sm-6">
+                                @Html.TextBoxFor(t => t.GirilenTutar, new { @class = "form-control", placeholder = _T("Tutar"), Id = "txtSuTutar" })
+
+                            </div>
+                            <div class="col-sm-6">
+                                <input type="text" class="form-control" placeholder=@Dil.Kredi id="txtSuKredi" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-12">
+                            <div class="col-sm-6">
+
+                            </div>
+                            <div class="col-sm-6">
+                                <input type="text" class="form-control" placeholder=@Dil.Kredi id="txtSuYedekKredi" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="clearfix">&nbsp;</div>
+
+
+    </div>
+
+</div>
+
+<div class="col-sm-12">
+
+
+    <div class="col-sm-6"></div>
+    <div class="col-sm-6">
+        <div class="panel panel-default">
+            <div class="panel-heading">Kalorimetre Sayacı</div>
+            <div class="panel-body">
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <div class="col-sm-12">
+                            <div class="col-sm-6">
+                                @Html.TextBoxFor(t => t.GirilenTutar, new { @class = "form-control", placeholder = _T("Tutar"), Id = "txtKalorimetreTutar" })
+
+                            </div>
+                            <div class="col-sm-6">
+                                <input type="text" class="form-control" placeholder=@Dil.Kredi id="txtKalorimetreKredi" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-12">
+                            <div class="col-sm-6">
+
+                            </div>
+                            <div class="col-sm-6">
+                                <input type="text" class="form-control" placeholder=@Dil.Kredi id="txtKalorimetreYedekKredi" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="clearfix">&nbsp;</div>
+
+
+    </div>
+    <div class="form-actions">
+
+        <button type="submit" class="btn btn-danger btn-sm" name="submitButton" id="btnKrediYukle">
+            @Dil.KrediYukle
+        </button>
+    </div>
+
+</div>
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+        var okunanData = "";
+        var SuSayacData;
+        var KalorimetreSayacData;
+        var aylikBakimBedeli=0;
+
+
+        $("#btnKartOku").click(function (e) {
+
+            //$('#user_content').load('Url.Action("AbonePartial","EntSatis",new { })');
+              var link = '@Url.Action("AbonePartial", "EntSatis", new { hamdata = "-1" })';
+              link = link.replace("-1", okunanData);
+
+            $('#user_content').load(link);
+        });
+
+        $('#txtSuTutar').blur(function () {
+
+                         var girilenTutar = $("#txtSuTutar").val();
+                         var AboneKayitNo = $("#EntAboneSayacDetay_ABONEKAYITNO").val();
+                         var SayacKayitNo = $("#EntAboneSayacDetay_SAYACKAYITNO").val();
+                         var hesaplaUrl = "@Url.Action("SuHesapla", "EntSatis")" + "?girilenTutar=" + girilenTutar + "&sayacKayitNo="+SayacKayitNo + "&aboneKayitNo=" + AboneKayitNo+"&yukluKredi=0&aylikBakimBedeli="+ aylikBakimBedeli;
+
+
+                        $.ajax({
+                            type: "GET",
+                            url: hesaplaUrl,
+                            contentType: "application/json"
+                        }).done(function (res) {
+                            SuSayacData = res;
+                            if (res.AylikBakimBedeli > 0) {
+                                 aylikBakimBedeli=res.AylikBakimBedeli
+                            }
+
+                            $("#txtSuKredi").val(res.YuklenecekKredi);
+                            $("#txtSuYedekKredi").val(res.PrmTarifeSuDetay.YEDEKKREDI);
+                        });
+        });
+
+        $('#txtKalorimetreTutar').blur(function () {
+
+                         var girilenTutar = $("#txtKalorimetreTutar").val();
+                         var AboneKayitNo = $("#EntAboneSayacDetay_ABONEKAYITNO").val();
+                         var SayacKayitNo = $("#KalorimetreKayitNo").val();
+                         var hesaplaUrl = "@Url.Action("KalorimetreHesapla", "EntSatis")" + "?girilenTutar=" + girilenTutar + "&sayacKayitNo=" + SayacKayitNo + "&aboneKayitNo=" + AboneKayitNo + "&yukluKredi=0&aylikBakimBedeli=" + aylikBakimBedeli;
+
+
+                        $.ajax({
+                            type: "GET",
+                            url: hesaplaUrl,
+                            contentType: "application/json"
+                        }).done(function (res) {
+                            KalorimetreSayacData = res;
+                             if (res.AylikBakimBedeli > 0) {
+                                 aylikBakimBedeli=res.AylikBakimBedeli
+                            }
+                            $("#txtKalorimetreKredi").val(res.YuklenecekKredi);
+                            $("#txtKalorimetreYedekKredi").val(res.PrmTarifeOrtakAvmDetay.YEDEKKREDI);
+                        });
+        });
+
+        $("#btnKrediYukle").click(function (e) {
+
+            if (SuSayacData != null) {
+                //SuKrediYukle(SuSayacData);
+                var AboneKayitNo = $("#EntAboneSayacDetay_ABONEKAYITNO").val();
+                var SayacKayitNo = $("#EntAboneSayacDetay_SAYACKAYITNO").val();
+                var satisUrl = "@Url.Action("SuSatisKaydet", "EntSatis")" + "?suSayacKayitNo=" + SayacKayitNo + "&aboneKayitNo=" + AboneKayitNo + "&kredi=" + SuSayacData.YuklenecekKredi + "&yedekKredi=" + SuSayacData.PrmTarifeSuDetay.YEDEKKREDI+"&tutar="+$("#txtSuTutar").val();
+
+
+                $.ajax({
+                    type: "GET",
+                    url: satisUrl,
+                    contentType: "application/json"
+                }).done(function (res) {
+
+                    var url = '@Url.Action("MakbuzIndir","Satis")' + '?filename=' + res;
+                    window.location.href = url;
+                    ajaxMesajGoster('İşlem Başarılı');
+
+
+                });
+            }
+            if (KalorimetreSayacData != null) {
+                 //KalorimetreKrediYukle(KalorimetreSayacData);
+                var AboneKayitNo = $("#EntAboneSayacDetay_ABONEKAYITNO").val();
+                var SayacKayitNo = $("#EntAboneSayacDetay_SAYACKAYITNO").val();
+                var satisUrl = "@Url.Action("KalorimetreSatisKaydet", "EntSatis")" + "?kalorimetreSayacKayitNo=" + SayacKayitNo + "&aboneKayitNo=" + AboneKayitNo + "&kredi=" + KalorimetreSayacData.YuklenecekKredi+ "&yedekKredi=" + KalorimetreSayacData.PrmTarifeOrtakAvmDetay.YEDEKKREDI+"&tutar="+$("#txtKalorimetreTutar").val();
+
+
+                $.ajax({
+                    type: "GET",
+                    url: satisUrl,
+                    contentType: "application/json"
+                }).done(function (res) {
+
+                    var url = '@Url.Action("MakbuzIndir","Satis")' + '?filename=' + res;
+                    window.location.href = url;
+                    ajaxMesajGoster('İşlem Başarılı');
+
+                });
+            }
+
+        });
+
+        function SuKrediYukle(SuSayacData) {
+
+                            var sogukSu = new ActiveXObject("SmartCard.KartIslem");
+                            result = sogukSu.AboneYazSu(SuSayacData.SogukSuYazilacak.SayacSeriNo,//SAyacserino getirilecek
+                                SuSayacData.YuklenecekKredi,
+                                SuSayacData.PrmTarifeSuDetay.YEDEKKREDI,
+                                SuSayacData.PrmTarifeSuDetay.LIMIT1,
+                                SuSayacData.PrmTarifeSuDetay.LIMIT2,
+                                SuSayacData.PrmTarifeSuDetay.FIYAT1,
+                                SuSayacData.PrmTarifeSuDetay.FIYAT2,
+                                SuSayacData.PrmTarifeSuDetay.FIYAT3
+                            );
+                            if (result == "1") {
+                                ajaxMesajGoster('İşlem Başarılı');
+                            } else {
+                                ajaxMesajGoster('İşlem Başarısız');
+                            }
+        }
+
+        function KalorimetreKrediYukle(KalorimetreSayacData) {
+
+                    var kalorimetre = new ActiveXObject("SmartCard.OrtakAvm");
+                    var result = false;
+                    try {
+                        result = kalorimetre.KalorimetreYaz(KalorimetreSayacData.KalorimetreOkunan.CihazNo,//SAyacserino getirilecek
+                            KalorimetreSayacData.YuklenecekKredi,
+                            KalorimetreSayacData.PrmTarifeOrtakAvmDetay.YEDEKKREDI,
+                            KalorimetreSayacData.PrmTarifeOrtakAvmDetay.BAYRAM1GUN,
+                            KalorimetreSayacData.PrmTarifeOrtakAvmDetay.BAYRAM1AY,
+                            KalorimetreSayacData.PrmTarifeOrtakAvmDetay.BAYRAM1SURE,
+                            KalorimetreSayacData.PrmTarifeOrtakAvmDetay.BAYRAM2GUN,
+                            KalorimetreSayacData.PrmTarifeOrtakAvmDetay.BAYRAM2AY,
+                            KalorimetreSayacData.PrmTarifeOrtakAvmDetay.BAYRAM2SURE
+                        );
+                        if (result == "1") {
+                            ajaxMesajGoster('İşlem Başarılı');
+                        } else {
+                            ajaxMesajGoster('İşlem Başarısız');
+                        }
+                    } catch (e) {
+                        ajaxMesajGoster(e);
+            }
+
+        }
+    });
+
+
+</script>

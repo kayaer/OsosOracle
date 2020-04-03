@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
@@ -61,10 +61,34 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="classDes.cs" />
+    <Compile Include="ContactlessReader.cs" />
+    <Compile Include="ContactReader.cs" />
+    <Compile Include="Gaz.cs" />
+    <Compile Include="GlobalAyarlar.cs" />
     <Compile Include="Hexcon.cs" />
     <Compile Include="IKart.cs" />
+    <Compile Include="IKartIslem.cs" />
+    <Compile Include="IKartOkuyucu.cs" />
+    <Compile Include="Interface\IAcr128.cs" />
+    <Compile Include="Interface\ISmartCard.cs" />
+    <Compile Include="Interface\IUretim.cs" />
+    <Compile Include="Interface\IYetki.cs" />
     <Compile Include="ITarife.cs" />
     <Compile Include="Kart.cs" />
+    <Compile Include="KartIslem.cs" />
+    <Compile Include="Mcm.cs" />
+    <Compile Include="Mercan.cs" />
+    <Compile Include="Model\Abone.cs" />
+    <Compile Include="Model\Abone000023.cs" />
+    <Compile Include="Model\Abone000048.cs" />
+    <Compile Include="Model\Abone024051.cs" />
+    <Compile Include="Model\Abone052071.cs" />
+    <Compile Include="Model\Abone072095.cs" />
+    <Compile Include="Model\Abone096119.cs" />
+    <Compile Include="Model\Abone120143.cs" />
+    <Compile Include="Model\Abone144171.cs" />
+    <Compile Include="Model\AkoYkoIslemNoKartNoCapTip.cs" />
+    <Compile Include="Model\AylikSicaklikBilgisi.cs" />
     <Compile Include="OmniKart.cs" />
     <Compile Include="OrtakAvm.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -84,6 +108,7 @@
     <Compile Include="SSTCryptographer.cs" />
     <Compile Include="Tarife.cs" />
     <Compile Include="Util.cs" />
+    <Compile Include="YetkiKarti.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <ProjectExtensions>

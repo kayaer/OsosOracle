@@ -9,9 +9,10 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>OsosOracle.Entities</RootNamespace>
     <AssemblyName>OsosOracle.Entities</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -31,6 +32,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="OsosOracle.DataLayer">
+      <HintPath>..\OsosOracle.MvcUI\Bin\OsosOracle.DataLayer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -41,6 +45,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ComplexType\CONDILComplexTypes\CONDILAra.cs" />
+    <Compile Include="ComplexType\CONDILComplexTypes\CONDILDataTable.cs" />
+    <Compile Include="ComplexType\CONDILComplexTypes\CONDILDetay.cs" />
     <Compile Include="ComplexType\CONKURUMComplexTypes\CONKURUMAra.cs" />
     <Compile Include="ComplexType\CONKURUMComplexTypes\CONKURUMDataTable.cs" />
     <Compile Include="ComplexType\CONKURUMComplexTypes\CONKURUMDetay.cs" />
@@ -53,14 +60,14 @@
     <Compile Include="ComplexType\CSTSAYACMODELComplexTypes\CSTSAYACMODELAra.cs" />
     <Compile Include="ComplexType\CSTSAYACMODELComplexTypes\CSTSAYACMODELDataTable.cs" />
     <Compile Include="ComplexType\CSTSAYACMODELComplexTypes\CSTSAYACMODELDetay.cs" />
-    <Compile Include="ComplexType\ENTABONEBILGIComplexTypes\ENTABONEBILGIAra.cs" />
-    <Compile Include="ComplexType\ENTABONEBILGIComplexTypes\ENTABONEBILGIDataTable.cs" />
-    <Compile Include="ComplexType\ENTABONEBILGIComplexTypes\ENTABONEBILGIDetay.cs" />
     <Compile Include="ComplexType\ENTABONEComplexTypes\AboneAutoComplete.cs" />
+    <Compile Include="ComplexType\ENTABONEComplexTypes\AboneGenel.cs" />
     <Compile Include="ComplexType\ENTABONEComplexTypes\AboneIslemleri.cs" />
+    <Compile Include="ComplexType\ENTABONEComplexTypes\AvmKaydetModel.cs" />
     <Compile Include="ComplexType\ENTABONEComplexTypes\ENTABONEAra.cs" />
     <Compile Include="ComplexType\ENTABONEComplexTypes\ENTABONEDataTable.cs" />
     <Compile Include="ComplexType\ENTABONEComplexTypes\ENTABONEDetay.cs" />
+    <Compile Include="ComplexType\ENTABONEComplexTypes\YesilVadiAboneIslemleri.cs" />
     <Compile Include="ComplexType\ENTABONESAYACComplexTypes\ENTABONESAYACAra.cs" />
     <Compile Include="ComplexType\ENTABONESAYACComplexTypes\ENTABONESAYACDataTable.cs" />
     <Compile Include="ComplexType\ENTABONESAYACComplexTypes\ENTABONESAYACDetay.cs" />
@@ -94,15 +101,21 @@
     <Compile Include="ComplexType\ENTTUKETIMSUComplexTypes\ENTTUKETIMSUAra.cs" />
     <Compile Include="ComplexType\ENTTUKETIMSUComplexTypes\ENTTUKETIMSUDataTable.cs" />
     <Compile Include="ComplexType\ENTTUKETIMSUComplexTypes\ENTTUKETIMSUDetay.cs" />
+    <Compile Include="ComplexType\NESNEDEGERComplexTypes\NESNEDEGERAra.cs" />
+    <Compile Include="ComplexType\NESNEDEGERComplexTypes\NESNEDEGERDataTable.cs" />
+    <Compile Include="ComplexType\NESNEDEGERComplexTypes\NESNEDEGERDetay.cs" />
+    <Compile Include="ComplexType\NESNETIPComplexTypes\NESNETIPAra.cs" />
+    <Compile Include="ComplexType\NESNETIPComplexTypes\NESNETIPDataTable.cs" />
+    <Compile Include="ComplexType\NESNETIPComplexTypes\NESNETIPDetay.cs" />
     <Compile Include="ComplexType\PRMTARIFEELKComplexTypes\PRMTARIFEELKAra.cs" />
     <Compile Include="ComplexType\PRMTARIFEELKComplexTypes\PRMTARIFEELKDataTable.cs" />
     <Compile Include="ComplexType\PRMTARIFEELKComplexTypes\PRMTARIFEELKDetay.cs" />
     <Compile Include="ComplexType\PRMTARIFEGAZComplexTypes\PRMTARIFEGAZAra.cs" />
     <Compile Include="ComplexType\PRMTARIFEGAZComplexTypes\PRMTARIFEGAZDataTable.cs" />
     <Compile Include="ComplexType\PRMTARIFEGAZComplexTypes\PRMTARIFEGAZDetay.cs" />
-    <Compile Include="ComplexType\PRMTARIFEORTAKAVMComplexTypes\PRMTARIFEORTAKAVMAra.cs" />
-    <Compile Include="ComplexType\PRMTARIFEORTAKAVMComplexTypes\PRMTARIFEORTAKAVMDataTable.cs" />
-    <Compile Include="ComplexType\PRMTARIFEORTAKAVMComplexTypes\PRMTARIFEORTAKAVMDetay.cs" />
+    <Compile Include="ComplexType\PRMTARIFEKALORIMETREComplexTypes\PRMTARIFEKALORIMETREAra.cs" />
+    <Compile Include="ComplexType\PRMTARIFEKALORIMETREComplexTypes\PRMTARIFEKALORIMETREDataTable.cs" />
+    <Compile Include="ComplexType\PRMTARIFEKALORIMETREComplexTypes\PRMTARIFEKALORIMETREDetay.cs" />
     <Compile Include="ComplexType\PRMTARIFESUComplexTypes\PRMTARIFESUAra.cs" />
     <Compile Include="ComplexType\PRMTARIFESUComplexTypes\PRMTARIFESUDataTable.cs" />
     <Compile Include="ComplexType\PRMTARIFESUComplexTypes\PRMTARIFESUDetay.cs" />
@@ -136,12 +149,12 @@
     <Compile Include="ComplexType\SYSROLKULLANICIComplexTypes\SYSROLKULLANICIAra.cs" />
     <Compile Include="ComplexType\SYSROLKULLANICIComplexTypes\SYSROLKULLANICIDataTable.cs" />
     <Compile Include="ComplexType\SYSROLKULLANICIComplexTypes\SYSROLKULLANICIDetay.cs" />
+    <Compile Include="Concrete\CONDIL.cs" />
     <Compile Include="Concrete\CONKURUM.cs" />
     <Compile Include="Concrete\CSTHUMARKA.cs" />
     <Compile Include="Concrete\CSTHUMODEL.cs" />
     <Compile Include="Concrete\CSTSAYACMODEL.cs" />
     <Compile Include="Concrete\ENTABONE.cs" />
-    <Compile Include="Concrete\ENTABONEBILGI.cs" />
     <Compile Include="Concrete\ENTABONESAYAC.cs" />
     <Compile Include="Concrete\ENTHABERLESMEUNITESI.cs" />
     <Compile Include="Concrete\ENTHUSAYAC.cs" />
@@ -153,20 +166,22 @@
     <Compile Include="Concrete\ENTSAYACDURUMSU.cs" />
     <Compile Include="Concrete\ENTSAYACSONDURUMSU.cs" />
     <Compile Include="Concrete\ENTTUKETIMSU.cs" />
+    <Compile Include="Concrete\NESNEDEGER.cs" />
+    <Compile Include="Concrete\NESNETIP.cs" />
     <Compile Include="Concrete\PRMTARIFEELK.cs" />
     <Compile Include="Concrete\PRMTARIFEGAZ.cs" />
-    <Compile Include="Concrete\PRMTARIFEORTAKAVM.cs" />
+    <Compile Include="Concrete\PRMTARIFEKALORIMETRE.cs" />
     <Compile Include="Concrete\PRMTARIFESU.cs" />
     <Compile Include="Concrete\RPTDASHBOARD.cs" />
     <Compile Include="Concrete\SYSCSTOPERASYON.cs" />
     <Compile Include="Concrete\SYSGOREV.cs" />
     <Compile Include="Concrete\SYSGOREVROL.cs" />
     <Compile Include="Concrete\SYSKULLANICI.cs" />
-    <Compile Include="Concrete\SYSKULLANICIDETAY.cs" />
     <Compile Include="Concrete\SYSMENU.cs" />
     <Compile Include="Concrete\SYSOPERASYONGOREV.cs" />
     <Compile Include="Concrete\SYSROL.cs" />
     <Compile Include="Concrete\SYSROLKULLANICI.cs" />
+    <Compile Include="Enums\Genel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

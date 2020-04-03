@@ -462,4 +462,175 @@
   <data name="YedekKredi" xml:space="preserve">
     <value>Yedek Kredi</value>
   </data>
+  <data name="Elektrik" xml:space="preserve">
+    <value>Elektrik</value>
+  </data>
+  <data name="GorevYonetimi" xml:space="preserve">
+    <value>Görev Yönetimi</value>
+  </data>
+  <data name="Kalorimetre" xml:space="preserve">
+    <value>Kalorimetre</value>
+  </data>
+  <data name="KullaniciYonetimi" xml:space="preserve">
+    <value>Kullanıcı Yönetimi</value>
+  </data>
+  <data name="ModemMarkaIslemleri" xml:space="preserve">
+    <value>Modem Marka İşlemleri</value>
+  </data>
+  <data name="ModemModelIslemleri" xml:space="preserve">
+    <value>Modem Model İşlemleri</value>
+  </data>
+  <data name="RolYonetimi" xml:space="preserve">
+    <value>Rol Yönetimi</value>
+  </data>
+  <data name="SayacMarkaIslemleri" xml:space="preserve">
+    <value>Sayaç Marka İşlemleri</value>
+  </data>
+  <data name="SayacModelIslemleri" xml:space="preserve">
+    <value>Sayaç Model İşlemleri</value>
+  </data>
+  <data name="Su" xml:space="preserve">
+    <value>Su</value>
+  </data>
+  <data name="SuTarifeIslemleri" xml:space="preserve">
+    <value>Su Tarife İşlemleri</value>
+  </data>
+  <data name="KullaniciIslemleri" xml:space="preserve">
+    <value>Kullanıcı İşlemleri</value>
+  </data>
+  <data name="MenuYonetimi" xml:space="preserve">
+    <value>Menü Yönetimi</value>
+  </data>
+  <data name="OperasyonYonetimi" xml:space="preserve">
+    <value>Operasyon Yönetimi</value>
+  </data>
+  <data name="SayacDurumRaporu" xml:space="preserve">
+    <value>Sayaç Durum Raporu</value>
+  </data>
+  <data name="ToplamKredi" xml:space="preserve">
+    <value>Toplam Kredi</value>
+  </data>
+  <data name="BorcYuzde" xml:space="preserve">
+    <value>BorcYuzde</value>
+  </data>
+  <data name="YanginModSuresi" xml:space="preserve">
+    <value>Yangin Mod Suresi</value>
+  </data>
+  <data name="EminMisiniz" xml:space="preserve">
+    <value>Silme işlemini Onaylıyor musunuz?</value>
+  </data>
+  <data name="Onayla" xml:space="preserve">
+    <value>Onayla</value>
+  </data>
+  <data name="KartTipi" xml:space="preserve">
+    <value>Kart Tipi</value>
+  </data>
+  <data name="KapakSeriNo" xml:space="preserve">
+    <value>Kapak Seri No</value>
+  </data>
+  <data name="AboneSayacIslemleri" xml:space="preserve">
+    <value>Abone-Sayac İşlemleri</value>
+  </data>
+  <data name="AboneSec" xml:space="preserve">
+    <value>Abone Seç</value>
+  </data>
+  <data name="GeriDon" xml:space="preserve">
+    <value>Geri Dön</value>
+  </data>
+  <data name="SokulenSayac" xml:space="preserve">
+    <value>Sökülen Sayaç</value>
+  </data>
+  <data name="SonSatisTarihi" xml:space="preserve">
+    <value>Son Satış Tarihi</value>
+  </data>
+  <data name="AylikBakimBedeli" xml:space="preserve">
+    <value>Aylık Bakım Bedeli</value>
+  </data>
+  <data name="MontajTarihi" xml:space="preserve">
+    <value>Takılma Tarihi</value>
+  </data>
+  <data name="SokulmeNedeni" xml:space="preserve">
+    <value>Sökülme Nedeni</value>
+  </data>
+  <data name="SokulmeTarihi" xml:space="preserve">
+    <value>Sökülme Tarihi</value>
+  </data>
+  <data name="KalorimetreTarifeIslemleri" xml:space="preserve">
+    <value>Kalorimetre Tarife</value>
+  </data>
+  <data name="KartOku" xml:space="preserve">
+    <value>Kart Oku</value>
+  </data>
+  <data name="KimlikNo" xml:space="preserve">
+    <value>Kimlik No</value>
+  </data>
+  <data name="KrediYukle" xml:space="preserve">
+    <value>Kredi Yükle</value>
+  </data>
+  <data name="Tutar" xml:space="preserve">
+    <value>Tutar</value>
+  </data>
+  <data name="Karthazirla" xml:space="preserve">
+    <value>Kart Hazırla</value>
+  </data>
+  <data name="SatisBilgileri" xml:space="preserve">
+    <value>Satış Bilgileri</value>
+  </data>
+  <data name="SayacBilgileri" xml:space="preserve">
+    <value>Sayaç Bilgileri</value>
+  </data>
+  <data name="Gaz" xml:space="preserve">
+    <value>Gaz</value>
+  </data>
+  <data name="AnaKrediOkundu" xml:space="preserve">
+    <value>Ana Kredi Okundu Bilgisi</value>
+  </data>
+  <data name="Okundu" xml:space="preserve">
+    <value>Okundu</value>
+  </data>
+  <data name="Okunmadı" xml:space="preserve">
+    <value>Okunmadı</value>
+  </data>
+  <data name="YedekKrediOkundu" xml:space="preserve">
+    <value>Yedek Kredi Okundu Bilgisi</value>
+  </data>
+  <data name="SuTarifesi" xml:space="preserve">
+    <value>Su Tarifesi</value>
+  </data>
+  <data name="HARCANANKREDI" xml:space="preserve">
+    <value>Harcanan Kredi</value>
+  </data>
+  <data name="KALANKREDI" xml:space="preserve">
+    <value>Kalan Kredi</value>
+  </data>
+  <data name="IptalEdilecekSatis" xml:space="preserve">
+    <value>İptal Edilecek Satış Bilgileri</value>
+  </data>
+  <data name="KartBilgileri" xml:space="preserve">
+    <value>Kart Bilgileri</value>
+  </data>
+  <data name="SatisIptal" xml:space="preserve">
+    <value>Satış Iptal</value>
+  </data>
+  <data name="SatisTipi" xml:space="preserve">
+    <value>Satış Tipi</value>
+  </data>
+  <data name="YuklenecekAnaKredi" xml:space="preserve">
+    <value>Yüklenecek Ana Kredi</value>
+  </data>
+  <data name="Ctv" xml:space="preserve">
+    <value>Ctv</value>
+  </data>
+  <data name="Kdv" xml:space="preserve">
+    <value>Kdv</value>
+  </data>
+  <data name="SatisTutari" xml:space="preserve">
+    <value>Satış Tutarı</value>
+  </data>
+  <data name="Toplam" xml:space="preserve">
+    <value>Toplam</value>
+  </data>
+  <data name="Vezne" xml:space="preserve">
+    <value>Vezne</value>
+  </data>
 </root>

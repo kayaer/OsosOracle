@@ -13,7 +13,7 @@ namespace OsosOracle.MvcUI.Controllers
             var model = new CodeGenModel
             {
                 ProjeAdi = "OsosOracle",
-                DbserverIp = "localhost:1521",
+                DbserverIp = "192.168.1.143:1521",
                 KullaniciAdi = "YONCAPROD",
                 Sifre = "prod9872",
                 DatabaseAdi = "YONCAPROD"

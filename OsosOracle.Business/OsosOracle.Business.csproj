@@ -9,10 +9,13 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>OsosOracle.Business</RootNamespace>
     <AssemblyName>OsosOracle.Business</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
     <DontImportPostSharp>True</DontImportPostSharp>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -63,11 +66,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Abstract\ICONDILService.cs" />
     <Compile Include="Abstract\ICONKURUMService.cs" />
     <Compile Include="Abstract\ICSTHUMARKAService.cs" />
     <Compile Include="Abstract\ICSTHUMODELService.cs" />
     <Compile Include="Abstract\ICSTSAYACMODELService.cs" />
-    <Compile Include="Abstract\IENTABONEBILGIService.cs" />
     <Compile Include="Abstract\IENTABONESAYACService.cs" />
     <Compile Include="Abstract\IENTABONEService.cs" />
     <Compile Include="Abstract\IENTHABERLESMEUNITESIService.cs" />
@@ -80,6 +83,8 @@
     <Compile Include="Abstract\IENTSAYACService.cs" />
     <Compile Include="Abstract\IENTSAYACSONDURUMSUService.cs" />
     <Compile Include="Abstract\IENTTUKETIMSUService.cs" />
+    <Compile Include="Abstract\INESNEDEGERService.cs" />
+    <Compile Include="Abstract\INESNETIPService.cs" />
     <Compile Include="Abstract\IPRMTARIFEELKService.cs" />
     <Compile Include="Abstract\IPRMTARIFEGAZService.cs" />
     <Compile Include="Abstract\IPRMTARIFEORTAKAVMService.cs" />
@@ -88,17 +93,16 @@
     <Compile Include="Abstract\ISYSCSTOPERASYONService.cs" />
     <Compile Include="Abstract\ISYSGOREVROLService.cs" />
     <Compile Include="Abstract\ISYSGOREVService.cs" />
-    <Compile Include="Abstract\ISYSKULLANICIDETAYService.cs" />
     <Compile Include="Abstract\ISYSKULLANICIService.cs" />
     <Compile Include="Abstract\ISYSMENUService.cs" />
     <Compile Include="Abstract\ISYSOPERASYONGOREVService.cs" />
     <Compile Include="Abstract\ISYSROLKULLANICIService.cs" />
     <Compile Include="Abstract\ISYSROLService.cs" />
+    <Compile Include="Concrete\CONDILManager.cs" />
     <Compile Include="Concrete\CONKURUMManager.cs" />
     <Compile Include="Concrete\CSTHUMARKAManager.cs" />
     <Compile Include="Concrete\CSTHUMODELManager.cs" />
     <Compile Include="Concrete\CSTSAYACMODELManager.cs" />
-    <Compile Include="Concrete\ENTABONEBILGIManager.cs" />
     <Compile Include="Concrete\ENTABONEManager.cs" />
     <Compile Include="Concrete\ENTABONESAYACManager.cs" />
     <Compile Include="Concrete\ENTHABERLESMEUNITESIManager.cs" />
@@ -112,15 +116,16 @@
     <Compile Include="Concrete\ENTSAYACSONDURUMSUManager.cs" />
     <Compile Include="Concrete\ENTTUKETIMSUManager.cs" />
     <Compile Include="Concrete\Infrastructure\BaseManager.cs" />
+    <Compile Include="Concrete\NESNEDEGERManager.cs" />
+    <Compile Include="Concrete\NESNETIPManager.cs" />
     <Compile Include="Concrete\PRMTARIFEELKManager.cs" />
     <Compile Include="Concrete\PRMTARIFEGAZManager.cs" />
-    <Compile Include="Concrete\PRMTARIFEORTAKAVMManager.cs" />
+    <Compile Include="Concrete\PRMTARIFEKALORIMETREManager.cs" />
     <Compile Include="Concrete\PRMTARIFESUManager.cs" />
     <Compile Include="Concrete\RPTDASHBOARDManager.cs" />
     <Compile Include="Concrete\SYSCSTOPERASYONManager.cs" />
     <Compile Include="Concrete\SYSGOREVManager.cs" />
     <Compile Include="Concrete\SYSGOREVROLManager.cs" />
-    <Compile Include="Concrete\SYSKULLANICIDETAYManager.cs" />
     <Compile Include="Concrete\SYSKULLANICIManager.cs" />
     <Compile Include="Concrete\SYSMENUManager.cs" />
     <Compile Include="Concrete\SYSOPERASYONGOREVManager.cs" />
@@ -133,11 +138,11 @@
     <Compile Include="DependencyResolvers\Ninject\ServiceModule.cs" />
     <Compile Include="DependencyResolvers\Ninject\ValidationModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ValidationRules\FluentValidation\CONDILValidator.cs" />
     <Compile Include="ValidationRules\FluentValidation\CONKURUMValidator.cs" />
     <Compile Include="ValidationRules\FluentValidation\CSTHUMARKAValidator.cs" />
     <Compile Include="ValidationRules\FluentValidation\CSTHUMODELValidator.cs" />
     <Compile Include="ValidationRules\FluentValidation\CSTSAYACMODELValidator.cs" />
-    <Compile Include="ValidationRules\FluentValidation\ENTABONEBILGIValidator.cs" />
     <Compile Include="ValidationRules\FluentValidation\ENTABONESAYACValidator.cs" />
     <Compile Include="ValidationRules\FluentValidation\ENTABONEValidator.cs" />
     <Compile Include="ValidationRules\FluentValidation\ENTHABERLESMEUNITESIValidator.cs" />
@@ -150,6 +155,8 @@
     <Compile Include="ValidationRules\FluentValidation\ENTSAYACSONDURUMSUValidator.cs" />
     <Compile Include="ValidationRules\FluentValidation\ENTSAYACValidator.cs" />
     <Compile Include="ValidationRules\FluentValidation\ENTTUKETIMSUValidator.cs" />
+    <Compile Include="ValidationRules\FluentValidation\NESNEDEGERValidator.cs" />
+    <Compile Include="ValidationRules\FluentValidation\NESNETIPValidator.cs" />
     <Compile Include="ValidationRules\FluentValidation\PRMTARIFEELKValidator.cs" />
     <Compile Include="ValidationRules\FluentValidation\PRMTARIFEGAZValidator.cs" />
     <Compile Include="ValidationRules\FluentValidation\PRMTARIFEORTAKAVMValidator.cs" />
@@ -158,7 +165,6 @@
     <Compile Include="ValidationRules\FluentValidation\SYSCSTOPERASYONValidator.cs" />
     <Compile Include="ValidationRules\FluentValidation\SYSGOREVROLValidator.cs" />
     <Compile Include="ValidationRules\FluentValidation\SYSGOREVValidator.cs" />
-    <Compile Include="ValidationRules\FluentValidation\SYSKULLANICIDETAYValidator.cs" />
     <Compile Include="ValidationRules\FluentValidation\SYSKULLANICIValidator.cs" />
     <Compile Include="ValidationRules\FluentValidation\SYSMENUValidator.cs" />
     <Compile Include="ValidationRules\FluentValidation\SYSOPERASYONGOREVValidator.cs" />

@@ -1,4 +1,6 @@
+using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using OsosOracle.DataLayer.Abstract;
 using OsosOracle.DataLayer.Concrete.EntityFramework.Entity;
@@ -18,14 +20,25 @@ namespace OsosOracle.DataLayer.Concrete.EntityFramework.Dal
             return result.Select(x => new ENTABONESAYACDetay()
             {
                 KAYITNO = x.KAYITNO,
-                TARIFE = x.TARIFE,
                 TARIFEKAYITNO = x.TARIFEKAYITNO,
                 ABONEKAYITNO = x.ABONEKAYITNO,
                 SAYACKAYITNO = x.SAYACKAYITNO,
+                SONSATISTARIH = x.SONSATISTARIH,
+                AboneNo = x.EntAboneEf.ABONENO,
+                SayacSeriNo = x.EntSayacEf.SERINO,
+                KapakSeriNo = x.EntSayacEf.KapakSeriNo,
+                Aciklama = x.EntSayacEf.ACIKLAMA,
+                SOKULMENEDEN = x.SOKULMENEDEN,
+                SOKULMETARIH = x.SOKULMETARIH,
+                TAKILMATARIH = x.TAKILMATARIH,
+                AboneAdSoyad = x.EntAboneEf.AD + " " + x.EntAboneEf.SOYAD,
+                SonSatisTarihi = x.EntAboneEf.SonSatisTarih,
+                SayacModel = x.EntSayacEf.CstSayacModelEf.AD,
+                SuTarifeAdi = x.PrmTarifeSuEf.AD,
+                KalorimetreTarifeAdi = x.PrmKALORIMETREEf.AD,
+                GazTarifeAdi = x.PrmTarifeGazEf.AD
 
 
-                //TODO: Ek detayları buraya ekleyiniz
-                //örnek: ENTABONESAYACDurumu = x.NesneDegerDurumEf.Adi
 
             });
         }
@@ -45,12 +58,14 @@ namespace OsosOracle.DataLayer.Concrete.EntityFramework.Dal
                 else
                 {
 
-                    //if (!string.IsNullOrEmpty(filtre.Idler))
-                    //{
-                    //	var idList = filtre.Idler.ToList<int>();
-                    //	result = result.Where(x => idList.Contains(x.KAYITNO));
-                    //}
-
+                    if (filtre.SayacTur != null)
+                    {
+                        result = result.Where(x => x.EntSayacEf.CstSayacModelEf.SayacTuruKayitNo == filtre.SayacTur);
+                    }
+                    if (filtre.SayacSeriNo != null)
+                    {
+                        result = result.Where(x => x.EntSayacEf.SERINO == filtre.SayacSeriNo);
+                    }
                     if (filtre.ABONEKAYITNO != null)
                     {
                         result = result.Where(x => x.ABONEKAYITNO == filtre.ABONEKAYITNO);
@@ -83,10 +98,7 @@ namespace OsosOracle.DataLayer.Concrete.EntityFramework.Dal
                     {
                         result = result.Where(x => x.TARIFEKAYITNO == filtre.TARIFEKAYITNO);
                     }
-                    if (filtre.TARIFE != null)
-                    {
-                        result = result.Where(x => x.TARIFE == filtre.TARIFE);
-                    }
+
                     if (filtre.TAKILMATARIH != null)
                     {
                         result = result.Where(x => x.TAKILMATARIH == filtre.TAKILMATARIH);
@@ -98,6 +110,38 @@ namespace OsosOracle.DataLayer.Concrete.EntityFramework.Dal
                     if (filtre.SONSATISTARIH != null)
                     {
                         result = result.Where(x => x.SONSATISTARIH == filtre.SONSATISTARIH);
+                    }
+                    if (!string.IsNullOrEmpty(filtre.AboneAdi))
+                    {
+                        result = result.Where(x => x.EntAboneEf.AD.ToLower().Trim().Contains(filtre.AboneAdi));
+                    }
+                    if (filtre.Durum != null)
+                    {
+                        if (filtre.Durum == 25 || filtre.Durum == 2)
+                        {
+                            result = result.Where(x => x.DURUM == 2);
+                        }
+                        else
+                        {
+                            result = result.Where(x => x.DURUM == 1);
+                        }
+
+                    }
+                    if (filtre.KurumKayitNo != null)
+                    {
+                        result = result.Where(x => x.EntSayacEf.KURUMKAYITNO == filtre.KurumKayitNo);
+                    }
+                    if (!string.IsNullOrEmpty(filtre.SonSatisTarihBaslangic))
+                    {
+                        DateTime tarih =  Convert.ToDateTime(filtre.SonSatisTarihBaslangic,new CultureInfo("tr-TR"));
+                        //result = result.Where(x => x.EntAboneEf.SonSatisTarih >tarih);
+                        result = result.Where(x => x.SONSATISTARIH > tarih);
+                    }
+                    if (filtre.SonSatisTarihBitis != null)
+                    {
+                        DateTime tarih = Convert.ToDateTime(filtre.SonSatisTarihBitis, new CultureInfo("tr-TR"));
+                        //result = result.Where(x => x.EntAboneEf.SonSatisTarih <tarih );
+                        result = result.Where(x => x.SONSATISTARIH < tarih);
                     }
                 }
             }

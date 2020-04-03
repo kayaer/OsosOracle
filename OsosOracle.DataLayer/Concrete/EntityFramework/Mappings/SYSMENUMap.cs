@@ -10,21 +10,17 @@ namespace OsosOracle.DataLayer.Concrete.EntityFramework.Mappings
         {
 
             // Table & Column Mappings
-            ToTable("SYSMENU2");
+            ToTable("SYSMENU");
             // Primary Key
             HasKey(t => t.KAYITNO);
             // Properties
             Property(t => t.KAYITNO).HasColumnName("KAYITNO").IsRequired();
             Property(t => t.TR).HasColumnName("TR").IsRequired();
-            Property(t => t.EN).HasColumnName("EN").IsRequired();
-            Property(t => t.YEREL).HasColumnName("YEREL");
             Property(t => t.PARENTKAYITNO).HasColumnName("PARENTKAYITNO");
-            Property(t => t.MENUORDER).HasColumnName("MENUORDER").IsRequired();
-            Property(t => t.EXTERNALURL).HasColumnName("EXTERNALURL");
+            Property(t => t.MENUORDER).HasColumnName("MENUORDER").IsRequired();          
             Property(t => t.AREA).HasColumnName("AREA");
             Property(t => t.ACTION).HasColumnName("ACTION");
-            Property(t => t.CONTROLLER).HasColumnName("CONTROLLER");
-            Property(t => t.PARAMETERS).HasColumnName("PARAMETERS");
+            Property(t => t.CONTROLLER).HasColumnName("CONTROLLER");         
             Property(t => t.DURUM).HasColumnName("DURUM");
             Property(t => t.VERSIYON).HasColumnName("VERSIYON").IsRequired();
             Property(t => t.OLUSTURAN).HasColumnName("OLUSTURAN");

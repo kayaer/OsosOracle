@@ -9,6 +9,7 @@ using OsosOracle.Framework.Utilities.ExtensionMethods;
 using OsosOracle.Framework.Web.Mvc;
 using OsosOracle.MvcUI.Filters;
 using OsosOracle.MvcUI.Models.ENTSAYACModels;
+using OsosOracle.MvcUI.Resources;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -39,7 +40,7 @@ namespace OsosOracle.MvcUI.Controllers
         {
 
             entSayacAra.Ara = dtParameterModel.AramaKriteri;
-
+            entSayacAra.KURUMKAYITNO = AktifKullanici.KurumKayitNo;
             if (!string.IsNullOrEmpty(dtParameterModel.Search.Value))
             {
                 entSayacAra.SayacSeriNoIceren= dtParameterModel.Search.Value;
@@ -47,7 +48,7 @@ namespace OsosOracle.MvcUI.Controllers
             }
 
             var kayitlar = _entSayacService.Ara(entSayacAra);
-
+           
             return Json(new DataTableResult()
             {
                 data = kayitlar.ENTSAYACDetayList.Select(t => new
@@ -55,15 +56,11 @@ namespace OsosOracle.MvcUI.Controllers
                     t.Kurum,
                     t.SayacTipi,
                     t.SERINO,
-                    SuTarifesi=t.PrmTarifeSuDetay.AD,
-                    ElektrikTarifesi=t.PrmTarifeElkDetay.AD,
+                    t.KapakSeriNo,
                     t.ACIKLAMA,
-                    Islemler = $@"
-                                <a class='btn btn-xs btn-info modalizer' href='{Url.Action("Guncelle", "AboneSayac", new { sayacKayitNo = t.KAYITNO })}' title='Abone-Tarife İşlemleri'><i class='fa fa-edit'></i></a>
-                                <a class='btn btn-xs btn-info modalizer' href='{Url.Action("Guncelle", "Sayac", new { sayacKayitNo = t.KAYITNO })}' title='Düzenle'><i class='fa fa-edit'></i></a>		
-                                <a class='btn btn-xs btn-info modalizer' href='{Url.Action("TuketimGrafik", "ENTTUKETIMSU", new { sayacKayitNo = t.KAYITNO })}' title='Tüketim Grafiği'><i class='fa fa-line-chart'></i></a>
-                                <a class='btn btn-xs btn-info' target='_blank' href='{Url.Action("Index", "ENTTUKETIMSU", new { sayacKayitNo = t.KAYITNO })}' title='Tüketim Verileri'><i class='fa fa-database'></i></a>
-								<a class='btn btn-xs btn-danger modalizer ' href='{Url.Action("Sil", "Sayac", new { sayacKayitNo = t.KAYITNO })}' title='Sil'><i class='fa fa-trash'></i></a>"
+                    Islemler = $" <a class='btn btn-xs btn-primary modalizer' href='{Url.Action("Guncelle", "Sayac", new { sayacKayitNo = t.KAYITNO })}' title='{Dil.Duzenle}'><i class='fa fa-th-list'></i></a>" +
+                               $" <a class='btn btn-xs btn-danger modalizer' href='{Url.Action("Sil", "Sayac", new { sayacKayitNo = t.KAYITNO })}' title='{Dil.Sil}'><i class='fa fa-trash'></i></a>"
+                              
                 }),
                 draw = dtParameterModel.Draw,
                 recordsTotal = kayitlar.ToplamKayitSayisi,
@@ -101,8 +98,6 @@ namespace OsosOracle.MvcUI.Controllers
         public ActionResult Kaydet(ENTSAYACKaydetModel sayacKaydetModel)
         {
             sayacKaydetModel.ENTSAYAC.KURUMKAYITNO = AktifKullanici.KurumKayitNo;
-            
-           
             sayacKaydetModel.ENTSAYAC.DURUM = 1;
             if (sayacKaydetModel.ENTSAYAC.KAYITNO > 0)
             {
@@ -115,7 +110,7 @@ namespace OsosOracle.MvcUI.Controllers
                 _entSayacService.Ekle(sayacKaydetModel.ENTSAYAC.List());
             }
 
-            return Yonlendir(Url.Action("Index", "Sayac", new { sayacKayitNo = sayacKaydetModel.ENTSAYAC.KAYITNO }), $"Sayaç kayıdı başarıyla gerçekleştirilmiştir.");
+            return Yonlendir(Url.Action("Index", "Sayac", new { sayacKayitNo = sayacKaydetModel.ENTSAYAC.KAYITNO }), Dil.Basarili);
         }
       
         public ActionResult Sil(int sayacKayitNo)
@@ -131,7 +126,7 @@ namespace OsosOracle.MvcUI.Controllers
           
             _entSayacService.Sil(model.Id.List());
 
-            return Yonlendir(Url.Action("Index"), "Sayaç Başarıyla Silindi");
+            return Yonlendir(Url.Action("Index"), Dil.Basarili);
         }
 
         public ActionResult AjaxAra(string key, ENTSAYACAra entSayacAra = null, int limit = 10, int baslangic = 0)
@@ -141,6 +136,7 @@ namespace OsosOracle.MvcUI.Controllers
             {
                 entSayacAra = new ENTSAYACAra();
             }
+            entSayacAra.KURUMKAYITNO = AktifKullanici.KurumKayitNo;
             entSayacAra.Ara = new Ara
             {
                 Baslangic = baslangic,
@@ -154,14 +150,8 @@ namespace OsosOracle.MvcUI.Controllers
                     }
                 }
             };
-            try
-            {
-                entSayacAra.SERINO = Convert.ToInt32(key);
-            }
-            catch (Exception e)
-            {
 
-            }
+            entSayacAra.SERINO = key;
 
 
             var sayacList = _entSayacService.Getir(entSayacAra);
@@ -200,6 +190,74 @@ namespace OsosOracle.MvcUI.Controllers
             { //TODO: Bu bölümü düzenle
                 id = gorevdenUzaklastirma.KAYITNO.ToString(),
                 text = gorevdenUzaklastirma.SERINO.ToString(),
+                description = gorevdenUzaklastirma.KAYITNO.ToString()
+            });
+
+            return Json(data, JsonRequestBehavior.AllowGet);
+        }
+
+        public ActionResult YesilVadiAjaxAra(string key, ENTSAYACAra entSayacAra = null, int limit = 10, int baslangic = 0)
+        {
+
+            if (entSayacAra == null)
+            {
+                entSayacAra = new ENTSAYACAra();
+            }
+            entSayacAra.KURUMKAYITNO = AktifKullanici.KurumKayitNo;
+            entSayacAra.Ara = new Ara
+            {
+                Baslangic = baslangic,
+                Uzunluk = limit,
+                Siralama = new List<Siralama>
+                {
+                    new Siralama
+                    {
+                        KolonAdi = LinqExtensions.GetPropertyName((ENTSAYAC t) => t.KAYITNO),
+                        SiralamaTipi = EnumSiralamaTuru.Asc
+                    }
+                }
+            };
+
+            entSayacAra.KapakSeriNo = key;
+
+
+            var sayacList = _entSayacService.Getir(entSayacAra);
+
+
+            var data = sayacList.Select(sayac => new AutoCompleteData
+            {
+                //TODO: Bu bölümü düzenle
+                id = sayac.KAYITNO.ToString(),
+                text = sayac.KapakSeriNo.ToString(),
+                description = sayac.KAYITNO.ToString(),
+            }).ToList();
+            return Json(data, JsonRequestBehavior.AllowGet);
+        }
+
+        public ActionResult YesilVadiAjaxTekDeger(int id)
+        {
+            var gorevdenUzaklastirma = _entSayacService.GetirById(id);
+
+
+            var data = new AutoCompleteData
+            {//TODO: Bu bölümü düzenle
+                id = gorevdenUzaklastirma.KAYITNO.ToString(),
+                text = gorevdenUzaklastirma.KapakSeriNo.ToString(),
+                description = gorevdenUzaklastirma.KAYITNO.ToString(),
+            };
+
+            return Json(data, JsonRequestBehavior.AllowGet);
+        }
+
+        public ActionResult YesilVadiAjaxCokDeger(string id)
+        {
+            var gorevdenUzaklastirmaList = _entSayacService.Getir(new ENTSAYACAra() { KAYITNOlar = id });
+
+
+            var data = gorevdenUzaklastirmaList.Select(gorevdenUzaklastirma => new AutoCompleteData
+            { //TODO: Bu bölümü düzenle
+                id = gorevdenUzaklastirma.KAYITNO.ToString(),
+                text = gorevdenUzaklastirma.KapakSeriNo.ToString(),
                 description = gorevdenUzaklastirma.KAYITNO.ToString()
             });
 

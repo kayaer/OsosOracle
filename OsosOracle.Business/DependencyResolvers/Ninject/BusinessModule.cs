@@ -13,11 +13,11 @@ namespace OsosOracle.Business.DependencyResolvers.Ninject
 
             #region Service Bindings
             Bind<ICSTSAYACMODELService>().To<CSTSAYACMODELManager>().InSingletonScope();
+            Bind<ICONDILService>().To<CONDILManager>().InSingletonScope();
             Bind<ICONKURUMService>().To<CONKURUMManager>().InSingletonScope();
             Bind<ICSTHUMARKAService>().To<CSTHUMARKAManager>().InSingletonScope();
             Bind<ICSTHUMODELService>().To<CSTHUMODELManager>().InSingletonScope();
             Bind<IENTABONEService>().To<ENTABONEManager>().InSingletonScope();
-            Bind<IENTABONEBILGIService>().To<ENTABONEBILGIManager>().InSingletonScope();
             Bind<IENTABONESAYACService>().To<ENTABONESAYACManager>().InSingletonScope();
             Bind<IENTSAYACService>().To<ENTSAYACManager>().InSingletonScope();
             Bind<IENTSAYACDURUMSUService>().To<ENTSAYACDURUMSUManager>().InSingletonScope();
@@ -31,28 +31,29 @@ namespace OsosOracle.Business.DependencyResolvers.Ninject
             Bind<IENTSAYACSONDURUMSUService>().To<ENTSAYACSONDURUMSUManager>().InSingletonScope();
             Bind<IPRMTARIFEELKService>().To<PRMTARIFEELKManager>().InSingletonScope();
             Bind<IPRMTARIFEGAZService>().To<PRMTARIFEGAZManager>().InSingletonScope();
-            Bind<IPRMTARIFEORTAKAVMService>().To<PRMTARIFEORTAKAVMManager>().InSingletonScope();
+            Bind<IPRMTARIFEKALORIMETREService>().To<PRMTARIFEKALORIMETREManager>().InSingletonScope();
             Bind<IPRMTARIFESUService>().To<PRMTARIFESUManager>().InSingletonScope();
             Bind<IRPTDASHBOARDService>().To<RPTDASHBOARDManager>().InSingletonScope();
             Bind<ISYSCSTOPERASYONService>().To<SYSCSTOPERASYONManager>().InSingletonScope();
             Bind<ISYSGOREVService>().To<SYSGOREVManager>().InSingletonScope();
             Bind<ISYSGOREVROLService>().To<SYSGOREVROLManager>().InSingletonScope();
             Bind<ISYSKULLANICIService>().To<SYSKULLANICIManager>().InSingletonScope();
-            Bind<ISYSKULLANICIDETAYService>().To<SYSKULLANICIDETAYManager>().InSingletonScope();
             Bind<ISYSMENUService>().To<SYSMENUManager>().InSingletonScope();
             Bind<ISYSOPERASYONGOREVService>().To<SYSOPERASYONGOREVManager>().InSingletonScope();
             Bind<ISYSROLService>().To<SYSROLManager>().InSingletonScope();
             Bind<ISYSROLKULLANICIService>().To<SYSROLKULLANICIManager>().InSingletonScope();
+            Bind<INESNEDEGERService>().To<NESNEDEGERManager>().InSingletonScope();
+            Bind<INESNETIPService>().To<NESNETIPManager>().InSingletonScope();
 
             #endregion
 
             #region Data Access Layer bindings
             Bind<ICSTSAYACMODELDal>().To<EfCSTSAYACMODELDal>().InSingletonScope();
+            Bind<ICONDILDal>().To<EfCONDILDal>().InSingletonScope();
             Bind<ICONKURUMDal>().To<EfCONKURUMDal>().InSingletonScope();
             Bind<ICSTHUMARKADal>().To<EfCSTHUMARKADal>().InSingletonScope();
             Bind<ICSTHUMODELDal>().To<EfCSTHUMODELDal>().InSingletonScope();
             Bind<IENTABONEDal>().To<EfENTABONEDal>().InSingletonScope();
-            Bind<IENTABONEBILGIDal>().To<EfENTABONEBILGIDal>().InSingletonScope();
             Bind<IENTABONESAYACDal>().To<EfENTABONESAYACDal>().InSingletonScope();
             Bind<IENTSAYACDal>().To<EfENTSAYACDal>().InSingletonScope();
             Bind<IENTSAYACDURUMSUDal>().To<EfENTSAYACDURUMSUDal>().InSingletonScope();
@@ -66,18 +67,20 @@ namespace OsosOracle.Business.DependencyResolvers.Ninject
             Bind<IENTSAYACSONDURUMSUDal>().To<EfENTSAYACSONDURUMSUDal>().InSingletonScope();
             Bind<IPRMTARIFEELKDal>().To<EfPRMTARIFEELKDal>().InSingletonScope();
             Bind<IPRMTARIFEGAZDal>().To<EfPRMTARIFEGAZDal>().InSingletonScope();
-            Bind<IPRMTARIFEORTAKAVMDal>().To<EfPRMTARIFEORTAKAVMDal>().InSingletonScope();
+            Bind<IPRMTARIFEKALORIMETREDal>().To<EfPRMTARIFEKALORIMETREDal>().InSingletonScope();
             Bind<IPRMTARIFESUDal>().To<EfPRMTARIFESUDal>().InSingletonScope();
             Bind<IRPTDASHBOARDDal>().To<EfRPTDASHBOARDDal>().InSingletonScope();
             Bind<ISYSGOREVDal>().To<EfSYSGOREVDal>().InSingletonScope();
             Bind<ISYSGOREVROLDal>().To<EfSYSGOREVROLDal>().InSingletonScope();
             Bind<ISYSCSTOPERASYONDal>().To<EfSYSCSTOPERASYONDal>().InSingletonScope();
             Bind<ISYSKULLANICIDal>().To<EfSYSKULLANICIDal>().InSingletonScope();
-            Bind<ISYSKULLANICIDETAYDal>().To<EfSYSKULLANICIDETAYDal>().InSingletonScope();
             Bind<ISYSMENUDal>().To<EfSYSMENUDal>().InSingletonScope();
             Bind<ISYSOPERASYONGOREVDal>().To<EfSYSOPERASYONGOREVDal>().InSingletonScope();
             Bind<ISYSROLDal>().To<EfSYSROLDal>().InSingletonScope();
             Bind<ISYSROLKULLANICIDal>().To<EfSYSROLKULLANICIDal>().InSingletonScope();
+            Bind<INESNEDEGERDal>().To<EfNESNEDEGERDal>().InSingletonScope();
+            Bind<INESNETIPDal>().To<EfNESNETIPDal>().InSingletonScope();
+
             #endregion
         }
     }

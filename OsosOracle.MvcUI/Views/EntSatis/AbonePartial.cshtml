@@ -1,0 +1,186 @@
+﻿@using OsosOracle.MvcUI.Resources
+@model OsosOracle.Entities.ComplexType.ENTABONEComplexTypes.AboneIslemleri
+
+
+<div class="panel panel-default">
+    <div class="panel-heading">@Dil.AboneBilgileri</div>
+    <div class="panel-body">
+        <div class="form-horizontal">
+            <div class="form-group">
+                <div class="col-md-12">
+                    @Html.Label(Dil.Ad+' '+ Dil.Soyad )
+                </div>
+                <div class="col-md-12">
+                    @Html.TextBoxFor(t => t.EntAboneSayacDetay.AboneAdSoyad, new { @class = "form-control", placeholder = Dil.Ad+' '+ Dil.Soyad })
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-12">
+                    @Html.Label( Dil.AboneNo )
+                </div>
+                <div class="col-md-12">
+                    @Html.TextBoxFor(t => t.EntAboneSayacDetay.AboneNo, new { @class = "form-control", placeholder = Dil.AboneNo })
+                </div>
+            </div>
+            <div class="form-group">
+                 <div class="col-md-12">
+                    @Html.Label( Dil.KapakSeriNo )
+                </div>
+                <div class="col-md-12">
+                    @Html.TextBoxFor(t => t.EntAboneSayacDetay.KapakSeriNo, new { @class = "form-control", placeholder =Dil.KapakSeriNo })
+
+                </div>
+            </div>
+            <div class="form-group">
+                 <div class="col-md-12">
+                    @Html.Label( Dil.SuTarifesi )
+                </div>
+                <div class="col-md-12">
+                    @Html.TextBoxFor(t => t.EntAboneSayacDetay.SuTarifeAdi, new { @class = "form-control", placeholder =Dil.SuTarifesi })
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-12">
+                    @Html.Label( "Su Kalan" )
+                </div>
+                <div class="col-md-12">
+                    @Html.TextBoxFor(t => t.SuKalan, new { @class = "form-control", placeholder = _T("Su Kalan") })
+                </div>
+            </div> 
+            <div class="form-group">
+                <div class="col-md-12">
+                    @Html.Label( "Su Harcanan" )
+                </div>
+                <div class="col-md-12">
+                    @Html.TextBoxFor(t => t.SuHarcanan, new { @class = "form-control", placeholder = _T("Su Harcanan") })
+                </div>
+            </div>
+             <div class="form-group">
+                <div class="col-md-12">
+                    @Html.Label( "Su Kredi" )
+                </div>
+                <div class="col-md-12">
+                    @Html.TextBoxFor(t => t.SuKredi, new { @class = "form-control", placeholder = _T("Su Kredi") })
+                </div>
+            </div>
+            <div class="form-group">
+                 <div class="col-md-12">
+                    @Html.Label( "Su Yedek Kredi" )
+                </div>
+                <div class="col-md-12">
+                    @Html.TextBoxFor(t => t.SuYedekKredi, new { @class = "form-control", placeholder = _T("Su Yedek Kredi") })
+                </div>
+            </div>
+            <div class="form-group">
+                 <div class="col-md-12">
+                    @Html.Label( "Su Ana Kredi Okundu Bilgisi" )
+                </div>
+                <div class="col-md-12">
+                    @Html.TextBoxFor(t => t.SuAkoMesaj, new { @class = "form-control", placeholder = _T("Su Ana Kredi Okundu Bilgisi") })
+                </div>
+            </div>
+            <div class="form-group">
+                 <div class="col-md-12">
+                    @Html.Label( "Su Yedek Kredi Okundu Bilgisi" )
+                </div>
+                <div class="col-md-12">
+                    @Html.TextBoxFor(t => t.SuYkoMesaj, new { @class = "form-control", placeholder = _T("Su Yedek Kredi Okundu Bilgisi") })
+                </div>
+            </div>
+            <div class="form-group">
+                 <div class="col-md-12">
+                    @Html.Label("Kalorimetre Tarife" )
+                </div>
+                <div class="col-md-12">
+                    @Html.TextBoxFor(t => t.EntAboneSayacDetay.KalorimetreTarifeAdi, new { @class = "form-control", placeholder =Dil.Kalorimetre+ ' '+Dil.Tarife })
+                </div>
+            </div>
+           
+            <div class="form-group">
+                <div class="col-md-12">
+                    @Html.Label( "Kalorimetre Kredi" )
+                </div>
+                <div class="col-md-12">
+                    @Html.TextBoxFor(t => t.KalorimetreKredi, new { @class = "form-control", placeholder = _T("Kalorimetre Kredi") })
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-12">
+                    @Html.Label( "Kalorimetre Yedek Kredi" )
+                </div>
+                <div class="col-md-12">
+                    @Html.TextBoxFor(t => t.KalorimetreYedekKredi, new { @class = "form-control", placeholder = _T("Kalorimetre Yedek Kredi") })
+                </div>
+            </div>
+             <div class="form-group">
+                 <div class="col-md-12">
+                    @Html.Label( "Kalorimetre Ana Kredi Okundu Bilgisi" )
+                </div>
+                <div class="col-md-12">
+                    @Html.TextBoxFor(t => t.KalorimetreAkoMesaj, new { @class = "form-control", placeholder =Dil.AnaKrediOkundu })
+                </div>
+            </div>
+            <div class="form-group">
+                 <div class="col-md-12">
+                    @Html.Label( "Son Satış Tarihi" )
+                </div>
+                <div class="col-md-12">
+                    @Html.TextBoxFor(t => t.EntAboneSayacDetay.SonSatisTarihi, new { @class = "form-control", placeholder =Dil.SonSatisTarihi })
+                </div>
+            </div>
+            
+             @*<div class="form-group">
+                 <div class="col-md-12">
+                    @Html.Label( "Kalorimetre Yedek Kredi Okundu Bilgisi" )
+                </div>
+                <div class="col-md-12">
+                    @Html.TextBoxFor(t => t.KalorimetreYedekKredi, new { @class = "form-control", placeholder =Dil.YedekKrediOkundu })
+                </div>
+            </div>*@
+            <div class="form-group hide">
+                <div class="col-md-12">
+                    @Html.TextBoxFor(t => t.EntAboneSayacDetay.ABONEKAYITNO, new { @class = "form-control", placeholder = _T("Abone Kayıt No") })
+                </div>
+            </div>
+            <div class="form-group hide">
+                <div class="col-md-12">
+                    @Html.TextBoxFor(t => t.EntAboneSayacDetay.SAYACKAYITNO, new { @class = "form-control", placeholder = _T("Sayac Kayıt No") })
+                </div>
+            </div>
+            <div class="form-group hide">
+                <div class="col-md-12">
+                    @Html.TextBoxFor(t => t.KalorimetreKayitNo, new { @class = "form-control", placeholder = _T("Kalorimetre Kayıt No") })
+                </div>
+            </div>
+            <div class="form-group hide">
+                <div class="col-md-12">
+                    @Html.TextBoxFor(t => t.SuAko, new { @class = "form-control", placeholder = _T("Su Ako") })
+                </div>
+            </div>
+            <div class="form-group hide">
+                <div class="col-md-12">
+                    @Html.TextBoxFor(t => t.SuYko, new { @class = "form-control", placeholder = _T("Su Yko") })
+                </div>
+            </div>
+            <div class="form-group hide">
+                <div class="col-md-12">
+                    @Html.TextBoxFor(t => t.KalorimetreAko, new { @class = "form-control", placeholder = _T("Kalorimetre Yko") })
+                </div>
+            </div>
+            <div class="form-group hide">
+                <div class="col-md-12">
+                    @Html.TextBoxFor(t => t.KalorimetreYko, new { @class = "form-control", placeholder = _T("Kalorimetre Yko") })
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script type="text/javascript">
+        $(document).ready(function () {
+
+          //$('input[type!=hidden],textarea,select', scope).floatlabel();
+        });
+
+</script>

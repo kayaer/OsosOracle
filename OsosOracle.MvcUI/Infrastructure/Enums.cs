@@ -37,9 +37,24 @@ namespace OsosOracle.MvcUI.Infrastructure
             ModemMarkaGetir = 10,
             [Description("/CSTHUMODEL/AjaxAra")]
             ModemModelGetir = 11,
-            [Description("/PRMTARIFEORTAKAVM/AjaxAra")]
+            [Description("/PRMTARIFEKALORIMETRE/AjaxAra")]
             KalorimetreTarifeGetir = 12,
-
+            [Description("/CONDIL/AjaxAra")]
+            DilGetir = 13,
+            [Description("/NESNETIP/AjaxAra")]
+            NESNETIPGetir = 14,
+            [Description("/Sayac/YesilVadiAjaxAra")]
+            YesilVadiSayacGetir = 15,
+            [Description("/NESNEDEGER/AjaxAra?nesneTipId=1")]
+            SayacTuruGetir = 16,
+            [Description("/NESNEDEGER/AjaxAra?nesneTipId=2")]
+            SatisTipiGetir = 17,
+            [Description("/NESNEDEGER/AjaxAra?nesneTipId=3")]
+            DurumGetir = 18,
+            [Description("/PRMTARIFEGaz/AjaxAra")]
+            GazTarifeGetir = 19,
+            [Description("/NESNEDEGER/AjaxAra?nesneTipId=4")]
+            OdemeTipiGetir = 20,
         }
 
         public enum AutocompleteDegerFuction
@@ -66,9 +81,24 @@ namespace OsosOracle.MvcUI.Infrastructure
             ModemMarkaGetir = 10,
             [Description("/CSTHUMODEL/AjaxTekDeger")]
             ModemModelGetir = 11,
-            [Description("/PRMTARIFEORTAKAVM/AjaxTekDeger")]
+            [Description("/PRMTARIFEKALORIMETRE/AjaxTekDeger")]
             KalorimetreTarifeGetir = 12,
-
+            [Description("/CONDIL/AjaxTekDeger")]
+            DilGetir = 13,
+            [Description("/NESNETIP/AjaxTekDeger")]
+            NESNETIPGetir = 14,
+            [Description("/Sayac/YesilVadiAjaxTekDeger")]
+            YesilVadiSayacGetir = 15,
+            [Description("/NESNEDEGER/AjaxTekDeger")]
+            SayacTuruGetir = 16,
+            [Description("/NESNEDEGER/AjaxTekDeger")]
+            SatisTipiGetir = 17,
+            [Description("/NESNEDEGER/AjaxTekDeger")]
+            DurumGetir = 18,
+            [Description("/PRMTARIFEGaz/AjaxTekDeger")]
+            GazTarifeGetir = 19,
+            [Description("/NESNEDEGER/AjaxTekDeger")]
+            OdemeTipiGetir = 20,
         }
 
         public enum AutocompleteCokDegerFuction
@@ -95,9 +125,24 @@ namespace OsosOracle.MvcUI.Infrastructure
             ModemMarkaGetir = 10,
             [Description("/CSTHUMODEL/AjaxCokDeger")]
             ModemModelGetir = 11,
-            [Description("/PRMTARIFEORTAKAVM/AjaxCokDeger")]
+            [Description("/PRMTARIFEKALORIMETRE/AjaxCokDeger")]
             KalorimetreTarifeGetir = 12,
-
+            [Description("/CONDIL/AjaxCokDeger")]
+            DilGetir = 13,
+            [Description("/NESNETIP/AjaxCokDeger")]
+            NESNETIPGetir = 14,
+            [Description("/Sayac/AjaxCokDeger")]
+            YesilVadiSayacGetir = 15,
+            [Description("/NESNEDEGER/AjaxTekDeger")]
+            SayacTuruGetir = 16,
+            [Description("/NESNETIP/AjaxCokDeger")]
+            SatisTipiGetir = 17,
+            [Description("/NESNEDEGER/AjaxCokDeger")]
+            DurumGetir = 18,
+            [Description("/PRMTARIFEGaz/AjaxCokDeger")]
+            GazTarifeGetir = 19,
+            [Description("/NESNEDEGER/AjaxCokDeger")]
+            OdemeTipiGetir = 20,
         }
 
         public enum AutoCompleteType

@@ -22,7 +22,7 @@ namespace OsosOracle.DataLayer.Concrete.EntityFramework.Mappings
             Property(t => t.OLUSTURMATARIH).HasColumnName("OLUSTURMATARIH");
             Property(t => t.GUNCELLEYEN).HasColumnName("GUNCELLEYEN");
             Property(t => t.GUNCELLEMETARIH).HasColumnName("GUNCELLEMETARIH");
-            Property(t => t.SAYACURUNAILE).HasColumnName("SAYACURUNAILE");
+           
             // Relationships
             //HasOptional(t => t.CONSAYACURUNAILESAYACURUNAILEEf)
             //  .WithMany(t => t.SAYACURUNAILECONKURUMEfCollection)

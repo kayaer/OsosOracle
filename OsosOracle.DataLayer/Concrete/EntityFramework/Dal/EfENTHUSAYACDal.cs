@@ -17,16 +17,10 @@ namespace OsosOracle.DataLayer.Concrete.EntityFramework.Dal
         {
             return result.Select(x => new ENTHUSAYACDetay()
             {
-                //	ENTHUSAYAC = x,
-                // Id = x.Id,
-
+              
                 HUKAYITNO = x.HUKAYITNO,
                 SAYACKAYITNO = x.SAYACKAYITNO,
-                VERSIYON = x.VERSIYON,
-                SAYACID=x.ENTSAYACSAYACKAYITNOEf.SAYACID
-                //TODO: Ek detayları buraya ekleyiniz
-                //örnek: ENTHUSAYACDurumu = x.NesneDegerDurumEf.Adi
-
+                VERSIYON = x.VERSIYON
             });
         }
 

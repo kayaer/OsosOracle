@@ -1,0 +1,44 @@
+﻿
+@using OsosOracle.Framework.HtmlHelpers
+@using OsosOracle.MvcUI.Infrastructure
+@model OsosOracle.MvcUI.Models.CSTSAYACMODELModels.CSTSAYACMODELKaydetModel
+
+
+
+<div class="ajaxForm">
+
+    @using (Html.BeginForm("Kaydet", "SayacModel", FormMethod.Post))
+    {
+        @Html.AntiForgeryToken()
+        @Html.HiddenFor(t => t.CSTSAYACMODEL.KAYITNO)
+        @Html.HiddenFor(t => t.CSTSAYACMODEL.VERSIYON)
+        @Html.HiddenFor(t => t.CSTSAYACMODEL.OLUSTURAN)
+        @Html.HiddenFor(t => t.CSTSAYACMODEL.GUNCELLEYEN)
+        @Html.ValidationSummary(true)
+
+        
+        <div class="form-group">
+            @Html.TextBoxFor(t => t.CSTSAYACMODEL.AD, new { @class = "form-control", placeholder = _T("Model Adı") })
+            @Html.ValidationMessageFor(t => t.CSTSAYACMODEL.AD)
+        </div>
+        <div class="form-group">
+            @Html.TextAreaFor(t => t.CSTSAYACMODEL.ACIKLAMA, new { @class = "form-control", placeholder = _T("Açıklama") })
+            @Html.ValidationMessageFor(t => t.CSTSAYACMODEL.ACIKLAMA)
+
+        </div>
+        <div class="form-actions">
+            <button type="submit" class="btn btn-primary"><i class="fa fa-save"></i> @_T("Kaydet")</button>
+            @Html.ButtonLink(_T("Vazgeç").ToString(), "Index", "btn btn-xs btn-danger cancel", "fa-remove")
+        </div>
+    }
+</div>
+
+@section script
+{
+    <script type="text/javascript">
+        $(document).ready(function () {
+            //js kodunuzu buraya yazın
+        });
+
+    </script>
+}

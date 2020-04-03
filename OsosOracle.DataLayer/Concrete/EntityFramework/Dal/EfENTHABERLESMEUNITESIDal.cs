@@ -39,7 +39,7 @@ namespace OsosOracle.DataLayer.Concrete.EntityFramework.Dal
         private IQueryable<ENTHABERLESMEUNITESIEf> Filtrele(IQueryable<ENTHABERLESMEUNITESIEf> result, ENTHABERLESMEUNITESIAra filtre = null)
         {
             //silindi kolonu varsa silinenler gelmesin
-
+            result = result.Where(x => x.DURUM == 1);
             //TODO: filtereyi özelleştir
             if (filtre != null)
             {

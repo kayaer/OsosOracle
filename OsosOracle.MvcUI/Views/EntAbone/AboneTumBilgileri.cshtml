@@ -1,0 +1,490 @@
+﻿@using OsosOracle.Framework.HtmlHelpers
+@using OsosOracle.MvcUI.Infrastructure
+@using OsosOracle.MvcUI.Resources
+@using OsosOracle.MvcUI.Models.ENTABONEModels
+@using OsosOracle.MvcUI.Models.ENTABONESAYACModels
+@using OsosOracle.Entities.Enums
+@model OsosOracle.MvcUI.Models.ENTABONEModels.AboneBilgileriModel
+
+@section panelHeading{
+    @if (!string.IsNullOrEmpty(Model.ReturnUrl))
+    {
+        <a href="@Model.ReturnUrl" class="btn btn-circle red-pink"><i class="fa fa-mail-reply"></i> @Dil.GeriDon</a>
+    }
+    @if (Model.KurumKayitNo == enumKurum.Elektromed.GetHashCode() || Model.KurumKayitNo == enumKurum.Mısır.GetHashCode())
+    {
+        <a id="btnKartBosaltKontaksiz" class="btn btn-xs btn-info"> <i class="fa fa-plus"></i>  @Dil.KartBosalt </a>
+        <a id="btnKartTipiKontaksiz" class="btn btn-xs btn-warning"> <i class="fa fa-plus"></i>  @Dil.KartTipi </a>
+    }
+    else
+    {
+        <a id="btnKartBosaltKontakli" class="btn btn-xs btn-info"> <i class="fa fa-plus"></i>  @Dil.KartBosalt </a>
+        <a id="btnKartTipiKontakli" class="btn btn-xs btn-warning"> <i class="fa fa-plus"></i>  @Dil.KartTipi </a>
+    }
+
+}
+
+@{Html.RenderAction("AboneGenelPartial", "EntAbone", new AboneGenelPartialModel
+    {
+        AboneKayitNo = Model.AboneDetay.KAYITNO,
+        ReturnUrl = Url.Action("AboneTumBilgileri", "EntAbone", new { AboneKayitno = Model.AboneDetay.KAYITNO, activeTab = "tabSayac" })
+    });
+}
+
+<div class="tabbable-custom">
+    <ul class="nav nav-tabs nav-justified">
+        <li class="active">
+            <a href="#tabSu" data-toggle="tab">@Dil.Su @Dil.Sayac </a>
+        </li>
+        <li>
+            <a href="#tabKalorimetre" aria-controls="tabKalorimetre" role="tab" data-toggle="tab">@Dil.Kalorimetre @Dil.Sayac</a>
+        </li>
+        <li>
+            <a href="#tabGaz" aria-controls="tabGaz" role="tab" data-toggle="tab">@Dil.Gaz @Dil.Sayac</a>
+        </li>
+        <li>
+            <a href="#tabSatis" aria-controls="tabSatis" role="tab" data-toggle="tab">@Dil.Satış</a>
+        </li>
+        <li>
+            <a href="#tabSokulenSayac" aria-controls="tabSokulenSayac" role="tab" data-toggle="tab">@Dil.SokulenSayac</a>
+        </li>
+    </ul>
+    <div class="tab-content">
+        <div class="tab-pane active" id="tabSu">
+            @{
+                Html.RenderAction("SuPartial", "AboneSayac",
+                         new PartialModel
+                         {
+                             AboneKayitNo = Model.AboneDetay.KAYITNO,
+                             ReturnUrl = Url.Action("AboneTumBilgileri", "EntAbone", new { AboneKayitno = Model.AboneDetay.KAYITNO, activeTab = "tabSu", returnUrl = Model.ReturnUrl }),
+                             YeniKayitBtnVisible = true,
+                             GuncelleBtnVisible = true,
+                             SilBtnVisible = true
+
+                         });
+
+
+            }
+        </div>
+        <div class="tab-pane" id="tabKalorimetre">
+            <div data-url="@Url.Action("KalorimetrePartial", "AboneSayac",
+                                     new PartialModel
+                                     {
+                                         AboneKayitNo = Model.AboneDetay.KAYITNO,
+                                         ReturnUrl = Url.Action("AboneTumBilgileri", "EntAbone", new {AboneKayitno = Model.AboneDetay.KAYITNO, activeTab = "tabKalorimetre",returnUrl=Model.ReturnUrl}),
+                                         YeniKayitBtnVisible = true,
+                                         GuncelleBtnVisible = true,
+                                         SilBtnVisible = true
+
+                                     })">
+
+            </div>
+        </div>
+        <div class="tab-pane" id="tabGaz">
+            <div data-url="@Url.Action("GazPartial", "AboneSayac",
+                                     new PartialModel
+                                     {
+                                         AboneKayitNo = Model.AboneDetay.KAYITNO,
+                                         ReturnUrl = Url.Action("AboneTumBilgileri", "EntAbone", new {AboneKayitno = Model.AboneDetay.KAYITNO, activeTab = "tabGaz",returnUrl=Model.ReturnUrl}),
+                                         YeniKayitBtnVisible = true,
+                                         GuncelleBtnVisible = true,
+                                         SilBtnVisible = true
+
+                                     })">
+
+            </div>
+        </div>
+        <div class="tab-pane" id="tabSatis">
+            <div data-url="@Url.Action("SatisPartial", "Satis",
+                                     new PartialModel
+                                     {
+                                         AboneKayitNo = Model.AboneDetay.KAYITNO,
+                                         ReturnUrl = Url.Action("AboneTumBilgileri", "EntAbone", new {AboneKayitno = Model.AboneDetay.KAYITNO, activeTab = "tabSatis",returnUrl=Model.ReturnUrl}),
+                                         YeniKayitBtnVisible = true,
+                                         GuncelleBtnVisible = true,
+                                         SilBtnVisible = true
+
+                                     })">
+
+            </div>
+        </div>
+        <div class="tab-pane" id="tabSokulenSayac">
+            <div data-url="@Url.Action("SokulenSayacPartial", "AboneSayac",
+                                     new PartialModel
+                                     {
+                                         AboneKayitNo = Model.AboneDetay.KAYITNO,
+                                         ReturnUrl = Url.Action("AboneTumBilgileri", "EntAbone", new {personelId = Model.AboneDetay.KAYITNO, activeTab = "tabSatis",returnUrl=Model.ReturnUrl}),
+                                         YeniKayitBtnVisible = true,
+                                         GuncelleBtnVisible = true,
+                                         SilBtnVisible = true
+
+                                     })">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+@section script{
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+
+
+            $("#btnKartBosaltKontaksiz").click(function (e) {
+                KartBosaltKontaksiz();
+            });
+            $("#btnKartTipiKontaksiz").click(function (e) {
+                KartTipiKontaksiz();
+            });
+
+            $("#btnKartBosaltKontakli").click(function (e) {
+                KartBosaltKontakli();
+            });
+            $("#btnKartTipiKontakli").click(function (e) {
+                KartTipiKontakli();
+            });
+
+            $('a[data-toggle="tab"]').on('show.bs.tab',
+                function (e) {
+                    var tab = $(e.target.attributes.href.nodeValue);
+                    //$(tab).load(tab.data('url'));
+                    //$(tab).load(degisken[0].dataset.url);
+                    var degisken = $(e.target.attributes.href.nodeValue + ' div[data-url]');
+                    $.each(degisken, function (index, value) {
+                        $(value).load(value.dataset.url);
+                    });
+                });
+
+            if (GetQueryStringParams("activeTab") !== undefined) {
+                window.location.hash = GetQueryStringParams("activeTab");
+            }
+            //url de # ile tab belirtildiyse gösterimini sağlar
+            $('ul.nav.nav-tabs a:first').tab('show'); // Select first tab
+            $('ul.nav.nav-tabs a[href="' + window.location.hash + '"]')
+                .tab('show'); // Select tab by name if provided in location hash
+            //$('ul.nav.nav-tabs a[data-toggle="tab"]').on('shown',
+            //    function (event) { // Update the location hash to current tab
+            //        window.location.hash = event.target.hash;
+            //    });
+
+
+
+
+
+
+        });
+
+        function GetQueryStringParams(sParam) {
+            var sPageURL = window.location.search.substring(1);
+            var sURLVariables = sPageURL.split('&');
+
+            for (var i = 0; i < sURLVariables.length; i++) {
+                var sParameterName = sURLVariables[i].split('=');
+                if (sParameterName[0] == sParam) {
+                    return sParameterName[1];
+                }
+            }
+        }
+
+        function KartBosaltKontakli() {
+
+            try {
+
+                var su = new ActiveXObject("SmartCard.OrtakAvm");
+                var kartTip = su.KartTipi();
+
+                if (kartTip == "Abone Karti" || kartTip == "Abone Kartı" || kartTip == "CBA " || kartTip=="Subscriber Card") {
+                    var result = su.AboneBosalt();
+                    if (result === "1") {
+                        ajaxMesajGoster('İşlem Başarılı');
+                    } else {
+                        ajaxMesajGoster('İşlem Başarısız', 'Hata');
+                    }
+                    return;
+                } else if (kartTip == "Bos Kart") {
+                    ajaxMesajGoster('Kart Boş');
+                }
+
+            }
+            catch (ex) {
+                ajaxMesajGoster(ex, 'Hata');
+            }
+
+        }
+
+        function KartTipiKontakli() {
+
+            try {
+
+                var su = new ActiveXObject("SmartCard.OrtakAvm");
+                var kartTip = su.KartTipi();
+                if(kartTip=="Subscriber Card")
+                {
+                kartTip="Abone Kartı";
+                }else if(kartTip=="Empty Card")
+                {
+                kartTip="Boş kart";
+                }
+                ajaxMesajGoster(kartTip);
+            }
+            catch (ex) {
+                var kalorimetre = new ActiveXObject("SmartCard.OrtakAvm");
+                var kartTip = kalorimetre.KartTipi();
+                ajaxMesajGoster(kartTip);
+
+            }
+
+        }
+
+        function KartBosaltKontaksiz() {
+            try {
+
+                var su = new ActiveXObject("SmartCard.Mcm");
+                var kartTip = su.KartTipi();
+
+                if (kartTip == "Abone Karti" || kartTip == "Abone Kartı" || kartTip == "CBA ") {
+                    var result = su.AboneBosalt();
+                    if (result === "1") {
+                        ajaxMesajGoster('İşlem Başarılı');
+                    } else {
+                        ajaxMesajGoster('İşlem Başarısız', 'Hata');
+                    }
+                    return;
+                } else if (kartTip == "Bos Kart") {
+                    ajaxMesajGoster('Kart Boş');
+                } else
+                {
+                    var gaz = new ActiveXObject("SmartCard.Gaz");
+                    var result = gaz.Bosalt();
+                    if (result === "1") {
+                        ajaxMesajGoster('İşlem Başarılı');
+                    } else {
+                        ajaxMesajGoster('İşlem Başarısız', 'Hata');
+                    }
+                }
+
+            }
+            catch (ex) {
+
+                    var gaz = new ActiveXObject("SmartCard.Gaz");
+                    var result = gaz.Bosalt();
+                    if (result === "1") {
+                        ajaxMesajGoster('İşlem Başarılı');
+                    } else {
+                        ajaxMesajGoster('İşlem Başarısız', 'Hata');
+                    }
+            }
+
+        }
+
+        function KartTipiKontaksiz() {
+
+            try {
+
+                var su = new ActiveXObject("SmartCard.Mcm");
+                var kartTip = su.KartTipi();
+                ajaxMesajGoster(kartTip);
+            }
+            catch (ex) {
+
+                 var gaz = new ActiveXObject("SmartCard.Gaz");
+                var kartTip = gaz.KartTipi();
+                ajaxMesajGoster(kartTip);
+            }
+
+        }
+
+
+        function SuKartHazirla(sayacKayitNo) {
+              blockUI();
+            var request = $.ajax({
+                url: "@Url.Action("Tarife", "Abone")",
+                method: "POST",
+                async: true,
+                dataType: "json",
+                data: { sayacKayitNo: sayacKayitNo }
+            });
+            request.done(function (jqXHR) {
+                unblockUI();
+               
+                if (jqXHR.KurumKayitNo == @enumKurum.Elektromed.GetHashCode() ||  jqXHR.KurumKayitNo == @enumKurum.Mısır.GetHashCode() ) {
+                     var su = new ActiveXObject("SmartCard.Mcm");
+                                                  var result = su.AboneYap(jqXHR.EntSayacDetay.SERINO,
+                                                      jqXHR.AboneNo,
+                                                      1,
+                                                      jqXHR.PRMTARIFESU.SAYACCAP,
+                                                      1,//tip
+                                                      jqXHR.PRMTARIFESU.DONEMGUN,
+                                                      jqXHR.PRMTARIFESU.FIYAT1,
+                                                      jqXHR.PRMTARIFESU.FIYAT2,
+                                                      jqXHR.PRMTARIFESU.FIYAT3,
+                                                      jqXHR.PRMTARIFESU.FIYAT4,
+                                                      jqXHR.PRMTARIFESU.FIYAT5,
+                                                      jqXHR.PRMTARIFESU.LIMIT1,
+                                                      jqXHR.PRMTARIFESU.LIMIT2,
+                                                      jqXHR.PRMTARIFESU.LIMIT3,
+                                                      jqXHR.PRMTARIFESU.LIMIT4,
+                                                      jqXHR.PRMTARIFESU.BAYRAM1GUN,
+                                                      jqXHR.PRMTARIFESU.BAYRAM1AY,
+                                                      jqXHR.PRMTARIFESU.BAYRAM1SURE,
+                                                      jqXHR.PRMTARIFESU.BAYRAM2GUN,
+                                                      jqXHR.PRMTARIFESU.BAYRAM2AY,
+                                                      jqXHR.PRMTARIFESU.BAYRAM2SURE,
+                                                      jqXHR.PRMTARIFESU.AVANSONAY,
+                                                      1,
+                                                      0,
+                                                      jqXHR.PRMTARIFESU.MAXDEBI,
+                                                      jqXHR.PRMTARIFESU.KRITIKKREDI,
+                                                      1//BaglantiPeriyot
+
+
+                                                  );
+                                                  if (result === "1") {
+                                                      ajaxMesajGoster('İşlem Başarılı');
+                                                  } else {
+                                                      ajaxMesajGoster('İşlem Başarısız', 'Hata');
+                                                  }
+                }
+                else {
+                    var su = new ActiveXObject("SmartCard.OrtakAvm");
+                                                  var result = su.AboneYap(jqXHR.EntSayacDetay.SERINO,
+                                                      1,
+                                                      jqXHR.PRMTARIFESU.LIMIT1,
+                                                      jqXHR.PRMTARIFESU.LIMIT2,
+                                                      jqXHR.PRMTARIFESU.FIYAT1,
+                                                      jqXHR.PRMTARIFESU.FIYAT2,
+                                                      jqXHR.PRMTARIFESU.FIYAT3,
+                                                      jqXHR.PRMTARIFESU.FIYAT4,
+                                                      jqXHR.PRMTARIFESU.FIYAT4,
+                                                      jqXHR.PRMTARIFESU.FIYAT4,
+                                                      jqXHR.PRMTARIFESU.FIYAT4
+
+
+                                                  );
+                                                  if (result === "1") {
+                                                      ajaxMesajGoster('İşlem Başarılı');
+                                                  } else {
+                                                      ajaxMesajGoster('İşlem Başarısız', 'Hata');
+                                                  }
+                }
+
+
+
+
+            });
+
+            request.fail(function (jqXHR, textStatus) {
+                unblockUI();
+                var msg = jQuery.parseJSON(jqXHR.responseText);
+                ajaxMesajGoster(msg.Mesaj);
+            });
+
+
+        }
+
+        function KalorimetreKartHazirla(sayacKayitNo) {
+             blockUI();
+            var request = $.ajax({
+                url: "@Url.Action("Tarife", "Abone")",
+                method: "POST",
+                async: true,
+                dataType: "json",
+                data: { sayacKayitNo: sayacKayitNo }
+            });
+            request.done(function (jqXHR) {
+                unblockUI();
+                var su = new ActiveXObject("SmartCard.OrtakAvm");
+                                                  var result = su.AboneYap(jqXHR.EntSayacDetay.SERINO,
+                                                      1,
+                                                      jqXHR.PrmTarifeKALORIMETRE.LIMIT1,
+                                                      jqXHR.PrmTarifeKALORIMETRE.LIMIT2,
+                                                      jqXHR.PrmTarifeKALORIMETRE.FIYAT1,
+                                                      jqXHR.PrmTarifeKALORIMETRE.FIYAT2,
+                                                      jqXHR.PrmTarifeKALORIMETRE.FIYAT3,
+                                                      jqXHR.PrmTarifeKALORIMETRE.FIYAT4,
+                                                      jqXHR.PrmTarifeKALORIMETRE.FIYAT4,
+                                                      jqXHR.PrmTarifeKALORIMETRE.FIYAT4,
+                                                      jqXHR.PrmTarifeKALORIMETRE.FIYAT4
+
+
+                                                  );
+                                                  if (result === "1") {
+                                                      ajaxMesajGoster('İşlem Başarılı');
+                                                  } else {
+                                                      ajaxMesajGoster('İşlem Başarısız', 'Hata');
+                                                  }
+            });
+
+            request.fail(function (jqXHR, textStatus) {
+                unblockUI();
+                var msg = jQuery.parseJSON(jqXHR.responseText);
+                ajaxMesajGoster(msg.Mesaj);
+            });
+
+
+        }
+
+        function GazKartHazirla(sayacKayitNo) {
+            blockUI();
+
+            var request = $.ajax({
+                url: "@Url.Action("Tarife", "Abone")",
+                method: "POST",
+                async: true,
+                dataType: "json",
+                data: { sayacKayitNo: sayacKayitNo }
+            });
+            request.done(function (jqXHR) {
+                unblockUI();
+                var gaz = new ActiveXObject("SmartCard.Gaz");
+                var result = gaz.AboneYap(jqXHR.EntSayacDetay.SERINO,
+                                          jqXHR.AboneNo,
+                                          jqXHR.PrmTarifeGaz.SAYACTUR,
+                                          jqXHR.PrmTarifeGaz.SAYACCAP,
+                                          0,//kartno
+                                          jqXHR.PrmTarifeGaz.AKSAMSAAT,
+                                          jqXHR.PrmTarifeGaz.SABAHSAAT,
+                                          jqXHR.PrmTarifeGaz.TUKETIMLIMIT,
+                                          jqXHR.PrmTarifeGaz.PULSE,
+                                          jqXHR.PrmTarifeGaz.BAYRAM1GUN,
+                                          jqXHR.PrmTarifeGaz.BAYRAM1AY,
+                                          jqXHR.PrmTarifeGaz.BAYRAM1SURE,
+                                          jqXHR.PrmTarifeGaz.BAYRAM2GUN,
+                                          jqXHR.PrmTarifeGaz.BAYRAM2AY,
+                                          jqXHR.PrmTarifeGaz.BAYRAM2SURE,
+                                          jqXHR.PrmTarifeGaz.KRITIKKREDI
+
+
+                                                  );
+                                                  if (result === "1") {
+                                                      ajaxMesajGoster('İşlem Başarılı');
+                                                  } else {
+                                                      ajaxMesajGoster('İşlem Başarısız', 'Hata');
+                                                  }
+
+            });
+
+             request.fail(function (jqXHR, textStatus) {
+                unblockUI();
+                var msg = jQuery.parseJSON(jqXHR.responseText);
+                ajaxMesajGoster(msg.Mesaj);
+            });
+
+        }
+
+    </script>
+}
+
+<style>
+    .nav-justified > li:hover {
+        background-color: #ddd;
+    }
+
+
+    .nav-justified > li {
+    }
+</style>
+

@@ -11,7 +11,7 @@ using OsosOracle.Framework.Utilities.ExtensionMethods;
 using OsosOracle.Framework.Web.Mvc;
 using OsosOracle.MvcUI.Filters;
 using OsosOracle.MvcUI.Models.ENTHABERLESMEUNITESIModels;
-
+using OsosOracle.MvcUI.Resources;
 
 
 namespace OsosOracle.MvcUI.Controllers
@@ -64,9 +64,9 @@ namespace OsosOracle.MvcUI.Controllers
 				t.MODEL,
 				t.Kurum,
 
-					Islemler =$@"<a class='btn btn-xs btn-info modalizer' href='{Url.Action("Guncelle", "ENTHABERLESMEUNITESI", new {id = t.KAYITNO})}' title='Düzenle'><i class='fa fa-edit'></i></a>
+					Islemler =$@"<a class='btn btn-xs btn-info modalizer' href='{Url.Action("Guncelle", "ENTHABERLESMEUNITESI", new {id = t.KAYITNO})}' title='{Dil.Duzenle}'><i class='fa fa-edit'></i></a>
 							   <a class='btn btn-xs btn-primary' href='{Url.Action("Detay", "ENTHABERLESMEUNITESI", new {id = t.KAYITNO })}' title='Detay'><i class='fa fa-th-list'></i></a>
-								<a class='btn btn-xs btn-danger modalizer' href='{Url.Action("Sil", "ENTHABERLESMEUNITESI", new {id = t.KAYITNO })}' title='Sil'><i class='fa fa-trash'></i></a>"
+								<a class='btn btn-xs btn-danger modalizer' href='{Url.Action("Sil", "ENTHABERLESMEUNITESI", new {id = t.KAYITNO })}' title='{Dil.Sil}'><i class='fa fa-trash'></i></a>"
 				}),
 				draw = dtParameterModel.Draw,
 				recordsTotal = kayitlar.ToplamKayitSayisi,

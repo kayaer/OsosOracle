@@ -21,5 +21,6 @@ namespace OsosOracle.DataLayer.Abstract
 		void Guncelle(List<SYSMENUEf> yeniDegerler);
 		void Sil(List<int> idler);
         List<SYSMENU> ParentMenuGetir();
+        List<SYSMENU> YetkiGetir(int kullaniciKayitNo);
     }
 }

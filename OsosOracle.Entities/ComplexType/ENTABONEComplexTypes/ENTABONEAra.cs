@@ -20,5 +20,8 @@ namespace OsosOracle.Entities.ComplexType.ENTABONEComplexTypes
         public string AboneNoVeyAdiVeyaSoyadi { get; set; }
 
         public int? SayacKayitNo { get; set; }
+        public DateTime? SonSatisTarihiBaslangic { get; set; }
+        public DateTime? SonSatisTarihBitis { get; set; }
+        public string KimlikNo { get; set; }
     }
 }

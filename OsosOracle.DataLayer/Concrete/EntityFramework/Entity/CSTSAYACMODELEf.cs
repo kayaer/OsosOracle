@@ -11,5 +11,7 @@ namespace OsosOracle.DataLayer.Concrete.EntityFramework.Entity
 
         }
         public ICollection<ENTSAYACEf> EntSayacEfCollection { get; set; }
+
+        public NESNEDEGEREf NesneDegerSayacTuruEf { get; set; }
     }
 }

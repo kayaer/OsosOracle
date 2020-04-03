@@ -1,0 +1,122 @@
+@using OsosOracle.MvcUI.Models.SYSMENUModels
+@model SYSMENUKaydetModel
+
+@{
+    ViewBag.Title = "Menü Ekle";
+}
+
+
+@using (Html.BeginForm("Kaydet", "SYSMENU", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    @Html.HiddenFor(t => t.SYSMENU.KAYITNO)
+    @Html.HiddenFor(t => t.SYSMENU.VERSIYON)
+    @Html.ValidationSummary(true)
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="col-sm-6">
+                    <!-- START panel-->
+                    <div class="panel panel-default">
+                        <div class="panel-heading">Menü Bilgileri</div>
+                        <div class="panel-body">
+                            <form role="form">
+                                <div class="form-group">
+                                    <label>Tr</label>
+                                    @Html.TextBoxFor(m => m.SYSMENU.TR, new { @class = "form-control" })
+                                    @Html.ValidationMessageFor(t => t.SYSMENU.TR)
+                                </div>
+                                <div class="form-group">
+                                    <label>En</label>
+                                    @Html.TextBoxFor(m => m.SYSMENU.EN, new { @class = "form-control" })
+
+                                </div>
+                                <div class="form-group">
+                                    <label>Parent Menü</label>
+                                    @*  @Html.TextBoxFor(m => m.SysMenu.ParentId, new {@class = "form-control"})*@
+                                    @*  @Html.DropDownList("ParentMenu","Select")*@
+                                    @Html.DropDownListFor(m => m.SYSMENU.PARENTKAYITNO, ViewBag.ParentMenu as List<SelectListItem>, "Seçiniz", new { @class = "form-control" })
+
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Sıra No</label>
+                                    @Html.TextBoxFor(m => m.SYSMENU.MENUORDER, new { @class = "form-control" })
+
+                                </div>
+                                <div class="form-group">
+                                    <label>Icon</label>
+                                    @Html.TextBoxFor(m => m.SYSMENU.ICON, new { @class = "form-control" })
+
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- END panel-->
+                </div>
+
+                <div class="col-sm-6">
+                    <!-- START panel-->
+                    <div class="panel panel-default">
+                        <div class="panel-heading">Url Bilgileri</div>
+                        <div class="panel-body">
+
+                            <div class="form-group">
+                                <label>Area</label>
+                                @Html.TextBoxFor(m => m.SYSMENU.AREA, new { @class = "form-control" })
+
+                            </div>
+                            <div class="form-group">
+                                <label>Controller</label>
+                                @Html.TextBoxFor(m => m.SYSMENU.CONTROLLER, new { @class = "form-control" })
+
+                            </div>
+                            <div class="form-group">
+                                <label>Action</label>
+                                @Html.TextBoxFor(m => m.SYSMENU.ACTION, new { @class = "form-control" })
+
+                            </div>
+
+
+
+
+                        </div>
+                    </div>
+                    <!-- END panel-->
+                </div>
+                <div class="pull-right">
+
+                    <button type="submit" class="btn btn-sm btn-primary">Ekle</button>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+}
+
+<script type="text/javascript">
+    //$(document).ready(function () {
+
+    //    $.ajax({
+    //        type: "POST",
+    //        url: "/Yetki/GetParentMenu",
+    //        contentType: "application/json; charset=utf-8",
+    //        dataType: "json",
+    //        success: function (response) {
+    //            alert("Hello: " + response.Name + " .\nCurrent Date and Time: " + response.DateTime);
+    //        },
+    //        failure: function (response) {
+    //            alert(response.responseText);
+    //        },
+    //        error: function (response) {
+    //            alert(response.responseText);
+    //        }
+    //    });
+
+
+    //});
+
+
+</script>

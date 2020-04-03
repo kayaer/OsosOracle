@@ -12,6 +12,6 @@ namespace OsosOracle.Entities.ComplexType.CONKURUMComplexTypes
         public string AD { get; set; }
         public string ACIKLAMA { get; set; }
         public int? VERSIYON { get; set; }
-        public int? SAYACURUNAILE { get; set; }
+       
     }
 }

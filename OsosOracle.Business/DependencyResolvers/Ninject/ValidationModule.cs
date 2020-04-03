@@ -18,11 +18,13 @@ namespace OsosOracle.Business.DependencyResolvers.Ninject
             Bind<IValidator<SYSCSTOPERASYON>>().To<SYSCSTOPERASYONValidator>().InSingletonScope();
             Bind<IValidator<PRMTARIFEELK>>().To<PRMTARIFEELKValidator>().InSingletonScope();
             Bind<IValidator<PRMTARIFEGAZ>>().To<PRMTARIFEGAZValidator>().InSingletonScope();
-            Bind<IValidator<PRMTARIFEORTAKAVM>>().To<PRMTARIFEORTAKAVMValidator>().InSingletonScope();
+            Bind<IValidator<PRMTARIFEKALORIMETRE>>().To<PRMTARIFEKALORIMETREValidator>().InSingletonScope();
             Bind<IValidator<PRMTARIFESU>>().To<PRMTARIFESUValidator>().InSingletonScope();
             Bind<IValidator<ENTKOMUTLARBEKLEYEN>>().To<ENTKOMUTLARBEKLEYENValidator>().InSingletonScope();
             Bind<IValidator<ENTKOMUTLARSONUCLANAN>>().To<ENTKOMUTLARSONUCLANANValidator>().InSingletonScope();
             Bind<IValidator<ENTKREDIKOMUTTAKIP>>().To<ENTKREDIKOMUTTAKIPValidator>().InSingletonScope();
+            Bind<IValidator<NESNEDEGER>>().To<NESNEDEGERValidator>().InSingletonScope();
+            Bind<IValidator<NESNETIP>>().To<NESNETIPValidator>().InSingletonScope();
 
         }
     }

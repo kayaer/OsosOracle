@@ -14,7 +14,7 @@ namespace OsosOracle.DataLayer.Concrete.EntityFramework.Entity
             PrmTarifeGazEfCollection = new List<PRMTARIFEGAZEf>();
             PrmTarifeElkEfCollection = new List<PRMTARIFEELKEf>();
             PrmTarifeSuEfCollection = new List<PRMTARIFESUEf>();
-            PrmTarifeOrtakAvmEfCollection = new List<PRMTARIFEORTAKAVMEf>();
+            PrmTarifeKALORIMETREEfCollection = new List<PRMTARIFEKALORIMETREEf>();
         }
         public ICollection<ENTHABERLESMEUNITESIEf> EntHaberlesmeUnitesiEfCollection { get; set; }
 
@@ -25,7 +25,7 @@ namespace OsosOracle.DataLayer.Concrete.EntityFramework.Entity
         public ICollection<PRMTARIFEGAZEf> PrmTarifeGazEfCollection { get; set; }
         public ICollection<PRMTARIFEELKEf> PrmTarifeElkEfCollection { get; set; }
         public ICollection<PRMTARIFESUEf> PrmTarifeSuEfCollection { get; set; }
-        public ICollection<PRMTARIFEORTAKAVMEf> PrmTarifeOrtakAvmEfCollection { get; set; }
+        public ICollection<PRMTARIFEKALORIMETREEf> PrmTarifeKALORIMETREEfCollection { get; set; }
 
     }
 }

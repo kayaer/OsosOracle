@@ -108,6 +108,34 @@ namespace OsosOracle.Framework.CrossCuttingConcern.Logging
             if (sHata.Length > 4000)
                 sHata = sHata.Substring(0, 3999);
 
+            var uygulamaAdi = "Yonca";// ConfigurationManager.AppSettings["UygulamaAdı"];
+            try
+            {
+                string klasorYolu = HttpContext.Current.Server.MapPath("~/App_Data/Logs");
+
+
+                if (!Directory.Exists(klasorYolu))
+                    Directory.CreateDirectory(klasorYolu);
+
+                string logDosyasi = $"{klasorYolu}/{DateTime.Now.Day}-{DateTime.Now.Month}-{DateTime.Now.Year} - {uygulamaAdi}.txt";
+
+                using (StreamWriter w = File.AppendText(logDosyasi))
+                {
+                    w.Write("\r\n");
+                    w.WriteLine(HttpContext.Current.Request.UrlReferrer);
+                    w.WriteLine("{0} {1}", DateTime.Now.ToLongTimeString(),
+                        DateTime.Now.ToLongDateString());
+                    w.WriteLine("  :{0}", sHata);
+                    w.WriteLine("-------------------------------");
+                }
+                return true;
+            }
+            catch (Exception e)
+            {
+
+                return false;
+
+            }
 
 
 

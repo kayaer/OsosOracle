@@ -15,6 +15,8 @@ using OsosOracle.Entities.ComplexType.SYSROLComplexTypes;
 using OsosOracle.MvcUI.Models.SYSROLModels;
 using OsosOracle.Entities.ComplexType.SYSGOREVComplexTypes;
 using OsosOracle.MvcUI.Models.SYSGOREVModels;
+using System;
+using OsosOracle.Framework.CrossCuttingConcern.ExceptionHandling;
 
 namespace OsosOracle.MvcUI.Controllers
 {
@@ -125,20 +127,33 @@ namespace OsosOracle.MvcUI.Controllers
         }
 
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Kaydet(SYSGOREVROLKaydetModel sYSGOREVROLKaydetModel)
+        //[ValidateAntiForgeryToken]
+        public ActionResult Kaydet(GorevRolAtamaModel model)
         {
-            if (sYSGOREVROLKaydetModel.SYSGOREVROL.KAYITNO > 0)
+            try
             {
-                _sYSGOREVROLService.Guncelle(sYSGOREVROLKaydetModel.SYSGOREVROL.List());
+                foreach (var gorev in model.GorevListesi.Where(x => x.Secildi))
+                {
+
+                    foreach (var rol in model.RolListesi.Where(x => x.Secildi))
+                    {
+
+                        _sYSGOREVROLService.Ekle(new SYSGOREVROL() {
+                            GOREVKAYITNO = gorev.KayıtNo,
+                            ROLKAYITNO = rol.KayitNo,
+                            OLUSTURAN = AktifKullanici.KayitNo }.List());
+                    }
+
+                }
+
+                return Yonlendir(Url.Action("Index"), $"SYSGOREVROL kayıdı başarıyla gerçekleştirilmiştir.");
             }
-            else
+            catch (Exception ex)
             {
-                _sYSGOREVROLService.Ekle(sYSGOREVROLKaydetModel.SYSGOREVROL.List());
+                throw new NotificationException(ex.Message);
             }
 
-            return Yonlendir(Url.Action("Index"), $"SYSGOREVROL kayıdı başarıyla gerçekleştirilmiştir.");
-            //return Yonlendir(Url.Action("Detay","SYSGOREVROL",new{id=sYSGOREVROLKaydetModel.SYSGOREVROL.Id}), $"SYSGOREVROL kayıdı başarıyla gerçekleştirilmiştir.");
+            
         }
 
 

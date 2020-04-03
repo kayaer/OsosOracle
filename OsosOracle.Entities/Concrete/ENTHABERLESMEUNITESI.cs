@@ -2,7 +2,7 @@ using OsosOracle.Framework.Entities;
 using System;
 namespace OsosOracle.Entities.Concrete
 {
-    public class ENTHABERLESMEUNITESI : IEntity
+    public class ENTHABERLESMEUNITESI : IEntity,IEntitySoftDelete
     {
         public int KAYITNO { get; set; }
         public string SERINO { get; set; }

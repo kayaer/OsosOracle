@@ -1,0 +1,423 @@
+﻿@using OsosOracle.Framework.HtmlHelpers
+@using OsosOracle.MvcUI.Resources
+@model OsosOracle.MvcUI.Models.ENTSATISModels.ENTSATISKaydetModel
+
+@section panelHeading
+{
+
+}
+
+<button id="btnKartOku" type="button" class="btn btn-danger btn-sm">@Dil.KartOku </button>
+
+<div class="form-horizontal">
+    <div class="form-group form-group-sm">
+        <div class="col-sm-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">@Dil.AboneBilgileri</div>
+                <div class="panel-body">
+                    <div class="form-horizontal">
+                        <div class="form-group">
+                            <div class="col-sm-12">
+                                <input type="text" class="form-control" placeholder=@Dil.TarifeAdi id="txtTarife" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-12">
+                                <input type="text" class="form-control" placeholder=@Dil.AboneNo id="txtAboneNo" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-12">
+                                <input type="text" class="form-control" placeholder=@Dil.SayacSeriNo id="txtSayacSeriNo" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-12">
+                                <input type="text" class="form-control" placeholder=@Dil.AnaKredi id="txtAnaKredi" />
+                            </div>
+                        </div><div class="form-group">
+                            <div class="col-sm-12">
+                                <input type="text" class="form-control" placeholder=@Dil.YedekKredi id="txtYedekKredi" />
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">@Dil.Satış</div>
+                <div class="panel-body">
+                    <div class="form-horizontal">
+                        <div class="form-group">
+                            <div class="col-sm-12">
+                                <div class="col-sm-6">
+                                    @* @Html.TextBoxFor(t => t.GirilenTutar, new { @class = "form-control", placeholder = _T("Tutar"), Id = "txtTutar" })*@
+                                    <input type="text" class="form-control" placeholder=@Dil.Tutar id="txtTutar" />
+                                </div>
+                                <div class="col-sm-6">
+                                    @* @Html.TextBoxFor(t => t.ElkKartYuklenecek.AnaKredi, new { @class = "form-control", placeholder = _T("Kredi") })*@
+                                    <input type="text" class="form-control" placeholder=@Dil.Kredi id="txtKredi" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-12">
+                                <div class="col-sm-6">
+
+                                </div>
+                                <div class="col-sm-6">
+                                    <input type="text" class="form-control" placeholder=@Dil.ToplamKredi id="txtToplamKredi" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-actions">
+
+                        <button type="submit" class="btn btn-danger btn-sm" name="submitButton" id="btnKrediYukle">
+                            @Dil.KrediYukle
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="clearfix">&nbsp;</div>
+
+
+        </div>
+
+    </div>
+</div>
+
+
+
+
+
+
+
+
+@section script
+{
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            var Dll = ["SmartCard.Mercan", "SmartCard.OrtakAvm", "SmartCard.KartIslem"];
+            var satisKaydetModel;
+            var okunanData;
+
+
+            $("#btnKartOku").click(function (e) {
+                
+                for (i = 0; i<Dll.length; i++)
+                {
+                    var result = AboneOku(Dll[i]);
+                    if (result)
+                    {
+                         
+                                                $.ajax({
+                                                url: '/Satis/KartOkunanModel',
+                                                method: "POST",
+                                                async: false,
+                                                    data: { hamdata: okunanData },
+                                                    success: function (jqx) {
+                                                        satisKaydetModel = jqx;
+                                                        if (jqx.SayacCesidi == "Su") {
+                                                            $("#txtSayacSeriNo").val(jqx.SogukSuOkunan.SayacSeriNo);
+                                                            $("#txtAnaKredi").val(jqx.SogukSuOkunan.Kredi);
+                                                            $("#txtYedekKredi").val(jqx.SogukSuOkunan.YedekKredi);
+                                                            $("#txtTarife").val(jqx.SogukSuOkunan.TarifeAdi);
+                                                            $("#txtAboneNo").val(jqx.SogukSuOkunan.AboneNo);
+                                                            $("#txtTarife").val(jqx.PrmTarifeSuDetay.AD);
+                                                        } else if (jqx.SayacCesidi == "Kalorimetre") {
+                                                            $("#txtSayacSeriNo").val(jqx.KalorimetreOkunan.CihazNo);
+                                                            $("#txtAnaKredi").val(jqx.KalorimetreOkunan.Kredi);
+                                                            $("#txtYedekKredi").val(jqx.KalorimetreOkunan.YedekKredi);
+                                                            $("#txtTarife").val(jqx.PrmTarifeOrtakAvmDetay.AD);
+                                                        } else if (jqx.SayacCesidi == "Elektrik") {
+                                                            $("#txtSayacSeriNo").val(jqx.ElektrikOkunan.SayacSeriNo);
+                                                            $("#txtAnaKredi").val(jqx.ElektrikOkunan.Kredi);
+                                                            $("#txtYedekKredi").val(jqx.ElektrikOkunan.YedekKredi);
+                                                            $("#txtTarife").val(jqx.ElektrikOkunan.TarifeAdi);
+                                                        }
+                                                
+                                                    }
+                                                });
+                        
+                        break;
+                    }
+                }
+            });
+
+            $('#txtTutar').blur(function () {
+                        var hesaplaUrl = "@Url.Action("Hesapla", "Satis")";
+                        var girilenTutar = $("#txtTutar").val();
+                        satisKaydetModel.GirilenTutar = girilenTutar;
+
+                        $.ajax({
+                            type: "POST",
+                            data: JSON.stringify(satisKaydetModel),
+                            url: hesaplaUrl,
+                            contentType: "application/json"
+                        }).done(function (res) {
+                            satisKaydetModel = res;
+
+                            if (satisKaydetModel.SayacCesidi == "Su") {
+                                $("#txtKredi").val(satisKaydetModel.SogukSuYazilacak.YeniYuklenecekM3);
+                                $("#txtToplamKredi").val(satisKaydetModel.SogukSuYazilacak.YuklenecekM3);
+                            } else if (satisKaydetModel.SayacCesidi == "Kalorimetre") {
+                                $("#txtKredi").val(satisKaydetModel.KalorimetreYazilacak.anakr);
+                            } else if (satisKaydetModel.SayacCesidi == "Elektrik") {
+                                $("#txtKredi").val(satisKaydetModel.SogukSuYazilacak.YuklenecekM3);
+                            }
+
+
+
+                        });
+            });
+
+            $("#btnKrediYukle").click(function (e) {
+
+                KrediYukle(satisKaydetModel);
+                var satisUrl = "@Url.Action("SatisKaydet", "Satis")";
+
+
+                $.ajax({
+                    type: "POST",
+                    data: JSON.stringify(satisKaydetModel),
+                    url: satisUrl,
+                    contentType: "application/json"
+                }).done(function (res) {
+
+                    var url = '@Url.Action("MakbuzIndir","Satis")' + '?filename=' + res.fileName;
+                    window.location.href = url;
+                    satisKaydetModel = null;
+                    GorunumAyarla();
+                });
+            });
+
+            function AboneOku(item) {
+
+                try {
+                     var aboneIslem = new ActiveXObject(item);
+                     var result = false;
+                     try {
+
+                         var kartTip = aboneIslem.KartTipi();
+                         if (kartTip === "Abone Kartı" || kartTip === "Abone Karti" || kartTip === "Subscriber Card") {
+                             okunanData = aboneIslem.AboneOku();
+                             return true;
+                         } else if (kartTip === "Bos Kart") {
+                             ajaxMesajGoster('Kart Boş');
+                             return false;
+                         } else {
+                             ajaxMesajGoster('Kart Bilgisi Alınamıyor');
+                             return false;
+                         }
+                         return result;
+                     } catch (e) {
+                         ajaxMesajGoster(e);
+                         return false;
+                     }
+
+                } catch (e) {
+                    return false;
+                }
+
+
+
+            }
+
+
+
+            function KrediYukle(satisKaydetModel) {
+                try {
+                    if (satisKaydetModel.SayacCesidi == "Su") {
+                        if (satisKaydetModel.SayacTipi == "AS") {
+                            var sogukSu = new ActiveXObject("SmartCard.KartIslem");
+                            var kartTip = sogukSu.KartTipi();
+
+                            if (kartTip === "Abone Kartı" || kartTip === "Abone Karti" || kartTip === "Subscriber Card") {
+                                KrediYukleKart(satisKaydetModel);
+                            } else if (kartTip === "Bos Kart") {
+                                ajaxMesajGoster('Kart Boş');
+                            } else {
+                                ajaxMesajGoster('Kart Bilgisi Alınamıyor');
+                            }
+                        } else {
+                            var sogukSu = new ActiveXObject("SmartCard.Mercan");
+                            var kartTip = sogukSu.KartTipi();
+
+                            if (kartTip === "Abone Kartı" || kartTip === "Abone Karti" || kartTip === "Subscriber Card") {
+                                KrediYukleKart(satisKaydetModel);
+                            } else if (kartTip === "Bos Kart") {
+                                ajaxMesajGoster('Kart Boş');
+                            } else {
+                                ajaxMesajGoster('Kart Bilgisi Alınamıyor');
+                            }
+                        }
+                    } else if (satisKaydetModel.SayacCesidi == "Kalorimetre") {
+                        var kalorimetre = new ActiveXObject("SmartCard.OrtakAvm");
+                        var kartTip = kalorimetre.KartTipi();
+
+                        if (kartTip === "Abone Kartı" || kartTip === "Abone Karti" || kartTip === "Subscriber Card") {
+                            KrediYukleKart(satisKaydetModel);
+                        } else if (kartTip === "Bos Kart") {
+                            ajaxMesajGoster('Kart Boş');
+                        } else {
+                            ajaxMesajGoster('Kart Bilgisi Alınamıyor');
+                        }
+                    } else if (satisKaydetModel.SayacCesidi == "Elektrik") {
+                        var kalorimetre = new ActiveXObject("SmartCard.OrtakAvm");
+                        var kartTip = kalorimetre.KartTipi();
+
+                        if (kartTip === "Abone Kartı" || kartTip === "Abone Karti" || kartTip === "Subscriber Card") {
+                            KrediYukleKart(satisKaydetModel);
+                        } else if (kartTip === "Bos Kart") {
+                            ajaxMesajGoster('Kart Boş');
+                        } else {
+                            ajaxMesajGoster('Kart Bilgisi Alınamıyor');
+                        }
+                    }
+
+                } catch (e) {
+                    ajaxMesajGoster(e);
+                }
+            }
+
+            function KrediYukleKart(satisKaydetModel) {
+
+                var result = false;
+
+                if (satisKaydetModel.SayacCesidi == "Su") {
+                    try {
+
+                        if (satisKaydetModel.SayacTipi == "AS") {
+                            var sogukSu = new ActiveXObject("SmartCard.KartIslem");
+                            result = sogukSu.AboneYazSu(satisKaydetModel.SogukSuYazilacak.SayacSeriNo,
+                                satisKaydetModel.SogukSuYazilacak.YuklenecekM3,
+                                satisKaydetModel.SogukSuYazilacak.YedekKredi,
+                                satisKaydetModel.SogukSuYazilacak.Limit1,
+                                satisKaydetModel.SogukSuYazilacak.Limit2,
+                                satisKaydetModel.SogukSuYazilacak.Fiyat1,
+                                satisKaydetModel.SogukSuYazilacak.Fiyat2,
+                                satisKaydetModel.SogukSuYazilacak.Fiyat3
+                            );
+                            if (result == "1") {
+                                ajaxMesajGoster('İşlem Başarılı');
+                            } else {
+                                ajaxMesajGoster('İşlem Başarısız');
+                            }
+                        } else {
+                            //Mercan Eklenecek
+                            var mercan = new ActiveXObject("SmartCard.Mercan");
+                            result = mercan.AboneYaz(satisKaydetModel.SogukSuOkunan.SayacSeriNo,
+                                satisKaydetModel.SogukSuYazilacak.YuklenecekM3,
+                                satisKaydetModel.PrmTarifeSuDetay.SAYACCAP,
+                                satisKaydetModel.PrmTarifeSuDetay.DONEMGUN,
+                                satisKaydetModel.PrmTarifeSuDetay.FIYAT1,
+                                satisKaydetModel.PrmTarifeSuDetay.FIYAT2,
+                                satisKaydetModel.PrmTarifeSuDetay.FIYAT3,
+                                satisKaydetModel.PrmTarifeSuDetay.FIYAT4,
+                                satisKaydetModel.PrmTarifeSuDetay.FIYAT5,
+                                satisKaydetModel.PrmTarifeSuDetay.LIMIT1,
+                                satisKaydetModel.PrmTarifeSuDetay.LIMIT2,
+                                satisKaydetModel.PrmTarifeSuDetay.LIMIT3,
+                                satisKaydetModel.PrmTarifeSuDetay.LIMIT4,
+                                satisKaydetModel.PrmTarifeSuDetay.BAYRAM1GUN,
+                                satisKaydetModel.PrmTarifeSuDetay.BAYRAM1AY,
+                                satisKaydetModel.PrmTarifeSuDetay.BAYRAM1SURE,
+                                satisKaydetModel.PrmTarifeSuDetay.BAYRAM2GUN,
+                                satisKaydetModel.PrmTarifeSuDetay.BAYRAM2AY,
+                                satisKaydetModel.PrmTarifeSuDetay.BAYRAM2SURE,
+                                satisKaydetModel.PrmTarifeSuDetay.AVANSONAY,
+                                0,
+                                satisKaydetModel.PrmTarifeSuDetay.YANGINMODSURE,
+                                satisKaydetModel.PrmTarifeSuDetay.MAXDEBI,
+                                satisKaydetModel.PrmTarifeSuDetay.KRITIKKREDI);
+                            if (result == "1") {
+                                ajaxMesajGoster('İşlem Başarılı');
+                            } else {
+                                ajaxMesajGoster('İşlem Başarısız');
+                            }
+                        }
+
+
+                    } catch (e) {
+                        ajaxMesajGoster(e);
+                    }
+
+                } else if (satisKaydetModel.SayacCesidi == "Kalorimetre") {
+                    var kalorimetre = new ActiveXObject("SmartCard.OrtakAvm");
+                    var result = false;
+                    try {
+                        result = kalorimetre.KalorimetreYaz(satisKaydetModel.KalorimetreOkunan.CihazNo,
+                            satisKaydetModel.KalorimetreYazilacak.anakr,
+                            satisKaydetModel.KalorimetreYazilacak.yedekkr,
+                            satisKaydetModel.PrmTarifeOrtakAvmDetay.BAYRAM1GUN,
+                            satisKaydetModel.PrmTarifeOrtakAvmDetay.BAYRAM1AY,
+                            satisKaydetModel.PrmTarifeOrtakAvmDetay.BAYRAM1SURE,
+                            satisKaydetModel.PrmTarifeOrtakAvmDetay.BAYRAM2GUN,
+                            satisKaydetModel.PrmTarifeOrtakAvmDetay.BAYRAM2AY,
+                            satisKaydetModel.PrmTarifeOrtakAvmDetay.BAYRAM2SURE
+                        );
+                        if (result == "1") {
+                            ajaxMesajGoster('İşlem Başarılı');
+                        } else {
+                            ajaxMesajGoster('İşlem Başarısız');
+                        }
+                    } catch (e) {
+                        ajaxMesajGoster(e);
+                    }
+                } else if (satisKaydetModel.SayacCesidi == "Elektrik") {
+                    try {
+                        result = elektrik.AboneYaz(satisKaydetModel.ElkKartYuklenecek.SayacSeriNo,
+                            satisKaydetModel.ElkKartYuklenecek.AnaKredi,
+                            satisKaydetModel.ElkKartYuklenecek.YedekKredi,
+                            satisKaydetModel.PrmTarifeElkDetay.FIYAT1,
+                            satisKaydetModel.PrmTarifeElkDetay.FIYAT2,
+                            satisKaydetModel.PrmTarifeElkDetay.FIYAT3,
+                            satisKaydetModel.PrmTarifeElkDetay.LIMIT1,
+                            satisKaydetModel.PrmTarifeElkDetay.LIMIT2,
+                            satisKaydetModel.PrmTarifeElkDetay.YUKLEMELIMIT,
+                            satisKaydetModel.PrmTarifeElkDetay.AKSAMSAAT,
+                            satisKaydetModel.PrmTarifeElkDetay.SABAHSAAT,
+                            satisKaydetModel.PrmTarifeElkDetay.HAFTASONUAKSAM,
+                            satisKaydetModel.PrmTarifeElkDetay.SABITUCRET,
+                            satisKaydetModel.PrmTarifeElkDetay.BAYRAM1GUN,
+                            satisKaydetModel.PrmTarifeElkDetay.BAYRAM1AY,
+                            satisKaydetModel.PrmTarifeElkDetay.BAYRAM1SURE,
+                            satisKaydetModel.PrmTarifeElkDetay.BAYRAM2GUN,
+                            satisKaydetModel.PrmTarifeElkDetay.BAYRAM2AY,
+                            satisKaydetModel.PrmTarifeElkDetay.BAYRAM2SURE,
+                            satisKaydetModel.PrmTarifeElkDetay.KRITIKKREDI
+                        );
+                        if (result == "1") {
+                            ajaxMesajGoster('İşlem Başarılı');
+                        } else {
+                            ajaxMesajGoster('İşlem Başarısız');
+                        }
+                    } catch (e) {
+                        ajaxMesajGoster(e);
+                    }
+                }
+
+
+            }
+
+            function GorunumAyarla() {
+                $("#txtAboneNo").val('');
+                $("#txtSayacSeriNo").val('');
+                $("#txtAnaKredi").val('');
+                $("#txtYedekKredi").val('');
+                $("#txtTutar").val('');
+                $("#txtKredi").val('');
+            }
+
+        });
+
+    </script>
+
+
+}

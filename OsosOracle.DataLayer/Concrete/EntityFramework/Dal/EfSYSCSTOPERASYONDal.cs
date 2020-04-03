@@ -17,18 +17,11 @@ namespace OsosOracle.DataLayer.Concrete.EntityFramework.Dal
         {
             return result.Select(x => new SYSCSTOPERASYONDetay()
             {
-                //	SYSCSTOPERASYON = x,
                 KAYITNO = x.KAYITNO,
-
                 AD = x.AD,
                 ACIKLAMA = x.ACIKLAMA,
-                OPERASYONTUR = x.OPERASYONTUR,
                 VERSIYON = x.VERSIYON,
-                MENUKAYITNO = x.MENUKAYITNO,
-                //Menu=x.SysMenuEf.TR
-
-                //TODO: Ek detayları buraya ekleyiniz
-                //örnek: SYSCSTOPERASYONDurumu = x.NesneDegerDurumEf.Adi
+                MENUKAYITNO = x.MENUKAYITNO
 
             });
         }
@@ -62,10 +55,7 @@ namespace OsosOracle.DataLayer.Concrete.EntityFramework.Dal
                     {
                         result = result.Where(x => x.ACIKLAMA.Contains(filtre.ACIKLAMA));
                     }
-                    if (filtre.OPERASYONTUR != null)
-                    {
-                        result = result.Where(x => x.OPERASYONTUR == filtre.OPERASYONTUR);
-                    }
+                    
                     if (filtre.VERSIYON != null)
                     {
                         result = result.Where(x => x.VERSIYON == filtre.VERSIYON);

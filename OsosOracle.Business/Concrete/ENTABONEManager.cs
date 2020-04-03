@@ -8,10 +8,10 @@ using OsosOracle.Entities.Concrete;
 using OsosOracle.Business.Concrete.Infrastructure;
 using OsosOracle.Framework.Aspects.ValidationAspects;
 using OsosOracle.Framework.Utilities.ExtensionMethods;
-using OsosOracle.Entities.ComplexType.ENTABONEBILGIComplexTypes;
 using System.Linq;
 using OsosOracle.Framework.Aspects.TransactionAspects;
 using OsosOracle.Entities.ComplexType.ENTABONESAYACComplexTypes;
+using System;
 
 namespace OsosOracle.Business.Concrete
 {
@@ -81,19 +81,6 @@ namespace OsosOracle.Business.Concrete
         [TransactionScopeAspect]
         public void Sil(List<int> idler)
         {
-            var aboneSayacService = ServisGetir<IENTABONESAYACService>();
-            var aboneSayac = aboneSayacService.Getir(new ENTABONESAYACAra { ABONEKAYITNO = idler[0] }).FirstOrDefault();
-            if (aboneSayac != null)
-            {
-                aboneSayacService.Sil(aboneSayac.KAYITNO.List());
-            }
-            var aboneBilgiService = ServisGetir<IENTABONEBILGIService>();
-            var aboneBilgi = aboneBilgiService.Getir(new ENTABONEBILGIAra { ABONEKAYITNO = idler[0] }).FirstOrDefault();
-            if (aboneBilgi != null)
-            {
-                aboneBilgiService.Sil(aboneBilgi.KAYITNO.List());
-            }
-
             _eNTABONEDal.Sil(idler);
         }
 
@@ -103,13 +90,37 @@ namespace OsosOracle.Business.Concrete
             //VAlidateler yapılacak
             Validate(model.ENTABONE);
             var eklenenAbone = Ekle(model.ENTABONE.List());
-            var aboneBilgiService = ServisGetir<IENTABONEBILGIService>();
-            model.ENTABONEBILGI.ABONEKAYITNO = eklenenAbone.FirstOrDefault().KAYITNO;
-            aboneBilgiService.Ekle(model.ENTABONEBILGI.List());
+
 
             var aboneSayacService = ServisGetir<IENTABONESAYACService>();
             model.ENTABONESAYAC.ABONEKAYITNO = eklenenAbone.FirstOrDefault().KAYITNO;
             aboneSayacService.Ekle(model.ENTABONESAYAC.List());
+        }
+
+        [TransactionScopeAspect]
+        public void YesilVadiAboneEkle(YesilVadiAboneIslemleri model)
+        {
+            Validate(model.ENTABONE);
+            var eklenenAbone = Ekle(model.ENTABONE.List());
+
+            if (model.SuSayac.SAYACKAYITNO >= 0)
+            {
+                var aboneSayacService = ServisGetir<IENTABONESAYACService>();
+                model.SuSayac.ABONEKAYITNO = eklenenAbone.FirstOrDefault().KAYITNO;
+                model.SuSayac.OLUSTURAN = model.ENTABONE.OLUSTURAN;
+                aboneSayacService.Ekle(model.SuSayac.List());
+            }
+
+            if (model.ElektrikSayac.SAYACKAYITNO >= 0)
+            {
+                var aboneSayacService = ServisGetir<IENTABONESAYACService>();
+                model.ElektrikSayac.ABONEKAYITNO = eklenenAbone.FirstOrDefault().KAYITNO;
+                model.ElektrikSayac.OLUSTURAN = model.ENTABONE.OLUSTURAN;
+                aboneSayacService.Ekle(model.ElektrikSayac.List());
+            }
+
+
+
         }
 
         [TransactionScopeAspect]
@@ -118,8 +129,7 @@ namespace OsosOracle.Business.Concrete
             //VAlidateler yapılacak
             Validate(model.ENTABONE);
             Guncelle(model.ENTABONE.List());
-            var aboneBilgiService = ServisGetir<IENTABONEBILGIService>();
-            aboneBilgiService.Guncelle(model.ENTABONEBILGI.List());
+
             var aboneSayacService = ServisGetir<IENTABONESAYACService>();
             aboneSayacService.Guncelle(model.ENTABONESAYAC.List());
         }
@@ -127,6 +137,26 @@ namespace OsosOracle.Business.Concrete
         public List<AboneAutoComplete> AutoCompleteBilgileriGetir(ENTABONEAra filtre = null)
         {
             return _eNTABONEDal.AutoCompleteBilgileriGetir(filtre);
+        }
+
+        [TransactionScopeAspect]
+        public void AboneEkleAvm(AvmKaydetModel model)
+        {
+            //Validateler yapılacak
+            Validate(model.ENTABONE);
+            var eklenenAbone = Ekle(model.ENTABONE.List());
+
+
+            var aboneSayacService = ServisGetir<IENTABONESAYACService>();
+            model.SuSayac.ABONEKAYITNO = eklenenAbone.FirstOrDefault().KAYITNO;
+            aboneSayacService.Ekle(model.SuSayac.List());
+
+            aboneSayacService.Ekle(model.ElektrikSayac.List());
+        }
+
+        public AboneGenel AboneGenelBilgileriGetir(int aboneKayitNo)
+        {
+            return _eNTABONEDal.AboneGenelBilgileriGetir(aboneKayitNo);
         }
     }
 }

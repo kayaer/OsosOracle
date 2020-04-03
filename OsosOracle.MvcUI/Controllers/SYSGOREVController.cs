@@ -14,6 +14,9 @@ using OsosOracle.MvcUI.Filters;
 using OsosOracle.Entities.ComplexType.SYSCSTOPERASYONComplexTypes;
 using OsosOracle.MvcUI.Models.SYSCSTOPERASYONModels;
 using OsosOracle.Entities.ComplexType.SYSOPERASYONGOREVComplexTypes;
+using System;
+using OsosOracle.Framework.CrossCuttingConcern.ExceptionHandling;
+using OsosOracle.MvcUI.Resources;
 
 namespace OsosOracle.MvcUI.Controllers
 {
@@ -65,9 +68,8 @@ namespace OsosOracle.MvcUI.Controllers
                     t.VERSIYON,
                     t.KURUMKAYITNO,
 
-                    Islemler = $@"<a class='btn btn-xs btn-info' href='{Url.Action("Guncelle", "SYSGOREV", new { id = t.KAYITNO })}' title='Düzenle'><i class='fa fa-edit'></i></a>
-							   <a class='btn btn-xs btn-primary' href='{Url.Action("Detay", "SYSGOREV", new { id = t.KAYITNO })}' title='Detay'><i class='fa fa-th-list'></i></a>
-								<a class='btn btn-xs btn-danger modalizer' href='{Url.Action("Sil", "SYSGOREV", new { id = t.KAYITNO })}' title='Sil'><i class='fa fa-trash'></i></a>"
+                    Islemler = $@"<a class='btn btn-xs btn-info' href='{Url.Action("Guncelle", "SYSGOREV", new { id = t.KAYITNO })}' title='{Dil.Duzenle}'><i class='fa fa-edit'></i></a>
+							  	<a class='btn btn-xs btn-danger modalizer' href='{Url.Action("Sil", "SYSGOREV", new { id = t.KAYITNO })}' title='{Dil.Sil}'><i class='fa fa-trash'></i></a>"
                 }),
                 draw = dtParameterModel.Draw,
                 recordsTotal = kayitlar.ToplamKayitSayisi,
@@ -80,13 +82,13 @@ namespace OsosOracle.MvcUI.Controllers
         {
             SayfaBaslik($"Görev Ekle");
 
-          
+
 
             var model = new SYSGOREVKaydetModel()
             {
                 SYSGOREV = new SYSGOREV(),
                 OperasyonListesi = _sysOperasyonService.DetayGetir(new SYSCSTOPERASYONAra() { }).Select(x =>
-                    new Operasyon() { KayitNo = x.KAYITNO, Ad = x.AD, Secildi = false, Aciklama = x.ACIKLAMA }).ToList()
+                    new Operasyon() { KayitNo = x.KAYITNO, Ad = x.AD, Secildi = false, Aciklama = x.ACIKLAMA }).OrderBy(y => y.Ad).ToList()
 
 
             };
@@ -100,11 +102,11 @@ namespace OsosOracle.MvcUI.Controllers
         {
             SayfaBaslik($"Görev Güncelle");
 
-           
+
 
             SYSGOREVDataTable GorevOperasyon = _sYSGOREVService.Ara(new SYSGOREVAra() { KAYITNO = id });
             var OperasyonListesi = _sysOperasyonService.DetayGetir(new SYSCSTOPERASYONAra() { }).Select(x =>
-                new Operasyon() { KayitNo = x.KAYITNO, Ad = x.AD, Secildi = false, Aciklama = x.ACIKLAMA }).ToList();
+                new Operasyon() { KayitNo = x.KAYITNO, Ad = x.AD, Secildi = false, Aciklama = x.ACIKLAMA }).OrderBy(y => y.Ad).ToList();
 
             foreach (Operasyon operasyon in OperasyonListesi)
             {
@@ -145,23 +147,31 @@ namespace OsosOracle.MvcUI.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Kaydet(SYSGOREVKaydetModel sYSGOREVKaydetModel)
         {
-            sYSGOREVKaydetModel.SYSGOREV.KURUMKAYITNO = AktifKullanici.KurumKayitNo;
-            if (sYSGOREVKaydetModel.SYSGOREV.KAYITNO > 0)
+            try
             {
-                _sYSGOREVService.Guncelle(sYSGOREVKaydetModel.SYSGOREV.List());
+                sYSGOREVKaydetModel.SYSGOREV.KURUMKAYITNO = AktifKullanici.KurumKayitNo;
+
+                if (sYSGOREVKaydetModel.SYSGOREV.KAYITNO > 0)
+                {
+                    sYSGOREVKaydetModel.SYSGOREV.GUNCELLEYEN = AktifKullanici.KayitNo;  
+                }
+                else
+                {
+                    sYSGOREVKaydetModel.SYSGOREV.OLUSTURAN = AktifKullanici.KayitNo;
+                }
+                var operasyonidlist = sYSGOREVKaydetModel.OperasyonListesi.Where(x => x.Secildi == true).Select(y => y.KayitNo).ToList();
+                _sYSGOREVService.GorevOperasyonEkle(
+                    sYSGOREVKaydetModel.SYSGOREV,
+                    operasyonidlist,
+                    AktifKullanici.KayitNo);
+                return Yonlendir(Url.Action("Index"), $"Görev kayıdı başarıyla gerçekleştirilmiştir.");
             }
-            else
+            catch (Exception ex)
             {
-                _sYSGOREVService.Ekle(sYSGOREVKaydetModel.SYSGOREV.List());
+                throw new NotificationException(ex.Message);
             }
 
-            _sysOperasyonGorevService.OperasyonGorevSil(sYSGOREVKaydetModel.SYSGOREV.KAYITNO);
-            foreach (var operasyon in sYSGOREVKaydetModel.OperasyonListesi.Where(x => x.Secildi))
-            {
-                _sysOperasyonGorevService.Ekle(new SYSOPERASYONGOREV() { GOREVKAYITNO = sYSGOREVKaydetModel.SYSGOREV.KAYITNO, OPERASYONKAYITNO = operasyon.KayitNo }.List());
 
-            }
-            return Yonlendir(Url.Action("Index"), $"Görev kayıdı başarıyla gerçekleştirilmiştir.");
 
         }
 

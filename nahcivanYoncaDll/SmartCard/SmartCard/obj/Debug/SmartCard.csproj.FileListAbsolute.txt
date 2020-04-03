@@ -1,0 +1,84 @@
+E:\PROJECTS\Visual Studio 2008\Projects\Mobile\SmartCard\SmartCard\SmartCard\bin\Debug\SmartCard.dll
+E:\PROJECTS\Visual Studio 2008\Projects\Mobile\SmartCard\SmartCard\SmartCard\bin\Debug\SmartCard.pdb
+E:\PROJECTS\Visual Studio 2008\Projects\Mobile\SmartCard\SmartCard\SmartCard\obj\Debug\ResolveAssemblyReference.cache
+E:\PROJECTS\Visual Studio 2008\Projects\Mobile\SmartCard\SmartCard\SmartCard\obj\Debug\SmartCard.dll
+E:\PROJECTS\Visual Studio 2008\Projects\Mobile\SmartCard\SmartCard\SmartCard\obj\Debug\SmartCard.pdb
+E:\PROJECTS\Visual Studio 2008\Projects\Mobile\SmartCard\SmartCard\SmartCard\bin\Debug\SCLib.dll
+E:\PROJECTS\Visual Studio 2008\Projects\Mobile\SmartCard\Tulkarem\SmartCard\SmartCard\bin\Debug\SmartCard.dll
+E:\PROJECTS\Visual Studio 2008\Projects\Mobile\SmartCard\Tulkarem\SmartCard\SmartCard\bin\Debug\SmartCard.pdb
+E:\PROJECTS\Visual Studio 2008\Projects\Mobile\SmartCard\Tulkarem\SmartCard\SmartCard\obj\Debug\ResolveAssemblyReference.cache
+E:\PROJECTS\Visual Studio 2008\Projects\Mobile\SmartCard\Tulkarem\SmartCard\SmartCard\obj\Debug\SmartCard.dll
+E:\PROJECTS\Visual Studio 2008\Projects\Mobile\SmartCard\Tulkarem\SmartCard\SmartCard\obj\Debug\SmartCard.pdb
+E:\PROJECTS\Visual Studio 2008\Projects\Mobile\SmartCard\Tulkarem\SmartCard\SmartCard\bin\Debug\SCLibWin.pdb
+E:\PROJECTS\Visual Studio 2008\Projects\Mobile\Filistin Ortak  Dll - Uretim\Tulkarem\SmartCard\SmartCard\bin\Debug\SmartCard.dll
+E:\PROJECTS\Visual Studio 2008\Projects\Mobile\Filistin Ortak  Dll - Uretim\Tulkarem\SmartCard\SmartCard\bin\Debug\SmartCard.pdb
+E:\PROJECTS\Visual Studio 2008\Projects\Mobile\Filistin Ortak  Dll - Uretim\Tulkarem\SmartCard\SmartCard\bin\Debug\SCLibWin.pdb
+E:\PROJECTS\Visual Studio 2008\Projects\Mobile\Filistin Ortak  Dll - Uretim\Tulkarem\SmartCard\SmartCard\obj\Debug\ResolveAssemblyReference.cache
+E:\PROJECTS\Visual Studio 2008\Projects\Mobile\Filistin Ortak  Dll - Uretim\Tulkarem\SmartCard\SmartCard\obj\Debug\SmartCard.dll
+E:\PROJECTS\Visual Studio 2008\Projects\Mobile\Filistin Ortak  Dll - Uretim\Tulkarem\SmartCard\SmartCard\obj\Debug\SmartCard.pdb
+D:\Projeler\Nahcivan\Elektrik\Yazilim_PC\SmartCard\SmartCard\bin\Debug\Yonca.dll
+D:\Projeler\Nahcivan\Elektrik\Yazilim_PC\SmartCard\SmartCard\bin\Debug\Yonca.pdb
+D:\Projeler\Nahcivan\Elektrik\Yazilim_PC\SmartCard\SmartCard\obj\Debug\Yonca.dll
+D:\Projeler\Nahcivan\Elektrik\Yazilim_PC\SmartCard\SmartCard\obj\Debug\Yonca.pdb
+C:\Users\AR-GE\Desktop\Yazilim_PC\SmartCard\SmartCard\obj\Debug\Yonca.dll
+C:\Users\AR-GE\Desktop\Yazilim_PC\SmartCard\SmartCard\obj\Debug\Yonca.pdb
+C:\Users\AR-GE\Desktop\Yazilim_PC\SmartCard\SmartCard\bin\Debug\Yonca.dll
+C:\Users\AR-GE\Desktop\Yazilim_PC\SmartCard\SmartCard\bin\Debug\Yonca.pdb
+C:\Users\AR-GE\Desktop\Yazilim_PC\SmartCard\SmartCard\obj\Debug\SmartCard.csprojResolveAssemblyReference.cache
+C:\Users\nebi.er\source\repos\OsosOracle\nahcivanYoncaDll\SmartCard\SmartCard\obj\Debug\SmartCard.csproj.CoreCompileInputs.cache
+C:\Users\nebi.er\source\repos\OsosOracle\nahcivanYoncaDll\SmartCard\SmartCard\bin\Debug\SmartCard.dll
+C:\Users\nebi.er\source\repos\OsosOracle\nahcivanYoncaDll\SmartCard\SmartCard\bin\Debug\SmartCard.pdb
+C:\Users\nebi.er\source\repos\OsosOracle\nahcivanYoncaDll\SmartCard\SmartCard\obj\Debug\SmartCard.dll
+C:\Users\nebi.er\source\repos\OsosOracle\nahcivanYoncaDll\SmartCard\SmartCard\obj\Debug\SmartCard.pdb
+C:\Users\nebi.er\source\repos\OsosOracle\nahcivanYoncaDll\SmartCard\SmartCard\obj\Debug\SmartCard.csprojAssemblyReference.cache
+D:\Nebi Eks Kalorimetre\OsosOracle\nahcivanYoncaDll\SmartCard\SmartCard\bin\Debug\SmartCard.dll
+D:\Nebi Eks Kalorimetre\OsosOracle\nahcivanYoncaDll\SmartCard\SmartCard\bin\Debug\SmartCard.pdb
+D:\Nebi Eks Kalorimetre\OsosOracle\nahcivanYoncaDll\SmartCard\SmartCard\obj\Debug\SmartCard.csproj.CoreCompileInputs.cache
+D:\Nebi Eks Kalorimetre\OsosOracle\nahcivanYoncaDll\SmartCard\SmartCard\obj\Debug\SmartCard.dll
+D:\Nebi Eks Kalorimetre\OsosOracle\nahcivanYoncaDll\SmartCard\SmartCard\obj\Debug\SmartCard.pdb
+D:\Nebi Eks Kalorimetre\OsosOracle\nahcivanYoncaDll\SmartCard\SmartCard\obj\Debug\SmartCard.csprojAssemblyReference.cache
+C:\Users\ELKTRMD\Downloads\wetransfer-c7365b\OsosOracle\nahcivanYoncaDll\SmartCard\SmartCard\bin\Debug\SmartCard.dll
+C:\Users\ELKTRMD\Downloads\wetransfer-c7365b\OsosOracle\nahcivanYoncaDll\SmartCard\SmartCard\bin\Debug\SmartCard.pdb
+C:\Users\ELKTRMD\Downloads\wetransfer-c7365b\OsosOracle\nahcivanYoncaDll\SmartCard\SmartCard\obj\Debug\SmartCard.dll
+C:\Users\ELKTRMD\Downloads\wetransfer-c7365b\OsosOracle\nahcivanYoncaDll\SmartCard\SmartCard\obj\Debug\SmartCard.pdb
+C:\Users\ARGE X\Desktop\19.01.2019 Libya Yonca Çalışması\OsosOracle\nahcivanYoncaDll\SmartCard\SmartCard\bin\Debug\SmartCard.dll
+C:\Users\ARGE X\Desktop\19.01.2019 Libya Yonca Çalışması\OsosOracle\nahcivanYoncaDll\SmartCard\SmartCard\bin\Debug\SmartCard.pdb
+C:\Users\ARGE X\Desktop\19.01.2019 Libya Yonca Çalışması\OsosOracle\nahcivanYoncaDll\SmartCard\SmartCard\obj\Debug\SmartCard.csproj.CoreCompileInputs.cache
+C:\Users\ARGE X\Desktop\19.01.2019 Libya Yonca Çalışması\OsosOracle\nahcivanYoncaDll\SmartCard\SmartCard\obj\Debug\SmartCard.dll
+C:\Users\ARGE X\Desktop\19.01.2019 Libya Yonca Çalışması\OsosOracle\nahcivanYoncaDll\SmartCard\SmartCard\obj\Debug\SmartCard.pdb
+C:\Users\ARGE X\Desktop\19.01.2019 Libya Yonca Çalışması\OsosOracle\nahcivanYoncaDll\SmartCard\SmartCard\obj\Debug\SmartCard.csprojAssemblyReference.cache
+D:\OsosOracle\nahcivanYoncaDll\SmartCard\SmartCard\bin\Debug\SmartCard.dll
+D:\OsosOracle\nahcivanYoncaDll\SmartCard\SmartCard\bin\Debug\SmartCard.pdb
+D:\OsosOracle\nahcivanYoncaDll\SmartCard\SmartCard\obj\Debug\SmartCard.dll
+D:\OsosOracle\nahcivanYoncaDll\SmartCard\SmartCard\obj\Debug\SmartCard.pdb
+D:\OsosOracle\nahcivanYoncaDll\SmartCard\SmartCard\obj\Debug\SmartCard.csprojAssemblyReference.cache
+F:\OsosOracle\nahcivanYoncaDll\SmartCard\SmartCard\bin\Debug\SmartCard.dll
+F:\OsosOracle\nahcivanYoncaDll\SmartCard\SmartCard\bin\Debug\SmartCard.pdb
+F:\OsosOracle\nahcivanYoncaDll\SmartCard\SmartCard\obj\Debug\SmartCard.dll
+F:\OsosOracle\nahcivanYoncaDll\SmartCard\SmartCard\obj\Debug\SmartCard.pdb
+F:\OsosOracle\nahcivanYoncaDll\SmartCard\SmartCard\obj\Debug\SmartCard.csprojAssemblyReference.cache
+G:\1.3.2020 OsosOracle\OsosOracle\nahcivanYoncaDll\SmartCard\SmartCard\bin\Debug\SmartCard.dll
+G:\1.3.2020 OsosOracle\OsosOracle\nahcivanYoncaDll\SmartCard\SmartCard\bin\Debug\SmartCard.pdb
+G:\1.3.2020 OsosOracle\OsosOracle\nahcivanYoncaDll\SmartCard\SmartCard\obj\Debug\SmartCard.csprojAssemblyReference.cache
+G:\1.3.2020 OsosOracle\OsosOracle\nahcivanYoncaDll\SmartCard\SmartCard\obj\Debug\SmartCard.dll
+G:\1.3.2020 OsosOracle\OsosOracle\nahcivanYoncaDll\SmartCard\SmartCard\obj\Debug\SmartCard.pdb
+C:\Users\ARGE X\Desktop\1.3.2020 OsosOracle\OsosOracle\nahcivanYoncaDll\SmartCard\SmartCard\bin\Debug\SmartCard.dll
+C:\Users\ARGE X\Desktop\1.3.2020 OsosOracle\OsosOracle\nahcivanYoncaDll\SmartCard\SmartCard\bin\Debug\SmartCard.pdb
+C:\Users\ARGE X\Desktop\1.3.2020 OsosOracle\OsosOracle\nahcivanYoncaDll\SmartCard\SmartCard\obj\Debug\SmartCard.csproj.CoreCompileInputs.cache
+C:\Users\ARGE X\Desktop\1.3.2020 OsosOracle\OsosOracle\nahcivanYoncaDll\SmartCard\SmartCard\obj\Debug\SmartCard.dll
+C:\Users\ARGE X\Desktop\1.3.2020 OsosOracle\OsosOracle\nahcivanYoncaDll\SmartCard\SmartCard\obj\Debug\SmartCard.pdb
+F:\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\nahcivanYoncaDll\SmartCard\SmartCard\bin\Debug\SmartCard.dll
+F:\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\nahcivanYoncaDll\SmartCard\SmartCard\bin\Debug\SmartCard.pdb
+F:\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\nahcivanYoncaDll\SmartCard\SmartCard\obj\Debug\SmartCard.dll
+F:\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\nahcivanYoncaDll\SmartCard\SmartCard\obj\Debug\SmartCard.pdb
+F:\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\nahcivanYoncaDll\SmartCard\SmartCard\obj\Debug\SmartCard.csprojAssemblyReference.cache
+C:\Users\ARGE X\Desktop\7.3.2020\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\nahcivanYoncaDll\SmartCard\SmartCard\bin\Debug\SmartCard.dll
+C:\Users\ARGE X\Desktop\7.3.2020\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\nahcivanYoncaDll\SmartCard\SmartCard\bin\Debug\SmartCard.pdb
+C:\Users\ARGE X\Desktop\7.3.2020\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\nahcivanYoncaDll\SmartCard\SmartCard\obj\Debug\SmartCard.csproj.CoreCompileInputs.cache
+C:\Users\ARGE X\Desktop\7.3.2020\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\nahcivanYoncaDll\SmartCard\SmartCard\obj\Debug\SmartCard.dll
+C:\Users\ARGE X\Desktop\7.3.2020\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\nahcivanYoncaDll\SmartCard\SmartCard\obj\Debug\SmartCard.pdb
+C:\Users\ARGE X\Desktop\7.3.2020\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\nahcivanYoncaDll\SmartCard\SmartCard\obj\Debug\SmartCard.csprojAssemblyReference.cache
+C:\Projeler\OsosOracle\nahcivanYoncaDll\SmartCard\SmartCard\bin\Debug\SmartCard.dll
+C:\Projeler\OsosOracle\nahcivanYoncaDll\SmartCard\SmartCard\bin\Debug\SmartCard.pdb
+C:\Projeler\OsosOracle\nahcivanYoncaDll\SmartCard\SmartCard\obj\Debug\SmartCard.dll
+C:\Projeler\OsosOracle\nahcivanYoncaDll\SmartCard\SmartCard\obj\Debug\SmartCard.pdb

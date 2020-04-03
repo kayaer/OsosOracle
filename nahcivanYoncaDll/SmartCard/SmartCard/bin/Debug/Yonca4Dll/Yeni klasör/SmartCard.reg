@@ -1,0 +1,176 @@
+REGEDIT4
+
+[HKEY_CLASSES_ROOT\Record\{41468F25-613E-3C00-B299-099C03BFA58B}\1.0.0.0]
+"Class"="SCLibWin.SCardAccessMode"
+"Assembly"="SmartCard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+"RuntimeVersion"="v2.0.50727"
+
+[HKEY_CLASSES_ROOT\Record\{312EA656-7585-39EF-8AD4-17C985B0D24F}\1.0.0.0]
+"Class"="SCLibWin.SCardChannelType"
+"Assembly"="SmartCard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+"RuntimeVersion"="v2.0.50727"
+
+[HKEY_CLASSES_ROOT\Record\{E4538F6D-AC06-3544-B29E-CB90B3C4490E}\1.0.0.0]
+"Class"="SCLibWin.SCardContextScope"
+"Assembly"="SmartCard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+"RuntimeVersion"="v2.0.50727"
+
+[HKEY_CLASSES_ROOT\Record\{00D8F3E8-D7D4-3A3D-A174-379483335D78}\1.0.0.0]
+"Class"="SCLibWin.SCardDisposition"
+"Assembly"="SmartCard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+"RuntimeVersion"="v2.0.50727"
+
+[HKEY_CLASSES_ROOT\Record\{4CF27556-51E3-3127-92DF-EFFA66EF3A25}\1.0.0.0]
+"Class"="SCLibWin.SCardMechanicalCharacteristics"
+"Assembly"="SmartCard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+"RuntimeVersion"="v2.0.50727"
+
+[HKEY_CLASSES_ROOT\Record\{9E16763C-0281-35C7-955F-809B3260DB90}\1.0.0.0]
+"Class"="SCLibWin.SCardProtocolIdentifiers"
+"Assembly"="SmartCard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+"RuntimeVersion"="v2.0.50727"
+
+[HKEY_CLASSES_ROOT\Record\{D15BD315-84F2-38B5-A13B-457CEC604ADB}\1.0.0.0]
+"Class"="SCLibWin.SCardReaderCapability"
+"Assembly"="SmartCard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+"RuntimeVersion"="v2.0.50727"
+
+[HKEY_CLASSES_ROOT\Record\{9C3D8E20-9E70-3C33-BAC9-B4D52EC8813A}\1.0.0.0]
+"Class"="SCLibWin.SCardReaderState"
+"Assembly"="SmartCard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+"RuntimeVersion"="v2.0.50727"
+
+[HKEY_CLASSES_ROOT\Record\{FD19E955-3D4C-3972-8EBC-739CF8FB3F29}\1.0.0.0]
+"Class"="SCLibWin.SCardResponseCode"
+"Assembly"="SmartCard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+"RuntimeVersion"="v2.0.50727"
+
+[HKEY_CLASSES_ROOT\SCLibWin.SCResMgr]
+@="SCLibWin.SCResMgr"
+
+[HKEY_CLASSES_ROOT\SCLibWin.SCResMgr\CLSID]
+@="{17EA4F02-26C7-337A-ACE2-931C8510FB55}"
+
+[HKEY_CLASSES_ROOT\CLSID\{17EA4F02-26C7-337A-ACE2-931C8510FB55}]
+@="SCLibWin.SCResMgr"
+
+[HKEY_CLASSES_ROOT\CLSID\{17EA4F02-26C7-337A-ACE2-931C8510FB55}\InprocServer32]
+@="mscoree.dll"
+"ThreadingModel"="Both"
+"Class"="SCLibWin.SCResMgr"
+"Assembly"="SmartCard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+"RuntimeVersion"="v2.0.50727"
+
+[HKEY_CLASSES_ROOT\CLSID\{17EA4F02-26C7-337A-ACE2-931C8510FB55}\InprocServer32\1.0.0.0]
+"Class"="SCLibWin.SCResMgr"
+"Assembly"="SmartCard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+"RuntimeVersion"="v2.0.50727"
+
+[HKEY_CLASSES_ROOT\CLSID\{17EA4F02-26C7-337A-ACE2-931C8510FB55}\ProgId]
+@="SCLibWin.SCResMgr"
+
+[HKEY_CLASSES_ROOT\CLSID\{17EA4F02-26C7-337A-ACE2-931C8510FB55}\Implemented Categories\{62C8FE65-4EBB-45E7-B440-6E39B2CDBF29}]
+
+[HKEY_CLASSES_ROOT\SmartCard.ContactlessReader]
+@="SmartCard.ContactlessReader"
+
+[HKEY_CLASSES_ROOT\SmartCard.ContactlessReader\CLSID]
+@="{2B517202-DB73-3D51-AE8A-EE214CF22501}"
+
+[HKEY_CLASSES_ROOT\CLSID\{2B517202-DB73-3D51-AE8A-EE214CF22501}]
+@="SmartCard.ContactlessReader"
+
+[HKEY_CLASSES_ROOT\CLSID\{2B517202-DB73-3D51-AE8A-EE214CF22501}\InprocServer32]
+@="mscoree.dll"
+"ThreadingModel"="Both"
+"Class"="SmartCard.ContactlessReader"
+"Assembly"="SmartCard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+"RuntimeVersion"="v2.0.50727"
+
+[HKEY_CLASSES_ROOT\CLSID\{2B517202-DB73-3D51-AE8A-EE214CF22501}\InprocServer32\1.0.0.0]
+"Class"="SmartCard.ContactlessReader"
+"Assembly"="SmartCard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+"RuntimeVersion"="v2.0.50727"
+
+[HKEY_CLASSES_ROOT\CLSID\{2B517202-DB73-3D51-AE8A-EE214CF22501}\ProgId]
+@="SmartCard.ContactlessReader"
+
+[HKEY_CLASSES_ROOT\CLSID\{2B517202-DB73-3D51-AE8A-EE214CF22501}\Implemented Categories\{62C8FE65-4EBB-45E7-B440-6E39B2CDBF29}]
+
+[HKEY_CLASSES_ROOT\SmartCard.ContactReader]
+@="SmartCard.ContactReader"
+
+[HKEY_CLASSES_ROOT\SmartCard.ContactReader\CLSID]
+@="{A00AC3DF-D5BB-39F6-AB16-60FF501FA212}"
+
+[HKEY_CLASSES_ROOT\CLSID\{A00AC3DF-D5BB-39F6-AB16-60FF501FA212}]
+@="SmartCard.ContactReader"
+
+[HKEY_CLASSES_ROOT\CLSID\{A00AC3DF-D5BB-39F6-AB16-60FF501FA212}\InprocServer32]
+@="mscoree.dll"
+"ThreadingModel"="Both"
+"Class"="SmartCard.ContactReader"
+"Assembly"="SmartCard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+"RuntimeVersion"="v2.0.50727"
+
+[HKEY_CLASSES_ROOT\CLSID\{A00AC3DF-D5BB-39F6-AB16-60FF501FA212}\InprocServer32\1.0.0.0]
+"Class"="SmartCard.ContactReader"
+"Assembly"="SmartCard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+"RuntimeVersion"="v2.0.50727"
+
+[HKEY_CLASSES_ROOT\CLSID\{A00AC3DF-D5BB-39F6-AB16-60FF501FA212}\ProgId]
+@="SmartCard.ContactReader"
+
+[HKEY_CLASSES_ROOT\CLSID\{A00AC3DF-D5BB-39F6-AB16-60FF501FA212}\Implemented Categories\{62C8FE65-4EBB-45E7-B440-6E39B2CDBF29}]
+
+[HKEY_CLASSES_ROOT\SmartCard.ElektromedReader]
+@="SmartCard.ElektromedReader"
+
+[HKEY_CLASSES_ROOT\SmartCard.ElektromedReader\CLSID]
+@="{94010292-64BD-32EE-9E04-85FB9B3EF92A}"
+
+[HKEY_CLASSES_ROOT\CLSID\{94010292-64BD-32EE-9E04-85FB9B3EF92A}]
+@="SmartCard.ElektromedReader"
+
+[HKEY_CLASSES_ROOT\CLSID\{94010292-64BD-32EE-9E04-85FB9B3EF92A}\InprocServer32]
+@="mscoree.dll"
+"ThreadingModel"="Both"
+"Class"="SmartCard.ElektromedReader"
+"Assembly"="SmartCard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+"RuntimeVersion"="v2.0.50727"
+
+[HKEY_CLASSES_ROOT\CLSID\{94010292-64BD-32EE-9E04-85FB9B3EF92A}\InprocServer32\1.0.0.0]
+"Class"="SmartCard.ElektromedReader"
+"Assembly"="SmartCard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+"RuntimeVersion"="v2.0.50727"
+
+[HKEY_CLASSES_ROOT\CLSID\{94010292-64BD-32EE-9E04-85FB9B3EF92A}\ProgId]
+@="SmartCard.ElektromedReader"
+
+[HKEY_CLASSES_ROOT\CLSID\{94010292-64BD-32EE-9E04-85FB9B3EF92A}\Implemented Categories\{62C8FE65-4EBB-45E7-B440-6E39B2CDBF29}]
+
+[HKEY_CLASSES_ROOT\SmartCard.KartIslem]
+@="SmartCard.KartIslem"
+
+[HKEY_CLASSES_ROOT\SmartCard.KartIslem\CLSID]
+@="{AAECAC5C-A8DF-3783-B321-4874A5EDE927}"
+
+[HKEY_CLASSES_ROOT\CLSID\{AAECAC5C-A8DF-3783-B321-4874A5EDE927}]
+@="SmartCard.KartIslem"
+
+[HKEY_CLASSES_ROOT\CLSID\{AAECAC5C-A8DF-3783-B321-4874A5EDE927}\InprocServer32]
+@="mscoree.dll"
+"ThreadingModel"="Both"
+"Class"="SmartCard.KartIslem"
+"Assembly"="SmartCard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+"RuntimeVersion"="v2.0.50727"
+
+[HKEY_CLASSES_ROOT\CLSID\{AAECAC5C-A8DF-3783-B321-4874A5EDE927}\InprocServer32\1.0.0.0]
+"Class"="SmartCard.KartIslem"
+"Assembly"="SmartCard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+"RuntimeVersion"="v2.0.50727"
+
+[HKEY_CLASSES_ROOT\CLSID\{AAECAC5C-A8DF-3783-B321-4874A5EDE927}\ProgId]
+@="SmartCard.KartIslem"
+
+[HKEY_CLASSES_ROOT\CLSID\{AAECAC5C-A8DF-3783-B321-4874A5EDE927}\Implemented Categories\{62C8FE65-4EBB-45E7-B440-6E39B2CDBF29}]

@@ -1,0 +1,101 @@
+﻿@using OsosOracle.Framework.HtmlHelpers
+@using OsosOracle.MvcUI.Infrastructure
+@model OsosOracle.MvcUI.Models.ENTABONESAYACModels.ENTABONESAYACKaydetModel
+
+
+
+<div class="ajaxForm">
+
+    @using (Html.BeginForm("Kaydet", "AboneSayac", FormMethod.Post))
+    {
+        @Html.AntiForgeryToken()
+        @Html.HiddenFor(t => t.ReturnUrl)
+        @Html.HiddenFor(t => t.ENTABONESAYAC.KAYITNO)
+        @Html.HiddenFor(t => t.ENTABONESAYAC.VERSIYON)
+        @Html.HiddenFor(t => t.ENTABONESAYAC.ABONEKAYITNO)
+        @Html.HiddenFor(t => t.Tip)
+        @Html.HiddenFor(t => t.IslemTipi)
+        @Html.HiddenFor(t => t.ENTABONESAYAC.TAKILMATARIH)
+        @Html.HiddenFor(t => t.ENTABONESAYAC.SOKULMETARIH)
+        @Html.HiddenFor(t => t.ENTABONESAYAC.SOKULMENEDEN)
+        @Html.HiddenFor(t => t.ENTABONESAYAC.DURUM)
+        @Html.ValidationSummary(true)
+
+        <div class="form-group">
+            @Html.AutoComplete(t => t.ENTABONESAYAC.SAYACKAYITNO, Enums.AutocompleteFuction.SayacGetir, Enums.AutoCompleteType.List, _T("Sayaç").ToString())
+            @Html.ValidationMessageFor(t => t.ENTABONESAYAC.SAYACKAYITNO)
+        </div>
+        if (Model.Tip == 1)
+        {
+            <div class="form-group">
+                @Html.AutoComplete(t => t.ENTABONESAYAC.TARIFEKAYITNO, Enums.AutocompleteFuction.SuTarifeGetir, Enums.AutoCompleteType.List, _T("Tarife").ToString())
+                @Html.ValidationMessageFor(t => t.ENTABONESAYAC.TARIFEKAYITNO)
+            </div>
+        }
+        else
+        {
+            <div class="form-group">
+                @Html.AutoComplete(t => t.ENTABONESAYAC.TARIFEKAYITNO, Enums.AutocompleteFuction.KalorimetreTarifeGetir, Enums.AutoCompleteType.List, _T("Tarife").ToString())
+                @Html.ValidationMessageFor(t => t.ENTABONESAYAC.TARIFEKAYITNO)
+            </div>
+        }
+
+        if (Model.IslemTipi == "Sil")
+        {
+            <div class="form-group">
+              
+                @Html.TextBoxFor(t => t.ENTABONESAYAC.SOKULMENEDEN, new { @class = "form-control", placeholder = _T("Sökülme Neden") })
+                @Html.ValidationMessageFor(t => t.ENTABONESAYAC.SOKULMENEDEN)
+            </div>
+            <div class="form-group">
+                <input type="date" class="form-control" Id="txtDateS" placeholder="Sökülme Tarih" />
+                @*@Html.DateInput(t => t.ENTABONESAYAC.SOKULMETARIH, new { placeholder = _T("Sökülme Tarih").ToString() })
+                    @Html.ValidationMessageFor(t => t.ENTABONESAYAC.SOKULMETARIH)*@
+            </div>
+
+        }
+        else
+        {
+            <div class="form-group">
+                @* @Html.DateInput(t => t.ENTABONESAYAC.TAKILMATARIH, new { placeholder = _T("Takılma Tarih").ToString(), Id = "txtDate" })*@
+                @* @Html.ValidationMessageFor(t => t.ENTABONESAYAC.TAKILMATARIH)*@
+                <input type="date" class="form-control" Id="txtDate" placeholder="Takılma Tarih" />
+
+            </div>
+
+        }
+
+
+
+
+        <div class="form-actions">
+            <button type="submit" class="btn btn-primary"><i class="fa fa-save"></i> @_T("Kaydet")</button>
+            @Html.ButtonLink(_T("Vazgeç").ToString(), "Index", "btn btn-xs btn-danger cancel", "fa-remove")
+        </div>
+    }
+</div>
+
+
+<script type="text/javascript">
+        $(document).ready(function () {
+
+
+
+            $('#txtDate').on('change', function() {
+
+                 var date = $("#txtDate").val();
+                 $('#@Html.IdFor(m=>m.ENTABONESAYAC.TAKILMATARIH)').val(date);
+            });
+
+            $('#txtDateS').on('change', function() {
+
+                 var date = $("#txtDateS").val();
+                 $('#@Html.IdFor(m=>m.ENTABONESAYAC.SOKULMETARIH)').val(date);
+            });
+
+
+
+        });
+
+</script>
+

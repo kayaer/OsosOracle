@@ -36,7 +36,7 @@ namespace OsosOracle.MvcUI.Controllers
 
                 switch (kullanici.DIL)
                 {
-                    case 0:
+                    case 3:
                         Session["CurrentCulture"] = "ar";
                         break;
                     case 1:

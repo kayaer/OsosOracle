@@ -8,6 +8,8 @@ using OsosOracle.Entities.Concrete;
 using OsosOracle.Business.Concrete.Infrastructure;
 using OsosOracle.Framework.Aspects.ValidationAspects;
 using OsosOracle.Framework.Utilities.ExtensionMethods;
+using OsosOracle.Framework.CrossCuttingConcern.ExceptionHandling;
+using System.Linq;
 
 namespace OsosOracle.Business.Concrete
 {
@@ -53,7 +55,12 @@ namespace OsosOracle.Business.Concrete
 		[FluentValidationAspect(typeof(ENTABONESAYACValidator))]
 		private void Validate(ENTABONESAYAC entity)
 		{
-			//Kontroller Yapılacak
+			//Bir sayaç birden fazla abonede aktif olmamalı
+			var sayacKayitliMi= _eNTABONESAYACDal.Getir(new ENTABONESAYACAra { SAYACKAYITNO = entity.SAYACKAYITNO, Durum = 1 });
+			if(sayacKayitliMi.Count(x=>x.KAYITNO!=entity.KAYITNO)>0)
+			{
+				throw new NotificationException("İşlem  yapılan sayaç başka bir abonede kayıtlıdır");
+			}
 		}
 
 		public void Ekle(List<ENTABONESAYAC> entityler)

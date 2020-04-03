@@ -24,12 +24,14 @@ namespace OsosOracle.DataLayer.Concrete.EntityFramework.Dal
                 DURUM = x.DURUM,
                 VERSIYON = x.VERSIYON,
                 KURUMKAYITNO = x.KURUMKAYITNO,
-                AboneNo = x.AboneBilgiEfCollection.FirstOrDefault().ABONENO,
-                Eposta = x.AboneBilgiEfCollection.FirstOrDefault().EPOSTA,
+                AboneNo = x.ABONENO,
+                SonSatisTarih=x.SonSatisTarih,
                 SayacModel = x.AboneSayacEfCollection.FirstOrDefault().EntSayacEf.CstSayacModelEf.AD,
                 SayacSeriNo = x.AboneSayacEfCollection.FirstOrDefault().EntSayacEf.SERINO,
-                TarifeAdi = x.AboneSayacEfCollection.FirstOrDefault().PrmTarifeElkEf.AD,
-                TarifeKayitNo = x.AboneSayacEfCollection.FirstOrDefault().PrmTarifeElkEf.KAYITNO
+                KimlikNo=x.KimlikNo,
+                Daire=x.Daire,
+                Blok=x.Blok
+               
             });
         }
 
@@ -39,7 +41,7 @@ namespace OsosOracle.DataLayer.Concrete.EntityFramework.Dal
         private IQueryable<ENTABONEEf> Filtrele(IQueryable<ENTABONEEf> result, ENTABONEAra filtre = null)
         {
             //silindi kolonu varsa silinenler gelmesin
-
+            result = result.Where(x => x.DURUM == 1);
             //TODO: filtereyi özelleştir
             if (filtre != null)
             {
@@ -69,16 +71,29 @@ namespace OsosOracle.DataLayer.Concrete.EntityFramework.Dal
                     }
                     if (!string.IsNullOrEmpty(filtre.AboneNo))
                     {
-                        result = result.Where(x => x.AboneBilgiEfCollection.FirstOrDefault().ABONENO == filtre.AboneNo);
+                        result = result.Where(x => x.ABONENO == filtre.AboneNo);
                     }
                     if (!string.IsNullOrEmpty(filtre.AboneNoVeyAdiVeyaSoyadi))
                     {
-                        result = result.Where(x => (x.AD + " " + x.SOYAD).ToLower().Trim().Contains(filtre.AboneNoVeyAdiVeyaSoyadi.ToLower().Trim()) || x.AboneBilgiEfCollection.FirstOrDefault().ABONENO.Contains(filtre.AboneNoVeyAdiVeyaSoyadi.ToLower().Trim()));
+                        result = result.Where(x => (x.AD + " " + x.SOYAD).ToLower().Trim().Contains(filtre.AboneNoVeyAdiVeyaSoyadi.ToLower().Trim()) || x.ABONENO.Contains(filtre.AboneNoVeyAdiVeyaSoyadi.ToLower().Trim()));
                     }
                     if (filtre.SayacKayitNo != null)
                     {
-                        result = result.Where(x => x.AboneSayacEfCollection.Any(y => y.SAYACKAYITNO == filtre.SayacKayitNo));
+                        result = result.Where(x => x.AboneSayacEfCollection.Any(y => y.EntSayacEf.KAYITNO == filtre.SayacKayitNo));
                     }
+                    if (filtre.SonSatisTarihiBaslangic != null)
+                    {
+                        result = result.Where(x => x.SonSatisTarih >= filtre.SonSatisTarihiBaslangic);
+                    }
+                    if (filtre.SonSatisTarihBitis != null)
+                    {
+                        result = result.Where(x => x.SonSatisTarih <= filtre.SonSatisTarihBitis);
+                    }
+                    if (!string.IsNullOrEmpty(filtre.KimlikNo))
+                    {
+                        result = result.Where(x => x.KimlikNo == filtre.KimlikNo);
+                    }
+
                 }
             }
             return result;
@@ -251,7 +266,7 @@ namespace OsosOracle.DataLayer.Concrete.EntityFramework.Dal
                                                           KayitNo = x.KAYITNO,
                                                           Adi = x.AD,
                                                           Soyadi = x.SOYAD,
-                                                          AboneNo = x.AboneBilgiEfCollection.FirstOrDefault().ABONENO,
+                                                          AboneNo = x.ABONENO,
                                                       }), filtre?.Ara).ToList();
                     }
                     catch
@@ -262,6 +277,25 @@ namespace OsosOracle.DataLayer.Concrete.EntityFramework.Dal
                 }
             }
 
+        }
+
+        public AboneGenel AboneGenelBilgileriGetir(int aboneKayitNo)
+        {
+            using (var context = new AppContext())
+            {
+                return context.ENTABONEEf
+                     .Where(x => x.KAYITNO == aboneKayitNo).Select(x => new AboneGenel
+                     {
+                         KayitNo = x.KAYITNO,
+                         AboneNo = x.ABONENO,
+                         Adi = x.AD,
+                         Soyadi = x.SOYAD,
+                         AdiSoyadi= x.AD+" "+x.SOYAD,
+                         TcKimlikNo=x.KimlikNo,
+                         SonSatisTarihi=x.SonSatisTarih
+                     }).FirstOrDefault();
+
+            }
         }
     }
 }

@@ -1,0 +1,162 @@
+﻿@using OsosOracle.Framework.HtmlHelpers
+@model OsosOracle.MvcUI.Models.ENTSATISModels.ENTSATISKaydetModel
+
+@section panelHeading
+{
+
+}
+
+<div class="ajaxForm">
+
+    @using (Html.BeginForm("Kaydet", "Satis", FormMethod.Post))
+    {
+        @Html.AntiForgeryToken()
+        @Html.HiddenFor(t => t.ENTSATIS.KAYITNO)
+        @Html.HiddenFor(t => t.ENTSATIS.SAYACKAYITNO)
+        @Html.HiddenFor(t => t.ENTSATIS.ABONEKAYITNO)
+        @Html.HiddenFor(t => t.ENTSATIS.VERSIYON)
+        @Html.HiddenFor(t => t.ENTSATIS.IPTAL)
+        @Html.HiddenFor(t => t.ENTSATIS.FATURANO)
+        @Html.HiddenFor(t => t.ENTSATIS.VERSIYON)
+        @Html.ValidationSummary(true)
+
+        if (Model.PrmTarifeSuDetay.AD != null)
+        {
+            <div class="form-group row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        @Html.TextBoxFor(t => t.SayacSeriNo, new { @class = "form-control", placeholder = _T("Sayaç Seri No") })
+                        @Html.ValidationMessageFor(t => t.SayacSeriNo)
+                    </div>
+
+                    <div class="form-group">
+                        @Html.TextBoxFor(t => t.PrmTarifeSuDetay.AD, new { @class = "form-control", placeholder = _T("Tarife") })
+                        @Html.ValidationMessageFor(t => t.PrmTarifeSuDetay.AD)
+                    </div>
+                    <div class="form-group">
+                        @Html.TextBoxFor(t => t.PrmTarifeSuDetay.SAYACCAP, new { @class = "form-control", placeholder = _T("Çap") })
+                        @Html.ValidationMessageFor(t => t.PrmTarifeSuDetay.SAYACCAP)
+                    </div>
+                    <div class="form-group">
+                        @Html.TextBoxFor(t => t.PrmTarifeSuDetay.TUKETIMKATSAYI, new { @class = "form-control", placeholder = _T("Tüketim Katsayısı") })
+                        @Html.ValidationMessageFor(t => t.PrmTarifeSuDetay.TUKETIMKATSAYI)
+                    </div>
+                    <div class="form-group">
+                        @Html.TextBoxFor(t => t.PrmTarifeSuDetay.BIRIMFIYAT, new { @class = "form-control", placeholder = _T("Birim Fİyat") })
+                        @Html.ValidationMessageFor(t => t.PrmTarifeSuDetay.BIRIMFIYAT)
+                    </div>
+
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        @Html.TextBoxFor(t => t.GirilenTutar, new { @class = "form-control", placeholder = _T("Tutar") })
+                        @Html.ValidationMessageFor(t => t.ENTSATIS.KREDI)
+                    </div>
+                    <div class="form-group">
+                        @Html.TextBoxFor(t => t.ENTSATIS.KREDI, new { @class = "form-control", placeholder = _T("M3") })
+                        @* @Html.ValidationMessageFor(t => t.TuketimKatsayisi)*@
+                    </div>
+                </div>
+            </div>
+        }
+        else if (Model.PrmTarifeElkDetay.AD != null)
+        {
+            <div class="form-group row ">
+                <button id="btnkartOku" type="button" class="btn btn-danger btn-sm"> Kart Oku </button>
+            </div>
+
+            <div class="form-group row">
+                <div class="col-md-3">
+                    @Html.TextBoxFor(t => t.SayacSeriNo, new { @class = "form-control", placeholder = _T("Sayaç Seri No") })
+                </div>
+                <div class="col-md-3">
+                    @Html.TextBoxFor(t => t.PrmTarifeElkDetay.AD, new { @class = "form-control", placeholder = _T("Tarife") })
+                </div>
+                <div class="col-md-3">
+                    @Html.TextBoxFor(t => t.AnaKredi, new { @class = "form-control", placeholder = _T("Ana Kredi") })
+                </div>
+                <div class="col-md-3">
+                    @Html.TextBoxFor(t => t.YedekKredi, new { @class = "form-control", placeholder = _T("Yedek Kredi") })
+                </div>
+            </div>
+
+        }
+
+
+
+
+        <div class="form-actions">
+            <button type="submit" class="btn btn-primary"><i class="fa fa-save"></i> @_T("Kaydet")</button>
+            @Html.ButtonLink(_T("Vazgeç").ToString(), "Index", "btn btn-xs btn-danger cancel", "fa-remove")
+        </div>
+    }
+</div>
+
+@section script
+{
+    <script type="text/javascript">
+        $(document).ready(function () {
+           $("#@Html.IdFor(t => t.GirilenTutar)").blur(function () {
+               Hesapla();
+            });
+
+
+            $("#btnkartOku").click(function () {
+
+                try {
+                    var elektrikKart = new ActiveXObject("SmartCard.SayacTurleri.Mcm");
+                    var hamdata = elektrikKart.AboneOku();
+                    if (hamdata != null) {
+
+                        var request = $.ajax({
+                                           url: "@Url.Action("KartOku", "Satis")",
+                                           method: "POST",
+                                           async: true,
+                                           dataType: "json",
+                                           data: { hamdata }
+                                         });
+                                          request.done(function (jqXHR) {
+
+                                            
+
+                                         });
+                                         request.fail(function (jqXHR, textStatus) {
+                                             unblockUI();
+                                             var msg = jQuery.parseJSON(jqXHR.responseText);
+                                             ajaxMesajGoster(msg.Mesaj);
+                                         });
+
+                    }
+                } catch (e) {
+
+                }
+            });
+
+        });
+         function Hesapla() {
+
+            var request = $.ajax({
+                url: "@Url.Action("Hesapla", "Satis")",
+                method: "POST",
+                async: true,
+                dataType: "json",
+                data: {
+                    sayacSeriNo: $("#@Html.IdFor(t => t.SayacSeriNo)").val(),
+                    tutar: $("#@Html.IdFor(t => t.GirilenTutar)").val()
+                }
+
+            });
+             request.done(function (jqXHR) {
+
+                 $("#@Html.IdFor(t => t.ENTSATIS.KREDI)").val(jqXHR);
+
+            });
+            request.fail(function (jqXHR, textStatus) {
+                unblockUI();
+                var msg = jQuery.parseJSON(jqXHR.responseText);
+                ajaxMesajGoster(msg.Mesaj);
+            });
+        }
+
+    </script>
+}

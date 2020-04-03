@@ -39,5 +39,7 @@ namespace OsosOracle.Business.Abstract
 
         [OperationContract]
         List<SYSMENU> ParentMenuGetir();
+        [OperationContract]
+        List<SYSMENU> YetkiGetir(int kullaniciKayitNo);
     }
 }

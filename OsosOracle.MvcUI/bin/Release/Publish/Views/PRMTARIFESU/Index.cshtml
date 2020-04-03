@@ -1,0 +1,118 @@
+
+@using OsosOracle.Framework.HtmlHelpers
+@using OsosOracle.MvcUI.Infrastructure
+@using OsosOracle.MvcUI.Resources
+@model OsosOracle.MvcUI.Models.PRMTARIFESUModels.PRMTARIFESUIndexModel
+
+@section panelHeading{
+    @Html.ButtonLink(Dil.TarifeEkle, "Ekle", "btn btn-xs btn-success modalizer", "fa-plus")
+}
+
+
+<table id="tblPRMTARIFESU" class="table table-striped table-bordered table-hover table-responsive">
+    <thead>
+        <tr>
+            <th>@Dil.Kurum</th>
+            <th>@Dil.Ad</th>
+            <th>@Dil.Aciklama</th>
+            <th>@Dil.YedekKredi</th>
+            <th>@Dil.Fiyat 1</th>
+            <th>@Dil.Fiyat 2</th>
+            <th>@Dil.Fiyat 3</th>
+            <th>@Dil.Fiyat 4</th>
+            <th>@Dil.Fiyat 5</th>
+            <th>@Dil.Limit 1</th>
+            <th>@Dil.Limit 2</th>
+            <th>@Dil.Limit 3</th>
+            <th>@Dil.Limit 4</th>
+            <th>@Dil.TuketimKatsayisi</th>
+            @* <th>@Dil.KrediKatSayisi</th>*@
+            <th>@Dil.SabitUcret</th>
+            <th>@Dil.CAP</th>
+            <th>@Dil.AvansOnay</th>
+            <th>@Dil.DonemGun</th>
+            <th>@Dil.Bayram1Gun</th>
+            <th>@Dil.Bayram1Ay</th>
+            <th>@Dil.Bayram1Sure)</th>
+            <th>@Dil.Bayram2Gun</th>
+            <th>@Dil.Bayram2Ay</th>
+            <th>@Dil.Bayram2Sure</th>
+            <th>@Dil.MaxDebi</th>
+            @*  <th>@Dil.KRITIKKREDI</th>*@
+            <th>@Dil.BaglantiPeriyot</th>
+            <th>@Dil.YanginModSuresi</th>
+            <th>@Dil.BirimFiyat</th>
+            <th>@Dil.BorcYuzde</th>
+            <th style="width: 100px">@Dil.Islem</th>
+        </tr>
+    </thead>
+</table>
+@section script{
+    <script type="text/javascript">
+	$(document).ready(function () {
+		AraFiltered();
+		$("#btnAra").click(function(e) {
+				e.preventDefault();
+				AraFiltered();
+		});
+	});
+
+	function AraFiltered() {
+        $('#tblPRMTARIFESU').dataTable({
+            fixedColumns: {
+                leftColumns: 3
+            },
+            scrollX: true,
+            "order": [[1, "asc"]],
+            'language': dataTableLanguage,
+			'processing': true,
+			'serverSide': true,
+			'destroy': true,
+            'columns': [
+                {'data': "Kurum" },
+                {'data': "AD" },
+                {'data': "ACIKLAMA" },
+				{'data': "YEDEKKREDI"},
+				{'data': "FIYAT1"},
+				{'data': "FIYAT2"},
+				{'data': "FIYAT3"},
+				{'data': "FIYAT4"},
+				{'data': "FIYAT5"},
+				{'data': "LIMIT1"},
+				{'data': "LIMIT2"},
+				{'data': "LIMIT3"},
+				{'data': "LIMIT4"},
+				{'data': "TUKETIMKATSAYI"},
+				//{'data': "KREDIKATSAYI"},
+				{'data': "SABITUCRET"},
+				{'data': "SAYACCAP"},
+				{'data': "AVANSONAY"},
+				{'data': "DONEMGUN"},
+				{'data': "BAYRAM1GUN"},
+				{'data': "BAYRAM1AY"},
+				{'data': "BAYRAM1SURE"},
+				{'data': "BAYRAM2GUN"},
+				{'data': "BAYRAM2AY"},
+				{'data': "BAYRAM2SURE"},
+				{'data': "MAXDEBI"},
+				//{'data': "KRITIKKREDI"},
+				{'data': "BAGLANTIPERIYOT"},
+				{'data': "YANGINMODSURE"},
+				{'data': "BIRIMFIYAT"},
+                {'data': "BORCYUZDE" },
+                {'data': "Islemler", sortable: false },
+				
+			],
+			'ajax': {
+				'type': 'POST',
+				'data': $("#frmAra").serializeObject(),
+				'url': "@Url.Action("DataTablesList", "PRMTARIFESU")",
+				'error': function(xhr, ajaxOptions, errorThrown) { ajaxMesajGoster(xhr.responseJSON.Mesaj); },
+				'complete': function() { }
+		   }
+
+		});
+	 }
+
+    </script>
+}

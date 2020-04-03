@@ -1,24 +1,25 @@
 
 using OsosOracle.Entities.ComplexType.PRMTARIFEELKComplexTypes;
+using OsosOracle.Entities.ComplexType.PRMTARIFEKALORIMETREComplexTypes;
 using OsosOracle.Entities.ComplexType.PRMTARIFESUComplexTypes;
 using OsosOracle.Entities.Concrete;
 namespace OsosOracle.MvcUI.Models.ENTSATISModels
 {
-	public class ENTSATISKaydetModel
+    public class ENTSATISKaydetModel
     {
         public ENTSATISKaydetModel()
         {
-            ElkKartYuklenecek = new ElkKartYazilan();
+            ElektrikYuklenecek = new ElkKartYazilan();
             KalorimetreYazilacak = new KalorimetreYazilacak();
-           
             SogukSuYazilacak = new SogukSuYazilacak();
         }
         public PRMTARIFESUDetay PrmTarifeSuDetay { get; set; }
         public PRMTARIFEELKDetay PrmTarifeElkDetay { get; set; }
+        public PRMTARIFEKALORIMETREDetay PrmTarifeKALORIMETREDetay { get; set; }
 
-        public ElkKartOkunan ElkKartOkunan { get; set; }
+        public ElektrikOkunan ElektrikOkunan { get; set; }
 
-        public ElkKartYazilan ElkKartYuklenecek { get; set; }
+        public ElkKartYazilan ElektrikYuklenecek { get; set; }
 
         public KalorimetreOkunan KalorimetreOkunan { get; set; }
         public KalorimetreYazilacak KalorimetreYazilacak { get; set; }
@@ -28,8 +29,8 @@ namespace OsosOracle.MvcUI.Models.ENTSATISModels
 
         public ENTSATIS ENTSATIS { get; set; }
         public string SayacTipi { get; set; }
-      
-        public int SayacSeriNo { get;  set; }
+
+        public int SayacSeriNo { get; set; }
 
         public decimal GirilenTutar { get; set; }
 
@@ -40,5 +41,7 @@ namespace OsosOracle.MvcUI.Models.ENTSATISModels
         public string HamData { get; set; }
 
         public string fileName { get; set; }
+
+        public string SayacCesidi { get; set; }//Elektrik,Su,Dogalgaz,Kalorimetre olabilir
     }
 }

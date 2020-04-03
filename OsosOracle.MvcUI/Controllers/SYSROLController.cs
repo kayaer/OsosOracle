@@ -11,6 +11,9 @@ using OsosOracle.Framework.Utilities.ExtensionMethods;
 using OsosOracle.Framework.Enums;
 using OsosOracle.Framework.DataAccess.Filter;
 using OsosOracle.MvcUI.Filters;
+using System;
+using OsosOracle.Framework.CrossCuttingConcern.ExceptionHandling;
+using OsosOracle.MvcUI.Resources;
 
 namespace OsosOracle.MvcUI.Controllers
 {
@@ -60,9 +63,9 @@ namespace OsosOracle.MvcUI.Controllers
                     t.KURUMKAYITNO,
                     t.Kurum,
 
-                    Islemler = $@"<a class='btn btn-xs btn-info modalizer' href='{Url.Action("Guncelle", "SYSROL", new { id = t.KAYITNO })}' title='Düzenle'><i class='fa fa-edit'></i></a>
-							   <a class='btn btn-xs btn-primary' href='{Url.Action("Detay", "SYSROL", new { id = t.KAYITNO })}' title='Detay'><i class='fa fa-th-list'></i></a>
-								<a class='btn btn-xs btn-danger modalizer' href='{Url.Action("Sil", "SYSROL", new { id = t.KAYITNO })}' title='Sil'><i class='fa fa-trash'></i></a>"
+                    Islemler = $@"<a class='btn btn-xs btn-info modalizer' href='{Url.Action("Guncelle", "SYSROL", new { id = t.KAYITNO })}' title='{Dil.Duzenle}'><i class='fa fa-edit'></i></a>
+							  
+								<a class='btn btn-xs btn-danger modalizer' href='{Url.Action("Sil", "SYSROL", new { id = t.KAYITNO })}' title='{Dil.Sil}'><i class='fa fa-trash'></i></a>"
                 }),
                 draw = dtParameterModel.Draw,
                 recordsTotal = kayitlar.ToplamKayitSayisi,
@@ -120,15 +123,16 @@ namespace OsosOracle.MvcUI.Controllers
         {
             if (sYSROLKaydetModel.SYSROL.KAYITNO > 0)
             {
+                sYSROLKaydetModel.SYSROL.GUNCELLEYEN = AktifKullanici.KayitNo;
                 _sYSROLService.Guncelle(sYSROLKaydetModel.SYSROL.List());
             }
             else
             {
+                sYSROLKaydetModel.SYSROL.OLUSTURAN = AktifKullanici.KayitNo;
                 _sYSROLService.Ekle(sYSROLKaydetModel.SYSROL.List());
             }
 
-            return Yonlendir(Url.Action("Index"), $"SYSROL kayıdı başarıyla gerçekleştirilmiştir.");
-            //return Yonlendir(Url.Action("Detay","SYSROL",new{id=sYSROLKaydetModel.SYSROL.Id}), $"SYSROL kayıdı başarıyla gerçekleştirilmiştir.");
+            return Yonlendir(Url.Action("Index"), $"Rol kaydı başarıyla gerçekleştirilmiştir.");
         }
 
 
@@ -143,10 +147,17 @@ namespace OsosOracle.MvcUI.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Sil(DeleteViewModel model)
         {
-            _sysRolKullaniciService.RolKullaniciSil(model.Id, null);
-            _sYSROLService.Sil(model.Id.List());
-
-            return Yonlendir(Url.Action("Index"), $"Rol Başarıyla silindi");
+            try
+            {
+                _sYSROLService.Sil(model.Id.List());
+                return Yonlendir(Url.Action("Index"), $"Rol Başarıyla silindi");
+            }
+            catch (Exception ex)
+            {
+                throw new NotificationException(ex.Message);
+            }
+         
+           
         }
 
 

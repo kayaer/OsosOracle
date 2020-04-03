@@ -1,0 +1,124 @@
+D:\Nebi Eks Kalorimetre\OsosOracle\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+D:\Nebi Eks Kalorimetre\OsosOracle\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+D:\Nebi Eks Kalorimetre\OsosOracle\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+D:\Nebi Eks Kalorimetre\OsosOracle\WindowsFormsApp1\bin\Debug\SmartCard.dll
+D:\Nebi Eks Kalorimetre\OsosOracle\WindowsFormsApp1\bin\Debug\SmartCard.pdb
+D:\Nebi Eks Kalorimetre\OsosOracle\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csprojAssemblyReference.cache
+D:\Nebi Eks Kalorimetre\OsosOracle\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1.resources
+D:\Nebi Eks Kalorimetre\OsosOracle\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+D:\Nebi Eks Kalorimetre\OsosOracle\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
+D:\Nebi Eks Kalorimetre\OsosOracle\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
+D:\Nebi Eks Kalorimetre\OsosOracle\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CopyComplete
+D:\Nebi Eks Kalorimetre\OsosOracle\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+D:\Nebi Eks Kalorimetre\OsosOracle\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+C:\Users\ELKTRMD\Downloads\wetransfer-c7365b\OsosOracle\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+C:\Users\ELKTRMD\Downloads\wetransfer-c7365b\OsosOracle\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+C:\Users\ELKTRMD\Downloads\wetransfer-c7365b\OsosOracle\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+C:\Users\ELKTRMD\Downloads\wetransfer-c7365b\OsosOracle\WindowsFormsApp1\bin\Debug\SmartCard.dll
+C:\Users\ELKTRMD\Downloads\wetransfer-c7365b\OsosOracle\WindowsFormsApp1\bin\Debug\SmartCard.pdb
+C:\Users\ELKTRMD\Downloads\wetransfer-c7365b\OsosOracle\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csprojAssemblyReference.cache
+C:\Users\ELKTRMD\Downloads\wetransfer-c7365b\OsosOracle\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1.resources
+C:\Users\ELKTRMD\Downloads\wetransfer-c7365b\OsosOracle\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+C:\Users\ELKTRMD\Downloads\wetransfer-c7365b\OsosOracle\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
+C:\Users\ELKTRMD\Downloads\wetransfer-c7365b\OsosOracle\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CopyComplete
+C:\Users\ELKTRMD\Downloads\wetransfer-c7365b\OsosOracle\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+C:\Users\ELKTRMD\Downloads\wetransfer-c7365b\OsosOracle\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+C:\Users\ARGE X\Desktop\19.01.2019 Libya Yonca Çalışması\OsosOracle\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+C:\Users\ARGE X\Desktop\19.01.2019 Libya Yonca Çalışması\OsosOracle\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+C:\Users\ARGE X\Desktop\19.01.2019 Libya Yonca Çalışması\OsosOracle\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+C:\Users\ARGE X\Desktop\19.01.2019 Libya Yonca Çalışması\OsosOracle\WindowsFormsApp1\bin\Debug\SmartCard.dll
+C:\Users\ARGE X\Desktop\19.01.2019 Libya Yonca Çalışması\OsosOracle\WindowsFormsApp1\bin\Debug\SmartCard.pdb
+C:\Users\ARGE X\Desktop\19.01.2019 Libya Yonca Çalışması\OsosOracle\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csprojAssemblyReference.cache
+C:\Users\ARGE X\Desktop\19.01.2019 Libya Yonca Çalışması\OsosOracle\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1.resources
+C:\Users\ARGE X\Desktop\19.01.2019 Libya Yonca Çalışması\OsosOracle\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+C:\Users\ARGE X\Desktop\19.01.2019 Libya Yonca Çalışması\OsosOracle\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
+C:\Users\ARGE X\Desktop\19.01.2019 Libya Yonca Çalışması\OsosOracle\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
+C:\Users\ARGE X\Desktop\19.01.2019 Libya Yonca Çalışması\OsosOracle\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CopyComplete
+C:\Users\ARGE X\Desktop\19.01.2019 Libya Yonca Çalışması\OsosOracle\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+C:\Users\ARGE X\Desktop\19.01.2019 Libya Yonca Çalışması\OsosOracle\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+D:\OsosOracle\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+D:\OsosOracle\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+D:\OsosOracle\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+D:\OsosOracle\WindowsFormsApp1\bin\Debug\SmartCard.dll
+D:\OsosOracle\WindowsFormsApp1\bin\Debug\SmartCard.pdb
+D:\OsosOracle\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csprojAssemblyReference.cache
+D:\OsosOracle\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1.resources
+D:\OsosOracle\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+D:\OsosOracle\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
+D:\OsosOracle\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CopyComplete
+D:\OsosOracle\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+D:\OsosOracle\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+F:\OsosOracle\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+F:\OsosOracle\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+F:\OsosOracle\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+F:\OsosOracle\WindowsFormsApp1\bin\Debug\SmartCard.dll
+F:\OsosOracle\WindowsFormsApp1\bin\Debug\SmartCard.pdb
+F:\OsosOracle\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csprojAssemblyReference.cache
+F:\OsosOracle\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1.resources
+F:\OsosOracle\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+F:\OsosOracle\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
+F:\OsosOracle\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CopyComplete
+F:\OsosOracle\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+F:\OsosOracle\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+G:\1.3.2020 OsosOracle\OsosOracle\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+G:\1.3.2020 OsosOracle\OsosOracle\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+G:\1.3.2020 OsosOracle\OsosOracle\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+G:\1.3.2020 OsosOracle\OsosOracle\WindowsFormsApp1\bin\Debug\SmartCard.dll
+G:\1.3.2020 OsosOracle\OsosOracle\WindowsFormsApp1\bin\Debug\SmartCard.pdb
+G:\1.3.2020 OsosOracle\OsosOracle\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csprojAssemblyReference.cache
+G:\1.3.2020 OsosOracle\OsosOracle\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1.resources
+G:\1.3.2020 OsosOracle\OsosOracle\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+G:\1.3.2020 OsosOracle\OsosOracle\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
+G:\1.3.2020 OsosOracle\OsosOracle\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CopyComplete
+G:\1.3.2020 OsosOracle\OsosOracle\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+G:\1.3.2020 OsosOracle\OsosOracle\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+C:\Users\ARGE X\Desktop\1.3.2020 OsosOracle\OsosOracle\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+C:\Users\ARGE X\Desktop\1.3.2020 OsosOracle\OsosOracle\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+C:\Users\ARGE X\Desktop\1.3.2020 OsosOracle\OsosOracle\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+C:\Users\ARGE X\Desktop\1.3.2020 OsosOracle\OsosOracle\WindowsFormsApp1\bin\Debug\SmartCard.dll
+C:\Users\ARGE X\Desktop\1.3.2020 OsosOracle\OsosOracle\WindowsFormsApp1\bin\Debug\SmartCard.pdb
+C:\Users\ARGE X\Desktop\1.3.2020 OsosOracle\OsosOracle\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csprojAssemblyReference.cache
+C:\Users\ARGE X\Desktop\1.3.2020 OsosOracle\OsosOracle\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1.resources
+C:\Users\ARGE X\Desktop\1.3.2020 OsosOracle\OsosOracle\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+C:\Users\ARGE X\Desktop\1.3.2020 OsosOracle\OsosOracle\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
+C:\Users\ARGE X\Desktop\1.3.2020 OsosOracle\OsosOracle\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
+C:\Users\ARGE X\Desktop\1.3.2020 OsosOracle\OsosOracle\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CopyComplete
+C:\Users\ARGE X\Desktop\1.3.2020 OsosOracle\OsosOracle\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+C:\Users\ARGE X\Desktop\1.3.2020 OsosOracle\OsosOracle\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+F:\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+F:\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+F:\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+F:\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\WindowsFormsApp1\bin\Debug\SmartCard.dll
+F:\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\WindowsFormsApp1\bin\Debug\SmartCard.pdb
+F:\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csprojAssemblyReference.cache
+F:\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1.resources
+F:\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+F:\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
+F:\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CopyComplete
+F:\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+F:\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+C:\Users\ARGE X\Desktop\7.3.2020\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+C:\Users\ARGE X\Desktop\7.3.2020\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+C:\Users\ARGE X\Desktop\7.3.2020\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+C:\Users\ARGE X\Desktop\7.3.2020\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\WindowsFormsApp1\bin\Debug\SmartCard.dll
+C:\Users\ARGE X\Desktop\7.3.2020\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\WindowsFormsApp1\bin\Debug\SmartCard.pdb
+C:\Users\ARGE X\Desktop\7.3.2020\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csprojAssemblyReference.cache
+C:\Users\ARGE X\Desktop\7.3.2020\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1.resources
+C:\Users\ARGE X\Desktop\7.3.2020\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+C:\Users\ARGE X\Desktop\7.3.2020\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
+C:\Users\ARGE X\Desktop\7.3.2020\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
+C:\Users\ARGE X\Desktop\7.3.2020\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CopyComplete
+C:\Users\ARGE X\Desktop\7.3.2020\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+C:\Users\ARGE X\Desktop\7.3.2020\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+C:\Projeler\OsosOracle\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+C:\Projeler\OsosOracle\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+C:\Projeler\OsosOracle\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+C:\Projeler\OsosOracle\WindowsFormsApp1\bin\Debug\SmartCard.dll
+C:\Projeler\OsosOracle\WindowsFormsApp1\bin\Debug\SmartCard.pdb
+C:\Projeler\OsosOracle\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csprojAssemblyReference.cache
+C:\Projeler\OsosOracle\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1.resources
+C:\Projeler\OsosOracle\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+C:\Projeler\OsosOracle\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
+C:\Projeler\OsosOracle\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CopyComplete
+C:\Projeler\OsosOracle\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+C:\Projeler\OsosOracle\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb

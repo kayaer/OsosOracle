@@ -5,7 +5,7 @@ using System.Web;
 
 namespace OsosOracle.MvcUI.Models.ENTSATISModels
 {
-    public  class Elektrik
+    public class Elektrik
     {
 
         public static int YuklemeLimitiHesaplaElektrik(int yuklemeLimiti)
@@ -24,7 +24,7 @@ namespace OsosOracle.MvcUI.Models.ENTSATISModels
             return result;
         }
 
-      
+
 
         //Yaz sınıfları hesaplamaların yapılıp karta yazılıcak değerleri taşır
         //Okunan sınıfları karttan okunan bilgilerin pars edilmiş haşşerini taşır
@@ -59,18 +59,18 @@ namespace OsosOracle.MvcUI.Models.ENTSATISModels
             miktar = Convert.ToDecimal(islemMiktarElk);
             var toplamYuklenecekMiktar = miktar;
 
-            if (model.ElkKartOkunan.AnaKrediKontrol == false && model.ElkKartOkunan.YedekKrediKontrol == true)// b *
+            if (model.ElektrikOkunan.AnaKrediKontrol == false && model.ElektrikOkunan.YedekKrediKontrol == true)// b *
             {
                 sayacBilgi = string.Format("YeniKartUyari", "Elektrik");
             }
-            else if (miktar > model.PrmTarifeElkDetay.YEDEKKREDI || (model.ElkKartOkunan.YedekKredi > 0 && model.ElkKartOkunan.YedekKrediKontrol == false))
+            else if (miktar > model.PrmTarifeElkDetay.YEDEKKREDI || (model.ElektrikOkunan.YedekKredi > 0 && model.ElektrikOkunan.YedekKrediKontrol == false))
             {
-                if (model.ElkKartOkunan.AnaKrediKontrol == false) toplamYuklenecekMiktar += model.ElkKartOkunan.AnaKredi;
-                if (model.ElkKartOkunan.YedekKrediKontrol == false) toplamYuklenecekMiktar += model.ElkKartOkunan.YedekKredi;
+                if (model.ElektrikOkunan.AnaKrediKontrol == false) toplamYuklenecekMiktar += model.ElektrikOkunan.AnaKredi;
+                if (model.ElektrikOkunan.YedekKrediKontrol == false) toplamYuklenecekMiktar += model.ElektrikOkunan.YedekKredi;
 
-                model.ElkKartYuklenecek.AnaKredi = Convert.ToInt64( toplamYuklenecekMiktar - model.PrmTarifeElkDetay.YEDEKKREDI);
+                model.ElektrikYuklenecek.AnaKredi = Convert.ToInt64(toplamYuklenecekMiktar - model.PrmTarifeElkDetay.YEDEKKREDI);
 
-                model.ElkKartYuklenecek.YedekKredi = Convert.ToInt64(model.PrmTarifeElkDetay.YEDEKKREDI);
+                model.ElektrikYuklenecek.YedekKredi = Convert.ToInt64(model.PrmTarifeElkDetay.YEDEKKREDI);
 
                 //model.SatisTur = 0;
             }
@@ -79,25 +79,25 @@ namespace OsosOracle.MvcUI.Models.ENTSATISModels
                 sayacBilgi = string.Format("YuklenenKrediMiktariYedekKredidenYuksekOlmali", model.YedekKredi);
             }
 
-            model.ElkKartYuklenecek.AksamSaati = Convert.ToDecimal(model.PrmTarifeElkDetay.AKSAMSAAT);
-            model.ElkKartYuklenecek.SabahSaati = Convert.ToDecimal(model.PrmTarifeElkDetay.SABAHSAAT);
-            model.ElkKartYuklenecek.SayacSeriNo = model.ElkKartOkunan.SayacSeriNo;
+            model.ElektrikYuklenecek.AksamSaati = Convert.ToDecimal(model.PrmTarifeElkDetay.AKSAMSAAT);
+            model.ElektrikYuklenecek.SabahSaati = Convert.ToDecimal(model.PrmTarifeElkDetay.SABAHSAAT);
+            model.ElektrikYuklenecek.SayacSeriNo = model.ElektrikOkunan.SayacSeriNo;
             //model.ElkKartYuklenecek.TarifeTip = model.PrmTarifeElkDetay.TarifeTip;
-            model.ElkKartYuklenecek.Tatil1Ay = model.PrmTarifeElkDetay.BAYRAM1AY;
-            model.ElkKartYuklenecek.Tatil1Gun = model.PrmTarifeElkDetay.BAYRAM1GUN;
-            model.ElkKartYuklenecek.Tatil1Sure = model.PrmTarifeElkDetay.BAYRAM1SURE;
-            model.ElkKartYuklenecek.Tatil2Ay = model.PrmTarifeElkDetay.BAYRAM2AY;
-            model.ElkKartYuklenecek.Tatil2Gun = model.PrmTarifeElkDetay.BAYRAM2GUN;
-            model.ElkKartYuklenecek.Tatil2Sure = model.PrmTarifeElkDetay.BAYRAM2SURE;
-            model.ElkKartYuklenecek.FixCharge = model.PrmTarifeElkDetay.SABITUCRET;
+            model.ElektrikYuklenecek.Tatil1Ay = model.PrmTarifeElkDetay.BAYRAM1AY;
+            model.ElektrikYuklenecek.Tatil1Gun = model.PrmTarifeElkDetay.BAYRAM1GUN;
+            model.ElektrikYuklenecek.Tatil1Sure = model.PrmTarifeElkDetay.BAYRAM1SURE;
+            model.ElektrikYuklenecek.Tatil2Ay = model.PrmTarifeElkDetay.BAYRAM2AY;
+            model.ElektrikYuklenecek.Tatil2Gun = model.PrmTarifeElkDetay.BAYRAM2GUN;
+            model.ElektrikYuklenecek.Tatil2Sure = model.PrmTarifeElkDetay.BAYRAM2SURE;
+            model.ElektrikYuklenecek.FixCharge = model.PrmTarifeElkDetay.SABITUCRET;
 
-            model.ElkKartYuklenecek.KritikKredi = model.PrmTarifeElkDetay.KRITIKKREDI;
-            model.ElkKartYuklenecek.YuklemeLimiti = YuklemeLimitiHesaplaElektrik(model.PrmTarifeElkDetay.YUKLEMELIMIT);
-            model.ElkKartYuklenecek.Fiyat1 = model.PrmTarifeElkDetay.FIYAT1 * katsayiElk;
-            model.ElkKartYuklenecek.Fiyat2 = model.PrmTarifeElkDetay.FIYAT2 * katsayiElk;
-            model.ElkKartYuklenecek.Fiyat3 = model.PrmTarifeElkDetay.FIYAT3 * katsayiElk;
-            model.ElkKartYuklenecek.Limit1 = Convert.ToInt64(model.PrmTarifeElkDetay.LIMIT1);
-            model.ElkKartYuklenecek.Limit2 = Convert.ToInt64(model.PrmTarifeElkDetay.LIMIT2);
+            model.ElektrikYuklenecek.KritikKredi = model.PrmTarifeElkDetay.KRITIKKREDI;
+            model.ElektrikYuklenecek.YuklemeLimiti = YuklemeLimitiHesaplaElektrik(model.PrmTarifeElkDetay.YUKLEMELIMIT);
+            model.ElektrikYuklenecek.Fiyat1 = model.PrmTarifeElkDetay.FIYAT1 * katsayiElk;
+            model.ElektrikYuklenecek.Fiyat2 = model.PrmTarifeElkDetay.FIYAT2 * katsayiElk;
+            model.ElektrikYuklenecek.Fiyat3 = model.PrmTarifeElkDetay.FIYAT3 * katsayiElk;
+            model.ElektrikYuklenecek.Limit1 = Convert.ToInt64(model.PrmTarifeElkDetay.LIMIT1);
+            model.ElektrikYuklenecek.Limit2 = Convert.ToInt64(model.PrmTarifeElkDetay.LIMIT2);
 
             //Tuple<TarifeElk, decimal, string> res = new Tuple<TarifeElk, decimal, string>(model.ElektrikYuklenecek, miktar, sayacBilgi);
 

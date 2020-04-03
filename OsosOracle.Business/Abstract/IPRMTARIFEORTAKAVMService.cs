@@ -1,38 +1,38 @@
 
 using System.Collections.Generic;
 using System.ServiceModel;
-using OsosOracle.Entities.ComplexType.PRMTARIFEORTAKAVMComplexTypes;
+using OsosOracle.Entities.ComplexType.PRMTARIFEKALORIMETREComplexTypes;
 using OsosOracle.Entities.Concrete;
 
 namespace OsosOracle.Business.Abstract
 {
 	[ServiceContract]
-	public interface IPRMTARIFEORTAKAVMService
+	public interface IPRMTARIFEKALORIMETREService
 	{
 		[OperationContract]
-		PRMTARIFEORTAKAVM GetirById(int id);
+		PRMTARIFEKALORIMETRE GetirById(int id);
 
 		[OperationContract]
-		PRMTARIFEORTAKAVMDetay DetayGetirById(int id);
+		PRMTARIFEKALORIMETREDetay DetayGetirById(int id);
 
 		[OperationContract]
-		List<PRMTARIFEORTAKAVM> Getir(PRMTARIFEORTAKAVMAra filtre = null);
+		List<PRMTARIFEKALORIMETRE> Getir(PRMTARIFEKALORIMETREAra filtre = null);
 
 		[OperationContract]
-		List<PRMTARIFEORTAKAVMDetay> DetayGetir(PRMTARIFEORTAKAVMAra filtre = null);
+		List<PRMTARIFEKALORIMETREDetay> DetayGetir(PRMTARIFEKALORIMETREAra filtre = null);
 
 		[OperationContract]
-		int KayitSayisiGetir(PRMTARIFEORTAKAVMAra filtre = null);
+		int KayitSayisiGetir(PRMTARIFEKALORIMETREAra filtre = null);
 
 
 		[OperationContract]
-		PRMTARIFEORTAKAVMDataTable Ara(PRMTARIFEORTAKAVMAra filtre = null);
+		PRMTARIFEKALORIMETREDataTable Ara(PRMTARIFEKALORIMETREAra filtre = null);
 
 		[OperationContract]
-		void Ekle(List<PRMTARIFEORTAKAVM> entityler);
+		void Ekle(List<PRMTARIFEKALORIMETRE> entityler);
 
 		[OperationContract]
-		void Guncelle(List<PRMTARIFEORTAKAVM> entityler);
+		void Guncelle(List<PRMTARIFEKALORIMETRE> entityler);
 
 		[OperationContract]
 		void Sil(List<int> idler);

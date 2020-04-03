@@ -45,7 +45,7 @@ namespace OsosOracle.MvcUI.Controllers
             }
 
 
-
+            pRMTARIFESUAra.KURUMKAYITNO = AktifKullanici.KurumKayitNo;
             var kayitlar = _pRMTARIFESUService.Ara(pRMTARIFESUAra);
 
             return Json(new DataTableResult()
@@ -83,11 +83,10 @@ namespace OsosOracle.MvcUI.Controllers
                     t.MAXDEBI,
                     t.KRITIKKREDI,
                     t.KURUMKAYITNO,
-                    t.BAGLANTIPERIYOT,
-                    t.YANGINMODSURE,
+                    t.Ctv,
+                    t.Kdv,
                     t.BIRIMFIYAT,
                     Islemler = $@"<a class='btn btn-xs btn-info modalizer' href='{Url.Action("Guncelle", "PRMTARIFESU", new { id = t.KAYITNO })}' title='Düzenle'><i class='fa fa-edit'></i></a>
-							   <a class='btn btn-xs btn-primary' href='{Url.Action("Detay", "PRMTARIFESU", new { id = t.KAYITNO })}' title='Detay'><i class='fa fa-th-list'></i></a>
 								<a class='btn btn-xs btn-danger modalizer' href='{Url.Action("Sil", "PRMTARIFESU", new { id = t.KAYITNO })}' title='Sil'><i class='fa fa-trash'></i></a>"
                 }),
                 draw = dtParameterModel.Draw,
@@ -99,7 +98,7 @@ namespace OsosOracle.MvcUI.Controllers
 
         public ActionResult Ekle()
         {
-            SayfaBaslik($"PRMTARIFESU Ekle");
+            SayfaBaslik(Dil.TarifeEkle);
 
             var model = new PRMTARIFESUKaydetModel
             {
@@ -114,7 +113,7 @@ namespace OsosOracle.MvcUI.Controllers
 
         public ActionResult Guncelle(int id)
         {
-            SayfaBaslik($"PRMTARIFESU Güncelle");
+            SayfaBaslik(Dil.TarifeIslemleri);
 
             var model = new PRMTARIFESUKaydetModel
             {
@@ -144,16 +143,20 @@ namespace OsosOracle.MvcUI.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Kaydet(PRMTARIFESUKaydetModel pRMTARIFESUKaydetModel)
         {
+            pRMTARIFESUKaydetModel.PRMTARIFESU.KURUMKAYITNO = AktifKullanici.KurumKayitNo;
+            pRMTARIFESUKaydetModel.PRMTARIFESU.DURUM = 1;
             if (pRMTARIFESUKaydetModel.PRMTARIFESU.KAYITNO > 0)
             {
+                pRMTARIFESUKaydetModel.PRMTARIFESU.GUNCELLEYEN = AktifKullanici.KayitNo;
                 _pRMTARIFESUService.Guncelle(pRMTARIFESUKaydetModel.PRMTARIFESU.List());
             }
             else
             {
+                pRMTARIFESUKaydetModel.PRMTARIFESU.OLUSTURAN = AktifKullanici.KayitNo;
                 _pRMTARIFESUService.Ekle(pRMTARIFESUKaydetModel.PRMTARIFESU.List());
             }
 
-            return Yonlendir(Url.Action("Index"), $"PRMTARIFESU kayıdı başarıyla gerçekleştirilmiştir.");
+            return Yonlendir(Url.Action("Index"), $"Su tarife kayıdı başarıyla gerçekleştirilmiştir.");
             //return Yonlendir(Url.Action("Detay","PRMTARIFESU",new{id=pRMTARIFESUKaydetModel.PRMTARIFESU.Id}), $"PRMTARIFESU kayıdı başarıyla gerçekleştirilmiştir.");
         }
 
@@ -182,7 +185,7 @@ namespace OsosOracle.MvcUI.Controllers
             {
                 pRMTARIFESUAra = new PRMTARIFESUAra();
             }
-
+            pRMTARIFESUAra.KURUMKAYITNO = AktifKullanici.KurumKayitNo;
             pRMTARIFESUAra.Ara = new Ara
             {
                 Baslangic = baslangic,

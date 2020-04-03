@@ -1,0 +1,100 @@
+
+
+@using OsosOracle.Framework.HtmlHelpers
+@model OsosOracle.MvcUI.Models.SYSKULLANICIModels.SYSKULLANICIDetayModel
+
+@section panelHeading{
+    @Html.ButtonLink(_T("Listeye Dön").ToString(), "Index", "btn btn-xs btn-info", "fa-reply")
+    @Html.ButtonLink(_T("Sil").ToString(), "Sil", "btn btn-xs btn-danger modalizer", "fa-trash", new { id = Model.SYSKULLANICIDetay.KAYITNO })
+    @Html.ButtonLink(_T("Düzenle").ToString(), "Guncelle", "btn btn-xs btn-primary modalizer", "fa-edit", new { id = Model.SYSKULLANICIDetay.KAYITNO })
+
+}
+
+<div class="ajaxForm">
+
+
+    <div class="row static-info">
+        <div class="col-md-5 name">@_T("KULLANICIAD")</div>
+        <div class="col-md-7 value">@Model.SYSKULLANICIDetay.KULLANICIAD</div>
+    </div>
+
+
+    <div class="row static-info">
+        <div class="col-md-5 name">@_T("SIFRE")</div>
+        <div class="col-md-7 value">@Model.SYSKULLANICIDetay.SIFRE</div>
+    </div>
+
+
+    <div class="row static-info">
+        <div class="col-md-5 name">@_T("BIRIMKAYITNO")</div>
+        <div class="col-md-7 value">@Model.SYSKULLANICIDetay.BIRIMKAYITNO</div>
+    </div>
+
+
+    <div class="row static-info">
+        <div class="col-md-5 name">@_T("VERSIYON")</div>
+        <div class="col-md-7 value">@Model.SYSKULLANICIDetay.VERSIYON</div>
+    </div>
+
+
+    <div class="row static-info">
+        <div class="col-md-5 name">@_T("AD")</div>
+        <div class="col-md-7 value">@Model.SYSKULLANICIDetay.AD</div>
+    </div>
+
+
+    <div class="row static-info">
+        <div class="col-md-5 name">@_T("SOYAD")</div>
+        <div class="col-md-7 value">@Model.SYSKULLANICIDetay.SOYAD</div>
+    </div>
+
+
+    <div class="row static-info">
+        <div class="col-md-5 name">@_T("GRUPKAYITNO")</div>
+        <div class="col-md-7 value">@Model.SYSKULLANICIDetay.GRUPKAYITNO</div>
+    </div>
+
+
+    <div class="row static-info">
+        <div class="col-md-5 name">@_T("DURUM")</div>
+        <div class="col-md-7 value">@Model.SYSKULLANICIDetay.DURUM</div>
+    </div>
+
+
+    <div class="row static-info">
+        <div class="col-md-5 name">@_T("SIFREKOD")</div>
+        <div class="col-md-7 value">@Model.SYSKULLANICIDetay.SIFREKOD</div>
+    </div>
+
+
+    <div class="row static-info">
+        <div class="col-md-5 name">@_T("DIL")</div>
+        <div class="col-md-7 value">@Model.SYSKULLANICIDetay.DIL</div>
+    </div>
+
+
+    <div class="row static-info">
+        <div class="col-md-5 name">@_T("KULLANICITUR")</div>
+        <div class="col-md-7 value">@Model.SYSKULLANICIDetay.KULLANICITUR</div>
+    </div>
+
+
+    <div class="row static-info">
+        <div class="col-md-5 name">@_T("KURUMKAYITNO")</div>
+        <div class="col-md-7 value">@Model.SYSKULLANICIDetay.KURUMKAYITNO</div>
+    </div>
+
+
+
+    @Html.ButtonLink(_T("Vazgeç").ToString(), "Index", "btn btn-xs btn-danger cancel", "fa-remove")
+</div>
+
+@section script
+{
+    <script type="text/javascript">
+        $(document).ready(function () {
+            //js kodunuzu buraya yazın
+        });
+
+    </script>
+}

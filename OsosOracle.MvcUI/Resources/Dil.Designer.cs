@@ -19,7 +19,7 @@ namespace OsosOracle.MvcUI.Resources {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     public class Dil {
@@ -133,6 +133,24 @@ namespace OsosOracle.MvcUI.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Subs-Meter Operation.
+        /// </summary>
+        public static string AboneSayacIslemleri {
+            get {
+                return ResourceManager.GetString("AboneSayacIslemleri", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Select Subscriber.
+        /// </summary>
+        public static string AboneSec {
+            get {
+                return ResourceManager.GetString("AboneSec", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Subcriber Creation Date.
         /// </summary>
         public static string AboneTarih {
@@ -187,6 +205,15 @@ namespace OsosOracle.MvcUI.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Adet.
+        /// </summary>
+        public static string Adet {
+            get {
+                return ResourceManager.GetString("Adet", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Address.
         /// </summary>
         public static string Adres {
@@ -210,6 +237,15 @@ namespace OsosOracle.MvcUI.Resources {
         public static string AnaKredi {
             get {
                 return ResourceManager.GetString("AnaKredi", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Main Credit Read.
+        /// </summary>
+        public static string AnaKrediOkundu {
+            get {
+                return ResourceManager.GetString("AnaKrediOkundu", resourceCulture);
             }
         }
         
@@ -349,6 +385,15 @@ namespace OsosOracle.MvcUI.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Monthly maintenance fee.
+        /// </summary>
+        public static string AylikBakimBedeli {
+            get {
+                return ResourceManager.GetString("AylikBakimBedeli", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Low.
         /// </summary>
         public static string Az {
@@ -363,6 +408,15 @@ namespace OsosOracle.MvcUI.Resources {
         public static string BaglantiOlanVeriOlmayacSayac {
             get {
                 return ResourceManager.GetString("BaglantiOlanVeriOlmayacSayac", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to BaglantiPeriyot.
+        /// </summary>
+        public static string BaglantiPeriyot {
+            get {
+                return ResourceManager.GetString("BaglantiPeriyot", resourceCulture);
             }
         }
         
@@ -556,6 +610,15 @@ namespace OsosOracle.MvcUI.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Percent of debt.
+        /// </summary>
+        public static string BorcYuzde {
+            get {
+                return ResourceManager.GetString("BorcYuzde", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Find.
         /// </summary>
         public static string Bul {
@@ -655,6 +718,15 @@ namespace OsosOracle.MvcUI.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Environmental cleaning tax.
+        /// </summary>
+        public static string Ctv {
+            get {
+                return ResourceManager.GetString("Ctv", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Advanced Search.
         /// </summary>
         public static string DetayliArama {
@@ -736,6 +808,15 @@ namespace OsosOracle.MvcUI.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Electricity.
+        /// </summary>
+        public static string Elektrik {
+            get {
+                return ResourceManager.GetString("Elektrik", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Electricity Sales.
         /// </summary>
         public static string ElektrikKartSatis {
@@ -768,6 +849,15 @@ namespace OsosOracle.MvcUI.Resources {
         public static string Email {
             get {
                 return ResourceManager.GetString("Email", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Are you sure?.
+        /// </summary>
+        public static string EminMisiniz {
+            get {
+                return ResourceManager.GetString("EminMisiniz", resourceCulture);
             }
         }
         
@@ -871,6 +961,15 @@ namespace OsosOracle.MvcUI.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Gas.
+        /// </summary>
+        public static string Gaz {
+            get {
+                return ResourceManager.GetString("Gaz", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Gas Card Sales.
         /// </summary>
         public static string GazKartSatis {
@@ -903,6 +1002,15 @@ namespace OsosOracle.MvcUI.Resources {
         public static string GazTarifesi {
             get {
                 return ResourceManager.GetString("GazTarifesi", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Return.
+        /// </summary>
+        public static string GeriDon {
+            get {
+                return ResourceManager.GetString("GeriDon", resourceCulture);
             }
         }
         
@@ -961,6 +1069,15 @@ namespace OsosOracle.MvcUI.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Task Management.
+        /// </summary>
+        public static string GorevYonetimi {
+            get {
+                return ResourceManager.GetString("GorevYonetimi", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Group İnformation.
         /// </summary>
         public static string GrupBilgi {
@@ -993,6 +1110,15 @@ namespace OsosOracle.MvcUI.Resources {
         public static string GunlukSayacBilgileri {
             get {
                 return ResourceManager.GetString("GunlukSayacBilgileri", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to HaberlesenCihazSayisiGrafigi.
+        /// </summary>
+        public static string HaberlesenCihazSayisiGrafigi {
+            get {
+                return ResourceManager.GetString("HaberlesenCihazSayisiGrafigi", resourceCulture);
             }
         }
         
@@ -1132,7 +1258,7 @@ namespace OsosOracle.MvcUI.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Weekend eve.
+        ///   Looks up a localized string similar to Weekend evening.
         /// </summary>
         public static string HaftaSonuAksam {
             get {
@@ -1249,6 +1375,15 @@ namespace OsosOracle.MvcUI.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Index.
+        /// </summary>
+        public static string Index {
+            get {
+                return ResourceManager.GetString("Index", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to English.
         /// </summary>
         public static string Ingilizce {
@@ -1272,6 +1407,15 @@ namespace OsosOracle.MvcUI.Resources {
         public static string Iptal {
             get {
                 return ResourceManager.GetString("Iptal", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sales To be Canceled.
+        /// </summary>
+        public static string IptalEdilecekSatis {
+            get {
+                return ResourceManager.GetString("IptalEdilecekSatis", resourceCulture);
             }
         }
         
@@ -1384,11 +1528,29 @@ namespace OsosOracle.MvcUI.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Calorimeter.
+        /// </summary>
+        public static string Kalorimetre {
+            get {
+                return ResourceManager.GetString("Kalorimetre", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Calorimeter Tariff Operation.
         /// </summary>
         public static string KalorimetreTarifeIslemleri {
             get {
                 return ResourceManager.GetString("KalorimetreTarifeIslemleri", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cover Serial No.
+        /// </summary>
+        public static string KapakSeriNo {
+            get {
+                return ResourceManager.GetString("KapakSeriNo", resourceCulture);
             }
         }
         
@@ -1416,6 +1578,15 @@ namespace OsosOracle.MvcUI.Resources {
         public static string Kart {
             get {
                 return ResourceManager.GetString("Kart", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Card Information.
+        /// </summary>
+        public static string KartBilgileri {
+            get {
+                return ResourceManager.GetString("KartBilgileri", resourceCulture);
             }
         }
         
@@ -1465,6 +1636,15 @@ namespace OsosOracle.MvcUI.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Card Type.
+        /// </summary>
+        public static string KartTipi {
+            get {
+                return ResourceManager.GetString("KartTipi", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Find Card Type.
         /// </summary>
         public static string KartTuruBul {
@@ -1488,6 +1668,15 @@ namespace OsosOracle.MvcUI.Resources {
         public static string KayitNo {
             get {
                 return ResourceManager.GetString("KayitNo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Value-added tax.
+        /// </summary>
+        public static string Kdv {
+            get {
+                return ResourceManager.GetString("Kdv", resourceCulture);
             }
         }
         
@@ -1744,6 +1933,15 @@ namespace OsosOracle.MvcUI.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to User Management.
+        /// </summary>
+        public static string KullaniciYonetimi {
+            get {
+                return ResourceManager.GetString("KullaniciYonetimi", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Organization.
         /// </summary>
         public static string Kurum {
@@ -1890,9 +2088,9 @@ namespace OsosOracle.MvcUI.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Max Flow.
         /// </summary>
-        public static string MAXDEBI {
+        public static string MaxDebi {
             get {
-                return ResourceManager.GetString("MAXDEBI", resourceCulture);
+                return ResourceManager.GetString("MaxDebi", resourceCulture);
             }
         }
         
@@ -1920,6 +2118,15 @@ namespace OsosOracle.MvcUI.Resources {
         public static string Mekanik {
             get {
                 return ResourceManager.GetString("Mekanik", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Menü Manaement.
+        /// </summary>
+        public static string MenuYonetimi {
+            get {
+                return ResourceManager.GetString("MenuYonetimi", resourceCulture);
             }
         }
         
@@ -1987,6 +2194,24 @@ namespace OsosOracle.MvcUI.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Modem Brand Operations.
+        /// </summary>
+        public static string ModemMarkaIslemleri {
+            get {
+                return ResourceManager.GetString("ModemMarkaIslemleri", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Modem Model Operations.
+        /// </summary>
+        public static string ModemModelIslemleri {
+            get {
+                return ResourceManager.GetString("ModemModelIslemleri", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Haberleşme Ünitesi Sayaç Ekleme.
         /// </summary>
         public static string ModemSayacEkle {
@@ -2010,6 +2235,15 @@ namespace OsosOracle.MvcUI.Resources {
         public static string ModemSayisi {
             get {
                 return ResourceManager.GetString("ModemSayisi", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Installation date.
+        /// </summary>
+        public static string MontajTarihi {
+            get {
+                return ResourceManager.GetString("MontajTarihi", resourceCulture);
             }
         }
         
@@ -2041,11 +2275,38 @@ namespace OsosOracle.MvcUI.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Read.
+        /// </summary>
+        public static string Okundu {
+            get {
+                return ResourceManager.GetString("Okundu", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Unread.
+        /// </summary>
+        public static string Okunmadı {
+            get {
+                return ResourceManager.GetString("Okunmadı", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Created Date.
         /// </summary>
         public static string OlusturmaTarihi {
             get {
                 return ResourceManager.GetString("OlusturmaTarihi", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Onayla.
+        /// </summary>
+        public static string Onayla {
+            get {
+                return ResourceManager.GetString("Onayla", resourceCulture);
             }
         }
         
@@ -2091,6 +2352,15 @@ namespace OsosOracle.MvcUI.Resources {
         public static string OperasyonListesi {
             get {
                 return ResourceManager.GetString("OperasyonListesi", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Operations Management.
+        /// </summary>
+        public static string OperasyonYonetimi {
+            get {
+                return ResourceManager.GetString("OperasyonYonetimi", resourceCulture);
             }
         }
         
@@ -2230,6 +2500,15 @@ namespace OsosOracle.MvcUI.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Role Management.
+        /// </summary>
+        public static string RolYonetimi {
+            get {
+                return ResourceManager.GetString("RolYonetimi", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Rtc Error.
         /// </summary>
         public static string RTCHATA {
@@ -2302,6 +2581,15 @@ namespace OsosOracle.MvcUI.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Cancel Sales.
+        /// </summary>
+        public static string SatisIptal {
+            get {
+                return ResourceManager.GetString("SatisIptal", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Sales Operation.
         /// </summary>
         public static string SatisIslemleri {
@@ -2325,6 +2613,24 @@ namespace OsosOracle.MvcUI.Resources {
         public static string SatisTarih {
             get {
                 return ResourceManager.GetString("SatisTarih", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sales Type.
+        /// </summary>
+        public static string SatisTipi {
+            get {
+                return ResourceManager.GetString("SatisTipi", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sales Amount.
+        /// </summary>
+        public static string SatisTutari {
+            get {
+                return ResourceManager.GetString("SatisTutari", resourceCulture);
             }
         }
         
@@ -2379,6 +2685,15 @@ namespace OsosOracle.MvcUI.Resources {
         public static string SayacDurum {
             get {
                 return ResourceManager.GetString("SayacDurum", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Meter Status Report.
+        /// </summary>
+        public static string SayacDurumRaporu {
+            get {
+                return ResourceManager.GetString("SayacDurumRaporu", resourceCulture);
             }
         }
         
@@ -2446,11 +2761,29 @@ namespace OsosOracle.MvcUI.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Meter Brand Operations.
+        /// </summary>
+        public static string SayacMarkaIslemleri {
+            get {
+                return ResourceManager.GetString("SayacMarkaIslemleri", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Meter Model.
         /// </summary>
         public static string SayacModel {
             get {
                 return ResourceManager.GetString("SayacModel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Meter Model Operations.
+        /// </summary>
+        public static string SayacModelIslemleri {
+            get {
+                return ResourceManager.GetString("SayacModelIslemleri", resourceCulture);
             }
         }
         
@@ -2653,6 +2986,33 @@ namespace OsosOracle.MvcUI.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Dismandled Meter.
+        /// </summary>
+        public static string SokulenSayac {
+            get {
+                return ResourceManager.GetString("SokulenSayac", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Reason for dismantling.
+        /// </summary>
+        public static string SokulmeNedeni {
+            get {
+                return ResourceManager.GetString("SokulmeNedeni", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Date of dismantling.
+        /// </summary>
+        public static string SokulmeTarihi {
+            get {
+                return ResourceManager.GetString("SokulmeTarihi", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Date of last communication .
         /// </summary>
         public static string SonHaberlesmeTarihi {
@@ -2667,6 +3027,15 @@ namespace OsosOracle.MvcUI.Resources {
         public static string SonOkumaTarihi {
             get {
                 return ResourceManager.GetString("SonOkumaTarihi", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Last Sales Date.
+        /// </summary>
+        public static string SonSatisTarihi {
+            get {
+                return ResourceManager.GetString("SonSatisTarihi", resourceCulture);
             }
         }
         
@@ -2707,11 +3076,29 @@ namespace OsosOracle.MvcUI.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Water.
+        /// </summary>
+        public static string Su {
+            get {
+                return ResourceManager.GetString("Su", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Server Connection Period.
         /// </summary>
         public static string SunucuBaglantiPeriyot {
             get {
                 return ResourceManager.GetString("SunucuBaglantiPeriyot", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Water Tariff Operations.
+        /// </summary>
+        public static string SuTarifeIslemleri {
+            get {
+                return ResourceManager.GetString("SuTarifeIslemleri", resourceCulture);
             }
         }
         
@@ -2775,6 +3162,24 @@ namespace OsosOracle.MvcUI.Resources {
         public static string TelefonNumarasi {
             get {
                 return ResourceManager.GetString("TelefonNumarasi", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Total.
+        /// </summary>
+        public static string Toplam {
+            get {
+                return ResourceManager.GetString("Toplam", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Total Credits.
+        /// </summary>
+        public static string ToplamKredi {
+            get {
+                return ResourceManager.GetString("ToplamKredi", resourceCulture);
             }
         }
         
@@ -2959,6 +3364,15 @@ namespace OsosOracle.MvcUI.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to cashier&apos;s desk.
+        /// </summary>
+        public static string Vezne {
+            get {
+                return ResourceManager.GetString("Vezne", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Fire Mode Duration.
         /// </summary>
         public static string YanginModSuresi {
@@ -3000,6 +3414,15 @@ namespace OsosOracle.MvcUI.Resources {
         public static string YedekKredi {
             get {
                 return ResourceManager.GetString("YedekKredi", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Reserve credit Read.
+        /// </summary>
+        public static string YedekKrediOkundu {
+            get {
+                return ResourceManager.GetString("YedekKrediOkundu", resourceCulture);
             }
         }
         
@@ -3135,6 +3558,24 @@ namespace OsosOracle.MvcUI.Resources {
         public static string YuklemeLimit {
             get {
                 return ResourceManager.GetString("YuklemeLimit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Main Credit to be loaded.
+        /// </summary>
+        public static string YuklenecekAnaKredi {
+            get {
+                return ResourceManager.GetString("YuklenecekAnaKredi", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Time.
+        /// </summary>
+        public static string Zaman {
+            get {
+                return ResourceManager.GetString("Zaman", resourceCulture);
             }
         }
     }

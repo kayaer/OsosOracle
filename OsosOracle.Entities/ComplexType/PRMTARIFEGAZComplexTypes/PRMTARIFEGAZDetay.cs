@@ -2,10 +2,10 @@ using System;
 using OsosOracle.Entities.Concrete;
 namespace OsosOracle.Entities.ComplexType.PRMTARIFEGAZComplexTypes
 {
-	public class PRMTARIFEGAZDetay
-	{
-	
-		        public int KAYITNO { get; set; }
+    public class PRMTARIFEGAZDetay
+    {
+
+        public int KAYITNO { get; set; }
         public int VERSIYON { get; set; }
         public DateTime OLUSTURMATARIH { get; set; }
         public int OLUSTURAN { get; set; }
@@ -30,6 +30,9 @@ namespace OsosOracle.Entities.ComplexType.PRMTARIFEGAZComplexTypes
         public int KURUMKAYITNO { get; set; }
         public int BIRIMFIYAT { get; set; }
         public string Kurum { get; set; }
+        public int TuketimKatsayi { get; set; }
+        public decimal Kdv { get; set; }
+        public decimal Ctv { get; set; }
     }
 
 }

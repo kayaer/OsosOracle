@@ -1,0 +1,67 @@
+
+@using OsosOracle.MvcUI.Infrastructure
+@using OsosOracle.Framework.HtmlHelpers
+@model OsosOracle.MvcUI.Models.NESNEDEGERModels.NESNEDEGERKaydetModel
+
+@section panelHeading
+{
+
+}
+
+<div class="ajaxForm">
+
+    @using (Html.BeginForm("Kaydet", "NESNEDEGER", FormMethod.Post))
+    {
+        @Html.AntiForgeryToken()
+        @Html.HiddenFor(t => t.NESNEDEGER.KAYITNO)
+        @Html.HiddenFor(t => t.NESNEDEGER.VERSIYON)
+        @Html.ValidationSummary(true)
+
+        <div class="form-group">
+            @Html.AutoComplete(t => t.NESNEDEGER.NESNETIPKAYITNO, Enums.AutocompleteFuction.NESNETIPGetir, Enums.AutoCompleteType.List, _T("Nesne Tip").ToString())
+            @Html.ValidationMessageFor(t => t.NESNEDEGER.NESNETIPKAYITNO)
+
+        </div>
+
+        <div class="form-group">
+            @Html.TextBoxFor(t => t.NESNEDEGER.AD, new { @class = "form-control", placeholder = _T("Ad") })
+            @Html.ValidationMessageFor(t => t.NESNEDEGER.AD)
+
+        </div>
+
+        <div class="form-group">
+            @Html.TextBoxFor(t => t.NESNEDEGER.DEGER, new { @class = "form-control ", placeholder = _T("Değer") })
+            @Html.ValidationMessageFor(t => t.NESNEDEGER.DEGER)
+
+        </div>
+
+        <div class="form-group">
+            @Html.TextBoxFor(t => t.NESNEDEGER.BILGI, new { @class = "form-control", placeholder = _T("Bilgi") })
+            @Html.ValidationMessageFor(t => t.NESNEDEGER.BILGI)
+
+        </div>
+
+        <div class="form-group">
+            @Html.TextBoxFor(t => t.NESNEDEGER.SIRANO, new { @class = "form-control int", placeholder = _T("Sıra No") })
+            @Html.ValidationMessageFor(t => t.NESNEDEGER.SIRANO)
+
+        </div>
+
+
+
+        <div class="form-actions">
+            <button type="submit" class="btn btn-primary"><i class="fa fa-save"></i> @_T("Kaydet")</button>
+            @Html.ButtonLink(_T("Vazgeç").ToString(), "Index", "btn btn-xs btn-danger cancel", "fa-remove")
+        </div>
+    }
+</div>
+
+@section script
+{
+    <script type="text/javascript">
+        $(document).ready(function () {
+            //js kodunuzu buraya yazın
+        });
+
+    </script>
+}

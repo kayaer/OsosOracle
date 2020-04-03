@@ -6,6 +6,8 @@ using OsosOracle.Entities.ComplexType.ENTSATISComplexTypes;
 using OsosOracle.Entities.Concrete;
 using OsosOracle.Framework.CrossCuttingConcern.ExceptionHandling;
 using OsosOracle.Framework.DataAccess.Filter;
+using OsosOracle.Framework.Enums;
+using OsosOracle.Framework.Utilities.ExtensionMethods;
 
 namespace OsosOracle.DataLayer.Concrete.EntityFramework.Dal
 {
@@ -19,7 +21,6 @@ namespace OsosOracle.DataLayer.Concrete.EntityFramework.Dal
             {
                 KAYITNO = x.KAYITNO,
                 ABONEKAYITNO = x.ABONEKAYITNO,
-                AboneNo = x.EntAboneEf.AboneBilgiEfCollection.FirstOrDefault().ABONENO,
                 SAYACKAYITNO = x.SAYACKAYITNO,
                 SayacSeriNo = x.EntSayacEf.SERINO,
                 FATURANO = x.FATURANO,
@@ -27,7 +28,21 @@ namespace OsosOracle.DataLayer.Concrete.EntityFramework.Dal
                 VERSIYON = x.VERSIYON,
                 IPTAL = x.IPTAL,
                 KREDI = x.KREDI,
-                OLUSTURMATARIH = x.OLUSTURMATARIH
+                OLUSTURMATARIH = x.OLUSTURMATARIH,
+                AboneNo=x.EntAboneEf.ABONENO,
+                AboneAdSoyad=x.EntAboneEf.AD+" "+x.EntAboneEf.SOYAD,
+                AylikBakimBedeli=x.AylikBakimBedeli,
+                Kdv=x.Kdv,
+                Ctv=x.Ctv,
+                SatisTipi=x.SatisTipi,
+                ToplamKredi=x.ToplamKredi,
+                KapakSeriNo=x.EntSayacEf.KapakSeriNo,
+                SatisTutarı=x.SatisTutari,
+                OLUSTURAN=x.OLUSTURAN,
+                OlusturanKullaniciAdi=x.SysKullaniciEf.KULLANICIAD,
+                SayacTipi=x.EntSayacEf.CstSayacModelEf.AD,
+                SatisTipAdi=x.NesneDegerSatisTipiEf.AD
+                
             });
         }
 
@@ -46,11 +61,10 @@ namespace OsosOracle.DataLayer.Concrete.EntityFramework.Dal
                 else
                 {
 
-                    //if (!string.IsNullOrEmpty(filtre.Idler))
-                    //{
-                    //	var idList = filtre.Idler.ToList<int>();
-                    //	result = result.Where(x => idList.Contains(x.KAYITNO));
-                    //}
+                    if (filtre.SatisTipi != null)
+                    {
+                        result = result.Where(x => x.SatisTipi == filtre.SatisTipi);
+                    }
 
                     if (filtre.ABONEKAYITNO != null)
                     {
@@ -83,6 +97,26 @@ namespace OsosOracle.DataLayer.Concrete.EntityFramework.Dal
                     if (filtre.YEDEKKREDI != null)
                     {
                         result = result.Where(x => x.YEDEKKREDI == filtre.YEDEKKREDI);
+                    }
+                    if (filtre.SayacSeriNo != null)
+                    {
+                        result = result.Where(x => x.EntSayacEf.SERINO == filtre.SayacSeriNo);
+                    }
+                    if (filtre.SatisTarihBaslangic != null)
+                    {
+                        result = result.Where(x => x.OLUSTURMATARIH > filtre.SatisTarihBaslangic);
+                    }
+                    if (filtre.SatisTarihBitis != null)
+                    {
+                        result = result.Where(x => x.OLUSTURMATARIH < filtre.SatisTarihBitis);
+                    }
+                    if (filtre.KurumKayitNo != null)
+                    {
+                        result = result.Where(x => x.EntSayacEf.KURUMKAYITNO == filtre.KurumKayitNo);
+                    }
+                    if (!string.IsNullOrEmpty(filtre.Blok))
+                    {
+                        result = result.Where(x => x.EntAboneEf.Blok == filtre.Blok);
                     }
                 }
             }
@@ -238,5 +272,41 @@ namespace OsosOracle.DataLayer.Concrete.EntityFramework.Dal
             }
         }
 
+        public ENTSATISDataTable SonSatisGetir(ENTSATISAra filtre)
+        {
+            filtre.Ara = new Ara
+            {
+                Baslangic=1,
+                Uzunluk=1,
+                Siralama = new List<Siralama>
+                {
+                    new Siralama
+                    {
+                        KolonAdi = LinqExtensions.GetPropertyName((ENTSATIS t) => t.OLUSTURMATARIH),
+                        SiralamaTipi = EnumSiralamaTuru.Desc
+                    }
+                }
+            };
+            using (var context = new AppContext())
+            {
+                var filterHelper = new FilterHelper<ENTSATISDetay>();
+
+                return new ENTSATISDataTable
+                {
+                    ENTSATISDetayList = filterHelper.Sayfala(DetayDoldur(Filtrele(context.ENTSATISEf.AsQueryable(), filtre)), filtre?.Ara).ToList(),
+                    ToplamKayitSayisi = filterHelper.KayitSayisi
+                };
+            }
+        }
+
+        public List<ENTSATIS> SatisGetir(int kurumKayitNo)
+        {
+            using (var context = new AppContext())
+            {
+                var data = context.ENTSATISEf.SqlQuery(@"select sa.olusturmaTarih,count(1) as kayitno from entsatıs sa inner join entsayac s on sa.sayackayitno=s.kayitno
+where sa.olusturmaTarih>add_months(sysdate,-1) and s.KURUMKAYITNO=" +kurumKayitNo+" group by sa.olusturmaTarih ").ToList<ENTSATIS>();
+                return data;
+            }
+        }
     }
 }

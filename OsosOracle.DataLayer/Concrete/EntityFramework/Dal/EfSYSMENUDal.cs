@@ -20,15 +20,11 @@ namespace OsosOracle.DataLayer.Concrete.EntityFramework.Dal
                
                 KAYITNO = x.KAYITNO,
                 TR = x.TR,
-                EN = x.EN,
-                YEREL = x.YEREL,
                 PARENTKAYITNO = x.PARENTKAYITNO,
                 MENUORDER = x.MENUORDER,
-                EXTERNALURL = x.EXTERNALURL,
                 AREA = x.AREA,
                 ACTION = x.ACTION,
                 CONTROLLER = x.CONTROLLER,
-                PARAMETERS = x.PARAMETERS,
                 DURUM = x.DURUM,
                 VERSIYON = x.VERSIYON,
                 ICON = x.ICON
@@ -62,14 +58,7 @@ namespace OsosOracle.DataLayer.Concrete.EntityFramework.Dal
                     {
                         result = result.Where(x => x.TR.Contains(filtre.TR));
                     }
-                    if (!string.IsNullOrEmpty(filtre.EN))
-                    {
-                        result = result.Where(x => x.EN.Contains(filtre.EN));
-                    }
-                    if (!string.IsNullOrEmpty(filtre.YEREL))
-                    {
-                        result = result.Where(x => x.YEREL.Contains(filtre.YEREL));
-                    }
+                   
                     if (filtre.PARENTKAYITNO != null)
                     {
                         result = result.Where(x => x.PARENTKAYITNO == filtre.PARENTKAYITNO);
@@ -78,26 +67,13 @@ namespace OsosOracle.DataLayer.Concrete.EntityFramework.Dal
                     {
                         result = result.Where(x => x.MENUORDER == filtre.MENUORDER);
                     }
-                    if (!string.IsNullOrEmpty(filtre.EXTERNALURL))
-                    {
-                        result = result.Where(x => x.EXTERNALURL.Contains(filtre.EXTERNALURL));
-                    }
+                   
                     if (!string.IsNullOrEmpty(filtre.AREA))
                     {
                         result = result.Where(x => x.AREA.Contains(filtre.AREA));
                     }
-                    //if (!string.IsNullOrEmpty(filtre.ACTION))
-                    //{
-                    //    result = result.Where(x => x.ACTION.Contains(filtre.ACTION));
-                    //}
-                    //if (!string.IsNullOrEmpty(filtre.CONTROLLER))
-                    //{
-                    //    result = result.Where(x => x.CONTROLLER.Contains(filtre.CONTROLLER));
-                    //}
-                    if (!string.IsNullOrEmpty(filtre.PARAMETERS))
-                    {
-                        result = result.Where(x => x.PARAMETERS.Contains(filtre.PARAMETERS));
-                    }
+                   
+                   
                     if (filtre.DURUM != null)
                     {
                         result = result.Where(x => x.DURUM == filtre.DURUM);
@@ -271,6 +247,30 @@ namespace OsosOracle.DataLayer.Concrete.EntityFramework.Dal
             {
                 return context.SYSMENUEf.Where(x => x.PARENTKAYITNO == null).ToList<SYSMENU>();
             }
+        }
+        public List<SYSMENU> YetkiGetir(int kullaniciKayitNo)
+        {
+            using (var context = new AppContext())
+            {
+                var data = context.SYSMENUEf.SqlQuery(@"SELECT DISTINCT M.*
+    FROM
+        SYSCSTOPERASYON O,
+        SYSGOREV G, SYSROL R,
+        SYSKULLANICI K, SYSOPERASYONGOREV OG, SYSGOREVROL GR,
+        SYSROLKULLANICI RK, SYSMENU M
+    WHERE
+        O.MENUKAYITNO=M.KAYITNO AND
+        OG.OPERASYONKAYITNO = O.KAYITNO AND
+        OG.GOREVKAYITNO = G.KAYITNO AND
+        GR.GOREVKAYITNO = G.KAYITNO AND
+        GR.ROLKAYITNO = R.KAYITNO AND
+        RK.ROLKAYITNO = R.KAYITNO AND
+        RK.KULLANICIKAYITNO = K.KAYITNO
+        AND
+        K.KAYITNO= " + kullaniciKayitNo).ToList<SYSMENU>();
+                return data;
+            }
+
         }
     }
 }

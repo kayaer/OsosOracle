@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 
 namespace SCLibWin
 {
-    internal sealed class SCReader : IDisposable
+    public  sealed class SCReader : IDisposable
     {
         private SCResMgr m_aResourceManager;
         private Version m_aVendorIfdVersion = null;

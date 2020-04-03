@@ -67,7 +67,7 @@ namespace OsosOracle.Entities.ComplexType.ENTSAYACSONDURUMSUComplexTypes
         public string ANAPILZAYIF { get; set; }
         public int OLUSTURAN { get; set; }
         public DateTime OLUSTURMATARIH { get; set; }
-        public int SayacSeriNo { get; set; }
+        public string SayacSeriNo { get; set; }
     }
 
 }

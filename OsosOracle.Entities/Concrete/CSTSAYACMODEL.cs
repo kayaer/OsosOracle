@@ -13,8 +13,8 @@ namespace OsosOracle.Entities.Concrete
         public int? GUNCELLEYEN { get; set; }
         public DateTime? GUNCELLEMETARIH { get; set; }
         public int? MARKAKAYITNO { get; set; }
-        public string YAZILIMVERSIYON { get; set; }
-        public string FLAG { get; set; }
-        public string CONTROLLER { get; set; }
+      
+        public int SayacTuruKayitNo { get; set; }
+      
     }
 }

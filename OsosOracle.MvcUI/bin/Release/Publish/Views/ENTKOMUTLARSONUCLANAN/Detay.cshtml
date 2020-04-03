@@ -1,0 +1,82 @@
+
+
+@using OsosOracle.Framework.HtmlHelpers
+@model OsosOracle.MvcUI.Models.ENTKOMUTLARSONUCLANANModels.ENTKOMUTLARSONUCLANANDetayModel
+
+@section panelHeading{
+	@Html.ButtonLink(_T("Listeye Dön").ToString(), "Index", "btn btn-xs btn-info", "fa-reply")
+	@Html.ButtonLink(_T("Sil").ToString(), "Sil", "btn btn-xs btn-danger modalizer", "fa-trash", new { id = Model.ENTKOMUTLARSONUCLANANDetay.Id })
+	@Html.ButtonLink(_T("Düzenle").ToString(), "Guncelle","btn btn-xs btn-primary modalizer", "fa-edit", new { id = Model.ENTKOMUTLARSONUCLANANDetay.Id })
+
+}
+
+<div class="ajaxForm">
+
+	  
+	<div class="row static-info">
+		<div class="col-md-5 name">@_T("KONSSERINO")</div>
+		<div class="col-md-7 value">@Model.ENTKOMUTLARSONUCLANANDetay.KONSSERINO</div>
+	 </div>
+
+
+	<div class="row static-info">
+		<div class="col-md-5 name">@_T("KOMUTKODU")</div>
+		<div class="col-md-7 value">@Model.ENTKOMUTLARSONUCLANANDetay.KOMUTKODU</div>
+	 </div>
+
+
+	<div class="row static-info">
+		<div class="col-md-5 name">@_T("KOMUT")</div>
+		<div class="col-md-7 value">@Model.ENTKOMUTLARSONUCLANANDetay.KOMUT</div>
+	 </div>
+
+
+	<div class="row static-info">
+		<div class="col-md-5 name">@_T("ISLEMTARIH")</div>
+		<div class="col-md-7 value">@Model.ENTKOMUTLARSONUCLANANDetay.ISLEMTARIH</div>
+	 </div>
+
+
+	<div class="row static-info">
+		<div class="col-md-5 name">@_T("SONUC")</div>
+		<div class="col-md-7 value">@Model.ENTKOMUTLARSONUCLANANDetay.SONUC</div>
+	 </div>
+
+
+	<div class="row static-info">
+		<div class="col-md-5 name">@_T("ISLEMSURESI")</div>
+		<div class="col-md-7 value">@Model.ENTKOMUTLARSONUCLANANDetay.ISLEMSURESI</div>
+	 </div>
+
+
+	<div class="row static-info">
+		<div class="col-md-5 name">@_T("KOMUTID")</div>
+		<div class="col-md-7 value">@Model.ENTKOMUTLARSONUCLANANDetay.KOMUTID</div>
+	 </div>
+
+
+	<div class="row static-info">
+		<div class="col-md-5 name">@_T("ACIKLAMA")</div>
+		<div class="col-md-7 value">@Model.ENTKOMUTLARSONUCLANANDetay.ACIKLAMA</div>
+	 </div>
+
+
+	<div class="row static-info">
+		<div class="col-md-5 name">@_T("CEVAP")</div>
+		<div class="col-md-7 value">@Model.ENTKOMUTLARSONUCLANANDetay.CEVAP</div>
+	 </div>
+
+
+	 
+	@Html.ButtonLink(_T("Vazgeç").ToString(), "Index", "btn btn-xs btn-danger cancel", "fa-remove")
+</div>
+
+@section script
+{
+	<script type="text/javascript">
+		$(document).ready(function () {
+		//js kodunuzu buraya yazın	
+		});
+
+	</script>
+}

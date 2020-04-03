@@ -38,6 +38,9 @@ namespace OsosOracle.DataLayer.Concrete.EntityFramework.Mappings
             Property(t => t.YEDEKKREDI).HasColumnName("YEDEKKREDI");
             Property(t => t.KURUMKAYITNO).HasColumnName("KURUMKAYITNO");
             Property(t => t.BIRIMFIYAT).HasColumnName("BIRIMFIYAT");
+            Property(t => t.TuketimKatsayi).HasColumnName("TUKETIMKATSAYI");
+            Property(t => t.Kdv).HasColumnName("KDV");
+            Property(t => t.Ctv).HasColumnName("CTV");
             // Relationships
             HasRequired(t => t.ConKurumEf)
              .WithMany(t => t.PrmTarifeGazEfCollection)

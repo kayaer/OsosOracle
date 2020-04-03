@@ -7,7 +7,7 @@ using System.Runtime.InteropServices;
 
 namespace SCLibWin
 {
-    internal sealed class SCResMgr : IDisposable
+    public sealed class SCResMgr : IDisposable
     {
         private bool m_fDisposed = false;
         private IntPtr m_hContext = IntPtr.Zero;

@@ -8,6 +8,7 @@ using OsosOracle.Entities.Concrete;
 using OsosOracle.Business.Concrete.Infrastructure;
 using OsosOracle.Framework.Aspects.ValidationAspects;
 using OsosOracle.Framework.Utilities.ExtensionMethods;
+using OsosOracle.Framework.Aspects.TransactionAspects;
 
 namespace OsosOracle.Business.Concrete
 {
@@ -74,9 +75,21 @@ namespace OsosOracle.Business.Concrete
 			_sYSROLDal.Guncelle(entityler.ConvertEfList<SYSROL, SYSROLEf>());
 		}
 
-		public void Sil(List<int> idler)
-		{
-			_sYSROLDal.Sil(idler);
+        [TransactionScopeAspect]
+        public void Sil(List<int> idler)
+        {
+            var rolGorevService = ServisGetir<ISYSGOREVROLService>();
+            var kayitlar = rolGorevService.Getir(new Entities.ComplexType.SYSGOREVROLComplexTypes.SYSGOREVROLAra { ROLKAYITNO = idler[0] });
+
+            foreach (var kayit in kayitlar)
+            {
+                rolGorevService.Sil(kayit.KAYITNO.List());
+            }
+           
+
+            var rolKullaniciService = ServisGetir<ISYSROLKULLANICIService>();
+            rolKullaniciService.RolKullaniciSil(idler[0], null);
+            _sYSROLDal.Sil(idler);
 		}
 
 	}

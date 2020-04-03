@@ -1,0 +1,53 @@
+﻿
+@using OsosOracle.MvcUI.Infrastructure
+@using OsosOracle.Framework.HtmlHelpers
+@using OsosOracle.MvcUI.Resources
+@model OsosOracle.MvcUI.Models.ReportModels.RaporParametreModel
+
+
+@using (Html.BeginPortlet(Dil.Rapor, Dil.DetayliArama, "fa fa-search"))
+{
+    <form id="frmAra" class="form-bordered">
+        <div class="form-group row">
+            <div class="col-md-6">
+                @Html.DateInput(t => t.SatisTarihiBaslangic, new { placeholder = _T("Satış Tarihi Başlangıç") })
+            </div>
+            <div class="col-md-6">
+                @Html.DateInput(t => t.SatisTarihiBitis, new { placeholder = _T("Satış Tarihi Bitiş") })
+            </div>
+        </div>
+        <div class="form-actions">
+            <button type="button" class="btn btn-primary btn-sm" id="btnAra"><i class="fa fa-search"></i> @Dil.Rapor</button>
+        </div>
+    </form>
+
+}
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        $("#btnAra").click(function () {
+            blockUI();
+        $.ajax({
+            url: '/Report/RaporAl',
+            data: {
+                'SatisTarihiBaslangic': $("#SatisTarihiBaslangic").val(),
+                'SatisTarihiBitis': $("#SatisTarihiBitis").val()
+            },
+            type: "post",
+            cache: false,
+            success: function (result) {
+                  unblockUI();
+                    var url = '@Url.Action("MakbuzIndir","Satis")' + '?filename=' + result;
+                    window.location.href = url;
+                    ajaxMesajGoster('@Dil.Basarili');
+            },
+            error: function (xhr, ajaxOptions, thrownError) {
+                unblockUI();
+                ajaxMesajGoster("Bir Hata Oluştu");
+            }
+        });
+    });
+    });
+</script>

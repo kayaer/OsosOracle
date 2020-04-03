@@ -39,5 +39,7 @@ namespace OsosOracle.Business.Abstract
 
         [OperationContract]
         bool RolGorevSil(int rolid, int gorevid);
+        [OperationContract]
+        void GorevOperasyonEkle(SYSGOREV entity,List<int> operasyonList, int olusturan);
     }
 }

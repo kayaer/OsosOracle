@@ -2,13 +2,18 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.InteropServices;
 using System.Text;
 
 namespace SmartCard
 {
+    [ComVisible(true)]
+    [ClassInterface(ClassInterfaceType.None)]
     public class OrtakAvm
     {
-        private string zone = "BK";
+        Util util = new Util();
+        private string zone = "BK";// tÜRKİYE
+        //private string zone = "TS";//Mısır
         private string _hata = "";
 
         #region Bufferlar
@@ -119,7 +124,45 @@ namespace SmartCard
             }
             else return 0;
         }
+        public int ReadCard(byte Adres, byte Adet)
+        {
+            inBuf = ReadBinary(Convert.ToUInt16(Adres), Adet);
 
+            if (inBuf == null) return 0;
+            else return 1;
+        }
+
+        public byte[] ReadBinary(UInt16 Ofset, byte Adet)
+        {
+            byte[] command = new byte[5];
+            byte[] response = new byte[2];
+
+            Integer2Byte Index = new Integer2Byte(Ofset);
+
+            command[0] = 0X00; //CLA
+            command[1] = 0XB0; //INS
+            command[2] = Index.iki; //P1, OH = Offset High Byte for implicit selection 
+            command[3] = Index.bir; //P2, OL = Offset Low Byte
+            command[4] = Adet; // Le : Number of digits to be read  
+
+
+            try
+            {
+                rd.Transmit(command, out response);
+
+                if (response[response.Length - 2] == 0X90 && response[response.Length - 1] == 0X00)
+                {
+                    return response;
+                }
+                else return null;
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+
+            return null;
+        }
         private int VerifyCard(byte adres)
         {
             byte[] command = new byte[9];
@@ -2547,5 +2590,297 @@ namespace SmartCard
         }*/
 
         #endregion
+
+        public string AboneYazSu(UInt32 CihazNo,
+                               Int32 SuAnaKredi, byte SuYedekKredi,
+                               UInt16 SuLimit1, UInt16 SuLimit2,
+                               UInt32 SuFiyat1, UInt32 SuFiyat2, UInt32 SuFiyat3)
+        {
+
+
+            #region init
+            byte[] issue_area = GetIssuer();
+
+            int i = 0;
+
+            i = InitCard();
+            if (i == 0) { return "1"; }
+
+            i = ReadCard(1);
+            if (i == 0) { return "5"; }
+
+            if ((inBuf[0] != issue_area[0]) || (inBuf[1] != issue_area[1]) || (inBuf[2] != 'A') || (inBuf[3] != ' '))
+            {
+                FinishCard();
+                return "0";
+            }
+
+
+            #endregion
+
+            i = ReadCard(0X30);
+            if (i == 0) { return "5"; }
+            UInt32 CihazNo1 = Hexcon.Byte4toUInt32(inBuf);
+
+            #region csc verify
+
+            i = ReadCard(0X30);
+            if (i == 0) { HataSet(5); FinishCard(); return "0"; }
+            CihazNo1 = Hexcon.Byte4toUInt32(inBuf);
+
+            UInt32 sr;
+
+            sr = util.SendAboneCsc(CihazNo1, 0X3D3D);
+            outBuf[0] = (byte)(sr / 256);
+            outBuf[1] = (byte)(sr % 256);
+            sr = util.SendAboneCsc(CihazNo1, 0X5A5A);
+            outBuf[2] = (byte)(sr / 256);
+            outBuf[3] = (byte)(sr % 256);
+
+            i = VerifyCard(7);
+            if (i == 0) { HataSet(2); FinishCard(); return "0"; }
+
+            sr = util.SendAboneCsc(CihazNo1, 0X2F2F);
+            outBuf[0] = (byte)(sr / 256);
+            outBuf[1] = (byte)(sr % 256);
+            sr = util.SendAboneCsc(CihazNo1, 0X1515);
+            outBuf[2] = (byte)(sr / 256);
+            outBuf[3] = (byte)(sr % 256);
+
+            i = VerifyCard(0X39);
+            if (i == 0) { HataSet(3); FinishCard(); return "0"; }
+
+            sr = util.SendAboneCsc(CihazNo1, 0XABAB);
+            outBuf[0] = (byte)(sr / 256);
+            outBuf[1] = (byte)(sr % 256);
+            sr = util.SendAboneCsc(CihazNo1, 0XC2C2);
+            outBuf[2] = (byte)(sr / 256);
+            outBuf[3] = (byte)(sr % 256);
+
+            i = VerifyCard(0X3B);
+            if (i == 0) { HataSet(4); FinishCard(); return "0"; }
+
+            #endregion
+
+            #region update csc
+
+            sr = util.SendAboneCsc(CihazNo, 0X3D3D);
+            outBuf[0] = (byte)(sr / 256);
+            outBuf[1] = (byte)(sr % 256);
+            sr = util.SendAboneCsc(CihazNo, 0X5A5A);
+            outBuf[2] = (byte)(sr / 256);
+            outBuf[3] = (byte)(sr % 256);
+
+            i = UpdateCard(6);
+            if (i == 0) { HataSet(6); FinishCard(); return "0"; }
+
+            sr = util.SendAboneCsc(CihazNo, 0X2F2F);
+            outBuf[0] = (byte)(sr / 256);
+            outBuf[1] = (byte)(sr % 256);
+            sr = util.SendAboneCsc(CihazNo, 0X1515);
+            outBuf[2] = (byte)(sr / 256);
+            outBuf[3] = (byte)(sr % 256);
+
+            i = UpdateCard(0X38);
+            if (i == 0) { HataSet(6); FinishCard(); return "0"; }
+
+            sr = util.SendAboneCsc(CihazNo, 0XABAB);
+            outBuf[0] = (byte)(sr / 256);
+            outBuf[1] = (byte)(sr % 256);
+            sr = util.SendAboneCsc(CihazNo, 0XC2C2);
+            outBuf[2] = (byte)(sr / 256);
+            outBuf[3] = (byte)(sr % 256);
+
+            i = UpdateCard(0X3A);
+            if (i == 0) { HataSet(6); FinishCard(); return "0"; }
+
+            #endregion
+
+            #region kart yazma
+
+            Hexcon.UInt32toByte4(CihazNo, outBuf);
+            i = UpdateCard(0X30);
+            if (i == 0) { return "6"; }
+
+            Hexcon.Int32toByte4(SuAnaKredi, outBuf);
+            i = UpdateCard(0X13);
+            if (i == 0) { return "6"; }
+
+            i = ReadCard(0X1A);
+            if (i == 0) { return "5"; }
+
+            SetOutBuf(SuYedekKredi, inBuf[1], inBuf[2], inBuf[3]);
+
+            i = UpdateCard(0X1A);
+            if (i == 0) { return "6"; }
+
+
+            SetOutBuf(SuLimit1, SuLimit2);
+
+            i = UpdateCard(0X17);
+            if (i == 0) { return "6"; }
+
+            UInt16 s1kat1 = Convert.ToUInt16(Convert.ToDouble(65535.0 * SuFiyat1) / Convert.ToDouble(SuFiyat3));
+            UInt16 s1kat2 = Convert.ToUInt16(Convert.ToDouble(65535.0 * SuFiyat2) / Convert.ToDouble(SuFiyat3));
+
+            SetOutBuf(s1kat1, s1kat2);
+
+            i = UpdateCard(0X14);
+            if (i == 0) { return "6"; }
+
+
+            SetOutBuf(0, 0, 0, 0);
+
+            i = UpdateCard(0X15);
+            if (i == 0) { return "6"; }
+
+            i = UpdateCard(0X16);
+            if (i == 0) { return "6"; }
+
+            i = UpdateCard(0X2D);
+            if (i == 0) { return "6"; }
+
+            i = ReadCard(0X3D);
+            if (i == 0) { return "5"; }
+
+            byte IslemNo = inBuf[3];
+
+            Hexcon.Islem isl = new Hexcon.Islem(inBuf[2]);
+
+            Hexcon.Islem islYeni = new Hexcon.Islem(isl.KartNo, 3, isl.YeniKart, 0);
+
+            if ((inBuf[0] & 0X80) == 0) IslemNo += 1;
+            if (((inBuf[0] & 0X40) == 0) && isl.YeniKart == 0) IslemNo += 1;
+
+            //byte Major = rd.InBuf[2];
+            //Major &= 0xF2;
+            //Major |= 0x0C;       // major 3 yapılıp hata sıfır yapılmış...
+
+            outBuf[0] = 0xD8;
+            outBuf[1] = 0xFF;
+            outBuf[2] = islYeni.ToByte();
+            outBuf[3] = IslemNo;
+
+            i = UpdateCard(0X3D);
+            if (i == 0) { return "6"; }
+
+
+            //i = rd.ReadCard(0X3F);
+            //if (i == 0) return "0";
+
+            //Hexcon.ByteToBit learnKart = new Hexcon.ByteToBit(rd.InBuf[2]);
+            //UInt32 islem = (UInt32)rd.InBuf[3];
+
+            //if (((int)rd.InBuf[0] & (0X80)) == 0) islem++;
+
+            //if (learnKart.Bit7 != 1) // yeni kart değilse artır
+            //{
+            //    if (((int)rd.InBuf[0] & (0X40)) == 0) islem++;
+            //}
+            //learnKart.Deger = Hexcon.SetBitZero(learnKart.Deger); // hata set
+            //learnKart.Deger = Hexcon.SetBitBir(learnKart.Deger, 0X30); // major set
+
+            #endregion
+
+            FinishCard();
+
+            return "1";
+        }
+
+        private void SetOutBuf(byte byte0, byte byte1, byte byte2, byte byte3)
+        {
+            outBuf[0] = byte0;
+            outBuf[1] = byte1;
+            outBuf[2] = byte2;
+            outBuf[3] = byte3;
+        }
+        private void SetOutBuf(UInt16 deger1, UInt16 deger2)
+        {
+            byte[] b1 = new byte[2];
+            Hexcon.UInt16toByte2(deger1, b1);
+
+            byte[] b2 = new byte[2];
+            Hexcon.UInt16toByte2(deger2, b2);
+
+            Array.Copy(b1, 0, outBuf, 0, 2);
+            Array.Copy(b2, 0, outBuf, 2, 2);
+        }
+
+        private string CscVerifyOkuYaz(UInt32 CihazNo1, UInt32 CihazNo)
+        {
+            int i = 0;
+
+            UInt32 sr;
+
+            #region csc verify
+
+            sr = util.SendAboneCsc(CihazNo1, 0X3D3D);
+            outBuf[0] = (byte)(sr / 256);
+            outBuf[1] = (byte)(sr % 256);
+            sr = util.SendAboneCsc(CihazNo1, 0X5A5A);
+            outBuf[2] = (byte)(sr / 256);
+            outBuf[3] = (byte)(sr % 256);
+
+            i = VerifyCard(7);
+            if (i == 0) { return "2"; }
+
+            sr = util.SendAboneCsc(CihazNo1, 0X2F2F);
+            outBuf[0] = (byte)(sr / 256);
+            outBuf[1] = (byte)(sr % 256);
+            sr = util.SendAboneCsc(CihazNo1, 0X1515);
+            outBuf[2] = (byte)(sr / 256);
+            outBuf[3] = (byte)(sr % 256);
+
+            i = VerifyCard(0X39);
+            if (i == 0) { return "3"; }
+
+            sr = util.SendAboneCsc(CihazNo1, 0XABAB);
+            outBuf[0] = (byte)(sr / 256);
+            outBuf[1] = (byte)(sr % 256);
+            sr = util.SendAboneCsc(CihazNo1, 0XC2C2);
+            outBuf[2] = (byte)(sr / 256);
+            outBuf[3] = (byte)(sr % 256);
+
+            i = VerifyCard(0X3B);
+            if (i == 0) { return "4"; }
+
+            #endregion
+
+            #region update csc
+
+            sr = util.SendAboneCsc(CihazNo, 0X3D3D);
+            outBuf[0] = (byte)(sr / 256);
+            outBuf[1] = (byte)(sr % 256);
+            sr = util.SendAboneCsc(CihazNo, 0X5A5A);
+            outBuf[2] = (byte)(sr / 256);
+            outBuf[3] = (byte)(sr % 256);
+
+            i = UpdateCard(6);
+            if (i == 0) { return "6"; }
+
+            sr = util.SendAboneCsc(CihazNo, 0X2F2F);
+            outBuf[0] = (byte)(sr / 256);
+            outBuf[1] = (byte)(sr % 256);
+            sr = util.SendAboneCsc(CihazNo, 0X1515);
+            outBuf[2] = (byte)(sr / 256);
+            outBuf[3] = (byte)(sr % 256);
+
+            i = UpdateCard(0X38);
+            if (i == 0) { return "6"; }
+
+            sr = util.SendAboneCsc(CihazNo, 0XABAB);
+            outBuf[0] = (byte)(sr / 256);
+            outBuf[1] = (byte)(sr % 256);
+            sr = util.SendAboneCsc(CihazNo, 0XC2C2);
+            outBuf[2] = (byte)(sr / 256);
+            outBuf[3] = (byte)(sr % 256);
+
+            i = UpdateCard(0X3A);
+            if (i == 0) { return "6"; }
+
+            #endregion
+
+            return i.ToString();
+        }
     }
 }

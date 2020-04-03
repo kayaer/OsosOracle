@@ -10,6 +10,7 @@ using OsosOracle.Framework.Aspects.ValidationAspects;
 using OsosOracle.Framework.Utilities.ExtensionMethods;
 using OsosOracle.Entities.ComplexType.SYSGOREVROLComplexTypes;
 using System.Linq;
+using OsosOracle.Framework.Aspects.TransactionAspects;
 
 namespace OsosOracle.Business.Concrete
 {
@@ -80,6 +81,7 @@ namespace OsosOracle.Business.Concrete
         {
             _sYSGOREVDal.Sil(idler);
         }
+
         public bool RolGorevSil(int rolid, int gorevid)
         {
             var gorevrolDal = ServisGetir<ISYSGOREVROLDal>();
@@ -91,6 +93,29 @@ namespace OsosOracle.Business.Concrete
             }
             return false;
 
+        }
+
+        [TransactionScopeAspect]
+        public void GorevOperasyonEkle(SYSGOREV entity, List<int> operasyonList,int olusturan)
+        {
+            Validate(entity);
+            if (entity.KAYITNO > 0)
+            {
+                _sYSGOREVDal.Guncelle(entity.ConvertEfList<SYSGOREV, SYSGOREVEf>());
+            }
+            else
+            {
+                entity = _sYSGOREVDal.Ekle(entity.ConvertEfList<SYSGOREV, SYSGOREVEf>()).FirstOrDefault();
+            }
+           
+            var operasyonService = ServisGetir<ISYSOPERASYONGOREVService>();
+            operasyonService.OperasyonGorevSil(entity.KAYITNO);
+
+            foreach (var operasyon in operasyonList)
+            {
+                operasyonService.Ekle(new SYSOPERASYONGOREV() { GOREVKAYITNO = entity.KAYITNO, OPERASYONKAYITNO = operasyon, OLUSTURAN = olusturan }.List());
+
+            }
         }
     }
 }

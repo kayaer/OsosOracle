@@ -1,0 +1,5 @@
+D:\Projeler\Nahcivan\Elektrik\Yazilim_PC\SmartCard\SmartCard\bin\Debug\SmartCard.dll.config
+D:\Projeler\Nahcivan\Elektrik\Yazilim_PC\SmartCard\SmartCard\bin\Debug\SmartCard.dll
+D:\Projeler\Nahcivan\Elektrik\Yazilim_PC\SmartCard\SmartCard\bin\Debug\SmartCard.pdb
+D:\Projeler\Nahcivan\Elektrik\Yazilim_PC\SmartCard\SmartCard\obj\Debug\SmartCard.dll
+D:\Projeler\Nahcivan\Elektrik\Yazilim_PC\SmartCard\SmartCard\obj\Debug\SmartCard.pdb

@@ -9,12 +9,12 @@ namespace OsosOracle.DataLayer.Concrete.EntityFramework.Entity
         {
             SatisEfCollection = new List<ENTSATISEf>();
             AboneSayacEfCollection = new List<ENTABONESAYACEf>();
-            AboneBilgiEfCollection = new List<ENTABONEBILGIEf>();
+           
         }
 
         public ICollection<ENTSATISEf> SatisEfCollection { get; set; }
         public ICollection<ENTABONESAYACEf> AboneSayacEfCollection { get; set; }      
-        public ICollection<ENTABONEBILGIEf>AboneBilgiEfCollection { get; set; }
+        
 
     }
 }

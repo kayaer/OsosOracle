@@ -1,0 +1,445 @@
+C:\Users\nebi.er\source\repos\OsosOracle\OsosOracle.DataLayer\bin\Release\OsosOracle.DataLayer.dll.config
+C:\Users\nebi.er\source\repos\OsosOracle\OsosOracle.DataLayer\bin\Release\OsosOracle.DataLayer.dll
+C:\Users\nebi.er\source\repos\OsosOracle\OsosOracle.DataLayer\bin\Release\OsosOracle.DataLayer.pdb
+C:\Users\nebi.er\source\repos\OsosOracle\OsosOracle.DataLayer\bin\Release\EntityFramework.dll
+C:\Users\nebi.er\source\repos\OsosOracle\OsosOracle.DataLayer\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\nebi.er\source\repos\OsosOracle\OsosOracle.DataLayer\bin\Release\Oracle.ManagedDataAccess.dll
+C:\Users\nebi.er\source\repos\OsosOracle\OsosOracle.DataLayer\bin\Release\Oracle.ManagedDataAccess.EntityFramework.dll
+C:\Users\nebi.er\source\repos\OsosOracle\OsosOracle.DataLayer\bin\Release\OsosOracle.Entities.dll
+C:\Users\nebi.er\source\repos\OsosOracle\OsosOracle.DataLayer\bin\Release\OsosOracle.Framework.dll
+C:\Users\nebi.er\source\repos\OsosOracle\OsosOracle.DataLayer\bin\Release\System.Web.Mvc.dll
+C:\Users\nebi.er\source\repos\OsosOracle\OsosOracle.DataLayer\bin\Release\AutoMapper.dll
+C:\Users\nebi.er\source\repos\OsosOracle\OsosOracle.DataLayer\bin\Release\System.Web.WebPages.dll
+C:\Users\nebi.er\source\repos\OsosOracle\OsosOracle.DataLayer\bin\Release\FluentValidation.dll
+C:\Users\nebi.er\source\repos\OsosOracle\OsosOracle.DataLayer\bin\Release\ICSharpCode.SharpZipLib.dll
+C:\Users\nebi.er\source\repos\OsosOracle\OsosOracle.DataLayer\bin\Release\PostSharp.dll
+C:\Users\nebi.er\source\repos\OsosOracle\OsosOracle.DataLayer\bin\Release\Newtonsoft.Json.dll
+C:\Users\nebi.er\source\repos\OsosOracle\OsosOracle.DataLayer\bin\Release\System.Web.WebPages.Razor.dll
+C:\Users\nebi.er\source\repos\OsosOracle\OsosOracle.DataLayer\bin\Release\System.Web.Razor.dll
+C:\Users\nebi.er\source\repos\OsosOracle\OsosOracle.DataLayer\bin\Release\Microsoft.Web.Infrastructure.dll
+C:\Users\nebi.er\source\repos\OsosOracle\OsosOracle.DataLayer\bin\Release\System.ValueTuple.dll
+C:\Users\nebi.er\source\repos\OsosOracle\OsosOracle.DataLayer\bin\Release\System.Web.WebPages.Deployment.dll
+C:\Users\nebi.er\source\repos\OsosOracle\OsosOracle.DataLayer\bin\Release\OsosOracle.Entities.pdb
+C:\Users\nebi.er\source\repos\OsosOracle\OsosOracle.DataLayer\bin\Release\OsosOracle.Framework.pdb
+C:\Users\nebi.er\source\repos\OsosOracle\OsosOracle.DataLayer\bin\Release\OsosOracle.Framework.dll.config
+C:\Users\nebi.er\source\repos\OsosOracle\OsosOracle.DataLayer\bin\Release\EntityFramework.xml
+C:\Users\nebi.er\source\repos\OsosOracle\OsosOracle.DataLayer\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\nebi.er\source\repos\OsosOracle\OsosOracle.DataLayer\bin\Release\System.Web.Mvc.xml
+C:\Users\nebi.er\source\repos\OsosOracle\OsosOracle.DataLayer\bin\Release\AutoMapper.pdb
+C:\Users\nebi.er\source\repos\OsosOracle\OsosOracle.DataLayer\bin\Release\AutoMapper.xml
+C:\Users\nebi.er\source\repos\OsosOracle\OsosOracle.DataLayer\bin\Release\System.Web.WebPages.xml
+C:\Users\nebi.er\source\repos\OsosOracle\OsosOracle.DataLayer\bin\Release\FluentValidation.xml
+C:\Users\nebi.er\source\repos\OsosOracle\OsosOracle.DataLayer\bin\Release\ICSharpCode.SharpZipLib.pdb
+C:\Users\nebi.er\source\repos\OsosOracle\OsosOracle.DataLayer\bin\Release\ICSharpCode.SharpZipLib.xml
+C:\Users\nebi.er\source\repos\OsosOracle\OsosOracle.DataLayer\bin\Release\PostSharp.xml
+C:\Users\nebi.er\source\repos\OsosOracle\OsosOracle.DataLayer\bin\Release\Newtonsoft.Json.pdb
+C:\Users\nebi.er\source\repos\OsosOracle\OsosOracle.DataLayer\bin\Release\Newtonsoft.Json.xml
+C:\Users\nebi.er\source\repos\OsosOracle\OsosOracle.DataLayer\bin\Release\System.Web.WebPages.Razor.xml
+C:\Users\nebi.er\source\repos\OsosOracle\OsosOracle.DataLayer\bin\Release\System.Web.Razor.xml
+C:\Users\nebi.er\source\repos\OsosOracle\OsosOracle.DataLayer\bin\Release\System.ValueTuple.xml
+C:\Users\nebi.er\source\repos\OsosOracle\OsosOracle.DataLayer\bin\Release\System.Web.WebPages.Deployment.xml
+C:\Users\nebi.er\source\repos\OsosOracle\OsosOracle.DataLayer\obj\Release\OsosOracle.DataLayer.csprojAssemblyReference.cache
+C:\Users\nebi.er\source\repos\OsosOracle\OsosOracle.DataLayer\obj\Release\OsosOracle.DataLayer.csproj.CoreCompileInputs.cache
+C:\Users\nebi.er\source\repos\OsosOracle\OsosOracle.DataLayer\obj\Release\OsosOracle.DataLayer.csproj.CopyComplete
+C:\Users\nebi.er\source\repos\OsosOracle\OsosOracle.DataLayer\obj\Release\OsosOracle.DataLayer.dll
+C:\Users\nebi.er\source\repos\OsosOracle\OsosOracle.DataLayer\obj\Release\OsosOracle.DataLayer.pdb
+D:\Nebi Eks Kalorimetre\OsosOracle\OsosOracle.DataLayer\bin\Release\OsosOracle.DataLayer.dll.config
+D:\Nebi Eks Kalorimetre\OsosOracle\OsosOracle.DataLayer\bin\Release\OsosOracle.DataLayer.dll
+D:\Nebi Eks Kalorimetre\OsosOracle\OsosOracle.DataLayer\bin\Release\OsosOracle.DataLayer.pdb
+D:\Nebi Eks Kalorimetre\OsosOracle\OsosOracle.DataLayer\bin\Release\EntityFramework.dll
+D:\Nebi Eks Kalorimetre\OsosOracle\OsosOracle.DataLayer\bin\Release\EntityFramework.SqlServer.dll
+D:\Nebi Eks Kalorimetre\OsosOracle\OsosOracle.DataLayer\bin\Release\Oracle.ManagedDataAccess.dll
+D:\Nebi Eks Kalorimetre\OsosOracle\OsosOracle.DataLayer\bin\Release\Oracle.ManagedDataAccess.EntityFramework.dll
+D:\Nebi Eks Kalorimetre\OsosOracle\OsosOracle.DataLayer\bin\Release\OsosOracle.Entities.dll
+D:\Nebi Eks Kalorimetre\OsosOracle\OsosOracle.DataLayer\bin\Release\OsosOracle.Framework.dll
+D:\Nebi Eks Kalorimetre\OsosOracle\OsosOracle.DataLayer\bin\Release\System.Web.Mvc.dll
+D:\Nebi Eks Kalorimetre\OsosOracle\OsosOracle.DataLayer\bin\Release\AutoMapper.dll
+D:\Nebi Eks Kalorimetre\OsosOracle\OsosOracle.DataLayer\bin\Release\System.Web.WebPages.dll
+D:\Nebi Eks Kalorimetre\OsosOracle\OsosOracle.DataLayer\bin\Release\FluentValidation.dll
+D:\Nebi Eks Kalorimetre\OsosOracle\OsosOracle.DataLayer\bin\Release\ICSharpCode.SharpZipLib.dll
+D:\Nebi Eks Kalorimetre\OsosOracle\OsosOracle.DataLayer\bin\Release\PostSharp.dll
+D:\Nebi Eks Kalorimetre\OsosOracle\OsosOracle.DataLayer\bin\Release\Newtonsoft.Json.dll
+D:\Nebi Eks Kalorimetre\OsosOracle\OsosOracle.DataLayer\bin\Release\System.Web.WebPages.Razor.dll
+D:\Nebi Eks Kalorimetre\OsosOracle\OsosOracle.DataLayer\bin\Release\System.Web.Razor.dll
+D:\Nebi Eks Kalorimetre\OsosOracle\OsosOracle.DataLayer\bin\Release\Microsoft.Web.Infrastructure.dll
+D:\Nebi Eks Kalorimetre\OsosOracle\OsosOracle.DataLayer\bin\Release\System.ValueTuple.dll
+D:\Nebi Eks Kalorimetre\OsosOracle\OsosOracle.DataLayer\bin\Release\System.Web.WebPages.Deployment.dll
+D:\Nebi Eks Kalorimetre\OsosOracle\OsosOracle.DataLayer\bin\Release\OsosOracle.Entities.pdb
+D:\Nebi Eks Kalorimetre\OsosOracle\OsosOracle.DataLayer\bin\Release\OsosOracle.Framework.pdb
+D:\Nebi Eks Kalorimetre\OsosOracle\OsosOracle.DataLayer\bin\Release\OsosOracle.Framework.dll.config
+D:\Nebi Eks Kalorimetre\OsosOracle\OsosOracle.DataLayer\bin\Release\EntityFramework.xml
+D:\Nebi Eks Kalorimetre\OsosOracle\OsosOracle.DataLayer\bin\Release\EntityFramework.SqlServer.xml
+D:\Nebi Eks Kalorimetre\OsosOracle\OsosOracle.DataLayer\bin\Release\System.Web.Mvc.xml
+D:\Nebi Eks Kalorimetre\OsosOracle\OsosOracle.DataLayer\bin\Release\AutoMapper.pdb
+D:\Nebi Eks Kalorimetre\OsosOracle\OsosOracle.DataLayer\bin\Release\AutoMapper.xml
+D:\Nebi Eks Kalorimetre\OsosOracle\OsosOracle.DataLayer\bin\Release\System.Web.WebPages.xml
+D:\Nebi Eks Kalorimetre\OsosOracle\OsosOracle.DataLayer\bin\Release\FluentValidation.xml
+D:\Nebi Eks Kalorimetre\OsosOracle\OsosOracle.DataLayer\bin\Release\ICSharpCode.SharpZipLib.pdb
+D:\Nebi Eks Kalorimetre\OsosOracle\OsosOracle.DataLayer\bin\Release\ICSharpCode.SharpZipLib.xml
+D:\Nebi Eks Kalorimetre\OsosOracle\OsosOracle.DataLayer\bin\Release\PostSharp.xml
+D:\Nebi Eks Kalorimetre\OsosOracle\OsosOracle.DataLayer\bin\Release\Newtonsoft.Json.pdb
+D:\Nebi Eks Kalorimetre\OsosOracle\OsosOracle.DataLayer\bin\Release\Newtonsoft.Json.xml
+D:\Nebi Eks Kalorimetre\OsosOracle\OsosOracle.DataLayer\bin\Release\System.Web.WebPages.Razor.xml
+D:\Nebi Eks Kalorimetre\OsosOracle\OsosOracle.DataLayer\bin\Release\System.Web.Razor.xml
+D:\Nebi Eks Kalorimetre\OsosOracle\OsosOracle.DataLayer\bin\Release\System.ValueTuple.xml
+D:\Nebi Eks Kalorimetre\OsosOracle\OsosOracle.DataLayer\bin\Release\System.Web.WebPages.Deployment.xml
+D:\Nebi Eks Kalorimetre\OsosOracle\OsosOracle.DataLayer\obj\Release\OsosOracle.DataLayer.csprojAssemblyReference.cache
+D:\Nebi Eks Kalorimetre\OsosOracle\OsosOracle.DataLayer\obj\Release\OsosOracle.DataLayer.csproj.CoreCompileInputs.cache
+D:\Nebi Eks Kalorimetre\OsosOracle\OsosOracle.DataLayer\obj\Release\OsosOracle.DataLayer.csproj.CopyComplete
+D:\Nebi Eks Kalorimetre\OsosOracle\OsosOracle.DataLayer\obj\Release\OsosOracle.DataLayer.dll
+D:\Nebi Eks Kalorimetre\OsosOracle\OsosOracle.DataLayer\obj\Release\OsosOracle.DataLayer.pdb
+C:\Users\ELKTRMD\Downloads\wetransfer-c7365b\OsosOracle\OsosOracle.DataLayer\bin\Release\OsosOracle.DataLayer.dll.config
+C:\Users\ELKTRMD\Downloads\wetransfer-c7365b\OsosOracle\OsosOracle.DataLayer\bin\Release\OsosOracle.DataLayer.dll
+C:\Users\ELKTRMD\Downloads\wetransfer-c7365b\OsosOracle\OsosOracle.DataLayer\bin\Release\OsosOracle.DataLayer.pdb
+C:\Users\ELKTRMD\Downloads\wetransfer-c7365b\OsosOracle\OsosOracle.DataLayer\bin\Release\EntityFramework.dll
+C:\Users\ELKTRMD\Downloads\wetransfer-c7365b\OsosOracle\OsosOracle.DataLayer\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\ELKTRMD\Downloads\wetransfer-c7365b\OsosOracle\OsosOracle.DataLayer\bin\Release\Oracle.ManagedDataAccess.dll
+C:\Users\ELKTRMD\Downloads\wetransfer-c7365b\OsosOracle\OsosOracle.DataLayer\bin\Release\Oracle.ManagedDataAccess.EntityFramework.dll
+C:\Users\ELKTRMD\Downloads\wetransfer-c7365b\OsosOracle\OsosOracle.DataLayer\bin\Release\OsosOracle.Entities.dll
+C:\Users\ELKTRMD\Downloads\wetransfer-c7365b\OsosOracle\OsosOracle.DataLayer\bin\Release\OsosOracle.Framework.dll
+C:\Users\ELKTRMD\Downloads\wetransfer-c7365b\OsosOracle\OsosOracle.DataLayer\bin\Release\System.Web.Mvc.dll
+C:\Users\ELKTRMD\Downloads\wetransfer-c7365b\OsosOracle\OsosOracle.DataLayer\bin\Release\AutoMapper.dll
+C:\Users\ELKTRMD\Downloads\wetransfer-c7365b\OsosOracle\OsosOracle.DataLayer\bin\Release\System.Web.WebPages.dll
+C:\Users\ELKTRMD\Downloads\wetransfer-c7365b\OsosOracle\OsosOracle.DataLayer\bin\Release\FluentValidation.dll
+C:\Users\ELKTRMD\Downloads\wetransfer-c7365b\OsosOracle\OsosOracle.DataLayer\bin\Release\ICSharpCode.SharpZipLib.dll
+C:\Users\ELKTRMD\Downloads\wetransfer-c7365b\OsosOracle\OsosOracle.DataLayer\bin\Release\PostSharp.dll
+C:\Users\ELKTRMD\Downloads\wetransfer-c7365b\OsosOracle\OsosOracle.DataLayer\bin\Release\Newtonsoft.Json.dll
+C:\Users\ELKTRMD\Downloads\wetransfer-c7365b\OsosOracle\OsosOracle.DataLayer\bin\Release\System.Web.WebPages.Razor.dll
+C:\Users\ELKTRMD\Downloads\wetransfer-c7365b\OsosOracle\OsosOracle.DataLayer\bin\Release\System.Web.Razor.dll
+C:\Users\ELKTRMD\Downloads\wetransfer-c7365b\OsosOracle\OsosOracle.DataLayer\bin\Release\Microsoft.Web.Infrastructure.dll
+C:\Users\ELKTRMD\Downloads\wetransfer-c7365b\OsosOracle\OsosOracle.DataLayer\bin\Release\System.ValueTuple.dll
+C:\Users\ELKTRMD\Downloads\wetransfer-c7365b\OsosOracle\OsosOracle.DataLayer\bin\Release\System.Web.WebPages.Deployment.dll
+C:\Users\ELKTRMD\Downloads\wetransfer-c7365b\OsosOracle\OsosOracle.DataLayer\bin\Release\OsosOracle.Entities.pdb
+C:\Users\ELKTRMD\Downloads\wetransfer-c7365b\OsosOracle\OsosOracle.DataLayer\bin\Release\OsosOracle.Framework.pdb
+C:\Users\ELKTRMD\Downloads\wetransfer-c7365b\OsosOracle\OsosOracle.DataLayer\bin\Release\OsosOracle.Framework.dll.config
+C:\Users\ELKTRMD\Downloads\wetransfer-c7365b\OsosOracle\OsosOracle.DataLayer\bin\Release\EntityFramework.xml
+C:\Users\ELKTRMD\Downloads\wetransfer-c7365b\OsosOracle\OsosOracle.DataLayer\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\ELKTRMD\Downloads\wetransfer-c7365b\OsosOracle\OsosOracle.DataLayer\bin\Release\System.Web.Mvc.xml
+C:\Users\ELKTRMD\Downloads\wetransfer-c7365b\OsosOracle\OsosOracle.DataLayer\bin\Release\AutoMapper.pdb
+C:\Users\ELKTRMD\Downloads\wetransfer-c7365b\OsosOracle\OsosOracle.DataLayer\bin\Release\AutoMapper.xml
+C:\Users\ELKTRMD\Downloads\wetransfer-c7365b\OsosOracle\OsosOracle.DataLayer\bin\Release\System.Web.WebPages.xml
+C:\Users\ELKTRMD\Downloads\wetransfer-c7365b\OsosOracle\OsosOracle.DataLayer\bin\Release\FluentValidation.xml
+C:\Users\ELKTRMD\Downloads\wetransfer-c7365b\OsosOracle\OsosOracle.DataLayer\bin\Release\ICSharpCode.SharpZipLib.pdb
+C:\Users\ELKTRMD\Downloads\wetransfer-c7365b\OsosOracle\OsosOracle.DataLayer\bin\Release\ICSharpCode.SharpZipLib.xml
+C:\Users\ELKTRMD\Downloads\wetransfer-c7365b\OsosOracle\OsosOracle.DataLayer\bin\Release\PostSharp.xml
+C:\Users\ELKTRMD\Downloads\wetransfer-c7365b\OsosOracle\OsosOracle.DataLayer\bin\Release\Newtonsoft.Json.pdb
+C:\Users\ELKTRMD\Downloads\wetransfer-c7365b\OsosOracle\OsosOracle.DataLayer\bin\Release\Newtonsoft.Json.xml
+C:\Users\ELKTRMD\Downloads\wetransfer-c7365b\OsosOracle\OsosOracle.DataLayer\bin\Release\System.Web.WebPages.Razor.xml
+C:\Users\ELKTRMD\Downloads\wetransfer-c7365b\OsosOracle\OsosOracle.DataLayer\bin\Release\System.Web.Razor.xml
+C:\Users\ELKTRMD\Downloads\wetransfer-c7365b\OsosOracle\OsosOracle.DataLayer\bin\Release\System.ValueTuple.xml
+C:\Users\ELKTRMD\Downloads\wetransfer-c7365b\OsosOracle\OsosOracle.DataLayer\bin\Release\System.Web.WebPages.Deployment.xml
+C:\Users\ELKTRMD\Downloads\wetransfer-c7365b\OsosOracle\OsosOracle.DataLayer\obj\Release\OsosOracle.DataLayer.csprojAssemblyReference.cache
+C:\Users\ELKTRMD\Downloads\wetransfer-c7365b\OsosOracle\OsosOracle.DataLayer\obj\Release\OsosOracle.DataLayer.csproj.CopyComplete
+C:\Users\ELKTRMD\Downloads\wetransfer-c7365b\OsosOracle\OsosOracle.DataLayer\obj\Release\OsosOracle.DataLayer.dll
+C:\Users\ELKTRMD\Downloads\wetransfer-c7365b\OsosOracle\OsosOracle.DataLayer\obj\Release\OsosOracle.DataLayer.pdb
+C:\Users\ARGE X\Desktop\19.01.2019 Libya Yonca Çalışması\OsosOracle\OsosOracle.DataLayer\bin\Release\OsosOracle.DataLayer.dll.config
+C:\Users\ARGE X\Desktop\19.01.2019 Libya Yonca Çalışması\OsosOracle\OsosOracle.DataLayer\bin\Release\OsosOracle.DataLayer.dll
+C:\Users\ARGE X\Desktop\19.01.2019 Libya Yonca Çalışması\OsosOracle\OsosOracle.DataLayer\bin\Release\OsosOracle.DataLayer.pdb
+C:\Users\ARGE X\Desktop\19.01.2019 Libya Yonca Çalışması\OsosOracle\OsosOracle.DataLayer\bin\Release\EntityFramework.dll
+C:\Users\ARGE X\Desktop\19.01.2019 Libya Yonca Çalışması\OsosOracle\OsosOracle.DataLayer\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\ARGE X\Desktop\19.01.2019 Libya Yonca Çalışması\OsosOracle\OsosOracle.DataLayer\bin\Release\Oracle.ManagedDataAccess.dll
+C:\Users\ARGE X\Desktop\19.01.2019 Libya Yonca Çalışması\OsosOracle\OsosOracle.DataLayer\bin\Release\Oracle.ManagedDataAccess.EntityFramework.dll
+C:\Users\ARGE X\Desktop\19.01.2019 Libya Yonca Çalışması\OsosOracle\OsosOracle.DataLayer\bin\Release\OsosOracle.Entities.dll
+C:\Users\ARGE X\Desktop\19.01.2019 Libya Yonca Çalışması\OsosOracle\OsosOracle.DataLayer\bin\Release\OsosOracle.Framework.dll
+C:\Users\ARGE X\Desktop\19.01.2019 Libya Yonca Çalışması\OsosOracle\OsosOracle.DataLayer\bin\Release\System.Web.Mvc.dll
+C:\Users\ARGE X\Desktop\19.01.2019 Libya Yonca Çalışması\OsosOracle\OsosOracle.DataLayer\bin\Release\AutoMapper.dll
+C:\Users\ARGE X\Desktop\19.01.2019 Libya Yonca Çalışması\OsosOracle\OsosOracle.DataLayer\bin\Release\System.Web.WebPages.dll
+C:\Users\ARGE X\Desktop\19.01.2019 Libya Yonca Çalışması\OsosOracle\OsosOracle.DataLayer\bin\Release\FluentValidation.dll
+C:\Users\ARGE X\Desktop\19.01.2019 Libya Yonca Çalışması\OsosOracle\OsosOracle.DataLayer\bin\Release\ICSharpCode.SharpZipLib.dll
+C:\Users\ARGE X\Desktop\19.01.2019 Libya Yonca Çalışması\OsosOracle\OsosOracle.DataLayer\bin\Release\PostSharp.dll
+C:\Users\ARGE X\Desktop\19.01.2019 Libya Yonca Çalışması\OsosOracle\OsosOracle.DataLayer\bin\Release\Newtonsoft.Json.dll
+C:\Users\ARGE X\Desktop\19.01.2019 Libya Yonca Çalışması\OsosOracle\OsosOracle.DataLayer\bin\Release\System.Web.WebPages.Razor.dll
+C:\Users\ARGE X\Desktop\19.01.2019 Libya Yonca Çalışması\OsosOracle\OsosOracle.DataLayer\bin\Release\System.Web.Razor.dll
+C:\Users\ARGE X\Desktop\19.01.2019 Libya Yonca Çalışması\OsosOracle\OsosOracle.DataLayer\bin\Release\Microsoft.Web.Infrastructure.dll
+C:\Users\ARGE X\Desktop\19.01.2019 Libya Yonca Çalışması\OsosOracle\OsosOracle.DataLayer\bin\Release\System.ValueTuple.dll
+C:\Users\ARGE X\Desktop\19.01.2019 Libya Yonca Çalışması\OsosOracle\OsosOracle.DataLayer\bin\Release\System.Web.WebPages.Deployment.dll
+C:\Users\ARGE X\Desktop\19.01.2019 Libya Yonca Çalışması\OsosOracle\OsosOracle.DataLayer\bin\Release\OsosOracle.Entities.pdb
+C:\Users\ARGE X\Desktop\19.01.2019 Libya Yonca Çalışması\OsosOracle\OsosOracle.DataLayer\bin\Release\OsosOracle.Framework.pdb
+C:\Users\ARGE X\Desktop\19.01.2019 Libya Yonca Çalışması\OsosOracle\OsosOracle.DataLayer\bin\Release\OsosOracle.Framework.dll.config
+C:\Users\ARGE X\Desktop\19.01.2019 Libya Yonca Çalışması\OsosOracle\OsosOracle.DataLayer\bin\Release\EntityFramework.xml
+C:\Users\ARGE X\Desktop\19.01.2019 Libya Yonca Çalışması\OsosOracle\OsosOracle.DataLayer\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\ARGE X\Desktop\19.01.2019 Libya Yonca Çalışması\OsosOracle\OsosOracle.DataLayer\bin\Release\System.Web.Mvc.xml
+C:\Users\ARGE X\Desktop\19.01.2019 Libya Yonca Çalışması\OsosOracle\OsosOracle.DataLayer\bin\Release\AutoMapper.pdb
+C:\Users\ARGE X\Desktop\19.01.2019 Libya Yonca Çalışması\OsosOracle\OsosOracle.DataLayer\bin\Release\AutoMapper.xml
+C:\Users\ARGE X\Desktop\19.01.2019 Libya Yonca Çalışması\OsosOracle\OsosOracle.DataLayer\bin\Release\System.Web.WebPages.xml
+C:\Users\ARGE X\Desktop\19.01.2019 Libya Yonca Çalışması\OsosOracle\OsosOracle.DataLayer\bin\Release\FluentValidation.xml
+C:\Users\ARGE X\Desktop\19.01.2019 Libya Yonca Çalışması\OsosOracle\OsosOracle.DataLayer\bin\Release\ICSharpCode.SharpZipLib.pdb
+C:\Users\ARGE X\Desktop\19.01.2019 Libya Yonca Çalışması\OsosOracle\OsosOracle.DataLayer\bin\Release\ICSharpCode.SharpZipLib.xml
+C:\Users\ARGE X\Desktop\19.01.2019 Libya Yonca Çalışması\OsosOracle\OsosOracle.DataLayer\bin\Release\PostSharp.xml
+C:\Users\ARGE X\Desktop\19.01.2019 Libya Yonca Çalışması\OsosOracle\OsosOracle.DataLayer\bin\Release\Newtonsoft.Json.pdb
+C:\Users\ARGE X\Desktop\19.01.2019 Libya Yonca Çalışması\OsosOracle\OsosOracle.DataLayer\bin\Release\Newtonsoft.Json.xml
+C:\Users\ARGE X\Desktop\19.01.2019 Libya Yonca Çalışması\OsosOracle\OsosOracle.DataLayer\bin\Release\System.Web.WebPages.Razor.xml
+C:\Users\ARGE X\Desktop\19.01.2019 Libya Yonca Çalışması\OsosOracle\OsosOracle.DataLayer\bin\Release\System.Web.Razor.xml
+C:\Users\ARGE X\Desktop\19.01.2019 Libya Yonca Çalışması\OsosOracle\OsosOracle.DataLayer\bin\Release\System.ValueTuple.xml
+C:\Users\ARGE X\Desktop\19.01.2019 Libya Yonca Çalışması\OsosOracle\OsosOracle.DataLayer\bin\Release\System.Web.WebPages.Deployment.xml
+C:\Users\ARGE X\Desktop\19.01.2019 Libya Yonca Çalışması\OsosOracle\OsosOracle.DataLayer\obj\Release\OsosOracle.DataLayer.csprojAssemblyReference.cache
+C:\Users\ARGE X\Desktop\19.01.2019 Libya Yonca Çalışması\OsosOracle\OsosOracle.DataLayer\obj\Release\OsosOracle.DataLayer.csproj.CoreCompileInputs.cache
+C:\Users\ARGE X\Desktop\19.01.2019 Libya Yonca Çalışması\OsosOracle\OsosOracle.DataLayer\obj\Release\OsosOracle.DataLayer.csproj.CopyComplete
+C:\Users\ARGE X\Desktop\19.01.2019 Libya Yonca Çalışması\OsosOracle\OsosOracle.DataLayer\obj\Release\OsosOracle.DataLayer.dll
+C:\Users\ARGE X\Desktop\19.01.2019 Libya Yonca Çalışması\OsosOracle\OsosOracle.DataLayer\obj\Release\OsosOracle.DataLayer.pdb
+D:\OsosOracle\OsosOracle.DataLayer\bin\Release\OsosOracle.DataLayer.dll.config
+D:\OsosOracle\OsosOracle.DataLayer\bin\Release\OsosOracle.DataLayer.dll
+D:\OsosOracle\OsosOracle.DataLayer\bin\Release\OsosOracle.DataLayer.pdb
+D:\OsosOracle\OsosOracle.DataLayer\bin\Release\EntityFramework.dll
+D:\OsosOracle\OsosOracle.DataLayer\bin\Release\EntityFramework.SqlServer.dll
+D:\OsosOracle\OsosOracle.DataLayer\bin\Release\Oracle.ManagedDataAccess.dll
+D:\OsosOracle\OsosOracle.DataLayer\bin\Release\Oracle.ManagedDataAccess.EntityFramework.dll
+D:\OsosOracle\OsosOracle.DataLayer\bin\Release\OsosOracle.Entities.dll
+D:\OsosOracle\OsosOracle.DataLayer\bin\Release\OsosOracle.Framework.dll
+D:\OsosOracle\OsosOracle.DataLayer\bin\Release\System.Web.Mvc.dll
+D:\OsosOracle\OsosOracle.DataLayer\bin\Release\AutoMapper.dll
+D:\OsosOracle\OsosOracle.DataLayer\bin\Release\System.Web.WebPages.dll
+D:\OsosOracle\OsosOracle.DataLayer\bin\Release\FluentValidation.dll
+D:\OsosOracle\OsosOracle.DataLayer\bin\Release\ICSharpCode.SharpZipLib.dll
+D:\OsosOracle\OsosOracle.DataLayer\bin\Release\PostSharp.dll
+D:\OsosOracle\OsosOracle.DataLayer\bin\Release\Newtonsoft.Json.dll
+D:\OsosOracle\OsosOracle.DataLayer\bin\Release\System.Web.WebPages.Razor.dll
+D:\OsosOracle\OsosOracle.DataLayer\bin\Release\System.Web.Razor.dll
+D:\OsosOracle\OsosOracle.DataLayer\bin\Release\Microsoft.Web.Infrastructure.dll
+D:\OsosOracle\OsosOracle.DataLayer\bin\Release\System.ValueTuple.dll
+D:\OsosOracle\OsosOracle.DataLayer\bin\Release\System.Web.WebPages.Deployment.dll
+D:\OsosOracle\OsosOracle.DataLayer\bin\Release\OsosOracle.Entities.pdb
+D:\OsosOracle\OsosOracle.DataLayer\bin\Release\OsosOracle.Framework.pdb
+D:\OsosOracle\OsosOracle.DataLayer\bin\Release\OsosOracle.Framework.dll.config
+D:\OsosOracle\OsosOracle.DataLayer\bin\Release\EntityFramework.xml
+D:\OsosOracle\OsosOracle.DataLayer\bin\Release\EntityFramework.SqlServer.xml
+D:\OsosOracle\OsosOracle.DataLayer\bin\Release\System.Web.Mvc.xml
+D:\OsosOracle\OsosOracle.DataLayer\bin\Release\AutoMapper.pdb
+D:\OsosOracle\OsosOracle.DataLayer\bin\Release\AutoMapper.xml
+D:\OsosOracle\OsosOracle.DataLayer\bin\Release\System.Web.WebPages.xml
+D:\OsosOracle\OsosOracle.DataLayer\bin\Release\FluentValidation.xml
+D:\OsosOracle\OsosOracle.DataLayer\bin\Release\ICSharpCode.SharpZipLib.pdb
+D:\OsosOracle\OsosOracle.DataLayer\bin\Release\ICSharpCode.SharpZipLib.xml
+D:\OsosOracle\OsosOracle.DataLayer\bin\Release\PostSharp.xml
+D:\OsosOracle\OsosOracle.DataLayer\bin\Release\Newtonsoft.Json.pdb
+D:\OsosOracle\OsosOracle.DataLayer\bin\Release\Newtonsoft.Json.xml
+D:\OsosOracle\OsosOracle.DataLayer\bin\Release\System.Web.WebPages.Razor.xml
+D:\OsosOracle\OsosOracle.DataLayer\bin\Release\System.Web.Razor.xml
+D:\OsosOracle\OsosOracle.DataLayer\bin\Release\System.ValueTuple.xml
+D:\OsosOracle\OsosOracle.DataLayer\bin\Release\System.Web.WebPages.Deployment.xml
+D:\OsosOracle\OsosOracle.DataLayer\obj\Release\OsosOracle.DataLayer.csprojAssemblyReference.cache
+D:\OsosOracle\OsosOracle.DataLayer\obj\Release\OsosOracle.DataLayer.csproj.CopyComplete
+D:\OsosOracle\OsosOracle.DataLayer\obj\Release\OsosOracle.DataLayer.dll
+D:\OsosOracle\OsosOracle.DataLayer\obj\Release\OsosOracle.DataLayer.pdb
+F:\OsosOracle\OsosOracle.DataLayer\bin\Release\OsosOracle.DataLayer.dll.config
+F:\OsosOracle\OsosOracle.DataLayer\bin\Release\OsosOracle.DataLayer.dll
+F:\OsosOracle\OsosOracle.DataLayer\bin\Release\OsosOracle.DataLayer.pdb
+F:\OsosOracle\OsosOracle.DataLayer\bin\Release\EntityFramework.dll
+F:\OsosOracle\OsosOracle.DataLayer\bin\Release\EntityFramework.SqlServer.dll
+F:\OsosOracle\OsosOracle.DataLayer\bin\Release\Oracle.ManagedDataAccess.dll
+F:\OsosOracle\OsosOracle.DataLayer\bin\Release\Oracle.ManagedDataAccess.EntityFramework.dll
+F:\OsosOracle\OsosOracle.DataLayer\bin\Release\OsosOracle.Entities.dll
+F:\OsosOracle\OsosOracle.DataLayer\bin\Release\OsosOracle.Framework.dll
+F:\OsosOracle\OsosOracle.DataLayer\bin\Release\System.Web.Mvc.dll
+F:\OsosOracle\OsosOracle.DataLayer\bin\Release\AutoMapper.dll
+F:\OsosOracle\OsosOracle.DataLayer\bin\Release\System.Web.WebPages.dll
+F:\OsosOracle\OsosOracle.DataLayer\bin\Release\FluentValidation.dll
+F:\OsosOracle\OsosOracle.DataLayer\bin\Release\ICSharpCode.SharpZipLib.dll
+F:\OsosOracle\OsosOracle.DataLayer\bin\Release\PostSharp.dll
+F:\OsosOracle\OsosOracle.DataLayer\bin\Release\Newtonsoft.Json.dll
+F:\OsosOracle\OsosOracle.DataLayer\bin\Release\System.Web.WebPages.Razor.dll
+F:\OsosOracle\OsosOracle.DataLayer\bin\Release\System.Web.Razor.dll
+F:\OsosOracle\OsosOracle.DataLayer\bin\Release\Microsoft.Web.Infrastructure.dll
+F:\OsosOracle\OsosOracle.DataLayer\bin\Release\System.ValueTuple.dll
+F:\OsosOracle\OsosOracle.DataLayer\bin\Release\System.Web.WebPages.Deployment.dll
+F:\OsosOracle\OsosOracle.DataLayer\bin\Release\OsosOracle.Entities.pdb
+F:\OsosOracle\OsosOracle.DataLayer\bin\Release\OsosOracle.Framework.pdb
+F:\OsosOracle\OsosOracle.DataLayer\bin\Release\OsosOracle.Framework.dll.config
+F:\OsosOracle\OsosOracle.DataLayer\bin\Release\EntityFramework.xml
+F:\OsosOracle\OsosOracle.DataLayer\bin\Release\EntityFramework.SqlServer.xml
+F:\OsosOracle\OsosOracle.DataLayer\bin\Release\System.Web.Mvc.xml
+F:\OsosOracle\OsosOracle.DataLayer\bin\Release\AutoMapper.pdb
+F:\OsosOracle\OsosOracle.DataLayer\bin\Release\AutoMapper.xml
+F:\OsosOracle\OsosOracle.DataLayer\bin\Release\System.Web.WebPages.xml
+F:\OsosOracle\OsosOracle.DataLayer\bin\Release\FluentValidation.xml
+F:\OsosOracle\OsosOracle.DataLayer\bin\Release\ICSharpCode.SharpZipLib.pdb
+F:\OsosOracle\OsosOracle.DataLayer\bin\Release\ICSharpCode.SharpZipLib.xml
+F:\OsosOracle\OsosOracle.DataLayer\bin\Release\PostSharp.xml
+F:\OsosOracle\OsosOracle.DataLayer\bin\Release\Newtonsoft.Json.pdb
+F:\OsosOracle\OsosOracle.DataLayer\bin\Release\Newtonsoft.Json.xml
+F:\OsosOracle\OsosOracle.DataLayer\bin\Release\System.Web.WebPages.Razor.xml
+F:\OsosOracle\OsosOracle.DataLayer\bin\Release\System.Web.Razor.xml
+F:\OsosOracle\OsosOracle.DataLayer\bin\Release\System.ValueTuple.xml
+F:\OsosOracle\OsosOracle.DataLayer\bin\Release\System.Web.WebPages.Deployment.xml
+F:\OsosOracle\OsosOracle.DataLayer\obj\Release\OsosOracle.DataLayer.csprojAssemblyReference.cache
+F:\OsosOracle\OsosOracle.DataLayer\obj\Release\OsosOracle.DataLayer.csproj.CopyComplete
+F:\OsosOracle\OsosOracle.DataLayer\obj\Release\OsosOracle.DataLayer.dll
+F:\OsosOracle\OsosOracle.DataLayer\obj\Release\OsosOracle.DataLayer.pdb
+C:\Users\ARGE X\Desktop\1.3.2020 OsosOracle\OsosOracle\OsosOracle.DataLayer\bin\Release\OsosOracle.DataLayer.dll.config
+C:\Users\ARGE X\Desktop\1.3.2020 OsosOracle\OsosOracle\OsosOracle.DataLayer\bin\Release\OsosOracle.DataLayer.dll
+C:\Users\ARGE X\Desktop\1.3.2020 OsosOracle\OsosOracle\OsosOracle.DataLayer\bin\Release\OsosOracle.DataLayer.pdb
+C:\Users\ARGE X\Desktop\1.3.2020 OsosOracle\OsosOracle\OsosOracle.DataLayer\bin\Release\EntityFramework.dll
+C:\Users\ARGE X\Desktop\1.3.2020 OsosOracle\OsosOracle\OsosOracle.DataLayer\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\ARGE X\Desktop\1.3.2020 OsosOracle\OsosOracle\OsosOracle.DataLayer\bin\Release\Oracle.ManagedDataAccess.dll
+C:\Users\ARGE X\Desktop\1.3.2020 OsosOracle\OsosOracle\OsosOracle.DataLayer\bin\Release\Oracle.ManagedDataAccess.EntityFramework.dll
+C:\Users\ARGE X\Desktop\1.3.2020 OsosOracle\OsosOracle\OsosOracle.DataLayer\bin\Release\OsosOracle.Entities.dll
+C:\Users\ARGE X\Desktop\1.3.2020 OsosOracle\OsosOracle\OsosOracle.DataLayer\bin\Release\OsosOracle.Framework.dll
+C:\Users\ARGE X\Desktop\1.3.2020 OsosOracle\OsosOracle\OsosOracle.DataLayer\bin\Release\System.Web.Mvc.dll
+C:\Users\ARGE X\Desktop\1.3.2020 OsosOracle\OsosOracle\OsosOracle.DataLayer\bin\Release\AutoMapper.dll
+C:\Users\ARGE X\Desktop\1.3.2020 OsosOracle\OsosOracle\OsosOracle.DataLayer\bin\Release\System.Web.WebPages.dll
+C:\Users\ARGE X\Desktop\1.3.2020 OsosOracle\OsosOracle\OsosOracle.DataLayer\bin\Release\FluentValidation.dll
+C:\Users\ARGE X\Desktop\1.3.2020 OsosOracle\OsosOracle\OsosOracle.DataLayer\bin\Release\ICSharpCode.SharpZipLib.dll
+C:\Users\ARGE X\Desktop\1.3.2020 OsosOracle\OsosOracle\OsosOracle.DataLayer\bin\Release\PostSharp.dll
+C:\Users\ARGE X\Desktop\1.3.2020 OsosOracle\OsosOracle\OsosOracle.DataLayer\bin\Release\Newtonsoft.Json.dll
+C:\Users\ARGE X\Desktop\1.3.2020 OsosOracle\OsosOracle\OsosOracle.DataLayer\bin\Release\System.Web.WebPages.Razor.dll
+C:\Users\ARGE X\Desktop\1.3.2020 OsosOracle\OsosOracle\OsosOracle.DataLayer\bin\Release\System.Web.Razor.dll
+C:\Users\ARGE X\Desktop\1.3.2020 OsosOracle\OsosOracle\OsosOracle.DataLayer\bin\Release\Microsoft.Web.Infrastructure.dll
+C:\Users\ARGE X\Desktop\1.3.2020 OsosOracle\OsosOracle\OsosOracle.DataLayer\bin\Release\System.ValueTuple.dll
+C:\Users\ARGE X\Desktop\1.3.2020 OsosOracle\OsosOracle\OsosOracle.DataLayer\bin\Release\System.Web.WebPages.Deployment.dll
+C:\Users\ARGE X\Desktop\1.3.2020 OsosOracle\OsosOracle\OsosOracle.DataLayer\bin\Release\OsosOracle.Entities.pdb
+C:\Users\ARGE X\Desktop\1.3.2020 OsosOracle\OsosOracle\OsosOracle.DataLayer\bin\Release\OsosOracle.Framework.pdb
+C:\Users\ARGE X\Desktop\1.3.2020 OsosOracle\OsosOracle\OsosOracle.DataLayer\bin\Release\OsosOracle.Framework.dll.config
+C:\Users\ARGE X\Desktop\1.3.2020 OsosOracle\OsosOracle\OsosOracle.DataLayer\bin\Release\EntityFramework.xml
+C:\Users\ARGE X\Desktop\1.3.2020 OsosOracle\OsosOracle\OsosOracle.DataLayer\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\ARGE X\Desktop\1.3.2020 OsosOracle\OsosOracle\OsosOracle.DataLayer\bin\Release\System.Web.Mvc.xml
+C:\Users\ARGE X\Desktop\1.3.2020 OsosOracle\OsosOracle\OsosOracle.DataLayer\bin\Release\AutoMapper.pdb
+C:\Users\ARGE X\Desktop\1.3.2020 OsosOracle\OsosOracle\OsosOracle.DataLayer\bin\Release\AutoMapper.xml
+C:\Users\ARGE X\Desktop\1.3.2020 OsosOracle\OsosOracle\OsosOracle.DataLayer\bin\Release\System.Web.WebPages.xml
+C:\Users\ARGE X\Desktop\1.3.2020 OsosOracle\OsosOracle\OsosOracle.DataLayer\bin\Release\FluentValidation.xml
+C:\Users\ARGE X\Desktop\1.3.2020 OsosOracle\OsosOracle\OsosOracle.DataLayer\bin\Release\ICSharpCode.SharpZipLib.pdb
+C:\Users\ARGE X\Desktop\1.3.2020 OsosOracle\OsosOracle\OsosOracle.DataLayer\bin\Release\ICSharpCode.SharpZipLib.xml
+C:\Users\ARGE X\Desktop\1.3.2020 OsosOracle\OsosOracle\OsosOracle.DataLayer\bin\Release\PostSharp.xml
+C:\Users\ARGE X\Desktop\1.3.2020 OsosOracle\OsosOracle\OsosOracle.DataLayer\bin\Release\Newtonsoft.Json.pdb
+C:\Users\ARGE X\Desktop\1.3.2020 OsosOracle\OsosOracle\OsosOracle.DataLayer\bin\Release\Newtonsoft.Json.xml
+C:\Users\ARGE X\Desktop\1.3.2020 OsosOracle\OsosOracle\OsosOracle.DataLayer\bin\Release\System.Web.WebPages.Razor.xml
+C:\Users\ARGE X\Desktop\1.3.2020 OsosOracle\OsosOracle\OsosOracle.DataLayer\bin\Release\System.Web.Razor.xml
+C:\Users\ARGE X\Desktop\1.3.2020 OsosOracle\OsosOracle\OsosOracle.DataLayer\bin\Release\System.ValueTuple.xml
+C:\Users\ARGE X\Desktop\1.3.2020 OsosOracle\OsosOracle\OsosOracle.DataLayer\bin\Release\System.Web.WebPages.Deployment.xml
+C:\Users\ARGE X\Desktop\1.3.2020 OsosOracle\OsosOracle\OsosOracle.DataLayer\obj\Release\OsosOracle.DataLayer.csprojAssemblyReference.cache
+C:\Users\ARGE X\Desktop\1.3.2020 OsosOracle\OsosOracle\OsosOracle.DataLayer\obj\Release\OsosOracle.DataLayer.csproj.CoreCompileInputs.cache
+C:\Users\ARGE X\Desktop\1.3.2020 OsosOracle\OsosOracle\OsosOracle.DataLayer\obj\Release\OsosOracle.DataLayer.csproj.CopyComplete
+C:\Users\ARGE X\Desktop\1.3.2020 OsosOracle\OsosOracle\OsosOracle.DataLayer\obj\Release\OsosOracle.DataLayer.dll
+C:\Users\ARGE X\Desktop\1.3.2020 OsosOracle\OsosOracle\OsosOracle.DataLayer\obj\Release\OsosOracle.DataLayer.pdb
+F:\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.DataLayer\bin\Release\OsosOracle.DataLayer.dll.config
+F:\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.DataLayer\bin\Release\OsosOracle.DataLayer.dll
+F:\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.DataLayer\bin\Release\OsosOracle.DataLayer.pdb
+F:\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.DataLayer\bin\Release\EntityFramework.dll
+F:\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.DataLayer\bin\Release\EntityFramework.SqlServer.dll
+F:\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.DataLayer\bin\Release\Oracle.ManagedDataAccess.dll
+F:\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.DataLayer\bin\Release\Oracle.ManagedDataAccess.EntityFramework.dll
+F:\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.DataLayer\bin\Release\OsosOracle.Entities.dll
+F:\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.DataLayer\bin\Release\OsosOracle.Framework.dll
+F:\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.DataLayer\bin\Release\System.Web.Mvc.dll
+F:\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.DataLayer\bin\Release\AutoMapper.dll
+F:\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.DataLayer\bin\Release\System.Web.WebPages.dll
+F:\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.DataLayer\bin\Release\FluentValidation.dll
+F:\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.DataLayer\bin\Release\ICSharpCode.SharpZipLib.dll
+F:\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.DataLayer\bin\Release\PostSharp.dll
+F:\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.DataLayer\bin\Release\Newtonsoft.Json.dll
+F:\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.DataLayer\bin\Release\System.Web.WebPages.Razor.dll
+F:\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.DataLayer\bin\Release\System.Web.Razor.dll
+F:\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.DataLayer\bin\Release\Microsoft.Web.Infrastructure.dll
+F:\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.DataLayer\bin\Release\System.ValueTuple.dll
+F:\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.DataLayer\bin\Release\System.Web.WebPages.Deployment.dll
+F:\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.DataLayer\bin\Release\OsosOracle.Entities.pdb
+F:\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.DataLayer\bin\Release\OsosOracle.Framework.pdb
+F:\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.DataLayer\bin\Release\OsosOracle.Framework.dll.config
+F:\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.DataLayer\bin\Release\EntityFramework.xml
+F:\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.DataLayer\bin\Release\EntityFramework.SqlServer.xml
+F:\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.DataLayer\bin\Release\System.Web.Mvc.xml
+F:\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.DataLayer\bin\Release\AutoMapper.pdb
+F:\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.DataLayer\bin\Release\AutoMapper.xml
+F:\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.DataLayer\bin\Release\System.Web.WebPages.xml
+F:\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.DataLayer\bin\Release\FluentValidation.xml
+F:\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.DataLayer\bin\Release\ICSharpCode.SharpZipLib.pdb
+F:\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.DataLayer\bin\Release\ICSharpCode.SharpZipLib.xml
+F:\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.DataLayer\bin\Release\PostSharp.xml
+F:\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.DataLayer\bin\Release\Newtonsoft.Json.pdb
+F:\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.DataLayer\bin\Release\Newtonsoft.Json.xml
+F:\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.DataLayer\bin\Release\System.Web.WebPages.Razor.xml
+F:\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.DataLayer\bin\Release\System.Web.Razor.xml
+F:\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.DataLayer\bin\Release\System.ValueTuple.xml
+F:\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.DataLayer\bin\Release\System.Web.WebPages.Deployment.xml
+F:\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.DataLayer\obj\Release\OsosOracle.DataLayer.csprojAssemblyReference.cache
+F:\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.DataLayer\obj\Release\OsosOracle.DataLayer.csproj.CopyComplete
+F:\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.DataLayer\obj\Release\OsosOracle.DataLayer.dll
+F:\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.DataLayer\obj\Release\OsosOracle.DataLayer.pdb
+C:\Users\ARGE X\Desktop\7.3.2020\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.DataLayer\bin\Release\OsosOracle.DataLayer.dll.config
+C:\Users\ARGE X\Desktop\7.3.2020\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.DataLayer\bin\Release\OsosOracle.DataLayer.dll
+C:\Users\ARGE X\Desktop\7.3.2020\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.DataLayer\bin\Release\OsosOracle.DataLayer.pdb
+C:\Users\ARGE X\Desktop\7.3.2020\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.DataLayer\bin\Release\EntityFramework.dll
+C:\Users\ARGE X\Desktop\7.3.2020\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.DataLayer\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\ARGE X\Desktop\7.3.2020\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.DataLayer\bin\Release\Oracle.ManagedDataAccess.dll
+C:\Users\ARGE X\Desktop\7.3.2020\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.DataLayer\bin\Release\Oracle.ManagedDataAccess.EntityFramework.dll
+C:\Users\ARGE X\Desktop\7.3.2020\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.DataLayer\bin\Release\OsosOracle.Entities.dll
+C:\Users\ARGE X\Desktop\7.3.2020\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.DataLayer\bin\Release\OsosOracle.Framework.dll
+C:\Users\ARGE X\Desktop\7.3.2020\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.DataLayer\bin\Release\System.Web.Mvc.dll
+C:\Users\ARGE X\Desktop\7.3.2020\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.DataLayer\bin\Release\AutoMapper.dll
+C:\Users\ARGE X\Desktop\7.3.2020\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.DataLayer\bin\Release\System.Web.WebPages.dll
+C:\Users\ARGE X\Desktop\7.3.2020\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.DataLayer\bin\Release\FluentValidation.dll
+C:\Users\ARGE X\Desktop\7.3.2020\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.DataLayer\bin\Release\ICSharpCode.SharpZipLib.dll
+C:\Users\ARGE X\Desktop\7.3.2020\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.DataLayer\bin\Release\PostSharp.dll
+C:\Users\ARGE X\Desktop\7.3.2020\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.DataLayer\bin\Release\Newtonsoft.Json.dll
+C:\Users\ARGE X\Desktop\7.3.2020\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.DataLayer\bin\Release\System.Web.WebPages.Razor.dll
+C:\Users\ARGE X\Desktop\7.3.2020\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.DataLayer\bin\Release\System.Web.Razor.dll
+C:\Users\ARGE X\Desktop\7.3.2020\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.DataLayer\bin\Release\Microsoft.Web.Infrastructure.dll
+C:\Users\ARGE X\Desktop\7.3.2020\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.DataLayer\bin\Release\System.ValueTuple.dll
+C:\Users\ARGE X\Desktop\7.3.2020\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.DataLayer\bin\Release\System.Web.WebPages.Deployment.dll
+C:\Users\ARGE X\Desktop\7.3.2020\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.DataLayer\bin\Release\OsosOracle.Entities.pdb
+C:\Users\ARGE X\Desktop\7.3.2020\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.DataLayer\bin\Release\OsosOracle.Framework.pdb
+C:\Users\ARGE X\Desktop\7.3.2020\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.DataLayer\bin\Release\OsosOracle.Framework.dll.config
+C:\Users\ARGE X\Desktop\7.3.2020\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.DataLayer\bin\Release\EntityFramework.xml
+C:\Users\ARGE X\Desktop\7.3.2020\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.DataLayer\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\ARGE X\Desktop\7.3.2020\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.DataLayer\bin\Release\System.Web.Mvc.xml
+C:\Users\ARGE X\Desktop\7.3.2020\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.DataLayer\bin\Release\AutoMapper.pdb
+C:\Users\ARGE X\Desktop\7.3.2020\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.DataLayer\bin\Release\AutoMapper.xml
+C:\Users\ARGE X\Desktop\7.3.2020\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.DataLayer\bin\Release\System.Web.WebPages.xml
+C:\Users\ARGE X\Desktop\7.3.2020\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.DataLayer\bin\Release\FluentValidation.xml
+C:\Users\ARGE X\Desktop\7.3.2020\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.DataLayer\bin\Release\ICSharpCode.SharpZipLib.pdb
+C:\Users\ARGE X\Desktop\7.3.2020\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.DataLayer\bin\Release\ICSharpCode.SharpZipLib.xml
+C:\Users\ARGE X\Desktop\7.3.2020\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.DataLayer\bin\Release\PostSharp.xml
+C:\Users\ARGE X\Desktop\7.3.2020\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.DataLayer\bin\Release\Newtonsoft.Json.pdb
+C:\Users\ARGE X\Desktop\7.3.2020\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.DataLayer\bin\Release\Newtonsoft.Json.xml
+C:\Users\ARGE X\Desktop\7.3.2020\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.DataLayer\bin\Release\System.Web.WebPages.Razor.xml
+C:\Users\ARGE X\Desktop\7.3.2020\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.DataLayer\bin\Release\System.Web.Razor.xml
+C:\Users\ARGE X\Desktop\7.3.2020\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.DataLayer\bin\Release\System.ValueTuple.xml
+C:\Users\ARGE X\Desktop\7.3.2020\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.DataLayer\bin\Release\System.Web.WebPages.Deployment.xml
+C:\Users\ARGE X\Desktop\7.3.2020\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.DataLayer\obj\Release\OsosOracle.DataLayer.csprojAssemblyReference.cache
+C:\Users\ARGE X\Desktop\7.3.2020\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.DataLayer\obj\Release\OsosOracle.DataLayer.csproj.CoreCompileInputs.cache
+C:\Users\ARGE X\Desktop\7.3.2020\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.DataLayer\obj\Release\OsosOracle.DataLayer.csproj.CopyComplete
+C:\Users\ARGE X\Desktop\7.3.2020\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.DataLayer\obj\Release\OsosOracle.DataLayer.dll
+C:\Users\ARGE X\Desktop\7.3.2020\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.DataLayer\obj\Release\OsosOracle.DataLayer.pdb
+C:\Projeler\OsosOracle\OsosOracle.DataLayer\bin\Release\OsosOracle.DataLayer.dll.config
+C:\Projeler\OsosOracle\OsosOracle.DataLayer\bin\Release\OsosOracle.DataLayer.dll
+C:\Projeler\OsosOracle\OsosOracle.DataLayer\bin\Release\OsosOracle.DataLayer.pdb
+C:\Projeler\OsosOracle\OsosOracle.DataLayer\bin\Release\EntityFramework.dll
+C:\Projeler\OsosOracle\OsosOracle.DataLayer\bin\Release\EntityFramework.SqlServer.dll
+C:\Projeler\OsosOracle\OsosOracle.DataLayer\bin\Release\Oracle.ManagedDataAccess.dll
+C:\Projeler\OsosOracle\OsosOracle.DataLayer\bin\Release\Oracle.ManagedDataAccess.EntityFramework.dll
+C:\Projeler\OsosOracle\OsosOracle.DataLayer\bin\Release\OsosOracle.Entities.dll
+C:\Projeler\OsosOracle\OsosOracle.DataLayer\bin\Release\OsosOracle.Framework.dll
+C:\Projeler\OsosOracle\OsosOracle.DataLayer\bin\Release\System.Web.Mvc.dll
+C:\Projeler\OsosOracle\OsosOracle.DataLayer\bin\Release\AutoMapper.dll
+C:\Projeler\OsosOracle\OsosOracle.DataLayer\bin\Release\System.Web.WebPages.dll
+C:\Projeler\OsosOracle\OsosOracle.DataLayer\bin\Release\FluentValidation.dll
+C:\Projeler\OsosOracle\OsosOracle.DataLayer\bin\Release\ICSharpCode.SharpZipLib.dll
+C:\Projeler\OsosOracle\OsosOracle.DataLayer\bin\Release\PostSharp.dll
+C:\Projeler\OsosOracle\OsosOracle.DataLayer\bin\Release\Newtonsoft.Json.dll
+C:\Projeler\OsosOracle\OsosOracle.DataLayer\bin\Release\System.Web.WebPages.Razor.dll
+C:\Projeler\OsosOracle\OsosOracle.DataLayer\bin\Release\System.Web.Razor.dll
+C:\Projeler\OsosOracle\OsosOracle.DataLayer\bin\Release\Microsoft.Web.Infrastructure.dll
+C:\Projeler\OsosOracle\OsosOracle.DataLayer\bin\Release\System.ValueTuple.dll
+C:\Projeler\OsosOracle\OsosOracle.DataLayer\bin\Release\System.Web.WebPages.Deployment.dll
+C:\Projeler\OsosOracle\OsosOracle.DataLayer\bin\Release\OsosOracle.Entities.pdb
+C:\Projeler\OsosOracle\OsosOracle.DataLayer\bin\Release\OsosOracle.Framework.pdb
+C:\Projeler\OsosOracle\OsosOracle.DataLayer\bin\Release\OsosOracle.Framework.dll.config
+C:\Projeler\OsosOracle\OsosOracle.DataLayer\bin\Release\EntityFramework.xml
+C:\Projeler\OsosOracle\OsosOracle.DataLayer\bin\Release\EntityFramework.SqlServer.xml
+C:\Projeler\OsosOracle\OsosOracle.DataLayer\bin\Release\System.Web.Mvc.xml
+C:\Projeler\OsosOracle\OsosOracle.DataLayer\bin\Release\AutoMapper.pdb
+C:\Projeler\OsosOracle\OsosOracle.DataLayer\bin\Release\AutoMapper.xml
+C:\Projeler\OsosOracle\OsosOracle.DataLayer\bin\Release\System.Web.WebPages.xml
+C:\Projeler\OsosOracle\OsosOracle.DataLayer\bin\Release\FluentValidation.xml
+C:\Projeler\OsosOracle\OsosOracle.DataLayer\bin\Release\ICSharpCode.SharpZipLib.pdb
+C:\Projeler\OsosOracle\OsosOracle.DataLayer\bin\Release\ICSharpCode.SharpZipLib.xml
+C:\Projeler\OsosOracle\OsosOracle.DataLayer\bin\Release\PostSharp.xml
+C:\Projeler\OsosOracle\OsosOracle.DataLayer\bin\Release\Newtonsoft.Json.pdb
+C:\Projeler\OsosOracle\OsosOracle.DataLayer\bin\Release\Newtonsoft.Json.xml
+C:\Projeler\OsosOracle\OsosOracle.DataLayer\bin\Release\System.Web.WebPages.Razor.xml
+C:\Projeler\OsosOracle\OsosOracle.DataLayer\bin\Release\System.Web.Razor.xml
+C:\Projeler\OsosOracle\OsosOracle.DataLayer\bin\Release\System.ValueTuple.xml
+C:\Projeler\OsosOracle\OsosOracle.DataLayer\bin\Release\System.Web.WebPages.Deployment.xml
+C:\Projeler\OsosOracle\OsosOracle.DataLayer\obj\Release\OsosOracle.DataLayer.csprojAssemblyReference.cache
+C:\Projeler\OsosOracle\OsosOracle.DataLayer\obj\Release\OsosOracle.DataLayer.csproj.CopyComplete
+C:\Projeler\OsosOracle\OsosOracle.DataLayer\obj\Release\OsosOracle.DataLayer.dll
+C:\Projeler\OsosOracle\OsosOracle.DataLayer\obj\Release\OsosOracle.DataLayer.pdb

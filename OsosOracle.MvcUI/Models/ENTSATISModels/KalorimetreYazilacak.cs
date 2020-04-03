@@ -7,6 +7,7 @@ namespace OsosOracle.MvcUI.Models.ENTSATISModels
 {
     public class KalorimetreYazilacak
     {
+        public string TarifeAdi { get; set; }
         public UInt32 devno { get; set; }
         public Int32 anakr { get; set; }
         public Int32 yedekkr { get; set; }
@@ -16,5 +17,6 @@ namespace OsosOracle.MvcUI.Models.ENTSATISModels
         public int Bayram2Gunn { get; set; }
         public int Bayram2Ayy { get; set; }
         public int Bayram2Suree { get; set; }
+        public int Yuklenecek { get; set; }
     }
 }

@@ -22,5 +22,7 @@ namespace OsosOracle.DataLayer.Abstract
 		void Sil(List<int> idler);
 
         List<AboneAutoComplete> AutoCompleteBilgileriGetir(ENTABONEAra filtre = null);
-    }
+		
+		AboneGenel AboneGenelBilgileriGetir(int aboneKayitNo);
+	}
 }

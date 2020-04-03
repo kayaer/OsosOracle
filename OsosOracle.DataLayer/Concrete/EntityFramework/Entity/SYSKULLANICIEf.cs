@@ -7,14 +7,13 @@ namespace OsosOracle.DataLayer.Concrete.EntityFramework.Entity
     {
         public SYSKULLANICIEf()
         {
-            SysKullaniciDetayEfCollection = new List<SYSKULLANICIDETAYEf>();
             SysRolKullaniciEfCollection = new List<SYSROLKULLANICIEf>();
-
+            EntSatisEfCollection = new List<ENTSATISEf>();
         }
 
-        public ICollection<SYSKULLANICIDETAYEf> SysKullaniciDetayEfCollection { get; set; }
-
+    
         public ICollection<SYSROLKULLANICIEf> SysRolKullaniciEfCollection { get; set; }
+        public ICollection<ENTSATISEf> EntSatisEfCollection { get; set; }
         public CONKURUMEf ConKurumEf { get; set; }
     }
 }

@@ -27,16 +27,11 @@ namespace OsosOracle.DataLayer.Concrete.EntityFramework.Mappings
             Property(t => t.GUNCELLEYEN).HasColumnName("GUNCELLEYEN");
             Property(t => t.GUNCELLEMETARIH).HasColumnName("GUNCELLEMETARIH");
             Property(t => t.TARIFEKAYITNO).HasColumnName("TARIFEKAYITNO");
-            Property(t => t.TARIFE).HasColumnName("TARIFE");
             Property(t => t.TAKILMATARIH).HasColumnName("TAKILMATARIH");
             Property(t => t.SONSATISKAYITNO).HasColumnName("SONSATISKAYITNO");
             Property(t => t.SONSATISTARIH).HasColumnName("SONSATISTARIH");
             // Relationships
 
-            HasRequired(t => t.PrmTarifeSuEf)
-            .WithMany(t => t.EntAboneSayacEfCollection)
-            .HasForeignKey(d => d.TARIFEKAYITNO)
-            .WillCascadeOnDelete(false);
 
 
             HasRequired(t => t.EntSayacEf)
@@ -54,10 +49,26 @@ namespace OsosOracle.DataLayer.Concrete.EntityFramework.Mappings
            .HasForeignKey(d => d.ABONEKAYITNO)
            .WillCascadeOnDelete(false);
 
-            HasRequired(t => t.PrmTarifeElkEf)
+            HasOptional(t => t.PrmTarifeElkEf)
            .WithMany(t => t.EntAboneSayacEfCollection)
            .HasForeignKey(d => d.TARIFEKAYITNO)
            .WillCascadeOnDelete(false);
+
+
+            HasOptional(t => t.PrmTarifeSuEf)
+            .WithMany(t => t.EntAboneSayacEfCollection)
+            .HasForeignKey(d => d.TARIFEKAYITNO)
+            .WillCascadeOnDelete(false);
+
+            HasOptional(t => t.PrmKALORIMETREEf)
+            .WithMany(t => t.EntAboneSayacEfCollection)
+            .HasForeignKey(d => d.TARIFEKAYITNO)
+            .WillCascadeOnDelete(false);
+
+            HasOptional(t => t.PrmTarifeGazEf)
+            .WithMany(t => t.EntAboneSayacEfCollection)
+            .HasForeignKey(d => d.TARIFEKAYITNO)
+            .WillCascadeOnDelete(false);
         }
     }
 }

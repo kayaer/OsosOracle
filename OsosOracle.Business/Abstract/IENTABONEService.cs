@@ -42,5 +42,11 @@ namespace OsosOracle.Business.Abstract
         [OperationContract]
         void AboneGuncelle(AboneIslemleri model);
         List<AboneAutoComplete> AutoCompleteBilgileriGetir(ENTABONEAra filtre = null);
-    }
+		[OperationContract]
+		void YesilVadiAboneEkle(YesilVadiAboneIslemleri model);
+
+		[OperationContract]
+		AboneGenel AboneGenelBilgileriGetir(int aboneKayitNo);
+
+	}
 }

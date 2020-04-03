@@ -1,0 +1,234 @@
+
+@using OsosOracle.MvcUI.Infrastructure
+@using OsosOracle.Framework.HtmlHelpers
+@using OsosOracle.MvcUI.Resources
+
+@model OsosOracle.MvcUI.Models.PRMTARIFESUModels.PRMTARIFESUKaydetModel
+
+@section panelHeading
+{
+
+}
+
+<div class="ajaxForm">
+
+    @using (Html.BeginForm("Kaydet", "PRMTARIFESU", FormMethod.Post))
+    {
+        @Html.AntiForgeryToken()
+        @Html.HiddenFor(t => t.PRMTARIFESU.KAYITNO)
+        @Html.HiddenFor(t => t.PRMTARIFESU.VERSIYON)
+        @Html.HiddenFor(t => t.PRMTARIFESU.OLUSTURAN)
+        @Html.HiddenFor(t => t.PRMTARIFESU.GUNCELLEYEN)
+        @Html.ValidationSummary(true)
+
+        <div class="form-group row">
+            <div class="col-md-6">
+                @Html.TextBoxFor(t => t.PRMTARIFESU.AD, new { @class = "form-control", placeholder =Dil.TarifeAdi })
+                @Html.ValidationMessageFor(t => t.PRMTARIFESU.AD)
+            </div>
+            <div class="col-md-6">
+                @Html.TextBoxFor(t => t.PRMTARIFESU.ACIKLAMA, new { @class = "form-control", placeholder = Dil.Aciklama })
+                @Html.ValidationMessageFor(t => t.PRMTARIFESU.ACIKLAMA)
+
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-md-2">
+                @Html.TextBoxFor(t => t.PRMTARIFESU.FIYAT1, new { @class = "form-control int", placeholder = Dil.FIYAT1 })
+                @Html.ValidationMessageFor(t => t.PRMTARIFESU.FIYAT1)
+
+            </div>
+
+            <div class="col-md-2">
+                @Html.TextBoxFor(t => t.PRMTARIFESU.FIYAT2, new { @class = "form-control int", placeholder = Dil.FIYAT2})
+                @Html.ValidationMessageFor(t => t.PRMTARIFESU.FIYAT2)
+
+            </div>
+
+            <div class="col-md-2">
+                @Html.TextBoxFor(t => t.PRMTARIFESU.FIYAT3, new { @class = "form-control int", placeholder = Dil.FIYAT3 })
+                @Html.ValidationMessageFor(t => t.PRMTARIFESU.FIYAT3)
+
+            </div>
+
+            <div class="col-md-2">
+                @Html.TextBoxFor(t => t.PRMTARIFESU.FIYAT4, new { @class = "form-control int", placeholder = Dil.FIYAT4})
+                @Html.ValidationMessageFor(t => t.PRMTARIFESU.FIYAT4)
+
+            </div>
+
+            <div class="col-md-2">
+                @Html.TextBoxFor(t => t.PRMTARIFESU.FIYAT5, new { @class = "form-control int", placeholder = Dil.FIYAT5 })
+                @Html.ValidationMessageFor(t => t.PRMTARIFESU.FIYAT5)
+
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-md-3">
+                @Html.TextBoxFor(t => t.PRMTARIFESU.LIMIT1, new { @class = "form-control int", placeholder =Dil.LIMIT1 })
+                @Html.ValidationMessageFor(t => t.PRMTARIFESU.LIMIT1)
+
+            </div>
+
+            <div class="col-md-3">
+                @Html.TextBoxFor(t => t.PRMTARIFESU.LIMIT2, new { @class = "form-control int", placeholder = Dil.LIMIT2})
+                @Html.ValidationMessageFor(t => t.PRMTARIFESU.LIMIT2)
+
+            </div>
+
+            <div class="col-md-3">
+                @Html.TextBoxFor(t => t.PRMTARIFESU.LIMIT3, new { @class = "form-control int", placeholder = Dil.LIMIT3 })
+                @Html.ValidationMessageFor(t => t.PRMTARIFESU.LIMIT3)
+
+            </div>
+
+            <div class="col-md-3">
+                @Html.TextBoxFor(t => t.PRMTARIFESU.LIMIT4, new { @class = "form-control int", placeholder = Dil.LIMIT4 })
+                @Html.ValidationMessageFor(t => t.PRMTARIFESU.LIMIT4)
+
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-md-4">
+                @Html.TextBoxFor(t => t.PRMTARIFESU.BAYRAM1GUN, new { @class = "form-control int", placeholder = Dil.Bayram1Gun })
+                @Html.ValidationMessageFor(t => t.PRMTARIFESU.BAYRAM1GUN)
+            </div>
+            <div class="col-md-4">
+                @Html.TextBoxFor(t => t.PRMTARIFESU.BAYRAM1AY, new { @class = "form-control int", placeholder = Dil.Bayram1Ay })
+                @Html.ValidationMessageFor(t => t.PRMTARIFESU.BAYRAM1AY)
+            </div>
+            <div class="col-md-4">
+                @Html.TextBoxFor(t => t.PRMTARIFESU.BAYRAM1SURE, new { @class = "form-control int", placeholder = Dil.Bayram1Sure })
+                @Html.ValidationMessageFor(t => t.PRMTARIFESU.BAYRAM1SURE)
+            </div>
+
+
+        </div>
+
+        <div class="form-group row">
+            <div class="col-md-4">
+                @Html.TextBoxFor(t => t.PRMTARIFESU.BAYRAM2GUN, new { @class = "form-control int", placeholder = Dil.Bayram2Gun })
+                @Html.ValidationMessageFor(t => t.PRMTARIFESU.BAYRAM2GUN)
+            </div>
+            <div class="col-md-4">
+                @Html.TextBoxFor(t => t.PRMTARIFESU.BAYRAM2AY, new { @class = "form-control int", placeholder = Dil.Bayram2Ay })
+                @Html.ValidationMessageFor(t => t.PRMTARIFESU.BAYRAM2AY)
+            </div>
+            <div class="col-md-4">
+                @Html.TextBoxFor(t => t.PRMTARIFESU.BAYRAM2SURE, new { @class = "form-control int", placeholder = Dil.Bayram2Sure})
+                @Html.ValidationMessageFor(t => t.PRMTARIFESU.BAYRAM2SURE)
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-md-4">
+                @Html.TextBoxFor(t => t.PRMTARIFESU.YEDEKKREDI, new { @class = "form-control int", placeholder = Dil.YedekKredi })
+                @Html.ValidationMessageFor(t => t.PRMTARIFESU.YEDEKKREDI)
+
+            </div>
+
+            <div class="col-md-4">
+                @Html.TextBoxFor(t => t.PRMTARIFESU.TUKETIMKATSAYI, new { @class = "form-control int", placeholder = Dil.TuketimKatsayisi })
+                @Html.ValidationMessageFor(t => t.PRMTARIFESU.TUKETIMKATSAYI)
+
+            </div>
+
+            @* <div class="col-md-3">
+            @Html.TextBoxFor(t => t.PRMTARIFESU.KREDIKATSAYI, new { @class = "form-control int", placeholder = Dil.KrediKatSayisi})
+            @Html.ValidationMessageFor(t => t.PRMTARIFESU.KREDIKATSAYI)
+
+        </div>*@
+
+            <div class="col-md-4">
+                @Html.TextBoxFor(t => t.PRMTARIFESU.SABITUCRET, new { @class = "form-control decimal", placeholder = Dil.SabitUcret })
+                @Html.ValidationMessageFor(t => t.PRMTARIFESU.SABITUCRET)
+
+            </div>
+
+        </div>
+        <div class="form-group row">
+            <div class="col-md-6">
+                @Html.TextBoxFor(t => t.PRMTARIFESU.SAYACCAP, new { @class = "form-control int", placeholder = Dil.CAP})
+                @Html.ValidationMessageFor(t => t.PRMTARIFESU.SAYACCAP)
+
+            </div>
+            @*<div class="col-md-4">
+                @Html.TextBoxFor(t => t.PRMTARIFESU.KRITIKKREDI, new { @class = "form-control int", placeholder =Dil.KRITIKKREDI })
+                @Html.ValidationMessageFor(t => t.PRMTARIFESU.KRITIKKREDI)
+
+            </div>*@
+
+            <div class="col-md-6">
+                @Html.TextBoxFor(t => t.PRMTARIFESU.BIRIMFIYAT, new { @class = "form-control decimal", placeholder = Dil.BirimFiyat})
+                @Html.ValidationMessageFor(t => t.PRMTARIFESU.BIRIMFIYAT)
+
+            </div>
+
+        </div>
+
+        <div class="form-group row">
+            <div class="col-md-4">
+                @Html.TextBoxFor(t => t.PRMTARIFESU.AVANSONAY, new { @class = "form-control", placeholder =Dil.AvansOnay })
+                @Html.ValidationMessageFor(t => t.PRMTARIFESU.AVANSONAY)
+
+            </div>
+
+            <div class="col-md-4" ">
+                @Html.TextBoxFor(t => t.PRMTARIFESU.DONEMGUN, new { @class = "form-control int", placeholder = Dil.DonemGun })
+                @Html.ValidationMessageFor(t => t.PRMTARIFESU.DONEMGUN)
+
+            </div>
+
+            <div class="col-md-4" ">
+                @Html.TextBoxFor(t => t.PRMTARIFESU.MAXDEBI, new { @class = "form-control int", placeholder = Dil.MaxDebi })
+                @Html.ValidationMessageFor(t => t.PRMTARIFESU.MAXDEBI)
+
+            </div>
+        </div>
+
+        <div class="form-group row">
+
+            <div class="col-md-4">
+                @Html.TextBoxFor(t => t.PRMTARIFESU.BAGLANTIPERIYOT, new { @class = "form-control int", placeholder = Dil.BaglantiPeriyot })
+                @Html.ValidationMessageFor(t => t.PRMTARIFESU.BAGLANTIPERIYOT)
+
+            </div>
+
+            <div class="col-md-4">
+                @Html.TextBoxFor(t => t.PRMTARIFESU.YANGINMODSURE, new { @class = "form-control int", placeholder = Dil.YanginModSuresi})
+                @Html.ValidationMessageFor(t => t.PRMTARIFESU.YANGINMODSURE)
+
+            </div>
+
+
+            <div class="col-md-4">
+                @Html.TextBoxFor(t => t.PRMTARIFESU.BORCYUZDE, new { @class = "form-control int", placeholder = Dil.BorcYuzde })
+                @Html.ValidationMessageFor(t => t.PRMTARIFESU.BORCYUZDE)
+
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+        <div class="form-actions">
+            <button type="submit" class="btn btn-primary"><i class="fa fa-save"></i> @Dil.Kaydet</button>
+            @Html.ButtonLink(Dil.Vazgec, "Index", "btn btn-xs btn-danger cancel", "fa-remove")
+        </div>
+    }
+</div>
+
+@section script
+{
+    <script type="text/javascript">
+        $(document).ready(function () {
+            //js kodunuzu buraya yazın
+        });
+
+    </script>
+}

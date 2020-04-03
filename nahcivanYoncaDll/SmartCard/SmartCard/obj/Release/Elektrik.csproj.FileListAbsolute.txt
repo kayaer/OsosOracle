@@ -1,0 +1,6 @@
+D:\Projeler\Nahcivan\Elektrik\Yazilim_PC\SmartCard\SmartCard\bin\Release\Elektrik.dll.config
+D:\Projeler\Nahcivan\Elektrik\Yazilim_PC\SmartCard\SmartCard\bin\Release\Elektrik.dll
+D:\Projeler\Nahcivan\Elektrik\Yazilim_PC\SmartCard\SmartCard\bin\Release\Elektrik.pdb
+D:\Projeler\Nahcivan\Elektrik\Yazilim_PC\SmartCard\SmartCard\bin\Release\Elektrik.tlb
+D:\Projeler\Nahcivan\Elektrik\Yazilim_PC\SmartCard\SmartCard\obj\Release\Elektrik.dll
+D:\Projeler\Nahcivan\Elektrik\Yazilim_PC\SmartCard\SmartCard\obj\Release\Elektrik.pdb

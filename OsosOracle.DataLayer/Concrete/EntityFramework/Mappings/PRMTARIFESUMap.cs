@@ -49,9 +49,10 @@ namespace OsosOracle.DataLayer.Concrete.EntityFramework.Mappings
             Property(t => t.MAXDEBI).HasColumnName("MAXDEBI").IsRequired();
             Property(t => t.KRITIKKREDI).HasColumnName("KRITIKKREDI").IsRequired();
             Property(t => t.KURUMKAYITNO).HasColumnName("KURUMKAYITNO").IsRequired();
-            Property(t => t.BAGLANTIPERIYOT).HasColumnName("BAGLANTIPERIYOT").IsRequired();
-            Property(t => t.YANGINMODSURE).HasColumnName("YANGINMODSURE").IsRequired();
+            Property(t => t.Ctv).HasColumnName("CTV").IsRequired();
+            Property(t => t.Kdv).HasColumnName("KDV").IsRequired();
             Property(t => t.BIRIMFIYAT).HasColumnName("BIRIMFIYAT").IsRequired();
+            Property(t => t.AylikBakimBedeli).HasColumnName("AYLIKBAKIMBEDELI");
             // Relationships
             //HasRequired(t => t.CSTDURUMDURUMEf)
             //  .WithMany(t => t.DURUMPRMTARIFESUEfCollection)

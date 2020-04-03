@@ -6,7 +6,7 @@ using OsosOracle.Framework.Enums;
 using OsosOracle.Framework.SharedModels;
 using OsosOracle.Framework.Utilities.ExtensionMethods;
 using OsosOracle.Framework.Web.Mvc;
-using System;
+using OsosOracle.MvcUI.Resources;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -41,8 +41,8 @@ namespace OsosOracle.MvcUI.Controllers
                     t.KAYITNO,
                     t.AD,
                     t.ACIKLAMA,
-                    Islemler = $@"<a class='btn btn-xs btn-info modalizer' href='{Url.Action("Guncelle", "Tarife", new { t.KAYITNO })}' title='Düzenle'><i class='fa fa-edit'></i></a>							 
-								<a class='btn btn-xs btn-danger modalizer ' href='{Url.Action("Sil", "Tarife", new { t.KAYITNO })}' title='Sil'><i class='fa fa-trash'></i></a>"
+                    Islemler = $@"<a class='btn btn-xs btn-info modalizer' href='{Url.Action("Guncelle", "Tarife", new { t.KAYITNO })}' title='{Dil.Duzenle}'><i class='fa fa-edit'></i></a>							 
+								<a class='btn btn-xs btn-danger modalizer ' href='{Url.Action("Sil", "Tarife", new { t.KAYITNO })}' title='{Dil.Sil}'><i class='fa fa-trash'></i></a>"
                 }),
                 draw = dtParameterModel.Draw,
                 recordsTotal = kayitlar.ToplamKayitSayisi,
@@ -86,7 +86,7 @@ namespace OsosOracle.MvcUI.Controllers
                 }
             };
 
-            //entSayacAra.AD = key;
+            prmTarifeSuAra.AD = key;
 
             var sayacList = _prmTarifeSuService.Getir(prmTarifeSuAra);
 

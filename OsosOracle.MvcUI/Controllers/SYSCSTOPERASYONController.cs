@@ -11,6 +11,8 @@ using OsosOracle.Framework.Utilities.ExtensionMethods;
 using OsosOracle.Framework.Enums;
 using OsosOracle.Framework.DataAccess.Filter;
 using OsosOracle.MvcUI.Filters;
+using System;
+using OsosOracle.Framework.CrossCuttingConcern.ExceptionHandling;
 
 namespace OsosOracle.MvcUI.Controllers
 {
@@ -117,19 +119,26 @@ namespace OsosOracle.MvcUI.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Kaydet(SYSCSTOPERASYONKaydetModel sYSCSTOPERASYONKaydetModel)
         {
-            sYSCSTOPERASYONKaydetModel.SYSCSTOPERASYON.OPERASYONTUR = 4;
-
-            if (sYSCSTOPERASYONKaydetModel.SYSCSTOPERASYON.KAYITNO > 0)
+            try
             {
-                _sYSCSTOPERASYONService.Guncelle(sYSCSTOPERASYONKaydetModel.SYSCSTOPERASYON.List());
-            }
-            else
-            {
-                _sYSCSTOPERASYONService.Ekle(sYSCSTOPERASYONKaydetModel.SYSCSTOPERASYON.List());
-            }
+                if (sYSCSTOPERASYONKaydetModel.SYSCSTOPERASYON.KAYITNO > 0)
+                {
+                    sYSCSTOPERASYONKaydetModel.SYSCSTOPERASYON.GUNCELLEYEN = AktifKullanici.KayitNo;
+                    _sYSCSTOPERASYONService.Guncelle(sYSCSTOPERASYONKaydetModel.SYSCSTOPERASYON.List());
+                }
+                else
+                {
+                    sYSCSTOPERASYONKaydetModel.SYSCSTOPERASYON.OLUSTURAN = AktifKullanici.KayitNo;
+                    _sYSCSTOPERASYONService.Ekle(sYSCSTOPERASYONKaydetModel.SYSCSTOPERASYON.List());
+                }
 
-            return Yonlendir(Url.Action("Index"), $"Operasyon kayıdı başarıyla gerçekleştirilmiştir.");
-            //return Yonlendir(Url.Action("Detay","SYSCSTOPERASYON",new{id=sYSCSTOPERASYONKaydetModel.SYSCSTOPERASYON.Id}), $"SYSCSTOPERASYON kayıdı başarıyla gerçekleştirilmiştir.");
+                return Yonlendir(Url.Action("Index"), $"Operasyon kayıdı başarıyla gerçekleştirilmiştir.");
+            }
+            catch (Exception ex)
+            {
+                throw new NotificationException(ex.Message);
+            }
+           
         }
 
 

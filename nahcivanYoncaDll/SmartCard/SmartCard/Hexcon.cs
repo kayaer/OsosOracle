@@ -9,6 +9,113 @@ namespace SmartCard
    
     internal class Hexcon
     {
+        public static string TarihDuzenle(int Byte1, int Byte2)
+        {
+            int Gun = ((Byte1 & 240) >> 4) + ((Byte2 & 1) << 4);
+
+            int Ay = Byte1 & 15;
+
+            int Yil = (Byte2 & 254) >> 1;
+            Yil += 2000;
+
+            if ((Gun > 31) || (Ay > 12) || (Yil > 2099) || (Gun == 0) || (Ay == 0))
+            {
+                return "00/00/2000";
+            }
+            else
+            {
+                return StringDuzenleBastan(Gun.ToString(), 2) + "/" +
+                       StringDuzenleBastan(Ay.ToString(), 2) + "/" +
+                       Yil.ToString();
+            }
+
+        }
+
+        public static string TarihDuzenle(int Byte1, int Byte2, int Byte3, int Byte4)
+        {
+            string DondurulecekData = TarihDuzenle(Byte1, Byte2);
+
+            if ((Byte3 > 23) || (Byte4 > 59) || (DondurulecekData == "00/00/2000"))
+            {
+                return "00/00/2000 00:00";
+            }
+            else
+            {
+                DondurulecekData += " " + StringDuzenleBastan(Byte3.ToString(), 2) +
+                                    ":" + StringDuzenleBastan(Byte4.ToString(), 2);
+
+                return DondurulecekData;
+            }
+
+        }
+        public static string TarihDuzenle2(int Byte1, int Byte2)
+        {
+            int Gun = ((Byte1 & 240) >> 4) + ((Byte2 & 1) << 4);
+
+            int Ay = Byte1 & 15;
+
+            int Yil = (Byte2 & 254) >> 1;
+            Yil += 2000;
+
+            if ((Gun > 31) || (Ay > 12) || (Yil > 2099) || (Gun == 0) || (Ay == 0))
+            {
+                return "01.01.2000";
+            }
+            else
+            {
+                return StringDuzenleBastan2(Gun.ToString(), 2) + "." +
+                       StringDuzenleBastan2(Ay.ToString(), 2) + "." +
+                       Yil.ToString();
+            }
+
+        }
+
+        public static string TarihDuzenle2(int Byte1, int Byte2, int Byte3, int Byte4)
+        {
+            string DondurulecekData = TarihDuzenle2(Byte1, Byte2);
+
+            if ((Byte3 > 23) || (Byte4 > 59) || (DondurulecekData == "01.01.2000"))
+            {
+                return "01.01.2000 00:00";
+            }
+            else
+            {
+                DondurulecekData += " " + StringDuzenleBastan2(Byte3.ToString(), 2) +
+                                    ":" + StringDuzenleBastan2(Byte4.ToString(), 2);
+
+                return DondurulecekData;
+            }
+
+        }
+
+        public static string StringDuzenleBastan(string DuzenlenecekString, int IstenilenUzunluk)
+        {
+            int SifirSayisi = IstenilenUzunluk - DuzenlenecekString.Length;
+
+            if (SifirSayisi > 0)
+            {
+                for (int i = 0; i < SifirSayisi; i++)
+                {
+                    DuzenlenecekString = "0" + DuzenlenecekString;
+                }
+
+            }
+            return DuzenlenecekString;
+        }
+        public static string StringDuzenleBastan2(string DuzenlenecekString, int IstenilenUzunluk)
+        {
+            int SifirSayisi = IstenilenUzunluk - DuzenlenecekString.Length;
+
+            if (SifirSayisi > 0)
+            {
+                for (int i = 0; i < SifirSayisi; i++)
+                {
+                    DuzenlenecekString = "0" + DuzenlenecekString;
+                }
+
+            }
+            return DuzenlenecekString;
+        }
         public static string BytetoString(byte Index, byte Boyut, params byte[] GonderilenVeriler)
         {
             string Deger = "";
@@ -51,7 +158,41 @@ namespace SmartCard
 
             return gun + "." + ay + "." + yil;
         }
-        
+        public struct Islem
+        {
+
+            public int KartNo, Major, YeniKart, Hata;
+            public int Deger;
+
+            public Islem(int Alinacak)
+            {
+                KartNo = Alinacak & 0X0F;
+                Major = (Alinacak & 0X30) >> 4;
+                YeniKart = (Alinacak & 0X40) >> 6;
+                Hata = (Alinacak & 0x80) >> 7;
+
+                Deger = Alinacak;
+            }
+
+            public Islem(int KrtNo, int Mjr, int YKart, int Ht)
+            {
+                KartNo = KrtNo;
+                Major = Mjr;
+                YeniKart = YKart;
+                Hata = Ht;
+
+                Deger = (KartNo & 0X0F);
+                Deger |= ((Major & 0X03) << 4);
+                Deger |= ((YeniKart & 0X01) << 6);
+                Deger |= ((Hata & 0X01) << 7);
+            }
+
+            public byte ToByte()
+            {
+                return Convert.ToByte(Deger);
+            }
+
+        }
         public struct ByteToBit
         {
 
@@ -75,7 +216,7 @@ namespace SmartCard
 
         public static UInt32 Byte4toUInt32(byte[] OkunacakDizi)
         {
-            return (UInt32)((OkunacakDizi[0] << 24) + (OkunacakDizi[1] << 16) + (OkunacakDizi[2] << 8) + OkunacakDizi[3]);
+            return (UInt32)((OkunacakDizi[3] << 24) + (OkunacakDizi[2] << 16) + (OkunacakDizi[1] << 8) + OkunacakDizi[0]);
 
         }
 
@@ -93,7 +234,10 @@ namespace SmartCard
         {
             return (Int32)((OkunacakDizi[Index + 3] << 24) + (OkunacakDizi[Index + 2] << 16) + (OkunacakDizi[Index + 1] << 8) + OkunacakDizi[Index]);
         }
-
+        public static Int32 Byte4toInt32(byte bir, byte iki, byte uc, byte dort)
+        {
+            return (dort << 24) + (uc << 16) + (iki << 8) + bir;
+        }
         public static UInt16 Byte2toUInt16(byte bir, byte iki)
         {
             return (UInt16)((iki << 8) + bir);
@@ -116,7 +260,13 @@ namespace SmartCard
             YazilacakDizi[1] = Convert.ToByte((Deger & 0x0000FF00) >> 8);
             YazilacakDizi[0] = Convert.ToByte((Deger & 0x000000FF));
         }
-
+        public static void Int32toByte4(Int32 Deger, byte[] YazilacakDizi)
+        {
+            YazilacakDizi[3] = Convert.ToByte((Deger & 0xFF000000) >> 24);
+            YazilacakDizi[2] = Convert.ToByte((Deger & 0x00FF0000) >> 16);
+            YazilacakDizi[1] = Convert.ToByte((Deger & 0x0000FF00) >> 8);
+            YazilacakDizi[0] = Convert.ToByte((Deger & 0x000000FF));
+        }
         /// <summary>
         /// Sayı bitlerini orlama ile set eder
         /// </summary>
@@ -270,22 +420,24 @@ namespace SmartCard
 
     internal class TarihAl
     {
-        public byte bir, iki, uc, dort;
+        public byte bir, iki, uc, dort, HaftaninGunu;
         public int gun, ay, yil, saat, dakika;
 
         public TarihAl(DateTime IstenenTarih)
         {
             byte bGun, bAy, bYil;
 
-            bGun = Convert.ToByte(DateAndTime.Day(IstenenTarih));
-            bAy = Convert.ToByte(DateAndTime.Month(IstenenTarih));
-            bYil = Convert.ToByte(DateAndTime.Year(IstenenTarih) - 2000);
+            bGun = Convert.ToByte(IstenenTarih.Day);
+            bAy = Convert.ToByte(IstenenTarih.Month);
+            bYil = Convert.ToByte(IstenenTarih.Year - 2000);
 
             bir = Convert.ToByte(((bGun & 0xF) << 4) + bAy);
             iki = Convert.ToByte((bYil << 1) + ((bGun & 0xF0) >> 4));
 
-            uc = Convert.ToByte(DateAndTime.Hour(IstenenTarih));
-            dort = Convert.ToByte(DateAndTime.Minute(IstenenTarih));
+            uc = Convert.ToByte(IstenenTarih.Hour);
+            dort = Convert.ToByte(IstenenTarih.Minute);
+
+            HaftaninGunu = Convert.ToByte(IstenenTarih.DayOfWeek);
 
             gun = 0;
             ay = 0;
@@ -300,15 +452,17 @@ namespace SmartCard
             DateTime IstenenTarih = Convert.ToDateTime(Tarih);
             byte bGun, bAy, bYil;
 
-            bGun = Convert.ToByte(DateAndTime.Day(IstenenTarih));
-            bAy = Convert.ToByte(DateAndTime.Month(IstenenTarih));
-            bYil = Convert.ToByte(DateAndTime.Year(IstenenTarih) - 2000);
+            bGun = Convert.ToByte(IstenenTarih.Day);
+            bAy = Convert.ToByte(IstenenTarih.Month);
+            bYil = Convert.ToByte(IstenenTarih.Year - 2000);
 
             bir = Convert.ToByte(((bGun & 0xF) << 4) + bAy);
             iki = Convert.ToByte((bYil << 1) + ((bGun & 0xF0) >> 4));
 
-            uc = Convert.ToByte(DateAndTime.Hour(IstenenTarih));
-            dort = Convert.ToByte(DateAndTime.Minute(IstenenTarih));
+            uc = Convert.ToByte(IstenenTarih.Hour);
+            dort = Convert.ToByte(IstenenTarih.Minute);
+
+            HaftaninGunu = Convert.ToByte(IstenenTarih.DayOfWeek);
 
             gun = 0;
             ay = 0;
@@ -351,15 +505,15 @@ namespace SmartCard
         {
             byte bGun, bAy, bYil;
 
-            bGun = Convert.ToByte(DateAndTime.Day(IstenenTarih));
-            bAy = Convert.ToByte(DateAndTime.Month(IstenenTarih));
-            bYil = Convert.ToByte(DateAndTime.Year(IstenenTarih) - 2000);
+            bGun = Convert.ToByte(IstenenTarih.Day);
+            bAy = Convert.ToByte(IstenenTarih.Month);
+            bYil = Convert.ToByte(IstenenTarih.Year - 2000);
 
             bir = Convert.ToByte(((bGun & 0xF) << 4) + bAy);
             iki = Convert.ToByte((bYil << 1) + ((bGun & 0xF0) >> 4));
 
-            uc = Convert.ToByte(DateAndTime.Hour(IstenenTarih));
-            dort = Convert.ToByte(DateAndTime.Minute(IstenenTarih));
+            uc = Convert.ToByte(IstenenTarih.Hour);
+            dort = Convert.ToByte(IstenenTarih.Minute);
 
             gun = 0;
             ay = 0;

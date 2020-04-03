@@ -11,7 +11,7 @@ using OsosOracle.Framework.Utilities.ExtensionMethods;
 using OsosOracle.Framework.Enums;
 using OsosOracle.Framework.DataAccess.Filter;
 using OsosOracle.MvcUI.Filters;
-
+using OsosOracle.MvcUI.Resources;
 namespace OsosOracle.MvcUI.Controllers
 {
     [AuthorizeUser]
@@ -54,22 +54,20 @@ namespace OsosOracle.MvcUI.Controllers
                     //TODO: Bu bölümü düzenle
                     t.KAYITNO,
                     t.TR,
-                    t.EN,
-                    t.YEREL,
                     t.PARENTKAYITNO,
                     t.MENUORDER,
-                    t.EXTERNALURL,
+               
                     t.AREA,
                     t.ACTION,
                     t.CONTROLLER,
-                    t.PARAMETERS,
+                  
                     t.DURUM,
                     t.VERSIYON,
                     t.ICON,
 
-                    Islemler = $@"<a class='btn btn-xs btn-info modalizer' href='{Url.Action("Guncelle", "SYSMENU", new { id = t.KAYITNO })}' title='Düzenle'><i class='fa fa-edit'></i></a>
+                    Islemler = $@"<a class='btn btn-xs btn-info modalizer' href='{Url.Action("Guncelle", "SYSMENU", new { id = t.KAYITNO })}' title='{Dil.Duzenle}'><i class='fa fa-edit'></i></a>
 							   <a class='btn btn-xs btn-primary' href='{Url.Action("Detay", "SYSMENU", new { id = t.KAYITNO })}' title='Detay'><i class='fa fa-th-list'></i></a>
-								<a class='btn btn-xs btn-danger modalizer' href='{Url.Action("Sil", "SYSMENU", new { id = t.KAYITNO })}' title='Sil'><i class='fa fa-trash'></i></a>"
+								<a class='btn btn-xs btn-danger modalizer' href='{Url.Action("Sil", "SYSMENU", new { id = t.KAYITNO })}' title='{Dil.Sil}'><i class='fa fa-trash'></i></a>"
                 }),
                 draw = dtParameterModel.Draw,
                 recordsTotal = kayitlar.ToplamKayitSayisi,

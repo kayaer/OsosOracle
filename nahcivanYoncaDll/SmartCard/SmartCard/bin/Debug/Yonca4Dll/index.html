@@ -1,0 +1,55 @@
+<html>
+<head>
+<title>deneme</title>
+<script type="text/javascript">
+
+    var mcm = new ActiveXObject("SmartCard.SayacTurleri.Mcm");
+
+    function aOku()
+    {
+      
+      alert(mcm.AboneOku());
+       
+    }
+
+    function aYap()
+    {
+        alert(mcm.AboneYap(111, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1));
+    }
+	
+    function tip()
+    {
+        alert(mcm.KartTipi());
+    }
+	
+	function bosalt()
+    {
+        alert(x.AboneBosalt());
+    }
+	
+	function kYaz()
+    {
+        alert(x.KrediYaz(111, 100, 20, 1, 1, 1, 2, 2, 2));
+    }
+	
+	function BilgiOku()
+    {
+        alert(x.BilgiOku());
+    }
+
+</script>
+</head>
+<body>
+<table>
+<tr><td></td><td>Hibrid</td><td></td></tr>
+<tr>
+<td><button onclick="aOku();">Abone Oku</button></td>
+<td><button onclick="aYap();">Abone Yap</button></td>
+<td><button onclick="tip();">Kart Tipi</button></td>
+<td><button onclick="bosalt();">Bosalt</button></td>
+<td><button onclick="kYaz();">Kredi Yaz</button></td>
+<td><button onclick="BilgiOku();">Bilgi Oku</button></td>
+</tr>
+</table>
+</body>
+</html>

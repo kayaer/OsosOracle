@@ -2,7 +2,7 @@ using OsosOracle.Framework.Entities;
 using System;
 namespace OsosOracle.Entities.Concrete
 {
-    public class ENTABONE : IEntity
+    public class ENTABONE : IEntity,IEntitySoftDelete
     {
         public int KAYITNO { get; set; }
         public string AD { get; set; }
@@ -14,5 +14,10 @@ namespace OsosOracle.Entities.Concrete
         public int? GUNCELLEYEN { get; set; }
         public DateTime? GUNCELLEMETARIH { get; set; }
         public int KURUMKAYITNO { get; set; }
+        public string ABONENO { get; set; }
+        public DateTime? SonSatisTarih { get; set; }
+        public string KimlikNo { get; set; }
+        public string Daire { get; set; }
+        public string Blok { get; set; }
     }
 }

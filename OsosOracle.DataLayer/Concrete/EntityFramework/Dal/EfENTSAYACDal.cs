@@ -17,42 +17,17 @@ namespace OsosOracle.DataLayer.Concrete.EntityFramework.Dal
         {
             return result.Select(x => new ENTSAYACDetay()
             {
-                KAYITNO=x.KAYITNO,
-                SAYACID = x.SAYACID,
+                KAYITNO = x.KAYITNO,
                 SERINO = x.SERINO,
-                SAYACTUR = x.SAYACTUR,
+                KapakSeriNo=x.KapakSeriNo,
                 ACIKLAMA = x.ACIKLAMA,
-                SayacTipi=x.CstSayacModelEf.AD,
-                Kurum=x.ConKurumEf.AD,
-                PrmTarifeSuDetay=new Entities.ComplexType.PRMTARIFESUComplexTypes.PRMTARIFESUDetay { AD=x.EntAboneSayacEfCollection.FirstOrDefault().PrmTarifeSuEf.AD,SAYACCAP=x.EntAboneSayacEfCollection.FirstOrDefault().PrmTarifeSuEf.SAYACCAP,
-                TUKETIMKATSAYI=x.EntAboneSayacEfCollection.FirstOrDefault().PrmTarifeSuEf.TUKETIMKATSAYI,BIRIMFIYAT=x.EntAboneSayacEfCollection.FirstOrDefault().PrmTarifeSuEf.BIRIMFIYAT},
-                PrmTarifeElkDetay = new Entities.ComplexType.PRMTARIFEELKComplexTypes.PRMTARIFEELKDetay
-                {
-                    AD = x.EntAboneSayacEfCollection.FirstOrDefault().PrmTarifeElkEf.AD,
-                    YEDEKKREDI = x.EntAboneSayacEfCollection.FirstOrDefault().PrmTarifeElkEf.YEDEKKREDI,
-                    KRITIKKREDI = x.EntAboneSayacEfCollection.FirstOrDefault().PrmTarifeElkEf.KRITIKKREDI,
-                    CARPAN = x.EntAboneSayacEfCollection.FirstOrDefault().PrmTarifeElkEf.CARPAN,
-                    FIYAT1 = x.EntAboneSayacEfCollection.FirstOrDefault().PrmTarifeElkEf.FIYAT1,
-                    FIYAT2 = x.EntAboneSayacEfCollection.FirstOrDefault().PrmTarifeElkEf.FIYAT2,
-                    FIYAT3 = x.EntAboneSayacEfCollection.FirstOrDefault().PrmTarifeElkEf.FIYAT3,
-                    LIMIT1 = x.EntAboneSayacEfCollection.FirstOrDefault().PrmTarifeElkEf.LIMIT1,
-                    LIMIT2 = x.EntAboneSayacEfCollection.FirstOrDefault().PrmTarifeElkEf.LIMIT2,
-                    YUKLEMELIMIT = x.EntAboneSayacEfCollection.FirstOrDefault().PrmTarifeElkEf.YUKLEMELIMIT,
-                    SABITUCRET = x.EntAboneSayacEfCollection.FirstOrDefault().PrmTarifeElkEf.SABITUCRET,
-                    KREDIKATSAYI = x.EntAboneSayacEfCollection.FirstOrDefault().PrmTarifeElkEf.KREDIKATSAYI,
-                    BAYRAM1GUN = x.EntAboneSayacEfCollection.FirstOrDefault().PrmTarifeElkEf.BAYRAM1GUN,
-                    BAYRAM1AY = x.EntAboneSayacEfCollection.FirstOrDefault().PrmTarifeElkEf.BAYRAM1AY,
-                    BAYRAM1SURE = x.EntAboneSayacEfCollection.FirstOrDefault().PrmTarifeElkEf.BAYRAM1SURE,
-                    BAYRAM2GUN = x.EntAboneSayacEfCollection.FirstOrDefault().PrmTarifeElkEf.BAYRAM2GUN,
-                    BAYRAM2AY = x.EntAboneSayacEfCollection.FirstOrDefault().PrmTarifeElkEf.BAYRAM2AY,
-                    BAYRAM2SURE = x.EntAboneSayacEfCollection.FirstOrDefault().PrmTarifeElkEf.BAYRAM2SURE,
-                    AKSAMSAAT = x.EntAboneSayacEfCollection.FirstOrDefault().PrmTarifeElkEf.AKSAMSAAT,
-                    SABAHSAAT = x.EntAboneSayacEfCollection.FirstOrDefault().PrmTarifeElkEf.SABAHSAAT,
-                    HAFTASONUAKSAM=x.EntAboneSayacEfCollection.FirstOrDefault().PrmTarifeElkEf.HAFTASONUAKSAM
-
-                },
-                SayacModelKayitNo=x.CstSayacModelEf.KAYITNO
-
+                SayacTipi = x.CstSayacModelEf.AD,
+                Kurum = x.ConKurumEf.AD,
+                SayacModelKayitNo = x.CstSayacModelEf.KAYITNO,
+                TarifeKayitNo = x.EntAboneSayacEfCollection.FirstOrDefault().TARIFEKAYITNO,
+                SonSatisTarih = x.EntAboneSayacEfCollection.FirstOrDefault().SONSATISTARIH,
+                SayacTuru=x.CstSayacModelEf.NesneDegerSayacTuruEf.KAYITNO
+                
 
             });
         }
@@ -63,7 +38,7 @@ namespace OsosOracle.DataLayer.Concrete.EntityFramework.Dal
         private IQueryable<ENTSAYACEf> Filtrele(IQueryable<ENTSAYACEf> result, ENTSAYACAra filtre = null)
         {
             //silindi kolonu varsa silinenler gelmesin
-
+            result = result.Where(x => x.DURUM == 1);
             //TODO: filtereyi özelleştir
             if (filtre != null)
             {
@@ -78,25 +53,27 @@ namespace OsosOracle.DataLayer.Concrete.EntityFramework.Dal
                     //	result = result.Where(x => idList.Contains(x.KAYITNO));
                     //}
 
+                    if (filtre.SayacTuru != null)
+                    {
+                        result = result.Where(x => x.CstSayacModelEf.SayacTuruKayitNo == filtre.SayacTuru);
+                    }
+
                     if (filtre.SAYACMONTAJTARIH != null)
                     {
                         result = result.Where(x => x.SAYACMONTAJTARIH == filtre.SAYACMONTAJTARIH);
                     }
-                    if (!string.IsNullOrEmpty(filtre.SAYACID))
-                    {
-                        result = result.Where(x => x.SAYACID.Contains(filtre.SAYACID));
-                    }
+                   
                     if (filtre.KURUMKAYITNO != null)
                     {
                         result = result.Where(x => x.KURUMKAYITNO == filtre.KURUMKAYITNO);
                     }
-                    if (filtre.SERINO != null)
+                    if (!string.IsNullOrEmpty( filtre.SERINO))
                     {
-                        result = result.Where(x => x.SERINO == filtre.SERINO);
+                        result = result.Where(x => x.SERINO.Contains(filtre.SERINO));
                     }
-                    if (filtre.SAYACTUR != null)
+                    if (filtre.SayacModelKayitNo != null)
                     {
-                        result = result.Where(x => x.SAYACTUR == filtre.SAYACTUR);
+                        result = result.Where(x => x.SayacModelKayitNo == filtre.SayacModelKayitNo);
                     }
                     if (!string.IsNullOrEmpty(filtre.ACIKLAMA))
                     {
@@ -112,7 +89,11 @@ namespace OsosOracle.DataLayer.Concrete.EntityFramework.Dal
                     }
                     if (!string.IsNullOrEmpty(filtre.SayacSeriNoIceren))
                     {
-                        result = result.Where(x => filtre.SayacSeriNoIceren.ToLower().Trim().Contains(x.SAYACID));
+                        result = result.Where(x => x.SERINO.Contains(filtre.SayacSeriNoIceren.ToLower()));
+                    }
+                    if (!string.IsNullOrEmpty( filtre.KapakSeriNo))
+                    {
+                        result = result.Where(x => x.KapakSeriNo.Contains(filtre.KapakSeriNo));
                     }
                 }
             }

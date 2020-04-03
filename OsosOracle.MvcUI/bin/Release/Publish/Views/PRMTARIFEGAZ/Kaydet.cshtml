@@ -1,0 +1,145 @@
+
+@using OsosOracle.MvcUI.Infrastructure
+@using OsosOracle.Framework.HtmlHelpers
+@model OsosOracle.MvcUI.Models.PRMTARIFEGAZModels.PRMTARIFEGAZKaydetModel
+
+@section panelHeading
+{
+	
+}
+
+<div class="ajaxForm">
+
+	@using (Html.BeginForm("Kaydet", "PRMTARIFEGAZ", FormMethod.Post))
+	{
+		@Html.AntiForgeryToken()
+		@Html.HiddenFor(t => t.PRMTARIFEGAZ.KAYITNO)
+		@Html.HiddenFor(t => t.PRMTARIFEGAZ.VERSIYON)
+		@Html.ValidationSummary(true)
+
+	         <div class="form-group">
+    @Html.TextBoxFor(t => t.PRMTARIFEGAZ.TUKETIMLIMIT, new { @class = "form-control int", placeholder = _T("TUKETIMLIMIT") })
+    @Html.ValidationMessageFor(t => t.PRMTARIFEGAZ.TUKETIMLIMIT)
+
+    </div>
+
+       <div class="form-group">
+    @Html.TextBoxFor(t => t.PRMTARIFEGAZ.SABAHSAAT, new { @class = "form-control", placeholder = _T("SABAHSAAT") })
+    @Html.ValidationMessageFor(t => t.PRMTARIFEGAZ.SABAHSAAT)
+
+    </div>
+
+       <div class="form-group">
+    @Html.TextBoxFor(t => t.PRMTARIFEGAZ.AKSAMSAAT, new { @class = "form-control", placeholder = _T("AKSAMSAAT") })
+    @Html.ValidationMessageFor(t => t.PRMTARIFEGAZ.AKSAMSAAT)
+
+    </div>
+
+       <div class="form-group">
+    @Html.TextBoxFor(t => t.PRMTARIFEGAZ.PULSE, new { @class = "form-control int", placeholder = _T("PULSE") })
+    @Html.ValidationMessageFor(t => t.PRMTARIFEGAZ.PULSE)
+
+    </div>
+
+       <div class="form-group">
+    @Html.TextBoxFor(t => t.PRMTARIFEGAZ.BAYRAM1GUN, new { @class = "form-control int", placeholder = _T("BAYRAM1GUN") })
+    @Html.ValidationMessageFor(t => t.PRMTARIFEGAZ.BAYRAM1GUN)
+
+    </div>
+
+       <div class="form-group">
+    @Html.TextBoxFor(t => t.PRMTARIFEGAZ.BAYRAM1AY, new { @class = "form-control int", placeholder = _T("BAYRAM1AY") })
+    @Html.ValidationMessageFor(t => t.PRMTARIFEGAZ.BAYRAM1AY)
+
+    </div>
+
+       <div class="form-group">
+    @Html.TextBoxFor(t => t.PRMTARIFEGAZ.BAYRAM1SURE, new { @class = "form-control int", placeholder = _T("BAYRAM1SURE") })
+    @Html.ValidationMessageFor(t => t.PRMTARIFEGAZ.BAYRAM1SURE)
+
+    </div>
+
+       <div class="form-group">
+    @Html.TextBoxFor(t => t.PRMTARIFEGAZ.BAYRAM2GUN, new { @class = "form-control int", placeholder = _T("BAYRAM2GUN") })
+    @Html.ValidationMessageFor(t => t.PRMTARIFEGAZ.BAYRAM2GUN)
+
+    </div>
+
+       <div class="form-group">
+    @Html.TextBoxFor(t => t.PRMTARIFEGAZ.BAYRAM2SURE, new { @class = "form-control int", placeholder = _T("BAYRAM2SURE") })
+    @Html.ValidationMessageFor(t => t.PRMTARIFEGAZ.BAYRAM2SURE)
+
+    </div>
+
+       <div class="form-group">
+    @Html.TextBoxFor(t => t.PRMTARIFEGAZ.BAYRAM2AY, new { @class = "form-control int", placeholder = _T("BAYRAM2AY") })
+    @Html.ValidationMessageFor(t => t.PRMTARIFEGAZ.BAYRAM2AY)
+
+    </div>
+
+       <div class="form-group">
+    @Html.TextBoxFor(t => t.PRMTARIFEGAZ.KRITIKKREDI, new { @class = "form-control int", placeholder = _T("KRITIKKREDI") })
+    @Html.ValidationMessageFor(t => t.PRMTARIFEGAZ.KRITIKKREDI)
+
+    </div>
+
+       <div class="form-group">
+    @Html.TextBoxFor(t => t.PRMTARIFEGAZ.SAYACTUR, new { @class = "form-control int", placeholder = _T("SAYACTUR") })
+    @Html.ValidationMessageFor(t => t.PRMTARIFEGAZ.SAYACTUR)
+
+    </div>
+
+       <div class="form-group">
+    @Html.TextBoxFor(t => t.PRMTARIFEGAZ.SAYACCAP, new { @class = "form-control int", placeholder = _T("SAYACCAP") })
+    @Html.ValidationMessageFor(t => t.PRMTARIFEGAZ.SAYACCAP)
+
+    </div>
+
+       <div class="form-group">
+    @Html.TextBoxFor(t => t.PRMTARIFEGAZ.AD, new { @class = "form-control int", placeholder = _T("AD") })
+    @Html.ValidationMessageFor(t => t.PRMTARIFEGAZ.AD)
+
+    </div>
+
+       <div class="form-group">
+    @Html.TextBoxFor(t => t.PRMTARIFEGAZ.FIYAT1, new { @class = "form-control int", placeholder = _T("FIYAT1") })
+    @Html.ValidationMessageFor(t => t.PRMTARIFEGAZ.FIYAT1)
+
+    </div>
+
+       <div class="form-group">
+    @Html.TextBoxFor(t => t.PRMTARIFEGAZ.YEDEKKREDI, new { @class = "form-control int", placeholder = _T("YEDEKKREDI") })
+    @Html.ValidationMessageFor(t => t.PRMTARIFEGAZ.YEDEKKREDI)
+
+    </div>
+
+       <div class="form-group">
+    @Html.AutoComplete(t => t.PRMTARIFEGAZ.KURUMKAYITNO, Enums.AutocompleteFuction.PRMTARIFEGAZKURUMKAYITNOGetir, Enums.AutoCompleteType.List, _T("KURUMKAYITNO").ToString())
+    @Html.ValidationMessageFor(t => t.PRMTARIFEGAZ.KURUMKAYITNO)
+
+    </div>
+
+       <div class="form-group">
+    @Html.TextBoxFor(t => t.PRMTARIFEGAZ.BIRIMFIYAT, new { @class = "form-control int", placeholder = _T("BIRIMFIYAT") })
+    @Html.ValidationMessageFor(t => t.PRMTARIFEGAZ.BIRIMFIYAT)
+
+    </div>
+
+
+	 
+		<div class="form-actions">
+			<button type="submit" class="btn btn-primary"><i class="fa fa-save"></i> @_T("Kaydet")</button>
+			@Html.ButtonLink(_T("Vazgeç").ToString(), "Index", "btn btn-xs btn-danger cancel", "fa-remove")
+		</div>
+	}
+</div>
+
+@section script
+{
+	<script type="text/javascript">
+		$(document).ready(function () {
+		//js kodunuzu buraya yazın	
+		});
+
+	</script>
+}

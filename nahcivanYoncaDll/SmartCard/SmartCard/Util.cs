@@ -89,5 +89,107 @@ namespace SmartCard
                 return defaultValue;
             }
         }
+
+        public UInt32 SendAboneCsc(UInt32 dn, UInt32 alfa)
+        {
+            UInt32 carry;
+            UInt32 rmask, pmask, qmask;
+            UInt32 t1, t2, t3, t4;
+            UInt32 sr;
+            UInt32 i;
+
+            pmask = 1 << 1;
+            rmask = 1 << 2;
+            qmask = 1 << 3;
+
+            sr = dn;
+            sr = sr + alfa;
+            if (sr == 0) sr = 1;
+            for (i = 0; i < 16; i++)
+            {
+                if ((sr & pmask) != 0) t1 = 1; else t1 = 0;
+                if ((sr & rmask) != 0) t2 = 1; else t2 = 0;
+                if ((sr & qmask) != 0) t3 = 1; else t3 = 0;
+                if ((sr & 0x8000) != 0) t4 = 1; else t4 = 0;
+                carry = t1 ^ t2 ^ t3 ^ t4;
+                sr <<= 1;
+                if (carry != 0)
+                {
+                    sr |= 1;
+                }
+            }
+            return sr;
+        }
+        public void Sleep(int time)
+        {
+            System.Threading.Thread.Sleep(time);
+        }
+
+        public string TipTanimlama(string IssuerArea, string zone)
+        {
+            string stIssuer = zone;
+
+            if (stIssuer + "A " == IssuerArea)
+            {
+                IssuerArea = "Abone Karti";
+                return IssuerArea;
+            }
+            if (stIssuer + "YA" == IssuerArea)
+            {
+                IssuerArea = "Yetki Açma Karti";
+                return IssuerArea;
+            }
+            if (stIssuer + "YE" == IssuerArea)
+            {
+                IssuerArea = "Yetki Bilgi Karti";
+                return IssuerArea;
+            }
+            if (stIssuer + "YK" == IssuerArea)
+            {
+                IssuerArea = "Yetki Kapama";
+                return IssuerArea;
+            }
+            if (stIssuer + "YS" == IssuerArea)
+            {
+                IssuerArea = "Yetki Saat";
+                return IssuerArea;
+            }
+
+            switch (IssuerArea)
+            {
+                case "ASUS":
+                    IssuerArea = "Üretim Sıfırlama";
+                    break;
+                case "ASUR":
+                    IssuerArea = "Üretim Reel";
+                    break;
+                case "ASUT":
+                    IssuerArea = "Üretim Test";
+                    break;
+                case "ASUA":
+                    IssuerArea = "Üretim Açma";
+                    break;
+                case "ASUK":
+                    IssuerArea = "Üretim Kapama";
+                    break;
+                case "ASUF":
+                    IssuerArea = "Üretim Format";
+                    break;
+                case "ASUZ":
+                    IssuerArea = "Üretim Cihaz No";
+                    break;
+                case "ASUI":
+                    IssuerArea = "Zone Kartı";
+                    break;
+                case "BTLD":
+                    IssuerArea = "BootLoader";
+                    break;
+                case "\0\0\0\0":
+                    IssuerArea = "Boş Kart";
+                    break;
+            }
+            return IssuerArea;
+
+        }
     }
 }

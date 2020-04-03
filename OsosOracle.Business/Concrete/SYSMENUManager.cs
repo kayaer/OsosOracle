@@ -82,5 +82,10 @@ namespace OsosOracle.Business.Concrete
         {
             return _sYSMENUDal.ParentMenuGetir();
         }
+        public List<SYSMENU> YetkiGetir(int kullaniciKayitNo)
+        {
+            return _sYSMENUDal.YetkiGetir(kullaniciKayitNo);
+
+        }
     }
 }

@@ -7,11 +7,13 @@ using OsosOracle.Framework.SharedModels;
 using OsosOracle.Framework.Utilities.ExtensionMethods;
 using OsosOracle.Framework.Web.Mvc;
 using OsosOracle.MvcUI.Filters;
+using OsosOracle.MvcUI.Models.CSTSAYACMODELModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using OsosOracle.MvcUI.Resources;
 
 namespace OsosOracle.MvcUI.Controllers
 {
@@ -47,10 +49,11 @@ namespace OsosOracle.MvcUI.Controllers
                 data = kayitlar.CSTSAYACMODELDetayList.Select(t => new
                 {
                     t.KAYITNO,
+                    t.SayacTuru,
                     t.AD,
                     t.ACIKLAMA,
-                    Islemler = $@"<a class='btn btn-xs btn-info ' href='{Url.Action("Guncelle", "SayacModel", new { id = t.KAYITNO })}' title='Düzenle'><i class='fa fa-edit'></i></a>							 
-								<a class='btn btn-xs btn-danger modalizer ' href='{Url.Action("Sil", "SayacModel", new { id = t.KAYITNO })}' title='Sil'><i class='fa fa-trash'></i></a>"
+                    Islemler = $@"<a class='btn btn-xs btn-info modalizer' href='{Url.Action("Guncelle", "SayacModel", new { id = t.KAYITNO })}' title='{Dil.Duzenle}'><i class='fa fa-edit'></i></a>							 
+								<a class='btn btn-xs btn-danger modalizer ' href='{Url.Action("Sil", "SayacModel", new { id = t.KAYITNO })}' title='{Dil.Sil}'><i class='fa fa-trash'></i></a>"
                 }),
                 draw = dtParameterModel.Draw,
                 recordsTotal = kayitlar.ToplamKayitSayisi,
@@ -61,6 +64,48 @@ namespace OsosOracle.MvcUI.Controllers
         {
             SayfaBaslik("Sayaç Model Silme İşlem Onayı");
             return View("_SilOnay", new DeleteViewModel { Id = id, RedirectUrlForCancel = $"/SayacModel/Index" });
+        }
+
+        public ActionResult Ekle(int? Id)
+        {
+            var model = new CSTSAYACMODELKaydetModel
+            {
+                CSTSAYACMODEL = new CSTSAYACMODEL()
+            };
+
+            return View("Kaydet", model);
+        }
+
+
+        public ActionResult Guncelle(int Id)
+        {
+            var model = new CSTSAYACMODELKaydetModel
+            {
+                CSTSAYACMODEL = _cstSayacModelService.GetirById(Id)
+            };
+
+
+            return View("Kaydet", model);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Kaydet(CSTSAYACMODELKaydetModel sayacModel)
+        {
+
+            sayacModel.CSTSAYACMODEL.DURUM = 1;
+            if (sayacModel.CSTSAYACMODEL.KAYITNO > 0)
+            {
+                sayacModel.CSTSAYACMODEL.GUNCELLEYEN = AktifKullanici.KayitNo;
+                _cstSayacModelService.Guncelle(sayacModel.CSTSAYACMODEL.List());
+            }
+            else
+            {
+                sayacModel.CSTSAYACMODEL.OLUSTURAN = AktifKullanici.KayitNo;
+                _cstSayacModelService.Ekle(sayacModel.CSTSAYACMODEL.List());
+            }
+
+            return Yonlendir(Url.Action("Index", "SayacModel"), $"Sayaç Model kayıdı başarıyla gerçekleştirilmiştir.");
         }
 
         [HttpPost]

@@ -1,9 +1,10 @@
 using System;
-            using OsosOracle.Framework.Entities;
-			namespace OsosOracle.Entities.Concrete
-			{
-				public class PRMTARIFEGAZ :  IEntity
-				{        public int KAYITNO { get; set; }
+using OsosOracle.Framework.Entities;
+namespace OsosOracle.Entities.Concrete
+{
+    public class PRMTARIFEGAZ : IEntity
+    {
+        public int KAYITNO { get; set; }
         public int VERSIYON { get; set; }
         public DateTime OLUSTURMATARIH { get; set; }
         public int OLUSTURAN { get; set; }
@@ -27,5 +28,10 @@ using System;
         public int YEDEKKREDI { get; set; }
         public int KURUMKAYITNO { get; set; }
         public int BIRIMFIYAT { get; set; }
+
+
+        public int TuketimKatsayi { get; set; }
+        public decimal Kdv { get; set; }
+        public decimal Ctv { get; set; }
     }
 }

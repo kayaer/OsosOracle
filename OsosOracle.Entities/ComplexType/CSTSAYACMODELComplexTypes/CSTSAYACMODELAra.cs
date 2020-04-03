@@ -14,8 +14,6 @@ namespace OsosOracle.Entities.ComplexType.CSTSAYACMODELComplexTypes
         public int? DURUM { get; set; }
         public int? VERSIYON { get; set; }
         public int? MARKAKAYITNO { get; set; }
-        public string YAZILIMVERSIYON { get; set; }
-        public string FLAG { get; set; }
-        public string CONTROLLER { get; set; }
+        public int? SayacTuruKayitNo { get; set; }
     }
 }

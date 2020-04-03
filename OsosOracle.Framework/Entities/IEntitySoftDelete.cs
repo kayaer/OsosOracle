@@ -8,7 +8,7 @@ namespace OsosOracle.Framework.Entities
 {
     public interface IEntitySoftDelete
     {
-        bool Silindi { get; set; }
+        int DURUM { get; set; }
 
     }
 }

@@ -20,21 +20,14 @@ namespace OsosOracle.DataLayer.Concrete.EntityFramework.Dal
                 KAYITNO=x.KAYITNO,
                 KULLANICIAD = x.KULLANICIAD,
                 SIFRE = x.SIFRE,
-                BIRIMKAYITNO = x.BIRIMKAYITNO,
                 VERSIYON = x.VERSIYON,
                 AD = x.AD,
                 SOYAD = x.SOYAD,
-                GRUPKAYITNO = x.GRUPKAYITNO,
                 DURUM = x.DURUM,
-                SIFREKOD = x.SIFREKOD,
                 DIL = x.DIL,
-                KULLANICITUR = x.KULLANICITUR,
                 KURUMKAYITNO = x.KURUMKAYITNO,
-                KurumAdi=x.ConKurumEf.AD,
-                EPosta=x.SysKullaniciDetayEfCollection.FirstOrDefault().EPOSTA,
-                Gsm=x.SysKullaniciDetayEfCollection.FirstOrDefault().GSM
-
-
+                KurumAdi=x.ConKurumEf.AD
+            
             });
         }
 
@@ -44,7 +37,7 @@ namespace OsosOracle.DataLayer.Concrete.EntityFramework.Dal
         private IQueryable<SYSKULLANICIEf> Filtrele(IQueryable<SYSKULLANICIEf> result, SYSKULLANICIAra filtre = null)
         {
             //silindi kolonu varsa silinenler gelmesin
-
+            result = result.Where(x => x.DURUM == 1);
             //TODO: filtereyi özelleştir
             if (filtre != null)
             {
@@ -61,16 +54,13 @@ namespace OsosOracle.DataLayer.Concrete.EntityFramework.Dal
 
                     if (!string.IsNullOrEmpty(filtre.KULLANICIAD))
                     {
-                        result = result.Where(x => x.KULLANICIAD.Contains(filtre.KULLANICIAD));
+                        result = result.Where(x => x.KULLANICIAD==filtre.KULLANICIAD);
                     }
                     if (!string.IsNullOrEmpty(filtre.SIFRE))
                     {
-                        result = result.Where(x => x.SIFRE.Contains(filtre.SIFRE));
+                        result = result.Where(x => x.SIFRE==filtre.SIFRE);
                     }
-                    if (filtre.BIRIMKAYITNO != null)
-                    {
-                        result = result.Where(x => x.BIRIMKAYITNO == filtre.BIRIMKAYITNO);
-                    }
+                    
                     if (filtre.VERSIYON != null)
                     {
                         result = result.Where(x => x.VERSIYON == filtre.VERSIYON);
@@ -83,26 +73,17 @@ namespace OsosOracle.DataLayer.Concrete.EntityFramework.Dal
                     {
                         result = result.Where(x => x.SOYAD.Contains(filtre.SOYAD));
                     }
-                    if (filtre.GRUPKAYITNO != null)
-                    {
-                        result = result.Where(x => x.GRUPKAYITNO == filtre.GRUPKAYITNO);
-                    }
+                    
                     if (filtre.DURUM != null)
                     {
                         result = result.Where(x => x.DURUM == filtre.DURUM);
                     }
-                    if (!string.IsNullOrEmpty(filtre.SIFREKOD))
-                    {
-                        result = result.Where(x => x.SIFREKOD.Contains(filtre.SIFREKOD));
-                    }
+                   
                     if (filtre.DIL != null)
                     {
                         result = result.Where(x => x.DIL == filtre.DIL);
                     }
-                    if (filtre.KULLANICITUR != null)
-                    {
-                        result = result.Where(x => x.KULLANICITUR == filtre.KULLANICITUR);
-                    }
+                    
                     if (filtre.KURUMKAYITNO != null)
                     {
                         result = result.Where(x => x.KURUMKAYITNO == filtre.KURUMKAYITNO);

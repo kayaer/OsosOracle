@@ -58,10 +58,7 @@ namespace OsosOracle.DataLayer.Concrete.EntityFramework.Dal
                     {
                         result = result.Where(x => x.VERSIYON == filtre.VERSIYON);
                     }
-                    if (filtre.SAYACURUNAILE != null)
-                    {
-                        result = result.Where(x => x.SAYACURUNAILE == filtre.SAYACURUNAILE);
-                    }
+                   
                 }
             }
             return result;

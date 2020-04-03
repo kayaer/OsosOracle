@@ -24,8 +24,13 @@ namespace OsosOracle.DataLayer.Concrete.EntityFramework.Mappings
             Property(t => t.GUNCELLEYEN).HasColumnName("GUNCELLEYEN");
             Property(t => t.GUNCELLEMETARIH).HasColumnName("GUNCELLEMETARIH");
             Property(t => t.KURUMKAYITNO).HasColumnName("KURUMKAYITNO").IsRequired();
+            Property(t => t.ABONENO).HasColumnName("ABONENO");
+            Property(t => t.SonSatisTarih).HasColumnName("SONSATISTARIH");
+            Property(t => t.KimlikNo).HasColumnName("KIMLIKNO");
+            Property(t => t.Daire).HasColumnName("DAIRE");
+            Property(t => t.Blok).HasColumnName("BLOK");
             // Relationships
-          
+
 
         }
     }

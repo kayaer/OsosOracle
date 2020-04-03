@@ -24,14 +24,14 @@ namespace OsosOracle.DataLayer.Concrete.EntityFramework.Mappings
             Property(t => t.GUNCELLEYEN).HasColumnName("GUNCELLEYEN");
             Property(t => t.GUNCELLEMETARIH).HasColumnName("GUNCELLEMETARIH");
             Property(t => t.MARKAKAYITNO).HasColumnName("MARKAKAYITNO");
-            Property(t => t.YAZILIMVERSIYON).HasColumnName("YAZILIMVERSIYON");
-            Property(t => t.FLAG).HasColumnName("FLAG");
-            Property(t => t.CONTROLLER).HasColumnName("CONTROLLER");
+          
+            Property(t => t.SayacTuruKayitNo).HasColumnName("SAYACTURUKAYITNO");
+
             // Relationships
-            //HasOptional(t => t.CSTDURUMDURUMEf)
-            //  .WithMany(t => t.DURUMCSTSAYACMODELEfCollection)
-            //  .HasForeignKey(d => d.DURUM)
-            //  .WillCascadeOnDelete(false);
+            HasRequired(t => t.NesneDegerSayacTuruEf)
+              .WithMany(t => t.CstSayacModelEfCollection)
+              .HasForeignKey(d => d.SayacTuruKayitNo)
+              .WillCascadeOnDelete(false);
 
             //HasOptional(t => t.CSTSAYACMARKAMARKAKAYITNOEf)
             //  .WithMany(t => t.MARKAKAYITNOCSTSAYACMODELEfCollection)

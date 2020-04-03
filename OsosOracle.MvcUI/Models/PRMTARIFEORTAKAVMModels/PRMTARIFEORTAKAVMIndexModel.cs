@@ -1,9 +1,9 @@
 
-using OsosOracle.Entities.ComplexType.PRMTARIFEORTAKAVMComplexTypes;
-namespace OsosOracle.MvcUI.Models.PRMTARIFEORTAKAVMModels
+using OsosOracle.Entities.ComplexType.PRMTARIFEKALORIMETREComplexTypes;
+namespace OsosOracle.MvcUI.Models.PRMTARIFEKALORIMETREModels
 {
-	public class PRMTARIFEORTAKAVMIndexModel
+	public class PRMTARIFEKALORIMETREIndexModel
 	{
-		public PRMTARIFEORTAKAVMAra PRMTARIFEORTAKAVMAra { get; set; }
+		public PRMTARIFEKALORIMETREAra PRMTARIFEKALORIMETREAra { get; set; }
 	}
 }

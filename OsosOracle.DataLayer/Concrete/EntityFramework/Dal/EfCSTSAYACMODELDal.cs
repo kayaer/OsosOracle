@@ -20,9 +20,8 @@ namespace OsosOracle.DataLayer.Concrete.EntityFramework.Dal
                 KAYITNO = x.KAYITNO,
                 AD = x.AD,
                 ACIKLAMA = x.ACIKLAMA,
-                YAZILIMVERSIYON = x.YAZILIMVERSIYON,
-                FLAG = x.FLAG,
-                CONTROLLER = x.CONTROLLER
+                SayacTuruKayitNo=x.SayacTuruKayitNo,
+                SayacTuru=x.NesneDegerSayacTuruEf.AD
 
             });
         }
@@ -48,9 +47,13 @@ namespace OsosOracle.DataLayer.Concrete.EntityFramework.Dal
                     //	result = result.Where(x => idList.Contains(x.KAYITNO));
                     //}
 
+                    if (filtre.SayacTuruKayitNo != null)
+                    {
+                        result = result.Where(x => x.SayacTuruKayitNo == filtre.SayacTuruKayitNo);
+                    }
                     if (!string.IsNullOrEmpty(filtre.AD))
                     {
-                        result = result.Where(x => x.AD.Contains(filtre.AD));
+                        result = result.Where(x => x.AD.ToLower().Contains(filtre.AD.ToLower()));
                     }
                     if (!string.IsNullOrEmpty(filtre.ACIKLAMA))
                     {
@@ -68,18 +71,8 @@ namespace OsosOracle.DataLayer.Concrete.EntityFramework.Dal
                     {
                         result = result.Where(x => x.MARKAKAYITNO == filtre.MARKAKAYITNO);
                     }
-                    if (!string.IsNullOrEmpty(filtre.YAZILIMVERSIYON))
-                    {
-                        result = result.Where(x => x.YAZILIMVERSIYON.Contains(filtre.YAZILIMVERSIYON));
-                    }
-                    if (!string.IsNullOrEmpty(filtre.FLAG))
-                    {
-                        result = result.Where(x => x.FLAG.Contains(filtre.FLAG));
-                    }
-                    //if (!string.IsNullOrEmpty(filtre.CONTROLLER))
-                    //{
-                    //    result = result.Where(x => x.CONTROLLER.Contains(filtre.CONTROLLER));
-                    //}
+                    
+                    
                 }
             }
             return result;

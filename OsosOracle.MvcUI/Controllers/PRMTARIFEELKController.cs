@@ -45,7 +45,7 @@ namespace OsosOracle.MvcUI.Controllers
             }
 
 
-
+            pRMTARIFEELKAra.KURUMKAYITNO = AktifKullanici.KurumKayitNo;
             var kayitlar = _pRMTARIFEELKService.Ara(pRMTARIFEELKAra);
 
             return Json(new DataTableResult()
@@ -178,6 +178,7 @@ namespace OsosOracle.MvcUI.Controllers
                 pRMTARIFEELKAra = new PRMTARIFEELKAra();
             }
 
+            pRMTARIFEELKAra.KURUMKAYITNO = AktifKullanici.KurumKayitNo;
             pRMTARIFEELKAra.Ara = new Ara
             {
                 Baslangic = baslangic,

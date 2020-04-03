@@ -1,0 +1,51 @@
+﻿@using OsosOracle.Framework.HtmlHelpers
+@using OsosOracle.MvcUI.Infrastructure
+@using OsosOracle.MvcUI.Resources
+@model OsosOracle.MvcUI.Models.ENTSAYACModels.ENTSAYACKaydetModel
+
+
+
+<div class="ajaxForm">
+
+    @using (Html.BeginForm("Kaydet", "Sayac", FormMethod.Post))
+    {
+        @Html.AntiForgeryToken()
+        @Html.HiddenFor(t => t.ENTSAYAC.KAYITNO)
+        @Html.HiddenFor(t => t.ENTSAYAC.VERSIYON)
+        @Html.HiddenFor(t => t.ENTSAYAC.OLUSTURAN)
+        @Html.HiddenFor(t => t.ENTSAYAC.GUNCELLEYEN)
+        @Html.ValidationSummary(true)
+
+        <div class="form-group">
+            @Html.AutoComplete(t => t.ENTSAYAC.SAYACTUR, Enums.AutocompleteFuction.SayacModelGetir, Enums.AutoCompleteType.List, Dil.SayacModel)
+            @Html.ValidationMessageFor(t => t.ENTSAYAC.SAYACTUR)
+        </div>
+        <div class="form-group">
+            @Html.TextBoxFor(t => t.ENTSAYAC.SERINO, new { @class = "form-control", placeholder = Dil.SayacSeriNo })
+            @Html.ValidationMessageFor(t => t.ENTSAYAC.SERINO)
+        </div>
+        <div class="form-group">
+            @Html.TextAreaFor(t => t.ENTSAYAC.ACIKLAMA, new { @class = "form-control", placeholder = Dil.Aciklama })
+            @Html.ValidationMessageFor(t => t.ENTSAYAC.ACIKLAMA)
+
+        </div>
+        @*<div class="form-group">
+                <label>@Html.CheckBoxFor(t => t.ENTSAYAC.DURUM) @_T("Aktif")</label>
+                @Html.ValidationMessageFor(t => t.ENTSAYAC.DURUM)
+            </div>*@
+        <div class="form-actions">
+            <button type="submit" class="btn btn-primary"><i class="fa fa-save"></i> @Dil.Kaydet</button>
+            @Html.ButtonLink(Dil.Vazgec, "Index", "btn btn-xs btn-danger cancel", "fa-remove")
+        </div>
+    }
+</div>
+
+@section script
+{
+    <script type="text/javascript">
+        $(document).ready(function () {
+            //js kodunuzu buraya yazın
+        });
+
+    </script>
+}

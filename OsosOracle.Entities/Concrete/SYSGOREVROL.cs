@@ -1,9 +1,10 @@
 using System;
-            using OsosOracle.Framework.Entities;
-			namespace OsosOracle.Entities.Concrete
-			{
-				public class SYSGOREVROL :  IEntity
-				{        public int KAYITNO { get; set; }
+using OsosOracle.Framework.Entities;
+namespace OsosOracle.Entities.Concrete
+{
+    public class SYSGOREVROL : IEntity
+    {
+        public int KAYITNO { get; set; }
         public int GOREVKAYITNO { get; set; }
         public int ROLKAYITNO { get; set; }
         public int VERSIYON { get; set; }

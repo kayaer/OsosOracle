@@ -1,0 +1,76 @@
+﻿@using OsosOracle.Framework.HtmlHelpers
+@using OsosOracle.MvcUI.Infrastructure
+@using OsosOracle.MvcUI.Models.ENTABONESAYACModels
+@model PartialModel
+
+
+<div class="portlet box purple-plum">
+    <form id="frmSokulenSayacPartial">
+        @Html.HiddenFor(t => t.AboneKayitNo)
+        @Html.HiddenFor(t => t.GuncelleBtnVisible)
+        @Html.HiddenFor(t => t.SilBtnVisible)
+        @Html.HiddenFor(t => t.ReturnUrl)
+        @Html.HiddenFor(t => t.EntAboneSayacAra.Durum)
+    </form>
+
+
+    <div class="portlet-title">
+        <div class="caption">
+            <i class="fa fa-bank"></i><span class="caption-subject">Sökülen Sayaç Bilgileri</span> <span class="caption-helper"> </span>
+        </div>
+        <div class="tools">
+            <a href="#" class="collapse" data-original-title="Aç/Kapa" title=""> </a>
+        </div>
+        <div class="actions">
+        </div>
+    </div>
+    <div class="portlet-body" style="display: block;">
+        <table id="tblSokulenSayacPartial" class="table table-striped table-bordered table-hover table-responsive">
+            <thead>
+                <tr>
+
+                    <th>@_T("Seri No")</th>
+                    <th>@_T("Sökülme Neden")</th>
+                    <th>@_T("Sökülme Tarih")</th>
+                    <th>@_T("Açıklama")</th>
+                   
+                </tr>
+            </thead>
+        </table>
+    </div>
+
+</div>
+
+
+<script type="text/javascript">
+        $(document).ready(function () {
+             $('#tblSokulenSayacPartial').dataTable({
+            'language': dataTableLanguage,
+            'processing': true,
+            'serverSide': true,
+            'destroy': true,
+            'columns': [
+                { 'data': "SayacSeriNo" },
+                { 'data': "SOKULMENEDEN" },
+                { 'data': "SOKULMETARIH" },
+                { 'data': "Aciklama" }
+
+            ],
+            'ajax': {
+                'type': 'POST',
+                'data': $("#frmSokulenSayacPartial").serializeObject(),
+                'url': "@Url.Action("DataTablesListSokulen", "AboneSayac")",
+                'error': function (xhr, ajaxOptions, errorThrown) { ajaxMesajGoster(xhr.responseJSON.Mesaj); },
+                'complete': function () { }
+            }
+
+        });
+        });
+
+</script>
+
+
+
+
+
+

@@ -17,7 +17,6 @@ namespace OsosOracle.DataLayer.Concrete.EntityFramework.Mappings
             Property(t => t.KAYITNO).HasColumnName("KAYITNO").IsRequired();
             Property(t => t.AD).HasColumnName("AD").IsRequired();
             Property(t => t.ACIKLAMA).HasColumnName("ACIKLAMA").IsRequired();
-            Property(t => t.OPERASYONTUR).HasColumnName("OPERASYONTUR").IsRequired();
             Property(t => t.VERSIYON).HasColumnName("VERSIYON").IsRequired();
             Property(t => t.OLUSTURAN).HasColumnName("OLUSTURAN");
             Property(t => t.OLUSTURMATARIH).HasColumnName("OLUSTURMATARIH");

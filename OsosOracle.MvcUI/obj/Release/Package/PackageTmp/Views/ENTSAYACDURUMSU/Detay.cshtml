@@ -1,0 +1,376 @@
+
+
+@using OsosOracle.Framework.HtmlHelpers
+@model OsosOracle.MvcUI.Models.ENTSAYACDURUMSUModels.ENTSAYACDURUMSUDetayModel
+
+@section panelHeading{
+	@Html.ButtonLink(_T("Listeye Dön").ToString(), "Index", "btn btn-xs btn-info", "fa-reply")
+	@Html.ButtonLink(_T("Sil").ToString(), "Sil", "btn btn-xs btn-danger modalizer", "fa-trash", new { id = Model.ENTSAYACDURUMSUDetay.Id })
+	@Html.ButtonLink(_T("Düzenle").ToString(), "Guncelle","btn btn-xs btn-primary modalizer", "fa-edit", new { id = Model.ENTSAYACDURUMSUDetay.Id })
+
+}
+
+<div class="ajaxForm">
+
+	  
+	<div class="row static-info">
+		<div class="col-md-5 name">@_T("SAYACID")</div>
+		<div class="col-md-7 value">@Model.ENTSAYACDURUMSUDetay.SAYACID</div>
+	 </div>
+
+
+	<div class="row static-info">
+		<div class="col-md-5 name">@_T("ACIKLAMA")</div>
+		<div class="col-md-7 value">@Model.ENTSAYACDURUMSUDetay.ACIKLAMA</div>
+	 </div>
+
+
+	<div class="row static-info">
+		<div class="col-md-5 name">@_T("DURUM")</div>
+		<div class="col-md-7 value">@Model.ENTSAYACDURUMSUDetay.DURUM</div>
+	 </div>
+
+
+	<div class="row static-info">
+		<div class="col-md-5 name">@_T("KREDIBITTI")</div>
+		<div class="col-md-7 value">@Model.ENTSAYACDURUMSUDetay.KREDIBITTI</div>
+	 </div>
+
+
+	<div class="row static-info">
+		<div class="col-md-5 name">@_T("KREDIAZ")</div>
+		<div class="col-md-7 value">@Model.ENTSAYACDURUMSUDetay.KREDIAZ</div>
+	 </div>
+
+
+	<div class="row static-info">
+		<div class="col-md-5 name">@_T("ANAPILBITTI")</div>
+		<div class="col-md-7 value">@Model.ENTSAYACDURUMSUDetay.ANAPILBITTI</div>
+	 </div>
+
+
+	<div class="row static-info">
+		<div class="col-md-5 name">@_T("PULSEHATA")</div>
+		<div class="col-md-7 value">@Model.ENTSAYACDURUMSUDetay.PULSEHATA</div>
+	 </div>
+
+
+	<div class="row static-info">
+		<div class="col-md-5 name">@_T("RTCHATA")</div>
+		<div class="col-md-7 value">@Model.ENTSAYACDURUMSUDetay.RTCHATA</div>
+	 </div>
+
+
+	<div class="row static-info">
+		<div class="col-md-5 name">@_T("VANA")</div>
+		<div class="col-md-7 value">@Model.ENTSAYACDURUMSUDetay.VANA</div>
+	 </div>
+
+
+	<div class="row static-info">
+		<div class="col-md-5 name">@_T("CEZA1")</div>
+		<div class="col-md-7 value">@Model.ENTSAYACDURUMSUDetay.CEZA1</div>
+	 </div>
+
+
+	<div class="row static-info">
+		<div class="col-md-5 name">@_T("CEZA2")</div>
+		<div class="col-md-7 value">@Model.ENTSAYACDURUMSUDetay.CEZA2</div>
+	 </div>
+
+
+	<div class="row static-info">
+		<div class="col-md-5 name">@_T("CEZA3")</div>
+		<div class="col-md-7 value">@Model.ENTSAYACDURUMSUDetay.CEZA3</div>
+	 </div>
+
+
+	<div class="row static-info">
+		<div class="col-md-5 name">@_T("CEZA4")</div>
+		<div class="col-md-7 value">@Model.ENTSAYACDURUMSUDetay.CEZA4</div>
+	 </div>
+
+
+	<div class="row static-info">
+		<div class="col-md-5 name">@_T("MAGNET")</div>
+		<div class="col-md-7 value">@Model.ENTSAYACDURUMSUDetay.MAGNET</div>
+	 </div>
+
+
+	<div class="row static-info">
+		<div class="col-md-5 name">@_T("VERSIYON")</div>
+		<div class="col-md-7 value">@Model.ENTSAYACDURUMSUDetay.VERSIYON</div>
+	 </div>
+
+
+	<div class="row static-info">
+		<div class="col-md-5 name">@_T("HEADERNO")</div>
+		<div class="col-md-7 value">@Model.ENTSAYACDURUMSUDetay.HEADERNO</div>
+	 </div>
+
+
+	<div class="row static-info">
+		<div class="col-md-5 name">@_T("OKUMATARIH")</div>
+		<div class="col-md-7 value">@Model.ENTSAYACDURUMSUDetay.OKUMATARIH</div>
+	 </div>
+
+
+	<div class="row static-info">
+		<div class="col-md-5 name">@_T("ARIZA")</div>
+		<div class="col-md-7 value">@Model.ENTSAYACDURUMSUDetay.ARIZA</div>
+	 </div>
+
+
+	<div class="row static-info">
+		<div class="col-md-5 name">@_T("ANAPILZAYIF")</div>
+		<div class="col-md-7 value">@Model.ENTSAYACDURUMSUDetay.ANAPILZAYIF</div>
+	 </div>
+
+
+	<div class="row static-info">
+		<div class="col-md-5 name">@_T("MOTORPILZAYIF")</div>
+		<div class="col-md-7 value">@Model.ENTSAYACDURUMSUDetay.MOTORPILZAYIF</div>
+	 </div>
+
+
+	<div class="row static-info">
+		<div class="col-md-5 name">@_T("ASIRITUKETIM")</div>
+		<div class="col-md-7 value">@Model.ENTSAYACDURUMSUDetay.ASIRITUKETIM</div>
+	 </div>
+
+
+	<div class="row static-info">
+		<div class="col-md-5 name">@_T("CEZA4IPTAL")</div>
+		<div class="col-md-7 value">@Model.ENTSAYACDURUMSUDetay.CEZA4IPTAL</div>
+	 </div>
+
+
+	<div class="row static-info">
+		<div class="col-md-5 name">@_T("CAP")</div>
+		<div class="col-md-7 value">@Model.ENTSAYACDURUMSUDetay.CAP</div>
+	 </div>
+
+
+	<div class="row static-info">
+		<div class="col-md-5 name">@_T("BAGLANTISAYISI")</div>
+		<div class="col-md-7 value">@Model.ENTSAYACDURUMSUDetay.BAGLANTISAYISI</div>
+	 </div>
+
+
+	<div class="row static-info">
+		<div class="col-md-5 name">@_T("LIMIT1")</div>
+		<div class="col-md-7 value">@Model.ENTSAYACDURUMSUDetay.LIMIT1</div>
+	 </div>
+
+
+	<div class="row static-info">
+		<div class="col-md-5 name">@_T("LIMIT2")</div>
+		<div class="col-md-7 value">@Model.ENTSAYACDURUMSUDetay.LIMIT2</div>
+	 </div>
+
+
+	<div class="row static-info">
+		<div class="col-md-5 name">@_T("LIMIT3")</div>
+		<div class="col-md-7 value">@Model.ENTSAYACDURUMSUDetay.LIMIT3</div>
+	 </div>
+
+
+	<div class="row static-info">
+		<div class="col-md-5 name">@_T("LIMIT4")</div>
+		<div class="col-md-7 value">@Model.ENTSAYACDURUMSUDetay.LIMIT4</div>
+	 </div>
+
+
+	<div class="row static-info">
+		<div class="col-md-5 name">@_T("KRITIKKREDI")</div>
+		<div class="col-md-7 value">@Model.ENTSAYACDURUMSUDetay.KRITIKKREDI</div>
+	 </div>
+
+
+	<div class="row static-info">
+		<div class="col-md-5 name">@_T("FIYAT1")</div>
+		<div class="col-md-7 value">@Model.ENTSAYACDURUMSUDetay.FIYAT1</div>
+	 </div>
+
+
+	<div class="row static-info">
+		<div class="col-md-5 name">@_T("FIYAT2")</div>
+		<div class="col-md-7 value">@Model.ENTSAYACDURUMSUDetay.FIYAT2</div>
+	 </div>
+
+
+	<div class="row static-info">
+		<div class="col-md-5 name">@_T("FIYAT3")</div>
+		<div class="col-md-7 value">@Model.ENTSAYACDURUMSUDetay.FIYAT3</div>
+	 </div>
+
+
+	<div class="row static-info">
+		<div class="col-md-5 name">@_T("FIYAT4")</div>
+		<div class="col-md-7 value">@Model.ENTSAYACDURUMSUDetay.FIYAT4</div>
+	 </div>
+
+
+	<div class="row static-info">
+		<div class="col-md-5 name">@_T("FIYAT5")</div>
+		<div class="col-md-7 value">@Model.ENTSAYACDURUMSUDetay.FIYAT5</div>
+	 </div>
+
+
+	<div class="row static-info">
+		<div class="col-md-5 name">@_T("ARIZAA")</div>
+		<div class="col-md-7 value">@Model.ENTSAYACDURUMSUDetay.ARIZAA</div>
+	 </div>
+
+
+	<div class="row static-info">
+		<div class="col-md-5 name">@_T("ARIZAK")</div>
+		<div class="col-md-7 value">@Model.ENTSAYACDURUMSUDetay.ARIZAK</div>
+	 </div>
+
+
+	<div class="row static-info">
+		<div class="col-md-5 name">@_T("ARIZAP")</div>
+		<div class="col-md-7 value">@Model.ENTSAYACDURUMSUDetay.ARIZAP</div>
+	 </div>
+
+
+	<div class="row static-info">
+		<div class="col-md-5 name">@_T("ARIZAPIL")</div>
+		<div class="col-md-7 value">@Model.ENTSAYACDURUMSUDetay.ARIZAPIL</div>
+	 </div>
+
+
+	<div class="row static-info">
+		<div class="col-md-5 name">@_T("BORC")</div>
+		<div class="col-md-7 value">@Model.ENTSAYACDURUMSUDetay.BORC</div>
+	 </div>
+
+
+	<div class="row static-info">
+		<div class="col-md-5 name">@_T("ITERASYON")</div>
+		<div class="col-md-7 value">@Model.ENTSAYACDURUMSUDetay.ITERASYON</div>
+	 </div>
+
+
+	<div class="row static-info">
+		<div class="col-md-5 name">@_T("PILAKIM")</div>
+		<div class="col-md-7 value">@Model.ENTSAYACDURUMSUDetay.PILAKIM</div>
+	 </div>
+
+
+	<div class="row static-info">
+		<div class="col-md-5 name">@_T("PILVOLTAJ")</div>
+		<div class="col-md-7 value">@Model.ENTSAYACDURUMSUDetay.PILVOLTAJ</div>
+	 </div>
+
+
+	<div class="row static-info">
+		<div class="col-md-5 name">@_T("ABONENO")</div>
+		<div class="col-md-7 value">@Model.ENTSAYACDURUMSUDetay.ABONENO</div>
+	 </div>
+
+
+	<div class="row static-info">
+		<div class="col-md-5 name">@_T("ABONETIP")</div>
+		<div class="col-md-7 value">@Model.ENTSAYACDURUMSUDetay.ABONETIP</div>
+	 </div>
+
+
+	<div class="row static-info">
+		<div class="col-md-5 name">@_T("ILKPULSETARIH")</div>
+		<div class="col-md-7 value">@Model.ENTSAYACDURUMSUDetay.ILKPULSETARIH</div>
+	 </div>
+
+
+	<div class="row static-info">
+		<div class="col-md-5 name">@_T("SONPULSETARIH")</div>
+		<div class="col-md-7 value">@Model.ENTSAYACDURUMSUDetay.SONPULSETARIH</div>
+	 </div>
+
+
+	<div class="row static-info">
+		<div class="col-md-5 name">@_T("BORCTARIH")</div>
+		<div class="col-md-7 value">@Model.ENTSAYACDURUMSUDetay.BORCTARIH</div>
+	 </div>
+
+
+	<div class="row static-info">
+		<div class="col-md-5 name">@_T("MAXDEBI")</div>
+		<div class="col-md-7 value">@Model.ENTSAYACDURUMSUDetay.MAXDEBI</div>
+	 </div>
+
+
+	<div class="row static-info">
+		<div class="col-md-5 name">@_T("MAXDEBISINIR")</div>
+		<div class="col-md-7 value">@Model.ENTSAYACDURUMSUDetay.MAXDEBISINIR</div>
+	 </div>
+
+
+	<div class="row static-info">
+		<div class="col-md-5 name">@_T("DONEMGUN")</div>
+		<div class="col-md-7 value">@Model.ENTSAYACDURUMSUDetay.DONEMGUN</div>
+	 </div>
+
+
+	<div class="row static-info">
+		<div class="col-md-5 name">@_T("DONEM")</div>
+		<div class="col-md-7 value">@Model.ENTSAYACDURUMSUDetay.DONEM</div>
+	 </div>
+
+
+	<div class="row static-info">
+		<div class="col-md-5 name">@_T("VANAACMATARIH")</div>
+		<div class="col-md-7 value">@Model.ENTSAYACDURUMSUDetay.VANAACMATARIH</div>
+	 </div>
+
+
+	<div class="row static-info">
+		<div class="col-md-5 name">@_T("VANAKAPAMATARIH")</div>
+		<div class="col-md-7 value">@Model.ENTSAYACDURUMSUDetay.VANAKAPAMATARIH</div>
+	 </div>
+
+
+	<div class="row static-info">
+		<div class="col-md-5 name">@_T("SICAKLIK")</div>
+		<div class="col-md-7 value">@Model.ENTSAYACDURUMSUDetay.SICAKLIK</div>
+	 </div>
+
+
+	<div class="row static-info">
+		<div class="col-md-5 name">@_T("MINSICAKLIK")</div>
+		<div class="col-md-7 value">@Model.ENTSAYACDURUMSUDetay.MINSICAKLIK</div>
+	 </div>
+
+
+	<div class="row static-info">
+		<div class="col-md-5 name">@_T("MAXSICAKLIK")</div>
+		<div class="col-md-7 value">@Model.ENTSAYACDURUMSUDetay.MAXSICAKLIK</div>
+	 </div>
+
+
+	<div class="row static-info">
+		<div class="col-md-5 name">@_T("YANGINMODU")</div>
+		<div class="col-md-7 value">@Model.ENTSAYACDURUMSUDetay.YANGINMODU</div>
+	 </div>
+
+
+	<div class="row static-info">
+		<div class="col-md-5 name">@_T("SONYUKLENENKREDITARIH")</div>
+		<div class="col-md-7 value">@Model.ENTSAYACDURUMSUDetay.SONYUKLENENKREDITARIH</div>
+	 </div>
+
+
+	 
+	@Html.ButtonLink(_T("Vazgeç").ToString(), "Index", "btn btn-xs btn-danger cancel", "fa-remove")
+</div>
+
+@section script
+{
+	<script type="text/javascript">
+		$(document).ready(function () {
+		//js kodunuzu buraya yazın	
+		});
+
+	</script>
+}

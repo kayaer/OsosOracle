@@ -118,19 +118,19 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Abone" xml:space="preserve">
-    <value>اشتراك</value>
+    <value>الزبائن</value>
   </data>
   <data name="AboneArama" xml:space="preserve">
-    <value>بحث المشترك</value>
+    <value>بحث الزبائن</value>
   </data>
   <data name="AboneBilgileri" xml:space="preserve">
-    <value>معلومات الاشتراك</value>
+    <value>ادارة الزبائن</value>
   </data>
   <data name="AboneIslemleri" xml:space="preserve">
-    <value>اجراءات الاشتراك</value>
+    <value>ادارة الزبائن</value>
   </data>
   <data name="AboneListesi" xml:space="preserve">
-    <value>قائمة المشتركين</value>
+    <value>قائمة الزبائن</value>
   </data>
   <data name="AboneNo" xml:space="preserve">
     <value>رقم الاشتراك</value>
@@ -148,7 +148,7 @@
     <value>مفتوح</value>
   </data>
   <data name="Aciklama" xml:space="preserve">
-    <value>الشرح</value>
+    <value>الوصف</value>
   </data>
   <data name="Ad" xml:space="preserve">
     <value>الاسم</value>
@@ -172,7 +172,7 @@
     <value>العملية لم تكتمل</value>
   </data>
   <data name="Bul" xml:space="preserve">
-    <value>اكتشاف</value>
+    <value>بحث</value>
   </data>
   <data name="CAP" xml:space="preserve">
     <value>قطر العداد</value>
@@ -190,7 +190,7 @@
     <value>إضافة</value>
   </data>
   <data name="Email" xml:space="preserve">
-    <value>البريد الإلكتروني</value>
+    <value>البريد الالكتروني</value>
   </data>
   <data name="EnerjiDurumu" xml:space="preserve">
     <value>حالة الطاقة</value>
@@ -220,7 +220,7 @@
     <value>الكرت</value>
   </data>
   <data name="KartBosalt" xml:space="preserve">
-    <value>بطاقة فارغة</value>
+    <value>تهيئة البطاقة</value>
   </data>
   <data name="Karthazirla" xml:space="preserve">
     <value>إنشاء بطاقة</value>
@@ -229,7 +229,7 @@
     <value>ادارة الكرت</value>
   </data>
   <data name="KimlikNo" xml:space="preserve">
-    <value>رقم الهوية</value>
+    <value>الرقم الوطني</value>
   </data>
   <data name="Kullanici" xml:space="preserve">
     <value>المستخدم</value>
@@ -256,16 +256,16 @@
     <value>معلومات المبيعات</value>
   </data>
   <data name="SatisTarih" xml:space="preserve">
-    <value>تاريخ البيع</value>
+    <value>تاريخ الشحن</value>
   </data>
   <data name="Sayac" xml:space="preserve">
-    <value>العداد</value>
+    <value>العدادت</value>
   </data>
   <data name="SayacBilgileri" xml:space="preserve">
     <value>معلومات العداد</value>
   </data>
   <data name="SayacSeriNo" xml:space="preserve">
-    <value>رقم العداد الميكانيكي</value>
+    <value>رقم العداد</value>
   </data>
   <data name="SayacVerileri" xml:space="preserve">
     <value>عداد البيانات</value>
@@ -292,19 +292,19 @@
     <value>تاريخ آخر قراءة</value>
   </data>
   <data name="Soyad" xml:space="preserve">
-    <value>الكنية</value>
+    <value>اللقب</value>
   </data>
   <data name="Tarife" xml:space="preserve">
-    <value>التعرفة</value>
+    <value>نوع التسعيرة</value>
   </data>
   <data name="TarifeAdi" xml:space="preserve">
     <value>اسم التعرفة</value>
   </data>
   <data name="TarifeEkle" xml:space="preserve">
-    <value>أضف تعريفة</value>
+    <value>اضافة تسعيرة</value>
   </data>
   <data name="TarifeIslemleri" xml:space="preserve">
-    <value>عمليات التعريفة</value>
+    <value>إدارة التسعيرة</value>
   </data>
   <data name="TUKETIM" xml:space="preserve">
     <value>استهلاك</value>
@@ -322,25 +322,25 @@
     <value>إضافة مشترك جديد</value>
   </data>
   <data name="Kredi" xml:space="preserve">
-    <value>ائتمان</value>
+    <value>قيمة التعبئة</value>
   </data>
   <data name="Kurum" xml:space="preserve">
     <value>مؤسسة</value>
   </data>
   <data name="SatisIslemleri" xml:space="preserve">
-    <value>عمليا البيع</value>
+    <value>عمليات البيع</value>
   </data>
   <data name="SayacAra" xml:space="preserve">
-    <value>مكافحة ديسمبر</value>
+    <value>بحث العدادات</value>
   </data>
   <data name="SayacEkle" xml:space="preserve">
     <value>إضافة عداد جديد</value>
   </data>
   <data name="SayacIslemleri" xml:space="preserve">
-    <value>عمليات مكافحة</value>
+    <value>ادارة العدادات</value>
   </data>
   <data name="SayacModel" xml:space="preserve">
-    <value>نموذج العداد</value>
+    <value>خواص العداد</value>
   </data>
   <data name="SayacTipi" xml:space="preserve">
     <value>نوع العداد</value>
@@ -349,7 +349,7 @@
     <value>بحث متقدم</value>
   </data>
   <data name="Fiyat" xml:space="preserve">
-    <value>السعر</value>
+    <value>قيمة الشحن</value>
   </data>
   <data name="KrediKatSayisi" xml:space="preserve">
     <value>معامل الائتمان</value>
@@ -361,7 +361,7 @@
     <value>البحث عن مستخدم</value>
   </data>
   <data name="KullaniciIslemleri" xml:space="preserve">
-    <value>إجراءات المستخدم</value>
+    <value>إدارة المستخدمين</value>
   </data>
   <data name="Limit" xml:space="preserve">
     <value>حد</value>
@@ -385,7 +385,7 @@
     <value>لغة</value>
   </data>
   <data name="Kaydet" xml:space="preserve">
-    <value>حفظ</value>
+    <value>انشاء</value>
   </data>
   <data name="KayitNo" xml:space="preserve">
     <value>رقم التسجيل</value>
@@ -412,12 +412,99 @@
     <value>كلمة المرور</value>
   </data>
   <data name="Vazgec" xml:space="preserve">
-    <value>إلغاء</value>
+    <value>الغاء</value>
   </data>
   <data name="YeniKurumEkle" xml:space="preserve">
     <value>أضف منظمة جديدة</value>
   </data>
   <data name="Yönetim" xml:space="preserve">
-    <value>إدارة</value>
+    <value>إدارة النظام</value>
+  </data>
+  <data name="Adet" xml:space="preserve">
+    <value>العدد</value>
+  </data>
+  <data name="BirimFiyat" xml:space="preserve">
+    <value>قيمة المتر المكعب</value>
+  </data>
+  <data name="Cikis" xml:space="preserve">
+    <value>تسجيل خروج</value>
+  </data>
+  <data name="GorevAdi" xml:space="preserve">
+    <value>اسم المهمة</value>
+  </data>
+  <data name="GorevYonetimi" xml:space="preserve">
+    <value>ادارة المهام</value>
+  </data>
+  <data name="HaberlesenCihazSayisiGrafigi" xml:space="preserve">
+    <value>مخطط بياني لعدادات</value>
+  </data>
+  <data name="Index" xml:space="preserve">
+    <value>الفهرس</value>
+  </data>
+  <data name="KartOku" xml:space="preserve">
+    <value>قراءة الببطاقة</value>
+  </data>
+  <data name="RolEkle" xml:space="preserve">
+    <value>إضافة دور</value>
+  </data>
+  <data name="RolIslemleri" xml:space="preserve">
+    <value>دور العمليات</value>
+  </data>
+  <data name="RolYonetimi" xml:space="preserve">
+    <value>ادارة الوظائف</value>
+  </data>
+  <data name="Zaman" xml:space="preserve">
+    <value>المدة الزمنية</value>
+  </data>
+  <data name="BaglantiPeriyot" xml:space="preserve">
+    <value>عدد مرات الاتصال GPRS</value>
+  </data>
+  <data name="Bayram1Ay" xml:space="preserve">
+    <value>العطلة 1/ الشهر</value>
+  </data>
+  <data name="Bayram1Gun" xml:space="preserve">
+    <value>العطلة 1/ اليوم</value>
+  </data>
+  <data name="Bayram1Sure" xml:space="preserve">
+    <value>العطلة 1/ المدة</value>
+  </data>
+  <data name="Bayram2Ay" xml:space="preserve">
+    <value>العطلة 2/ الشهر</value>
+  </data>
+  <data name="Bayram2Gun" xml:space="preserve">
+    <value>العطلة 2/ اليوم</value>
+  </data>
+  <data name="Bayram2Sure" xml:space="preserve">
+    <value>العطلة 2/ المدة</value>
+  </data>
+  <data name="BorcYuzde" xml:space="preserve">
+    <value>الديون المستحقة</value>
+  </data>
+  <data name="DonemGun" xml:space="preserve">
+    <value>مصطلح</value>
+  </data>
+  <data name="MaxDebi" xml:space="preserve">
+    <value>تدفق</value>
+  </data>
+  <data name="YanginModSuresi" xml:space="preserve">
+    <value>مدة نظام الحرائق</value>
+  </data>
+  <data name="Fiyat1" xml:space="preserve">
+    <value>Fiyat1</value>
+  </data>
+  <data name="KisiselBilgileri" xml:space="preserve">
+    <value>معلومات الاتصال</value>
+  </data>
+  <data name="SayacTarifeBilgileri" xml:space="preserve">
+    <value>نوع التسعيرة</value>
+  </data>
+  <data name="EminMisiniz" xml:space="preserve">
+    <value>هل انتم متأكدون؟</value>
+  </data>
+  <data name="Onayla" xml:space="preserve">
+    <value>تأكيد</value>
+  </data>
+  <data name="KartTipi" xml:space="preserve">
+    <value>نوع البطاقة</value>
   </data>
 </root>

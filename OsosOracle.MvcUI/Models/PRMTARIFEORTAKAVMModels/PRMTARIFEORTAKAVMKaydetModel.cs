@@ -1,9 +1,9 @@
 
 using OsosOracle.Entities.Concrete;
-namespace OsosOracle.MvcUI.Models.PRMTARIFEORTAKAVMModels
+namespace OsosOracle.MvcUI.Models.PRMTARIFEKALORIMETREModels
 {
-	public class PRMTARIFEORTAKAVMKaydetModel
+	public class PRMTARIFEKALORIMETREKaydetModel
 	{
-		public PRMTARIFEORTAKAVM PRMTARIFEORTAKAVM { get; set; }
+		public PRMTARIFEKALORIMETRE PRMTARIFEKALORIMETRE { get; set; }
 	}
 }

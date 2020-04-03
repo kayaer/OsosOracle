@@ -1,0 +1,502 @@
+C:\Users\nebi.er\source\repos\OsosOracle\OsosOracle.Framework\bin\Debug\OsosOracle.Framework.dll.config
+C:\Users\nebi.er\source\repos\OsosOracle\OsosOracle.Framework\bin\Debug\OsosOracle.Framework.dll
+C:\Users\nebi.er\source\repos\OsosOracle\OsosOracle.Framework\bin\Debug\OsosOracle.Framework.pdb
+C:\Users\nebi.er\source\repos\OsosOracle\OsosOracle.Framework\bin\Debug\AutoMapper.dll
+C:\Users\nebi.er\source\repos\OsosOracle\OsosOracle.Framework\bin\Debug\EntityFramework.dll
+C:\Users\nebi.er\source\repos\OsosOracle\OsosOracle.Framework\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\nebi.er\source\repos\OsosOracle\OsosOracle.Framework\bin\Debug\FluentValidation.dll
+C:\Users\nebi.er\source\repos\OsosOracle\OsosOracle.Framework\bin\Debug\ICSharpCode.SharpZipLib.dll
+C:\Users\nebi.er\source\repos\OsosOracle\OsosOracle.Framework\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\Users\nebi.er\source\repos\OsosOracle\OsosOracle.Framework\bin\Debug\Newtonsoft.Json.dll
+C:\Users\nebi.er\source\repos\OsosOracle\OsosOracle.Framework\bin\Debug\Oracle.ManagedDataAccess.dll
+C:\Users\nebi.er\source\repos\OsosOracle\OsosOracle.Framework\bin\Debug\Oracle.ManagedDataAccess.EntityFramework.dll
+C:\Users\nebi.er\source\repos\OsosOracle\OsosOracle.Framework\bin\Debug\PostSharp.dll
+C:\Users\nebi.er\source\repos\OsosOracle\OsosOracle.Framework\bin\Debug\System.ComponentModel.Annotations.dll
+C:\Users\nebi.er\source\repos\OsosOracle\OsosOracle.Framework\bin\Debug\System.ComponentModel.Primitives.dll
+C:\Users\nebi.er\source\repos\OsosOracle\OsosOracle.Framework\bin\Debug\System.ValueTuple.dll
+C:\Users\nebi.er\source\repos\OsosOracle\OsosOracle.Framework\bin\Debug\System.Web.Helpers.dll
+C:\Users\nebi.er\source\repos\OsosOracle\OsosOracle.Framework\bin\Debug\System.Web.Mvc.dll
+C:\Users\nebi.er\source\repos\OsosOracle\OsosOracle.Framework\bin\Debug\System.Web.Razor.dll
+C:\Users\nebi.er\source\repos\OsosOracle\OsosOracle.Framework\bin\Debug\System.Web.WebPages.Deployment.dll
+C:\Users\nebi.er\source\repos\OsosOracle\OsosOracle.Framework\bin\Debug\System.Web.WebPages.dll
+C:\Users\nebi.er\source\repos\OsosOracle\OsosOracle.Framework\bin\Debug\System.Web.WebPages.Razor.dll
+C:\Users\nebi.er\source\repos\OsosOracle\OsosOracle.Framework\bin\Debug\AutoMapper.pdb
+C:\Users\nebi.er\source\repos\OsosOracle\OsosOracle.Framework\bin\Debug\AutoMapper.xml
+C:\Users\nebi.er\source\repos\OsosOracle\OsosOracle.Framework\bin\Debug\EntityFramework.xml
+C:\Users\nebi.er\source\repos\OsosOracle\OsosOracle.Framework\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\nebi.er\source\repos\OsosOracle\OsosOracle.Framework\bin\Debug\FluentValidation.xml
+C:\Users\nebi.er\source\repos\OsosOracle\OsosOracle.Framework\bin\Debug\ICSharpCode.SharpZipLib.pdb
+C:\Users\nebi.er\source\repos\OsosOracle\OsosOracle.Framework\bin\Debug\ICSharpCode.SharpZipLib.xml
+C:\Users\nebi.er\source\repos\OsosOracle\OsosOracle.Framework\bin\Debug\Newtonsoft.Json.pdb
+C:\Users\nebi.er\source\repos\OsosOracle\OsosOracle.Framework\bin\Debug\Newtonsoft.Json.xml
+C:\Users\nebi.er\source\repos\OsosOracle\OsosOracle.Framework\bin\Debug\PostSharp.xml
+C:\Users\nebi.er\source\repos\OsosOracle\OsosOracle.Framework\bin\Debug\System.ValueTuple.xml
+C:\Users\nebi.er\source\repos\OsosOracle\OsosOracle.Framework\bin\Debug\System.Web.Helpers.xml
+C:\Users\nebi.er\source\repos\OsosOracle\OsosOracle.Framework\bin\Debug\System.Web.Mvc.xml
+C:\Users\nebi.er\source\repos\OsosOracle\OsosOracle.Framework\bin\Debug\System.Web.Razor.xml
+C:\Users\nebi.er\source\repos\OsosOracle\OsosOracle.Framework\bin\Debug\System.Web.WebPages.xml
+C:\Users\nebi.er\source\repos\OsosOracle\OsosOracle.Framework\bin\Debug\System.Web.WebPages.Deployment.xml
+C:\Users\nebi.er\source\repos\OsosOracle\OsosOracle.Framework\bin\Debug\System.Web.WebPages.Razor.xml
+C:\Users\nebi.er\source\repos\OsosOracle\OsosOracle.Framework\bin\Debug\OsosOracle.Framework.pssym
+C:\Users\nebi.er\source\repos\OsosOracle\OsosOracle.Framework\obj\Debug\OsosOracle.Framework.csproj.CoreCompileInputs.cache
+C:\Users\nebi.er\source\repos\OsosOracle\OsosOracle.Framework\obj\Debug\OsosOracle.Framework.csproj.CopyComplete
+C:\Users\nebi.er\source\repos\OsosOracle\OsosOracle.Framework\obj\Debug\OsosOracle.Framework.dll.postsharp
+C:\Users\nebi.er\source\repos\OsosOracle\OsosOracle.Framework\obj\Debug\OsosOracle.Framework.dll
+C:\Users\nebi.er\source\repos\OsosOracle\OsosOracle.Framework\obj\Debug\OsosOracle.Framework.pdb
+C:\Users\nebi.er\source\repos\OsosOracle\OsosOracle.Framework\obj\Debug\PostSharpHost.config
+C:\Users\nebi.er\source\repos\OsosOracle\OsosOracle.Framework\obj\Debug\OsosOracle.Framework.csprojAssemblyReference.cache
+D:\Nebi Eks Kalorimetre\OsosOracle\OsosOracle.Framework\bin\Debug\OsosOracle.Framework.dll.config
+D:\Nebi Eks Kalorimetre\OsosOracle\OsosOracle.Framework\bin\Debug\OsosOracle.Framework.dll
+D:\Nebi Eks Kalorimetre\OsosOracle\OsosOracle.Framework\bin\Debug\OsosOracle.Framework.pdb
+D:\Nebi Eks Kalorimetre\OsosOracle\OsosOracle.Framework\bin\Debug\AutoMapper.dll
+D:\Nebi Eks Kalorimetre\OsosOracle\OsosOracle.Framework\bin\Debug\EntityFramework.dll
+D:\Nebi Eks Kalorimetre\OsosOracle\OsosOracle.Framework\bin\Debug\EntityFramework.SqlServer.dll
+D:\Nebi Eks Kalorimetre\OsosOracle\OsosOracle.Framework\bin\Debug\FluentValidation.dll
+D:\Nebi Eks Kalorimetre\OsosOracle\OsosOracle.Framework\bin\Debug\ICSharpCode.SharpZipLib.dll
+D:\Nebi Eks Kalorimetre\OsosOracle\OsosOracle.Framework\bin\Debug\Microsoft.Web.Infrastructure.dll
+D:\Nebi Eks Kalorimetre\OsosOracle\OsosOracle.Framework\bin\Debug\Newtonsoft.Json.dll
+D:\Nebi Eks Kalorimetre\OsosOracle\OsosOracle.Framework\bin\Debug\Oracle.ManagedDataAccess.dll
+D:\Nebi Eks Kalorimetre\OsosOracle\OsosOracle.Framework\bin\Debug\Oracle.ManagedDataAccess.EntityFramework.dll
+D:\Nebi Eks Kalorimetre\OsosOracle\OsosOracle.Framework\bin\Debug\PostSharp.dll
+D:\Nebi Eks Kalorimetre\OsosOracle\OsosOracle.Framework\bin\Debug\System.ComponentModel.Annotations.dll
+D:\Nebi Eks Kalorimetre\OsosOracle\OsosOracle.Framework\bin\Debug\System.ComponentModel.Primitives.dll
+D:\Nebi Eks Kalorimetre\OsosOracle\OsosOracle.Framework\bin\Debug\System.ValueTuple.dll
+D:\Nebi Eks Kalorimetre\OsosOracle\OsosOracle.Framework\bin\Debug\System.Web.Helpers.dll
+D:\Nebi Eks Kalorimetre\OsosOracle\OsosOracle.Framework\bin\Debug\System.Web.Mvc.dll
+D:\Nebi Eks Kalorimetre\OsosOracle\OsosOracle.Framework\bin\Debug\System.Web.Razor.dll
+D:\Nebi Eks Kalorimetre\OsosOracle\OsosOracle.Framework\bin\Debug\System.Web.WebPages.Deployment.dll
+D:\Nebi Eks Kalorimetre\OsosOracle\OsosOracle.Framework\bin\Debug\System.Web.WebPages.dll
+D:\Nebi Eks Kalorimetre\OsosOracle\OsosOracle.Framework\bin\Debug\System.Web.WebPages.Razor.dll
+D:\Nebi Eks Kalorimetre\OsosOracle\OsosOracle.Framework\bin\Debug\AutoMapper.pdb
+D:\Nebi Eks Kalorimetre\OsosOracle\OsosOracle.Framework\bin\Debug\AutoMapper.xml
+D:\Nebi Eks Kalorimetre\OsosOracle\OsosOracle.Framework\bin\Debug\EntityFramework.xml
+D:\Nebi Eks Kalorimetre\OsosOracle\OsosOracle.Framework\bin\Debug\EntityFramework.SqlServer.xml
+D:\Nebi Eks Kalorimetre\OsosOracle\OsosOracle.Framework\bin\Debug\FluentValidation.xml
+D:\Nebi Eks Kalorimetre\OsosOracle\OsosOracle.Framework\bin\Debug\ICSharpCode.SharpZipLib.pdb
+D:\Nebi Eks Kalorimetre\OsosOracle\OsosOracle.Framework\bin\Debug\ICSharpCode.SharpZipLib.xml
+D:\Nebi Eks Kalorimetre\OsosOracle\OsosOracle.Framework\bin\Debug\Newtonsoft.Json.pdb
+D:\Nebi Eks Kalorimetre\OsosOracle\OsosOracle.Framework\bin\Debug\Newtonsoft.Json.xml
+D:\Nebi Eks Kalorimetre\OsosOracle\OsosOracle.Framework\bin\Debug\PostSharp.xml
+D:\Nebi Eks Kalorimetre\OsosOracle\OsosOracle.Framework\bin\Debug\System.ValueTuple.xml
+D:\Nebi Eks Kalorimetre\OsosOracle\OsosOracle.Framework\bin\Debug\System.Web.Helpers.xml
+D:\Nebi Eks Kalorimetre\OsosOracle\OsosOracle.Framework\bin\Debug\System.Web.Mvc.xml
+D:\Nebi Eks Kalorimetre\OsosOracle\OsosOracle.Framework\bin\Debug\System.Web.Razor.xml
+D:\Nebi Eks Kalorimetre\OsosOracle\OsosOracle.Framework\bin\Debug\System.Web.WebPages.xml
+D:\Nebi Eks Kalorimetre\OsosOracle\OsosOracle.Framework\bin\Debug\System.Web.WebPages.Deployment.xml
+D:\Nebi Eks Kalorimetre\OsosOracle\OsosOracle.Framework\bin\Debug\System.Web.WebPages.Razor.xml
+D:\Nebi Eks Kalorimetre\OsosOracle\OsosOracle.Framework\bin\Debug\OsosOracle.Framework.pssym
+D:\Nebi Eks Kalorimetre\OsosOracle\OsosOracle.Framework\obj\Debug\OsosOracle.Framework.csproj.CoreCompileInputs.cache
+D:\Nebi Eks Kalorimetre\OsosOracle\OsosOracle.Framework\obj\Debug\OsosOracle.Framework.csproj.CopyComplete
+D:\Nebi Eks Kalorimetre\OsosOracle\OsosOracle.Framework\obj\Debug\OsosOracle.Framework.dll.postsharp
+D:\Nebi Eks Kalorimetre\OsosOracle\OsosOracle.Framework\obj\Debug\OsosOracle.Framework.dll
+D:\Nebi Eks Kalorimetre\OsosOracle\OsosOracle.Framework\obj\Debug\OsosOracle.Framework.pdb
+D:\Nebi Eks Kalorimetre\OsosOracle\OsosOracle.Framework\obj\Debug\PostSharpHost.config
+D:\Nebi Eks Kalorimetre\OsosOracle\OsosOracle.Framework\obj\Debug\OsosOracle.Framework.csprojAssemblyReference.cache
+C:\Users\ELKTRMD\Downloads\wetransfer-c7365b\OsosOracle\OsosOracle.Framework\bin\Debug\OsosOracle.Framework.dll.config
+C:\Users\ELKTRMD\Downloads\wetransfer-c7365b\OsosOracle\OsosOracle.Framework\bin\Debug\OsosOracle.Framework.dll
+C:\Users\ELKTRMD\Downloads\wetransfer-c7365b\OsosOracle\OsosOracle.Framework\bin\Debug\OsosOracle.Framework.pdb
+C:\Users\ELKTRMD\Downloads\wetransfer-c7365b\OsosOracle\OsosOracle.Framework\bin\Debug\AutoMapper.dll
+C:\Users\ELKTRMD\Downloads\wetransfer-c7365b\OsosOracle\OsosOracle.Framework\bin\Debug\EntityFramework.dll
+C:\Users\ELKTRMD\Downloads\wetransfer-c7365b\OsosOracle\OsosOracle.Framework\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\ELKTRMD\Downloads\wetransfer-c7365b\OsosOracle\OsosOracle.Framework\bin\Debug\FluentValidation.dll
+C:\Users\ELKTRMD\Downloads\wetransfer-c7365b\OsosOracle\OsosOracle.Framework\bin\Debug\ICSharpCode.SharpZipLib.dll
+C:\Users\ELKTRMD\Downloads\wetransfer-c7365b\OsosOracle\OsosOracle.Framework\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\Users\ELKTRMD\Downloads\wetransfer-c7365b\OsosOracle\OsosOracle.Framework\bin\Debug\Newtonsoft.Json.dll
+C:\Users\ELKTRMD\Downloads\wetransfer-c7365b\OsosOracle\OsosOracle.Framework\bin\Debug\Oracle.ManagedDataAccess.dll
+C:\Users\ELKTRMD\Downloads\wetransfer-c7365b\OsosOracle\OsosOracle.Framework\bin\Debug\Oracle.ManagedDataAccess.EntityFramework.dll
+C:\Users\ELKTRMD\Downloads\wetransfer-c7365b\OsosOracle\OsosOracle.Framework\bin\Debug\PostSharp.dll
+C:\Users\ELKTRMD\Downloads\wetransfer-c7365b\OsosOracle\OsosOracle.Framework\bin\Debug\System.ComponentModel.Annotations.dll
+C:\Users\ELKTRMD\Downloads\wetransfer-c7365b\OsosOracle\OsosOracle.Framework\bin\Debug\System.ComponentModel.Primitives.dll
+C:\Users\ELKTRMD\Downloads\wetransfer-c7365b\OsosOracle\OsosOracle.Framework\bin\Debug\System.ValueTuple.dll
+C:\Users\ELKTRMD\Downloads\wetransfer-c7365b\OsosOracle\OsosOracle.Framework\bin\Debug\System.Web.Helpers.dll
+C:\Users\ELKTRMD\Downloads\wetransfer-c7365b\OsosOracle\OsosOracle.Framework\bin\Debug\System.Web.Mvc.dll
+C:\Users\ELKTRMD\Downloads\wetransfer-c7365b\OsosOracle\OsosOracle.Framework\bin\Debug\System.Web.Razor.dll
+C:\Users\ELKTRMD\Downloads\wetransfer-c7365b\OsosOracle\OsosOracle.Framework\bin\Debug\System.Web.WebPages.Deployment.dll
+C:\Users\ELKTRMD\Downloads\wetransfer-c7365b\OsosOracle\OsosOracle.Framework\bin\Debug\System.Web.WebPages.dll
+C:\Users\ELKTRMD\Downloads\wetransfer-c7365b\OsosOracle\OsosOracle.Framework\bin\Debug\System.Web.WebPages.Razor.dll
+C:\Users\ELKTRMD\Downloads\wetransfer-c7365b\OsosOracle\OsosOracle.Framework\bin\Debug\AutoMapper.pdb
+C:\Users\ELKTRMD\Downloads\wetransfer-c7365b\OsosOracle\OsosOracle.Framework\bin\Debug\AutoMapper.xml
+C:\Users\ELKTRMD\Downloads\wetransfer-c7365b\OsosOracle\OsosOracle.Framework\bin\Debug\EntityFramework.xml
+C:\Users\ELKTRMD\Downloads\wetransfer-c7365b\OsosOracle\OsosOracle.Framework\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\ELKTRMD\Downloads\wetransfer-c7365b\OsosOracle\OsosOracle.Framework\bin\Debug\FluentValidation.xml
+C:\Users\ELKTRMD\Downloads\wetransfer-c7365b\OsosOracle\OsosOracle.Framework\bin\Debug\ICSharpCode.SharpZipLib.pdb
+C:\Users\ELKTRMD\Downloads\wetransfer-c7365b\OsosOracle\OsosOracle.Framework\bin\Debug\ICSharpCode.SharpZipLib.xml
+C:\Users\ELKTRMD\Downloads\wetransfer-c7365b\OsosOracle\OsosOracle.Framework\bin\Debug\Newtonsoft.Json.pdb
+C:\Users\ELKTRMD\Downloads\wetransfer-c7365b\OsosOracle\OsosOracle.Framework\bin\Debug\Newtonsoft.Json.xml
+C:\Users\ELKTRMD\Downloads\wetransfer-c7365b\OsosOracle\OsosOracle.Framework\bin\Debug\PostSharp.xml
+C:\Users\ELKTRMD\Downloads\wetransfer-c7365b\OsosOracle\OsosOracle.Framework\bin\Debug\System.ValueTuple.xml
+C:\Users\ELKTRMD\Downloads\wetransfer-c7365b\OsosOracle\OsosOracle.Framework\bin\Debug\System.Web.Helpers.xml
+C:\Users\ELKTRMD\Downloads\wetransfer-c7365b\OsosOracle\OsosOracle.Framework\bin\Debug\System.Web.Mvc.xml
+C:\Users\ELKTRMD\Downloads\wetransfer-c7365b\OsosOracle\OsosOracle.Framework\bin\Debug\System.Web.Razor.xml
+C:\Users\ELKTRMD\Downloads\wetransfer-c7365b\OsosOracle\OsosOracle.Framework\bin\Debug\System.Web.WebPages.xml
+C:\Users\ELKTRMD\Downloads\wetransfer-c7365b\OsosOracle\OsosOracle.Framework\bin\Debug\System.Web.WebPages.Deployment.xml
+C:\Users\ELKTRMD\Downloads\wetransfer-c7365b\OsosOracle\OsosOracle.Framework\bin\Debug\System.Web.WebPages.Razor.xml
+C:\Users\ELKTRMD\Downloads\wetransfer-c7365b\OsosOracle\OsosOracle.Framework\bin\Debug\OsosOracle.Framework.pssym
+C:\Users\ELKTRMD\Downloads\wetransfer-c7365b\OsosOracle\OsosOracle.Framework\obj\Debug\OsosOracle.Framework.csproj.CopyComplete
+C:\Users\ELKTRMD\Downloads\wetransfer-c7365b\OsosOracle\OsosOracle.Framework\obj\Debug\OsosOracle.Framework.dll.postsharp
+C:\Users\ELKTRMD\Downloads\wetransfer-c7365b\OsosOracle\OsosOracle.Framework\obj\Debug\OsosOracle.Framework.dll
+C:\Users\ELKTRMD\Downloads\wetransfer-c7365b\OsosOracle\OsosOracle.Framework\obj\Debug\OsosOracle.Framework.pdb
+C:\Users\ELKTRMD\Downloads\wetransfer-c7365b\OsosOracle\OsosOracle.Framework\obj\Debug\PostSharpHost.config
+C:\Users\ARGE X\Desktop\19.01.2019 Libya Yonca Çalışması\OsosOracle\OsosOracle.Framework\bin\Debug\OsosOracle.Framework.pssym
+C:\Users\ARGE X\Desktop\19.01.2019 Libya Yonca Çalışması\OsosOracle\OsosOracle.Framework\bin\Debug\OsosOracle.Framework.dll.config
+C:\Users\ARGE X\Desktop\19.01.2019 Libya Yonca Çalışması\OsosOracle\OsosOracle.Framework\bin\Debug\OsosOracle.Framework.dll
+C:\Users\ARGE X\Desktop\19.01.2019 Libya Yonca Çalışması\OsosOracle\OsosOracle.Framework\bin\Debug\OsosOracle.Framework.pdb
+C:\Users\ARGE X\Desktop\19.01.2019 Libya Yonca Çalışması\OsosOracle\OsosOracle.Framework\bin\Debug\AutoMapper.dll
+C:\Users\ARGE X\Desktop\19.01.2019 Libya Yonca Çalışması\OsosOracle\OsosOracle.Framework\bin\Debug\EntityFramework.dll
+C:\Users\ARGE X\Desktop\19.01.2019 Libya Yonca Çalışması\OsosOracle\OsosOracle.Framework\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\ARGE X\Desktop\19.01.2019 Libya Yonca Çalışması\OsosOracle\OsosOracle.Framework\bin\Debug\FluentValidation.dll
+C:\Users\ARGE X\Desktop\19.01.2019 Libya Yonca Çalışması\OsosOracle\OsosOracle.Framework\bin\Debug\ICSharpCode.SharpZipLib.dll
+C:\Users\ARGE X\Desktop\19.01.2019 Libya Yonca Çalışması\OsosOracle\OsosOracle.Framework\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\Users\ARGE X\Desktop\19.01.2019 Libya Yonca Çalışması\OsosOracle\OsosOracle.Framework\bin\Debug\Newtonsoft.Json.dll
+C:\Users\ARGE X\Desktop\19.01.2019 Libya Yonca Çalışması\OsosOracle\OsosOracle.Framework\bin\Debug\Oracle.ManagedDataAccess.dll
+C:\Users\ARGE X\Desktop\19.01.2019 Libya Yonca Çalışması\OsosOracle\OsosOracle.Framework\bin\Debug\Oracle.ManagedDataAccess.EntityFramework.dll
+C:\Users\ARGE X\Desktop\19.01.2019 Libya Yonca Çalışması\OsosOracle\OsosOracle.Framework\bin\Debug\PostSharp.dll
+C:\Users\ARGE X\Desktop\19.01.2019 Libya Yonca Çalışması\OsosOracle\OsosOracle.Framework\bin\Debug\System.ComponentModel.Annotations.dll
+C:\Users\ARGE X\Desktop\19.01.2019 Libya Yonca Çalışması\OsosOracle\OsosOracle.Framework\bin\Debug\System.ComponentModel.Primitives.dll
+C:\Users\ARGE X\Desktop\19.01.2019 Libya Yonca Çalışması\OsosOracle\OsosOracle.Framework\bin\Debug\System.ValueTuple.dll
+C:\Users\ARGE X\Desktop\19.01.2019 Libya Yonca Çalışması\OsosOracle\OsosOracle.Framework\bin\Debug\System.Web.Helpers.dll
+C:\Users\ARGE X\Desktop\19.01.2019 Libya Yonca Çalışması\OsosOracle\OsosOracle.Framework\bin\Debug\System.Web.Mvc.dll
+C:\Users\ARGE X\Desktop\19.01.2019 Libya Yonca Çalışması\OsosOracle\OsosOracle.Framework\bin\Debug\System.Web.Razor.dll
+C:\Users\ARGE X\Desktop\19.01.2019 Libya Yonca Çalışması\OsosOracle\OsosOracle.Framework\bin\Debug\System.Web.WebPages.Deployment.dll
+C:\Users\ARGE X\Desktop\19.01.2019 Libya Yonca Çalışması\OsosOracle\OsosOracle.Framework\bin\Debug\System.Web.WebPages.dll
+C:\Users\ARGE X\Desktop\19.01.2019 Libya Yonca Çalışması\OsosOracle\OsosOracle.Framework\bin\Debug\System.Web.WebPages.Razor.dll
+C:\Users\ARGE X\Desktop\19.01.2019 Libya Yonca Çalışması\OsosOracle\OsosOracle.Framework\bin\Debug\AutoMapper.pdb
+C:\Users\ARGE X\Desktop\19.01.2019 Libya Yonca Çalışması\OsosOracle\OsosOracle.Framework\bin\Debug\AutoMapper.xml
+C:\Users\ARGE X\Desktop\19.01.2019 Libya Yonca Çalışması\OsosOracle\OsosOracle.Framework\bin\Debug\EntityFramework.xml
+C:\Users\ARGE X\Desktop\19.01.2019 Libya Yonca Çalışması\OsosOracle\OsosOracle.Framework\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\ARGE X\Desktop\19.01.2019 Libya Yonca Çalışması\OsosOracle\OsosOracle.Framework\bin\Debug\FluentValidation.xml
+C:\Users\ARGE X\Desktop\19.01.2019 Libya Yonca Çalışması\OsosOracle\OsosOracle.Framework\bin\Debug\ICSharpCode.SharpZipLib.pdb
+C:\Users\ARGE X\Desktop\19.01.2019 Libya Yonca Çalışması\OsosOracle\OsosOracle.Framework\bin\Debug\ICSharpCode.SharpZipLib.xml
+C:\Users\ARGE X\Desktop\19.01.2019 Libya Yonca Çalışması\OsosOracle\OsosOracle.Framework\bin\Debug\Newtonsoft.Json.pdb
+C:\Users\ARGE X\Desktop\19.01.2019 Libya Yonca Çalışması\OsosOracle\OsosOracle.Framework\bin\Debug\Newtonsoft.Json.xml
+C:\Users\ARGE X\Desktop\19.01.2019 Libya Yonca Çalışması\OsosOracle\OsosOracle.Framework\bin\Debug\PostSharp.xml
+C:\Users\ARGE X\Desktop\19.01.2019 Libya Yonca Çalışması\OsosOracle\OsosOracle.Framework\bin\Debug\System.ValueTuple.xml
+C:\Users\ARGE X\Desktop\19.01.2019 Libya Yonca Çalışması\OsosOracle\OsosOracle.Framework\bin\Debug\System.Web.Helpers.xml
+C:\Users\ARGE X\Desktop\19.01.2019 Libya Yonca Çalışması\OsosOracle\OsosOracle.Framework\bin\Debug\System.Web.Mvc.xml
+C:\Users\ARGE X\Desktop\19.01.2019 Libya Yonca Çalışması\OsosOracle\OsosOracle.Framework\bin\Debug\System.Web.Razor.xml
+C:\Users\ARGE X\Desktop\19.01.2019 Libya Yonca Çalışması\OsosOracle\OsosOracle.Framework\bin\Debug\System.Web.WebPages.xml
+C:\Users\ARGE X\Desktop\19.01.2019 Libya Yonca Çalışması\OsosOracle\OsosOracle.Framework\bin\Debug\System.Web.WebPages.Deployment.xml
+C:\Users\ARGE X\Desktop\19.01.2019 Libya Yonca Çalışması\OsosOracle\OsosOracle.Framework\bin\Debug\System.Web.WebPages.Razor.xml
+C:\Users\ARGE X\Desktop\19.01.2019 Libya Yonca Çalışması\OsosOracle\OsosOracle.Framework\obj\Debug\OsosOracle.Framework.csprojAssemblyReference.cache
+C:\Users\ARGE X\Desktop\19.01.2019 Libya Yonca Çalışması\OsosOracle\OsosOracle.Framework\obj\Debug\OsosOracle.Framework.csproj.CoreCompileInputs.cache
+C:\Users\ARGE X\Desktop\19.01.2019 Libya Yonca Çalışması\OsosOracle\OsosOracle.Framework\obj\Debug\OsosOracle.Framework.csproj.CopyComplete
+C:\Users\ARGE X\Desktop\19.01.2019 Libya Yonca Çalışması\OsosOracle\OsosOracle.Framework\obj\Debug\OsosOracle.Framework.dll
+C:\Users\ARGE X\Desktop\19.01.2019 Libya Yonca Çalışması\OsosOracle\OsosOracle.Framework\obj\Debug\OsosOracle.Framework.pdb
+C:\Users\ARGE X\Desktop\19.01.2019 Libya Yonca Çalışması\OsosOracle\OsosOracle.Framework\obj\Debug\OsosOracle.Framework.dll.postsharp
+C:\Users\ARGE X\Desktop\19.01.2019 Libya Yonca Çalışması\OsosOracle\OsosOracle.Framework\obj\Debug\PostSharpHost.config
+D:\OsosOracle\OsosOracle.Framework\bin\Debug\OsosOracle.Framework.dll.config
+D:\OsosOracle\OsosOracle.Framework\bin\Debug\OsosOracle.Framework.dll
+D:\OsosOracle\OsosOracle.Framework\bin\Debug\OsosOracle.Framework.pdb
+D:\OsosOracle\OsosOracle.Framework\bin\Debug\AutoMapper.dll
+D:\OsosOracle\OsosOracle.Framework\bin\Debug\EntityFramework.dll
+D:\OsosOracle\OsosOracle.Framework\bin\Debug\EntityFramework.SqlServer.dll
+D:\OsosOracle\OsosOracle.Framework\bin\Debug\FluentValidation.dll
+D:\OsosOracle\OsosOracle.Framework\bin\Debug\ICSharpCode.SharpZipLib.dll
+D:\OsosOracle\OsosOracle.Framework\bin\Debug\Microsoft.Web.Infrastructure.dll
+D:\OsosOracle\OsosOracle.Framework\bin\Debug\Newtonsoft.Json.dll
+D:\OsosOracle\OsosOracle.Framework\bin\Debug\Oracle.ManagedDataAccess.dll
+D:\OsosOracle\OsosOracle.Framework\bin\Debug\Oracle.ManagedDataAccess.EntityFramework.dll
+D:\OsosOracle\OsosOracle.Framework\bin\Debug\PostSharp.dll
+D:\OsosOracle\OsosOracle.Framework\bin\Debug\System.ComponentModel.Annotations.dll
+D:\OsosOracle\OsosOracle.Framework\bin\Debug\System.ComponentModel.Primitives.dll
+D:\OsosOracle\OsosOracle.Framework\bin\Debug\System.ValueTuple.dll
+D:\OsosOracle\OsosOracle.Framework\bin\Debug\System.Web.Helpers.dll
+D:\OsosOracle\OsosOracle.Framework\bin\Debug\System.Web.Mvc.dll
+D:\OsosOracle\OsosOracle.Framework\bin\Debug\System.Web.Razor.dll
+D:\OsosOracle\OsosOracle.Framework\bin\Debug\System.Web.WebPages.Deployment.dll
+D:\OsosOracle\OsosOracle.Framework\bin\Debug\System.Web.WebPages.dll
+D:\OsosOracle\OsosOracle.Framework\bin\Debug\System.Web.WebPages.Razor.dll
+D:\OsosOracle\OsosOracle.Framework\bin\Debug\AutoMapper.pdb
+D:\OsosOracle\OsosOracle.Framework\bin\Debug\AutoMapper.xml
+D:\OsosOracle\OsosOracle.Framework\bin\Debug\EntityFramework.xml
+D:\OsosOracle\OsosOracle.Framework\bin\Debug\EntityFramework.SqlServer.xml
+D:\OsosOracle\OsosOracle.Framework\bin\Debug\FluentValidation.xml
+D:\OsosOracle\OsosOracle.Framework\bin\Debug\ICSharpCode.SharpZipLib.pdb
+D:\OsosOracle\OsosOracle.Framework\bin\Debug\ICSharpCode.SharpZipLib.xml
+D:\OsosOracle\OsosOracle.Framework\bin\Debug\Newtonsoft.Json.pdb
+D:\OsosOracle\OsosOracle.Framework\bin\Debug\Newtonsoft.Json.xml
+D:\OsosOracle\OsosOracle.Framework\bin\Debug\PostSharp.xml
+D:\OsosOracle\OsosOracle.Framework\bin\Debug\System.ValueTuple.xml
+D:\OsosOracle\OsosOracle.Framework\bin\Debug\System.Web.Helpers.xml
+D:\OsosOracle\OsosOracle.Framework\bin\Debug\System.Web.Mvc.xml
+D:\OsosOracle\OsosOracle.Framework\bin\Debug\System.Web.Razor.xml
+D:\OsosOracle\OsosOracle.Framework\bin\Debug\System.Web.WebPages.xml
+D:\OsosOracle\OsosOracle.Framework\bin\Debug\System.Web.WebPages.Deployment.xml
+D:\OsosOracle\OsosOracle.Framework\bin\Debug\System.Web.WebPages.Razor.xml
+D:\OsosOracle\OsosOracle.Framework\bin\Debug\OsosOracle.Framework.pssym
+D:\OsosOracle\OsosOracle.Framework\obj\Debug\OsosOracle.Framework.csproj.CopyComplete
+D:\OsosOracle\OsosOracle.Framework\obj\Debug\OsosOracle.Framework.dll.postsharp
+D:\OsosOracle\OsosOracle.Framework\obj\Debug\OsosOracle.Framework.dll
+D:\OsosOracle\OsosOracle.Framework\obj\Debug\OsosOracle.Framework.pdb
+D:\OsosOracle\OsosOracle.Framework\obj\Debug\PostSharpHost.config
+D:\OsosOracle\OsosOracle.Framework\obj\Debug\OsosOracle.Framework.csprojAssemblyReference.cache
+F:\OsosOracle\OsosOracle.Framework\bin\Debug\OsosOracle.Framework.dll.config
+F:\OsosOracle\OsosOracle.Framework\bin\Debug\OsosOracle.Framework.dll
+F:\OsosOracle\OsosOracle.Framework\bin\Debug\OsosOracle.Framework.pdb
+F:\OsosOracle\OsosOracle.Framework\bin\Debug\AutoMapper.dll
+F:\OsosOracle\OsosOracle.Framework\bin\Debug\EntityFramework.dll
+F:\OsosOracle\OsosOracle.Framework\bin\Debug\EntityFramework.SqlServer.dll
+F:\OsosOracle\OsosOracle.Framework\bin\Debug\FluentValidation.dll
+F:\OsosOracle\OsosOracle.Framework\bin\Debug\ICSharpCode.SharpZipLib.dll
+F:\OsosOracle\OsosOracle.Framework\bin\Debug\Microsoft.Web.Infrastructure.dll
+F:\OsosOracle\OsosOracle.Framework\bin\Debug\Newtonsoft.Json.dll
+F:\OsosOracle\OsosOracle.Framework\bin\Debug\Oracle.ManagedDataAccess.dll
+F:\OsosOracle\OsosOracle.Framework\bin\Debug\Oracle.ManagedDataAccess.EntityFramework.dll
+F:\OsosOracle\OsosOracle.Framework\bin\Debug\PostSharp.dll
+F:\OsosOracle\OsosOracle.Framework\bin\Debug\System.ComponentModel.Annotations.dll
+F:\OsosOracle\OsosOracle.Framework\bin\Debug\System.ValueTuple.dll
+F:\OsosOracle\OsosOracle.Framework\bin\Debug\System.Web.Helpers.dll
+F:\OsosOracle\OsosOracle.Framework\bin\Debug\System.Web.Mvc.dll
+F:\OsosOracle\OsosOracle.Framework\bin\Debug\System.Web.Razor.dll
+F:\OsosOracle\OsosOracle.Framework\bin\Debug\System.Web.WebPages.Deployment.dll
+F:\OsosOracle\OsosOracle.Framework\bin\Debug\System.Web.WebPages.dll
+F:\OsosOracle\OsosOracle.Framework\bin\Debug\System.Web.WebPages.Razor.dll
+F:\OsosOracle\OsosOracle.Framework\bin\Debug\AutoMapper.pdb
+F:\OsosOracle\OsosOracle.Framework\bin\Debug\AutoMapper.xml
+F:\OsosOracle\OsosOracle.Framework\bin\Debug\EntityFramework.xml
+F:\OsosOracle\OsosOracle.Framework\bin\Debug\EntityFramework.SqlServer.xml
+F:\OsosOracle\OsosOracle.Framework\bin\Debug\FluentValidation.xml
+F:\OsosOracle\OsosOracle.Framework\bin\Debug\ICSharpCode.SharpZipLib.pdb
+F:\OsosOracle\OsosOracle.Framework\bin\Debug\ICSharpCode.SharpZipLib.xml
+F:\OsosOracle\OsosOracle.Framework\bin\Debug\Newtonsoft.Json.pdb
+F:\OsosOracle\OsosOracle.Framework\bin\Debug\Newtonsoft.Json.xml
+F:\OsosOracle\OsosOracle.Framework\bin\Debug\PostSharp.xml
+F:\OsosOracle\OsosOracle.Framework\bin\Debug\System.ValueTuple.xml
+F:\OsosOracle\OsosOracle.Framework\bin\Debug\System.Web.Helpers.xml
+F:\OsosOracle\OsosOracle.Framework\bin\Debug\System.Web.Mvc.xml
+F:\OsosOracle\OsosOracle.Framework\bin\Debug\System.Web.Razor.xml
+F:\OsosOracle\OsosOracle.Framework\bin\Debug\System.Web.WebPages.xml
+F:\OsosOracle\OsosOracle.Framework\bin\Debug\System.Web.WebPages.Deployment.xml
+F:\OsosOracle\OsosOracle.Framework\bin\Debug\System.Web.WebPages.Razor.xml
+F:\OsosOracle\OsosOracle.Framework\bin\Debug\OsosOracle.Framework.pssym
+F:\OsosOracle\OsosOracle.Framework\obj\Debug\OsosOracle.Framework.csproj.CopyComplete
+F:\OsosOracle\OsosOracle.Framework\obj\Debug\OsosOracle.Framework.dll.postsharp
+F:\OsosOracle\OsosOracle.Framework\obj\Debug\OsosOracle.Framework.dll
+F:\OsosOracle\OsosOracle.Framework\obj\Debug\OsosOracle.Framework.pdb
+F:\OsosOracle\OsosOracle.Framework\obj\Debug\PostSharpHost.config
+F:\OsosOracle\OsosOracle.Framework\obj\Debug\OsosOracle.Framework.csprojAssemblyReference.cache
+G:\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\OsosOracle.Framework.dll.config
+G:\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\OsosOracle.Framework.dll
+G:\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\OsosOracle.Framework.pdb
+G:\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\OsosOracle.Framework.pssym
+G:\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\AutoMapper.dll
+G:\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\EntityFramework.dll
+G:\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\EntityFramework.SqlServer.dll
+G:\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\FluentValidation.dll
+G:\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\ICSharpCode.SharpZipLib.dll
+G:\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\Microsoft.Web.Infrastructure.dll
+G:\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\Newtonsoft.Json.dll
+G:\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\Oracle.ManagedDataAccess.dll
+G:\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\Oracle.ManagedDataAccess.EntityFramework.dll
+G:\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\PostSharp.dll
+G:\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\System.ComponentModel.Annotations.dll
+G:\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\System.ValueTuple.dll
+G:\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\System.Web.Helpers.dll
+G:\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\System.Web.Mvc.dll
+G:\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\System.Web.Razor.dll
+G:\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\System.Web.WebPages.Deployment.dll
+G:\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\System.Web.WebPages.dll
+G:\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\System.Web.WebPages.Razor.dll
+G:\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\AutoMapper.pdb
+G:\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\AutoMapper.xml
+G:\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\EntityFramework.xml
+G:\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\EntityFramework.SqlServer.xml
+G:\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\FluentValidation.xml
+G:\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\ICSharpCode.SharpZipLib.pdb
+G:\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\ICSharpCode.SharpZipLib.xml
+G:\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\Newtonsoft.Json.pdb
+G:\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\Newtonsoft.Json.xml
+G:\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\PostSharp.xml
+G:\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\System.ValueTuple.xml
+G:\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\System.Web.Helpers.xml
+G:\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\System.Web.Mvc.xml
+G:\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\System.Web.Razor.xml
+G:\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\System.Web.WebPages.xml
+G:\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\System.Web.WebPages.Deployment.xml
+G:\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\System.Web.WebPages.Razor.xml
+G:\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\obj\Debug\OsosOracle.Framework.csprojAssemblyReference.cache
+G:\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\obj\Debug\OsosOracle.Framework.dll.postsharp
+G:\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\obj\Debug\OsosOracle.Framework.csproj.CopyComplete
+G:\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\obj\Debug\OsosOracle.Framework.dll
+G:\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\obj\Debug\OsosOracle.Framework.pdb
+G:\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\obj\Debug\PostSharpHost.config
+C:\Users\ARGE X\Desktop\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\OsosOracle.Framework.dll.config
+C:\Users\ARGE X\Desktop\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\OsosOracle.Framework.dll
+C:\Users\ARGE X\Desktop\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\OsosOracle.Framework.pdb
+C:\Users\ARGE X\Desktop\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\AutoMapper.dll
+C:\Users\ARGE X\Desktop\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\EntityFramework.dll
+C:\Users\ARGE X\Desktop\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\ARGE X\Desktop\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\FluentValidation.dll
+C:\Users\ARGE X\Desktop\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\ICSharpCode.SharpZipLib.dll
+C:\Users\ARGE X\Desktop\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\Users\ARGE X\Desktop\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\Newtonsoft.Json.dll
+C:\Users\ARGE X\Desktop\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\Oracle.ManagedDataAccess.dll
+C:\Users\ARGE X\Desktop\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\Oracle.ManagedDataAccess.EntityFramework.dll
+C:\Users\ARGE X\Desktop\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\PostSharp.dll
+C:\Users\ARGE X\Desktop\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\System.ComponentModel.Annotations.dll
+C:\Users\ARGE X\Desktop\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\System.ValueTuple.dll
+C:\Users\ARGE X\Desktop\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\System.Web.Helpers.dll
+C:\Users\ARGE X\Desktop\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\System.Web.Mvc.dll
+C:\Users\ARGE X\Desktop\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\System.Web.Razor.dll
+C:\Users\ARGE X\Desktop\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\System.Web.WebPages.Deployment.dll
+C:\Users\ARGE X\Desktop\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\System.Web.WebPages.dll
+C:\Users\ARGE X\Desktop\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\System.Web.WebPages.Razor.dll
+C:\Users\ARGE X\Desktop\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\AutoMapper.pdb
+C:\Users\ARGE X\Desktop\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\AutoMapper.xml
+C:\Users\ARGE X\Desktop\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\EntityFramework.xml
+C:\Users\ARGE X\Desktop\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\ARGE X\Desktop\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\FluentValidation.xml
+C:\Users\ARGE X\Desktop\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\ICSharpCode.SharpZipLib.pdb
+C:\Users\ARGE X\Desktop\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\ICSharpCode.SharpZipLib.xml
+C:\Users\ARGE X\Desktop\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\Newtonsoft.Json.pdb
+C:\Users\ARGE X\Desktop\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\Newtonsoft.Json.xml
+C:\Users\ARGE X\Desktop\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\PostSharp.xml
+C:\Users\ARGE X\Desktop\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\System.ValueTuple.xml
+C:\Users\ARGE X\Desktop\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\System.Web.Helpers.xml
+C:\Users\ARGE X\Desktop\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\System.Web.Mvc.xml
+C:\Users\ARGE X\Desktop\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\System.Web.Razor.xml
+C:\Users\ARGE X\Desktop\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\System.Web.WebPages.xml
+C:\Users\ARGE X\Desktop\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\System.Web.WebPages.Deployment.xml
+C:\Users\ARGE X\Desktop\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\System.Web.WebPages.Razor.xml
+C:\Users\ARGE X\Desktop\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\OsosOracle.Framework.pssym
+C:\Users\ARGE X\Desktop\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\obj\Debug\OsosOracle.Framework.csproj.CoreCompileInputs.cache
+C:\Users\ARGE X\Desktop\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\obj\Debug\OsosOracle.Framework.csproj.CopyComplete
+C:\Users\ARGE X\Desktop\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\obj\Debug\OsosOracle.Framework.dll.postsharp
+C:\Users\ARGE X\Desktop\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\obj\Debug\OsosOracle.Framework.dll
+C:\Users\ARGE X\Desktop\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\obj\Debug\OsosOracle.Framework.pdb
+C:\Users\ARGE X\Desktop\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\obj\Debug\PostSharpHost.config
+F:\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\OsosOracle.Framework.dll.config
+F:\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\OsosOracle.Framework.dll
+F:\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\OsosOracle.Framework.pdb
+F:\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\OsosOracle.Framework.pssym
+F:\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\AutoMapper.dll
+F:\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\EntityFramework.dll
+F:\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\EntityFramework.SqlServer.dll
+F:\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\FluentValidation.dll
+F:\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\ICSharpCode.SharpZipLib.dll
+F:\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\Microsoft.Web.Infrastructure.dll
+F:\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\Newtonsoft.Json.dll
+F:\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\Oracle.ManagedDataAccess.dll
+F:\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\Oracle.ManagedDataAccess.EntityFramework.dll
+F:\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\PostSharp.dll
+F:\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\System.ComponentModel.Annotations.dll
+F:\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\System.ValueTuple.dll
+F:\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\System.Web.Helpers.dll
+F:\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\System.Web.Mvc.dll
+F:\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\System.Web.Razor.dll
+F:\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\System.Web.WebPages.Deployment.dll
+F:\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\System.Web.WebPages.dll
+F:\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\System.Web.WebPages.Razor.dll
+F:\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\AutoMapper.pdb
+F:\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\AutoMapper.xml
+F:\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\EntityFramework.xml
+F:\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\EntityFramework.SqlServer.xml
+F:\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\FluentValidation.xml
+F:\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\ICSharpCode.SharpZipLib.pdb
+F:\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\ICSharpCode.SharpZipLib.xml
+F:\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\Newtonsoft.Json.pdb
+F:\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\Newtonsoft.Json.xml
+F:\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\PostSharp.xml
+F:\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\System.ValueTuple.xml
+F:\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\System.Web.Helpers.xml
+F:\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\System.Web.Mvc.xml
+F:\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\System.Web.Razor.xml
+F:\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\System.Web.WebPages.xml
+F:\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\System.Web.WebPages.Deployment.xml
+F:\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\System.Web.WebPages.Razor.xml
+F:\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\obj\Debug\OsosOracle.Framework.dll.postsharp
+F:\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\obj\Debug\OsosOracle.Framework.csproj.CopyComplete
+F:\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\obj\Debug\OsosOracle.Framework.dll
+F:\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\obj\Debug\OsosOracle.Framework.pdb
+F:\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\obj\Debug\PostSharpHost.config
+F:\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\obj\Debug\OsosOracle.Framework.csprojAssemblyReference.cache
+C:\Users\ARGE X\Desktop\7.3.2020\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\OsosOracle.Framework.dll.config
+C:\Users\ARGE X\Desktop\7.3.2020\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\OsosOracle.Framework.dll
+C:\Users\ARGE X\Desktop\7.3.2020\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\OsosOracle.Framework.pdb
+C:\Users\ARGE X\Desktop\7.3.2020\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\AutoMapper.dll
+C:\Users\ARGE X\Desktop\7.3.2020\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\EntityFramework.dll
+C:\Users\ARGE X\Desktop\7.3.2020\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\ARGE X\Desktop\7.3.2020\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\FluentValidation.dll
+C:\Users\ARGE X\Desktop\7.3.2020\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\ICSharpCode.SharpZipLib.dll
+C:\Users\ARGE X\Desktop\7.3.2020\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\Users\ARGE X\Desktop\7.3.2020\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\Newtonsoft.Json.dll
+C:\Users\ARGE X\Desktop\7.3.2020\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\Oracle.ManagedDataAccess.dll
+C:\Users\ARGE X\Desktop\7.3.2020\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\Oracle.ManagedDataAccess.EntityFramework.dll
+C:\Users\ARGE X\Desktop\7.3.2020\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\PostSharp.dll
+C:\Users\ARGE X\Desktop\7.3.2020\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\System.ComponentModel.Annotations.dll
+C:\Users\ARGE X\Desktop\7.3.2020\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\System.ValueTuple.dll
+C:\Users\ARGE X\Desktop\7.3.2020\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\System.Web.Helpers.dll
+C:\Users\ARGE X\Desktop\7.3.2020\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\System.Web.Mvc.dll
+C:\Users\ARGE X\Desktop\7.3.2020\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\System.Web.Razor.dll
+C:\Users\ARGE X\Desktop\7.3.2020\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\System.Web.WebPages.Deployment.dll
+C:\Users\ARGE X\Desktop\7.3.2020\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\System.Web.WebPages.dll
+C:\Users\ARGE X\Desktop\7.3.2020\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\System.Web.WebPages.Razor.dll
+C:\Users\ARGE X\Desktop\7.3.2020\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\AutoMapper.pdb
+C:\Users\ARGE X\Desktop\7.3.2020\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\AutoMapper.xml
+C:\Users\ARGE X\Desktop\7.3.2020\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\EntityFramework.xml
+C:\Users\ARGE X\Desktop\7.3.2020\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\ARGE X\Desktop\7.3.2020\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\FluentValidation.xml
+C:\Users\ARGE X\Desktop\7.3.2020\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\ICSharpCode.SharpZipLib.pdb
+C:\Users\ARGE X\Desktop\7.3.2020\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\ICSharpCode.SharpZipLib.xml
+C:\Users\ARGE X\Desktop\7.3.2020\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\Newtonsoft.Json.pdb
+C:\Users\ARGE X\Desktop\7.3.2020\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\Newtonsoft.Json.xml
+C:\Users\ARGE X\Desktop\7.3.2020\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\PostSharp.xml
+C:\Users\ARGE X\Desktop\7.3.2020\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\System.ValueTuple.xml
+C:\Users\ARGE X\Desktop\7.3.2020\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\System.Web.Helpers.xml
+C:\Users\ARGE X\Desktop\7.3.2020\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\System.Web.Mvc.xml
+C:\Users\ARGE X\Desktop\7.3.2020\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\System.Web.Razor.xml
+C:\Users\ARGE X\Desktop\7.3.2020\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\System.Web.WebPages.xml
+C:\Users\ARGE X\Desktop\7.3.2020\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\System.Web.WebPages.Deployment.xml
+C:\Users\ARGE X\Desktop\7.3.2020\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\System.Web.WebPages.Razor.xml
+C:\Users\ARGE X\Desktop\7.3.2020\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\bin\Debug\OsosOracle.Framework.pssym
+C:\Users\ARGE X\Desktop\7.3.2020\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\obj\Debug\OsosOracle.Framework.csproj.CoreCompileInputs.cache
+C:\Users\ARGE X\Desktop\7.3.2020\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\obj\Debug\OsosOracle.Framework.csproj.CopyComplete
+C:\Users\ARGE X\Desktop\7.3.2020\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\obj\Debug\OsosOracle.Framework.dll.postsharp
+C:\Users\ARGE X\Desktop\7.3.2020\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\obj\Debug\OsosOracle.Framework.dll
+C:\Users\ARGE X\Desktop\7.3.2020\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\obj\Debug\OsosOracle.Framework.pdb
+C:\Users\ARGE X\Desktop\7.3.2020\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\obj\Debug\PostSharpHost.config
+C:\Users\ARGE X\Desktop\7.3.2020\1.3.2020 OsosOracle\1.3.2020 OsosOracle\OsosOracle\OsosOracle.Framework\obj\Debug\OsosOracle.Framework.csprojAssemblyReference.cache
+C:\Projeler\OsosOracle\OsosOracle.Framework\bin\Debug\OsosOracle.Framework.dll.config
+C:\Projeler\OsosOracle\OsosOracle.Framework\bin\Debug\OsosOracle.Framework.dll
+C:\Projeler\OsosOracle\OsosOracle.Framework\bin\Debug\OsosOracle.Framework.pdb
+C:\Projeler\OsosOracle\OsosOracle.Framework\bin\Debug\AutoMapper.dll
+C:\Projeler\OsosOracle\OsosOracle.Framework\bin\Debug\EntityFramework.dll
+C:\Projeler\OsosOracle\OsosOracle.Framework\bin\Debug\EntityFramework.SqlServer.dll
+C:\Projeler\OsosOracle\OsosOracle.Framework\bin\Debug\FluentValidation.dll
+C:\Projeler\OsosOracle\OsosOracle.Framework\bin\Debug\ICSharpCode.SharpZipLib.dll
+C:\Projeler\OsosOracle\OsosOracle.Framework\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\Projeler\OsosOracle\OsosOracle.Framework\bin\Debug\Newtonsoft.Json.dll
+C:\Projeler\OsosOracle\OsosOracle.Framework\bin\Debug\Oracle.ManagedDataAccess.dll
+C:\Projeler\OsosOracle\OsosOracle.Framework\bin\Debug\Oracle.ManagedDataAccess.EntityFramework.dll
+C:\Projeler\OsosOracle\OsosOracle.Framework\bin\Debug\PostSharp.dll
+C:\Projeler\OsosOracle\OsosOracle.Framework\bin\Debug\System.ComponentModel.Annotations.dll
+C:\Projeler\OsosOracle\OsosOracle.Framework\bin\Debug\System.ValueTuple.dll
+C:\Projeler\OsosOracle\OsosOracle.Framework\bin\Debug\System.Web.Helpers.dll
+C:\Projeler\OsosOracle\OsosOracle.Framework\bin\Debug\System.Web.Mvc.dll
+C:\Projeler\OsosOracle\OsosOracle.Framework\bin\Debug\System.Web.Razor.dll
+C:\Projeler\OsosOracle\OsosOracle.Framework\bin\Debug\System.Web.WebPages.Deployment.dll
+C:\Projeler\OsosOracle\OsosOracle.Framework\bin\Debug\System.Web.WebPages.dll
+C:\Projeler\OsosOracle\OsosOracle.Framework\bin\Debug\System.Web.WebPages.Razor.dll
+C:\Projeler\OsosOracle\OsosOracle.Framework\bin\Debug\AutoMapper.pdb
+C:\Projeler\OsosOracle\OsosOracle.Framework\bin\Debug\AutoMapper.xml
+C:\Projeler\OsosOracle\OsosOracle.Framework\bin\Debug\EntityFramework.xml
+C:\Projeler\OsosOracle\OsosOracle.Framework\bin\Debug\EntityFramework.SqlServer.xml
+C:\Projeler\OsosOracle\OsosOracle.Framework\bin\Debug\FluentValidation.xml
+C:\Projeler\OsosOracle\OsosOracle.Framework\bin\Debug\ICSharpCode.SharpZipLib.pdb
+C:\Projeler\OsosOracle\OsosOracle.Framework\bin\Debug\ICSharpCode.SharpZipLib.xml
+C:\Projeler\OsosOracle\OsosOracle.Framework\bin\Debug\Newtonsoft.Json.pdb
+C:\Projeler\OsosOracle\OsosOracle.Framework\bin\Debug\Newtonsoft.Json.xml
+C:\Projeler\OsosOracle\OsosOracle.Framework\bin\Debug\PostSharp.xml
+C:\Projeler\OsosOracle\OsosOracle.Framework\bin\Debug\System.ValueTuple.xml
+C:\Projeler\OsosOracle\OsosOracle.Framework\bin\Debug\System.Web.Helpers.xml
+C:\Projeler\OsosOracle\OsosOracle.Framework\bin\Debug\System.Web.Mvc.xml
+C:\Projeler\OsosOracle\OsosOracle.Framework\bin\Debug\System.Web.Razor.xml
+C:\Projeler\OsosOracle\OsosOracle.Framework\bin\Debug\System.Web.WebPages.xml
+C:\Projeler\OsosOracle\OsosOracle.Framework\bin\Debug\System.Web.WebPages.Deployment.xml
+C:\Projeler\OsosOracle\OsosOracle.Framework\bin\Debug\System.Web.WebPages.Razor.xml
+C:\Projeler\OsosOracle\OsosOracle.Framework\bin\Debug\OsosOracle.Framework.pssym
+C:\Projeler\OsosOracle\OsosOracle.Framework\obj\Debug\OsosOracle.Framework.csproj.CopyComplete
+C:\Projeler\OsosOracle\OsosOracle.Framework\obj\Debug\OsosOracle.Framework.dll.postsharp
+C:\Projeler\OsosOracle\OsosOracle.Framework\obj\Debug\OsosOracle.Framework.dll
+C:\Projeler\OsosOracle\OsosOracle.Framework\obj\Debug\OsosOracle.Framework.pdb
+C:\Projeler\OsosOracle\OsosOracle.Framework\obj\Debug\PostSharpHost.config

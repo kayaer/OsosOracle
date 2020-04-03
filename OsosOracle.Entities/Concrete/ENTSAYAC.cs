@@ -2,14 +2,15 @@ using OsosOracle.Framework.Entities;
 using System;
 namespace OsosOracle.Entities.Concrete
 {
-    public class ENTSAYAC : IEntity
+    public class ENTSAYAC : IEntity,IEntitySoftDelete
     {
         public DateTime? SAYACMONTAJTARIH { get; set; }
-        public string SAYACID { get; set; }
         public int? KURUMKAYITNO { get; set; }
         public int KAYITNO { get; set; }
-        public int SERINO { get; set; }
-        public int SAYACTUR { get; set; }
+        public string SERINO { get; set; }
+
+        public string KapakSeriNo { get; set; }
+        public int SayacModelKayitNo { get; set; }
         public string ACIKLAMA { get; set; }
         public int DURUM { get; set; }
         public int VERSIYON { get; set; }

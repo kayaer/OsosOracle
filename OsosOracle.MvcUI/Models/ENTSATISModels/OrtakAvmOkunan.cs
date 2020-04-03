@@ -5,7 +5,7 @@ using System.Web;
 
 namespace OsosOracle.MvcUI.Models.ENTSATISModels
 {
-    public class OrtakAvmOkunan
+    public class KALORIMETREOkunan
     {
         public string Hamdata { get; set; }
     }

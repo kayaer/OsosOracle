@@ -56,7 +56,7 @@ namespace OsosOracle.Framework.DataAccess.EntityFramework
                         IEntitySoftDelete entityD = dbEntityEntry.Entity as IEntitySoftDelete;
                         if (entityD != null)
                         {
-                            entityD.Silindi = false;
+                            entityD.DURUM = 1;
                         }
 
 
@@ -77,7 +77,7 @@ namespace OsosOracle.Framework.DataAccess.EntityFramework
                             dbEntityEntry.CurrentValues.SetValues(dbEntityEntry.OriginalValues);
 
 
-                            entityD.Silindi = true;
+                            entityD.DURUM = 2;
                             entity.GUNCELLEMETARIH = DateTime.Now;
                             //entity.GUNCELLEYEN = CurrenUser.Identity.UserId;
                             //dbEntityEntry.State = EntityState.Modified;
