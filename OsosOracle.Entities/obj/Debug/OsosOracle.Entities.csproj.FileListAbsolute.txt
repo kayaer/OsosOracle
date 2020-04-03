@@ -451,3 +451,4 @@ C:\Projeler\OsosOracle\OsosOracle.Entities\obj\Debug\OsosOracle.Entities.pdb
 C:\Projeler\OsosOracle\OsosOracle.Entities\bin\Debug\OsosOracle.DataLayer.dll
 C:\Projeler\OsosOracle\OsosOracle.Entities\bin\Debug\OsosOracle.DataLayer.pdb
 C:\Projeler\OsosOracle\OsosOracle.Entities\bin\Debug\OsosOracle.DataLayer.dll.config
+C:\Projeler\OsosOracle\OsosOracle.Entities\obj\Debug\OsosOracle.Entities.csproj.CoreCompileInputs.cache

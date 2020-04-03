@@ -66,7 +66,7 @@ namespace OsosOracle.MvcUI.Controllers
                     t.AD,
                     t.ACIKLAMA,
                     t.VERSIYON,
-                    t.KURUMKAYITNO,
+                    t.KurumAdi,
 
                     Islemler = $@"<a class='btn btn-xs btn-info' href='{Url.Action("Guncelle", "SYSGOREV", new { id = t.KAYITNO })}' title='{Dil.Duzenle}'><i class='fa fa-edit'></i></a>
 							  	<a class='btn btn-xs btn-danger modalizer' href='{Url.Action("Sil", "SYSGOREV", new { id = t.KAYITNO })}' title='{Dil.Sil}'><i class='fa fa-trash'></i></a>"

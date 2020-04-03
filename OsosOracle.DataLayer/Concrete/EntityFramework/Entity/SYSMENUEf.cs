@@ -7,7 +7,7 @@ namespace OsosOracle.DataLayer.Concrete.EntityFramework.Entity
     {
         public SYSMENUEf()
         {
-            //SysCstOperasyonEfCollection = new List<SYSCSTOPERASYONEf>();
+            SysCstOperasyonEfCollection = new List<SYSCSTOPERASYONEf>();
         }
 
         //public ICollection<SYSCSTOPERASYONMENUEf> MENUKAYITNOSYSCSTOPERASYONMENUEfCollection { get; set; }
@@ -15,6 +15,6 @@ namespace OsosOracle.DataLayer.Concrete.EntityFramework.Entity
         //public CSTDURUMEf CSTDURUMDURUMEf { get; set; }
         //public SYSKULLANICIEf SYSKULLANICIOLUSTURANEf { get; set; }
         //public SYSKULLANICIEf SYSKULLANICIGUNCELLEYENEf { get; set; }
-        //public ICollection<SYSCSTOPERASYONEf> SysCstOperasyonEfCollection { get; set; }
+        public ICollection<SYSCSTOPERASYONEf> SysCstOperasyonEfCollection { get; set; }
     }
 }

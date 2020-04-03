@@ -20,6 +20,7 @@ namespace OsosOracle.Entities.ComplexType.SYSGOREVComplexTypes
         #region Sonradan eklenenler
 
         public List<SYSCSTOPERASYONDetay> SysOperasyonList { get; set; }
+        public string KurumAdi { get; set; }
         #endregion
     }
 

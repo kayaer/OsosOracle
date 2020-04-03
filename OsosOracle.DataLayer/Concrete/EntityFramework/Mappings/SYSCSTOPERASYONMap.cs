@@ -25,10 +25,10 @@ namespace OsosOracle.DataLayer.Concrete.EntityFramework.Mappings
             Property(t => t.MENUKAYITNO).HasColumnName("MENUKAYITNO");
             // Relationships
 
-            //HasOptional(t => t.SysMenuEf)
-            //    .WithMany(t => t.SysCstOperasyonEfCollection)
-            //    .HasForeignKey(d => d.MENUKAYITNO)
-            //    .WillCascadeOnDelete(false);
+            HasRequired(t => t.SysMenuEf)
+                .WithMany(t => t.SysCstOperasyonEfCollection)
+                .HasForeignKey(d => d.MENUKAYITNO)
+                .WillCascadeOnDelete(false);
         }
     }
 }

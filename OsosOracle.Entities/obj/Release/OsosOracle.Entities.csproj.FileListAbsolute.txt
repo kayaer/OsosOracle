@@ -410,3 +410,4 @@ C:\Projeler\OsosOracle\OsosOracle.Entities\obj\Release\OsosOracle.Entities.cspro
 C:\Projeler\OsosOracle\OsosOracle.Entities\obj\Release\OsosOracle.Entities.csproj.CopyComplete
 C:\Projeler\OsosOracle\OsosOracle.Entities\obj\Release\OsosOracle.Entities.dll
 C:\Projeler\OsosOracle\OsosOracle.Entities\obj\Release\OsosOracle.Entities.pdb
+C:\Projeler\OsosOracle\OsosOracle.Entities\obj\Release\OsosOracle.Entities.csproj.CoreCompileInputs.cache

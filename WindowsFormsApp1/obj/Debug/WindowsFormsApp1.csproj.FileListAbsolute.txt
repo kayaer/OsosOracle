@@ -122,3 +122,4 @@ C:\Projeler\OsosOracle\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.Genera
 C:\Projeler\OsosOracle\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CopyComplete
 C:\Projeler\OsosOracle\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
 C:\Projeler\OsosOracle\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+C:\Projeler\OsosOracle\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache

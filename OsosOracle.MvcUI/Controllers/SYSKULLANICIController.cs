@@ -115,6 +115,18 @@ namespace OsosOracle.MvcUI.Controllers
             return View("Kaydet", model);
         }
 
+        public ActionResult Hesabim()
+        {
+            
+
+            var model = new SYSKULLANICIKaydetModel
+            {
+                SYSKULLANICI = _sYSKULLANICIService.GetirById(AktifKullanici.KayitNo)
+            };
+
+
+            return View("Hesabim", model);
+        }
 
 
         public ActionResult Detay(int id)

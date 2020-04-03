@@ -16,6 +16,8 @@ namespace OsosOracle.Entities.ComplexType.SYSCSTOPERASYONComplexTypes
         public DateTime GUNCELLEMETARIH { get; set; }
         public int MENUKAYITNO { get; set; }
         public string Menu { get; set; }
+        public string Controller { get; set; }
+        public string Action { get; set; }
     }
 
 }

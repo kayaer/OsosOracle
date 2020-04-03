@@ -1189,7 +1189,7 @@
     <value>Meter Status Report</value>
   </data>
   <data name="Adet" xml:space="preserve">
-    <value>Adet</value>
+    <value>Count</value>
   </data>
   <data name="HaberlesenCihazSayisiGrafigi" xml:space="preserve">
     <value>HaberlesenCihazSayisiGrafigi</value>

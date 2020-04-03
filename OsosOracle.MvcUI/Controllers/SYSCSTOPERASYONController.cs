@@ -60,9 +60,10 @@ namespace OsosOracle.MvcUI.Controllers
                     t.OPERASYONTUR,
                     t.VERSIYON,
                     t.Menu,
+                    t.Controller,
+                    t.Action,
 
                     Islemler = $@"<a class='btn btn-xs btn-info modalizer' href='{Url.Action("Guncelle", "SYSCSTOPERASYON", new { id = t.KAYITNO })}' title='Düzenle'><i class='fa fa-edit'></i></a>
-							   <a class='btn btn-xs btn-primary' href='{Url.Action("Detay", "SYSCSTOPERASYON", new { id = t.KAYITNO })}' title='Detay'><i class='fa fa-th-list'></i></a>
 								<a class='btn btn-xs btn-danger modalizer' href='{Url.Action("Sil", "SYSCSTOPERASYON", new { id = t.KAYITNO })}' title='Sil'><i class='fa fa-trash'></i></a>"
                 }),
                 draw = dtParameterModel.Draw,

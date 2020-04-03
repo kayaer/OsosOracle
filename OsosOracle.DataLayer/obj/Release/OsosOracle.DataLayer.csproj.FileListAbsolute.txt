@@ -443,3 +443,4 @@ C:\Projeler\OsosOracle\OsosOracle.DataLayer\obj\Release\OsosOracle.DataLayer.csp
 C:\Projeler\OsosOracle\OsosOracle.DataLayer\obj\Release\OsosOracle.DataLayer.csproj.CopyComplete
 C:\Projeler\OsosOracle\OsosOracle.DataLayer\obj\Release\OsosOracle.DataLayer.dll
 C:\Projeler\OsosOracle\OsosOracle.DataLayer\obj\Release\OsosOracle.DataLayer.pdb
+C:\Projeler\OsosOracle\OsosOracle.DataLayer\obj\Release\OsosOracle.DataLayer.csproj.CoreCompileInputs.cache

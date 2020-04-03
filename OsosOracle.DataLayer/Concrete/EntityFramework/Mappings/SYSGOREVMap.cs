@@ -24,10 +24,10 @@ namespace OsosOracle.DataLayer.Concrete.EntityFramework.Mappings
             Property(t => t.GUNCELLEMETARIH).HasColumnName("GUNCELLEMETARIH");
             Property(t => t.KURUMKAYITNO).HasColumnName("KURUMKAYITNO").IsRequired();
             // Relationships
-            //HasRequired(t => t.SYSKULLANICIOLUSTURANEf)
-            //  .WithMany(t => t.OLUSTURANSYSGOREVEfCollection)
-            //  .HasForeignKey(d => d.OLUSTURAN)
-            //  .WillCascadeOnDelete(false);
+            HasRequired(t => t.ConKurumEf)
+              .WithMany(t => t.SysGorevEfCollection)
+              .HasForeignKey(d => d.KURUMKAYITNO)
+              .WillCascadeOnDelete(false);
 
             //HasOptional(t => t.SYSKULLANICIGUNCELLEYENEf)
             //  .WithMany(t => t.GUNCELLEYENSYSGOREVEfCollection)

@@ -21,7 +21,10 @@ namespace OsosOracle.DataLayer.Concrete.EntityFramework.Dal
                 AD = x.AD,
                 ACIKLAMA = x.ACIKLAMA,
                 VERSIYON = x.VERSIYON,
-                MENUKAYITNO = x.MENUKAYITNO
+                MENUKAYITNO = x.MENUKAYITNO,
+                Menu=x.SysMenuEf.TR,
+                Controller=x.SysMenuEf.CONTROLLER,
+                Action=x.SysMenuEf.ACTION
 
             });
         }

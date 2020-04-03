@@ -223,7 +223,7 @@
                                       });
 
                                       request.done(function (jqXHR) {
-
+                                            setTimeout(function () { location.reload(); }, 2000);
                                           //SatisModel = jqXHR;
                                           @*SatisModel = @Html.Raw(Json.Encode(Model));
                                           var url = '@Url.Action("MakbuzIndir","Satis")' + '?filename=' + jqXHR;
@@ -292,7 +292,7 @@
                                       });
 
                                       request.done(function (jqXHR) {
-
+                                        setTimeout(function () { location.reload(); }, 2000);
                                           //SatisModel = jqXHR;
                                           @*SatisModel = @Html.Raw(Json.Encode(Model));
                                           var url = '@Url.Action("MakbuzIndir","Satis")' + '?filename=' + jqXHR;

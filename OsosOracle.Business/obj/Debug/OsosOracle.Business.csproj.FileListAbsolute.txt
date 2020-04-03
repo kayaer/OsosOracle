@@ -547,3 +547,4 @@ C:\Projeler\OsosOracle\OsosOracle.Business\obj\Debug\OsosOracle.Business.dll.pos
 C:\Projeler\OsosOracle\OsosOracle.Business\obj\Debug\OsosOracle.Business.dll
 C:\Projeler\OsosOracle\OsosOracle.Business\obj\Debug\OsosOracle.Business.pdb
 C:\Projeler\OsosOracle\OsosOracle.Business\obj\Debug\PostSharpHost.config
+C:\Projeler\OsosOracle\OsosOracle.Business\obj\Debug\OsosOracle.Business.csproj.CoreCompileInputs.cache

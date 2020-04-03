@@ -25,9 +25,8 @@ namespace OsosOracle.DataLayer.Concrete.EntityFramework.Dal
                 ACIKLAMA = x.ACIKLAMA,
                 VERSIYON = x.VERSIYON,
                 KURUMKAYITNO = x.KURUMKAYITNO,
-                SysOperasyonList = x.GOREVKAYITNOSYSOPERASYONGOREVEfCollection.Select(a => new SYSCSTOPERASYONDetay() { KAYITNO = a.SysCstOperasyonEf.KAYITNO, AD = a.SysCstOperasyonEf.AD }).ToList()
-                //TODO: Ek detayları buraya ekleyiniz
-                //örnek: SYSGOREVDurumu = x.NesneDegerDurumEf.Adi
+                SysOperasyonList = x.GOREVKAYITNOSYSOPERASYONGOREVEfCollection.Select(a => new SYSCSTOPERASYONDetay() { KAYITNO = a.SysCstOperasyonEf.KAYITNO, AD = a.SysCstOperasyonEf.AD }).ToList(),
+                KurumAdi=x.ConKurumEf.AD
 
             });
         }

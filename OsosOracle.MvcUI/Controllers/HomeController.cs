@@ -1,8 +1,11 @@
 ﻿using Newtonsoft.Json;
 using Oracle.ManagedDataAccess.Client;
 using OsosOracle.Business.Abstract;
+using OsosOracle.Entities.ComplexType.ENTABONEComplexTypes;
 using OsosOracle.Entities.ComplexType.ENTHUSAYACComplexTypes;
 using OsosOracle.Entities.ComplexType.ENTSATISComplexTypes;
+using OsosOracle.Entities.ComplexType.ENTSAYACComplexTypes;
+using OsosOracle.Entities.ComplexType.SYSKULLANICIComplexTypes;
 using OsosOracle.Entities.ComplexType.SYSMENUComplexTypes;
 using OsosOracle.Framework.SharedModels;
 using OsosOracle.Framework.Web.Mvc;
@@ -23,15 +26,26 @@ namespace OsosOracle.MvcUI.Controllers
     {
         private readonly ISYSMENUService _sysMenuService;
         private readonly IRPTDASHBOARDService _rptDashboardService;
-
-        public HomeController(ISYSMENUService sysMenuService, IRPTDASHBOARDService rptDashboardService)
+        private readonly IENTSAYACService _entSayacService;
+        private readonly IENTABONEService _entAboneService;
+        private readonly IENTSATISService _entSatisService;
+        private readonly ISYSKULLANICIService _sysKullaniciService;
+        public HomeController(ISYSMENUService sysMenuService, IRPTDASHBOARDService rptDashboardService,IENTSAYACService entSayacService, IENTABONEService entAboneService, IENTSATISService entSatisService, ISYSKULLANICIService sysKullaniciService)
         {
             _sysMenuService = sysMenuService;
             _rptDashboardService = rptDashboardService;
+            _entSayacService = entSayacService;
+            _entAboneService = entAboneService;
+            _entSatisService = entSatisService;
+            _sysKullaniciService = sysKullaniciService;
+
         }
         public ActionResult Index()
         {
-            var user = HttpContext.User.Identity;
+            ViewBag.SistemdekiSayacSayisi = _entSayacService.Ara(new ENTSAYACAra { KURUMKAYITNO = AktifKullanici.KurumKayitNo }).ToplamKayitSayisi;
+            ViewBag.SistemdekiAboneSayisi = _entAboneService.Ara(new ENTABONEAra { KURUMKAYITNO = AktifKullanici.KurumKayitNo }).ToplamKayitSayisi;
+            ViewBag.SistemdekiSatisSayisi = _entSatisService.Ara(new ENTSATISAra { KurumKayitNo = AktifKullanici.KurumKayitNo }).ToplamKayitSayisi;
+            ViewBag.SistemdekiKullaniciSayisi = _sysKullaniciService.Ara(new SYSKULLANICIAra { KURUMKAYITNO = AktifKullanici.KurumKayitNo }).ToplamKayitSayisi;
             return View();
         }
 

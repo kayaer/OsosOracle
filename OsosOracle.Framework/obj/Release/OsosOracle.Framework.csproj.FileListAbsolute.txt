@@ -457,3 +457,4 @@ C:\Projeler\OsosOracle\OsosOracle.Framework\obj\Release\OsosOracle.Framework.dll
 C:\Projeler\OsosOracle\OsosOracle.Framework\obj\Release\OsosOracle.Framework.pdb
 C:\Projeler\OsosOracle\OsosOracle.Framework\obj\Release\PostSharpHost.config
 C:\Projeler\OsosOracle\OsosOracle.Framework\obj\Release\OsosOracle.Framework.csprojAssemblyReference.cache
+C:\Projeler\OsosOracle\OsosOracle.Framework\obj\Release\OsosOracle.Framework.csproj.CoreCompileInputs.cache

@@ -15,12 +15,14 @@ namespace OsosOracle.DataLayer.Concrete.EntityFramework.Entity
             PrmTarifeElkEfCollection = new List<PRMTARIFEELKEf>();
             PrmTarifeSuEfCollection = new List<PRMTARIFESUEf>();
             PrmTarifeKALORIMETREEfCollection = new List<PRMTARIFEKALORIMETREEf>();
+            SysGorevEfCollection = new List<SYSGOREVEf>();
         }
         public ICollection<ENTHABERLESMEUNITESIEf> EntHaberlesmeUnitesiEfCollection { get; set; }
 
         public ICollection<ENTSAYACEf> EntSayacEfCollection { get; set; }
         public ICollection<SYSKULLANICIEf> SysKullaniciEfCollection { get; set; }
         public ICollection<SYSROLEf> SysRolEfCollection { get; set; }
+        public ICollection<SYSGOREVEf> SysGorevEfCollection { get; set; }
 
         public ICollection<PRMTARIFEGAZEf> PrmTarifeGazEfCollection { get; set; }
         public ICollection<PRMTARIFEELKEf> PrmTarifeElkEfCollection { get; set; }

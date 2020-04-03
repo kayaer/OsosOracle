@@ -39,7 +39,7 @@
             <!-- END Contacts menu-->
 
             <li>
-                <a  class="btn btn-sm">@String.Format("{0} {1}", Dil.Hosgeldiniz, currentuser.Ad + " " + currentuser.Soyad)</a>
+                <a href="@Url.Action("Hesabim","SysKullanici",new { @class="modalizer"})"  class="btn btn-sm">@String.Format("{0} {1}", Dil.Hosgeldiniz, currentuser.Ad + " " + currentuser.Soyad)</a>
             <li>
                 <a href="@Url.Action("Logout","Login",new { area=""})">
                     <i class="fa fa-sign-out"></i>@Html.Label(Dil.Cikis)

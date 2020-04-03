@@ -633,4 +633,7 @@
   <data name="Vezne" xml:space="preserve">
     <value>Vezne</value>
   </data>
+  <data name="Adet" xml:space="preserve">
+    <value>Adet</value>
+  </data>
 </root>

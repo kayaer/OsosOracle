@@ -498,3 +498,4 @@ C:\Projeler\OsosOracle\OsosOracle.Business\obj\Release\OsosOracle.Business.dll.p
 C:\Projeler\OsosOracle\OsosOracle.Business\obj\Release\OsosOracle.Business.dll
 C:\Projeler\OsosOracle\OsosOracle.Business\obj\Release\OsosOracle.Business.pdb
 C:\Projeler\OsosOracle\OsosOracle.Business\obj\Release\PostSharpHost.config
+C:\Projeler\OsosOracle\OsosOracle.Business\obj\Release\OsosOracle.Business.csproj.CoreCompileInputs.cache

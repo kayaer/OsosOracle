@@ -1606,3 +1606,4 @@ C:\Projeler\OsosOracle\OsosOracle.MvcUI\obj\Release\OsosOracle.MvcUI.dll
 C:\Projeler\OsosOracle\OsosOracle.MvcUI\obj\Release\OsosOracle.MvcUI.pdb
 C:\Projeler\OsosOracle\OsosOracle.MvcUI\obj\Release\RdlCompile.cache
 C:\Projeler\OsosOracle\OsosOracle.MvcUI\obj\Release\RdlCompile.compiled
+C:\Projeler\OsosOracle\OsosOracle.MvcUI\obj\Release\OsosOracle.MvcUI.csproj.CoreCompileInputs.cache

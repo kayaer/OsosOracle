@@ -14,7 +14,7 @@ namespace OsosOracle.DataLayer.Concrete.EntityFramework.Entity
         public ICollection<SYSOPERASYONGOREVEf> GOREVKAYITNOSYSOPERASYONGOREVEfCollection { get; set; }
         public ICollection<SYSGOREVROLEf> GorevSysGorevRolEfCollection { get; set; }
 
-        //public SYSKULLANICIEf SYSKULLANICIOLUSTURANEf { get; set; }
+        public CONKURUMEf ConKurumEf { get; set; }
         //public SYSKULLANICIEf SYSKULLANICIGUNCELLEYENEf { get; set; }
     }
 }

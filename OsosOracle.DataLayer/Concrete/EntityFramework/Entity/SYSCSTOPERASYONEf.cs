@@ -16,6 +16,6 @@ namespace OsosOracle.DataLayer.Concrete.EntityFramework.Entity
         //public SYSKULLANICIEf SYSKULLANICIOLUSTURANEf { get; set; }
         //public SYSKULLANICIEf SYSKULLANICIGUNCELLEYENEf { get; set; }
         public ICollection<SYSOPERASYONGOREVEf> OperasyonSysOperasyonGorevEfCollection { get; set; }
-        //public SYSMENUEf SysMenuEf { get; set; }
+        public SYSMENUEf SysMenuEf { get; set; }
     }
 }

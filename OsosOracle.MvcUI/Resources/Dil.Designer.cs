@@ -205,7 +205,7 @@ namespace OsosOracle.MvcUI.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Adet.
+        ///   Looks up a localized string similar to Count.
         /// </summary>
         public static string Adet {
             get {
