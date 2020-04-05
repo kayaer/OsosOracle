@@ -183,6 +183,10 @@ inner join entabone a on s.abonekayıtno = a.kayıtno
             {
                 where += " and ss.kurumkayıtno=" + entSatisAra.KurumKayitNo;
             }
+            if (entSatisAra.AylikBakimBedeliOlanSatislariGetir == true)
+            {
+                where += " and entsatıs.aylıkbakımbedelı!=0";
+            }
 
             if (!string.IsNullOrEmpty(entSatisAra.Blok))
             {

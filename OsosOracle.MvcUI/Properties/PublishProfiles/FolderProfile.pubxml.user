@@ -16,7 +16,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/30/2020 00:20:30</publishTime>
     </File>
     <File Include="bin/ar/OsosOracle.MvcUI.resources.dll">
-      <publishTime>04/03/2020 15:38:14</publishTime>
+      <publishTime>04/05/2020 22:49:49</publishTime>
     </File>
     <File Include="bin/AutoMapper.dll">
       <publishTime>01/30/2020 00:20:28</publishTime>
@@ -223,25 +223,25 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/30/2020 00:19:58</publishTime>
     </File>
     <File Include="bin/OsosOracle.Business.dll">
-      <publishTime>04/03/2020 15:38:13</publishTime>
+      <publishTime>04/05/2020 22:49:49</publishTime>
     </File>
     <File Include="bin/OsosOracle.Business.pdb">
-      <publishTime>04/03/2020 15:38:13</publishTime>
+      <publishTime>04/05/2020 22:49:49</publishTime>
     </File>
     <File Include="bin/OsosOracle.DataLayer.dll">
-      <publishTime>04/03/2020 15:38:12</publishTime>
+      <publishTime>04/05/2020 22:49:48</publishTime>
     </File>
     <File Include="bin/OsosOracle.DataLayer.dll.config">
       <publishTime>02/25/2020 21:32:34</publishTime>
     </File>
     <File Include="bin/OsosOracle.DataLayer.pdb">
-      <publishTime>04/03/2020 15:38:12</publishTime>
+      <publishTime>04/05/2020 22:49:48</publishTime>
     </File>
     <File Include="bin/OsosOracle.Entities.dll">
-      <publishTime>04/03/2020 15:38:11</publishTime>
+      <publishTime>04/05/2020 22:49:47</publishTime>
     </File>
     <File Include="bin/OsosOracle.Entities.pdb">
-      <publishTime>04/03/2020 15:38:11</publishTime>
+      <publishTime>04/05/2020 22:49:47</publishTime>
     </File>
     <File Include="bin/OsosOracle.Framework.dll">
       <publishTime>04/03/2020 15:38:11</publishTime>
@@ -253,10 +253,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/03/2020 15:38:11</publishTime>
     </File>
     <File Include="bin/OsosOracle.MvcUI.dll">
-      <publishTime>04/03/2020 15:38:13</publishTime>
+      <publishTime>04/05/2020 22:49:49</publishTime>
     </File>
     <File Include="bin/OsosOracle.MvcUI.pdb">
-      <publishTime>04/03/2020 15:38:13</publishTime>
+      <publishTime>04/05/2020 22:49:49</publishTime>
     </File>
     <File Include="bin/PostSharp.dll">
       <publishTime>01/30/2020 00:20:10</publishTime>
@@ -469,7 +469,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/30/2020 00:20:16</publishTime>
     </File>
     <File Include="bin/tr/OsosOracle.MvcUI.resources.dll">
-      <publishTime>04/03/2020 15:38:14</publishTime>
+      <publishTime>04/05/2020 22:49:49</publishTime>
     </File>
     <File Include="bin/WebGrease.dll">
       <publishTime>01/30/2020 00:20:32</publishTime>
@@ -514,13 +514,13 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/30/2020 00:18:24</publishTime>
     </File>
     <File Include="Content/app/css/app.css">
-      <publishTime>02/16/2020 22:31:12</publishTime>
+      <publishTime>04/03/2020 22:01:48</publishTime>
     </File>
     <File Include="Content/app/css/bootstrap-rtl.css">
       <publishTime>01/30/2020 00:18:24</publishTime>
     </File>
     <File Include="Content/app/css/bootstrap.css">
-      <publishTime>01/30/2020 00:18:24</publishTime>
+      <publishTime>04/03/2020 22:04:05</publishTime>
     </File>
     <File Include="Content/app/css/theme-a.css">
       <publishTime>01/30/2020 00:18:24</publishTime>
@@ -604,10 +604,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/30/2020 00:18:26</publishTime>
     </File>
     <File Include="Content/css/components-rounded.css">
-      <publishTime>04/03/2020 15:00:12</publishTime>
+      <publishTime>04/05/2020 20:52:15</publishTime>
     </File>
     <File Include="Content/css/layout.css">
-      <publishTime>01/30/2020 00:18:28</publishTime>
+      <publishTime>04/03/2020 21:09:46</publishTime>
     </File>
     <File Include="Content/css/plugins.css">
       <publishTime>01/30/2020 00:18:28</publishTime>
@@ -1852,10 +1852,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Reports/ReportDataSource/YoncaDataSource.xsc">
-      <publishTime>03/27/2020 22:46:18</publishTime>
+      <publishTime>04/03/2020 23:46:02</publishTime>
     </File>
     <File Include="Reports/ReportDataSource/YoncaDataSource.xss">
-      <publishTime>03/27/2020 22:46:18</publishTime>
+      <publishTime>04/03/2020 23:46:02</publishTime>
     </File>
     <File Include="Scripts/app/app.init.js">
       <publishTime>01/30/2020 00:18:34</publishTime>
@@ -5677,7 +5677,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>03/14/2020 02:21:05</publishTime>
     </File>
     <File Include="Views/AboneSayac/Index.cshtml">
-      <publishTime>03/25/2020 16:59:11</publishTime>
+      <publishTime>04/05/2020 20:57:35</publishTime>
     </File>
     <File Include="Views/AboneSayac/KalorimetrePartial.cshtml">
       <publishTime>03/10/2020 22:46:51</publishTime>
@@ -5815,7 +5815,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/03/2020 15:36:51</publishTime>
     </File>
     <File Include="Views/Kart/Index.cshtml">
-      <publishTime>01/30/2020 00:18:32</publishTime>
+      <publishTime>04/05/2020 22:47:12</publishTime>
     </File>
     <File Include="Views/Kurum/Index.cshtml">
       <publishTime>02/23/2020 21:15:56</publishTime>
@@ -5911,7 +5911,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/30/2020 00:18:28</publishTime>
     </File>
     <File Include="Views/Satis/Index.cshtml">
-      <publishTime>03/27/2020 23:04:51</publishTime>
+      <publishTime>04/05/2020 20:33:05</publishTime>
     </File>
     <File Include="Views/Satis/Kalorimetre.cshtml">
       <publishTime>01/30/2020 00:18:28</publishTime>
@@ -5953,7 +5953,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>03/10/2020 01:07:16</publishTime>
     </File>
     <File Include="Views/Shared/MenuItems.cshtml">
-      <publishTime>02/23/2020 22:25:12</publishTime>
+      <publishTime>04/03/2020 22:08:33</publishTime>
     </File>
     <File Include="Views/Shared/_Error.cshtml">
       <publishTime>01/30/2020 00:18:30</publishTime>
@@ -5992,7 +5992,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/30/2020 00:18:32</publishTime>
     </File>
     <File Include="Views/SYSGOREV/Index.cshtml">
-      <publishTime>01/30/2020 00:18:32</publishTime>
+      <publishTime>04/03/2020 15:59:21</publishTime>
     </File>
     <File Include="Views/SYSGOREV/Kaydet.cshtml">
       <publishTime>01/30/2020 00:18:32</publishTime>
@@ -6079,7 +6079,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/30/2020 00:18:28</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>04/02/2020 16:21:12</publishTime>
+      <publishTime>04/05/2020 21:04:35</publishTime>
     </File>
   </ItemGroup>
 </Project>

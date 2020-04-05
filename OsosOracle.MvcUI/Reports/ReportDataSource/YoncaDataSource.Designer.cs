@@ -2159,6 +2159,8 @@ namespace OsosOracle.MvcUI.Reports.ReportDataSource {
             
             private global::System.Data.DataColumn columnSatisTipi;
             
+            private global::System.Data.DataColumn columnOdemeTipi;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public SatisDataTable() {
@@ -2282,6 +2284,14 @@ namespace OsosOracle.MvcUI.Reports.ReportDataSource {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn OdemeTipiColumn {
+                get {
+                    return this.columnOdemeTipi;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -2317,7 +2327,7 @@ namespace OsosOracle.MvcUI.Reports.ReportDataSource {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public SatisRow AddSatisRow(string KapakSeriNo, string AboneNo, string SatisTarihi, string Kredi, string Kdv, string Ctv, string AylikBakimBedeli, string Tutar, string AdiSoyadi, string SayacModeli, string SatisTipi) {
+            public SatisRow AddSatisRow(string KapakSeriNo, string AboneNo, string SatisTarihi, string Kredi, string Kdv, string Ctv, string AylikBakimBedeli, string Tutar, string AdiSoyadi, string SayacModeli, string SatisTipi, string OdemeTipi) {
                 SatisRow rowSatisRow = ((SatisRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         KapakSeriNo,
@@ -2330,7 +2340,8 @@ namespace OsosOracle.MvcUI.Reports.ReportDataSource {
                         Tutar,
                         AdiSoyadi,
                         SayacModeli,
-                        SatisTipi};
+                        SatisTipi,
+                        OdemeTipi};
                 rowSatisRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowSatisRow);
                 return rowSatisRow;
@@ -2364,6 +2375,7 @@ namespace OsosOracle.MvcUI.Reports.ReportDataSource {
                 this.columnAdiSoyadi = base.Columns["AdiSoyadi"];
                 this.columnSayacModeli = base.Columns["SayacModeli"];
                 this.columnSatisTipi = base.Columns["SatisTipi"];
+                this.columnOdemeTipi = base.Columns["OdemeTipi"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2391,6 +2403,8 @@ namespace OsosOracle.MvcUI.Reports.ReportDataSource {
                 base.Columns.Add(this.columnSayacModeli);
                 this.columnSatisTipi = new global::System.Data.DataColumn("SatisTipi", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnSatisTipi);
+                this.columnOdemeTipi = new global::System.Data.DataColumn("OdemeTipi", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnOdemeTipi);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3829,6 +3843,22 @@ namespace OsosOracle.MvcUI.Reports.ReportDataSource {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string OdemeTipi {
+                get {
+                    try {
+                        return ((string)(this[this.tableSatis.OdemeTipiColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'OdemeTipi\' in table \'Satis\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableSatis.OdemeTipiColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsKapakSeriNoNull() {
                 return this.IsNull(this.tableSatis.KapakSeriNoColumn);
             }
@@ -3957,6 +3987,18 @@ namespace OsosOracle.MvcUI.Reports.ReportDataSource {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetSatisTipiNull() {
                 this[this.tableSatis.SatisTipiColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsOdemeTipiNull() {
+                return this.IsNull(this.tableSatis.OdemeTipiColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetOdemeTipiNull() {
+                this[this.tableSatis.OdemeTipiColumn] = global::System.Convert.DBNull;
             }
         }
         

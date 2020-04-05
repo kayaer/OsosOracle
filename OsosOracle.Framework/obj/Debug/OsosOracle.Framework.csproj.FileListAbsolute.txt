@@ -500,5 +500,4 @@ C:\Projeler\OsosOracle\OsosOracle.Framework\obj\Debug\OsosOracle.Framework.dll.p
 C:\Projeler\OsosOracle\OsosOracle.Framework\obj\Debug\OsosOracle.Framework.dll
 C:\Projeler\OsosOracle\OsosOracle.Framework\obj\Debug\OsosOracle.Framework.pdb
 C:\Projeler\OsosOracle\OsosOracle.Framework\obj\Debug\PostSharpHost.config
-C:\Projeler\OsosOracle\OsosOracle.Framework\obj\Debug\OsosOracle.Framework.csprojAssemblyReference.cache
 C:\Projeler\OsosOracle\OsosOracle.Framework\obj\Debug\OsosOracle.Framework.csproj.CoreCompileInputs.cache

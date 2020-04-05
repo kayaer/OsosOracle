@@ -6,37 +6,40 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>2.5cm</Width>
+              <Width>2.25437cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.15346cm</Width>
+              <Width>1.90783cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.15346cm</Width>
+              <Width>1.59806cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.15346cm</Width>
+              <Width>2.19888cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.15346cm</Width>
+              <Width>1.90783cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.492cm</Width>
+              <Width>1.90783cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.73013cm</Width>
+              <Width>1.24637cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.20096cm</Width>
+              <Width>1.4845cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.12159cm</Width>
+              <Width>0.95533cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.78304cm</Width>
+              <Width>0.87596cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.43908cm</Width>
+              <Width>1.53741cm</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>1.19345cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -52,7 +55,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Satıl Tipi</Value>
+                              <Value>Satış Tipi</Value>
                               <Style>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
@@ -99,6 +102,41 @@
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox35</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                          <Width>2pt</Width>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox4">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>Ödeme Tipi</Value>
+                              <Style>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox4</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -486,6 +524,36 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
+                    <Textbox Name="OdemeTipi">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!OdemeTipi.Value</Value>
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>OdemeTipi</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
                     <Textbox Name="SayacModeli">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
@@ -791,9 +859,10 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
-                    <ColSpan>6</ColSpan>
+                    <ColSpan>7</ColSpan>
                   </CellContents>
                 </TablixCell>
+                <TablixCell />
                 <TablixCell />
                 <TablixCell />
                 <TablixCell />
@@ -966,6 +1035,7 @@
             <TablixMember />
             <TablixMember />
             <TablixMember />
+            <TablixMember />
           </TablixMembers>
         </TablixColumnHierarchy>
         <TablixRowHierarchy>
@@ -987,7 +1057,7 @@
         <DataSetName>DataSet1</DataSetName>
         <Top>0.07056cm</Top>
         <Height>2.22333cm</Height>
-        <Width>19.88064cm</Width>
+        <Width>19.06786cm</Width>
         <Style>
           <Border>
             <Style>Solid</Style>
@@ -998,7 +1068,7 @@
     <Height>0.98958in</Height>
     <Style />
   </Body>
-  <Width>7.82702in</Width>
+  <Width>7.50703in</Width>
   <Page>
     <PageHeader>
       <Height>1.05833cm</Height>
@@ -1026,7 +1096,7 @@
           </Paragraphs>
           <rd:DefaultName>Textbox7</rd:DefaultName>
           <Height>1.02333cm</Height>
-          <Width>17.38062cm</Width>
+          <Width>18.77682cm</Width>
           <Style>
             <Border>
               <Style>None</Style>
@@ -1066,7 +1136,7 @@
           <rd:DefaultName>Textbox34</rd:DefaultName>
           <Top>0.10583cm</Top>
           <Height>0.6cm</Height>
-          <Width>17.38062cm</Width>
+          <Width>18.77682cm</Width>
           <Style>
             <Border>
               <Style>None</Style>
@@ -1084,9 +1154,9 @@
         </Border>
       </Style>
     </PageFooter>
-    <PageHeight>21cm</PageHeight>
-    <PageWidth>29.7cm</PageWidth>
-    <LeftMargin>2cm</LeftMargin>
+    <PageHeight>29.7cm</PageHeight>
+    <PageWidth>21cm</PageWidth>
+    <LeftMargin>0cm</LeftMargin>
     <RightMargin>2cm</RightMargin>
     <TopMargin>2cm</TopMargin>
     <BottomMargin>2cm</BottomMargin>
@@ -1152,6 +1222,10 @@
         </Field>
         <Field Name="SatisTipi">
           <DataField>SatisTipi</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="OdemeTipi">
+          <DataField>OdemeTipi</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
       </Fields>

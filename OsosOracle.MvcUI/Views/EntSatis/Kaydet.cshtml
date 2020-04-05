@@ -78,7 +78,7 @@
             </div>
         </div>
     </div>
-    <div class="col-md-6">
+    <div class="col-md-6 su">
         <div class="panel panel-default">
             <div class="panel-heading">Su Sayacı</div>
             <div class="panel-body">
@@ -129,7 +129,7 @@
     </div>
 
     <div class="col-md-6"></div>
-    <div class="col-md-6">
+    <div class="col-md-6 kalorimetre">
         <div class="panel panel-default">
             <div class="panel-heading">Kalorimetre Sayacı</div>
             <div class="panel-body">
@@ -202,7 +202,16 @@
                        unblockUI();
 
                        SatisModel = jqXHR;
-                         console.log(SatisModel);
+                       if (jqXHR.SuSatisModel.AboneSayacDetay != null) {
+                           $(".su").show();
+                       } else {
+                             $(".su").hide();
+                       }
+                       if (jqXHR.KalorimetreSatisModel.AboneSayacDetay != null) {
+                           $(".kalorimetre").show();
+                       } else {
+                             $(".kalorimetre").hide();
+                       }
                        //Abone Bilgileri Doldur
                        $("#@Html.IdFor(t => t.SuSatisModel.AboneSayacDetay.AboneAdSoyad)").val(jqXHR.SuSatisModel.AboneSayacDetay.AboneAdSoyad).blur();
                        $("#@Html.IdFor(t => t.SuSatisModel.AboneSayacDetay.AboneNo)").val(jqXHR.SuSatisModel.AboneSayacDetay.AboneNo).blur();

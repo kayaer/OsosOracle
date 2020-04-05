@@ -12,7 +12,7 @@ body {
   padding: 0px !important;
   margin: 0px !important;
   direction: "ltr";
-  font-size: 14px; }
+  font-size: 12px; }
 
 /*
  Internet Explorer 10 doesn't differentiate device width from viewport width, and thus doesn't 
@@ -7381,7 +7381,7 @@ Customized Bootstrap Panels
   .panel-group .panel {
     overflow: visible; }
   .panel .panel-body {
-    font-size: 13px; }
+    font-size: 12px; }
   .panel .panel-title > a:hover {
     text-decoration: none; }
   .accordion .panel .panel-heading {
@@ -12661,7 +12661,7 @@ Customized Bootstrap Tables
 ***/
 .table td,
 .table th {
-  font-size: 14px; }
+  font-size: 12px; }
 
 .table.table-bordered thead > tr > th {
   border-bottom: 0; }
@@ -12773,7 +12773,7 @@ Custom tables
   margin-right: 5px; }
 
 .table thead tr th {
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 600; }
 
 .table-advance {

@@ -25,5 +25,6 @@ namespace OsosOracle.Entities.ComplexType.ENTSATISComplexTypes
         public int? KurumKayitNo { get; set; }
 
         public string Blok { get; set; }
+        public bool AylikBakimBedeliOlanSatislariGetir { get; set; }
     }
 }

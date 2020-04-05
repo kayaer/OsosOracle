@@ -1610,7 +1610,7 @@ Page content
     .page-content-wrapper .page-content {
       /*margin-left: 235px;*/
       margin-top: 0px;
-      min-height: 938px;
+      /*min-height: 938px;*/
       padding: 25px 20px 10px 20px; }
       .page-content-wrapper .page-content.no-min-height {
         min-height: auto; }

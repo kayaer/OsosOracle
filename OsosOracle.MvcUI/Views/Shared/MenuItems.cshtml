@@ -34,6 +34,7 @@
                                 @*<li><a href="@Url.Content(menuUrl)">@childMenu.TR </a></li>*@
                                 <li>
                                     <a href="@Url.Content(menuUrl)">
+                                          <em class="@childMenu.ICON"></em>
                                         @if (Dil.ResourceManager.GetString(childMenu.TR) == null)
                                         {
                                             @childMenu.TR

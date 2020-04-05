@@ -29,20 +29,20 @@ namespace OsosOracle.DataLayer.Concrete.EntityFramework.Dal
                 IPTAL = x.IPTAL,
                 KREDI = x.KREDI,
                 OLUSTURMATARIH = x.OLUSTURMATARIH,
-                AboneNo=x.EntAboneEf.ABONENO,
-                AboneAdSoyad=x.EntAboneEf.AD+" "+x.EntAboneEf.SOYAD,
-                AylikBakimBedeli=x.AylikBakimBedeli,
-                Kdv=x.Kdv,
-                Ctv=x.Ctv,
-                SatisTipi=x.SatisTipi,
-                ToplamKredi=x.ToplamKredi,
-                KapakSeriNo=x.EntSayacEf.KapakSeriNo,
-                SatisTutarı=x.SatisTutari,
-                OLUSTURAN=x.OLUSTURAN,
-                OlusturanKullaniciAdi=x.SysKullaniciEf.KULLANICIAD,
-                SayacTipi=x.EntSayacEf.CstSayacModelEf.AD,
-                SatisTipAdi=x.NesneDegerSatisTipiEf.AD
-                
+                AboneNo = x.EntAboneEf.ABONENO,
+                AboneAdSoyad = x.EntAboneEf.AD + " " + x.EntAboneEf.SOYAD,
+                AylikBakimBedeli = x.AylikBakimBedeli,
+                Kdv = x.Kdv,
+                Ctv = x.Ctv,
+                SatisTipi = x.SatisTipi,
+                ToplamKredi = x.ToplamKredi,
+                KapakSeriNo = x.EntSayacEf.KapakSeriNo,
+                SatisTutarı = x.SatisTutari,
+                OLUSTURAN = x.OLUSTURAN,
+                OlusturanKullaniciAdi = x.SysKullaniciEf.KULLANICIAD,
+                SayacTipi = x.EntSayacEf.CstSayacModelEf.AD,
+                SatisTipAdi = x.NesneDegerSatisTipiEf.AD
+
             });
         }
 
@@ -118,6 +118,14 @@ namespace OsosOracle.DataLayer.Concrete.EntityFramework.Dal
                     {
                         result = result.Where(x => x.EntAboneEf.Blok == filtre.Blok);
                     }
+
+                    if (filtre.AylikBakimBedeliOlanSatislariGetir == true)
+                    {
+                        result = result.Where(x => x.AylikBakimBedeli != 0);
+                    }
+
+
+
                 }
             }
             return result;
@@ -276,8 +284,8 @@ namespace OsosOracle.DataLayer.Concrete.EntityFramework.Dal
         {
             filtre.Ara = new Ara
             {
-                Baslangic=1,
-                Uzunluk=1,
+                Baslangic = 1,
+                Uzunluk = 1,
                 Siralama = new List<Siralama>
                 {
                     new Siralama
@@ -304,7 +312,7 @@ namespace OsosOracle.DataLayer.Concrete.EntityFramework.Dal
             using (var context = new AppContext())
             {
                 var data = context.ENTSATISEf.SqlQuery(@"select sa.olusturmaTarih,count(1) as kayitno from entsatıs sa inner join entsayac s on sa.sayackayitno=s.kayitno
-where sa.olusturmaTarih>add_months(sysdate,-1) and s.KURUMKAYITNO=" +kurumKayitNo+" group by sa.olusturmaTarih ").ToList<ENTSATIS>();
+where sa.olusturmaTarih>add_months(sysdate,-1) and s.KURUMKAYITNO=" + kurumKayitNo + " group by sa.olusturmaTarih ").ToList<ENTSATIS>();
                 return data;
             }
         }

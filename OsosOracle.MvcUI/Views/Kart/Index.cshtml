@@ -1,14 +1,14 @@
-﻿@using System.Configuration
+﻿@using OsosOracle.MvcUI.Resources
 @using OsosOracle.Framework.HtmlHelpers
-
+@model OsosOracle.MvcUI.Models.ENTSATISModels.Yeni.SatisModel
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = Dil.KartIslemleri;
 }
 
 <div class="row">
-    <button id="btnAboneOku" type="button" class="btn btn-primary">Abone Oku</button>
-    <button id="btnKartBosalt" type="button" class="btn btn-secondary">Kart Boşalt</button>
-    <button id="btnKartTipi" type="button" class="btn btn-success">Kart Tipi</button>
+    <button id="btnAboneOku" type="button" class="btn btn-primary">@Dil.AboneOku</button>
+    <button id="btnKartBosalt" type="button" class="btn btn-info">@Dil.KartBosalt</button>
+    <button id="btnKartTipi" type="button" class="btn btn-warning">@Dil.KartTipi</button>
     @* <button type="button" class="btn btn-danger">Danger</button>
         <button type="button" class="btn btn-warning">Warning</button>
         <button type="button" class="btn btn-info">Info</button>
@@ -16,61 +16,85 @@
         <button type="button" class="btn btn-dark">Dark</button>*@
 </div>
 <div class="row">
-    <br/>
-    @using (Html.BeginRibbon("Abone Bilgileri", ribbonColor: RibbonHelper.RibbonColor.Success))
-    {
-        <div class="form-group row ">
-            <div class="col-md-3">
-                <input id="txtCihazNo" type="text" class="form-control" placeholder="Cihaz No"/>
-            </div>
-            <div class="col-md-3">
-                <input id="txtKartNo" type="text" class="form-control" placeholder="Kart No"/>
-            </div>
-            <div class="col-md-3">
-                <input id="txtLimit1" type="text" class="form-control" placeholder="Limit 1"/>
-            </div>
-            <div class="col-md-3">
-                <input id="txtLimit2" type="text" class="form-control" placeholder="Limit 2"/>
-            </div>
 
-        </div>
-        <div class="form-group row ">
-            <div class="col-md-4">
-                <input id="txtFiyat1" type="text" class="form-control" placeholder="Fiyat 1"/>
-            </div>
-            <div class="col-md-4">
-                <input id="txtFiyat2" type="text" class="form-control" placeholder="Fiyat 2"/>
-            </div>
-            <div class="col-md-4">
-                <input id="txtFiyat3" type="text" class="form-control" placeholder="Fiyat 3"/>
-            </div>
+    <br />
+    <div class="col-md-6">
+        <div class="panel panel-default">
+            <div class="panel-heading">@Dil.Su</div>
+            <div class="panel-body">
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <div class="col-md-6">
+                            @Html.TextBoxFor(t => t.SuSatisModel.SogukSuOkunan.SayacSeriNo, new { @class = "form-control", placeholder = Dil.SayacSeriNo })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-6">
+                            @Html.TextBoxFor(t => t.SuSatisModel.SogukSuOkunan.Kredi, new { @class = "form-control", placeholder = Dil.Kredi })
+                        </div>
+                        <div class="col-md-6">
+                            @Html.TextBoxFor(t => t.SuSatisModel.SogukSuOkunan.YedekKredi, new { @class = "form-control", placeholder = Dil.YedekKredi })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-6">
+                            @Html.TextBoxFor(t => t.SuSatisModel.SogukSuOkunan.Kalan, new { @class = "form-control", placeholder = Dil.Su + ' ' + Dil.KALANKREDI })
+                        </div>
+                        <div class="col-md-6">
+                            @Html.TextBoxFor(t => t.SuSatisModel.SogukSuOkunan.Harcanan, new { @class = "form-control", placeholder = Dil.Su + ' ' + Dil.HARCANANKREDI })
+                        </div>
+                    </div>
 
+                    <div class="form-group">
+                        <div class="col-md-6">
+                            @Html.TextBoxFor(t => t.SuSatisModel.SogukSuOkunan.AkoMesaj, new { @class = "form-control", placeholder = _T("Su Ana Kredi Okundu Bilgisi") })
+                        </div>
+                        <div class="col-md-6">
+                            @Html.TextBoxFor(t => t.SuSatisModel.SogukSuOkunan.YkoMesaj, new { @class = "form-control", placeholder = _T("Su Yedek Kredi Okundu Bilgisi") })
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="panel panel-default">
+            <div class="panel-heading">@Dil.Kalorimetre</div>
+            <div class="panel-body">
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <div class="col-md-6">
+                            @Html.TextBoxFor(t => t.KalorimetreSatisModel.KalorimetreOkunan.CihazNo, new { @class = "form-control", placeholder = Dil.SayacSeriNo })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-6">
+                            @Html.TextBoxFor(t => t.KalorimetreSatisModel.KalorimetreOkunan.Kalan, new { @class = "form-control", placeholder = Dil.Kalorimetre + ' ' + Dil.KALANKREDI })
+                        </div>
+                        <div class="col-md-6">
+                            @Html.TextBoxFor(t => t.KalorimetreSatisModel.KalorimetreOkunan.Harcanan, new { @class = "form-control", placeholder = Dil.Kalorimetre + ' ' + Dil.HARCANANKREDI })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-6">
+                            @Html.TextBoxFor(t => t.KalorimetreSatisModel.KalorimetreOkunan.Kredi, new { @class = "form-control", placeholder = Dil.Kalorimetre + ' ' + Dil.Kredi })
+                        </div>
+                        <div class="col-md-6">
+                            @Html.TextBoxFor(t => t.KalorimetreSatisModel.KalorimetreOkunan.AkoMesaj, new { @class = "form-control", placeholder = _T("Kalorimetre Bilgisi") })
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-        </div>
-        <div class="form-group row ">
-            <div class="col-md-3">
-                <input id="txteeFiyat1" type="text" class="form-control" placeholder="E Fiyat 1"/>
-            </div>
-            <div class="col-md-3">
-                <input id="txteeFiyat2" type="text" class="form-control" placeholder="E Fiyat 2"/>
-            </div>
-            <div class="col-md-3">
-                <input id="txteeFiyat3" type="text" class="form-control" placeholder="E Fiyat 3"/>
-            </div>
-            <div class="col-md-3">
-                <input id="txteFiyat4" type="text" class="form-control" placeholder="E Fiyat 4"/>
-            </div>
-        </div>
-        <div class="form-group row">
-            <button id="btnAboneYap" type="button" class="btn btn-primary">Abone Yap</button>
-        </div>
-    }
+    </div>
 </div>
-
 <script type="text/javascript">
     $(document).ready(function () {
 
-        var namespace='@ConfigurationManager.AppSettings["KartNamespace"]';
+        var SatisModel =@Html.Raw(Json.Encode(Model));
+        var namespace="SmartCard.OrtakAvm";
+        var okunanData = "";
 
         $("#btnKartTipi").click(function (e) {
             KartTipi();
@@ -92,7 +116,13 @@
 
                 var kart = new ActiveXObject(namespace);
                 var kartTip = kart.KartTipi();
-
+            if(kartTip=="Subscriber Card")
+            {
+            kartTip="Abone Kartı";
+            }else if(kartTip=="Empty Card")
+            {
+            kartTip="Boş kart";
+            }
                 ajaxMesajGoster(kartTip);
 
             }
@@ -100,16 +130,26 @@
             {
                 ajaxMesajGoster(ex, 'Hata');
             }
-        
+
         }
 
         function AboneBosalt() {
             try {
 
-                var kart = new ActiveXObject(namespace);
-                var kartTip = kart.AboneBosalt();
+            var su = new ActiveXObject("SmartCard.OrtakAvm");
+            var kartTip = su.KartTipi();
 
-                ajaxMesajGoster(kartTip);
+            if (kartTip == "Abone Karti" || kartTip == "Abone Kartı" || kartTip == "CBA " || kartTip == "Subscriber Card") {
+                var result = su.AboneBosalt();
+                if (result === "1") {
+                    ajaxMesajGoster('İşlem Başarılı');
+                } else {
+                    ajaxMesajGoster('İşlem Başarısız', 'Hata');
+                }
+                return;
+            } else if (kartTip == "Bos Kart") {
+                ajaxMesajGoster('Kart Boş');
+            }
 
             }
             catch (ex) {
@@ -120,17 +160,51 @@
 
         function AboneOku() {
             try {
+                 blockUI();
+                //var kart = new ActiveXObject(namespace);
+                //okunanData = kart.AboneOku();
+                SatisModel.HamData = okunanData;
+                var model = JSON.stringify(SatisModel)
+                var request = $.ajax({
+                       url: "@Url.Action("SatisPars", "Kart")",
+                       method: "POST",
+                       async: true,
+                       dataType: "json",
+                       contentType: "application/json",
+                       data: model
 
-                var kart = new ActiveXObject(namespace);
-                var kartTip = kart.AboneOku();
+                   });
 
-                ajaxMesajGoster(kartTip);
+                   request.done(function (jqXHR) {
+                       unblockUI();
+
+                       SatisModel = jqXHR;
+                       $("#@Html.IdFor(t => t.SuSatisModel.SogukSuOkunan.SayacSeriNo)").val(jqXHR.SuSatisModel.SogukSuOkunan.SayacSeriNo).blur();
+                       $("#@Html.IdFor(t => t.SuSatisModel.SogukSuOkunan.Kredi)").val(jqXHR.SuSatisModel.SogukSuOkunan.Kredi).blur();
+                       $("#@Html.IdFor(t => t.SuSatisModel.SogukSuOkunan.YedekKredi)").val(jqXHR.SuSatisModel.SogukSuOkunan.YedekKredi).blur();
+                       $("#@Html.IdFor(t => t.SuSatisModel.SogukSuOkunan.Kalan)").val(jqXHR.SuSatisModel.SogukSuOkunan.Kalan).blur();
+                       $("#@Html.IdFor(t => t.SuSatisModel.SogukSuOkunan.Harcanan)").val(jqXHR.SuSatisModel.SogukSuOkunan.Harcanan).blur();
+                       $("#@Html.IdFor(t => t.SuSatisModel.SogukSuOkunan.AkoMesaj)").val(jqXHR.SuSatisModel.SogukSuOkunan.AkoMesaj).blur();
+                       $("#@Html.IdFor(t => t.SuSatisModel.SogukSuOkunan.YkoMesaj)").val(jqXHR.SuSatisModel.SogukSuOkunan.YkoMesaj).blur();
+                       $("#@Html.IdFor(t => t.KalorimetreSatisModel.KalorimetreOkunan.CihazNo)").val(jqXHR.KalorimetreSatisModel.KalorimetreOkunan.CihazNo).blur();
+                       $("#@Html.IdFor(t => t.KalorimetreSatisModel.KalorimetreOkunan.Kredi)").val(jqXHR.KalorimetreSatisModel.KalorimetreOkunan.Kredi).blur();
+                       $("#@Html.IdFor(t => t.KalorimetreSatisModel.KalorimetreOkunan.YedekKredi)").val(jqXHR.KalorimetreSatisModel.KalorimetreOkunan.YedekKredi).blur();
+                       $("#@Html.IdFor(t => t.KalorimetreSatisModel.KalorimetreOkunan.AkoMesaj)").val(jqXHR.KalorimetreSatisModel.KalorimetreOkunan.AkoMesaj).blur();
+                       $("#@Html.IdFor(t => t.KalorimetreSatisModel.KalorimetreOkunan.Kalan)").val(jqXHR.KalorimetreSatisModel.KalorimetreOkunan.Kalan).blur();
+                       $("#@Html.IdFor(t => t.KalorimetreSatisModel.KalorimetreOkunan.Harcanan)").val(jqXHR.KalorimetreSatisModel.KalorimetreOkunan.Harcanan).blur();
+
+                   });
+                   request.fail(function (jqXHR, textStatus) {
+                       unblockUI();
+                       var msg = jQuery.parseJSON(jqXHR.responseText);
+                       ajaxMesajGoster(msg.Mesaj);
+                   });
 
             }
             catch (ex) {
                 ajaxMesajGoster(ex, 'Hata');
             }
-
+             unblockUI();
         }
 
 
@@ -159,11 +233,11 @@
             catch (ex) {
                 ajaxMesajGoster(ex, 'Hata');
             }
-            
+
         }
 
 
     });
 
-    
+
 </script>

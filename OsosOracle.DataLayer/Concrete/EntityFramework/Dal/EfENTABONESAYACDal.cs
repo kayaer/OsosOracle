@@ -131,17 +131,22 @@ namespace OsosOracle.DataLayer.Concrete.EntityFramework.Dal
                     {
                         result = result.Where(x => x.EntSayacEf.KURUMKAYITNO == filtre.KurumKayitNo);
                     }
+                    //if (!string.IsNullOrEmpty(filtre.SonSatisTarihBaslangic))
+                    //{
+                    //    DateTime tarih =  Convert.ToDateTime(filtre.SonSatisTarihBaslangic,new CultureInfo("tr-TR"));
+                    //    //result = result.Where(x => x.EntAboneEf.SonSatisTarih >tarih);
+                    //    result = result.Where(x => x.SONSATISTARIH > tarih);
+                    //}
+                    //if (filtre.SonSatisTarihBitis != null)
+                    //{
+                    //    DateTime tarih = Convert.ToDateTime(filtre.SonSatisTarihBitis, new CultureInfo("tr-TR"));
+                    //    //result = result.Where(x => x.EntAboneEf.SonSatisTarih <tarih );
+                    //    result = result.Where(x => x.SONSATISTARIH < tarih);
+                    //}
                     if (!string.IsNullOrEmpty(filtre.SonSatisTarihBaslangic))
                     {
-                        DateTime tarih =  Convert.ToDateTime(filtre.SonSatisTarihBaslangic,new CultureInfo("tr-TR"));
-                        //result = result.Where(x => x.EntAboneEf.SonSatisTarih >tarih);
-                        result = result.Where(x => x.SONSATISTARIH > tarih);
-                    }
-                    if (filtre.SonSatisTarihBitis != null)
-                    {
-                        DateTime tarih = Convert.ToDateTime(filtre.SonSatisTarihBitis, new CultureInfo("tr-TR"));
-                        //result = result.Where(x => x.EntAboneEf.SonSatisTarih <tarih );
-                        result = result.Where(x => x.SONSATISTARIH < tarih);
+                        DateTime tarih = Convert.ToDateTime(filtre.SonSatisTarihBaslangic, new CultureInfo("tr-TR"));
+                        result = result.Where(x => x.EntAboneEf.SonSatisTarih < tarih);
                     }
                 }
             }

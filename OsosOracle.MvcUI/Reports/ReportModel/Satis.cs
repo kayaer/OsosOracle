@@ -19,5 +19,6 @@ namespace OsosOracle.MvcUI.Reports.ReportModel
 
         public string SayacModeli { get; set; }
         public string SatisTipi { get; set; }
+        public string OdemeTipi { get; set; }
     }
 }

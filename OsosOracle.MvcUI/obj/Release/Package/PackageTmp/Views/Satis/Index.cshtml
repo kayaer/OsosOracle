@@ -22,12 +22,16 @@
             </div>
         </div>
         <div class="form-group row">
-
             <div class="col-md-6">
                 @Html.DateInput(t => t.ENTSATISAra.SatisTarihBaslangic, new { placeholder = Dil.BaslangicTarih })
             </div>
             <div class="col-md-6">
                 @Html.DateInput(t => t.ENTSATISAra.SatisTarihBitis, new { placeholder = Dil.BitisTarih })
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-md-4">
+                <label>@Html.CheckBoxFor(t => t.ENTSATISAra.AylikBakimBedeliOlanSatislariGetir) @_T("Aylık Bakım Bedeli Olan Satışlar")</label>
             </div>
         </div>
         <div class="form-actions">
