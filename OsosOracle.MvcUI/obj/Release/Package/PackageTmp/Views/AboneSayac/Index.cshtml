@@ -36,7 +36,7 @@
         <div class="panel panel-default">
             <div class="panel-heading">Abone-Sayaç Listesi</div>
             <div class="panel-body">
-                <table id="tblSayacModellistesi" class="table table-striped table-bordered table-hover table-responsive">
+                <table id="tblAboneSayaclistesi" class="table table-striped table-bordered table-hover table-responsive">
                     <thead>
                         <tr>
                             <th>@Dil.AboneNo</th>
@@ -70,7 +70,7 @@
         function AraFiltered() {
 
 
-            $('#tblSayacModellistesi').dataTable({
+            $('#tblAboneSayaclistesi').dataTable({
                 dom: 'Blfrtip',
                 buttons: [
                     {
@@ -83,12 +83,12 @@
                 'serverSide': true,
                 'destroy': true,
                 'columns': [
-                    { 'data': "AboneNo" },
-                    { 'data': "AboneAdSoyad" },
-                    { 'data': "SayacModel" },
-                    { 'data': "SayacSeriNo" },
-                    { 'data': "KapakSeriNo" },
-                    { 'data': "SONSATISTARIH" }
+                    { 'data': "AboneNo", sortable: false  },
+                    { 'data': "AboneAdSoyad" , sortable: false },
+                    { 'data': "SayacModel", sortable: false  },
+                    { 'data': "SayacSeriNo", sortable: false  },
+                    { 'data': "KapakSeriNo" , sortable: false },
+                    { 'data': "SONSATISTARIH", sortable: false  }
                 ],
                 'ajax': {
                     'type': 'POST',

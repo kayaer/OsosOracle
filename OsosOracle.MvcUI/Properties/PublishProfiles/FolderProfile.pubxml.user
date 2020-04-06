@@ -16,7 +16,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/30/2020 00:20:30</publishTime>
     </File>
     <File Include="bin/ar/OsosOracle.MvcUI.resources.dll">
-      <publishTime>04/05/2020 22:49:49</publishTime>
+      <publishTime>04/06/2020 21:16:59</publishTime>
     </File>
     <File Include="bin/AutoMapper.dll">
       <publishTime>01/30/2020 00:20:28</publishTime>
@@ -223,40 +223,40 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/30/2020 00:19:58</publishTime>
     </File>
     <File Include="bin/OsosOracle.Business.dll">
-      <publishTime>04/05/2020 22:49:49</publishTime>
+      <publishTime>04/06/2020 21:16:58</publishTime>
     </File>
     <File Include="bin/OsosOracle.Business.pdb">
-      <publishTime>04/05/2020 22:49:49</publishTime>
+      <publishTime>04/06/2020 21:16:58</publishTime>
     </File>
     <File Include="bin/OsosOracle.DataLayer.dll">
-      <publishTime>04/05/2020 22:49:48</publishTime>
+      <publishTime>04/06/2020 21:16:57</publishTime>
     </File>
     <File Include="bin/OsosOracle.DataLayer.dll.config">
       <publishTime>02/25/2020 21:32:34</publishTime>
     </File>
     <File Include="bin/OsosOracle.DataLayer.pdb">
-      <publishTime>04/05/2020 22:49:48</publishTime>
+      <publishTime>04/06/2020 21:16:57</publishTime>
     </File>
     <File Include="bin/OsosOracle.Entities.dll">
-      <publishTime>04/05/2020 22:49:47</publishTime>
+      <publishTime>04/06/2020 21:16:57</publishTime>
     </File>
     <File Include="bin/OsosOracle.Entities.pdb">
-      <publishTime>04/05/2020 22:49:47</publishTime>
+      <publishTime>04/06/2020 21:16:57</publishTime>
     </File>
     <File Include="bin/OsosOracle.Framework.dll">
-      <publishTime>04/03/2020 15:38:11</publishTime>
+      <publishTime>04/06/2020 16:57:36</publishTime>
     </File>
     <File Include="bin/OsosOracle.Framework.dll.config">
       <publishTime>02/25/2020 21:34:16</publishTime>
     </File>
     <File Include="bin/OsosOracle.Framework.pdb">
-      <publishTime>04/03/2020 15:38:11</publishTime>
+      <publishTime>04/06/2020 16:57:36</publishTime>
     </File>
     <File Include="bin/OsosOracle.MvcUI.dll">
-      <publishTime>04/05/2020 22:49:49</publishTime>
+      <publishTime>04/06/2020 21:16:59</publishTime>
     </File>
     <File Include="bin/OsosOracle.MvcUI.pdb">
-      <publishTime>04/05/2020 22:49:49</publishTime>
+      <publishTime>04/06/2020 21:16:59</publishTime>
     </File>
     <File Include="bin/PostSharp.dll">
       <publishTime>01/30/2020 00:20:10</publishTime>
@@ -469,7 +469,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/30/2020 00:20:16</publishTime>
     </File>
     <File Include="bin/tr/OsosOracle.MvcUI.resources.dll">
-      <publishTime>04/05/2020 22:49:49</publishTime>
+      <publishTime>04/06/2020 21:16:59</publishTime>
     </File>
     <File Include="bin/WebGrease.dll">
       <publishTime>01/30/2020 00:20:32</publishTime>
@@ -5677,7 +5677,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>03/14/2020 02:21:05</publishTime>
     </File>
     <File Include="Views/AboneSayac/Index.cshtml">
-      <publishTime>04/05/2020 20:57:35</publishTime>
+      <publishTime>04/06/2020 16:51:00</publishTime>
     </File>
     <File Include="Views/AboneSayac/KalorimetrePartial.cshtml">
       <publishTime>03/10/2020 22:46:51</publishTime>
@@ -5776,7 +5776,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/02/2020 14:38:55</publishTime>
     </File>
     <File Include="Views/EntSatis/Kaydet.cshtml">
-      <publishTime>04/02/2020 14:39:40</publishTime>
+      <publishTime>04/06/2020 13:35:00</publishTime>
     </File>
     <File Include="Views/EntSatis/SatisIptal.cshtml">
       <publishTime>04/02/2020 14:40:21</publishTime>
@@ -6079,7 +6079,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/30/2020 00:18:28</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>04/05/2020 21:04:35</publishTime>
+      <publishTime>04/06/2020 20:55:14</publishTime>
     </File>
   </ItemGroup>
 </Project>

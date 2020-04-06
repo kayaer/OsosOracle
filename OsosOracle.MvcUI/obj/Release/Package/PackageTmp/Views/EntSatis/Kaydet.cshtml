@@ -78,7 +78,7 @@
             </div>
         </div>
     </div>
-    <div class="col-md-6">
+    <div class="col-md-6 su">
         <div class="panel panel-default">
             <div class="panel-heading">Su Sayacı</div>
             <div class="panel-body">
@@ -96,7 +96,7 @@
                     <div class="form-group">
                         <div class="col-sm-12">
                             <div class="col-sm-6">
-                                  @Html.AutoComplete(t => t.SuSatisModel.Satis.OdemeTipiKayitNo, Enums.AutocompleteFuction.OdemeTipiGetir, Enums.AutoCompleteType.List, "Ödeme Tipi")
+                                @Html.AutoComplete(t => t.SuSatisModel.Satis.OdemeTipiKayitNo, Enums.AutocompleteFuction.OdemeTipiGetir, Enums.AutoCompleteType.List, "Ödeme Tipi")
                             </div>
                             <div class="col-sm-6">
                                 @Html.TextBoxFor(t => t.SuSatisModel.Satis.YEDEKKREDI, new { @class = "form-control", placeholder = Dil.YedekKredi })
@@ -129,7 +129,7 @@
     </div>
 
     <div class="col-md-6"></div>
-    <div class="col-md-6">
+    <div class="col-md-6 kalorimetre">
         <div class="panel panel-default">
             <div class="panel-heading">Kalorimetre Sayacı</div>
             <div class="panel-body">
@@ -147,7 +147,7 @@
                     <div class="form-group">
                         <div class="col-sm-12">
                             <div class="col-sm-6">
-                                  @Html.AutoComplete(t => t.KalorimetreSatisModel.Satis.OdemeTipiKayitNo, Enums.AutocompleteFuction.OdemeTipiGetir, Enums.AutoCompleteType.List, "Ödeme Tipi")
+                                @Html.AutoComplete(t => t.KalorimetreSatisModel.Satis.OdemeTipiKayitNo, Enums.AutocompleteFuction.OdemeTipiGetir, Enums.AutoCompleteType.List, "Ödeme Tipi")
                             </div>
                             <div class="col-sm-6">
                                 @Html.TextBoxFor(t => t.KalorimetreSatisModel.Satis.ToplamKredi, new { @class = "form-control", placeholder = Dil.ToplamKredi })
@@ -168,7 +168,11 @@
             </div>
 
         </div>
-        <button type="submit" class="btn btn-danger btn-sm pull-right" name="submitButton" id="btnKrediYukle">
+       
+    </div>
+    <div class="col-md-6"></div>
+    <div class="col-md-6">
+         <button type="submit" class="btn btn-danger btn-sm pull-right" name="submitButton" id="btnKrediYukle">
             @Dil.KrediYukle
         </button>
     </div>
@@ -202,7 +206,16 @@
                        unblockUI();
 
                        SatisModel = jqXHR;
-                         console.log(SatisModel);
+                       if (jqXHR.SuSatisModel.AboneSayacDetay != null) {
+                           $(".su").show();
+                       } else {
+                             $(".su").hide();
+                       }
+                       if (jqXHR.KalorimetreSatisModel.AboneSayacDetay != null) {
+                           $(".kalorimetre").show();
+                       } else {
+                             $(".kalorimetre").hide();
+                       }
                        //Abone Bilgileri Doldur
                        $("#@Html.IdFor(t => t.SuSatisModel.AboneSayacDetay.AboneAdSoyad)").val(jqXHR.SuSatisModel.AboneSayacDetay.AboneAdSoyad).blur();
                        $("#@Html.IdFor(t => t.SuSatisModel.AboneSayacDetay.AboneNo)").val(jqXHR.SuSatisModel.AboneSayacDetay.AboneNo).blur();
@@ -245,9 +258,9 @@
 
           $("#txtSuTutar").blur(function () {
             blockUI();
-              SatisModel.HamData = okunanData;            
+              SatisModel.HamData = okunanData;
               SatisModel.SuSatisModel.Satis.ODEME = parseInt($("#txtSuTutar").val());
-          
+
               var model=JSON.stringify(SatisModel)
                 var request = $.ajax({
                        url: "@Url.Action("SuHesapla", "EntSatis")",
@@ -285,7 +298,7 @@
 
                   SatisModel.HamData = okunanData;
                   SatisModel.KalorimetreSatisModel.Satis.ODEME = parseInt($("#txtKalorimetreTutar").val());
-                
+
                   var model=JSON.stringify(SatisModel)
                   var request = $.ajax({
                        url: "@Url.Action("KalorimetreHesapla", "EntSatis")",

@@ -57,7 +57,7 @@ namespace OsosOracle.Business.Concrete
 		{
 			//Bir sayaç birden fazla abonede aktif olmamalı
 			var sayacKayitliMi= _eNTABONESAYACDal.Getir(new ENTABONESAYACAra { SAYACKAYITNO = entity.SAYACKAYITNO, Durum = 1 });
-			if(sayacKayitliMi.Count(x=>x.KAYITNO!=entity.KAYITNO)>0)
+			if(sayacKayitliMi.Count(x=>x.ABONEKAYITNO!=entity.ABONEKAYITNO)>0)
 			{
 				throw new NotificationException("İşlem  yapılan sayaç başka bir abonede kayıtlıdır");
 			}

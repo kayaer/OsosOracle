@@ -1,0 +1,201 @@
+
+
+13:26:31 6 Nisan 2020 Pazartesi
+  :System.Web.HttpException (0x80004005): A public action method 'Kaydet' was not found on controller 'OsosOracle.MvcUI.Controllers.EntSatisController'.
+   konum: System.Web.Mvc.Controller.HandleUnknownAction(String actionName)
+   konum: System.Web.Mvc.Controller.<>c.<BeginExecuteCore>b__152_1(IAsyncResult asyncResult, ExecuteCoreState innerState)
+   konum: System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   konum: System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   konum: System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   konum: System.Web.Mvc.Controller.<>c.<BeginExecute>b__151_2(IAsyncResult asyncResult, Controller controller)
+   konum: System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   konum: System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   konum: System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   konum: System.Web.Mvc.Controller.System.Web.Mvc.Async.IAsyncController.EndExecute(IAsyncResult asyncResult)
+   konum: System.Web.Mvc.MvcHandler.<>c.<BeginProcessRequest>b__20_1(IAsyncResult asyncResult, ProcessRequestState innerState)
+   konum: System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   konum: System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   konum: System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   konum: System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.EndProcessRequest(IAsyncResult result)
+   konum: System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   konum: System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   konum: System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously){'$id':'1','HttpMethod':'GET','RawUrl':'/EntSatis/Kaydet','Browser':'Chrome','Version':'80.0','QueryString':[],'Form':[],'UserHostAddress':'::1','IsSecureConnection':false}
+-------------------------------
+
+http://localhost:12735/EntSatis/Kaydet
+13:26:33 6 Nisan 2020 Pazartesi
+  :System.Web.HttpException (0x80004005): Kaynak Bulunamadı
+   konum: OsosOracle.MvcUI.Infrastructure.NinjectControllerFactory.GetControllerInstance(RequestContext requestContext, Type controllerType) C:\Projeler\OsosOracle\OsosOracle.MvcUI\Infrastructure\NinjectControllerFactory.cs içinde: satır 17
+   konum: System.Web.Mvc.DefaultControllerFactory.CreateController(RequestContext requestContext, String controllerName)
+   konum: System.Web.Mvc.MvcHandler.ProcessRequestInit(HttpContextBase httpContext, IController& controller, IControllerFactory& factory)
+   konum: System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContextBase httpContext, AsyncCallback callback, Object state)
+   konum: System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContext httpContext, AsyncCallback callback, Object state)
+   konum: System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.BeginProcessRequest(HttpContext context, AsyncCallback cb, Object extraData)
+   konum: System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   konum: System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   konum: System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously){'$id':'1','HttpMethod':'GET','UrlReferrer':'http://localhost:12735/EntSatis/Kaydet','RawUrl':'/favicon.ico','Browser':'Chrome','Version':'80.0','QueryString':[],'Form':[],'UserHostAddress':'::1','IsSecureConnection':false}
+-------------------------------
+
+http://localhost:12735/EntSatis/SatisIptal
+3:12:19 PM Monday, April 6, 2020
+  :System.NullReferenceException: Object reference not set to an instance of an object.
+   at OsosOracle.MvcUI.Controllers.EntSatisController.SatisYap(SatisModel model) in C:\Projeler\OsosOracle\OsosOracle.MvcUI\Controllers\EntSatisController.cs:line 471
+   at lambda_method(Closure , ControllerBase , Object[] )
+   at System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   at System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c.<BeginInvokeSynchronousActionMethod>b__9_0(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass11_0.<InvokeActionMethodFilterAsynchronouslyRecursive>b__0()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass11_2.<InvokeActionMethodFilterAsynchronouslyRecursive>b__2()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass7_0.<BeginInvokeActionMethodWithFilters>b__1(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass3_6.<BeginInvokeAction>b__4()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass3_1.<BeginInvokeAction>b__1(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.<>c.<BeginExecuteCore>b__152_1(IAsyncResult asyncResult, ExecuteCoreState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.<>c.<BeginExecute>b__151_2(IAsyncResult asyncResult, Controller controller)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.System.Web.Mvc.Async.IAsyncController.EndExecute(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.<>c.<BeginProcessRequest>b__20_1(IAsyncResult asyncResult, ProcessRequestState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.EndProcessRequest(IAsyncResult result)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplicatio
+-------------------------------
+
+http://localhost:12735/Login?ReturnUrl=%2F
+4:03:08 PM Monday, April 6, 2020
+  :System.Data.Entity.Core.ProviderIncompatibleException: An error occurred while getting provider information from the database. This can be caused by Entity Framework using an incorrect connection string. Check the inner exceptions for details and ensure that the connection string is correct. ---> System.Data.Entity.Core.ProviderIncompatibleException: The provider did not return a ProviderManifestToken string. ---> Oracle.ManagedDataAccess.Client.OracleException: Connection request timed out
+   at OracleInternal.ConnectionPool.PoolManager`3.Get(ConnectionString csWithDiffOrNewPwd, Boolean bGetForApp, OracleConnection connRefForCriteria, String affinityInstanceName, Boolean bForceMatch)
+   at OracleInternal.ConnectionPool.OraclePoolManager.Get(ConnectionString csWithNewPassword, Boolean bGetForApp, OracleConnection connRefForCriteria, String affinityInstanceName, Boolean bForceMatch)
+   at OracleInternal.ConnectionPool.OracleConnectionDispenser`3.Get(ConnectionString cs, PM conPM, ConnectionString pmCS, SecureString securedPassword, SecureString securedProxyPassword, OracleConnection connRefForCriteria)
+   at Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   at Oracle.ManagedDataAccess.EntityFramework.EFOracleProviderServices.GetDbProviderManifestToken(DbConnection connection)
+   at System.Data.Entity.Core.Common.DbProviderServices.GetProviderManifestToken(DbConnection connection)
+   --- End of inner exception stack trace ---
+   at System.Data.Entity.Core.Common.DbProviderServices.GetProviderManifestToken(DbConnection connection)
+   at System.Data.Entity.Utilities.DbProviderServicesExtensions.GetProviderManifestTokenChecked(DbProviderServices providerServices, DbConnection connection)
+   --- End of inner exception stack trace ---
+   at System.Data.Entity.Utilities.DbProviderServicesExtensions.GetProviderManifestTokenChecked(DbProviderServices providerServices, DbConnection connection)
+   at System.Data.Entity.Infrastructure.DefaultManifestTokenResolver.<>c__DisplayClass1.<ResolveManifestToken>b__0(Tuple`3 k)
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at System.Data.Entity.Infrastructure.DefaultManifestTokenResolver.ResolveManifestToken(DbConnection connection)
+   at System.Data.Entity.Utilities.DbConnectionExtensions.GetProviderInfo(DbConnection connection, DbProviderManifest& providerManifest)
+   at System.Data.Entity.DbModelBuilder.Build(DbConnection providerConnection)
+   at System.Data.Entity.Internal.LazyInternalContext.CreateModel(LazyInternalContext internalContext)
+   at System.Data.Entity.Internal.RetryLazy`2.GetValue(TInput input)
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeContext()
+   at System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.get_InternalContext()
+   at System.Data.Entity.Infrastructure.DbQuery`1.System.Linq.IQueryable.get_Provider()
+   at System.Linq.Queryable.Where[TSource](IQueryable`1 source, Expression`1 predicate)
+   at OsosOracle.DataLayer.Concrete.EntityFramework.Dal.EfSYSKULLANICIDal.Filtrele(IQueryable`1 result, SYSKULLANICIAra filtre) in C:\Projeler\OsosOracle\OsosOracle.DataLayer\Concrete\EntityFramework\Dal\EfSYSKULLANICIDal.cs:line 40
+   at OsosOracle.DataLayer.Concrete.EntityFramework.Dal.EfSYSKULLANICIDal.DetayGetir(SYSKULLANICIAra filtre) in C:\Projeler\OsosOracle\OsosOracle.DataLayer\Concrete\EntityFramework\Dal\EfSYSKULLANICIDal.cs:line 116
+   at OsosOracle.Business.Concrete.SYSKULLANICIManager.DetayGetir(SYSKULLANICIAra filtre) in C:\Projeler\OsosOracle\OsosOracle.Business\Concrete\SYSKULLANICIManager.cs:line 44
+   at OsosOracle.MvcUI.Controllers.LoginController.Login(SYSKULLANICIDetay model, String ReturnUrl) in C:\Projeler\OsosOracle\OsosOracle.MvcUI\Controllers\LoginController.cs:line 32
+   at lambda_method(Cl
+-------------------------------
+
+http://localhost:12735/Login/Login?ReturnUrl=%2F
+16:14:36 6 Nisan 2020 Pazartesi
+  :System.Web.HttpException (0x80004005): Kaynak Bulunamadı
+   konum: OsosOracle.MvcUI.Infrastructure.NinjectControllerFactory.GetControllerInstance(RequestContext requestContext, Type controllerType) C:\Projeler\OsosOracle\OsosOracle.MvcUI\Infrastructure\NinjectControllerFactory.cs içinde: satır 17
+   konum: System.Web.Mvc.DefaultControllerFactory.CreateController(RequestContext requestContext, String controllerName)
+   konum: System.Web.Mvc.MvcHandler.ProcessRequestInit(HttpContextBase httpContext, IController& controller, IControllerFactory& factory)
+   konum: System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContextBase httpContext, AsyncCallback callback, Object state)
+   konum: System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContext httpContext, AsyncCallback callback, Object state)
+   konum: System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.BeginProcessRequest(HttpContext context, AsyncCallback cb, Object extraData)
+   konum: System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   konum: System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   konum: System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously){'$id':'1','HttpMethod':'GET','UrlReferrer':'http://localhost:12735/Login/Login?ReturnUrl=%2F','RawUrl':'/favicon.ico','Browser':'Chrome','Version':'80.0','QueryString':[],'Form':[],'UserHostAddress':'::1','IsSecureConnection':false}
+-------------------------------
+
+http://localhost:12735/Abone/Index
+16:48:21 6 Nisan 2020 Pazartesi
+  :System.NullReferenceException: Nesne başvurusu bir nesnenin örneğine ayarlanmadı.
+   konum: OsosOracle.MvcUI.Controllers.AboneController.DataTablesList(DtParameterModel dtParameterModel, ENTABONEAra entAboneAra) C:\Projeler\OsosOracle\OsosOracle.MvcUI\Controllers\AboneController.cs içinde: satır 63
+   konum: lambda_method(Closure , ControllerBase , Object[] )
+   konum: System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   konum: System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   konum: System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   konum: System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c.<BeginInvokeSynchronousActionMethod>b__9_0(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
+   konum: System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
+   konum: System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   konum: System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   konum: System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass11_0.<InvokeActionMethodFilterAsynchronouslyRecursive>b__0()
+   konum: System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass11_2.<InvokeActionMethodFilterAsynchronouslyRecursive>b__2()
+   konum: System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass7_0.<BeginInvokeActionMethodWithFilters>b__1(IAsyncResult asyncResult)
+   konum: System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   konum: System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   konum: System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   konum: System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass3_6.<BeginInvokeAction>b__4()
+   konum: System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass3_1.<BeginInvokeAction>b__1(IAsyncResult asyncResult)
+   konum: System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   konum: System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   konum: System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)
+   konum: System.Web.Mvc.Controller.<>c.<BeginExecuteCore>b__152_1(IAsyncResult asyncResult, ExecuteCoreState innerState)
+   konum: System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   konum: System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   konum: System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   konum: System.Web.Mvc.Controller.<>c.<BeginExecute>b__151_2(IAsyncResult asyncResult, Controller controller)
+   konum: System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   konum: System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   konum: System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   konum: System.Web.Mvc.Controller.System.Web.Mvc.Async.IAsyncController.EndExecute(IAsyncResult asyncResult)
+   konum: System.Web.Mvc.MvcHandler.<>c.<BeginProcessRequest>b__20_1(IAsyncResult asyncResult, ProcessRequestState innerState)
+   konum: System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   konum: System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   konum: System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   konum: System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.EndProcessRequest(IAsyncResult result)
+   konum: System.Web.HttpApplicat
+-------------------------------
+
+http://localhost:12735/EntSatis/Ekle
+17:35:14 6 Nisan 2020 Pazartesi
+  :System.NullReferenceException: Nesne başvurusu bir nesnenin örneğine ayarlanmadı.
+   konum: OsosOracle.MvcUI.Filters.BackUpFilter.OnActionExecuted(ActionExecutedContext filterContext) C:\Projeler\OsosOracle\OsosOracle.MvcUI\Filters\BackUpFilter.cs içinde: satır 22
+   konum: System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass11_2.<InvokeActionMethodFilterAsynchronouslyRecursive>b__2()
+   konum: System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass11_2.<InvokeActionMethodFilterAsynchronouslyRecursive>b__2()
+   konum: System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass7_0.<BeginInvokeActionMethodWithFilters>b__1(IAsyncResult asyncResult)
+   konum: System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   konum: System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   konum: System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   konum: System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass3_6.<BeginInvokeAction>b__4()
+   konum: System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass3_1.<BeginInvokeAction>b__1(IAsyncResult asyncResult)
+   konum: System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   konum: System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   konum: System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)
+   konum: System.Web.Mvc.Controller.<>c.<BeginExecuteCore>b__152_1(IAsyncResult asyncResult, ExecuteCoreState innerState)
+   konum: System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   konum: System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   konum: System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   konum: System.Web.Mvc.Controller.<>c.<BeginExecute>b__151_2(IAsyncResult asyncResult, Controller controller)
+   konum: System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   konum: System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   konum: System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   konum: System.Web.Mvc.Controller.System.Web.Mvc.Async.IAsyncController.EndExecute(IAsyncResult asyncResult)
+   konum: System.Web.Mvc.MvcHandler.<>c.<BeginProcessRequest>b__20_1(IAsyncResult asyncResult, ProcessRequestState innerState)
+   konum: System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   konum: System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   konum: System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   konum: System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.EndProcessRequest(IAsyncResult result)
+   konum: System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   konum: System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   konum: System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously){'$id':'1','HttpMethod':'POST','UrlReferrer':'http://localhost:12735/EntSatis/Ekle','RawUrl':'/EntSatis/SatisYap','Browser':'Chrome','Version':'80.0','QueryString':[],'Form':[],'UserHostAddress':'::1','IsSecureConnection':false}
+-------------------------------

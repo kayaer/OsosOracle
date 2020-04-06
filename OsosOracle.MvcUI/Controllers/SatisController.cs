@@ -30,10 +30,8 @@ namespace OsosOracle.MvcUI.Controllers
     public class SatisController : BaseController
     {
         private readonly IENTSATISService _entSatisService;
-        private readonly IENTSAYACService _entSayacService;
         private readonly IENTABONESAYACService _entAboneSayacService;
         private readonly IENTABONEService _entAboneService;
-        private readonly IPRMTARIFEKALORIMETREService _prmKALORIMETREService;
         private readonly IPRMTARIFESUService _prmTarifeSuService;
         public SatisController(IENTSATISService entSatisService,
             IENTSAYACService entSayacService,
@@ -43,10 +41,8 @@ namespace OsosOracle.MvcUI.Controllers
             IPRMTARIFESUService prmTarifeSuService)
         {
             _entSatisService = entSatisService;
-            _entSayacService = entSayacService;
             _entAboneSayacService = entAboneSayacService;
             _entAboneService = entAboneService;
-            _prmKALORIMETREService = prmKALORIMETREService;
             _prmTarifeSuService = prmTarifeSuService;
         }
         public ActionResult Index()
@@ -278,6 +274,7 @@ namespace OsosOracle.MvcUI.Controllers
             return Json(model, JsonRequestBehavior.AllowGet);
         }
 
+        //[BackUpFilter]
         public JsonResult SatisYap(SatisModel model)
         {
             if (model.SuSatisModel.Satis.SatisTipi == enumSatisTipi.Satis.GetHashCode())

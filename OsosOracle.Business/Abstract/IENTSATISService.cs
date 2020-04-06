@@ -32,7 +32,7 @@ namespace OsosOracle.Business.Abstract
         ENTSATIS Ekle(ENTSATIS entity);
 
         [OperationContract]
-        void Guncelle(List<ENTSATIS> entityler);
+        ENTSATIS Guncelle(ENTSATIS entity);
 
         [OperationContract]
         void Sil(List<int> idler);

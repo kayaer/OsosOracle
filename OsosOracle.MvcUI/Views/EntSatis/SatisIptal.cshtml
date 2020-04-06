@@ -50,7 +50,7 @@
                         <div class="col-md-6">
                             @Html.TextBoxFor(t => t.KalorimetreSatisModel.AboneSayacDetay.KalorimetreTarifeAdi, new { @class = "form-control", placeholder = Dil.Kalorimetre + ' ' + Dil.Tarife })
                         </div>
-                       
+
                         <div class="col-md-6">
                             @Html.TextBoxFor(t => t.KalorimetreSatisModel.KalorimetreOkunan.AkoMesaj, new { @class = "form-control", placeholder = _T("Kalorimetre Bilgisi") })
                         </div>
@@ -124,13 +124,13 @@
             <div class="panel panel-default">
                 <div class="panel-heading">Kart Bilgileri(Kalorimetre)</div>
                 <div class="panel-body">
-                   
+
                     <div class="form-group">
-                       @Html.TextBoxFor(t => t.KalorimetreSatisModel.KalorimetreOkunan.Kredi, new { @class = "form-control", placeholder = Dil.AnaKredi })
+                        @Html.TextBoxFor(t => t.KalorimetreSatisModel.KalorimetreOkunan.Kredi, new { @class = "form-control", placeholder = Dil.AnaKredi })
                     </div>
 
                     <div class="form-group">
-                         @Html.TextBoxFor(t => t.KalorimetreSatisModel.SatisIptal.AnaKredi, new { @class = "form-control", placeholder = "Yüklenecek Ana Kredi" })
+                        @Html.TextBoxFor(t => t.KalorimetreSatisModel.SatisIptal.AnaKredi, new { @class = "form-control", placeholder = "Yüklenecek Ana Kredi" })
                     </div>
                     <div class="form-group">
                         <button type="submit" class="btn btn-danger btn-sm pull-right" name="submitButton" id="btnKalorimetreSatisIptal">
@@ -187,10 +187,18 @@
                        $("#@Html.IdFor(t => t.SuSatisModel.AboneSayacDetay.SonSatisTarihi)").val(jqXHR.SuSatisModel.AboneSayacDetay.SonSatisTarihiStr).blur();
 
                        //satış bilgileri doldur
-                       $("#@Html.IdFor(t => t.SuSatisModel.Satis.ODEME)").val(jqXHR.SuSatisModel.Satis.ODEME).blur();
-                       $("#@Html.IdFor(t => t.SuSatisModel.Satis.KREDI)").val(jqXHR.SuSatisModel.Satis.KREDI).blur();
-                       $("#@Html.IdFor(t => t.KalorimetreSatisModel.Satis.ODEME)").val(jqXHR.KalorimetreSatisModel.Satis.ODEME).blur();
-                       $("#@Html.IdFor(t => t.KalorimetreSatisModel.Satis.KREDI)").val(jqXHR.KalorimetreSatisModel.Satis.KREDI).blur();
+                       if (jqXHR.SuSatisModel.Satis != null)
+                       {
+                        $("#@Html.IdFor(t => t.SuSatisModel.Satis.ODEME)").val(jqXHR.SuSatisModel.Satis.ODEME).blur();
+                        $("#@Html.IdFor(t => t.SuSatisModel.Satis.KREDI)").val(jqXHR.SuSatisModel.Satis.KREDI).blur();
+                       }
+
+                       if (jqXHR.KalorimetreSatisModel.Satis != null)
+                       {
+                            $("#@Html.IdFor(t => t.KalorimetreSatisModel.Satis.ODEME)").val(jqXHR.KalorimetreSatisModel.Satis.ODEME).blur();
+                            $("#@Html.IdFor(t => t.KalorimetreSatisModel.Satis.KREDI)").val(jqXHR.KalorimetreSatisModel.Satis.KREDI).blur();
+                       }
+
 
                        //Kart bilgileri doldur
                        $("#@Html.IdFor(t => t.SuSatisModel.SatisIptal.AnaKredi)").val(jqXHR.SuSatisModel.SatisIptal.AnaKredi).blur();
@@ -253,10 +261,10 @@
 
         $("#btnKalorimetreSatisIptal").click(function (e) {
             if (KalorimetreKrediYukle(SatisModel.KalorimetreSatisModel) == "1") {
-                             
+
                                SatisModel.KalorimetreSatisModel.Satis.KREDI = SatisModel.KalorimetreSatisModel.SatisIptal.AnaKredi;
                                SatisModel.KalorimetreSatisModel.Satis.YEDEKKREDI =  SatisModel.KalorimetreSatisModel.SatisIptal.YedekKredi;
-                              
+
                                SatisModel.KalorimetreSatisModel.Satis.SatisTipi = @enumSatisTipi.SatisIptal.GetHashCode();//İPTAL SATIŞ
                                var model=JSON.stringify(SatisModel)
 

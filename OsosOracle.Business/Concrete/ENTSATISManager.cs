@@ -78,13 +78,13 @@ namespace OsosOracle.Business.Concrete
             return entity;
         }
 
-        public void Guncelle(List<ENTSATIS> entityler)
+        public ENTSATIS Guncelle(ENTSATIS entity)
         {
-            foreach (var entity in entityler)
-            {
-                Validate(entity);
-            }
-            _eNTSATISDal.Guncelle(entityler.ConvertEfList<ENTSATIS, ENTSATISEf>());
+
+            Validate(entity);
+
+            entity = _eNTSATISDal.Guncelle(entity.ConvertEfList<ENTSATIS, ENTSATISEf>()).FirstOrDefault();
+            return entity;
         }
 
         public void Sil(List<int> idler)

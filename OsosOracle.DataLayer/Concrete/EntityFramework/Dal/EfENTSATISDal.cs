@@ -220,7 +220,7 @@ namespace OsosOracle.DataLayer.Concrete.EntityFramework.Dal
         }
 
 
-        public void Guncelle(List<ENTSATISEf> yeniDegerler)
+        public List<ENTSATIS> Guncelle(List<ENTSATISEf> yeniDegerler)
         {
             using (var context = new AppContext())
             {
@@ -239,6 +239,7 @@ namespace OsosOracle.DataLayer.Concrete.EntityFramework.Dal
 
                 AlanlariGuncelle(context, mevcutDegerler, yeniDegerler);
                 context.SaveChanges();
+                return yeniDegerler.ToList<ENTSATIS>();
             }
         }
 
@@ -254,9 +255,9 @@ namespace OsosOracle.DataLayer.Concrete.EntityFramework.Dal
                 entry.CurrentValues.SetValues(yeniDeger);
 
                 ////Değişmemesi gereken kolonlar buraya yazılacak.
-                //entry.Property(u => u.Id).IsModified = false;
-                //entry.Property(u => u.EklemeTarihi).IsModified = false;
-                //entry.Property(u => u.EkleyenId).IsModified = false;
+                entry.Property(u => u.KAYITNO).IsModified = false;
+                entry.Property(u => u.OLUSTURMATARIH).IsModified = false;
+                entry.Property(u => u.OLUSTURAN).IsModified = false;
             }
         }
 

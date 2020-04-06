@@ -166,12 +166,13 @@ namespace OsosOracle.Framework.Web.Mvc
             base.Initialize(requestContext);
             if (Session["CurrentCulture"] != null)
             {
-                Thread.CurrentThread.CurrentCulture = new CultureInfo(Session["CurrentCulture"].ToString());
+                //Thread.CurrentThread.CurrentCulture = new CultureInfo(Session["CurrentCulture"].ToString());
+                Thread.CurrentThread.CurrentCulture = new CultureInfo("tr"); //new CultureInfo(Session["CurrentCulture"].ToString());
                 Thread.CurrentThread.CurrentUICulture = new CultureInfo(Session["CurrentCulture"].ToString());
             }
             else
             {
-                Session["CurrentCulture"] = "en";
+                Session["CurrentCulture"] = "tr";
 
             }
         }

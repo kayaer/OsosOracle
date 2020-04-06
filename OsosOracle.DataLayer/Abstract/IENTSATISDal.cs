@@ -18,7 +18,7 @@ namespace OsosOracle.DataLayer.Abstract
 		int KayitSayisiGetir(ENTSATISAra filtre = null);
 
 		List<ENTSATIS> Ekle(List<ENTSATISEf> entityler);
-		void Guncelle(List<ENTSATISEf> yeniDegerler);
+		List<ENTSATIS> Guncelle(List<ENTSATISEf> yeniDegerler);
 		void Sil(List<int> idler);
         ENTSATISDataTable SonSatisGetir(ENTSATISAra filtre);
 		List<ENTSATIS> SatisGetir(int kurumKayitNo);

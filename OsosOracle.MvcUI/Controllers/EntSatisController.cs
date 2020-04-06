@@ -136,12 +136,16 @@ namespace OsosOracle.MvcUI.Controllers
         {
             if (string.IsNullOrEmpty(model.HamData))
             {
-                model.HamData = "E#1#20191004#0/0/0#0#0#b#b#1#0#0#0#1#0#b#b#b#b#b#0#0#0#0#0#65535#65535#65535#65535#0#1#3#1#0#|G#1#20191004#0/0/0#0#0#b#b#1#0#0#1#0#b#b#b#b#b#b#b#0#0#1#3#1#0#|S#1#20191004#0/0/0#0#0#b#b#1#0#0#0#0#1#0#1#1#65527#65535#b#b#b#b#b#b#b#b#0#1#3#1#0#|K#1#20191004#0/0/0#0#0#b#b#1#0#0#0#1#0#b#b#b#b#0#0#0#0#0#0#0#1#3#1#0#|";
+                model.HamData = "E#1#20191004#0/0/0#0#0#b#b#1#0#0#0#1#0#b#b#b#b#b#0#0#0#0#0#65535#65535#65535#65535#0#1#3#1#0#|G#1#20191004#0/0/0#0#0#b#b#1#0#0#1#0#b#b#b#b#b#b#b#0#0#1#3#1#0#|S#1#20191004#0/0/0#0#0#b#b#1#0#0#0#0#1#0#1#1#65527#65535#b#b#b#b#b#b#b#b#0#1#3#1#0#|K#1#20191004#0/0/0#300#0#b#b#1#0#0#0#1#0#b#b#b#b#0#0#0#0#0#0#0#1#3#1#0#|";
             }
             model.SuSatisModel.SogukSuOkunan = new SogukSuOkunan(model.HamData);
             model.SuSatisModel.AboneSayacDetay = _entAboneSayacService.DetayGetir(new ENTABONESAYACAra { SayacSeriNo = model.SuSatisModel.SogukSuOkunan.SayacSeriNo, SayacTur = 1, Durum = 1 }).FirstOrDefault();
-            model.SuSatisModel.PrmTarifeSuDetay = _prmTarifeSuService.DetayGetir(new PRMTARIFESUAra { KAYITNO = model.SuSatisModel.AboneSayacDetay.TARIFEKAYITNO }).FirstOrDefault();
-            model.SuSatisModel.Satis = _entSatisService.Getir(new ENTSATISAra { ABONEKAYITNO = model.SuSatisModel.AboneSayacDetay.ABONEKAYITNO, SAYACKAYITNO = model.SuSatisModel.AboneSayacDetay.SAYACKAYITNO, SatisTipi = 21 }).OrderByDescending(x => x.OLUSTURMATARIH).FirstOrDefault();
+            if (model.SuSatisModel.AboneSayacDetay != null)
+            {
+                model.SuSatisModel.PrmTarifeSuDetay = _prmTarifeSuService.DetayGetir(new PRMTARIFESUAra { KAYITNO = model.SuSatisModel.AboneSayacDetay.TARIFEKAYITNO }).FirstOrDefault();
+                model.SuSatisModel.Satis = _entSatisService.Getir(new ENTSATISAra { ABONEKAYITNO = model.SuSatisModel.AboneSayacDetay.ABONEKAYITNO, SAYACKAYITNO = model.SuSatisModel.AboneSayacDetay.SAYACKAYITNO, SatisTipi = enumSatisTipi.Satis.GetHashCode() }).OrderByDescending(x => x.OLUSTURMATARIH).FirstOrDefault();
+            }
+
 
             if (model.SuSatisModel.Satis != null)
             {
@@ -153,8 +157,13 @@ namespace OsosOracle.MvcUI.Controllers
 
             model.KalorimetreSatisModel.KalorimetreOkunan = new KalorimetreOkunan(model.HamData);
             model.KalorimetreSatisModel.AboneSayacDetay = _entAboneSayacService.DetayGetir(new ENTABONESAYACAra { SayacSeriNo = model.KalorimetreSatisModel.KalorimetreOkunan.CihazNo, SayacTur = 2, Durum = 1 }).FirstOrDefault();
-            model.KalorimetreSatisModel.PrmTarifeKALORIMETREDetay = _prmKALORIMETREService.DetayGetir(new PRMTARIFEKALORIMETREAra { KAYITNO = model.KalorimetreSatisModel.AboneSayacDetay.TARIFEKAYITNO }).FirstOrDefault();
-            model.KalorimetreSatisModel.Satis = _entSatisService.Getir(new ENTSATISAra { ABONEKAYITNO = model.KalorimetreSatisModel.AboneSayacDetay.ABONEKAYITNO, SAYACKAYITNO = model.KalorimetreSatisModel.AboneSayacDetay.SAYACKAYITNO, SatisTipi = 21 }).OrderByDescending(x => x.OLUSTURMATARIH).FirstOrDefault();
+            if (model.KalorimetreSatisModel.AboneSayacDetay != null)
+            {
+                model.KalorimetreSatisModel.PrmTarifeKALORIMETREDetay = _prmKALORIMETREService.DetayGetir(new PRMTARIFEKALORIMETREAra { KAYITNO = model.KalorimetreSatisModel.AboneSayacDetay.TARIFEKAYITNO }).FirstOrDefault();
+                model.KalorimetreSatisModel.Satis = _entSatisService.Getir(new ENTSATISAra { ABONEKAYITNO = model.KalorimetreSatisModel.AboneSayacDetay.ABONEKAYITNO, SAYACKAYITNO = model.KalorimetreSatisModel.AboneSayacDetay.SAYACKAYITNO, SatisTipi = enumSatisTipi.Satis.GetHashCode() }).OrderByDescending(x => x.OLUSTURMATARIH).FirstOrDefault();
+
+            }
+
 
 
             if (model.KalorimetreSatisModel.Satis != null)
@@ -431,12 +440,12 @@ namespace OsosOracle.MvcUI.Controllers
 
             return Json(model, JsonRequestBehavior.AllowGet);
         }
-
+        //[BackUpFilter]
         public JsonResult SatisYap(SatisModel model)
         {
-            if (model.SuSatisModel.Satis.SatisTipi == enumSatisTipi.Satis.GetHashCode())
+            if (model.SuSatisModel.Satis != null && model.SuSatisModel.Satis.SatisTipi == enumSatisTipi.Satis.GetHashCode() )
             {
-                if (model.SuSatisModel.Satis.ODEME > 0)
+                if (model.SuSatisModel.Satis.KAYITNO == 0 && model.SuSatisModel.Satis.ODEME > 0)
                 {
 
                     model.SuSatisModel.Satis.OLUSTURAN = AktifKullanici.KayitNo;
@@ -447,21 +456,21 @@ namespace OsosOracle.MvcUI.Controllers
                     _entAboneService.Guncelle(abone.List());
                 }
             }
-            else if (model.SuSatisModel.Satis.SatisTipi == enumSatisTipi.BedelsizSatis.GetHashCode())
+            else if (model.SuSatisModel.Satis != null && model.SuSatisModel.Satis.SatisTipi == enumSatisTipi.BedelsizSatis.GetHashCode())
             {
                 model.SuSatisModel.Satis.OLUSTURAN = AktifKullanici.KayitNo;
 
                 model.SuSatisModel.Satis = _entSatisService.Ekle(model.SuSatisModel.Satis);
             }
-            else if (model.SuSatisModel.Satis.SatisTipi == enumSatisTipi.SatisIptal.GetHashCode())
+            else if (model.SuSatisModel.Satis != null && model.SuSatisModel.Satis.SatisTipi == enumSatisTipi.SatisIptal.GetHashCode())
             {
-                model.SuSatisModel.Satis.OLUSTURAN = AktifKullanici.KayitNo;
-                model.SuSatisModel.Satis = _entSatisService.Ekle(model.SuSatisModel.Satis);
+                model.SuSatisModel.Satis.GUNCELLEYEN = AktifKullanici.KayitNo;
+                model.SuSatisModel.Satis = _entSatisService.Guncelle(model.SuSatisModel.Satis);
             }
 
-            if (model.KalorimetreSatisModel.Satis.SatisTipi == enumSatisTipi.Satis.GetHashCode())
+            if (model.KalorimetreSatisModel.Satis != null && model.KalorimetreSatisModel.Satis.SatisTipi == enumSatisTipi.Satis.GetHashCode() )
             {
-                if (model.KalorimetreSatisModel.Satis.ODEME > 0)
+                if (model.KalorimetreSatisModel.Satis.KAYITNO == 0 && model.KalorimetreSatisModel.Satis.ODEME > 0)
                 {
 
                     model.KalorimetreSatisModel.Satis.OLUSTURAN = AktifKullanici.KayitNo;
@@ -471,16 +480,16 @@ namespace OsosOracle.MvcUI.Controllers
                     _entAboneService.Guncelle(abone.List());
                 }
             }
-            else if (model.KalorimetreSatisModel.Satis.SatisTipi == enumSatisTipi.BedelsizSatis.GetHashCode())
+            else if (model.KalorimetreSatisModel.Satis != null && model.KalorimetreSatisModel.Satis.SatisTipi == enumSatisTipi.BedelsizSatis.GetHashCode())
             {
                 model.KalorimetreSatisModel.Satis.OLUSTURAN = AktifKullanici.KayitNo;
                 model.KalorimetreSatisModel.Satis = _entSatisService.Ekle(model.KalorimetreSatisModel.Satis);
 
             }
-            else if (model.KalorimetreSatisModel.Satis.SatisTipi == enumSatisTipi.SatisIptal.GetHashCode())
+            else if (model.KalorimetreSatisModel.Satis != null && model.KalorimetreSatisModel.Satis.SatisTipi == enumSatisTipi.SatisIptal.GetHashCode())
             {
-                model.KalorimetreSatisModel.Satis.OLUSTURAN = AktifKullanici.KayitNo;
-                model.KalorimetreSatisModel.Satis = _entSatisService.Ekle(model.KalorimetreSatisModel.Satis);
+                model.KalorimetreSatisModel.Satis.GUNCELLEYEN = AktifKullanici.KayitNo;
+                model.KalorimetreSatisModel.Satis = _entSatisService.Guncelle(model.KalorimetreSatisModel.Satis);
 
             }
 
@@ -534,7 +543,7 @@ namespace OsosOracle.MvcUI.Controllers
             List<SatisBilgileri> dataSource4 = new List<SatisBilgileri>();
             SatisBilgileri satisBilgileri = new SatisBilgileri();
 
-            if (model.SuSatisModel.Satis.KAYITNO > 0)
+            if (model.SuSatisModel.Satis!=null && model.SuSatisModel.Satis.KAYITNO > 0)
             {
                 ENTSATISDetay suSatisDetay = _entSatisService.DetayGetirById(model.SuSatisModel.Satis.KAYITNO);
                 var aboneSayacSu = _entAboneSayacService.DetayGetir(new ENTABONESAYACAra { SAYACKAYITNO = suSatisDetay.SAYACKAYITNO, Durum = 1 }).FirstOrDefault();
@@ -567,7 +576,7 @@ namespace OsosOracle.MvcUI.Controllers
 
 
 
-            if (model.KalorimetreSatisModel.Satis.KAYITNO > 0)
+            if (model.KalorimetreSatisModel.Satis!=null && model.KalorimetreSatisModel.Satis.KAYITNO > 0)
             {
                 ENTSATISDetay kalorimetreSatisDetay = _entSatisService.DetayGetirById(model.KalorimetreSatisModel.Satis.KAYITNO);
                 var aboneSayacKalorimetre = _entAboneSayacService.DetayGetir(new ENTABONESAYACAra { SAYACKAYITNO = kalorimetreSatisDetay.SAYACKAYITNO, Durum = 1 }).FirstOrDefault();

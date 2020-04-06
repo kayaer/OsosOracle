@@ -1123,6 +1123,7 @@
     <Compile Include="Controllers\SYSROLKULLANICIController.cs" />
     <Compile Include="Controllers\TarifeController.cs" />
     <Compile Include="Filters\AuthorizeUser.cs" />
+    <Compile Include="Filters\BackUpFilter.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>

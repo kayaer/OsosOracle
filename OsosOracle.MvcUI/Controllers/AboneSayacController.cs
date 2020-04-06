@@ -14,6 +14,9 @@ using OsosOracle.MvcUI.Resources;
 using OsosOracle.Framework.CrossCuttingConcern.ExceptionHandling;
 using OsosOracle.Entities.ComplexType.PRMTARIFESUComplexTypes;
 using OsosOracle.Entities.ComplexType.PRMTARIFEKALORIMETREComplexTypes;
+using OsosOracle.Framework.DataAccess.Filter;
+using OsosOracle.Entities.Concrete;
+using OsosOracle.Framework.Enums;
 
 namespace OsosOracle.MvcUI.Controllers
 {
@@ -378,12 +381,20 @@ namespace OsosOracle.MvcUI.Controllers
 
         public ActionResult AboneSayacList(DtParameterModel dtParameterModel, ENTABONESAYACAra entAboneSayacAra)
         {
+            entAboneSayacAra.Ara = dtParameterModel.AramaKriteri;
             entAboneSayacAra.KurumKayitNo = AktifKullanici.KurumKayitNo;
             if (!string.IsNullOrEmpty(dtParameterModel.Search.Value))
             {
                 entAboneSayacAra.AboneAdi = dtParameterModel.Search.Value;
             }
-
+            entAboneSayacAra.Ara.Siralama = new List<Siralama>
+            {
+                new Siralama
+                {
+                    KolonAdi=LinqExtensions.GetPropertyName((ENTABONESAYAC t)=>t.SONSATISTARIH),
+                    SiralamaTipi=EnumSiralamaTuru.Desc
+                }
+            };
             var kayitlar = _entAboneSayacService.Ara(entAboneSayacAra);
 
             return Json(new DataTableResult()
