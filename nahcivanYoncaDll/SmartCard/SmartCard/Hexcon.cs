@@ -127,7 +127,14 @@ namespace SmartCard
 
             return Deger;
         }
+        public static byte[] String4to4Byte(string Deger)
+        {
+            char[] StringDeger = Deger.ToCharArray();
 
+            byte[] DondurulecekDeger = { Convert.ToByte(StringDeger[0]), Convert.ToByte(StringDeger[1]), Convert.ToByte(StringDeger[2]), Convert.ToByte(StringDeger[3]) };
+
+            return DondurulecekDeger;
+        }
         public static byte[] StringToByte(string InString)
         {
             string[] ByteStrings;

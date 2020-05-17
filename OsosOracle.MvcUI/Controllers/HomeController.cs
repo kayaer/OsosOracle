@@ -10,6 +10,7 @@ using OsosOracle.Entities.ComplexType.SYSMENUComplexTypes;
 using OsosOracle.Framework.SharedModels;
 using OsosOracle.Framework.Web.Mvc;
 using OsosOracle.MvcUI.Filters;
+using OsosOracle.MvcUI.Helpers;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -26,40 +27,30 @@ namespace OsosOracle.MvcUI.Controllers
     {
         private readonly ISYSMENUService _sysMenuService;
         private readonly IRPTDASHBOARDService _rptDashboardService;
-        private readonly IENTSAYACService _entSayacService;
-        private readonly IENTABONEService _entAboneService;
-        private readonly IENTSATISService _entSatisService;
-        private readonly ISYSKULLANICIService _sysKullaniciService;
-        public HomeController(ISYSMENUService sysMenuService, IRPTDASHBOARDService rptDashboardService,IENTSAYACService entSayacService, IENTABONEService entAboneService, IENTSATISService entSatisService, ISYSKULLANICIService sysKullaniciService)
+      
+        public HomeController(ISYSMENUService sysMenuService, IRPTDASHBOARDService rptDashboardService)
         {
             _sysMenuService = sysMenuService;
             _rptDashboardService = rptDashboardService;
-            _entSayacService = entSayacService;
-            _entAboneService = entAboneService;
-            _entSatisService = entSatisService;
-            _sysKullaniciService = sysKullaniciService;
-
         }
         public ActionResult Index()
         {
-            ViewBag.SistemdekiSayacSayisi = _entSayacService.Ara(new ENTSAYACAra { KURUMKAYITNO = AktifKullanici.KurumKayitNo }).ToplamKayitSayisi;
-            ViewBag.SistemdekiAboneSayisi = _entAboneService.Ara(new ENTABONEAra { KURUMKAYITNO = AktifKullanici.KurumKayitNo }).ToplamKayitSayisi;
-            ViewBag.SistemdekiSatisSayisi = _entSatisService.Ara(new ENTSATISAra { KurumKayitNo = AktifKullanici.KurumKayitNo }).ToplamKayitSayisi;
-            ViewBag.SistemdekiKullaniciSayisi = _sysKullaniciService.Ara(new SYSKULLANICIAra { KURUMKAYITNO = AktifKullanici.KurumKayitNo }).ToplamKayitSayisi;
+            ViewBag.SistemdekiSayacSayisi = OraDbHelper.SayacSayisiGetir(AktifKullanici.KurumKayitNo);
+            ViewBag.SistemdekiAboneSayisi = OraDbHelper.AboneSayisiGetir(AktifKullanici.KurumKayitNo);
+            ViewBag.SistemdekiSatisSayisi = OraDbHelper.SatisSayisiGetir(AktifKullanici.KurumKayitNo);
+            ViewBag.SistemdekiKullaniciSayisi = OraDbHelper.KullaniciSayisiGetir(AktifKullanici.KurumKayitNo);
             return View();
+        }
+
+        public JsonResult GetSession()
+        {
+            return Json(AktifKullanici,JsonRequestBehavior.AllowGet);
         }
 
 
         [ChildActionOnly]
         public PartialViewResult MenuItems()
         {
-            //var menuler = _sysMenuService.DetayGetir();
-            //menuler = menuler.Where(x => x.PARENTKAYITNO == null).ToList();
-            //foreach (var item in menuler)
-            //{
-            //    item.Children = _sysMenuService.DetayGetir(new Entities.ComplexType.SYSMENUComplexTypes.SYSMENUAra { PARENTKAYITNO = item.KAYITNO });
-            //}
-
             try
             {
                 var menulist = _sysMenuService.YetkiGetir(AktifKullanici.KayitNo);
@@ -120,21 +111,7 @@ namespace OsosOracle.MvcUI.Controllers
         }
         public ActionResult SatisSayisiGetir()
         {
-            string ConnectionString = ConfigurationManager.ConnectionStrings["AppContext"].ConnectionString;
-            OracleConnection con = new OracleConnection();
-            con.ConnectionString = ConnectionString;
-            con.Open();
-            //string sql = "select sa.olusturmaTarih,count(1) from entsatıs sa inner join entsayac s on sa.sayackayitno=s.kayitno where to_date( sa.olusturmaTarih,'DD.MM.YYYY')>to_date(  add_months(sysdate,-1),'DD.MM.YYYY') and s.KURUMKAYITNO=" + AktifKullanici.KurumKayitNo+ " group by sa.olusturmaTarih order by sa.olusturmaTarih";
-            string sql = "select olusturmaTarih,count(1) from (select  TO_CHAR( sa.olusturmaTarih, 'dd.mm.yyyy') as olusturmaTarih ,count(1) from entsatıs sa inner join entsayac s on sa.sayackayitno=s.kayitno where to_date(sa.olusturmaTarih,'DD.MM.YYYY')> to_date(add_months(sysdate, -1), 'DD.MM.YYYY')and s.KURUMKAYITNO=" + AktifKullanici.KurumKayitNo + " group by sa.olusturmaTarih order by sa.olusturmaTarih) group by olusturmaTarih";
-
-
-            OracleDataAdapter oda = new OracleDataAdapter(sql, con);
-            DataTable dt = new DataTable();
-            oda.Fill(dt);
-            con.Close();
-            con.Dispose();
-
-            var model = dt.AsEnumerable().ToList().ConvertAll(x => new { TARIH = x.ItemArray[0].ToString(), ADET = x.ItemArray[1] });// kayitlar.Select(t => new { TARIH = t.TARIH.ToString(), t.ADET });
+            var model = OraDbHelper.GunlukSatisSayisiGetir(AktifKullanici.KurumKayitNo).AsEnumerable().ToList().ConvertAll(x => new { TARIH = x.ItemArray[0].ToString(), ADET = x.ItemArray[1] });// kayitlar.Select(t => new { TARIH = t.TARIH.ToString(), t.ADET });
             return Json(model, JsonRequestBehavior.AllowGet);
 
         }
@@ -190,8 +167,8 @@ inner join entabone a on s.abonekayıtno = a.kayıtno
 
             if (!string.IsNullOrEmpty(entSatisAra.Blok))
             {
-                where2 += " where a.blok ='" + entSatisAra.Blok+"'";
-                
+                where2 += " where a.blok ='" + entSatisAra.Blok + "'";
+
             }
             sql = sql.Replace("{whr}", where);
             sql = sql.Replace("{whr2}", where2);
@@ -211,7 +188,7 @@ inner join entabone a on s.abonekayıtno = a.kayıtno
                                 AdSoyad = satis.Field<string>("AD") + "  " + satis.Field<string>("SOYAD"),
                                 AboneNo = satis.Field<string>("ABONENO"),
                                 Kredi = satis.Field<decimal>("KREDI"),
-                                SatisTipi=satis.Field<string>("SATISTIPI")
+                                SatisTipi = satis.Field<string>("SATISTIPI")
                             };
 
             return Json(new DataTableResult()

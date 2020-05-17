@@ -19,6 +19,9 @@ namespace OsosOracle.MvcUI.Models.ENTSATISModels
             Kredi = kalorimetreData[4];
             YedekKredi = kalorimetreData[5];
             Ako = kalorimetreData[6];
+            Kalan = kalorimetreData[9];
+            Harcanan = kalorimetreData[10];
+           
 
         }
         public string TarifeAdi { get; set; }

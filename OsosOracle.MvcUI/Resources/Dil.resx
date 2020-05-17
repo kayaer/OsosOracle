@@ -1290,4 +1290,13 @@
   <data name="Vezne" xml:space="preserve">
     <value>cashier's desk</value>
   </data>
+  <data name="AboneSayacRaporu" xml:space="preserve">
+    <value>Subscriber-Meter Report</value>
+  </data>
+  <data name="KullaniciRolAtama" xml:space="preserve">
+    <value>User-Role Assign</value>
+  </data>
+  <data name="BedelsizSatis" xml:space="preserve">
+    <value>Free Sales</value>
+  </data>
 </root>

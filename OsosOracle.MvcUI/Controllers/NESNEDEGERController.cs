@@ -12,6 +12,7 @@ using OsosOracle.Framework.Utilities.ExtensionMethods;
 using OsosOracle.Framework.Enums;
 using OsosOracle.Framework.DataAccess.Filter;
 using OsosOracle.MvcUI.Filters;
+using OsosOracle.MvcUI.Resources;
 
 namespace OsosOracle.MvcUI.Controllers
 {
@@ -177,7 +178,7 @@ namespace OsosOracle.MvcUI.Controllers
             {
                 //TODO: Bu bölümü düzenle
                 id = nESNEDEGER.KAYITNO.ToString(),
-                text = nESNEDEGER.AD.ToString(),
+                text = Dil.ResourceManager.GetString( nESNEDEGER.AD.ToString())==null?nESNEDEGER.AD.ToString(): Dil.ResourceManager.GetString(nESNEDEGER.AD.ToString()),
                 description = nESNEDEGER.KAYITNO.ToString(),
             }).ToList();
             return Json(data, JsonRequestBehavior.AllowGet);
@@ -192,7 +193,7 @@ namespace OsosOracle.MvcUI.Controllers
             var data = new AutoCompleteData
             {//TODO: Bu bölümü düzenle
                 id = nESNEDEGER.KAYITNO.ToString(),
-                text = nESNEDEGER.AD.ToString(),
+                text = Dil.ResourceManager.GetString(nESNEDEGER.AD.ToString()) == null ? nESNEDEGER.AD.ToString() : Dil.ResourceManager.GetString(nESNEDEGER.AD.ToString()),
                 description = nESNEDEGER.KAYITNO.ToString(),
             };
 
@@ -207,7 +208,7 @@ namespace OsosOracle.MvcUI.Controllers
             var data = nESNEDEGERList.Select(nESNEDEGER => new AutoCompleteData
             { //TODO: Bu bölümü düzenle
                 id = nESNEDEGER.KAYITNO.ToString(),
-                text = nESNEDEGER.AD.ToString(),
+                text = Dil.ResourceManager.GetString(nESNEDEGER.AD.ToString()) == null ? nESNEDEGER.AD.ToString() : Dil.ResourceManager.GetString(nESNEDEGER.AD.ToString()),
                 description = nESNEDEGER.KAYITNO.ToString()
             });
 

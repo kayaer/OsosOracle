@@ -87,7 +87,7 @@
 
         	function AraKullanici() {
 		$('#tblSYSKULLANICI').dataTable({
-			'language': dataTableLanguage,
+			'language': GetSession(baseUrl),
 			'processing': true,
 			'serverSide': true,
 			'destroy': true,

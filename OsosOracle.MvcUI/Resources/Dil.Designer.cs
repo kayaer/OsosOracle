@@ -142,6 +142,15 @@ namespace OsosOracle.MvcUI.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Subscriber-Meter Report.
+        /// </summary>
+        public static string AboneSayacRaporu {
+            get {
+                return ResourceManager.GetString("AboneSayacRaporu", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Select Subscriber.
         /// </summary>
         public static string AboneSec {
@@ -525,6 +534,15 @@ namespace OsosOracle.MvcUI.Resources {
         public static string BayramGonder {
             get {
                 return ResourceManager.GetString("BayramGonder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Free Sales.
+        /// </summary>
+        public static string BedelsizSatis {
+            get {
+                return ResourceManager.GetString("BedelsizSatis", resourceCulture);
             }
         }
         
@@ -1911,6 +1929,15 @@ namespace OsosOracle.MvcUI.Resources {
         public static string KullaniciListesi {
             get {
                 return ResourceManager.GetString("KullaniciListesi", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to User-Role Assign.
+        /// </summary>
+        public static string KullaniciRolAtama {
+            get {
+                return ResourceManager.GetString("KullaniciRolAtama", resourceCulture);
             }
         }
         

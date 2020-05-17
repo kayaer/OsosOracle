@@ -309,9 +309,47 @@
             });
             request.done(function (jqXHR) {
                 unblockUI();
-               
-                if (jqXHR.KurumKayitNo == @enumKurum.Elektromed.GetHashCode() ||  jqXHR.KurumKayitNo == @enumKurum.Mısır.GetHashCode() ) {
-                     var su = new ActiveXObject("SmartCard.Mcm");
+
+                if (jqXHR.KurumKayitNo == @enumKurum.Elektromed.GetHashCode() || jqXHR.KurumKayitNo == @enumKurum.Mısır.GetHashCode() ) {
+
+                    if (jqXHR.EntSayacDetay.SayacModelKayitNo ==@enumSayacModeli.MercanYd.GetHashCode() || jqXHR.EntSayacDetay.SayacModelKayitNo==@enumSayacModeli.As25Yd.GetHashCode())
+                    {
+                        var su = new ActiveXObject("SmartCard.Filistin.PalestineWater");
+                                       var result = su.AboneYap(jqXHR.EntSayacDetay.SERINO,
+                                                      jqXHR.AboneNo,
+                                                      1,
+                                                      jqXHR.PRMTARIFESU.SAYACCAP,
+                                                      1,//tip
+                                                      jqXHR.PRMTARIFESU.DONEMGUN,
+                                                      jqXHR.PRMTARIFESU.FIYAT1,
+                                                      jqXHR.PRMTARIFESU.FIYAT2,
+                                                      jqXHR.PRMTARIFESU.FIYAT3,
+                                                      jqXHR.PRMTARIFESU.FIYAT4,
+                                                      jqXHR.PRMTARIFESU.FIYAT5,
+                                                      jqXHR.PRMTARIFESU.LIMIT1,
+                                                      jqXHR.PRMTARIFESU.LIMIT2,
+                                                      jqXHR.PRMTARIFESU.LIMIT3,
+                                                      jqXHR.PRMTARIFESU.LIMIT4,
+                                                      jqXHR.PRMTARIFESU.BAYRAM1GUN,
+                                                      jqXHR.PRMTARIFESU.BAYRAM1AY,
+                                                      jqXHR.PRMTARIFESU.BAYRAM1SURE,
+                                                      jqXHR.PRMTARIFESU.BAYRAM2GUN,
+                                                      jqXHR.PRMTARIFESU.BAYRAM2AY,
+                                                      jqXHR.PRMTARIFESU.BAYRAM2SURE,
+                                                      jqXHR.PRMTARIFESU.AVANSONAY,
+                                                      jqXHR.PRMTARIFESU.MAXDEBI,
+                                                      1,//ZoneIndex
+                                                      jqXHR.PRMTARIFESU.SABITUCRET
+                                                  );
+                                                  if (result === "1") {
+                                                      ajaxMesajGoster('İşlem Başarılı');
+                                                  } else {
+                                                      ajaxMesajGoster('İşlem Başarısız', 'Hata');
+                                                  }
+                    }
+                    else
+                    {
+                               var su = new ActiveXObject("SmartCard.Mcm");
                                                   var result = su.AboneYap(jqXHR.EntSayacDetay.SERINO,
                                                       jqXHR.AboneNo,
                                                       1,
@@ -347,6 +385,9 @@
                                                   } else {
                                                       ajaxMesajGoster('İşlem Başarısız', 'Hata');
                                                   }
+                    }
+
+              
                 }
                 else {
                     var su = new ActiveXObject("SmartCard.OrtakAvm");

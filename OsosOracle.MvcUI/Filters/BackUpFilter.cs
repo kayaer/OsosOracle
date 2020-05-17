@@ -1,5 +1,8 @@
-﻿using Oracle.ManagedDataAccess.Client;
+﻿using Newtonsoft.Json;
+using Oracle.ManagedDataAccess.Client;
 using OsosOracle.Business.Abstract;
+using OsosOracle.MvcUI.Helpers;
+using OsosOracle.MvcUI.RabbitMq;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -13,7 +16,7 @@ namespace OsosOracle.MvcUI.Filters
     //Rabbit mq ile satış tablosunun yedeğinin alınması
     public class BackUpFilter : ActionFilterAttribute
     {
-      
+
         public override void OnActionExecuting(ActionExecutingContext filterContext)
         {
             base.OnActionExecuting(filterContext);
@@ -21,18 +24,10 @@ namespace OsosOracle.MvcUI.Filters
 
         public override void OnActionExecuted(ActionExecutedContext filterContext)
         {
-            string ConnectionString = ConfigurationManager.ConnectionStrings["AppContext"].ConnectionString;
-            OracleConnection con = new OracleConnection();
-            con.ConnectionString = ConnectionString;
-            con.Open();
-            string sql = "SELECT * FROM ENTSATIS WHERE ROWNUM=1 ORDER BY KAYITNO DESC ";
+            var SonIslem = OraDbHelper.YapilanSonSatisGetir();
+            var data=JsonConvert.SerializeObject(SonIslem);
 
-            OracleDataAdapter oda = new OracleDataAdapter(sql, con);
-            DataTable dt = new DataTable();
-            oda.Fill(dt);
-            con.Close();
-            con.Dispose();
-
+            Publisher _publisher = new Publisher("ENTSATIS", data);
 
             base.OnActionExecuted(filterContext);
         }

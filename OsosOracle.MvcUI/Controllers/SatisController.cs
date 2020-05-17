@@ -79,7 +79,7 @@ namespace OsosOracle.MvcUI.Controllers
             model.SuSatisModel.SogukSuOkunan = ParsHamData(model.HamData);
             model.SuSatisModel.AboneSayacDetay = _entAboneSayacService.DetayGetir(new ENTABONESAYACAra { SayacSeriNo = model.SuSatisModel.SogukSuOkunan.SayacSeriNo, SayacTur = 1, Durum = 1 }).FirstOrDefault();
             model.SuSatisModel.PrmTarifeSuDetay = _prmTarifeSuService.DetayGetir(new PRMTARIFESUAra { KAYITNO = model.SuSatisModel.AboneSayacDetay.TARIFEKAYITNO }).FirstOrDefault();
-            model.SuSatisModel.Satis = _entSatisService.Getir(new ENTSATISAra { ABONEKAYITNO = model.SuSatisModel.AboneSayacDetay.ABONEKAYITNO, SAYACKAYITNO = model.SuSatisModel.AboneSayacDetay.SAYACKAYITNO, SatisTipi = 21 }).OrderByDescending(x => x.OLUSTURMATARIH).FirstOrDefault();
+            model.SuSatisModel.Satis = _entSatisService.Getir(new ENTSATISAra { ABONEKAYITNO = model.SuSatisModel.AboneSayacDetay.ABONEKAYITNO, SAYACKAYITNO = model.SuSatisModel.AboneSayacDetay.SAYACKAYITNO, SatisTipi = enumSatisTipi.Satis.GetHashCode() }).OrderByDescending(x => x.OLUSTURMATARIH).FirstOrDefault();
 
             if (model.SuSatisModel.Satis != null)
             {

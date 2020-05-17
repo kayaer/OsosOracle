@@ -63,6 +63,8 @@
     <Compile Include="classDes.cs" />
     <Compile Include="ContactlessReader.cs" />
     <Compile Include="ContactReader.cs" />
+    <Compile Include="Filistin\IAddInterface.cs" />
+    <Compile Include="Filistin\PalestineWater.cs" />
     <Compile Include="Gaz.cs" />
     <Compile Include="GlobalAyarlar.cs" />
     <Compile Include="Hexcon.cs" />
@@ -113,7 +115,7 @@
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <ProjectExtensions>
     <VisualStudio>
-      <UserProperties Reactor_Deploy="0" Reactor_Output="" Reactor_Configuration="Release" Reactor_Project="" Reactor_Commands="" Reactor_Enabled="1" />
+      <UserProperties Reactor_Enabled="1" Reactor_Commands="" Reactor_Project="" Reactor_Configuration="Release" Reactor_Output="" Reactor_Deploy="0" />
     </VisualStudio>
   </ProjectExtensions>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

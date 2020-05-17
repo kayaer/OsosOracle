@@ -440,6 +440,7 @@ namespace OsosOracle.MvcUI.Controllers
 
             return Json(model, JsonRequestBehavior.AllowGet);
         }
+
         //[BackUpFilter]
         public JsonResult SatisYap(SatisModel model)
         {

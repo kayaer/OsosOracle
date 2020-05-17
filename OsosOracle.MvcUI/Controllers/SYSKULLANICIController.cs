@@ -21,7 +21,7 @@ namespace OsosOracle.MvcUI.Controllers
     public class SYSKULLANICIController : BaseController
     {
         private readonly ISYSKULLANICIService _sYSKULLANICIService;
-      
+
         private readonly ISYSROLKULLANICIService _sysRolKullaniciService;
 
         public SYSKULLANICIController(ISYSKULLANICIService sYSKULLANICIService, ISYSROLKULLANICIService sysRolKullaniciService)
@@ -38,7 +38,7 @@ namespace OsosOracle.MvcUI.Controllers
             return View(model);
         }
 
-       
+
 
         [HttpPost]
         public ActionResult DataTablesList(DtParameterModel dtParameterModel, SYSKULLANICIAra sYSKULLANICIAra)
@@ -47,7 +47,7 @@ namespace OsosOracle.MvcUI.Controllers
             sYSKULLANICIAra.Ara = dtParameterModel.AramaKriteri;
 
             if (!string.IsNullOrEmpty(dtParameterModel.Search.Value))
-            { 
+            {
                 sYSKULLANICIAra.AD = dtParameterModel.Search.Value;
             }
 
@@ -117,7 +117,7 @@ namespace OsosOracle.MvcUI.Controllers
 
         public ActionResult Hesabim()
         {
-            
+
 
             var model = new SYSKULLANICIKaydetModel
             {
@@ -146,27 +146,23 @@ namespace OsosOracle.MvcUI.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Kaydet(SYSKULLANICIKaydetModel sYSKULLANICIKaydetModel)
         {
-            try
-            {
-                sYSKULLANICIKaydetModel.SYSKULLANICI.DURUM = 1;
-                //sYSKULLANICIKaydetModel.SYSKULLANICI.DIL = 1;
-                if (sYSKULLANICIKaydetModel.SYSKULLANICI.KAYITNO > 0)
-                {
-                    sYSKULLANICIKaydetModel.SYSKULLANICI.GUNCELLEYEN = AktifKullanici.KayitNo;
-                    _sYSKULLANICIService.Guncelle(sYSKULLANICIKaydetModel.SYSKULLANICI.List());
-                }
-                else
-                {
-                    sYSKULLANICIKaydetModel.SYSKULLANICI.OLUSTURAN = AktifKullanici.KayitNo;
-                    _sYSKULLANICIService.Ekle(sYSKULLANICIKaydetModel.SYSKULLANICI.List());
-                }
 
-                return Yonlendir(Url.Action("Index"), $"Kullanıcı kayıdı başarıyla gerçekleştirilmiştir.");
+            sYSKULLANICIKaydetModel.SYSKULLANICI.DURUM = 1;
+            //sYSKULLANICIKaydetModel.SYSKULLANICI.DIL = 1;
+            if (sYSKULLANICIKaydetModel.SYSKULLANICI.KAYITNO > 0)
+            {
+                sYSKULLANICIKaydetModel.SYSKULLANICI.GUNCELLEYEN = AktifKullanici.KayitNo;
+                _sYSKULLANICIService.Guncelle(sYSKULLANICIKaydetModel.SYSKULLANICI.List());
             }
-            catch (Exception ex) {
-                throw new Exception();
+            else
+            {
+                sYSKULLANICIKaydetModel.SYSKULLANICI.OLUSTURAN = AktifKullanici.KayitNo;
+                _sYSKULLANICIService.Ekle(sYSKULLANICIKaydetModel.SYSKULLANICI.List());
             }
-           
+
+            return Yonlendir(Url.Action("Index"), Dil.Basarili);
+
+
         }
 
 
@@ -270,7 +266,7 @@ namespace OsosOracle.MvcUI.Controllers
 
             var model = new SYSKULLANICIKaydetModel
             {
-                SYSKULLANICI = new SYSKULLANICI() { KURUMKAYITNO=AktifKullanici.KurumKayitNo}
+                SYSKULLANICI = new SYSKULLANICI() { KURUMKAYITNO = AktifKullanici.KurumKayitNo }
             };
 
 

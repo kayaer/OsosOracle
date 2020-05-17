@@ -2312,6 +2312,41 @@ var dataTableLanguage = {
     }
 };
 
+var englishLanguage = {
+    "sDecimal": ",",
+    "sEmptyTable": "No data available in table",
+    "sInfo": "Showing _START_ to _END_ of _TOTAL_ entries",
+    "sInfoEmpty": "Showing 0 to 0 of 0 entries",
+    "sInfoFiltered": "(_MAX_ kayit içerisinden bulunan)",
+    "sInfoPostFix": "",
+    "sInfoThousands": ".",
+    "sLengthMenu": "Show _MENU_ entries",
+    "sLoadingRecords": "Loading...",
+    "sProcessing": "<i class='fa fa-circle-o-notch fa-spin fa-fw'></i> Processing...",
+    "sSearch": "",
+    "sZeroRecords": "No matching records found",
+    searchPlaceholder: "Quick Search",
+    "oPaginate": {
+        "sFirst": "First",
+        "sLast":  "Last",
+        "sNext":  "Next",
+        "sPrevious": "Previous"
+    },
+    "oAria": {
+        "sSortAscending":  ":activate to sort column ascending",
+        "sSortDescending": ":activate to sort column descending"
+    },
+    select: {
+        rows: {
+            _: "Bu sayfada <b>%d</b> kayıt seçildi",
+            0: " ",
+            1: "Bu sayfada 1 kayıt seçildi"
+        }
+    }
+};
+
+ 
+
 $.extend(true, $.fn.dataTable.defaults, {
     processing: true,
     //stateSave: true,

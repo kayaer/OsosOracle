@@ -196,3 +196,7 @@ C:\Projeler\OsosOracle\OsosOracle.MvcUI\obj\Release\tr\OsosOracle.MvcUI.resource
 C:\Projeler\OsosOracle\OsosOracle.MvcUI\obj\Release\OsosOracle.MvcUI.csproj.CopyComplete
 C:\Projeler\OsosOracle\OsosOracle.MvcUI\obj\Release\OsosOracle.MvcUI.dll
 C:\Projeler\OsosOracle\OsosOracle.MvcUI\obj\Release\OsosOracle.MvcUI.pdb
+C:\Projeler\OsosOracle\OsosOracle.MvcUI\bin\Microsoft.Diagnostics.Tracing.EventSource.dll
+C:\Projeler\OsosOracle\OsosOracle.MvcUI\bin\RabbitMQ.Client.dll
+C:\Projeler\OsosOracle\OsosOracle.MvcUI\bin\Microsoft.Diagnostics.Tracing.EventSource.xml
+C:\Projeler\OsosOracle\OsosOracle.MvcUI\bin\RabbitMQ.Client.xml

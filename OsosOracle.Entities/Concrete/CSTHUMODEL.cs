@@ -11,9 +11,7 @@ namespace OsosOracle.Entities.Concrete
         public DateTime OLUSTURMATARIH { get; set; }
         public int? GUNCELLEYEN { get; set; }
         public DateTime? GUNCELLEMETARIH { get; set; }
-        public int MARKAKAYITNO { get; set; }
-        public string YAZILIMVERSIYON { get; set; }
-        public string CONTROLLER { get; set; }
+        public int MARKAKAYITNO { get; set; }    
         public int KAYITNO { get; set; }
         public string AD { get; set; }
     }

@@ -230,8 +230,36 @@
 
         function KrediYukle(satisKaydetModel) {
             return "1";
-            var mcm = new ActiveXObject("SmartCard.Mcm");
-            result = mcm.AboneYaz(satisKaydetModel.SogukSuOkunan.SayacSeriNo,
+            if (satisKaydetModel.AboneSayacDetay.SayacModelKayitNo ==@enumSayacModeli.MercanYd.GetHashCode() || satisKaydetModel.AboneSayacDetay.SayacModelKayitNo ==@enumSayacModeli.As25Yd.GetHashCode()) {
+                  var mercanYd = new ActiveXObject("SmartCard.Filistin.PalestineWater");
+            result = mercanYd.AboneYaz(satisKaydetModel.SogukSuOkunan.SayacSeriNo,
+                satisKaydetModel.Satis.ToplamKredi,
+                satisKaydetModel.Satis.YEDEKKREDI,
+                satisKaydetModel.PrmTarifeSuDetay.SAYACCAP,
+                satisKaydetModel.PrmTarifeSuDetay.DONEMGUN,
+                satisKaydetModel.PrmTarifeSuDetay.FIYAT1,
+                satisKaydetModel.PrmTarifeSuDetay.FIYAT2,
+                satisKaydetModel.PrmTarifeSuDetay.FIYAT3,
+                satisKaydetModel.PrmTarifeSuDetay.FIYAT4,
+                satisKaydetModel.PrmTarifeSuDetay.FIYAT5,
+                satisKaydetModel.PrmTarifeSuDetay.LIMIT1,
+                satisKaydetModel.PrmTarifeSuDetay.LIMIT2,
+                satisKaydetModel.PrmTarifeSuDetay.LIMIT3,
+                satisKaydetModel.PrmTarifeSuDetay.LIMIT4,
+                satisKaydetModel.PrmTarifeSuDetay.BAYRAM1GUN,
+                satisKaydetModel.PrmTarifeSuDetay.BAYRAM1AY,
+                satisKaydetModel.PrmTarifeSuDetay.BAYRAM1SURE,
+                satisKaydetModel.PrmTarifeSuDetay.BAYRAM2GUN,
+                satisKaydetModel.PrmTarifeSuDetay.BAYRAM2AY,
+                satisKaydetModel.PrmTarifeSuDetay.BAYRAM2SURE,
+                satisKaydetModel.PrmTarifeSuDetay.AVANSONAY,
+                satisKaydetModel.PrmTarifeSuDetay.MAXDEBI,
+                1,
+                satisKaydetModel.PrmTarifeSuDetay.SABITUCRET);
+            return result;
+            } else {
+                var mcm = new ActiveXObject("SmartCard.Mcm");
+                 result = mcm.AboneYaz(satisKaydetModel.SogukSuOkunan.SayacSeriNo,
                 satisKaydetModel.Satis.ToplamKredi,
                 satisKaydetModel.PrmTarifeSuDetay.SAYACCAP,
                 satisKaydetModel.PrmTarifeSuDetay.DONEMGUN,
@@ -256,6 +284,9 @@
                 satisKaydetModel.PrmTarifeSuDetay.MAXDEBI,
                 satisKaydetModel.Satis.YEDEKKREDI);
             return result;
+
+            }
+
 
 
         }

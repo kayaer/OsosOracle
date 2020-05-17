@@ -56,7 +56,14 @@
                                 @Html.TextBoxFor(t => t.KalorimetreSatisModel.KalorimetreOkunan.AkoMesaj, new { @class = "form-control", placeholder = "Kalorimetre Bilgisi" })
                             </div>
                         </div>
-
+                        <div class="form-group">
+                            <div class="col-md-6">
+                                @Html.TextBoxFor(t => t.KalorimetreSatisModel.KalorimetreOkunan.Kalan, new { @class = "form-control", placeholder = Dil.Kalorimetre + ' ' + Dil.KALANKREDI })
+                            </div>
+                            <div class="col-md-6">
+                                @Html.TextBoxFor(t => t.KalorimetreSatisModel.KalorimetreOkunan.Harcanan, new { @class = "form-control", placeholder = Dil.Kalorimetre + ' ' + Dil.HARCANANKREDI })
+                            </div>
+                        </div>
                         <div class="form-group">
                             <div class="col-md-12">
                                 @Html.TextBoxFor(t => t.SuSatisModel.AboneSayacDetay.SonSatisTarihi, new { @class = "form-control", placeholder = Dil.SonSatisTarihi })
@@ -70,7 +77,7 @@
     </div>
     <div class="col-md-6">
         <div class="panel panel-default">
-            <div class="panel-heading">Su Sayacı</div>
+            <div class="panel-heading">@Dil.Su @Dil.Sayac</div>
             <div class="panel-body">
                 <div class="form-horizontal">
 
@@ -102,7 +109,7 @@
     <div class="col-md-6"></div>
     <div class="col-md-6">
         <div class="panel panel-default">
-            <div class="panel-heading">Kalorimetre Sayacı</div>
+            <div class="panel-heading">@Dil.Kalorimetre @Dil.Sayac</div>
             <div class="panel-body">
                 <div class="form-horizontal">
                     <div class="form-group">
@@ -169,6 +176,8 @@
                        $("#@Html.IdFor(t => t.KalorimetreSatisModel.KalorimetreOkunan.Kredi)").val(jqXHR.KalorimetreSatisModel.KalorimetreOkunan.Kredi).blur();
                        $("#@Html.IdFor(t => t.KalorimetreSatisModel.KalorimetreOkunan.YedekKredi)").val(jqXHR.KalorimetreSatisModel.KalorimetreOkunan.YedekKredi).blur();
                        $("#@Html.IdFor(t => t.KalorimetreSatisModel.KalorimetreOkunan.AkoMesaj)").val(jqXHR.KalorimetreSatisModel.KalorimetreOkunan.AkoMesaj).blur();
+                       $("#@Html.IdFor(t => t.KalorimetreSatisModel.KalorimetreOkunan.Kalan)").val(jqXHR.KalorimetreSatisModel.KalorimetreOkunan.Kalan).blur();
+                       $("#@Html.IdFor(t => t.KalorimetreSatisModel.KalorimetreOkunan.Harcanan)").val(jqXHR.KalorimetreSatisModel.KalorimetreOkunan.Harcanan).blur();
                        $("#@Html.IdFor(t => t.SuSatisModel.AboneSayacDetay.SonSatisTarihi)").val(jqXHR.SuSatisModel.AboneSayacDetay.SonSatisTarihiStr).blur();
                    });
                    request.fail(function (jqXHR, textStatus) {

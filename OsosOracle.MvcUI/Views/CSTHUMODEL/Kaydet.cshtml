@@ -30,11 +30,7 @@
             @Html.ValidationMessageFor(t => t.CSTHUMODEL.AD)
 
         </div>
-        <div class="form-group">
-            @Html.TextBoxFor(t => t.CSTHUMODEL.YAZILIMVERSIYON, new { @class = "form-control", placeholder = _T("Yazılım Versiyon") })
-            @Html.ValidationMessageFor(t => t.CSTHUMODEL.YAZILIMVERSIYON)
-
-        </div>
+      
         <div class="form-group">
             @Html.TextAreaFor(t => t.CSTHUMODEL.ACIKLAMA, new { @class = "form-control int", placeholder = _T("Açıklama") })
             @Html.ValidationMessageFor(t => t.CSTHUMODEL.ACIKLAMA)

@@ -46,7 +46,7 @@
 <script type="text/javascript">
         $(document).ready(function () {
              $('#tblSokulenSayacPartial').dataTable({
-            'language': dataTableLanguage,
+            'language': GetSession(baseUrl),
             'processing': true,
             'serverSide': true,
             'destroy': true,

@@ -6,7 +6,7 @@
 
 @section panelHeading{
     @Html.ButtonLink(Dil.YeniKullaniciEkle, "Ekle", "btn btn-xs btn-success modalizer", "fa-plus")
-    @Html.ButtonLink("Kullanıcı-Rol Atama", "Ekle", "btn btn-xs btn-info modalizer", "fa-plus", null, null, "SYSROLKULLANICI")
+    @Html.ButtonLink(Dil.KullaniciRolAtama, "Ekle", "btn btn-xs btn-info modalizer", "fa-plus", null, null, "SYSROLKULLANICI")
     @Html.ButtonLink("Kullanıcı-Rol Takip", "Index", "btn btn-xs btn-info", "fa fa-th-list", null, null, "SYSROLKULLANICI")
 }
 
@@ -64,7 +64,7 @@
 
 	function AraFiltered() {
 		$('#tblSYSKULLANICI').dataTable({
-			'language': dataTableLanguage,
+			'language': GetSession(baseUrl),
 			'processing': true,
 			'serverSide': true,
 			'destroy': true,

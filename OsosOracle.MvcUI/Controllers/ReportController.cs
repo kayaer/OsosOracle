@@ -3,6 +3,7 @@ using Oracle.ManagedDataAccess.Client;
 using OsosOracle.Entities.Enums;
 using OsosOracle.Framework.Web.Mvc;
 using OsosOracle.MvcUI.Filters;
+using OsosOracle.MvcUI.Helpers;
 using OsosOracle.MvcUI.Models.ReportModels;
 using OsosOracle.MvcUI.Reports.ReportModel;
 using System;
@@ -26,7 +27,7 @@ namespace OsosOracle.MvcUI.Controllers
         }
         public ActionResult SatisRaporu()
         {
-            return View(new RaporParametreModel() { SatisTipi=enumSatisTipi.Satis.GetHashCode()});
+            return View(new RaporParametreModel() { SatisTipi = enumSatisTipi.Satis.GetHashCode() });
 
         }
 
@@ -115,52 +116,21 @@ namespace OsosOracle.MvcUI.Controllers
         [HttpPost]
         public JsonResult SatisRaporu(RaporParametreModel model)
         {
-            string ConnectionString = ConfigurationManager.ConnectionStrings["AppContext"].ConnectionString;
-            OracleConnection con = new OracleConnection();
-            con.ConnectionString = ConnectionString;
-            con.Open();
-            string sql = @"SELECT SATISTIPI.AD AS SATISTIPI,ODEMETIPI.ad AS ODEMETIPI, CSTSAYACMODEL.AD AS SAYACMODEL,ENTSAYAC.KAPAKSERINO,ENTABONE.ABONENO,ENTABONE.AD,ENTABONE.SOYAD, ENTSATIS.OLUSTURMATARIH,ENTSATIS.KREDI,ENTSATIS.KDV,ENTSATIS.CTV,ENTSATIS.AYLIKBAKIMBEDELI,ENTSATIS.ODEME FROM ENTSATIS INNER JOIN ENTSAYAC ON ENTSATIS.SAYACKAYITNO=ENTSAYAC.KAYITNO
-                       INNER JOIN ENTABONE ON ENTSATIS.ABONEKAYITNO=ENTABONE.KAYITNO
-                       INNER JOIN CSTSAYACMODEL ON ENTSAYAC.SAYACMODELKAYITNO=CSTSAYACMODEL.KAYITNO
-                       INNER JOIN NESNEDEGER SATISTIPI ON ENTSATIS.SATISTIPI=SATISTIPI.KAYITNO
-                       INNER JOIN NESNEDEGER ODEMETIPI ON  ENTSATIS.ODEMETIPIKAYITNO=ODEMETIPI.KAYITNO
-WHERE 1=1 {whr}
-                       ORDER BY CSTSAYACMODEL.AD,ENTSATIS.OLUSTURMATARIH ";
-
-            string where = " and entsayac.kurumkayıtno=" + AktifKullanici.KurumKayitNo;
-            if (model.SatisTarihiBaslangic != null)
-            {
-                where += "and entsatıs.olusturmaTarih>to_date('" + model.SatisTarihiBaslangic + "','dd.mm.yyyy')";
-            }
-            if (model.SatisTarihiBitis != null)
-            {
-                where += " and entsatıs.olusturmaTarih<to_date('" + model.SatisTarihiBitis + "','dd.mm.yyyy')";
-            }
-            if (model.SatisTipi != null)
-            {
-                where += " and entsatis.satistipi=" + model.SatisTipi;
-            }
-            sql = sql.Replace("{whr}", where);
-
-            OracleDataAdapter oda = new OracleDataAdapter(sql, con);
-            DataTable dt = new DataTable();
-            oda.Fill(dt);
-            con.Close();
-            con.Dispose();
-
+            model.KurumKayitNo = AktifKullanici.KurumKayitNo;
+            DataTable dt = OraDbHelper.GunlukSatisRaporu(model);
             List<Satis> dataSet = new List<Satis>();
             foreach (DataRow dr in dt.Rows)
             {
                 Satis data = new Satis();
                 data.SatisTarihi = dr["OLUSTURMATARIH"].ToString();
                 data.Kredi = !string.IsNullOrEmpty(dr["KREDI"].ToString()) ? Convert.ToDecimal(dr["KREDI"].ToString()) : 0;
-                data.Ctv   = !string.IsNullOrEmpty(dr["CTV"].ToString()) ? Convert.ToDecimal(dr["CTV"].ToString()) : 0;
-                data.AylikBakimBedeli = !string.IsNullOrEmpty(dr["AYLIKBAKIMBEDELI"].ToString())? Convert.ToDecimal(dr["AYLIKBAKIMBEDELI"].ToString()):0;
-                data.Tutar = !string.IsNullOrEmpty(dr["ODEME"].ToString()) ? Convert.ToDecimal(dr["ODEME"].ToString()):0;
-                data.Kdv =  !string.IsNullOrEmpty(dr["KDV"].ToString()) ? Convert.ToDecimal(dr["KDV"].ToString()):0;
+                data.Ctv = !string.IsNullOrEmpty(dr["CTV"].ToString()) ? Convert.ToDecimal(dr["CTV"].ToString()) : 0;
+                data.AylikBakimBedeli = !string.IsNullOrEmpty(dr["AYLIKBAKIMBEDELI"].ToString()) ? Convert.ToDecimal(dr["AYLIKBAKIMBEDELI"].ToString()) : 0;
+                data.Tutar = !string.IsNullOrEmpty(dr["ODEME"].ToString()) ? Convert.ToDecimal(dr["ODEME"].ToString()) : 0;
+                data.Kdv = !string.IsNullOrEmpty(dr["KDV"].ToString()) ? Convert.ToDecimal(dr["KDV"].ToString()) : 0;
                 data.KapakSeriNo = dr["KAPAKSERINO"].ToString();
                 data.AboneNo = dr["ABONENO"].ToString();
-                data.AdiSoyadi = dr["AD"].ToString()+" " + dr["SOYAD"].ToString();
+                data.AdiSoyadi = dr["AD"].ToString() + " " + dr["SOYAD"].ToString();
                 data.SayacModeli = dr["SAYACMODEL"].ToString();
                 data.SatisTipi = dr["SATISTIPI"].ToString();
                 data.OdemeTipi = dr["ODEMETIPI"].ToString();

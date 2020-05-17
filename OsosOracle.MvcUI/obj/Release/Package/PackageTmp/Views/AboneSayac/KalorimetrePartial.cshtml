@@ -47,7 +47,7 @@
 <script type="text/javascript">
         $(document).ready(function () {
              $('#tblKalorimetrePartial').dataTable({
-            'language': dataTableLanguage,
+            'language': GetSession(baseUrl),
             'processing': true,
             'serverSide': true,
             'destroy': true,

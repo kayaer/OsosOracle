@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.136
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29926.136
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OsosOracle.Entities", "OsosOracle.Entities\OsosOracle.Entities.csproj", "{77286593-40FA-440E-9C8C-2FBEC1B2A928}"
 EndProject
@@ -18,6 +18,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartCard", "nahcivanYoncaDll\SmartCard\SmartCard\SmartCard.csproj", "{995AB6B6-78BC-40C8-B269-6CDD3E3F41BE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsApp1", "WindowsFormsApp1\WindowsFormsApp1.csproj", "{6F330820-E989-4941-AB72-4F2C3BA7569D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabbitMqConsumer", "RabbitMqConsumer\RabbitMqConsumer.csproj", "{F100A6D6-4AFA-4A99-875A-4B477952E106}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -53,6 +55,10 @@ Global
 		{6F330820-E989-4941-AB72-4F2C3BA7569D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6F330820-E989-4941-AB72-4F2C3BA7569D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6F330820-E989-4941-AB72-4F2C3BA7569D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F100A6D6-4AFA-4A99-875A-4B477952E106}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F100A6D6-4AFA-4A99-875A-4B477952E106}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F100A6D6-4AFA-4A99-875A-4B477952E106}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F100A6D6-4AFA-4A99-875A-4B477952E106}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

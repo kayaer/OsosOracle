@@ -2,24 +2,25 @@
 @using OsosOracle.Framework.HtmlHelpers
 @using OsosOracle.MvcUI.Infrastructure
 @using OsosOracle.MvcUI.Resources
+@using OsosOracle.Framework.Entities
 @model OsosOracle.MvcUI.Models.SYSKULLANICIModels.SYSKULLANICIIndexModel
 
 @section panelHeading{
     @Html.ButtonLink(Dil.YeniKullaniciEkle, "KullaniciEkle", "btn btn-xs btn-success modalizer", "fa-plus")
-  
+
 }
 
 @using (Html.BeginPortlet(Dil.KullaniciAra, Dil.DetayliArama, "fa fa-search"))
 {
     <form id="frmAra" class="form-bordered">
-        @Html.HiddenFor(t=>t.SYSKULLANICIAra.KURUMKAYITNO)
+        @Html.HiddenFor(t => t.SYSKULLANICIAra.KURUMKAYITNO)
         <div class="form-group row">
             <div class="col-md-4">
                 @Html.TextBoxFor(t => t.SYSKULLANICIAra.KULLANICIAD, new { @class = "form-control", placeholder = Dil.KullaniciAdi })
             </div>
             <div class="col-md-4">
                 @Html.TextBoxFor(t => t.SYSKULLANICIAra.AD, new { @class = "form-control", placeholder = Dil.Ad })
-            </div>          
+            </div>
         </div>
 
 
@@ -37,14 +38,15 @@
         <tr>
             <th>@Dil.KullaniciAdi</th>
             <th>@Dil.Ad</th>
-            <th>@Dil.Soyad</th>          
+            <th>@Dil.Soyad</th>
             <th style="width: 100px">@Dil.Islem</th>
         </tr>
     </thead>
 </table>
 @section script{
     <script type="text/javascript">
-	$(document).ready(function () {
+        $(document).ready(function () {
+           
 		AraFiltered();
 		$("#btnAra").click(function(e) {
 				e.preventDefault();
@@ -54,7 +56,7 @@
 
 	function AraFiltered() {
 		$('#tblSYSKULLANICI').dataTable({
-			'language': dataTableLanguage,
+			'language': GetSession(baseUrl),
 			'processing': true,
 			'serverSide': true,
 			'destroy': true,

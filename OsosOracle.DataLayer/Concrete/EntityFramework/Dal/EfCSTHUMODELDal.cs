@@ -20,8 +20,6 @@ namespace OsosOracle.DataLayer.Concrete.EntityFramework.Dal
                 KAYITNO = x.KAYITNO,
                 ACIKLAMA = x.ACIKLAMA,
                 VERSIYON = x.VERSIYON,
-                YAZILIMVERSIYON = x.YAZILIMVERSIYON,
-                CONTROLLER = x.CONTROLLER,
                 AD = x.AD,
                 MARKAKAYITNO=x.MARKAKAYITNO
 
@@ -65,14 +63,7 @@ namespace OsosOracle.DataLayer.Concrete.EntityFramework.Dal
                     {
                         result = result.Where(x => x.MARKAKAYITNO == filtre.MARKAKAYITNO);
                     }
-                    if (!string.IsNullOrEmpty(filtre.YAZILIMVERSIYON))
-                    {
-                        result = result.Where(x => x.YAZILIMVERSIYON.Contains(filtre.YAZILIMVERSIYON));
-                    }
-                    //if (!string.IsNullOrEmpty(filtre.CONTROLLER))
-                    //{
-                    //    result = result.Where(x => x.CONTROLLER.Contains(filtre.CONTROLLER));
-                    //}
+                  
                     if (!string.IsNullOrEmpty(filtre.AD))
                     {
                         result = result.Where(x => x.AD.Contains(filtre.AD));

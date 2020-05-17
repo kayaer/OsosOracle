@@ -36,4 +36,14 @@ namespace OsosOracle.Entities.Enums
         Nakit=10,
         KrediKarti=11
     }
+    public enum enumSayacModeli
+    {
+        Mercan = 1,
+        Mcm = 2,
+        As20 = 3,
+        Kalorimetre = 4,
+        Gaz = 5,
+        MercanYd = 6,
+        As25Yd = 7
+    }
 }
