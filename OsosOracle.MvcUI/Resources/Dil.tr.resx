@@ -645,4 +645,10 @@
   <data name="BedelsizSatis" xml:space="preserve">
     <value>Bedelsiz Satış</value>
   </data>
+  <data name="Kullanici" xml:space="preserve">
+    <value>Kullanıcı</value>
+  </data>
+  <data name="Satis" xml:space="preserve">
+    <value>Satış</value>
+  </data>
 </root>
