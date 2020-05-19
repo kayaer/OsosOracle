@@ -34,6 +34,7 @@ namespace OsosOracle.DataLayer.Concrete.EntityFramework.Dal
                 AboneAdSoyad = x.EntAboneEf.AD + " " + x.EntAboneEf.SOYAD,
                 SonSatisTarihi = x.EntAboneEf.SonSatisTarih,
                 SayacModel = x.EntSayacEf.CstSayacModelEf.AD,
+                SayacModelKayitNo=x.EntSayacEf.CstSayacModelEf.KAYITNO,
                 SuTarifeAdi = x.PrmTarifeSuEf.AD,
                 KalorimetreTarifeAdi = x.PrmKALORIMETREEf.AD,
                 GazTarifeAdi = x.PrmTarifeGazEf.AD

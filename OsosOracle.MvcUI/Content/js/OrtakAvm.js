@@ -1,9 +1,8 @@
-﻿class OrtakAvm {
-    constructor() {
-        this.DllNamespace = "SmartCard.OrtakAvm";
-    }
+﻿function OrtakAvm() {
+    this.DllNamespace = "SmartCard.OrtakAvm";
+}
 
-    KartTipi() {
+OrtakAvm.prototype.KartTipi=function() {
         try {
             var su = new ActiveXObject(this.DllNamespace);
             var kartTip = su.KartTipi();
@@ -21,7 +20,7 @@
 
     }
 
-    KartBosalt() {
+OrtakAvm.prototype.KartBosalt = function () {
         try {
 
             var su = new ActiveXObject(this.DllNamespace);
@@ -46,7 +45,7 @@
     }
 
 
-    AboneYap(jqXHR, tip) {
+OrtakAvm.prototype.AboneYap = function (jqXHR, tip) {
         try {
             var su = new ActiveXObject(this.DllNamespace);
             if (tip === "su") {
@@ -102,7 +101,7 @@
         }
     }
 
-    AboneOku() {
+OrtakAvm.prototype.AboneOku = function () {
         try {
             var aboneIslem = new ActiveXObject(this.DllNamespace);
             return aboneIslem.AboneOku();
@@ -113,7 +112,7 @@
        
     }
 
-    SuKrediYukle(SuSatisModel) {
+OrtakAvm.prototype.SuKrediYukle = function (SuSatisModel) {
         try {
             var sogukSu = new ActiveXObject(this.DllNamespace);
             result = sogukSu.AboneYazSu(SuSatisModel.SogukSuOkunan.SayacSeriNo,
@@ -133,7 +132,7 @@
        
     }
 
-    KalorimetreKrediYukle(KalorimetreSatisModel) {
+OrtakAvm.prototype.KalorimetreKrediYukle = function (KalorimetreSatisModel) {
         try {
             var kalorimetre = new ActiveXObject(this.DllNamespace);
 
@@ -156,4 +155,3 @@
 
 
     }
-}

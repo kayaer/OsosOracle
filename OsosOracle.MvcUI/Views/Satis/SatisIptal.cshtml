@@ -98,6 +98,7 @@
 
 
 </div>
+<script src="~/Content/js/PalestineWater.js"></script>
 <script src="~/Content/js/Mcm.js"></script>
 <script type="text/javascript">
     $(document).ready(function () {
@@ -110,7 +111,6 @@
                  //Mcm Dll Kullanılıyor
                  var mcm = new Mcm();
                 SatisModel.HamData = mcm.AboneOku();
-                SatisModel.HamData = "";
                  var model = JSON.stringify(SatisModel)
                  var model=JSON.stringify(SatisModel)
                 var request = $.ajax({
@@ -204,8 +204,18 @@
 
 
         function SuKrediYukle(SuSatisModel) {
-            var mcm = new Mcm();
-            return mcm.AboneYaz(SuSatisModel);
+
+            if (SuSatisModel.AboneSayacDetay.SayacModelKayitNo ==@enumSayacModeli.MercanYd.GetHashCode() || SuSatisModel.AboneSayacDetay.SayacModelKayitNo ==@enumSayacModeli.As25Yd.GetHashCode()) {
+                SuSatisModel.Satis.ToplamKredi = SuSatisModel.SatisIptal.AnaKredi;
+                //Filistin Dll
+                var palestineWater = new PalestineWater();
+                return palestineWater.AboneYaz(SuSatisModel);
+            } else {//Mcm Dll
+                 SuSatisModel.Satis.ToplamKredi = SuSatisModel.SatisIptal.AnaKredi;
+                 var mcm = new Mcm();
+                return mcm.AboneYaz(SuSatisModel);
+
+            }
         }
 
 

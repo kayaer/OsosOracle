@@ -1,10 +1,10 @@
-﻿class Mcm {
+﻿
+function Mcm() {
 
-    constructor() {
-        this.DllNamespace = "SmartCard.Mcm"; 
-    }
+    this.DllNamespace = "SmartCard.Mcm";
+}
 
-    KartTipi() {
+Mcm.prototype.KartTipi = function(){
         try {
             var su = new ActiveXObject(this.DllNamespace);
             var kartTip = su.KartTipi();
@@ -16,7 +16,7 @@
 
     }
 
-    KartBosalt() {
+Mcm.prototype.KartBosalt=  function () {
         try {
 
             var su = new ActiveXObject(this.DllNamespace);
@@ -32,17 +32,17 @@
                 return;
             } else if (kartTip == "Bos Kart") {
                 ajaxMesajGoster('Kart Boş');
-            } 
+            }
 
         }
         catch (ex) {
 
             ajaxMesajGoster(ex);
-            
+
         }
     }
 
-    AboneOku() {
+Mcm.prototype.AboneOku=    function () {
         try {
             var aboneIslem = new ActiveXObject(this.DllNamespace);
             return aboneIslem.AboneOku();
@@ -52,7 +52,7 @@
 
     }
 
-    AboneYap(jqXHR) {
+Mcm.prototype.AboneYap=   function (jqXHR) {
 
         try {
             var su = new ActiveXObject(this.DllNamespace);
@@ -97,7 +97,7 @@
         }
     }
 
-    AboneYaz(satisKaydetModel) {
+Mcm.prototype.AboneYaz=   function (satisKaydetModel) {
 
         try {
             var mcm = new ActiveXObject(this.DllNamespace);
@@ -127,9 +127,8 @@
                 satisKaydetModel.Satis.YEDEKKREDI);
             return result;
         } catch (ex) {
-            ajaxMesajGoster(ex,'HATA');
+            ajaxMesajGoster(ex, 'HATA');
         }
 
     }
-    
-}
+

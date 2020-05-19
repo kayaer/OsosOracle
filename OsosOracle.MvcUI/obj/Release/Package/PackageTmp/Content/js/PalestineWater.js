@@ -1,10 +1,11 @@
-﻿class PalestineWater {
+﻿function PalestineWater() {
+    this.DllNamespace = "SmartCard.Filistin.PalestineWater"; 
+}
 
-    constructor() {
-        this.DllNamespace = "SmartCard.Filistin.PalestineWater"; 
-    }
+      
+    
 
-    AboneYap(jqXHR) {
+PalestineWater.prototype.AboneYap = function (jqXHR) {
         try {
             var su = new ActiveXObject(this.DllNamespace);
             var result = su.AboneYap(jqXHR.EntSayacDetay.SERINO,
@@ -44,7 +45,7 @@
 
     }
 
-    AboneYaz(satisKaydetModel) {
+PalestineWater.prototype.AboneYaz = function (satisKaydetModel) {
         try {
             var mercanYd = new ActiveXObject("SmartCard.Filistin.PalestineWater");
             result = mercanYd.AboneYaz(satisKaydetModel.SogukSuOkunan.SayacSeriNo,
@@ -78,4 +79,3 @@
 
        
     }
-}

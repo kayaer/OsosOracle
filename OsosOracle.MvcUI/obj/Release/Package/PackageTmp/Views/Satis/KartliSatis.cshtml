@@ -112,7 +112,6 @@
             //Mcm Dll Kullanılıyor
             var mcm = new Mcm();
             SatisModel.HamData = mcm.AboneOku();
-            SatisModel.HamData = "";
             var model=JSON.stringify(SatisModel)
                 var request = $.ajax({
                        url: "@Url.Action("SatisPars", "Satis")",

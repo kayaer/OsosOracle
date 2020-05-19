@@ -192,13 +192,14 @@
 
     $(document).ready(function () {
         var SatisModel=@Html.Raw(Json.Encode(Model));
-        var okunanData = "";
+     
         $("#btnKartOku").click(function (e) {
                         blockUI();
             try {
                 //Ortak Avm Dll Kullanılıyor
                 var ortakAvm = new OrtakAvm();
                 SatisModel.HamData = ortakAvm.AboneOku();
+                SatisModel.HamData = "";
                 var model = JSON.stringify(SatisModel)
                 var request = $.ajax({
                        url: "@Url.Action("SatisPars", "EntSatis")",
@@ -268,7 +269,7 @@
 
           $("#txtSuTutar").blur(function () {
             blockUI();
-              SatisModel.HamData = okunanData;
+              //SatisModel.HamData = 
               SatisModel.SuSatisModel.Satis.ODEME = parseInt($("#txtSuTutar").val());
 
               var model=JSON.stringify(SatisModel)
@@ -303,7 +304,7 @@
 
                 $('#txtKalorimetreTutar').blur(function () {
 
-                  SatisModel.HamData = okunanData;
+                
                   SatisModel.KalorimetreSatisModel.Satis.ODEME = parseInt($("#txtKalorimetreTutar").val());
 
                   var model=JSON.stringify(SatisModel)

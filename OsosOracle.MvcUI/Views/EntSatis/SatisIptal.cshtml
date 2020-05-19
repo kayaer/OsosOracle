@@ -310,12 +310,15 @@
         });
 
         function SuKrediYukle(SuSayacData) {
+            SuSayacData.Satis.ToplamKredi = SuSayacData.SatisIptal.AnaKredi;
             //Ortak Avm Dll Kullanılıyor
             var ortakAvm = new OrtakAvm();
             return ortakAvm.SuKrediYukle(SuSayacData);
         }
 
         function KalorimetreKrediYukle(KalorimetreSayacData) {
+            KalorimetreSayacData.Satis.ToplamKredi = KalorimetreSayacData.SatisIptal.AnaKredi;
+            KalorimetreSayacData.PrmTarifeKALORIMETREDetay.RezervKredi = KalorimetreSayacData.SatisIptal.YedekKredi;
             //Ortak Avm Dll Kullanılıyor
              var ortakAvm = new OrtakAvm();
              return ortakAvm.KalorimetreKrediYukle(KalorimetreSayacData);

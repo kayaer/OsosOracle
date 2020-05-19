@@ -35,6 +35,7 @@ namespace OsosOracle.Entities.ComplexType.ENTABONESAYACComplexTypes
         public string KapakSeriNo { get; set; }
         public string GazTarifeAdi { get; set; }
         public string SonSatisTarihiStr { get=>SonSatisTarihi.ToString() ;  }
+        public int SayacModelKayitNo { get; set; }
     }
 
 }
