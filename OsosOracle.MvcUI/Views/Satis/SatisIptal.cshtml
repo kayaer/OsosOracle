@@ -98,7 +98,7 @@
 
 
 </div>
-
+<script src="~/Content/js/Mcm.js"></script>
 <script type="text/javascript">
     $(document).ready(function () {
 
@@ -107,11 +107,12 @@
         $("#btnKartOku").click(function (e) {
             blockUI();
             try {
-                //var aboneIslem = new ActiveXObject("SmartCard.Mcm");
-                //okunanData = aboneIslem.AboneOku();
-                SatisModel.HamData = okunanData;
-                var model = JSON.stringify(SatisModel)
-                      var model=JSON.stringify(SatisModel)
+                 //Mcm Dll Kullanılıyor
+                 var mcm = new Mcm();
+                SatisModel.HamData = mcm.AboneOku();
+                SatisModel.HamData = "";
+                 var model = JSON.stringify(SatisModel)
+                 var model=JSON.stringify(SatisModel)
                 var request = $.ajax({
                        url: "@Url.Action("SatisIptalPars", "Satis")",
                        method: "POST",
@@ -203,33 +204,8 @@
 
 
         function SuKrediYukle(SuSatisModel) {
-           return "1";
-            var mcm = new ActiveXObject("SmartCard.Mcm");
-            result = mcm.AboneYaz(SuSatisModel.SogukSuOkunan.SayacSeriNo,
-                SuSatisModel.SatisIptal.AnaKredi,
-                SuSatisModel.PrmTarifeSuDetay.SAYACCAP,
-                SuSatisModel.PrmTarifeSuDetay.DONEMGUN,
-                SuSatisModel.PrmTarifeSuDetay.FIYAT1,
-                SuSatisModel.PrmTarifeSuDetay.FIYAT2,
-                SuSatisModel.PrmTarifeSuDetay.FIYAT3,
-                SuSatisModel.PrmTarifeSuDetay.FIYAT4,
-                SuSatisModel.PrmTarifeSuDetay.FIYAT5,
-                SuSatisModel.PrmTarifeSuDetay.LIMIT1,
-                SuSatisModel.PrmTarifeSuDetay.LIMIT2,
-                SuSatisModel.PrmTarifeSuDetay.LIMIT3,
-                SuSatisModel.PrmTarifeSuDetay.LIMIT4,
-                SuSatisModel.PrmTarifeSuDetay.BAYRAM1GUN,
-                SuSatisModel.PrmTarifeSuDetay.BAYRAM1AY,
-                SuSatisModel.PrmTarifeSuDetay.BAYRAM1SURE,
-                SuSatisModel.PrmTarifeSuDetay.BAYRAM2GUN,
-                SuSatisModel.PrmTarifeSuDetay.BAYRAM2AY,
-                SuSatisModel.PrmTarifeSuDetay.BAYRAM2SURE,
-                SuSatisModel.PrmTarifeSuDetay.AVANSONAY,
-                0,
-                0,
-                SuSatisModel.PrmTarifeSuDetay.MAXDEBI,
-                SuSatisModel.Satis.YEDEKKREDI);
-            return result;
+            var mcm = new Mcm();
+            return mcm.AboneYaz(SuSatisModel);
         }
 
 

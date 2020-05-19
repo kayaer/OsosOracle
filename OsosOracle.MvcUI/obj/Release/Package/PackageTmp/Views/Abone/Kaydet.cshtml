@@ -53,15 +53,18 @@
                 if (AktifKullanici.KurumKayitNo == enumKurum.YesilVadi.GetHashCode())
                 {
                     <div class="form-group row">
-                        <div class="col-md-6">
+                        <div class="col-md-4">
                             @Html.TextBoxFor(t => t.ENTABONE.Daire, new { @class = "form-control", placeholder = "Daire" })
                             @Html.ValidationMessageFor(t => t.ENTABONE.Daire)
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-4">
                             @Html.TextBoxFor(t => t.ENTABONE.Blok, new { @class = "form-control", placeholder = "Blok" })
                             @Html.ValidationMessageFor(t => t.ENTABONE.Blok)
                         </div>
-
+                         <div class="col-md-4">
+                            @Html.DateInput(t => t.ENTABONE.SonSatisTarih, new { placeholder = Dil.SonSatisTarihi })
+                            @Html.ValidationMessageFor(t => t.ENTABONE.SonSatisTarih)
+                        </div>
                     </div>
                 }
             }

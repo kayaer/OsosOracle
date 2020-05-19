@@ -151,17 +151,18 @@
     </div>
 </div>
 
+
+<script src="~/Content/js/OrtakAvm.js"></script>
 <script type="text/javascript">
     $(document).ready(function () {
 
         var SatisModel=@Html.Raw(Json.Encode(Model));
-        var okunanData = "";
         $("#btnKartOku").click(function (e) {
             blockUI();
             try {
-                //var aboneIslem = new ActiveXObject("SmartCard.OrtakAvm");
-                //okunanData = aboneIslem.AboneOku();
-                SatisModel.HamData = okunanData;
+                 //Ortak Avm Dll Kullanılıyor
+                var ortakAvm = new OrtakAvm();
+                SatisModel.HamData = ortakAvm.AboneOku();
                 var model = JSON.stringify(SatisModel)
                       var model=JSON.stringify(SatisModel)
                 var request = $.ajax({
@@ -309,38 +310,15 @@
         });
 
         function SuKrediYukle(SuSayacData) {
-            return "1";
-            var sogukSu = new ActiveXObject("SmartCard.OrtakAvm");
-            result = sogukSu.AboneYazSu(SuSayacData.SogukSuOkunan.SayacSeriNo,//SAyacserino getirilecek
-                                SuSayacData.SatisIptal.AnaKredi,
-                                SuSayacData.PrmTarifeSuDetay.YEDEKKREDI,
-                                SuSayacData.PrmTarifeSuDetay.LIMIT1,
-                                SuSayacData.PrmTarifeSuDetay.LIMIT2,
-                                SuSayacData.PrmTarifeSuDetay.FIYAT1,
-                                SuSayacData.PrmTarifeSuDetay.FIYAT2,
-                                SuSayacData.PrmTarifeSuDetay.FIYAT3
-                            );
-                             return result;
+            //Ortak Avm Dll Kullanılıyor
+            var ortakAvm = new OrtakAvm();
+            return ortakAvm.SuKrediYukle(SuSayacData);
         }
 
         function KalorimetreKrediYukle(KalorimetreSayacData) {
-            return "1";
-                    var kalorimetre = new ActiveXObject("SmartCard.OrtakAvm");
-
-
-            result = kalorimetre.KalorimetreYaz(KalorimetreSayacData.KalorimetreOkunan.CihazNo,//SAyacserino getirilecek
-                            KalorimetreSayacData.SatisIptal.AnaKredi,
-                            KalorimetreSayacData.SatisIptal.YedekKredi,
-                            KalorimetreSayacData.PrmTarifeKALORIMETREDetay.BAYRAM1GUN,
-                            KalorimetreSayacData.PrmTarifeKALORIMETREDetay.BAYRAM1AY,
-                            KalorimetreSayacData.PrmTarifeKALORIMETREDetay.BAYRAM1SURE,
-                            KalorimetreSayacData.PrmTarifeKALORIMETREDetay.BAYRAM2GUN,
-                            KalorimetreSayacData.PrmTarifeKALORIMETREDetay.BAYRAM2AY,
-                            KalorimetreSayacData.PrmTarifeKALORIMETREDetay.BAYRAM2SURE
-                        );
-                        return result;
-
-
+            //Ortak Avm Dll Kullanılıyor
+             var ortakAvm = new OrtakAvm();
+             return ortakAvm.KalorimetreKrediYukle(KalorimetreSayacData);
         }
 
     });

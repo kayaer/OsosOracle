@@ -139,17 +139,16 @@
 
     </div>
 </div>
-
+<script src="~/Content/js/OrtakAvm.js"></script>
 <script type="text/javascript">
     $(document).ready(function () {
         var SatisModel=@Html.Raw(Json.Encode(Model));
-        var okunanData = "";
         $("#btnKartOku").click(function (e) {
             blockUI();
             try {
-             //var aboneIslem = new ActiveXObject("SmartCard.OrtakAvm");
-             //okunanData = aboneIslem.AboneOku();
-                SatisModel.HamData = okunanData;
+                //Ortak Avm Dll Kullanılıyor
+                var ortakAvm = new OrtakAvm();
+                SatisModel.HamData = ortakAvm.AboneOku();
                 var model = JSON.stringify(SatisModel)
                       var model=JSON.stringify(SatisModel)
                 var request = $.ajax({
@@ -210,9 +209,10 @@
                    request.done(function (jqXHR) {
 
                        if (jqXHR != null) {
-                           //SatisModel.SuSatisModel.Satis.KREDI = parseInt($("#txtSuSayacyuklenecek").val()) + parseInt(SatisModel.SuSatisModel.SogukSuOkunan.Kredi);
-                            SatisModel.SuSatisModel.Satis.KREDI = parseInt($("#txtSuSayacyuklenecek").val())
-                           if (SuKrediYukle(jqXHR) == "1") {
+                           SatisModel.SuSatisModel.Satis.KREDI = parseInt($("#txtSuSayacyuklenecek").val());
+                           SatisModel.SuSatisModel.PrmTarifeSuDetay = jqXHR;
+
+                           if (SuKrediYukle(SatisModel) == "1") {
 
 
                                SatisModel.SuSatisModel.Satis.YEDEKKREDI = jqXHR.YEDEKKREDI;
@@ -281,7 +281,8 @@
 
                        if (jqXHR != null) {
                            SatisModel.KalorimetreSatisModel.Satis.KREDI = parseInt($("#txtKalorimetreyuklenecek").val());
-                           if (KalorimetreKrediYukle(jqXHR) == "1") {
+                           SatisModel.KalorimetreSatisModel.PrmTarifeKALORIMETREDetay = jqXHR;
+                           if (KalorimetreKrediYukle(SatisModel) == "1") {
 
 
                                SatisModel.KalorimetreSatisModel.Satis.YEDEKKREDI = jqXHR.YEDEKKREDI;
@@ -334,43 +335,26 @@
         });
 
         function SuKrediYukle(SuSatisModel) {
-            return "1";
-            var yuklenecekM3;
-            var sogukSu = new ActiveXObject("SmartCard.OrtakAvm");
+
+           
+
             if (SatisModel.SuSatisModel.SogukSuOkunan.Ako=="b") {
-                yuklenecekM3 = SatisModel.SuSatisModel.Satis.KREDI + parseInt(SatisModel.SuSatisModel.SogukSuOkunan.Kredi);
+                 SatisModel.SuSatisModel.Satis.ToplamKredi = SatisModel.SuSatisModel.Satis.KREDI + parseInt(SatisModel.SuSatisModel.SogukSuOkunan.Kredi);
             }
-            result = sogukSu.AboneYazSu(SatisModel.SuSatisModel.SogukSuOkunan.SayacSeriNo,
-                yuklenecekM3,
-                SatisModel.SuSatisModel.SogukSuOkunan.YedekKredi,
-                SuSatisModel.LIMIT1,
-                SuSatisModel.LIMIT2,
-                SuSatisModel.FIYAT1,
-                SuSatisModel.FIYAT2,
-                SuSatisModel.FIYAT3
-            );
-            return result;
+             //Ortak Avm Dll Kullanılıyor
+            var ortakAvm = new OrtakAvm();
+            return ortakAvm.SuKrediYukle(SuSatisModel.SuSatisModel);
         }
 
         function KalorimetreKrediYukle(KalorimetreSatisModel) {
-            return "1";
-            var yuklenecekM3;
-            var kalorimetre = new ActiveXObject("SmartCard.OrtakAvm");
+           
+            var yuklenecekM3;          
             if (SatisModel.KalorimetreSatisModel.KalorimetreOkunan.Ako == "b") {
-                yuklenecekM3 = SatisModel.KalorimetreSatisModel.Satis.KREDI + parseInt(SatisModel.KalorimetreSatisModel.KalorimetreOkunan.Kredi);
+                SatisModel.KalorimetreSatisModel.Satis.ToplamKredi = SatisModel.KalorimetreSatisModel.Satis.KREDI + parseInt(SatisModel.KalorimetreSatisModel.KalorimetreOkunan.Kredi);
             }
-
-            result = kalorimetre.KalorimetreYaz(SatisModel.KalorimetreSatisModel.KalorimetreOkunan.CihazNo,//SAyacserino getirilecek
-                yuklenecekM3,
-                SatisModel.KalorimetreSatisModel.KalorimetreOkunan.YedekKredi,
-                KalorimetreSatisModel.BAYRAM1GUN,
-                KalorimetreSatisModel.BAYRAM1AY,
-                KalorimetreSatisModel.BAYRAM1SURE,
-                KalorimetreSatisModel.BAYRAM2GUN,
-                KalorimetreSatisModel.BAYRAM2AY,
-                KalorimetreSatisModel.BAYRAM2SURE
-            );
-            return result;
+              //Ortak Avm Dll Kullanılıyor
+            var ortakAvm = new OrtakAvm();
+            return ortakAvm.KalorimetreKrediYukle(KalorimetreSatisModel.KalorimetreSatisModel);
         }
 
     });

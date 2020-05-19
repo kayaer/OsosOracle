@@ -97,8 +97,8 @@
     </div>
 
 </div>
-
-
+<script src="~/Content/js/PalestineWater.js"></script>
+<script src="~/Content/js/Mcm.js"></script>
 <script type="text/javascript">
 
     $(document).ready(function () {
@@ -109,10 +109,10 @@
               blockUI();
             try {
 
-            //var aboneIslem = new ActiveXObject("SmartCard.Mcm");
-            //okunanData = aboneIslem.AboneOku();
-
-            SatisModel.HamData = okunanData;
+            //Mcm Dll Kullanılıyor
+            var mcm = new Mcm();
+            SatisModel.HamData = mcm.AboneOku();
+            SatisModel.HamData = "";
             var model=JSON.stringify(SatisModel)
                 var request = $.ajax({
                        url: "@Url.Action("SatisPars", "Satis")",
@@ -229,61 +229,14 @@
 
 
         function KrediYukle(satisKaydetModel) {
-            return "1";
+
             if (satisKaydetModel.AboneSayacDetay.SayacModelKayitNo ==@enumSayacModeli.MercanYd.GetHashCode() || satisKaydetModel.AboneSayacDetay.SayacModelKayitNo ==@enumSayacModeli.As25Yd.GetHashCode()) {
-                  var mercanYd = new ActiveXObject("SmartCard.Filistin.PalestineWater");
-            result = mercanYd.AboneYaz(satisKaydetModel.SogukSuOkunan.SayacSeriNo,
-                satisKaydetModel.Satis.ToplamKredi,
-                satisKaydetModel.Satis.YEDEKKREDI,
-                satisKaydetModel.PrmTarifeSuDetay.SAYACCAP,
-                satisKaydetModel.PrmTarifeSuDetay.DONEMGUN,
-                satisKaydetModel.PrmTarifeSuDetay.FIYAT1,
-                satisKaydetModel.PrmTarifeSuDetay.FIYAT2,
-                satisKaydetModel.PrmTarifeSuDetay.FIYAT3,
-                satisKaydetModel.PrmTarifeSuDetay.FIYAT4,
-                satisKaydetModel.PrmTarifeSuDetay.FIYAT5,
-                satisKaydetModel.PrmTarifeSuDetay.LIMIT1,
-                satisKaydetModel.PrmTarifeSuDetay.LIMIT2,
-                satisKaydetModel.PrmTarifeSuDetay.LIMIT3,
-                satisKaydetModel.PrmTarifeSuDetay.LIMIT4,
-                satisKaydetModel.PrmTarifeSuDetay.BAYRAM1GUN,
-                satisKaydetModel.PrmTarifeSuDetay.BAYRAM1AY,
-                satisKaydetModel.PrmTarifeSuDetay.BAYRAM1SURE,
-                satisKaydetModel.PrmTarifeSuDetay.BAYRAM2GUN,
-                satisKaydetModel.PrmTarifeSuDetay.BAYRAM2AY,
-                satisKaydetModel.PrmTarifeSuDetay.BAYRAM2SURE,
-                satisKaydetModel.PrmTarifeSuDetay.AVANSONAY,
-                satisKaydetModel.PrmTarifeSuDetay.MAXDEBI,
-                1,
-                satisKaydetModel.PrmTarifeSuDetay.SABITUCRET);
-            return result;
-            } else {
-                var mcm = new ActiveXObject("SmartCard.Mcm");
-                 result = mcm.AboneYaz(satisKaydetModel.SogukSuOkunan.SayacSeriNo,
-                satisKaydetModel.Satis.ToplamKredi,
-                satisKaydetModel.PrmTarifeSuDetay.SAYACCAP,
-                satisKaydetModel.PrmTarifeSuDetay.DONEMGUN,
-                satisKaydetModel.PrmTarifeSuDetay.FIYAT1,
-                satisKaydetModel.PrmTarifeSuDetay.FIYAT2,
-                satisKaydetModel.PrmTarifeSuDetay.FIYAT3,
-                satisKaydetModel.PrmTarifeSuDetay.FIYAT4,
-                satisKaydetModel.PrmTarifeSuDetay.FIYAT5,
-                satisKaydetModel.PrmTarifeSuDetay.LIMIT1,
-                satisKaydetModel.PrmTarifeSuDetay.LIMIT2,
-                satisKaydetModel.PrmTarifeSuDetay.LIMIT3,
-                satisKaydetModel.PrmTarifeSuDetay.LIMIT4,
-                satisKaydetModel.PrmTarifeSuDetay.BAYRAM1GUN,
-                satisKaydetModel.PrmTarifeSuDetay.BAYRAM1AY,
-                satisKaydetModel.PrmTarifeSuDetay.BAYRAM1SURE,
-                satisKaydetModel.PrmTarifeSuDetay.BAYRAM2GUN,
-                satisKaydetModel.PrmTarifeSuDetay.BAYRAM2AY,
-                satisKaydetModel.PrmTarifeSuDetay.BAYRAM2SURE,
-                satisKaydetModel.PrmTarifeSuDetay.AVANSONAY,
-                0,
-                0,
-                satisKaydetModel.PrmTarifeSuDetay.MAXDEBI,
-                satisKaydetModel.Satis.YEDEKKREDI);
-            return result;
+                //Filistin Dll
+                var palestineWater = new PalestineWater();
+                return palestineWater.AboneYaz(satisKaydetModel);
+            } else {//Mcm Dll
+                var mcm = new Mcm();
+                return mcm.AboneYaz(satisKaydetModel);
 
             }
 

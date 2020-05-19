@@ -248,7 +248,9 @@
     <Content Include="Content\js\app.js" />
     <Content Include="Content\js\Mcm.js" />
     <Content Include="Content\js\mysiteLib.js" />
+    <Content Include="Content\js\OrtakAvm.js" />
     <Content Include="Content\js\paginatedAutocomplete.js" />
+    <Content Include="Content\js\PalestineWater.js" />
     <Content Include="Content\js\site.js" />
     <Content Include="Content\js\siteLib.js" />
     <Content Include="Content\lib\bootbox.min.js" />

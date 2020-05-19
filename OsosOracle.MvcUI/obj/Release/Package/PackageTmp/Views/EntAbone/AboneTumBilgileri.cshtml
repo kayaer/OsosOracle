@@ -128,6 +128,9 @@
 
 
 @section script{
+    <script src="~/Content/js/Mcm.js"></script>
+    <script src="~/Content/js/PalestineWater.js"></script>
+    <script src="~/Content/js/OrtakAvm.js"></script>
     <script type="text/javascript">
         $(document).ready(function () {
 
@@ -192,22 +195,9 @@
         function KartBosaltKontakli() {
 
             try {
-
-                var su = new ActiveXObject("SmartCard.OrtakAvm");
-                var kartTip = su.KartTipi();
-
-                if (kartTip == "Abone Karti" || kartTip == "Abone Kartı" || kartTip == "CBA " || kartTip=="Subscriber Card") {
-                    var result = su.AboneBosalt();
-                    if (result === "1") {
-                        ajaxMesajGoster('İşlem Başarılı');
-                    } else {
-                        ajaxMesajGoster('İşlem Başarısız', 'Hata');
-                    }
-                    return;
-                } else if (kartTip == "Bos Kart") {
-                    ajaxMesajGoster('Kart Boş');
-                }
-
+                 //Ortak Avm Dll Kullanılıyor
+                var ortakAvm = new OrtakAvm();
+                ortakAvm.KartBosalt();
             }
             catch (ex) {
                 ajaxMesajGoster(ex, 'Hata');
@@ -218,22 +208,13 @@
         function KartTipiKontakli() {
 
             try {
-
-                var su = new ActiveXObject("SmartCard.OrtakAvm");
-                var kartTip = su.KartTipi();
-                if(kartTip=="Subscriber Card")
-                {
-                kartTip="Abone Kartı";
-                }else if(kartTip=="Empty Card")
-                {
-                kartTip="Boş kart";
-                }
-                ajaxMesajGoster(kartTip);
+                 //Ortak Avm Dll Kullanılıyor
+                var ortakAvm = new OrtakAvm();
+                ortakAvm.KartTipi();
             }
             catch (ex) {
-                var kalorimetre = new ActiveXObject("SmartCard.OrtakAvm");
-                var kartTip = kalorimetre.KartTipi();
-                ajaxMesajGoster(kartTip);
+
+                ajaxMesajGoster(ex);
 
             }
 
@@ -241,30 +222,19 @@
 
         function KartBosaltKontaksiz() {
             try {
+                 //Mcm Dll kullanılıyor
+                 var mcm = new Mcm();
+                 mcm.KartBosalt();
+                //Gaz Dll nasıl aktif edilecek?
 
-                var su = new ActiveXObject("SmartCard.Mcm");
-                var kartTip = su.KartTipi();
+                    //var gaz = new ActiveXObject("SmartCard.Gaz");
+                    //var result = gaz.Bosalt();
+                    //if (result === "1") {
+                    //    ajaxMesajGoster('İşlem Başarılı');
+                    //} else {
+                    //    ajaxMesajGoster('İşlem Başarısız', 'Hata');
+                    //}
 
-                if (kartTip == "Abone Karti" || kartTip == "Abone Kartı" || kartTip == "CBA ") {
-                    var result = su.AboneBosalt();
-                    if (result === "1") {
-                        ajaxMesajGoster('İşlem Başarılı');
-                    } else {
-                        ajaxMesajGoster('İşlem Başarısız', 'Hata');
-                    }
-                    return;
-                } else if (kartTip == "Bos Kart") {
-                    ajaxMesajGoster('Kart Boş');
-                } else
-                {
-                    var gaz = new ActiveXObject("SmartCard.Gaz");
-                    var result = gaz.Bosalt();
-                    if (result === "1") {
-                        ajaxMesajGoster('İşlem Başarılı');
-                    } else {
-                        ajaxMesajGoster('İşlem Başarısız', 'Hata');
-                    }
-                }
 
             }
             catch (ex) {
@@ -283,14 +253,13 @@
         function KartTipiKontaksiz() {
 
             try {
-
-                var su = new ActiveXObject("SmartCard.Mcm");
-                var kartTip = su.KartTipi();
-                ajaxMesajGoster(kartTip);
+               //Mcm Dll kullanılıyor
+                 var mcm = new Mcm();
+                 mcm.KartTipi();
             }
             catch (ex) {
 
-                 var gaz = new ActiveXObject("SmartCard.Gaz");
+                var gaz = new ActiveXObject("SmartCard.Gaz");
                 var kartTip = gaz.KartTipi();
                 ajaxMesajGoster(kartTip);
             }
@@ -309,66 +278,29 @@
             });
             request.done(function (jqXHR) {
                 unblockUI();
-               
-                if (jqXHR.KurumKayitNo == @enumKurum.Elektromed.GetHashCode() ||  jqXHR.KurumKayitNo == @enumKurum.Mısır.GetHashCode() ) {
-                     var su = new ActiveXObject("SmartCard.Mcm");
-                                                  var result = su.AboneYap(jqXHR.EntSayacDetay.SERINO,
-                                                      jqXHR.AboneNo,
-                                                      1,
-                                                      jqXHR.PRMTARIFESU.SAYACCAP,
-                                                      1,//tip
-                                                      jqXHR.PRMTARIFESU.DONEMGUN,
-                                                      jqXHR.PRMTARIFESU.FIYAT1,
-                                                      jqXHR.PRMTARIFESU.FIYAT2,
-                                                      jqXHR.PRMTARIFESU.FIYAT3,
-                                                      jqXHR.PRMTARIFESU.FIYAT4,
-                                                      jqXHR.PRMTARIFESU.FIYAT5,
-                                                      jqXHR.PRMTARIFESU.LIMIT1,
-                                                      jqXHR.PRMTARIFESU.LIMIT2,
-                                                      jqXHR.PRMTARIFESU.LIMIT3,
-                                                      jqXHR.PRMTARIFESU.LIMIT4,
-                                                      jqXHR.PRMTARIFESU.BAYRAM1GUN,
-                                                      jqXHR.PRMTARIFESU.BAYRAM1AY,
-                                                      jqXHR.PRMTARIFESU.BAYRAM1SURE,
-                                                      jqXHR.PRMTARIFESU.BAYRAM2GUN,
-                                                      jqXHR.PRMTARIFESU.BAYRAM2AY,
-                                                      jqXHR.PRMTARIFESU.BAYRAM2SURE,
-                                                      jqXHR.PRMTARIFESU.AVANSONAY,
-                                                      1,
-                                                      0,
-                                                      jqXHR.PRMTARIFESU.MAXDEBI,
-                                                      jqXHR.PRMTARIFESU.KRITIKKREDI,
-                                                      1//BaglantiPeriyot
+
+                if (jqXHR.KurumKayitNo == @enumKurum.Elektromed.GetHashCode() || jqXHR.KurumKayitNo == @enumKurum.Mısır.GetHashCode() ) {
+
+                    if (jqXHR.EntSayacDetay.SayacModelKayitNo ==@enumSayacModeli.MercanYd.GetHashCode() || jqXHR.EntSayacDetay.SayacModelKayitNo==@enumSayacModeli.As25Yd.GetHashCode())
+                    {
+                        //Filistin için hazırlanan dll kullanılıyor
+                        var filistin = new PalestineWater();
+                        filistin.AboneYap(jqXHR);
+
+                    }
+                    else
+                    { //MCM dll i kullanılıyor
+                        var mcm = new Mcm();
+                        mcm.AboneYap(jqXHR);
+
+                    }
 
 
-                                                  );
-                                                  if (result === "1") {
-                                                      ajaxMesajGoster('İşlem Başarılı');
-                                                  } else {
-                                                      ajaxMesajGoster('İşlem Başarısız', 'Hata');
-                                                  }
                 }
                 else {
-                    var su = new ActiveXObject("SmartCard.OrtakAvm");
-                                                  var result = su.AboneYap(jqXHR.EntSayacDetay.SERINO,
-                                                      1,
-                                                      jqXHR.PRMTARIFESU.LIMIT1,
-                                                      jqXHR.PRMTARIFESU.LIMIT2,
-                                                      jqXHR.PRMTARIFESU.FIYAT1,
-                                                      jqXHR.PRMTARIFESU.FIYAT2,
-                                                      jqXHR.PRMTARIFESU.FIYAT3,
-                                                      jqXHR.PRMTARIFESU.FIYAT4,
-                                                      jqXHR.PRMTARIFESU.FIYAT4,
-                                                      jqXHR.PRMTARIFESU.FIYAT4,
-                                                      jqXHR.PRMTARIFESU.FIYAT4
-
-
-                                                  );
-                                                  if (result === "1") {
-                                                      ajaxMesajGoster('İşlem Başarılı');
-                                                  } else {
-                                                      ajaxMesajGoster('İşlem Başarısız', 'Hata');
-                                                  }
+                    //Ortak Avm Dll Kullanılıyor
+                    var ortakAvm = new OrtakAvm();
+                    ortakAvm.AboneYap(jqXHR,"su");
                 }
 
 
@@ -396,26 +328,9 @@
             });
             request.done(function (jqXHR) {
                 unblockUI();
-                var su = new ActiveXObject("SmartCard.OrtakAvm");
-                                                  var result = su.AboneYap(jqXHR.EntSayacDetay.SERINO,
-                                                      1,
-                                                      jqXHR.PrmTarifeKALORIMETRE.LIMIT1,
-                                                      jqXHR.PrmTarifeKALORIMETRE.LIMIT2,
-                                                      jqXHR.PrmTarifeKALORIMETRE.FIYAT1,
-                                                      jqXHR.PrmTarifeKALORIMETRE.FIYAT2,
-                                                      jqXHR.PrmTarifeKALORIMETRE.FIYAT3,
-                                                      jqXHR.PrmTarifeKALORIMETRE.FIYAT4,
-                                                      jqXHR.PrmTarifeKALORIMETRE.FIYAT4,
-                                                      jqXHR.PrmTarifeKALORIMETRE.FIYAT4,
-                                                      jqXHR.PrmTarifeKALORIMETRE.FIYAT4
-
-
-                                                  );
-                                                  if (result === "1") {
-                                                      ajaxMesajGoster('İşlem Başarılı');
-                                                  } else {
-                                                      ajaxMesajGoster('İşlem Başarısız', 'Hata');
-                                                  }
+                //Ortak Avm Dll Kullanılıyor
+                var ortakAvm = new OrtakAvm();
+                ortakAvm.AboneYap(jqXHR,"kalorimetre");
             });
 
             request.fail(function (jqXHR, textStatus) {

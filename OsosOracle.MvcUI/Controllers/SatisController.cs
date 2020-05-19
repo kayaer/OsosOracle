@@ -1,10 +1,7 @@
 ﻿using Microsoft.Reporting.WebForms;
 using OsosOracle.Business.Abstract;
-using OsosOracle.Entities.ComplexType.ENTABONEComplexTypes;
 using OsosOracle.Entities.ComplexType.ENTABONESAYACComplexTypes;
 using OsosOracle.Entities.ComplexType.ENTSATISComplexTypes;
-using OsosOracle.Entities.ComplexType.ENTSAYACComplexTypes;
-using OsosOracle.Entities.Concrete;
 using OsosOracle.Framework.CrossCuttingConcern.ExceptionHandling;
 using OsosOracle.Framework.SharedModels;
 using OsosOracle.Framework.Utilities.ExtensionMethods;
@@ -17,22 +14,24 @@ using System.Linq;
 using System.Web.Mvc;
 using OsosOracle.MvcUI.Resources;
 using OsosOracle.MvcUI.Models.ENTABONESAYACModels;
-using OsosOracle.MvcUI.Models.ENTABONEModels;
 using OsosOracle.MvcUI.Models.ENTSATISModels.Yeni;
 using OsosOracle.Entities.ComplexType.PRMTARIFESUComplexTypes;
 using System.IO;
 using OsosOracle.MvcUI.Reports.ReportModel;
 using OsosOracle.Entities.Enums;
+using OsosOracle.Entities.Concrete;
 
 namespace OsosOracle.MvcUI.Controllers
 {
     [AuthorizeUser]
     public class SatisController : BaseController
     {
+        private readonly IENTSAYACService _entSayacService;
         private readonly IENTSATISService _entSatisService;
         private readonly IENTABONESAYACService _entAboneSayacService;
         private readonly IENTABONEService _entAboneService;
         private readonly IPRMTARIFESUService _prmTarifeSuService;
+        private readonly IPRMTARIFEKALORIMETREService _prmTarifeKalorimetreService;
         public SatisController(IENTSATISService entSatisService,
             IENTSAYACService entSayacService,
             IENTABONESAYACService entAboneSayacService,
@@ -41,9 +40,12 @@ namespace OsosOracle.MvcUI.Controllers
             IPRMTARIFESUService prmTarifeSuService)
         {
             _entSatisService = entSatisService;
+            _entSayacService = entSayacService;
             _entAboneSayacService = entAboneSayacService;
             _entAboneService = entAboneService;
+            _prmTarifeKalorimetreService = prmKALORIMETREService;
             _prmTarifeSuService = prmTarifeSuService;
+
         }
         public ActionResult Index()
         {
@@ -67,7 +69,7 @@ namespace OsosOracle.MvcUI.Controllers
             model.SuSatisModel.PrmTarifeSuDetay = _prmTarifeSuService.DetayGetir(new PRMTARIFESUAra { KAYITNO = model.SuSatisModel.AboneSayacDetay.TARIFEKAYITNO }).FirstOrDefault();
 
 
-          
+
             return Json(model);
         }
         public JsonResult SatisIptalPars(SatisModel model)
@@ -89,7 +91,7 @@ namespace OsosOracle.MvcUI.Controllers
             }
 
 
-          
+
             //Negatif yükleme önlemi
             if (model.SuSatisModel.SatisIptal.AnaKredi < 0)
             {
@@ -100,7 +102,7 @@ namespace OsosOracle.MvcUI.Controllers
             //{
             //    model.SuSatisModel.SatisIptal.YedekKredi = 0;
             //}
-           
+
 
             if (model.SuSatisModel.SogukSuOkunan.Ako == "*")
             {
@@ -147,8 +149,8 @@ namespace OsosOracle.MvcUI.Controllers
                     t.SayacTipi,
                     t.ODEME,
                     t.SatisTipi,
-                    t.SatisTipAdi,
-                    Islemler = $@"<a class='btn btn-xs btn-info' href='{Url.Action("SatistanMakbuzOlustur", "EntSatis", new { satisKayitNo = t.KAYITNO, sayacKayitNo = t.SAYACKAYITNO })}' title='Makbuz İndir'><i class='fa fa-edit'></i></a>"
+                    SatisTipAdi = Dil.ResourceManager.GetString(t.SatisTipAdi),
+                    Islemler = $@"<a class='btn btn-xs btn-info' href='{Url.Action("SatistanMakbuzOlustur", "Satis", new { satisKayitNo = t.KAYITNO, sayacKayitNo = t.SAYACKAYITNO })}' title='Makbuz İndir'><i class='fa fa-edit'></i></a>"
                 }),
                 draw = dtParameterModel.Draw,
                 recordsTotal = kayitlar.ToplamKayitSayisi,
@@ -156,7 +158,7 @@ namespace OsosOracle.MvcUI.Controllers
             }, JsonRequestBehavior.AllowGet);
         }
 
-       
+
 
 
         public ActionResult KartliSatis()
@@ -495,14 +497,14 @@ namespace OsosOracle.MvcUI.Controllers
                 reportDataSource1.Value = dataSource1;
                 lr.DataSources.Add(reportDataSource1);
 
-             
+
 
                 dataSource3.Add(suSatisBilgileri);
                 reportDataSource3.Name = "SatisBilgileri";
                 reportDataSource3.Value = dataSource3;
                 lr.DataSources.Add(reportDataSource3);
 
-          
+
 
 
 
@@ -518,7 +520,7 @@ namespace OsosOracle.MvcUI.Controllers
 
             }
 
-  
+
         }
 
         public ActionResult MakbuzIndir(string filename)
@@ -531,5 +533,264 @@ namespace OsosOracle.MvcUI.Controllers
         {
             return View();
         }
+
+        public ActionResult SatistanMakbuzOlustur(int satisKayitNo, int sayacKayitNo)
+        {
+           
+            string filename="";
+            if (AktifKullanici.Dil == enumDil.Turkce.GetHashCode())
+            {
+                filename = TurkceMakbuzOlustur(satisKayitNo,sayacKayitNo);
+            }
+            else
+            {
+                filename = IngilizceMakbuzOlustur(satisKayitNo, sayacKayitNo);
+            }
+
+
+
+
+
+            byte[] bytes = System.IO.File.ReadAllBytes(Server.MapPath("~/App_Data/" + filename));
+            return File(bytes, "PDF", filename);
+
+        }
+
+        private string IngilizceMakbuzOlustur(int satisKayitNo, int sayacKayitNo)
+        {
+            ENTSATISDetay suSatisDetay = _entSatisService.DetayGetirById(satisKayitNo);
+            LocalReport lr = new LocalReport();
+            string path = Path.Combine(Server.MapPath("~/Reports"), "SatisMakbuzIngilizce.rdlc");
+            if (System.IO.File.Exists(path))
+            {
+                lr.ReportPath = path;
+            }
+
+            string reportType = "PDF";
+            string mimeType;
+            string encoding;
+            string fileNameExtension;
+            string deviceInfo = "<DeviceInfo>" +
+                     "  <OutputFormat>PDF</OutputFormat>" +
+                     "  <PageWidth>8.27in</PageWidth>" +
+                     "  <PageHeight>11.69in</PageHeight>" +
+                     "  <MarginTop>0.25in</MarginTop>" +
+                     "  <MarginLeft>0.4in</MarginLeft>" +
+                     "  <MarginRight>0in</MarginRight>" +
+                     "  <MarginBottom>0.25in</MarginBottom>" +
+                     "  <EmbedFonts>None</EmbedFonts>" +
+                     "</DeviceInfo>";
+
+
+            Warning[] warning;
+            string[] streams;
+            byte[] renderedBytes;
+
+            Microsoft.Reporting.WebForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WebForms.ReportDataSource();
+            List<YesilVadiMakbuzBilgileri> dataSource1 = new List<YesilVadiMakbuzBilgileri>();
+            YesilVadiMakbuzBilgileri makbuzBilgileri = new YesilVadiMakbuzBilgileri();
+
+            Microsoft.Reporting.WebForms.ReportDataSource reportDataSource3 = new Microsoft.Reporting.WebForms.ReportDataSource();
+            List<SuSatisBilgileri> dataSource3 = new List<SuSatisBilgileri>();
+            SuSatisBilgileri suSatisBilgileri = new SuSatisBilgileri();
+
+            if (suSatisDetay != null)
+            {
+                makbuzBilgileri.KurumAdi = AktifKullanici.KurumAdi;
+                makbuzBilgileri.AboneAdiSoyadi = suSatisDetay.AboneAdSoyad;
+                makbuzBilgileri.AboneNo = suSatisDetay.AboneNo;
+                makbuzBilgileri.FaturaTarihi = suSatisDetay.OLUSTURMATARIH.ToString();
+                makbuzBilgileri.SuSayacNo = suSatisDetay.KapakSeriNo.ToString();
+                makbuzBilgileri.FaturaNo = suSatisDetay.KAYITNO.ToString();
+
+                suSatisBilgileri.Tarih = suSatisDetay.OLUSTURMATARIH.ToString();
+                suSatisBilgileri.SayacTuru = "Water";
+                suSatisBilgileri.KontorMiktar = suSatisDetay.KREDI.ToString();
+
+                suSatisBilgileri.BakimBedeli = suSatisDetay.AylikBakimBedeli.ToString();
+                suSatisBilgileri.Ctv = suSatisDetay.Ctv.ToString();
+                suSatisBilgileri.Kdv = suSatisDetay.Kdv.ToString();
+                suSatisBilgileri.Tutar = suSatisDetay.SatisTutarı.ToString();
+                suSatisBilgileri.TotalTutar = suSatisDetay.ODEME.ToString();
+
+            }
+
+            dataSource1.Add(makbuzBilgileri);
+            reportDataSource1.Name = "AboneBilgileri";
+            reportDataSource1.Value = dataSource1;
+            lr.DataSources.Add(reportDataSource1);
+
+
+
+            dataSource3.Add(suSatisBilgileri);
+            reportDataSource3.Name = "SatisBilgileri";
+            reportDataSource3.Value = dataSource3;
+            lr.DataSources.Add(reportDataSource3);
+
+
+
+
+
+
+
+            renderedBytes = lr.Render("PDF", deviceInfo, out mimeType, out encoding, out fileNameExtension, out streams, out warning);
+
+            string filename = makbuzBilgileri.AboneNo + DateTime.Now.Month + DateTime.Now.Day + DateTime.Now.Hour + DateTime.Now.Minute + ".pdf";
+            path = Server.MapPath("~/App_Data/" + filename);
+            System.IO.File.WriteAllBytes(path, renderedBytes);
+
+            return filename;
+        }
+        private string TurkceMakbuzOlustur(int satisKayitNo, int sayacKayitNo)
+        {
+            var sayac = _entSayacService.DetayGetirById(sayacKayitNo);
+            ENTSATISDetay suSatisDetay = new ENTSATISDetay();
+            ENTSATISDetay kalorimetreSatisDetay = new ENTSATISDetay();
+            PRMTARIFESU tarifeSu = new PRMTARIFESU();
+            PRMTARIFEKALORIMETRE tarifeKalorimetre = new PRMTARIFEKALORIMETRE();
+
+          
+            if (sayac.SayacTuru == 1)
+            {
+                suSatisDetay = _entSatisService.DetayGetirById(satisKayitNo);
+                var aboneSayacSu = _entAboneSayacService.DetayGetir(new ENTABONESAYACAra { SAYACKAYITNO = suSatisDetay.SAYACKAYITNO, Durum = 1 }).FirstOrDefault();
+                if (aboneSayacSu.TARIFEKAYITNO == null)
+                {
+                    throw new NotificationException("Makbuz tarife bilgisi çekilemedi");
+                }
+                tarifeSu = _prmTarifeSuService.GetirById(aboneSayacSu.TARIFEKAYITNO.Value);
+            }
+            else if (sayac.SayacTuru == 2)
+            {
+                kalorimetreSatisDetay = _entSatisService.DetayGetirById(satisKayitNo);
+                var aboneSayacKalorimetre = _entAboneSayacService.DetayGetir(new ENTABONESAYACAra { SAYACKAYITNO = kalorimetreSatisDetay.SAYACKAYITNO, Durum = 1 }).FirstOrDefault();
+                if (aboneSayacKalorimetre.TARIFEKAYITNO == null)
+                {
+                    throw new NotificationException("Makbuz tarife bilgisi çekilemedi");
+                }
+                tarifeKalorimetre = _prmTarifeKalorimetreService.GetirById(aboneSayacKalorimetre.TARIFEKAYITNO.Value);
+            }
+            LocalReport lr = new LocalReport();
+            string path = Path.Combine(Server.MapPath("~/Reports"), "Report.rdlc");
+            if (System.IO.File.Exists(path))
+            {
+                lr.ReportPath = path;
+            }
+
+            string reportType = "PDF";
+            string mimeType;
+            string encoding;
+            string fileNameExtension;
+            string deviceInfo = "<DeviceInfo>" +
+                     "  <OutputFormat>PDF</OutputFormat>" +
+                     "  <PageWidth>8.27in</PageWidth>" +
+                     "  <PageHeight>11.69in</PageHeight>" +
+                     "  <MarginTop>0.25in</MarginTop>" +
+                     "  <MarginLeft>0.4in</MarginLeft>" +
+                     "  <MarginRight>0in</MarginRight>" +
+                     "  <MarginBottom>0.25in</MarginBottom>" +
+                     "  <EmbedFonts>None</EmbedFonts>" +
+                     "</DeviceInfo>";
+
+
+            Warning[] warning;
+            string[] streams;
+            byte[] renderedBytes;
+
+            Microsoft.Reporting.WebForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WebForms.ReportDataSource();
+            List<YesilVadiMakbuzBilgileri> dataSource1 = new List<YesilVadiMakbuzBilgileri>();
+            YesilVadiMakbuzBilgileri makbuzBilgileri = new YesilVadiMakbuzBilgileri();
+
+            Microsoft.Reporting.WebForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WebForms.ReportDataSource();
+            List<KalorimetreSatisBilgileri> dataSource2 = new List<KalorimetreSatisBilgileri>();
+            KalorimetreSatisBilgileri kalorimetreSatisBilgileri = new KalorimetreSatisBilgileri();
+
+            Microsoft.Reporting.WebForms.ReportDataSource reportDataSource3 = new Microsoft.Reporting.WebForms.ReportDataSource();
+            List<SuSatisBilgileri> dataSource3 = new List<SuSatisBilgileri>();
+            SuSatisBilgileri suSatisBilgileri = new SuSatisBilgileri();
+
+            Microsoft.Reporting.WebForms.ReportDataSource reportDataSource4 = new Microsoft.Reporting.WebForms.ReportDataSource();
+            List<SatisBilgileri> dataSource4 = new List<SatisBilgileri>();
+            SatisBilgileri satisBilgileri = new SatisBilgileri();
+
+            if (suSatisDetay.KAYITNO > 0)
+            {
+                makbuzBilgileri.AboneAdiSoyadi = suSatisDetay.AboneAdSoyad;
+                makbuzBilgileri.AboneNo = suSatisDetay.AboneNo;
+                makbuzBilgileri.FaturaTarihi = suSatisDetay.OLUSTURMATARIH.ToString();
+                makbuzBilgileri.SuSayacNo = suSatisDetay.KapakSeriNo.ToString();
+
+                suSatisBilgileri.Tarih = suSatisDetay.OLUSTURMATARIH.ToString();
+                suSatisBilgileri.SayacTuru = "SU";
+                suSatisBilgileri.KontorMiktar = suSatisDetay.KREDI.ToString();
+
+                suSatisBilgileri.BakimBedeli = suSatisDetay.AylikBakimBedeli.ToString();
+                suSatisBilgileri.Ctv = suSatisDetay.Ctv.ToString();
+                suSatisBilgileri.Kdv = suSatisDetay.Kdv.ToString();
+                suSatisBilgileri.Tutar = suSatisDetay.SatisTutarı.ToString();
+                suSatisBilgileri.TotalTutar = suSatisDetay.ODEME.ToString();
+                suSatisBilgileri.BirimFiyat = tarifeSu.BIRIMFIYAT.ToString();
+            }
+            if (kalorimetreSatisDetay.KAYITNO > 0)
+            {
+                makbuzBilgileri.AboneAdiSoyadi = kalorimetreSatisDetay.AboneAdSoyad;
+                makbuzBilgileri.AboneNo = kalorimetreSatisDetay.AboneNo;
+                makbuzBilgileri.FaturaTarihi = kalorimetreSatisDetay.OLUSTURMATARIH.ToString();
+                makbuzBilgileri.KalorimetreNo = kalorimetreSatisDetay.KapakSeriNo.ToString();
+
+                kalorimetreSatisBilgileri.Tarih = kalorimetreSatisDetay.OLUSTURMATARIH.ToString();
+                kalorimetreSatisBilgileri.SayacTuru = "KALORİMETRE";
+                kalorimetreSatisBilgileri.KontorMiktar = kalorimetreSatisDetay.KREDI.ToString();
+
+                kalorimetreSatisBilgileri.BakimBedeli = kalorimetreSatisDetay.AylikBakimBedeli.ToString();
+                kalorimetreSatisBilgileri.Ctv = kalorimetreSatisDetay.Ctv.ToString();
+                kalorimetreSatisBilgileri.Kdv = kalorimetreSatisDetay.Kdv.ToString();
+                kalorimetreSatisBilgileri.Tutar = kalorimetreSatisDetay.SatisTutarı.ToString();
+                kalorimetreSatisBilgileri.TotalTutar = kalorimetreSatisDetay.ODEME.ToString();
+                kalorimetreSatisBilgileri.BirimFiyat = tarifeKalorimetre.BirimFiyat.ToString();
+
+
+            }
+
+            satisBilgileri.SatisTutari = (kalorimetreSatisBilgileri.Tutar.ToDecimal() + suSatisBilgileri.Tutar.ToDecimal()).ToString();
+            satisBilgileri.BakimHizmetleriBedeli = (kalorimetreSatisBilgileri.BakimBedeli.ToDecimal() + suSatisBilgileri.BakimBedeli.ToDecimal()).ToString();
+            satisBilgileri.CtvBedeli = (kalorimetreSatisBilgileri.Ctv.ToDecimal() + suSatisBilgileri.Ctv.ToDecimal()).ToString();
+            satisBilgileri.KdvBedeli = (kalorimetreSatisBilgileri.Kdv.ToDecimal() + suSatisBilgileri.Kdv.ToDecimal()).ToString();
+            satisBilgileri.GenelToplam = (kalorimetreSatisBilgileri.TotalTutar.ToDecimal() + suSatisBilgileri.TotalTutar.ToDecimal()).ToString();
+
+            dataSource1.Add(makbuzBilgileri);
+            reportDataSource1.Name = "DataSet1";
+            reportDataSource1.Value = dataSource1;
+            lr.DataSources.Add(reportDataSource1);
+
+            dataSource2.Add(kalorimetreSatisBilgileri);
+            reportDataSource2.Name = "DataSet2";
+            reportDataSource2.Value = dataSource2;
+            lr.DataSources.Add(reportDataSource2);
+
+            dataSource3.Add(suSatisBilgileri);
+            reportDataSource3.Name = "DataSet3";
+            reportDataSource3.Value = dataSource3;
+            lr.DataSources.Add(reportDataSource3);
+
+            dataSource4.Add(satisBilgileri);
+            reportDataSource4.Name = "DataSet4";
+            reportDataSource4.Value = dataSource4;
+            lr.DataSources.Add(reportDataSource4);
+
+
+
+
+
+            renderedBytes = lr.Render("PDF", deviceInfo, out mimeType, out encoding, out fileNameExtension, out streams, out warning);
+
+            string filename = makbuzBilgileri.AboneNo + DateTime.Now.Month + DateTime.Now.Day + DateTime.Now.Hour + DateTime.Now.Minute + ".pdf";
+            path = Server.MapPath("~/App_Data/" + filename);
+            System.IO.File.WriteAllBytes(path, renderedBytes);
+
+            return filename;
+        }
+
+
     }
 }

@@ -68,7 +68,7 @@
                             @Html.TextBoxFor(t => t.KalorimetreSatisModel.KalorimetreOkunan.AkoMesaj, new { @class = "form-control", placeholder = _T("Kalorimetre Bilgisi") })
                         </div>
                     </div>
-                     <div class="form-group">
+                    <div class="form-group">
                         <div class="col-md-6">
                             @Html.TextBoxFor(t => t.KalorimetreSatisModel.KalorimetreOkunan.Kalan, new { @class = "form-control", placeholder = Dil.Kalorimetre + ' ' + Dil.KALANKREDI })
                         </div>
@@ -176,18 +176,18 @@
             </div>
 
         </div>
-       
+
     </div>
     <div class="col-md-6"></div>
     <div class="col-md-6">
-         <button type="submit" class="btn btn-danger btn-sm pull-right" name="submitButton" id="btnKrediYukle">
+        <button type="submit" class="btn btn-danger btn-sm pull-right" name="submitButton" id="btnKrediYukle">
             @Dil.KrediYukle
         </button>
     </div>
 </div>
 
 
-
+<script src="~/Content/js/OrtakAvm.js"></script>
 <script type="text/javascript">
 
     $(document).ready(function () {
@@ -196,9 +196,9 @@
         $("#btnKartOku").click(function (e) {
                         blockUI();
             try {
-                //var aboneIslem = new ActiveXObject("SmartCard.OrtakAvm");
-                //okunanData = aboneIslem.AboneOku();
-                SatisModel.HamData = okunanData;
+                //Ortak Avm Dll Kullanılıyor
+                var ortakAvm = new OrtakAvm();
+                SatisModel.HamData = ortakAvm.AboneOku();
                 var model = JSON.stringify(SatisModel)
                 var request = $.ajax({
                        url: "@Url.Action("SatisPars", "EntSatis")",
@@ -289,10 +289,7 @@
                        $("#@Html.IdFor(t => t.SuSatisModel.Satis.YEDEKKREDI)").val(jqXHR.SuSatisModel.Satis.YEDEKKREDI).blur();
                        $("#@Html.IdFor(t => t.SuSatisModel.Satis.ToplamKredi)").val(jqXHR.SuSatisModel.Satis.ToplamKredi).blur();
                        $("#@Html.IdFor(t => t.SuSatisModel.Satis.AylikBakimBedeli)").val(jqXHR.SuSatisModel.Satis.AylikBakimBedeli).blur();
-                       //$("#txtSuKredi").val(jqXHR.SuSatisModel.Satis.KREDI);
-                       //$("#txtSuToplamKredi").val(jqXHR.SuSatisModel.Satis.ToplamKredi);
-                       //$("#txtSuYedekKredi").val(jqXHR.SuSatisModel.Satis.YEDEKKREDI);
-                       //$("#txtSuAylikBakimBedeli").val(jqXHR.SuSatisModel.Satis.AylikBakimBedeli);
+                      
 
                    });
                    request.fail(function (jqXHR, textStatus) {
@@ -326,10 +323,7 @@
                        $("#@Html.IdFor(t => t.KalorimetreSatisModel.Satis.KREDI)").val(jqXHR.KalorimetreSatisModel.Satis.KREDI).blur();
                        $("#@Html.IdFor(t => t.KalorimetreSatisModel.Satis.ToplamKredi)").val(jqXHR.KalorimetreSatisModel.Satis.ToplamKredi).blur();
                        $("#@Html.IdFor(t => t.KalorimetreSatisModel.Satis.AylikBakimBedeli)").val(jqXHR.KalorimetreSatisModel.Satis.AylikBakimBedeli).blur();
-                       //$("#txtKalorimetreKredi").val(jqXHR.KalorimetreSatisModel.Satis.KREDI);
-                       //$("#txtKalorimetreToplamKredi").val(jqXHR.KalorimetreSatisModel.Satis.ToplamKredi);
-                       //$("#txtKalorimetreYedekKredi").val(jqXHR.KalorimetreSatisModel.Satis.YEDEKKREDI);
-                       //$("#txtKalorimetreAylikBakimBedeli").val(jqXHR.KalorimetreSatisModel.Satis.AylikBakimBedeli);
+                      
                    });
                    request.fail(function (jqXHR, textStatus) {
                        unblockUI();
@@ -390,38 +384,20 @@
         });
 
         function SuKrediYukle(SuSatisModel) {
-            return "1";
-                    var sogukSu = new ActiveXObject("SmartCard.OrtakAvm");
-                    result = sogukSu.AboneYazSu(SuSatisModel.SogukSuOkunan.SayacSeriNo,
-                                SuSatisModel.Satis.ToplamKredi,
-                                SuSatisModel.PrmTarifeSuDetay.YEDEKKREDI,  //SuSatisModel.Satis.YEDEKKREDI,
-                                SuSatisModel.PrmTarifeSuDetay.LIMIT1,
-                                SuSatisModel.PrmTarifeSuDetay.LIMIT2,
-                                SuSatisModel.PrmTarifeSuDetay.FIYAT1,
-                                SuSatisModel.PrmTarifeSuDetay.FIYAT2,
-                                SuSatisModel.PrmTarifeSuDetay.FIYAT3
-                            );
-                             return result;
-                 }
 
-                function KalorimetreKrediYukle(KalorimetreSatisModel) {
-                    return "1";
-                    var kalorimetre = new ActiveXObject("SmartCard.OrtakAvm");
+            //Ortak Avm Dll Kullanılıyor
+            var ortakAvm = new OrtakAvm();
+            return ortakAvm.SuKrediYukle(SuSatisModel);
 
-                    result = kalorimetre.KalorimetreYaz(KalorimetreSatisModel.KalorimetreOkunan.CihazNo,//SAyacserino getirilecek
-                        KalorimetreSatisModel.Satis.ToplamKredi,
-                        KalorimetreSatisModel.PrmTarifeKALORIMETREDetay.RezervKredi,
-                        KalorimetreSatisModel.PrmTarifeKALORIMETREDetay.BAYRAM1GUN,
-                        KalorimetreSatisModel.PrmTarifeKALORIMETREDetay.BAYRAM1AY,
-                        KalorimetreSatisModel.PrmTarifeKALORIMETREDetay.BAYRAM1SURE,
-                        KalorimetreSatisModel.PrmTarifeKALORIMETREDetay.BAYRAM2GUN,
-                        KalorimetreSatisModel.PrmTarifeKALORIMETREDetay.BAYRAM2AY,
-                        KalorimetreSatisModel.PrmTarifeKALORIMETREDetay.BAYRAM2SURE
-                        );
-                        return result;
+        }
 
+        function KalorimetreKrediYukle(KalorimetreSatisModel) {
 
-             }
+             //Ortak Avm Dll Kullanılıyor
+             var ortakAvm = new OrtakAvm();
+             return ortakAvm.KalorimetreKrediYukle(KalorimetreSatisModel);
+
+        }
 
     });
 </script>

@@ -89,3 +89,4 @@ C:\Projeler\Mısır\OsosOracle\nahcivanYoncaDll\SmartCard\SmartCard\bin\Debug\Sm
 C:\Projeler\Mısır\OsosOracle\nahcivanYoncaDll\SmartCard\SmartCard\obj\Debug\SmartCard.csproj.CoreCompileInputs.cache
 C:\Projeler\Mısır\OsosOracle\nahcivanYoncaDll\SmartCard\SmartCard\obj\Debug\SmartCard.dll
 C:\Projeler\Mısır\OsosOracle\nahcivanYoncaDll\SmartCard\SmartCard\obj\Debug\SmartCard.pdb
+C:\Projeler\Mısır\OsosOracle\nahcivanYoncaDll\SmartCard\SmartCard\obj\Debug\SmartCard.csprojAssemblyReference.cache

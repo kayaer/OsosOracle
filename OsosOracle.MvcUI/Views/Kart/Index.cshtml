@@ -6,11 +6,28 @@
 }
 
 <div class="row">
-    <button id="btnAboneOku" type="button" class="btn btn-primary">@Dil.AboneOku</button>
-    <button id="btnKartBosalt" type="button" class="btn btn-info">@Dil.KartBosalt</button>
-    <button id="btnKartTipi" type="button" class="btn btn-warning">@Dil.KartTipi</button>
-    @* <button type="button" class="btn btn-danger">Danger</button>
-        <button type="button" class="btn btn-warning">Warning</button>
+   
+        <div class="col-md-6">
+            <select class="form-control" id="sayacModel">
+                <option value="Seçiniz">@Dil.Seciniz</option>
+                <option value="MCM">Mcm</option>
+                <option value="MERCAN">Mercan</option>
+                <option value="AS20">As20</option>
+                <option value="MERCANYD">Mercan YD</option>
+            </select>
+
+        </div>
+        <div class="col-md-6">
+            <button id="btnAboneOku" type="button" class="btn btn-primary">@Dil.AboneOku</button>
+            <button id="btnKartBosalt" type="button" class="btn btn-info">@Dil.KartBosalt</button>
+            <button id="btnKartTipi" type="button" class="btn btn-warning">@Dil.KartTipi</button>
+            <button id="btnMcm" class="btn btn-danger">Mcm Kart Boşalt</button>
+        </div>
+
+
+   
+
+    @*  <button type="button" class="btn btn-warning">Warning</button>
         <button type="button" class="btn btn-info">Info</button>
         <button type="button" class="btn btn-light">Light</button>
         <button type="button" class="btn btn-dark">Dark</button>*@
@@ -89,7 +106,9 @@
 
     </div>
 </div>
+<script src="~/Content/js/Mcm.js"></script>
 <script type="text/javascript">
+
     $(document).ready(function () {
 
         var SatisModel =@Html.Raw(Json.Encode(Model));
@@ -108,6 +127,11 @@
         });
         $("#btnAboneYap").click(function (e) {
             AboneYap();
+        });
+
+        $("#btnMcm").click(function (e) {
+            var mcm = new Mcm();
+            mcm.KartBosalt();
         });
 
         function KartTipi() {

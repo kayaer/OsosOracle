@@ -547,3 +547,4 @@ C:\Projeler\Mısır\OsosOracle\OsosOracle.Framework\obj\Debug\OsosOracle.Framewo
 C:\Projeler\Mısır\OsosOracle\OsosOracle.Framework\obj\Debug\OsosOracle.Framework.dll
 C:\Projeler\Mısır\OsosOracle\OsosOracle.Framework\obj\Debug\OsosOracle.Framework.pdb
 C:\Projeler\Mısır\OsosOracle\OsosOracle.Framework\obj\Debug\PostSharpHost.config
+C:\Projeler\Mısır\OsosOracle\OsosOracle.Framework\obj\Debug\OsosOracle.Framework.csprojAssemblyReference.cache

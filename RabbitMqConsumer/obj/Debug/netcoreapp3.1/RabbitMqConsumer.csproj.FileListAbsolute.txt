@@ -27,3 +27,4 @@ C:\Projeler\Mısır\OsosOracle\RabbitMqConsumer\obj\Debug\netcoreapp3.1\RabbitMq
 C:\Projeler\Mısır\OsosOracle\RabbitMqConsumer\obj\Debug\netcoreapp3.1\RabbitMqConsumer.dll
 C:\Projeler\Mısır\OsosOracle\RabbitMqConsumer\obj\Debug\netcoreapp3.1\RabbitMqConsumer.pdb
 C:\Projeler\Mısır\OsosOracle\RabbitMqConsumer\obj\Debug\netcoreapp3.1\RabbitMqConsumer.genruntimeconfig.cache
+C:\Projeler\Mısır\OsosOracle\RabbitMqConsumer\obj\Debug\netcoreapp3.1\RabbitMqConsumer.csprojAssemblyReference.cache
