@@ -6,7 +6,9 @@
     
 
 PalestineWater.prototype.AboneYap = function (jqXHR) {
-        try {
+    try {
+        getsessionInformation(function (data) {
+
             var su = new ActiveXObject(this.DllNamespace);
             var result = su.AboneYap(jqXHR.EntSayacDetay.SERINO,
                 jqXHR.AboneNo,
@@ -35,10 +37,17 @@ PalestineWater.prototype.AboneYap = function (jqXHR) {
                 jqXHR.PRMTARIFESU.SABITUCRET
             );
             if (result === "1") {
-                ajaxMesajGoster('İşlem Başarılı');
+                if (data.Dil == "1") { ajaxMesajGoster('Success'); }
+                else { ajaxMesajGoster('İşlem Başarılı');}
+              
             } else {
-                ajaxMesajGoster('İşlem Başarısız', 'Hata');
+                if (data.Dil == "1") { ajaxMesajGoster('Unsuccess', 'Error'); }
+                else { ajaxMesajGoster('İşlem Başarısız', 'Hata'); }
+               
             }
+        });
+
+           
         } catch (ex) {
             ajaxMesajGoster(ex);
         }

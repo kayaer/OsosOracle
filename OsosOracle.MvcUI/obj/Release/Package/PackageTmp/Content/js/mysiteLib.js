@@ -1,5 +1,7 @@
 ﻿
 var baseUrl = "http://localhost:12735/Home/GetSession";
+//var baseUrl = "http://yonca.elektromed.com.tr/Home/GetSession";
+var sessionInformation = {};
 
 function GetSession(url) {
 
@@ -27,3 +29,64 @@ function GetSession(url) {
     return data;
 }
 
+//var getsessionInformation=function GetSessionInformation(callback) {
+    
+//    $.ajax({
+//        url: baseUrl,
+//        dataType: "json",
+//        method: "GET",
+//        async: false,
+//        success: callback,
+//        error: function (xhr, ajaxOptions, thrownError) {
+
+           
+//        }
+//    });
+   
+//}
+
+//Callback senkron kullanım örnegi
+//getsessionInformation(function (data) {
+
+//    console.log(data);
+//});
+
+//internet explorer desteklemiyor
+//async function GetSessionInformation() {
+
+//    var response = await fetch(baseUrl);
+//    return response.json();
+
+//    //$.ajax({
+//    //    url: baseUrl,
+//    //    dataType: "json",
+//    //    method: "GET",
+//    //    async: false,
+//    //    success: callback,
+//    //    error: function (xhr, ajaxOptions, thrownError) {
+
+
+//    //    }
+//    //});
+
+//}
+
+
+function GetSessionInformation() {
+
+    const xhr = new XMLHttpRequest();
+
+    xhr.open("GET", baseUrl);
+
+    xhr.send();
+
+    xhr.onload = function () {
+
+        if (this.status == 200) {
+            const response = JSON.parse(this.responseText);
+           
+            sessionInformation = response;
+        }
+    }
+
+}

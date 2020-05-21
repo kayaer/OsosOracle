@@ -1,0 +1,47 @@
+
+http://localhost:12735/Login?ReturnUrl=%2F
+23:34:05 20 Mayıs 2020 Çarşamba
+  :System.Data.Entity.Core.ProviderIncompatibleException: An error occurred while getting provider information from the database. This can be caused by Entity Framework using an incorrect connection string. Check the inner exceptions for details and ensure that the connection string is correct. ---> System.Data.Entity.Core.ProviderIncompatibleException: The provider did not return a ProviderManifestToken string. ---> Oracle.ManagedDataAccess.Client.OracleException: Connection request timed out
+   konum: OracleInternal.ConnectionPool.PoolManager`3.Get(ConnectionString csWithDiffOrNewPwd, Boolean bGetForApp, OracleConnection connRefForCriteria, String affinityInstanceName, Boolean bForceMatch)
+   konum: OracleInternal.ConnectionPool.OraclePoolManager.Get(ConnectionString csWithNewPassword, Boolean bGetForApp, OracleConnection connRefForCriteria, String affinityInstanceName, Boolean bForceMatch)
+   konum: OracleInternal.ConnectionPool.OracleConnectionDispenser`3.Get(ConnectionString cs, PM conPM, ConnectionString pmCS, SecureString securedPassword, SecureString securedProxyPassword, OracleConnection connRefForCriteria)
+   konum: Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   konum: Oracle.ManagedDataAccess.EntityFramework.EFOracleProviderServices.GetDbProviderManifestToken(DbConnection connection)
+   konum: System.Data.Entity.Core.Common.DbProviderServices.GetProviderManifestToken(DbConnection connection)
+   --- İç özel durum yığını izlemesinin sonu ---
+   konum: System.Data.Entity.Core.Common.DbProviderServices.GetProviderManifestToken(DbConnection connection)
+   konum: System.Data.Entity.Utilities.DbProviderServicesExtensions.GetProviderManifestTokenChecked(DbProviderServices providerServices, DbConnection connection)
+   --- İç özel durum yığını izlemesinin sonu ---
+   konum: System.Data.Entity.Utilities.DbProviderServicesExtensions.GetProviderManifestTokenChecked(DbProviderServices providerServices, DbConnection connection)
+   konum: System.Data.Entity.Infrastructure.DefaultManifestTokenResolver.<>c__DisplayClass1.<ResolveManifestToken>b__0(Tuple`3 k)
+   konum: System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   konum: System.Data.Entity.Infrastructure.DefaultManifestTokenResolver.ResolveManifestToken(DbConnection connection)
+   konum: System.Data.Entity.Utilities.DbConnectionExtensions.GetProviderInfo(DbConnection connection, DbProviderManifest& providerManifest)
+   konum: System.Data.Entity.DbModelBuilder.Build(DbConnection providerConnection)
+   konum: System.Data.Entity.Internal.LazyInternalContext.CreateModel(LazyInternalContext internalContext)
+   konum: System.Data.Entity.Internal.RetryLazy`2.GetValue(TInput input)
+   konum: System.Data.Entity.Internal.LazyInternalContext.InitializeContext()
+   konum: System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+   konum: System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+   konum: System.Data.Entity.Internal.Linq.InternalSet`1.get_InternalContext()
+   konum: System.Data.Entity.Infrastructure.DbQuery`1.System.Linq.IQueryable.get_Provider()
+   konum: System.Linq.Queryable.Where[TSource](IQueryable`1 source, Expression`1 predicate)
+   konum: OsosOracle.DataLayer.Concrete.EntityFramework.Dal.EfSYSKULLANICIDal.Filtrele(IQueryable`1 result, SYSKULLANICIAra filtre) C:\Projeler\Mısır\OsosOracle\OsosOracle.DataLayer\Concrete\EntityFramework\Dal\EfSYSKULLANICIDal.cs içinde: satır 40
+   konum: OsosOracle.DataLayer.Concrete.EntityFramework.Dal.EfSYSKULLANICIDal.DetayGetir(SYSKULLANICIAra filtre) C:\Projeler\Mısır\OsosOracle\OsosOracle.DataLayer\Concrete\EntityFramework\Dal\EfSYSKULLANICIDal.cs içinde: satır 116
+   konum: OsosOracle.Business.Concrete.SYSKULLANICIManager.DetayGetir(SYSKULLANICIAra filtre) C:\Projeler\Mısır\OsosOracle\OsosOracle.Business\Concrete\SYSKULLANICIManager.cs içinde: satır 44
+   konum: OsosOracle.MvcUI.Controllers.LoginController.Login(SY
+-------------------------------
+
+http://localhost:12735/Login/Login?ReturnUrl=%2F
+23:34:06 20 Mayıs 2020 Çarşamba
+  :System.Web.HttpException (0x80004005): Kaynak Bulunamadı
+   konum: OsosOracle.MvcUI.Infrastructure.NinjectControllerFactory.GetControllerInstance(RequestContext requestContext, Type controllerType) C:\Projeler\Mısır\OsosOracle\OsosOracle.MvcUI\Infrastructure\NinjectControllerFactory.cs içinde: satır 17
+   konum: System.Web.Mvc.DefaultControllerFactory.CreateController(RequestContext requestContext, String controllerName)
+   konum: System.Web.Mvc.MvcHandler.ProcessRequestInit(HttpContextBase httpContext, IController& controller, IControllerFactory& factory)
+   konum: System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContextBase httpContext, AsyncCallback callback, Object state)
+   konum: System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContext httpContext, AsyncCallback callback, Object state)
+   konum: System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.BeginProcessRequest(HttpContext context, AsyncCallback cb, Object extraData)
+   konum: System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   konum: System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   konum: System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously){'$id':'1','HttpMethod':'GET','UrlReferrer':'http://localhost:12735/Login/Login?ReturnUrl=%2F','RawUrl':'/favicon.ico','Browser':'Chrome','Version':'81.0','QueryString':[],'Form':[],'UserHostAddress':'::1','IsSecureConnection':false}
+-------------------------------

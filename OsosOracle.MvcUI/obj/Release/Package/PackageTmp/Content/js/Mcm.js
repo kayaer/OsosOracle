@@ -2,22 +2,44 @@
 function Mcm() {
 
     this.DllNamespace = "SmartCard.Mcm";
+
 }
 
-Mcm.prototype.KartTipi = function(){
-        try {
-            var su = new ActiveXObject(this.DllNamespace);
-            var kartTip = su.KartTipi();
-            ajaxMesajGoster(kartTip);
-        }
-        catch (ex) {
-            ajaxMesajGoster(ex);
-        }
 
+
+Mcm.prototype. KartTipi =  function () {
+    try {
+        var su = new ActiveXObject(this.DllNamespace);
+        var kartTip = su.KartTipi();
+
+
+        if (sessionInformation.Dil == "1") {
+            if (kartTip == "Subscriber Card" || kartTip == "Abone Kartı" || kartTip == "Abone Karti") {
+                kartTip = "Subscriber Card";
+            }
+            else if (kartTip == "Empty Card") {
+                kartTip = "Empty Card";
+            }
+        } else {
+
+            if (kartTip == "Subscriber Card" || kartTip == "Abone Kartı" || kartTip == "Abone Karti") {
+                kartTip = "Abone Kartı";
+            }
+            else if (kartTip == "Empty Card") {
+                kartTip = "Boş kart";
+            }
+
+        }
+ 
+    }
+    catch (ex) {
+        ajaxMesajGoster(ex);
     }
 
-Mcm.prototype.KartBosalt=  function () {
-        try {
+}
+
+Mcm.prototype.KartBosalt = function () {
+    try {
 
             var su = new ActiveXObject(this.DllNamespace);
             var kartTip = su.KartTipi();
@@ -25,36 +47,55 @@ Mcm.prototype.KartBosalt=  function () {
             if (kartTip == "Abone Karti" || kartTip == "Abone Kartı" || kartTip == "CBA ") {
                 var result = su.AboneBosalt();
                 if (result === "1") {
-                    ajaxMesajGoster('İşlem Başarılı');
+                    if (sessionInformation.Dil == "1") {
+                        ajaxMesajGoster('Success');
+                    } else {
+                        ajaxMesajGoster('İşlem Başarılı');
+                    }
+
                 } else {
-                    ajaxMesajGoster('İşlem Başarısız', 'Hata');
+                    if (sessionInformation.Dil == "1") {
+                        ajaxMesajGoster('UnSuccess', 'Error');
+                    } else {
+                        ajaxMesajGoster('İşlem Başarısız', 'Hata');
+                    }
+
                 }
                 return;
             } else if (kartTip == "Bos Kart") {
-                ajaxMesajGoster('Kart Boş');
+                if (data.Dil == "1") {
+                    ajaxMesajGoster('Empty Card');
+                } else {
+                    ajaxMesajGoster('Kart Boş');
+                }
+
             }
 
-        }
-        catch (ex) {
 
-            ajaxMesajGoster(ex);
 
-        }
-    }
-
-Mcm.prototype.AboneOku=    function () {
-        try {
-            var aboneIslem = new ActiveXObject(this.DllNamespace);
-            return aboneIslem.AboneOku();
-        } catch (ex) {
-            ajaxMesajGoster(ex, 'Hata');
-        }
 
     }
+    catch (ex) {
 
-Mcm.prototype.AboneYap=   function (jqXHR) {
+        ajaxMesajGoster(ex);
 
-        try {
+    }
+}
+
+Mcm.prototype.AboneOku = function () {
+    try {
+        var aboneIslem = new ActiveXObject(this.DllNamespace);
+        return aboneIslem.AboneOku();
+    } catch (ex) {
+        ajaxMesajGoster(ex, 'Hata');
+    }
+
+}
+
+Mcm.prototype.AboneYap = function (jqXHR) {
+
+    try {
+   
             var su = new ActiveXObject(this.DllNamespace);
             var result = su.AboneYap(jqXHR.EntSayacDetay.SERINO,
                 jqXHR.AboneNo,
@@ -87,48 +128,56 @@ Mcm.prototype.AboneYap=   function (jqXHR) {
 
             );
             if (result === "1") {
-                ajaxMesajGoster('İşlem Başarılı');
+                if (sessionInformation.Dil == "1") { ajaxMesajGoster('Success'); }
+                else { ajaxMesajGoster('İşlem Başarılı'); }
+
             } else {
-                ajaxMesajGoster('İşlem Başarısız', 'Hata');
+                if (sessionInformation.Dil == "1") { ajaxMesajGoster('UnSuccess', 'Error'); }
+                else { ajaxMesajGoster('İşlem Başarısız', 'Hata'); }
+
             }
-        }
-        catch (ex) {
-            ajaxMesajGoster(ex);
-        }
-    }
 
-Mcm.prototype.AboneYaz=   function (satisKaydetModel) {
 
-        try {
-            var mcm = new ActiveXObject(this.DllNamespace);
-            result = mcm.AboneYaz(satisKaydetModel.SogukSuOkunan.SayacSeriNo,
-                satisKaydetModel.Satis.ToplamKredi,
-                satisKaydetModel.PrmTarifeSuDetay.SAYACCAP,
-                satisKaydetModel.PrmTarifeSuDetay.DONEMGUN,
-                satisKaydetModel.PrmTarifeSuDetay.FIYAT1,
-                satisKaydetModel.PrmTarifeSuDetay.FIYAT2,
-                satisKaydetModel.PrmTarifeSuDetay.FIYAT3,
-                satisKaydetModel.PrmTarifeSuDetay.FIYAT4,
-                satisKaydetModel.PrmTarifeSuDetay.FIYAT5,
-                satisKaydetModel.PrmTarifeSuDetay.LIMIT1,
-                satisKaydetModel.PrmTarifeSuDetay.LIMIT2,
-                satisKaydetModel.PrmTarifeSuDetay.LIMIT3,
-                satisKaydetModel.PrmTarifeSuDetay.LIMIT4,
-                satisKaydetModel.PrmTarifeSuDetay.BAYRAM1GUN,
-                satisKaydetModel.PrmTarifeSuDetay.BAYRAM1AY,
-                satisKaydetModel.PrmTarifeSuDetay.BAYRAM1SURE,
-                satisKaydetModel.PrmTarifeSuDetay.BAYRAM2GUN,
-                satisKaydetModel.PrmTarifeSuDetay.BAYRAM2AY,
-                satisKaydetModel.PrmTarifeSuDetay.BAYRAM2SURE,
-                satisKaydetModel.PrmTarifeSuDetay.AVANSONAY,
-                0,
-                0,
-                satisKaydetModel.PrmTarifeSuDetay.MAXDEBI,
-                satisKaydetModel.Satis.YEDEKKREDI);
-            return result;
-        } catch (ex) {
-            ajaxMesajGoster(ex, 'HATA');
-        }
+
 
     }
+    catch (ex) {
+        ajaxMesajGoster(ex);
+    }
+}
+
+Mcm.prototype.AboneYaz = function (satisKaydetModel) {
+
+    try {
+        var mcm = new ActiveXObject(this.DllNamespace);
+        result = mcm.AboneYaz(satisKaydetModel.SogukSuOkunan.SayacSeriNo,
+            satisKaydetModel.Satis.ToplamKredi,
+            satisKaydetModel.PrmTarifeSuDetay.SAYACCAP,
+            satisKaydetModel.PrmTarifeSuDetay.DONEMGUN,
+            satisKaydetModel.PrmTarifeSuDetay.FIYAT1,
+            satisKaydetModel.PrmTarifeSuDetay.FIYAT2,
+            satisKaydetModel.PrmTarifeSuDetay.FIYAT3,
+            satisKaydetModel.PrmTarifeSuDetay.FIYAT4,
+            satisKaydetModel.PrmTarifeSuDetay.FIYAT5,
+            satisKaydetModel.PrmTarifeSuDetay.LIMIT1,
+            satisKaydetModel.PrmTarifeSuDetay.LIMIT2,
+            satisKaydetModel.PrmTarifeSuDetay.LIMIT3,
+            satisKaydetModel.PrmTarifeSuDetay.LIMIT4,
+            satisKaydetModel.PrmTarifeSuDetay.BAYRAM1GUN,
+            satisKaydetModel.PrmTarifeSuDetay.BAYRAM1AY,
+            satisKaydetModel.PrmTarifeSuDetay.BAYRAM1SURE,
+            satisKaydetModel.PrmTarifeSuDetay.BAYRAM2GUN,
+            satisKaydetModel.PrmTarifeSuDetay.BAYRAM2AY,
+            satisKaydetModel.PrmTarifeSuDetay.BAYRAM2SURE,
+            satisKaydetModel.PrmTarifeSuDetay.AVANSONAY,
+            0,
+            0,
+            satisKaydetModel.PrmTarifeSuDetay.MAXDEBI,
+            satisKaydetModel.Satis.YEDEKKREDI);
+        return result;
+    } catch (ex) {
+        ajaxMesajGoster(ex, 'HATA');
+    }
+
+}
 

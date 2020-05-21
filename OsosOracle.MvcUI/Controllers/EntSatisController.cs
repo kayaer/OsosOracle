@@ -1,6 +1,5 @@
 ﻿using Microsoft.Reporting.WebForms;
 using OsosOracle.Business.Abstract;
-using OsosOracle.Entities.ComplexType.ENTABONEComplexTypes;
 using OsosOracle.Entities.ComplexType.ENTABONESAYACComplexTypes;
 using OsosOracle.Entities.ComplexType.ENTSATISComplexTypes;
 using OsosOracle.Entities.ComplexType.ENTSAYACComplexTypes;
@@ -13,10 +12,10 @@ using OsosOracle.Framework.CrossCuttingConcern.ExceptionHandling;
 using OsosOracle.Framework.Utilities.ExtensionMethods;
 using OsosOracle.Framework.Web.Mvc;
 using OsosOracle.MvcUI.Filters;
-using OsosOracle.MvcUI.Models.ENTABONEModels;
 using OsosOracle.MvcUI.Models.ENTSATISModels;
 using OsosOracle.MvcUI.Models.ENTSATISModels.Yeni;
 using OsosOracle.MvcUI.Reports.ReportModel;
+using OsosOracle.MvcUI.Resources;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
@@ -95,9 +94,9 @@ namespace OsosOracle.MvcUI.Controllers
         {
             if (string.IsNullOrEmpty(model.HamData))
             {
-                model.HamData = "E#1#28034173#0/0/0#0#0#b#b#1#0#0#0#1#0#b#b#b#b#b#0#0#0#0#0#65535#65535#65535#65535#0#1#3#1#0#|G#1#28034173#0/0/0#0#0#b#b#1#0#0#1#0#b#b#b#b#b#b#b#0#0#1#3#1#0#|S#1#28034173#0/0/0#0#0#b#b#1#0#0#0#0#1#0#1#1#65535#65535#b#b#b#b#b#b#b#b#0#1#3#1#0#|K#1#28034173#0/0/0#0#0#b#b#1#0#0#0#1#0#b#b#b#b#0#0#0#0#0#0#0#1#3#1#0#|";
+                //model.HamData = "E#1#28034173#0/0/0#0#0#b#b#1#0#0#0#1#0#b#b#b#b#b#0#0#0#0#0#65535#65535#65535#65535#0#1#3#1#0#|G#1#28034173#0/0/0#0#0#b#b#1#0#0#1#0#b#b#b#b#b#b#b#0#0#1#3#1#0#|S#1#28034173#0/0/0#0#0#b#b#1#0#0#0#0#1#0#1#1#65535#65535#b#b#b#b#b#b#b#b#0#1#3#1#0#|K#1#28034173#0/0/0#0#0#b#b#1#0#0#0#1#0#b#b#b#b#0#0#0#0#0#0#0#1#3#1#0#|";
 
-                //model.HamData = "E#1#20191004#0/0/0#0#0#b#b#1#0#0#0#1#0#b#b#b#b#b#0#0#0#0#0#65535#65535#65535#65535#0#1#3#1#0#|G#1#20191004#0/0/0#0#0#b#b#1#0#0#1#0#b#b#b#b#b#b#b#0#0#1#3#1#0#|S#1#20191004#0/0/0#0#0#b#b#1#0#0#0#0#1#0#1#1#65527#65535#b#b#b#b#b#b#b#b#0#1#3#1#0#|K#1#20191004#0/0/0#0#0#b#b#1#0#0#0#1#0#b#b#b#b#0#0#0#0#0#0#0#1#3#1#0#|";
+                model.HamData = "E#1#20191004#0/0/0#0#0#b#b#1#0#0#0#1#0#b#b#b#b#b#0#0#0#0#0#65535#65535#65535#65535#0#1#3#1#0#|G#1#20191004#0/0/0#0#0#b#b#1#0#0#1#0#b#b#b#b#b#b#b#0#0#1#3#1#0#|S#1#20191004#0/0/0#0#0#b#b#1#0#0#0#0#1#0#1#1#65527#65535#b#b#b#b#b#b#b#b#0#1#3#1#0#|K#1#20191004#0/0/0#0#0#b#b#1#0#0#0#1#0#b#b#b#b#0#0#0#0#0#0#0#1#3#1#0#|";
             }
             model.SuSatisModel.SogukSuOkunan = new SogukSuOkunan(model.HamData);
             model.SuSatisModel.AboneSayacDetay = _entAboneSayacService.DetayGetir(new ENTABONESAYACAra { SayacSeriNo = model.SuSatisModel.SogukSuOkunan.SayacSeriNo, SayacTur = 1, Durum = 1 }).FirstOrDefault();
@@ -231,12 +230,12 @@ namespace OsosOracle.MvcUI.Controllers
 
                 if (model.SuSatisModel.PrmTarifeSuDetay == null)
                 {
-                    throw new NotificationException("Tarife bilgileri çekilemedi");
+                    throw new NotificationException(Dil.TarifeBilgileriBulunamadi);
                 }
 
                 if (model.SuSatisModel.Satis.ODEME == 0)
                 {
-                    throw new NotificationException("Tutar 0 dan farklı olmalıdır");
+                    throw new NotificationException(Dil.SifirdanFarkliBirDegerGiriniz);
                 }
 
 
@@ -249,7 +248,7 @@ namespace OsosOracle.MvcUI.Controllers
 
                 if (model.SuSatisModel.PrmTarifeSuDetay.BIRIMFIYAT == 0)
                 {
-                    throw new NotificationException("Tarife birim fiyat 0 dan farklı olmalıdır");
+                    throw new NotificationException(Dil.TarifeBirimFiyatSifirdanFarkliOlmalidir);
 
                 }
                 //Yeşil Vadi aylık bakım bedeli hesabı
@@ -361,12 +360,12 @@ namespace OsosOracle.MvcUI.Controllers
                 }
                 if (model.KalorimetreSatisModel.PrmTarifeKALORIMETREDetay == null)
                 {
-                    throw new NotificationException("Tarife bilgileri çekilemedi");
+                    throw new NotificationException(Dil.TarifeBilgileriBulunamadi);
                 }
 
                 if (model.KalorimetreSatisModel.Satis.ODEME == 0)
                 {
-                    throw new NotificationException("Tutar 0 dan farklı olmalıdır");
+                    throw new NotificationException(Dil.SifirdanFarkliBirDegerGiriniz);
                 }
                 if (model.KalorimetreSatisModel.PrmTarifeKALORIMETREDetay.YEDEKKREDI > 0)
                 {

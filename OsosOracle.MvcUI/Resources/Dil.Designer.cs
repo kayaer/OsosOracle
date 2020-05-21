@@ -403,6 +403,15 @@ namespace OsosOracle.MvcUI.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Sales with montly maintenance fee.
+        /// </summary>
+        public static string AylikBakimBedeliOlanSatislar {
+            get {
+                return ResourceManager.GetString("AylikBakimBedeliOlanSatislar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Low.
         /// </summary>
         public static string Az {
@@ -1290,6 +1299,15 @@ namespace OsosOracle.MvcUI.Resources {
         public static string HARCANANKREDI {
             get {
                 return ResourceManager.GetString("HARCANANKREDI", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Error.
+        /// </summary>
+        public static string Hata {
+            get {
+                return ResourceManager.GetString("Hata", resourceCulture);
             }
         }
         
@@ -2977,6 +2995,15 @@ namespace OsosOracle.MvcUI.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Enter a value other than 0 !!!.
+        /// </summary>
+        public static string SifirdanFarkliBirDegerGiriniz {
+            get {
+                return ResourceManager.GetString("SifirdanFarkliBirDegerGiriniz", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Password.
         /// </summary>
         public static string Sifre {
@@ -3157,6 +3184,24 @@ namespace OsosOracle.MvcUI.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Tariff Information not found.
+        /// </summary>
+        public static string TarifeBilgileriBulunamadi {
+            get {
+                return ResourceManager.GetString("TarifeBilgileriBulunamadi", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tariff unit price should be different from 0.
+        /// </summary>
+        public static string TarifeBirimFiyatSifirdanFarkliOlmalidir {
+            get {
+                return ResourceManager.GetString("TarifeBirimFiyatSifirdanFarkliOlmalidir", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Add Tariff.
         /// </summary>
         public static string TarifeEkle {
@@ -3328,6 +3373,15 @@ namespace OsosOracle.MvcUI.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Warning.
+        /// </summary>
+        public static string Uyari {
+            get {
+                return ResourceManager.GetString("Uyari", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Valve.
         /// </summary>
         public static string VANA {
@@ -3441,6 +3495,15 @@ namespace OsosOracle.MvcUI.Resources {
         public static string YedekKredi {
             get {
                 return ResourceManager.GetString("YedekKredi", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Small sales cannot be made from the reserve credit.
+        /// </summary>
+        public static string YedekKredidenAzMiktardaSatisYapilamaz {
+            get {
+                return ResourceManager.GetString("YedekKredidenAzMiktardaSatisYapilamaz", resourceCulture);
             }
         }
         

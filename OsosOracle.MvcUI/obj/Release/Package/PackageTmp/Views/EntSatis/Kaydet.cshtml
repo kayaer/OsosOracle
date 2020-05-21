@@ -187,12 +187,13 @@
 </div>
 
 
+
 <script src="~/Content/js/OrtakAvm.js"></script>
 <script type="text/javascript">
 
     $(document).ready(function () {
         var SatisModel=@Html.Raw(Json.Encode(Model));
-        var okunanData = "";
+     
         $("#btnKartOku").click(function (e) {
                         blockUI();
             try {
@@ -268,7 +269,7 @@
 
           $("#txtSuTutar").blur(function () {
             blockUI();
-              SatisModel.HamData = okunanData;
+              //SatisModel.HamData = 
               SatisModel.SuSatisModel.Satis.ODEME = parseInt($("#txtSuTutar").val());
 
               var model=JSON.stringify(SatisModel)
@@ -294,8 +295,8 @@
                    });
                    request.fail(function (jqXHR, textStatus) {
                        unblockUI();
-                       var msg = jQuery.parseJSON(jqXHR.responseText);
-                       ajaxMesajGoster(msg.Mesaj);
+                       //var msg = jQuery.parseJSON(jqXHR.responseText);
+                       //ajaxMesajGoster(msg.Mesaj);
                    });
 
 
@@ -303,7 +304,7 @@
 
                 $('#txtKalorimetreTutar').blur(function () {
 
-                  SatisModel.HamData = okunanData;
+                
                   SatisModel.KalorimetreSatisModel.Satis.ODEME = parseInt($("#txtKalorimetreTutar").val());
 
                   var model=JSON.stringify(SatisModel)
@@ -327,8 +328,8 @@
                    });
                    request.fail(function (jqXHR, textStatus) {
                        unblockUI();
-                       var msg = jQuery.parseJSON(jqXHR.responseText);
-                       ajaxMesajGoster(msg.Mesaj);
+                       //var msg = jQuery.parseJSON(jqXHR.responseText);
+                       //ajaxMesajGoster(msg.Mesaj);
                    });
 
 

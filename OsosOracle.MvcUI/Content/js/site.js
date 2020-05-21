@@ -12,12 +12,13 @@
 
 $(document)
     .ready(function () {
+       
         pageInit("#bdy");
     });
 
 $(document).ready(function () {
-
-
+    GetSessionInformation();
+    
 });
 
 

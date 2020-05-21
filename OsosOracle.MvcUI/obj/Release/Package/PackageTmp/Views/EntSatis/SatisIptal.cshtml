@@ -164,7 +164,6 @@
                 var ortakAvm = new OrtakAvm();
                 SatisModel.HamData = ortakAvm.AboneOku();
                 var model = JSON.stringify(SatisModel)
-                      var model=JSON.stringify(SatisModel)
                 var request = $.ajax({
                        url: "@Url.Action("SatisIptalPars", "EntSatis")",
                        method: "POST",
@@ -310,12 +309,15 @@
         });
 
         function SuKrediYukle(SuSayacData) {
+            SuSayacData.Satis.ToplamKredi = SuSayacData.SatisIptal.AnaKredi;
             //Ortak Avm Dll Kullanılıyor
             var ortakAvm = new OrtakAvm();
             return ortakAvm.SuKrediYukle(SuSayacData);
         }
 
         function KalorimetreKrediYukle(KalorimetreSayacData) {
+            KalorimetreSayacData.Satis.ToplamKredi = KalorimetreSayacData.SatisIptal.AnaKredi;
+            KalorimetreSayacData.PrmTarifeKALORIMETREDetay.RezervKredi = KalorimetreSayacData.SatisIptal.YedekKredi;
             //Ortak Avm Dll Kullanılıyor
              var ortakAvm = new OrtakAvm();
              return ortakAvm.KalorimetreKrediYukle(KalorimetreSayacData);

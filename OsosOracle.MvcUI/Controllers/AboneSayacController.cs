@@ -220,8 +220,8 @@ namespace OsosOracle.MvcUI.Controllers
                     t.SOKULMENEDEN,
                     t.Aciklama,
                     Islemler = $@"<a class='btn btn-xs btn-success' onclick=SuKartHazirla({t.SAYACKAYITNO}) title='{Dil.Karthazirla}'><i class='fa fa-list'></i></a>
-                                  <a class='btn btn-xs btn-info modalizer' href='{Url.Action("Guncelle", "AboneSayac", new { AboneKayitNo = t.ABONEKAYITNO, SayacKayitNo = t.SAYACKAYITNO, Tip = 1, islemTipi = "Guncelle", returnUrl = partialModel.ReturnUrl })}' title='Düzenle'><i class='fa fa-edit'></i></a>							 
-								  <a class='btn btn-xs btn-danger modalizer ' href='{Url.Action("Guncelle", "AboneSayac", new { AboneKayitNo = t.ABONEKAYITNO, SayacKayitNo = t.SAYACKAYITNO, Tip = 1, islemTipi = "Sil", returnUrl = partialModel.ReturnUrl })}' title='Sil'><i class='fa fa-trash'></i></a>"
+                                  <a class='btn btn-xs btn-info modalizer' href='{Url.Action("Guncelle", "AboneSayac", new { AboneKayitNo = t.ABONEKAYITNO, SayacKayitNo = t.SAYACKAYITNO, Tip = 1, islemTipi = "Guncelle", returnUrl = partialModel.ReturnUrl })}' title='{Dil.Duzenle}'><i class='fa fa-edit'></i></a>							 
+								  <a class='btn btn-xs btn-danger modalizer ' href='{Url.Action("Guncelle", "AboneSayac", new { AboneKayitNo = t.ABONEKAYITNO, SayacKayitNo = t.SAYACKAYITNO, Tip = 1, islemTipi = "Sil", returnUrl = partialModel.ReturnUrl })}' title='{Dil.Sil}'><i class='fa fa-trash'></i></a>"
                 }),
                 draw = dtParameterModel.Draw,
                 recordsTotal = kayitlar.ToplamKayitSayisi,
@@ -260,8 +260,8 @@ namespace OsosOracle.MvcUI.Controllers
                     t.KalorimetreTarifeAdi,
                     t.Aciklama,
                     Islemler = $@"<a class='btn btn-xs btn-success' onclick=KalorimetreKartHazirla({ t.SAYACKAYITNO}) title='{Dil.Karthazirla}'><i class='fa fa-list'></i></a>
-                                  <a class='btn btn-xs btn-info modalizer' href='{Url.Action("Guncelle", "AboneSayac", new { AboneKayitNo = t.ABONEKAYITNO, SayacKayitNo = t.SAYACKAYITNO, Tip = 2, islemTipi = "Guncelle", returnUrl = partialModel.ReturnUrl })}' title='Düzenle'><i class='fa fa-edit'></i></a>							 
-								  <a class='btn btn-xs btn-danger modalizer ' href='{Url.Action("Guncelle", "AboneSayac", new { AboneKayitNo = t.ABONEKAYITNO, SayacKayitNo = t.SAYACKAYITNO, Tip = 2, islemTipi = "Sil", returnUrl = partialModel.ReturnUrl })}' title='Sil'><i class='fa fa-trash'></i></a>"
+                                  <a class='btn btn-xs btn-info modalizer' href='{Url.Action("Guncelle", "AboneSayac", new { AboneKayitNo = t.ABONEKAYITNO, SayacKayitNo = t.SAYACKAYITNO, Tip = 2, islemTipi = "Guncelle", returnUrl = partialModel.ReturnUrl })}' title='{Dil.Duzenle}'><i class='fa fa-edit'></i></a>							 
+								  <a class='btn btn-xs btn-danger modalizer ' href='{Url.Action("Guncelle", "AboneSayac", new { AboneKayitNo = t.ABONEKAYITNO, SayacKayitNo = t.SAYACKAYITNO, Tip = 2, islemTipi = "Sil", returnUrl = partialModel.ReturnUrl })}' title='{Dil.Sil}'><i class='fa fa-trash'></i></a>"
                 }),
                 draw = dtParameterModel.Draw,
                 recordsTotal = kayitlar.ToplamKayitSayisi,
@@ -300,8 +300,8 @@ namespace OsosOracle.MvcUI.Controllers
                     t.GazTarifeAdi,
                     t.Aciklama,
                     Islemler = $@"<a class='btn btn-xs btn-success' onclick=GazKartHazirla({ t.SAYACKAYITNO}) title='{Dil.Karthazirla}'><i class='fa fa-list'></i></a>
-                                  <a class='btn btn-xs btn-info modalizer' href='{Url.Action("Guncelle", "AboneSayac", new { AboneKayitNo = t.ABONEKAYITNO, SayacKayitNo = t.SAYACKAYITNO, Tip = 2, islemTipi = "Guncelle", returnUrl = partialModel.ReturnUrl })}' title='Düzenle'><i class='fa fa-edit'></i></a>							 
-								  <a class='btn btn-xs btn-danger modalizer ' href='{Url.Action("Guncelle", "AboneSayac", new { AboneKayitNo = t.ABONEKAYITNO, SayacKayitNo = t.SAYACKAYITNO, Tip = 2, islemTipi = "Sil", returnUrl = partialModel.ReturnUrl })}' title='Sil'><i class='fa fa-trash'></i></a>"
+                                  <a class='btn btn-xs btn-info modalizer' href='{Url.Action("Guncelle", "AboneSayac", new { AboneKayitNo = t.ABONEKAYITNO, SayacKayitNo = t.SAYACKAYITNO, Tip = 2, islemTipi = "Guncelle", returnUrl = partialModel.ReturnUrl })}' title='{Dil.Duzenle}'><i class='fa fa-edit'></i></a>							 
+								  <a class='btn btn-xs btn-danger modalizer ' href='{Url.Action("Guncelle", "AboneSayac", new { AboneKayitNo = t.ABONEKAYITNO, SayacKayitNo = t.SAYACKAYITNO, Tip = 2, islemTipi = "Sil", returnUrl = partialModel.ReturnUrl })}' title='{Dil.Sil}'><i class='fa fa-trash'></i></a>"
                 }),
                 draw = dtParameterModel.Draw,
                 recordsTotal = kayitlar.ToplamKayitSayisi,
@@ -338,8 +338,8 @@ namespace OsosOracle.MvcUI.Controllers
                     t.SayacSeriNo,
                     t.KapakSeriNo,
                     t.Aciklama,
-                    Islemler = $@"<a class='btn btn-xs btn-info ' href='{Url.Action("Guncelle", "AboneSayac", new { id = t.KAYITNO })}' title='Düzenle'><i class='fa fa-edit'></i></a>							 
-								  <a class='btn btn-xs btn-danger modalizer ' href='{Url.Action("Sil", "AboneSayac", new { id = t.KAYITNO })}' title='Sil'><i class='fa fa-trash'></i></a>"
+                    Islemler = $@"<a class='btn btn-xs btn-info ' href='{Url.Action("Guncelle", "AboneSayac", new { id = t.KAYITNO })}' title='{Dil.Duzenle}'><i class='fa fa-edit'></i></a>							 
+								  <a class='btn btn-xs btn-danger modalizer ' href='{Url.Action("Sil", "AboneSayac", new { id = t.KAYITNO })}' title='{Dil.Sil}'><i class='fa fa-trash'></i></a>"
                 }),
                 draw = dtParameterModel.Draw,
                 recordsTotal = kayitlar.ToplamKayitSayisi,

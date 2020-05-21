@@ -17,7 +17,7 @@ $(document)
 
 $(document).ready(function () {
 
-
+    GetSessionInformation();
 });
 
 

@@ -19,5 +19,7 @@ namespace OsosOracle.Framework.SharedModels
 
         public string Data { get; set; }
 
+        public string Baslik { get; set; }
+
     }
 }

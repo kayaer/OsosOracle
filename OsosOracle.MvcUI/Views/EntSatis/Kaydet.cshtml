@@ -187,6 +187,7 @@
 </div>
 
 
+
 <script src="~/Content/js/OrtakAvm.js"></script>
 <script type="text/javascript">
 
@@ -199,7 +200,6 @@
                 //Ortak Avm Dll Kullanılıyor
                 var ortakAvm = new OrtakAvm();
                 SatisModel.HamData = ortakAvm.AboneOku();
-                SatisModel.HamData = "";
                 var model = JSON.stringify(SatisModel)
                 var request = $.ajax({
                        url: "@Url.Action("SatisPars", "EntSatis")",
@@ -295,8 +295,8 @@
                    });
                    request.fail(function (jqXHR, textStatus) {
                        unblockUI();
-                       var msg = jQuery.parseJSON(jqXHR.responseText);
-                       ajaxMesajGoster(msg.Mesaj);
+                       //var msg = jQuery.parseJSON(jqXHR.responseText);
+                       //ajaxMesajGoster(msg.Mesaj);
                    });
 
 
@@ -328,8 +328,8 @@
                    });
                    request.fail(function (jqXHR, textStatus) {
                        unblockUI();
-                       var msg = jQuery.parseJSON(jqXHR.responseText);
-                       ajaxMesajGoster(msg.Mesaj);
+                       //var msg = jQuery.parseJSON(jqXHR.responseText);
+                       //ajaxMesajGoster(msg.Mesaj);
                    });
 
 

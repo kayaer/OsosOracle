@@ -11,6 +11,7 @@ using OsosOracle.Framework.SharedModels;
 using OsosOracle.Framework.Web.Mvc;
 using OsosOracle.MvcUI.Filters;
 using OsosOracle.MvcUI.Helpers;
+using OsosOracle.MvcUI.Resources;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -188,7 +189,7 @@ inner join entabone a on s.abonekayıtno = a.kayıtno
                                 AdSoyad = satis.Field<string>("AD") + "  " + satis.Field<string>("SOYAD"),
                                 AboneNo = satis.Field<string>("ABONENO"),
                                 Kredi = satis.Field<decimal>("KREDI"),
-                                SatisTipi = satis.Field<string>("SATISTIPI")
+                                SatisTipi = Dil.ResourceManager.GetString( satis.Field<string>("SATISTIPI"))
                             };
 
             return Json(new DataTableResult()

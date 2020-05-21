@@ -1299,4 +1299,25 @@
   <data name="BedelsizSatis" xml:space="preserve">
     <value>Free Sales</value>
   </data>
+  <data name="SifirdanFarkliBirDegerGiriniz" xml:space="preserve">
+    <value>Enter a value other than 0 !!!</value>
+  </data>
+  <data name="TarifeBilgileriBulunamadi" xml:space="preserve">
+    <value>Tariff Information not found</value>
+  </data>
+  <data name="TarifeBirimFiyatSifirdanFarkliOlmalidir" xml:space="preserve">
+    <value>Tariff unit price should be different from 0</value>
+  </data>
+  <data name="YedekKredidenAzMiktardaSatisYapilamaz" xml:space="preserve">
+    <value>Small sales cannot be made from the reserve credit</value>
+  </data>
+  <data name="AylikBakimBedeliOlanSatislar" xml:space="preserve">
+    <value>Sales with montly maintenance fee</value>
+  </data>
+  <data name="Uyari" xml:space="preserve">
+    <value>Warning</value>
+  </data>
+  <data name="Hata" xml:space="preserve">
+    <value>Error</value>
+  </data>
 </root>

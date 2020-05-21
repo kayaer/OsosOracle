@@ -651,4 +651,25 @@
   <data name="Satis" xml:space="preserve">
     <value>Satış</value>
   </data>
+  <data name="SifirdanFarkliBirDegerGiriniz" xml:space="preserve">
+    <value>Sıfırdan Farklı Bir Değer Giriniz!!!</value>
+  </data>
+  <data name="TarifeBilgileriBulunamadi" xml:space="preserve">
+    <value>Tarife Bilgileri Bulunamadı</value>
+  </data>
+  <data name="TarifeBirimFiyatSifirdanFarkliOlmalidir" xml:space="preserve">
+    <value>Tarife Birim Fiyat 0 dan Farklı Olmalıdır.</value>
+  </data>
+  <data name="YedekKredidenAzMiktardaSatisYapilamaz" xml:space="preserve">
+    <value>Yedek Krediden az miktarda satış yapılamaz.</value>
+  </data>
+  <data name="AylikBakimBedeliOlanSatislar" xml:space="preserve">
+    <value>Aylık Bakım Bedeli Olan Satışlar</value>
+  </data>
+  <data name="Uyari" xml:space="preserve">
+    <value>Uyarı</value>
+  </data>
+  <data name="Hata" xml:space="preserve">
+    <value>Hata</value>
+  </data>
 </root>

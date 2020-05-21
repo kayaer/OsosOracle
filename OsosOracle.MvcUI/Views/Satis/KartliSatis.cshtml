@@ -103,7 +103,6 @@
 
     $(document).ready(function () {
         var SatisModel=@Html.Raw(Json.Encode(Model));
-        var okunanData = "";
 
         $("#btnKartOku").click(function (e) {
               blockUI();
@@ -136,15 +135,15 @@
                    });
                    request.fail(function (jqXHR, textStatus) {
                        unblockUI();
-                       var msg = jQuery.parseJSON(jqXHR.responseText);
-                       ajaxMesajGoster(msg.Mesaj);
+                       //var msg = jQuery.parseJSON(jqXHR.responseText);
+                       //ajaxMesajGoster(msg.Mesaj);
                    });
 
 
                 unblockUI();
             } catch (e) {
                    unblockUI();
-                ajaxMesajGoster(e);
+                //ajaxMesajGoster(e);
 
             }
         });
@@ -152,7 +151,7 @@
 
         $('#txtSuTutar').blur(function () {
             blockUI();
-            SatisModel.HamData = okunanData;
+           // SatisModel.HamData = okunanData;
             SatisModel.SuSatisModel.Satis.ODEME = parseInt( $("#txtSuTutar").val());
             var model=JSON.stringify(SatisModel)
                 var request = $.ajax({
@@ -174,8 +173,8 @@
                    });
                    request.fail(function (jqXHR, textStatus) {
                        unblockUI();
-                       var msg = jQuery.parseJSON(jqXHR.responseText);
-                       ajaxMesajGoster(msg.Mesaj);
+                       //var msg = jQuery.parseJSON(jqXHR.responseText);
+                       //ajaxMesajGoster(msg.Mesaj);
                    });
 
 

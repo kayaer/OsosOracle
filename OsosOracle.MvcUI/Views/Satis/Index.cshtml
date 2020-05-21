@@ -31,7 +31,7 @@
         </div>
         <div class="form-group row">
             <div class="col-md-4">
-                <label>@Html.CheckBoxFor(t => t.ENTSATISAra.AylikBakimBedeliOlanSatislariGetir) @_T("Aylık Bakım Bedeli Olan Satışlar")</label>
+                <label>@Html.CheckBoxFor(t => t.ENTSATISAra.AylikBakimBedeliOlanSatislariGetir) @Dil.AylikBakimBedeliOlanSatislar</label>
             </div>
         </div>
         <div class="form-actions">
@@ -96,8 +96,7 @@
 
 <script type="text/javascript">
     $(document).ready(function () {
-
-
+       
            AraFiltered();
            AraToplamSatisFiltered();
              $("#btnAra").click(function (e) {
@@ -162,7 +161,7 @@
                         action: newExportAction
                     }
                 ],
-                'language': dataTableLanguage,
+                'language': GetSession(baseUrl),
                 'processing': true,
                 'serverSide': true,
                 'destroy': true,

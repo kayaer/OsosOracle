@@ -219,7 +219,8 @@ $(document).ready(function () {
         unblockUI();
         var responseJson = jQuery.parseJSON(jqxhr.responseText);
         bootbox.alert({
-            title: responseJson.Durum === "1" ? "Bilgi" : "Uyarı",
+            //title: responseJson.Durum === "1" ? "Bilgi" : "Uyarı",//Dil sorunu yüzünden değiştirdim
+            title: responseJson.Baslik,
             message: responseJson.Mesaj,
             locale: 'tr',
             callback: function (result) {

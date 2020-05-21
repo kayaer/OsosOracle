@@ -202,18 +202,18 @@ namespace OsosOracle.MvcUI.Controllers
 
             try
             {
-                //model.SuSatisModel.SogukSuOkunan = new SogukSuOkunan(model.HamData);
+
                 model.SuSatisModel.AboneSayacDetay = _entAboneSayacService.DetayGetir(new ENTABONESAYACAra { SayacSeriNo = model.SuSatisModel.SogukSuOkunan.SayacSeriNo, Durum = 1, SayacTur = 1 }).FirstOrDefault();
                 model.SuSatisModel.PrmTarifeSuDetay = _prmTarifeSuService.DetayGetir(new PRMTARIFESUAra { KAYITNO = model.SuSatisModel.AboneSayacDetay.TARIFEKAYITNO }).FirstOrDefault();
 
                 if (model.SuSatisModel.PrmTarifeSuDetay == null)
                 {
-                    throw new NotificationException("Tarife bilgileri çekilemedi");
+                    throw new NotificationException(Dil.TarifeBilgileriBulunamadi);
                 }
 
                 if (model.SuSatisModel.Satis.ODEME == 0)
                 {
-                    throw new NotificationException("Tutar 0 dan farklı olmalıdır");
+                    throw new NotificationException(Dil.SifirdanFarkliBirDegerGiriniz);
                 }
 
 
@@ -226,7 +226,7 @@ namespace OsosOracle.MvcUI.Controllers
 
                 if (model.SuSatisModel.PrmTarifeSuDetay.BIRIMFIYAT == 0)
                 {
-                    throw new NotificationException("Tarife birim fiyat 0 dan farklı olmalıdır");
+                    throw new NotificationException(Dil.TarifeBirimFiyatSifirdanFarkliOlmalidir);
 
                 }
 
@@ -242,7 +242,7 @@ namespace OsosOracle.MvcUI.Controllers
 
                 if (model.SuSatisModel.Satis.KREDI < model.SuSatisModel.Satis.YEDEKKREDI)
                 {
-                    throw new NotificationException("Yedek kredi den az miktarda satış yapılamaz");
+                    throw new NotificationException(Dil.YedekKredidenAzMiktardaSatisYapilamaz);
                 }
 
                 if (model.SuSatisModel.SogukSuOkunan.Ako == "b" && model.SuSatisModel.SogukSuOkunan.Yko == "b")
@@ -536,11 +536,11 @@ namespace OsosOracle.MvcUI.Controllers
 
         public ActionResult SatistanMakbuzOlustur(int satisKayitNo, int sayacKayitNo)
         {
-           
-            string filename="";
+
+            string filename = "";
             if (AktifKullanici.Dil == enumDil.Turkce.GetHashCode())
             {
-                filename = TurkceMakbuzOlustur(satisKayitNo,sayacKayitNo);
+                filename = TurkceMakbuzOlustur(satisKayitNo, sayacKayitNo);
             }
             else
             {
@@ -649,7 +649,7 @@ namespace OsosOracle.MvcUI.Controllers
             PRMTARIFESU tarifeSu = new PRMTARIFESU();
             PRMTARIFEKALORIMETRE tarifeKalorimetre = new PRMTARIFEKALORIMETRE();
 
-          
+
             if (sayac.SayacTuru == 1)
             {
                 suSatisDetay = _entSatisService.DetayGetirById(satisKayitNo);

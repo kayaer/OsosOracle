@@ -150,7 +150,7 @@
                 var ortakAvm = new OrtakAvm();
                 SatisModel.HamData = ortakAvm.AboneOku();
                 var model = JSON.stringify(SatisModel)
-                      var model=JSON.stringify(SatisModel)
+                     
                 var request = $.ajax({
                        url: "@Url.Action("BedelsizSatisPars", "EntSatis")",
                        method: "POST",
@@ -336,7 +336,7 @@
 
         function SuKrediYukle(SuSatisModel) {
 
-           
+
 
             if (SatisModel.SuSatisModel.SogukSuOkunan.Ako=="b") {
                  SatisModel.SuSatisModel.Satis.ToplamKredi = SatisModel.SuSatisModel.Satis.KREDI + parseInt(SatisModel.SuSatisModel.SogukSuOkunan.Kredi);
@@ -347,8 +347,8 @@
         }
 
         function KalorimetreKrediYukle(KalorimetreSatisModel) {
-           
-            var yuklenecekM3;          
+
+            var yuklenecekM3;
             if (SatisModel.KalorimetreSatisModel.KalorimetreOkunan.Ako == "b") {
                 SatisModel.KalorimetreSatisModel.Satis.ToplamKredi = SatisModel.KalorimetreSatisModel.Satis.KREDI + parseInt(SatisModel.KalorimetreSatisModel.KalorimetreOkunan.Kredi);
             }

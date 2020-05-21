@@ -7,6 +7,7 @@ using OsosOracle.Framework.SharedModels;
 using OsosOracle.Framework.Utilities.ExtensionMethods;
 using OsosOracle.MvcUI.App_Start;
 using OsosOracle.MvcUI.Infrastructure;
+using OsosOracle.MvcUI.Resources;
 using System;
 using System.Linq;
 using System.Web;
@@ -111,7 +112,8 @@ namespace OsosOracle.MvcUI
                     Mesaj = hata.Message,
                     Durum = 0,
                     Kod = 0,
-                    RedirectUrl = hata.HelpLink ?? ""
+                    RedirectUrl = hata.HelpLink ?? "",
+                    Baslik=Dil.Uyari
                 };
 
                 if (bilgiException != null)
