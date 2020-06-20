@@ -12,12 +12,13 @@
 
 $(document)
     .ready(function () {
+
+        setTimeout(function () { pageInit("#bdy"); },1000);
        
-        pageInit("#bdy");
     });
 
 $(document).ready(function () {
-    GetSessionInformation();
+    //GetSessionInformation();
     
 });
 

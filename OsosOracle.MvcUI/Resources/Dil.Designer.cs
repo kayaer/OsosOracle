@@ -1132,6 +1132,15 @@ namespace OsosOracle.MvcUI.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Daily Sales Chart.
+        /// </summary>
+        public static string GunlukSatisGrafigi {
+            get {
+                return ResourceManager.GetString("GunlukSatisGrafigi", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Daily Meter Consumption.
         /// </summary>
         public static string GunlukSayacBilgileri {

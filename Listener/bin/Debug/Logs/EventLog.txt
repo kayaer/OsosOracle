@@ -1,0 +1,2 @@
+2020-06-21 01:33:29,416 [1] INFO  Listener.ListenerWindowsService - Server Baþladý... Server Ip : 192.168.66.177 Port : 10002
+2020-06-21 01:33:29,434 [1] INFO  Topshelf.Hosts.ConsoleRunHost - The ListenerService service is now running, press Control+C to exit.

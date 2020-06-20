@@ -1320,4 +1320,7 @@
   <data name="Hata" xml:space="preserve">
     <value>Error</value>
   </data>
+  <data name="GunlukSatisGrafigi" xml:space="preserve">
+    <value>Daily Sales Chart</value>
+  </data>
 </root>

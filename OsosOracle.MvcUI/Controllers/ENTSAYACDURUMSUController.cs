@@ -175,7 +175,7 @@ namespace OsosOracle.MvcUI.Controllers
             {
                 //TODO: Bu bölümü düzenle
                 id = eNTSAYACDURUMSU.KAYITNO.ToString(),
-                text = eNTSAYACDURUMSU.SAYACID.ToString(),
+                text = eNTSAYACDURUMSU.SayacId.ToString(),
                 description = eNTSAYACDURUMSU.KAYITNO.ToString(),
             }).ToList();
             return Json(data, JsonRequestBehavior.AllowGet);
@@ -190,7 +190,7 @@ namespace OsosOracle.MvcUI.Controllers
             var data = new AutoCompleteData
             {//TODO: Bu bölümü düzenle
                 id = eNTSAYACDURUMSU.KAYITNO.ToString(),
-                text = eNTSAYACDURUMSU.SAYACID.ToString(),
+                text = eNTSAYACDURUMSU.SayacId.ToString(),
                 description = eNTSAYACDURUMSU.KAYITNO.ToString(),
             };
 
@@ -205,7 +205,7 @@ namespace OsosOracle.MvcUI.Controllers
             var data = eNTSAYACDURUMSUList.Select(eNTSAYACDURUMSU => new AutoCompleteData
             { //TODO: Bu bölümü düzenle
                 id = eNTSAYACDURUMSU.KAYITNO.ToString(),
-                text = eNTSAYACDURUMSU.SAYACID.ToString(),
+                text = eNTSAYACDURUMSU.SayacId.ToString(),
                 description = eNTSAYACDURUMSU.KAYITNO.ToString()
             });
 

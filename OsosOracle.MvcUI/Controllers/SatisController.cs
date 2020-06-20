@@ -229,6 +229,28 @@ namespace OsosOracle.MvcUI.Controllers
                     throw new NotificationException(Dil.TarifeBirimFiyatSifirdanFarkliOlmalidir);
 
                 }
+                //Aylık Bakım Bedeli Hesabı
+                if (model.SuSatisModel.AboneSayacDetay.SonSatisTarihi != null && model.SuSatisModel.Satis.AylikBakimBedeli == 0 && model.KalorimetreSatisModel.Satis.AylikBakimBedeli == 0)
+                {
+                    var fark = (DateTime.Now - model.SuSatisModel.AboneSayacDetay.SonSatisTarihi).Value.TotalDays;
+                    if (fark > 30)
+                    {
+                        const double daysToMonths = 30.4368499;
+
+                        double months = fark / daysToMonths;
+
+                        model.SuSatisModel.Satis.AylikBakimBedeli = Convert.ToInt32(months) * model.SuSatisModel.PrmTarifeSuDetay.AylikBakimBedeli;
+
+                    }
+                    else
+                    {
+                        if (DateTime.Now.Month != model.SuSatisModel.AboneSayacDetay.SonSatisTarihi.Value.Month)
+                        {
+                            model.SuSatisModel.Satis.AylikBakimBedeli = model.SuSatisModel.PrmTarifeSuDetay.AylikBakimBedeli;
+                        }
+                    }
+
+                }
 
 
                 model.SuSatisModel.Satis.Ctv = model.SuSatisModel.PrmTarifeSuDetay.Ctv * model.SuSatisModel.Satis.ODEME;

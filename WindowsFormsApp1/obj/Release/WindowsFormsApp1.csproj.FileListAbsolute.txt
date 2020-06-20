@@ -60,3 +60,16 @@ C:\Projeler\OsosOracle\WindowsFormsApp1\obj\Release\WindowsFormsApp1.csproj.Gene
 C:\Projeler\OsosOracle\WindowsFormsApp1\obj\Release\WindowsFormsApp1.csproj.CopyComplete
 C:\Projeler\OsosOracle\WindowsFormsApp1\obj\Release\WindowsFormsApp1.exe
 C:\Projeler\OsosOracle\WindowsFormsApp1\obj\Release\WindowsFormsApp1.pdb
+C:\Projeler\Mısır\OsosOracle\WindowsFormsApp1\bin\Release\WindowsFormsApp1.exe.config
+C:\Projeler\Mısır\OsosOracle\WindowsFormsApp1\bin\Release\WindowsFormsApp1.exe
+C:\Projeler\Mısır\OsosOracle\WindowsFormsApp1\bin\Release\WindowsFormsApp1.pdb
+C:\Projeler\Mısır\OsosOracle\WindowsFormsApp1\bin\Release\SmartCard.dll
+C:\Projeler\Mısır\OsosOracle\WindowsFormsApp1\bin\Release\SmartCard.pdb
+C:\Projeler\Mısır\OsosOracle\WindowsFormsApp1\obj\Release\WindowsFormsApp1.csprojAssemblyReference.cache
+C:\Projeler\Mısır\OsosOracle\WindowsFormsApp1\obj\Release\WindowsFormsApp1.Form1.resources
+C:\Projeler\Mısır\OsosOracle\WindowsFormsApp1\obj\Release\WindowsFormsApp1.Properties.Resources.resources
+C:\Projeler\Mısır\OsosOracle\WindowsFormsApp1\obj\Release\WindowsFormsApp1.csproj.GenerateResource.cache
+C:\Projeler\Mısır\OsosOracle\WindowsFormsApp1\obj\Release\WindowsFormsApp1.csproj.CoreCompileInputs.cache
+C:\Projeler\Mısır\OsosOracle\WindowsFormsApp1\obj\Release\WindowsFormsApp1.csproj.CopyComplete
+C:\Projeler\Mısır\OsosOracle\WindowsFormsApp1\obj\Release\WindowsFormsApp1.exe
+C:\Projeler\Mısır\OsosOracle\WindowsFormsApp1\obj\Release\WindowsFormsApp1.pdb

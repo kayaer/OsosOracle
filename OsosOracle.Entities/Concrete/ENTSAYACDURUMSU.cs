@@ -5,7 +5,7 @@ namespace OsosOracle.Entities.Concrete
     public class ENTSAYACDURUMSU : IEntity
     {
         public int KAYITNO { get; set; }
-        public string SAYACID { get; set; }
+        public string SayacId { get; set; }
         public string ACIKLAMA { get; set; }
         public int? DURUM { get; set; }
         public string KREDIBITTI { get; set; }
@@ -24,7 +24,8 @@ namespace OsosOracle.Entities.Concrete
         public int? GUNCELLEYEN { get; set; }
         public DateTime? GUNCELLEMETARIH { get; set; }
         public int VERSIYON { get; set; }
-        public int HEADERNO { get; set; }
+        public string Ip { get; set; }
+        public string KonsSeriNo { get; set; }
         public DateTime? OKUMATARIH { get; set; }
         public string ARIZA { get; set; }
         public string ANAPILZAYIF { get; set; }
@@ -38,11 +39,11 @@ namespace OsosOracle.Entities.Concrete
         public int? LIMIT3 { get; set; }
         public int? LIMIT4 { get; set; }
         public int? KRITIKKREDI { get; set; }
-        public int? FIYAT1 { get; set; }
-        public int? FIYAT2 { get; set; }
-        public int? FIYAT3 { get; set; }
-        public int? FIYAT4 { get; set; }
-        public int? FIYAT5 { get; set; }
+        public long? FIYAT1 { get; set; }
+        public long? FIYAT2 { get; set; }
+        public long? FIYAT3 { get; set; }
+        public long? FIYAT4 { get; set; }
+        public long? FIYAT5 { get; set; }
         public string ARIZAA { get; set; }
         public string ARIZAK { get; set; }
         public string ARIZAP { get; set; }

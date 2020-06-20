@@ -150,7 +150,7 @@
                 var ortakAvm = new OrtakAvm();
                 SatisModel.HamData = ortakAvm.AboneOku();
                 var model = JSON.stringify(SatisModel)
-                     
+
                 var request = $.ajax({
                        url: "@Url.Action("BedelsizSatisPars", "EntSatis")",
                        method: "POST",
@@ -232,12 +232,15 @@
                                       });
 
                                       request.done(function (jqXHR) {
-                                            setTimeout(function () { location.reload(); }, 2000);
+
                                           //SatisModel = jqXHR;
                                           @*SatisModel = @Html.Raw(Json.Encode(Model));
                                           var url = '@Url.Action("MakbuzIndir","Satis")' + '?filename=' + jqXHR;
                                           window.location.href = url;*@
-                                          ajaxMesajGoster('İşlem Başarılı');
+                                            var url = '@Url.Action("MakbuzIndir","Satis")' + '?filename=' + jqXHR;
+                                            window.location.href = url;
+                                            ajaxMesajGoster('@Dil.Basarili');
+                                            setTimeout(function () { location.reload(); }, 2000);
 
                                       });
                                       request.fail(function (jqXHR, textStatus) {
@@ -302,12 +305,10 @@
                                       });
 
                                       request.done(function (jqXHR) {
-                                        setTimeout(function () { location.reload(); }, 2000);
-                                          //SatisModel = jqXHR;
-                                          @*SatisModel = @Html.Raw(Json.Encode(Model));
-                                          var url = '@Url.Action("MakbuzIndir","Satis")' + '?filename=' + jqXHR;
-                                          window.location.href = url;*@
-                                          ajaxMesajGoster('İşlem Başarılı');
+                                            var url = '@Url.Action("MakbuzIndir","Satis")' + '?filename=' + jqXHR;
+                                            window.location.href = url;
+                                            ajaxMesajGoster('@Dil.Basarili');
+                                            setTimeout(function () { location.reload(); }, 2000);
 
                                       });
                                       request.fail(function (jqXHR, textStatus) {
@@ -338,8 +339,11 @@
 
 
 
-            if (SatisModel.SuSatisModel.SogukSuOkunan.Ako=="b") {
-                 SatisModel.SuSatisModel.Satis.ToplamKredi = SatisModel.SuSatisModel.Satis.KREDI + parseInt(SatisModel.SuSatisModel.SogukSuOkunan.Kredi);
+            if (SatisModel.SuSatisModel.SogukSuOkunan.Ako == "b") {
+                SatisModel.SuSatisModel.Satis.ToplamKredi = SatisModel.SuSatisModel.Satis.KREDI + parseInt(SatisModel.SuSatisModel.SogukSuOkunan.Kredi);
+            } else
+            {
+                SatisModel.SuSatisModel.Satis.ToplamKredi = SatisModel.SuSatisModel.Satis.KREDI;
             }
              //Ortak Avm Dll Kullanılıyor
             var ortakAvm = new OrtakAvm();

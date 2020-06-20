@@ -48,11 +48,12 @@
                 </div>
 
             </div>
-            {
-                var AktifKullanici = (AktifKullanici)Session["User"];
-                if (AktifKullanici.KurumKayitNo == enumKurum.YesilVadi.GetHashCode())
-                {
-                    <div class="form-group row">
+            <div class="form-group row">
+
+                @{
+                    var AktifKullanici = (AktifKullanici)Session["User"];
+                    if (AktifKullanici.KurumKayitNo == enumKurum.YesilVadi.GetHashCode())
+                    {
                         <div class="col-md-4">
                             @Html.TextBoxFor(t => t.ENTABONE.Daire, new { @class = "form-control", placeholder = "Daire" })
                             @Html.ValidationMessageFor(t => t.ENTABONE.Daire)
@@ -61,21 +62,23 @@
                             @Html.TextBoxFor(t => t.ENTABONE.Blok, new { @class = "form-control", placeholder = "Blok" })
                             @Html.ValidationMessageFor(t => t.ENTABONE.Blok)
                         </div>
-                         <div class="col-md-4">
-                            @Html.DateInput(t => t.ENTABONE.SonSatisTarih, new { placeholder = Dil.SonSatisTarihi })
-                            @Html.ValidationMessageFor(t => t.ENTABONE.SonSatisTarih)
-                        </div>
-                    </div>
+                    }
+
                 }
-            }
+                <div class="col-md-4">
+                    @Html.DateInput(t => t.ENTABONE.SonSatisTarih, new { placeholder = Dil.SonSatisTarihi })
+                    @Html.ValidationMessageFor(t => t.ENTABONE.SonSatisTarih)
+                </div>
 
+
+
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" class="btn btn-primary"><i class="fa fa-save"></i> @Dil.Kaydet</button>
+                @Html.ButtonLink(Dil.Vazgec, "Index", "btn btn-xs btn-danger cancel", "fa-remove")
+            </div>
         }
-
-
-        <div class="form-actions">
-            <button type="submit" class="btn btn-primary"><i class="fa fa-save"></i> @Dil.Kaydet</button>
-            @Html.ButtonLink(Dil.Vazgec, "Index", "btn btn-xs btn-danger cancel", "fa-remove")
-        </div>
     }
 </div>
 

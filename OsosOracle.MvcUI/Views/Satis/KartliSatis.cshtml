@@ -220,6 +220,7 @@
                 });
 
             } else {
+                 unblockUI();
                  ajaxMesajGoster('@Dil.Basarisiz');
             }
 
@@ -227,7 +228,7 @@
 
 
         function KrediYukle(satisKaydetModel) {
-
+           
             if (satisKaydetModel.AboneSayacDetay.SayacModelKayitNo ==@enumSayacModeli.MercanYd.GetHashCode() || satisKaydetModel.AboneSayacDetay.SayacModelKayitNo ==@enumSayacModeli.As25Yd.GetHashCode()) {
                 //Filistin Dll
                 var palestineWater = new PalestineWater();

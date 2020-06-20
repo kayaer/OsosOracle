@@ -15,7 +15,7 @@ namespace OsosOracle.DataLayer.Concrete.EntityFramework.Mappings
             HasKey(t => t.KAYITNO);
             // Properties
             Property(t => t.KAYITNO).HasColumnName("KAYITNO").IsRequired();
-            Property(t => t.SAYACID).HasColumnName("SAYACID");
+            Property(t => t.SayacId).HasColumnName("SAYACID");
             Property(t => t.ACIKLAMA).HasColumnName("ACIKLAMA");
             Property(t => t.DURUM).HasColumnName("DURUM");
             Property(t => t.KREDIBITTI).HasColumnName("KREDIBITTI");
@@ -34,7 +34,7 @@ namespace OsosOracle.DataLayer.Concrete.EntityFramework.Mappings
             Property(t => t.GUNCELLEYEN).HasColumnName("GUNCELLEYEN");
             Property(t => t.GUNCELLEMETARIH).HasColumnName("GUNCELLEMETARIH");
             Property(t => t.VERSIYON).HasColumnName("VERSIYON");
-            Property(t => t.HEADERNO).HasColumnName("HEADERNO");
+            Property(t => t.Ip).HasColumnName("IP");
             Property(t => t.OKUMATARIH).HasColumnName("OKUMATARIH");
             Property(t => t.ARIZA).HasColumnName("ARIZA");
             Property(t => t.ANAPILZAYIF).HasColumnName("ANAPILZAYIF");
@@ -77,6 +77,7 @@ namespace OsosOracle.DataLayer.Concrete.EntityFramework.Mappings
             Property(t => t.MAXSICAKLIK).HasColumnName("MAXSICAKLIK");
             Property(t => t.YANGINMODU).HasColumnName("YANGINMODU");
             Property(t => t.SONYUKLENENKREDITARIH).HasColumnName("SONYUKLENENKREDITARIH");
+            Property(t => t.KonsSeriNo).HasColumnName("KONSSERINO");
             // Relationships
             //HasOptional(t => t.ENTHEADERPAKETHEADERNOEf)
             //  .WithMany(t => t.HEADERNOENTSAYACDURUMSUEfCollection)

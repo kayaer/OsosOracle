@@ -19,7 +19,7 @@ namespace OsosOracle.DataLayer.Concrete.EntityFramework.Dal
             {
                 //	ENTSAYACDURUMSU = x,
                 KAYITNO = x.KAYITNO,
-                SAYACID = x.SAYACID
+                SAYACID = x.SayacId
 
 
             });
@@ -48,7 +48,7 @@ namespace OsosOracle.DataLayer.Concrete.EntityFramework.Dal
 
                     if (!string.IsNullOrEmpty(filtre.SAYACID))
                     {
-                        result = result.Where(x => x.SAYACID.Contains(filtre.SAYACID));
+                        result = result.Where(x => x.SayacId.Contains(filtre.SAYACID));
                     }
                     if (!string.IsNullOrEmpty(filtre.ACIKLAMA))
                     {
@@ -106,10 +106,7 @@ namespace OsosOracle.DataLayer.Concrete.EntityFramework.Dal
                     {
                         result = result.Where(x => x.VERSIYON == filtre.VERSIYON);
                     }
-                    if (filtre.HEADERNO != null)
-                    {
-                        result = result.Where(x => x.HEADERNO == filtre.HEADERNO);
-                    }
+                   
                     if (filtre.OKUMATARIH != null)
                     {
                         result = result.Where(x => x.OKUMATARIH == filtre.OKUMATARIH);

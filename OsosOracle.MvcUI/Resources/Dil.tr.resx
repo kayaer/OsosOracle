@@ -672,4 +672,10 @@
   <data name="Hata" xml:space="preserve">
     <value>Hata</value>
   </data>
+  <data name="GunlukSatisGrafigi" xml:space="preserve">
+    <value>Günlük Satış Grafiği</value>
+  </data>
+  <data name="Zaman" xml:space="preserve">
+    <value>Zaman</value>
+  </data>
 </root>

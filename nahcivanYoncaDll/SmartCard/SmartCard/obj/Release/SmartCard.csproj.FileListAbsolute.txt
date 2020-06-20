@@ -41,3 +41,10 @@ C:\Projeler\OsosOracle\nahcivanYoncaDll\SmartCard\SmartCard\obj\Release\SmartCar
 C:\Projeler\OsosOracle\nahcivanYoncaDll\SmartCard\SmartCard\obj\Release\SmartCard.pdb
 C:\Projeler\OsosOracle\nahcivanYoncaDll\SmartCard\SmartCard\bin\Release\SmartCard.tlb
 C:\Projeler\OsosOracle\nahcivanYoncaDll\SmartCard\SmartCard\obj\Release\SmartCard.csprojAssemblyReference.cache
+C:\Projeler\Mısır\OsosOracle\nahcivanYoncaDll\SmartCard\SmartCard\bin\Release\SmartCard.dll
+C:\Projeler\Mısır\OsosOracle\nahcivanYoncaDll\SmartCard\SmartCard\bin\Release\SmartCard.pdb
+C:\Projeler\Mısır\OsosOracle\nahcivanYoncaDll\SmartCard\SmartCard\bin\Release\SmartCard.tlb
+C:\Projeler\Mısır\OsosOracle\nahcivanYoncaDll\SmartCard\SmartCard\obj\Release\SmartCard.csprojAssemblyReference.cache
+C:\Projeler\Mısır\OsosOracle\nahcivanYoncaDll\SmartCard\SmartCard\obj\Release\SmartCard.csproj.CoreCompileInputs.cache
+C:\Projeler\Mısır\OsosOracle\nahcivanYoncaDll\SmartCard\SmartCard\obj\Release\SmartCard.dll
+C:\Projeler\Mısır\OsosOracle\nahcivanYoncaDll\SmartCard\SmartCard\obj\Release\SmartCard.pdb
