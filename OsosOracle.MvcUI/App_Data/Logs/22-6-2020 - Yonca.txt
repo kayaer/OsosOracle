@@ -1,0 +1,32 @@
+
+http://localhost:12735/ENTSAYACDURUMSU
+20:38:15 22 Haziran 2020 Pazartesi
+  :System.ArgumentException: name
+   konum: OsosOracle.Framework.Utilities.ExtensionMethods.LinqExtensions.GetPropertyInfo(Type objType, String name) C:\Projeler\Mısır\OsosOracle\OsosOracle.Framework\Utilities\ExtensionMethods\LinqExtensions.cs içinde: satır 17
+   konum: OsosOracle.Framework.Utilities.ExtensionMethods.LinqExtensions.OrderBy[T](IQueryable`1 query, String name, EnumSiralamaTuru enmSiralamaTuru) C:\Projeler\Mısır\OsosOracle\OsosOracle.Framework\Utilities\ExtensionMethods\LinqExtensions.cs içinde: satır 62
+   konum: OsosOracle.Framework.DataAccess.Filter.FilterHelper`1.Sirala(IQueryable`1 result, Ara filtre) C:\Projeler\Mısır\OsosOracle\OsosOracle.Framework\DataAccess\Filter\FilterHelper.cs içinde: satır 33
+   konum: OsosOracle.Framework.DataAccess.Filter.FilterHelper`1.Sayfala(IQueryable`1 result, Ara filtre) C:\Projeler\Mısır\OsosOracle\OsosOracle.Framework\DataAccess\Filter\FilterHelper.cs içinde: satır 13
+   konum: OsosOracle.DataLayer.Concrete.EntityFramework.Dal.EfEntSayacOkumaVeriDal.Ara(EntSayacOkumaVeriAra filtre) C:\Projeler\Mısır\OsosOracle\OsosOracle.DataLayer\Concrete\EntityFramework\Dal\EfEntSayacOkumaVeriDal.cs içinde: satır 79
+   konum: OsosOracle.Business.Concrete.EntSayacOkumaVeriManager.Ara(EntSayacOkumaVeriAra filtre) C:\Projeler\Mısır\OsosOracle\OsosOracle.Business\Concrete\ENTSAYACDURUMSUManager.cs içinde: satır 49
+   konum: OsosOracle.MvcUI.Controllers.ENTSAYACDURUMSUController.DataTablesList(DtParameterModel dtParameterModel, EntSayacOkumaVeriAra eNTSAYACDURUMSUAra) C:\Projeler\Mısır\OsosOracle\OsosOracle.MvcUI\Controllers\ENTSAYACDURUMSUController.cs içinde: satır 48
+   konum: lambda_method(Closure , ControllerBase , Object[] )
+   konum: System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   konum: System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   konum: System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   konum: System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c.<BeginInvokeSynchronousActionMethod>b__9_0(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
+   konum: System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
+   konum: System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   konum: System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   konum: System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass11_0.<InvokeActionMethodFilterAsynchronouslyRecursive>b__0()
+   konum: System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass11_2.<InvokeActionMethodFilterAsynchronouslyRecursive>b__2()
+   konum: System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass7_0.<BeginInvokeActionMethodWithFilters>b__1(IAsyncResult asyncResult)
+   konum: System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   konum: System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   konum: System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   konum: System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass3_6.<BeginInvokeAction>b__4()
+   konum: System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass3_1.<BeginInvokeAction>b__1(IAsyncResult asyncResult)
+   konum: System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   konum: System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   konum: System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)
+   konum: System.Web.Mvc.Controller.<>c.<BeginExecuteCore>b__152_1(IAsyncResult asyncResult, E
+-------------------------------

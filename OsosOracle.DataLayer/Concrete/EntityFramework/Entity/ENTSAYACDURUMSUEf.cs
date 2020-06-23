@@ -3,10 +3,8 @@ using OsosOracle.Entities.Concrete;
 
 namespace OsosOracle.DataLayer.Concrete.EntityFramework.Entity
 {
-    public sealed class ENTSAYACDURUMSUEf : ENTSAYACDURUMSU
+    public sealed class EntSayacOkumaVeriEf : EntSayacOkumaVeri
     {
-
-        public ENTTUKETIMSUEf EntTuketimSuEf { get; set; }
-        //public ENTHEADERPAKETEf ENTHEADERPAKETHEADERNOEf { get; set; }
+    
     }
 }

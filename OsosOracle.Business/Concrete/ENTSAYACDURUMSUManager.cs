@@ -11,67 +11,67 @@ using OsosOracle.Framework.Utilities.ExtensionMethods;
 
 namespace OsosOracle.Business.Concrete
 {
-	public class ENTSAYACDURUMSUManager : BaseManager, IENTSAYACDURUMSUService
+	public class EntSayacOkumaVeriManager : BaseManager, IEntSayacOkumaVeriService
 	{
-		private readonly IENTSAYACDURUMSUDal _eNTSAYACDURUMSUDal;
-		public ENTSAYACDURUMSUManager(IENTSAYACDURUMSUDal eNTSAYACDURUMSUDal)
+		private readonly IEntSayacOkumaVeriDal _eNTSAYACDURUMSUDal;
+		public EntSayacOkumaVeriManager(IEntSayacOkumaVeriDal eNTSAYACDURUMSUDal)
 		{
 			_eNTSAYACDURUMSUDal = eNTSAYACDURUMSUDal;
 		}
 
-		public ENTSAYACDURUMSU GetirById(int id)
+		public EntSayacOkumaVeri GetirById(int id)
 		{
 			return _eNTSAYACDURUMSUDal.Getir(id);
 		}
 
-		public ENTSAYACDURUMSUDetay DetayGetirById(int id)
+		public EntSayacOkumaVeriDetay DetayGetirById(int id)
 		{
 			return _eNTSAYACDURUMSUDal.DetayGetir(id);
 		}
 
-		public List<ENTSAYACDURUMSU> Getir(ENTSAYACDURUMSUAra filtre)
+		public List<EntSayacOkumaVeri> Getir(EntSayacOkumaVeriAra filtre)
 		{
 			return _eNTSAYACDURUMSUDal.Getir(filtre);
 		}
 
-		public int KayitSayisiGetir(ENTSAYACDURUMSUAra filtre)
+		public int KayitSayisiGetir(EntSayacOkumaVeriAra filtre)
 		{
 			return _eNTSAYACDURUMSUDal.KayitSayisiGetir(filtre);
 		}
 
-		public List<ENTSAYACDURUMSUDetay> DetayGetir(ENTSAYACDURUMSUAra filtre)
+		public List<EntSayacOkumaVeriDetay> DetayGetir(EntSayacOkumaVeriAra filtre)
 		{
 			return _eNTSAYACDURUMSUDal.DetayGetir(filtre);
 		}
 
-		public ENTSAYACDURUMSUDataTable Ara(ENTSAYACDURUMSUAra filtre = null)
+		public EntSayacOkumaVeriDataTable Ara(EntSayacOkumaVeriAra filtre = null)
 		{
 			return _eNTSAYACDURUMSUDal.Ara(filtre);
 		}
 
 		
 		[FluentValidationAspect(typeof(ENTSAYACDURUMSUValidator))]
-		private void Validate(ENTSAYACDURUMSU entity)
+		private void Validate(EntSayacOkumaVeri entity)
 		{
 			//Kontroller Yapılacak
 		}
 
-		public void Ekle(List<ENTSAYACDURUMSU> entityler)
+		public void Ekle(List<EntSayacOkumaVeri> entityler)
 		{
 			foreach (var entity in entityler)
 			{
 				Validate(entity);
 			}
-			_eNTSAYACDURUMSUDal.Ekle(entityler.ConvertEfList<ENTSAYACDURUMSU, ENTSAYACDURUMSUEf>());
+			_eNTSAYACDURUMSUDal.Ekle(entityler.ConvertEfList<EntSayacOkumaVeri, EntSayacOkumaVeriEf>());
 		}
 
-		public void Guncelle(List<ENTSAYACDURUMSU> entityler)
+		public void Guncelle(List<EntSayacOkumaVeri> entityler)
 		{
 			foreach (var entity in entityler)
 			{
 				Validate(entity);
 			}
-			_eNTSAYACDURUMSUDal.Guncelle(entityler.ConvertEfList<ENTSAYACDURUMSU, ENTSAYACDURUMSUEf>());
+			_eNTSAYACDURUMSUDal.Guncelle(entityler.ConvertEfList<EntSayacOkumaVeri, EntSayacOkumaVeriEf>());
 		}
 
 		public void Sil(List<int> idler)

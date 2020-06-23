@@ -20,7 +20,7 @@ namespace OsosOracle.Business.DependencyResolvers.Ninject
             Bind<IENTABONEService>().To<ENTABONEManager>().InSingletonScope();
             Bind<IENTABONESAYACService>().To<ENTABONESAYACManager>().InSingletonScope();
             Bind<IENTSAYACService>().To<ENTSAYACManager>().InSingletonScope();
-            Bind<IENTSAYACDURUMSUService>().To<ENTSAYACDURUMSUManager>().InSingletonScope();
+            Bind<IEntSayacOkumaVeriService>().To<EntSayacOkumaVeriManager>().InSingletonScope();
             Bind<IENTTUKETIMSUService>().To<ENTTUKETIMSUManager>().InSingletonScope();
             Bind<IENTSATISService>().To<ENTSATISManager>().InSingletonScope();
             Bind<IENTHABERLESMEUNITESIService>().To<ENTHABERLESMEUNITESIManager>().InSingletonScope();
@@ -56,7 +56,7 @@ namespace OsosOracle.Business.DependencyResolvers.Ninject
             Bind<IENTABONEDal>().To<EfENTABONEDal>().InSingletonScope();
             Bind<IENTABONESAYACDal>().To<EfENTABONESAYACDal>().InSingletonScope();
             Bind<IENTSAYACDal>().To<EfENTSAYACDal>().InSingletonScope();
-            Bind<IENTSAYACDURUMSUDal>().To<EfENTSAYACDURUMSUDal>().InSingletonScope();
+            Bind<IEntSayacOkumaVeriDal>().To<EfEntSayacOkumaVeriDal>().InSingletonScope();
             Bind<IENTTUKETIMSUDal>().To<EfENTTUKETIMSUDal>().InSingletonScope();
             Bind<IENTSATISDal>().To<EfENTSATISDal>().InSingletonScope();
             Bind<IENTHABERLESMEUNITESIDal>().To<EfENTHABERLESMEUNITESIDal>().InSingletonScope();

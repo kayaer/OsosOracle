@@ -1,0 +1,34 @@
+
+
+@using OsosOracle.Framework.HtmlHelpers
+@model OsosOracle.MvcUI.Models.NESNETIPModels.NESNETIPDetayModel
+
+@section panelHeading{
+	@Html.ButtonLink(_T("Listeye Dön").ToString(), "Index", "btn btn-xs btn-info", "fa-reply")
+	@Html.ButtonLink(_T("Sil").ToString(), "Sil", "btn btn-xs btn-danger modalizer", "fa-trash", new { id = Model.NESNETIPDetay.KAYITNO })
+	@Html.ButtonLink(_T("Düzenle").ToString(), "Guncelle","btn btn-xs btn-primary modalizer", "fa-edit", new { id = Model.NESNETIPDetay.KAYITNO })
+
+}
+
+<div class="ajaxForm">
+
+	  
+	<div class="row static-info">
+		<div class="col-md-5 name">@_T("ADI")</div>
+		<div class="col-md-7 value">@Model.NESNETIPDetay.ADI</div>
+	 </div>
+
+
+	 
+	@Html.ButtonLink(_T("Vazgeç").ToString(), "Index", "btn btn-xs btn-danger cancel", "fa-remove")
+</div>
+
+@section script
+{
+	<script type="text/javascript">
+		$(document).ready(function () {
+		//js kodunuzu buraya yazın	
+		});
+
+	</script>
+}

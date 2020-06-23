@@ -29,6 +29,7 @@ namespace OsosOracle.DataLayer.Concrete.EntityFramework.Mappings
             Property(t => t.KimlikNo).HasColumnName("KIMLIKNO");
             Property(t => t.Daire).HasColumnName("DAIRE");
             Property(t => t.Blok).HasColumnName("BLOK");
+            Property(t => t.Adres).HasColumnName("ADRES");
             // Relationships
 
 

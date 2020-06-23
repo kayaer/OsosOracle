@@ -30,6 +30,7 @@ namespace OsosOracle.DataLayer.Concrete.EntityFramework.Dal
                 KREDI = x.KREDI,
                 OLUSTURMATARIH = x.OLUSTURMATARIH,
                 AboneNo = x.EntAboneEf.ABONENO,
+                Adres=x.EntAboneEf.Adres,
                 AboneAdSoyad = x.EntAboneEf.AD + " " + x.EntAboneEf.SOYAD,
                 AylikBakimBedeli = x.AylikBakimBedeli,
                 Kdv = x.Kdv,

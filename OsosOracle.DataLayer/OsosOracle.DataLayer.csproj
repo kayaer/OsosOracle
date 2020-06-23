@@ -102,7 +102,7 @@
     <Compile Include="Concrete\EntityFramework\Dal\EfENTKREDIKOMUTTAKIPDal.cs" />
     <Compile Include="Concrete\EntityFramework\Dal\EfENTSATISDal.cs" />
     <Compile Include="Concrete\EntityFramework\Dal\EfENTSAYACDal.cs" />
-    <Compile Include="Concrete\EntityFramework\Dal\EfENTSAYACDURUMSUDal.cs" />
+    <Compile Include="Concrete\EntityFramework\Dal\EfEntSayacOkumaVeriDal.cs" />
     <Compile Include="Concrete\EntityFramework\Dal\EfENTSAYACSONDURUMSUDal.cs" />
     <Compile Include="Concrete\EntityFramework\Dal\EfENTTUKETIMSUDal.cs" />
     <Compile Include="Concrete\EntityFramework\Dal\EfNESNEDEGERDal.cs" />
@@ -165,7 +165,7 @@
     <Compile Include="Concrete\EntityFramework\Mappings\ENTKOMUTLARSONUCLANANMap.cs" />
     <Compile Include="Concrete\EntityFramework\Mappings\ENTKREDIKOMUTTAKIPMap.cs" />
     <Compile Include="Concrete\EntityFramework\Mappings\ENTSATISMap.cs" />
-    <Compile Include="Concrete\EntityFramework\Mappings\ENTSAYACDURUMSUMap.cs" />
+    <Compile Include="Concrete\EntityFramework\Mappings\EntSayacOkumaVeriMap.cs" />
     <Compile Include="Concrete\EntityFramework\Mappings\ENTSAYACMap.cs" />
     <Compile Include="Concrete\EntityFramework\Mappings\ENTSAYACSONDURUMSUMap.cs" />
     <Compile Include="Concrete\EntityFramework\Mappings\ENTTUKETIMSUMap.cs" />

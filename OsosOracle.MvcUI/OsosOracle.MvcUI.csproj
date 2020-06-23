@@ -1104,7 +1104,7 @@
     <Compile Include="Controllers\ENTKOMUTLARSONUCLANANController.cs" />
     <Compile Include="Controllers\ENTKREDIKOMUTTAKIPController.cs" />
     <Compile Include="Controllers\EntSatisController.cs" />
-    <Compile Include="Controllers\ENTSAYACDURUMSUController.cs" />
+    <Compile Include="Controllers\EntSayacOkumaVeriController.cs" />
     <Compile Include="Controllers\ENTSAYACSONDURUMSUController.cs" />
     <Compile Include="Controllers\ENTTUKETIMSUController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -1200,9 +1200,9 @@
     <Compile Include="Models\ENTSATISModels\Yeni\SatisIptal.cs" />
     <Compile Include="Models\ENTSATISModels\Yeni\SatisModel.cs" />
     <Compile Include="Models\ENTSATISModels\Yeni\SuSatisModel.cs" />
-    <Compile Include="Models\ENTSAYACDURUMSUModels\ENTSAYACDURUMSUDetayModel.cs" />
-    <Compile Include="Models\ENTSAYACDURUMSUModels\ENTSAYACDURUMSUIndexModel.cs" />
-    <Compile Include="Models\ENTSAYACDURUMSUModels\ENTSAYACDURUMSUKaydetModel.cs" />
+    <Compile Include="Models\EntSayacOkumaVeriModels\EntSayacOkumaVeriDetayModel.cs" />
+    <Compile Include="Models\EntSayacOkumaVeriModels\EntSayacOkumaVeriIndexModel.cs" />
+    <Compile Include="Models\EntSayacOkumaVeriModels\EntSayacOkumaVeriKaydetModel.cs" />
     <Compile Include="Models\ENTSAYACModels\ENTSAYACDetayModel.cs" />
     <Compile Include="Models\ENTSAYACModels\ENTSAYACIndexModel.cs" />
     <Compile Include="Models\ENTSAYACModels\ENTSAYACKaydetModel.cs" />
@@ -1363,9 +1363,9 @@
     <Content Include="Views\CSTHUMODEL\Detay.cshtml" />
     <Content Include="Views\CSTHUMODEL\Index.cshtml" />
     <Content Include="Views\CSTHUMODEL\Kaydet.cshtml" />
-    <Content Include="Views\ENTSAYACDURUMSU\Detay.cshtml" />
-    <Content Include="Views\ENTSAYACDURUMSU\Index.cshtml" />
-    <Content Include="Views\ENTSAYACDURUMSU\Kaydet.cshtml" />
+    <Content Include="Views\EntSayacOkumaVeri\Detay.cshtml" />
+    <Content Include="Views\EntSayacOkumaVeri\Index.cshtml" />
+    <Content Include="Views\EntSayacOkumaVeri\Kaydet.cshtml" />
     <Content Include="Views\ENTTUKETIMSU\Detay.cshtml" />
     <Content Include="Views\ENTTUKETIMSU\Index.cshtml" />
     <Content Include="Views\ENTTUKETIMSU\Kaydet.cshtml" />

@@ -33,6 +33,7 @@ namespace OsosOracle.Entities.ComplexType.ENTSATISComplexTypes
         public decimal? SatisTutarý { get; set; }
         public string OlusturanKullaniciAdi { get; set; }
         public string SayacTipi { get; set; }
+        public string Adres { get; set; }
     }
 
 }

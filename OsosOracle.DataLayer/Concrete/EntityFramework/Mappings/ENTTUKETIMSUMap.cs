@@ -40,7 +40,7 @@ namespace OsosOracle.DataLayer.Concrete.EntityFramework.Mappings
             //  .HasForeignKey(d => d.HEADERNO)
             //  .WillCascadeOnDelete(false); 
 
-            HasRequired(t => t.EntSayacDurumSuEf).WithRequiredPrincipal(t => t.EntTuketimSuEf);
+            //HasRequired(t => t.EntSayacDurumSuEf).WithRequiredPrincipal(t => t.EntTuketimSuEf);
 
         }
     }

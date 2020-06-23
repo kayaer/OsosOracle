@@ -1,0 +1,123 @@
+﻿@using OsosOracle.Framework.HtmlHelpers
+@using OsosOracle.MvcUI.Infrastructure
+@using OsosOracle.Entities.ComplexType.ENTSAYACComplexTypes
+@using OsosOracle.MvcUI.Resources
+@model OsosOracle.MvcUI.Models.ENTABONESAYACModels.ENTABONESAYACKaydetModel
+
+
+
+<div class="ajaxForm">
+
+    @using (Html.BeginForm("Kaydet", "AboneSayac", FormMethod.Post))
+    {
+        @Html.AntiForgeryToken()
+        @Html.HiddenFor(t => t.ReturnUrl)
+        @Html.HiddenFor(t => t.ENTABONESAYAC.KAYITNO)
+        @Html.HiddenFor(t => t.ENTABONESAYAC.VERSIYON)
+        @Html.HiddenFor(t => t.ENTABONESAYAC.ABONEKAYITNO)
+        @Html.HiddenFor(t => t.Tip)
+        @Html.HiddenFor(t => t.IslemTipi)
+        @*@Html.HiddenFor(t => t.ENTABONESAYAC.TAKILMATARIH)*@
+        @*@Html.HiddenFor(t => t.ENTABONESAYAC.SOKULMETARIH)
+        @Html.HiddenFor(t => t.ENTABONESAYAC.SOKULMENEDEN)*@
+        @Html.HiddenFor(t => t.ENTABONESAYAC.DURUM)
+        @Html.ValidationSummary(true)
+
+
+
+        if (Model.Tip == 1)
+        {
+            <div class="form-group">
+                @Html.AutoComplete(t => t.ENTABONESAYAC.SAYACKAYITNO, Enums.AutocompleteFuction.YesilVadiSayacGetir, Enums.AutoCompleteType.List, Dil.Sayac, ekParametreler: new ENTSAYACAra { SayacTuru = 1 })
+                @Html.ValidationMessageFor(t => t.ENTABONESAYAC.SAYACKAYITNO)
+            </div>
+
+            <div class="form-group">
+                @Html.AutoComplete(t => t.ENTABONESAYAC.TARIFEKAYITNO, Enums.AutocompleteFuction.SuTarifeGetir, Enums.AutoCompleteType.List, Dil.Tarife)
+                @Html.ValidationMessageFor(t => t.ENTABONESAYAC.TARIFEKAYITNO)
+            </div>
+        }
+        else if (Model.Tip == 2)
+        {
+            <div class="form-group">
+                @Html.AutoComplete(t => t.ENTABONESAYAC.SAYACKAYITNO, Enums.AutocompleteFuction.SayacGetir, Enums.AutoCompleteType.List, Dil.Sayac, ekParametreler: new ENTSAYACAra { SayacTuru = 2 })
+                @Html.ValidationMessageFor(t => t.ENTABONESAYAC.SAYACKAYITNO)
+            </div>
+
+            <div class="form-group">
+                @Html.AutoComplete(t => t.ENTABONESAYAC.TARIFEKAYITNO, Enums.AutocompleteFuction.KalorimetreTarifeGetir, Enums.AutoCompleteType.List, Dil.Tarife)
+                @Html.ValidationMessageFor(t => t.ENTABONESAYAC.TARIFEKAYITNO)
+            </div>
+        }
+        else if (Model.Tip == 4)
+        {
+            <div class="form-group">
+                @Html.AutoComplete(t => t.ENTABONESAYAC.SAYACKAYITNO, Enums.AutocompleteFuction.SayacGetir, Enums.AutoCompleteType.List, Dil.Sayac, ekParametreler: new ENTSAYACAra { SayacTuru = 4 })
+                @Html.ValidationMessageFor(t => t.ENTABONESAYAC.SAYACKAYITNO)
+            </div>
+
+            <div class="form-group">
+                @Html.AutoComplete(t => t.ENTABONESAYAC.TARIFEKAYITNO, Enums.AutocompleteFuction.GazTarifeGetir, Enums.AutoCompleteType.List, Dil.Tarife)
+                @Html.ValidationMessageFor(t => t.ENTABONESAYAC.TARIFEKAYITNO)
+            </div>
+        }
+
+        if (Model.IslemTipi == "Sil")
+        {
+            <div class="form-group">
+
+                @Html.TextBoxFor(t => t.ENTABONESAYAC.SOKULMENEDEN, new { @class = "form-control", placeholder = Dil.SokulmeNedeni })
+                @Html.ValidationMessageFor(t => t.ENTABONESAYAC.SOKULMENEDEN)
+            </div>
+            <div class="form-group">
+                @* <input type="date" class="form-control" Id="txtDateS" placeholder="Sökülme Tarih" />*@
+                @Html.DateInput(t => t.ENTABONESAYAC.SOKULMETARIH, new { placeholder = Dil.SokulmeTarihi })
+                @Html.ValidationMessageFor(t => t.ENTABONESAYAC.SOKULMETARIH)
+            </div>
+
+        }
+        else
+        {
+            <div class="form-group">
+                @Html.DateInput(t => t.ENTABONESAYAC.TAKILMATARIH, new { placeholder = Dil.MontajTarihi })
+                @Html.ValidationMessageFor(t => t.ENTABONESAYAC.TAKILMATARIH)
+                @*  <input type="date" class="form-control" Id="txtDate" placeholder="Takılma Tarih" />*@
+
+            </div>
+
+        }
+
+
+
+
+        <div class="form-actions">
+            <button type="submit" class="btn btn-primary"><i class="fa fa-save"></i> @Dil.Kaydet</button>
+            @Html.ButtonLink(Dil.Vazgec, "Index", "btn btn-xs btn-danger cancel", "fa-remove")
+        </div>
+    }
+</div>
+
+
+<script type="text/javascript">
+        $(document).ready(function () {
+
+
+
+            @*$('#txtDate').on('change', function() {
+
+                 var date = $("#txtDate").val();
+                 $('#@Html.IdFor(m=>m.ENTABONESAYAC.TAKILMATARIH)').val(date);
+            });
+
+            $('#txtDateS').on('change', function() {
+
+                 var date = $("#txtDateS").val();
+                 $('#@Html.IdFor(m=>m.ENTABONESAYAC.SOKULMETARIH)').val(date);
+            });*@
+
+
+
+        });
+
+</script>
+

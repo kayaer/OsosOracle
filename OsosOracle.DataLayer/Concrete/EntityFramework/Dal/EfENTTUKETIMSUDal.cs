@@ -25,7 +25,7 @@ namespace OsosOracle.DataLayer.Concrete.EntityFramework.Dal
                 KALANKREDI=x.KALANKREDI,
                 OKUMATARIH=x.OKUMATARIH,
                 SAYACTARIH=x.SAYACTARIH,
-                KrediDurumu=x.EntSayacDurumSuEf.KREDIBITTI
+                //KrediDurumu=x.EntSayacDurumSuEf.KREDIBITTI
             });
         }
 

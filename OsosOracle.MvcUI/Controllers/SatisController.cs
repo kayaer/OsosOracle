@@ -741,6 +741,7 @@ namespace OsosOracle.MvcUI.Controllers
                 makbuzBilgileri.AboneNo = suSatisDetay.AboneNo;
                 makbuzBilgileri.FaturaTarihi = suSatisDetay.OLUSTURMATARIH.ToString();
                 makbuzBilgileri.SuSayacNo = suSatisDetay.KapakSeriNo.ToString();
+                makbuzBilgileri.Adres = suSatisDetay.Adres;
 
                 suSatisBilgileri.Tarih = suSatisDetay.OLUSTURMATARIH.ToString();
                 suSatisBilgileri.SayacTuru = "SU";
@@ -759,6 +760,7 @@ namespace OsosOracle.MvcUI.Controllers
                 makbuzBilgileri.AboneNo = kalorimetreSatisDetay.AboneNo;
                 makbuzBilgileri.FaturaTarihi = kalorimetreSatisDetay.OLUSTURMATARIH.ToString();
                 makbuzBilgileri.KalorimetreNo = kalorimetreSatisDetay.KapakSeriNo.ToString();
+                makbuzBilgileri.Adres = kalorimetreSatisDetay.Adres;
 
                 kalorimetreSatisBilgileri.Tarih = kalorimetreSatisDetay.OLUSTURMATARIH.ToString();
                 kalorimetreSatisBilgileri.SayacTuru = "KALORİMETRE";

@@ -7,32 +7,32 @@ using OsosOracle.Entities.Concrete;
 namespace OsosOracle.Business.Abstract
 {
 	[ServiceContract]
-	public interface IENTSAYACDURUMSUService
+	public interface IEntSayacOkumaVeriService
 	{
 		[OperationContract]
-		ENTSAYACDURUMSU GetirById(int id);
+		EntSayacOkumaVeri GetirById(int id);
 
 		[OperationContract]
-		ENTSAYACDURUMSUDetay DetayGetirById(int id);
+		EntSayacOkumaVeriDetay DetayGetirById(int id);
 
 		[OperationContract]
-		List<ENTSAYACDURUMSU> Getir(ENTSAYACDURUMSUAra filtre = null);
+		List<EntSayacOkumaVeri> Getir(EntSayacOkumaVeriAra filtre = null);
 
 		[OperationContract]
-		List<ENTSAYACDURUMSUDetay> DetayGetir(ENTSAYACDURUMSUAra filtre = null);
+		List<EntSayacOkumaVeriDetay> DetayGetir(EntSayacOkumaVeriAra filtre = null);
 
 		[OperationContract]
-		int KayitSayisiGetir(ENTSAYACDURUMSUAra filtre = null);
+		int KayitSayisiGetir(EntSayacOkumaVeriAra filtre = null);
 
 
 		[OperationContract]
-		ENTSAYACDURUMSUDataTable Ara(ENTSAYACDURUMSUAra filtre = null);
+		EntSayacOkumaVeriDataTable Ara(EntSayacOkumaVeriAra filtre = null);
 
 		[OperationContract]
-		void Ekle(List<ENTSAYACDURUMSU> entityler);
+		void Ekle(List<EntSayacOkumaVeri> entityler);
 
 		[OperationContract]
-		void Guncelle(List<ENTSAYACDURUMSU> entityler);
+		void Guncelle(List<EntSayacOkumaVeri> entityler);
 
 		[OperationContract]
 		void Sil(List<int> idler);

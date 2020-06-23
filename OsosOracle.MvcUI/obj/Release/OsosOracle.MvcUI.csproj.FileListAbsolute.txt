@@ -400,3 +400,5 @@ C:\Projeler\Mısır\OsosOracle\OsosOracle.MvcUI\obj\Release\tr\OsosOracle.MvcUI.
 C:\Projeler\Mısır\OsosOracle\OsosOracle.MvcUI\obj\Release\OsosOracle.MvcUI.csproj.CopyComplete
 C:\Projeler\Mısır\OsosOracle\OsosOracle.MvcUI\obj\Release\OsosOracle.MvcUI.dll
 C:\Projeler\Mısır\OsosOracle\OsosOracle.MvcUI\obj\Release\OsosOracle.MvcUI.pdb
+C:\Projeler\Mısır\OsosOracle\OsosOracle.MvcUI\obj\Release\RdlCompile.cache
+C:\Projeler\Mısır\OsosOracle\OsosOracle.MvcUI\obj\Release\RdlCompile.compiled

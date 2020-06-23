@@ -1,0 +1,223 @@
+﻿@using OsosOracle.MvcUI.Resources
+@using OsosOracle.Entities.Enums
+@model OsosOracle.MvcUI.Models.ENTSATISModels.Yeni.SatisModel
+<div class="">
+    <button id="btnKartOku" type="button" class="btn btn-danger btn-sm">@Dil.KartOku </button>
+</div>
+<div class="row">
+    <div class="col-md-6">
+
+        <div class="panel panel-default">
+            <div class="panel-heading">@Dil.AboneBilgileri</div>
+            <div class="panel-body">
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <div class="col-md-6">
+                            @Html.TextBoxFor(t => t.SuSatisModel.AboneSayacDetay.AboneAdSoyad, new { @class = "form-control", placeholder = Dil.Ad + ' ' + Dil.Soyad })
+                        </div>
+                        <div class="col-md-6">
+                            @Html.TextBoxFor(t => t.SuSatisModel.AboneSayacDetay.AboneNo, new { @class = "form-control", placeholder = Dil.AboneNo })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-6">
+                            @Html.TextBoxFor(t => t.SuSatisModel.AboneSayacDetay.SuTarifeAdi, new { @class = "form-control", placeholder = Dil.Su + ' ' + Dil.Tarife })
+                        </div>
+                        <div class="col-md-6">
+                            @Html.TextBoxFor(t => t.SuSatisModel.AboneSayacDetay.KapakSeriNo, new { @class = "form-control", placeholder = Dil.KapakSeriNo })
+                        </div>
+                    </div>
+                    <div class="form-group">
+
+                        <div class="col-md-6">
+                            @Html.TextBoxFor(t => t.SuSatisModel.SogukSuOkunan.Kalan, new { @class = "form-control", placeholder = Dil.KALANKREDI })
+                        </div>
+                        <div class="col-md-6">
+                            @Html.TextBoxFor(t => t.SuSatisModel.SogukSuOkunan.Harcanan, new { @class = "form-control", placeholder = Dil.HARCANANKREDI })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-md-6">
+                            @Html.TextBoxFor(t => t.SuSatisModel.SogukSuOkunan.AkoMesaj, new { @class = "form-control", placeholder = Dil.AnaKrediOkundu })
+                        </div>
+                        <div class="col-md-6">
+                            @Html.TextBoxFor(t => t.SuSatisModel.SogukSuOkunan.YkoMesaj, new { @class = "form-control", placeholder = Dil.YedekKrediOkundu })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-12">
+                            @Html.TextBoxFor(t => t.SuSatisModel.AboneSayacDetay.SonSatisTarihi, new { @class = "form-control", placeholder = Dil.SonSatisTarihi })
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    <div class="col-md-6">
+        <div class="col-md-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">@Dil.IptalEdilecekSatis</div>
+                <div class="panel-body">
+                    <div class="form-group">
+                        @Html.TextBoxFor(t => t.SuSatisModel.Satis.ODEME, new { @class = "form-control", placeholder = Dil.Tutar })
+                    </div>
+                    <div class="form-group">
+                        @Html.TextBoxFor(t => t.SuSatisModel.Satis.KREDI, new { @class = "form-control", placeholder = Dil.AnaKredi })
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">@Dil.KartBilgileri</div>
+                <div class="panel-body">
+
+                    <div class="form-group">
+                        @Html.TextBoxFor(t => t.SuSatisModel.SogukSuOkunan.Kredi, new { @class = "form-control", placeholder = Dil.AnaKredi })
+                    </div>
+                    <div class="form-group">
+                        @Html.TextBoxFor(t => t.SuSatisModel.SogukSuOkunan.YedekKredi, new { @class = "form-control", placeholder = Dil.YedekKredi })
+                    </div>
+                    <div class="form-group">
+                        @Html.TextBoxFor(t => t.SuSatisModel.SatisIptal.AnaKredi, new { @class = "form-control", placeholder = Dil.YuklenecekAnaKredi })
+                    </div>
+                    <button type="submit" class="btn btn-danger btn-sm pull-right" name="submitButton" id="btnSuSatisIptal">
+                        @Dil.SatisIptal
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+</div>
+<script src="~/Content/js/PalestineWater.js"></script>
+<script src="~/Content/js/Mcm.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        var SatisModel=@Html.Raw(Json.Encode(Model));
+        $("#btnKartOku").click(function (e) {
+            blockUI();
+            try {
+                 //Mcm Dll Kullanılıyor
+                 var mcm = new Mcm();
+                SatisModel.HamData = mcm.AboneOku();
+                 var model = JSON.stringify(SatisModel)
+                 var model=JSON.stringify(SatisModel)
+                var request = $.ajax({
+                       url: "@Url.Action("SatisIptalPars", "Satis")",
+                       method: "POST",
+                       async: true,
+                       dataType: "json",
+                       contentType: "application/json",
+                       data: model
+
+                   });
+
+                   request.done(function (jqXHR) {
+                       unblockUI();
+                       SatisModel = jqXHR;
+                       //Abone Bilgileri Doldur
+                       $("#@Html.IdFor(t => t.SuSatisModel.AboneSayacDetay.AboneAdSoyad)").val(jqXHR.SuSatisModel.AboneSayacDetay.AboneAdSoyad).blur();
+                       $("#@Html.IdFor(t => t.SuSatisModel.AboneSayacDetay.AboneNo)").val(jqXHR.SuSatisModel.AboneSayacDetay.AboneNo).blur();
+                       $("#@Html.IdFor(t => t.SuSatisModel.AboneSayacDetay.SuTarifeAdi)").val(jqXHR.SuSatisModel.AboneSayacDetay.SuTarifeAdi).blur();
+                       $("#@Html.IdFor(t => t.SuSatisModel.AboneSayacDetay.KapakSeriNo)").val(jqXHR.SuSatisModel.AboneSayacDetay.KapakSeriNo).blur();
+                       $("#@Html.IdFor(t => t.SuSatisModel.SogukSuOkunan.Kredi)").val(jqXHR.SuSatisModel.SogukSuOkunan.Kredi).blur();
+                       $("#@Html.IdFor(t => t.SuSatisModel.SogukSuOkunan.YedekKredi)").val(jqXHR.SuSatisModel.SogukSuOkunan.YedekKredi).blur();
+                       $("#@Html.IdFor(t => t.SuSatisModel.SogukSuOkunan.Kalan)").val(jqXHR.SuSatisModel.SogukSuOkunan.Kalan).blur();
+                       $("#@Html.IdFor(t => t.SuSatisModel.SogukSuOkunan.Harcanan)").val(jqXHR.SuSatisModel.SogukSuOkunan.Harcanan).blur();
+                       $("#@Html.IdFor(t => t.SuSatisModel.SogukSuOkunan.AkoMesaj)").val(jqXHR.SuSatisModel.SogukSuOkunan.AkoMesaj).blur();
+                       $("#@Html.IdFor(t => t.SuSatisModel.SogukSuOkunan.YkoMesaj)").val(jqXHR.SuSatisModel.SogukSuOkunan.YkoMesaj).blur();
+                       $("#@Html.IdFor(t => t.SuSatisModel.AboneSayacDetay.SonSatisTarihi)").val(jqXHR.SuSatisModel.AboneSayacDetay.SonSatisTarihiStr).blur();
+
+                       //satış bilgileri doldur
+                       $("#@Html.IdFor(t => t.SuSatisModel.Satis.ODEME)").val(jqXHR.SuSatisModel.Satis.ODEME).blur();
+                       $("#@Html.IdFor(t => t.SuSatisModel.Satis.KREDI)").val(jqXHR.SuSatisModel.Satis.KREDI).blur();
+
+
+                       //Kart bilgileri doldur
+                       $("#@Html.IdFor(t => t.SuSatisModel.SatisIptal.AnaKredi)").val(jqXHR.SuSatisModel.SatisIptal.AnaKredi).blur();
+
+                   });
+                   request.fail(function (jqXHR, textStatus) {
+                       unblockUI();
+                       var msg = jQuery.parseJSON(jqXHR.responseText);
+                       ajaxMesajGoster(msg.Mesaj);
+                   });
+
+
+                unblockUI();
+
+            } catch (e) {
+                unblockUI();
+                ajaxMesajGoster(e);
+            }
+
+        });
+
+        $("#btnSuSatisIptal").click(function (e) {
+            if (SuKrediYukle(SatisModel.SuSatisModel) == "1") {
+
+                               SatisModel.SuSatisModel.Satis.KREDI = SatisModel.SuSatisModel.SatisIptal.AnaKredi;
+                               SatisModel.SuSatisModel.Satis.YEDEKKREDI = SatisModel.SuSatisModel.SatisIptal.YedekKredi;
+                               SatisModel.SuSatisModel.Satis.SatisTipi =@enumSatisTipi.SatisIptal.GetHashCode()//İPTAL SATIŞ
+                               var model=JSON.stringify(SatisModel)
+
+                               var request = $.ajax({
+                                          url: "@Url.Action("SatisYap", "EntSatis")",
+                                          method: "POST",
+                                          async: true,
+                                          dataType: "json",
+                                          contentType: "application/json",
+                                          data: model
+
+                                      });
+
+                                      request.done(function (jqXHR) {
+
+                                          SatisModel = jqXHR;
+
+                                          @*var url = '@Url.Action("MakbuzIndir","Satis")' + '?filename=' + jqXHR;
+                                          window.location.href = url;*@
+                                          ajaxMesajGoster('@Dil.Basarili');
+                                          setTimeout(function () { location.reload(); }, 3000);
+
+                                      });
+                                      request.fail(function (jqXHR, textStatus) {
+                                          unblockUI();
+                                          var msg = jQuery.parseJSON(jqXHR.responseText);
+                                          ajaxMesajGoster(msg.Mesaj);
+                                      });
+                           } else {
+                               ajaxMesajGoster("Karta yazılamadı");
+                           }
+        });
+
+
+        function SuKrediYukle(SuSatisModel) {
+
+            if (SuSatisModel.AboneSayacDetay.SayacModelKayitNo ==@enumSayacModeli.MercanYd.GetHashCode() || SuSatisModel.AboneSayacDetay.SayacModelKayitNo ==@enumSayacModeli.As25Yd.GetHashCode()) {
+                SuSatisModel.Satis.ToplamKredi = SuSatisModel.SatisIptal.AnaKredi;
+                //Filistin Dll
+                var palestineWater = new PalestineWater();
+                return palestineWater.AboneYaz(SuSatisModel);
+            } else {//Mcm Dll
+                 SuSatisModel.Satis.ToplamKredi = SuSatisModel.SatisIptal.AnaKredi;
+                 var mcm = new Mcm();
+                return mcm.AboneYaz(SuSatisModel);
+
+            }
+        }
+
+
+
+    });
+</script>

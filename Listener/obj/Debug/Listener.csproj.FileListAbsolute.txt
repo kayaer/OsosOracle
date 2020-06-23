@@ -28,3 +28,4 @@ C:\Projeler\Mısır\OsosOracle\Listener\obj\Debug\Listener.csproj.CoreCompileInp
 C:\Projeler\Mısır\OsosOracle\Listener\obj\Debug\Listener.csproj.CopyComplete
 C:\Projeler\Mısır\OsosOracle\Listener\obj\Debug\Listener.exe
 C:\Projeler\Mısır\OsosOracle\Listener\obj\Debug\Listener.pdb
+C:\Projeler\Mısır\OsosOracle\Listener\obj\Debug\Listener.csprojAssemblyReference.cache

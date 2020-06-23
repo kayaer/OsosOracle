@@ -93,6 +93,7 @@ namespace OsosOracle.MvcUI.Controllers
                     t.SayacModel,
                     t.SayacSeriNo,
                     t.TarifeAdi,
+                    t.Adres,
                     Islemler =
                     $"<a class='btn btn-xs btn-info modalizer' href='{Url.Action("Guncelle", "Abone", new { aboneKayitNo = t.KAYITNO })}' title='{Dil.Duzenle}'><i class='fa fa-edit'></i></a>" +
                     $"<a class='btn btn-xs btn-danger modalizer ' href='{Url.Action("Sil", "Abone", new { aboneKayitNo = t.KAYITNO })}' title='{Dil.Sil}'><i class='fa fa-trash'></i></a>"

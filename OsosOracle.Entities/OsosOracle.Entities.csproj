@@ -36,6 +36,7 @@
       <HintPath>..\OsosOracle.MvcUI\Bin\OsosOracle.DataLayer.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -92,9 +93,9 @@
     <Compile Include="ComplexType\ENTSAYACComplexTypes\ENTSAYACAra.cs" />
     <Compile Include="ComplexType\ENTSAYACComplexTypes\ENTSAYACDataTable.cs" />
     <Compile Include="ComplexType\ENTSAYACComplexTypes\ENTSAYACDetay.cs" />
-    <Compile Include="ComplexType\ENTSAYACDURUMSUComplexTypes\ENTSAYACDURUMSUAra.cs" />
-    <Compile Include="ComplexType\ENTSAYACDURUMSUComplexTypes\ENTSAYACDURUMSUDataTable.cs" />
-    <Compile Include="ComplexType\ENTSAYACDURUMSUComplexTypes\ENTSAYACDURUMSUDetay.cs" />
+    <Compile Include="ComplexType\EntSayacOkumaVeriComplexTypes\EntSayacOkumaVeriAra.cs" />
+    <Compile Include="ComplexType\EntSayacOkumaVeriComplexTypes\EntSayacOkumaVeriDataTable.cs" />
+    <Compile Include="ComplexType\EntSayacOkumaVeriComplexTypes\EntSayacOkumaVeriDetay.cs" />
     <Compile Include="ComplexType\ENTSAYACSONDURUMSUComplexTypes\ENTSAYACSONDURUMSUAra.cs" />
     <Compile Include="ComplexType\ENTSAYACSONDURUMSUComplexTypes\ENTSAYACSONDURUMSUDataTable.cs" />
     <Compile Include="ComplexType\ENTSAYACSONDURUMSUComplexTypes\ENTSAYACSONDURUMSUDetay.cs" />
@@ -163,7 +164,7 @@
     <Compile Include="Concrete\ENTKREDIKOMUTTAKIP.cs" />
     <Compile Include="Concrete\ENTSATIS.cs" />
     <Compile Include="Concrete\ENTSAYAC.cs" />
-    <Compile Include="Concrete\ENTSAYACDURUMSU.cs" />
+    <Compile Include="Concrete\EntSayacOkumaVeri.cs" />
     <Compile Include="Concrete\ENTSAYACSONDURUMSU.cs" />
     <Compile Include="Concrete\ENTTUKETIMSU.cs" />
     <Compile Include="Concrete\NESNEDEGER.cs" />

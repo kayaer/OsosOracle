@@ -28,6 +28,7 @@ namespace OsosOracle.Entities.ComplexType.ENTABONEComplexTypes
         public string KimlikNo { get; set; }
         public string Daire { get; set; }
         public string Blok { get; set; }
+        public string Adres { get; set; }
     }
 
 }

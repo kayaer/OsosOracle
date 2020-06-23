@@ -5,20 +5,20 @@ using OsosOracle.Entities.Concrete;
 
 namespace OsosOracle.DataLayer.Abstract
 {
-	public interface IENTSAYACDURUMSUDal
+	public interface IEntSayacOkumaVeriDal
 	{
-		ENTSAYACDURUMSU Getir(int id);
-		ENTSAYACDURUMSUDetay DetayGetir(int id);
+		EntSayacOkumaVeri Getir(int id);
+		EntSayacOkumaVeriDetay DetayGetir(int id);
 
-		List<ENTSAYACDURUMSU> Getir(ENTSAYACDURUMSUAra filtre = null);
-		List<ENTSAYACDURUMSUDetay> DetayGetir(ENTSAYACDURUMSUAra filtre = null);
+		List<EntSayacOkumaVeri> Getir(EntSayacOkumaVeriAra filtre = null);
+		List<EntSayacOkumaVeriDetay> DetayGetir(EntSayacOkumaVeriAra filtre = null);
 
-		ENTSAYACDURUMSUDataTable Ara(ENTSAYACDURUMSUAra filtre = null);
+		EntSayacOkumaVeriDataTable Ara(EntSayacOkumaVeriAra filtre = null);
 
-		int KayitSayisiGetir(ENTSAYACDURUMSUAra filtre = null);
+		int KayitSayisiGetir(EntSayacOkumaVeriAra filtre = null);
 
-		List<ENTSAYACDURUMSU> Ekle(List<ENTSAYACDURUMSUEf> entityler);
-		void Guncelle(List<ENTSAYACDURUMSUEf> yeniDegerler);
+		List<EntSayacOkumaVeri> Ekle(List<EntSayacOkumaVeriEf> entityler);
+		void Guncelle(List<EntSayacOkumaVeriEf> yeniDegerler);
 		void Sil(List<int> idler);
 	}
 }

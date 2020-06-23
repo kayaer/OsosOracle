@@ -1,0 +1,93 @@
+﻿@using OsosOracle.Framework.Entities
+@model HandleErrorInfo
+
+@{
+    ViewBag.Title = _T("Hata Oluştu");
+}
+
+@if (Model != null)
+{
+    if (Model.Exception.Message.Contains("|NotificationException"))
+    {
+        ViewBag.Title = _T("Uyarı");
+        <div class="alert alert-danger text-center">
+            <p>@Model.Exception.Message.Replace("|NotificationException", "")</p>
+            <p>Lütfen geri dönerek hataları düzelterek tekrar deneyiniz.</p>
+            <br />
+            <a href="#" onclick="window.history.back();" class="btn btn-danger">
+                <span class="glyphicon glyphicon-backward"></span>
+                Geri
+            </a>
+        </div>
+    }
+
+    else
+    {
+
+        <div class="text-center">
+
+
+            <img src="~/Content/img/error.png" alt="Bişeyler ters gitti" />
+
+            <h2 class="text-center text-danger"> @_T("Bişeyler ters gitti..") </h2>
+
+            @if (AktifKullanici.GelistiriciMi)
+            {
+
+                if (Model != null)
+                {
+                    <p class="text-center"><strong>@_T("Hata:")</strong> @Model.Exception.Message</p>
+                    <h5> @_T("Hata Detayı") </h5>
+                    <code> @Model.Exception.ToString() </code>
+                }
+
+            }
+            <div class="alert alert-info ">
+                <p class="text-center">
+                    <span class="glyphicon glyphicon-info-sign"></span> Hata Sistem yöneticisine bildirildi.
+
+                    <br />
+                    <a href="#" onclick="window.history.back();" class="btn btn-primary btn-lg">
+                        <span class="glyphicon glyphicon-backward"></span>
+                        Geri
+                    </a>
+                </p>
+            </div>
+        </div>
+    }
+}
+else
+{
+
+
+    <div class="text-center">
+
+        <span class="glyphicon glyphicon-knight" style="font-size: 80px; transform: rotate(-175deg);"></span>
+
+        <h2 class="text-center text-danger"> @_T("Bişeyler ters gitti..") </h2>
+
+        @if (AktifKullanici.GelistiriciMi)
+        {
+            if (Model != null)
+            {
+                <p class="text-center"><strong>@_T("Hata:")</strong> @Model.Exception.Message</p>
+                <h5> @_T("Hata Detayı") </h5>
+                <code> @Model.Exception.ToString() </code>
+            }
+        }
+
+        <div class="alert alert-info ">
+            <p class="text-center">
+                <span class="glyphicon glyphicon-info-sign"></span> Hata Sistem yöneticisine bildirildi.
+
+                <br />
+                <a href="#" onclick="window.history.back();" class="btn btn-primary btn-lg">
+                    <span class="glyphicon glyphicon-backward"></span>
+                    Geri
+                </a>
+            </p>
+        </div>
+    </div>
+
+}
+

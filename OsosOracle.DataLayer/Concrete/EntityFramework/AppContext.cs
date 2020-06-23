@@ -46,7 +46,7 @@ namespace OsosOracle.DataLayer.Concrete.EntityFramework
         public DbSet<ENTKREDIKOMUTTAKIPEf> ENTKREDIKOMUTTAKIPEf { get; set; }
         public DbSet<ENTSAYACEf> ENTSAYACEf { get; set; }
 
-        public DbSet<ENTSAYACDURUMSUEf> EntSayacDurumSuEf { get; set; }
+        public DbSet<EntSayacOkumaVeriEf> EntSayacOkumaVeriEf { get; set; }
 
         public DbSet<ENTTUKETIMSUEf> EntTuketimSuEf { get; set; }
         public DbSet<ENTSATISEf> ENTSATISEf { get; set; }
@@ -86,7 +86,7 @@ namespace OsosOracle.DataLayer.Concrete.EntityFramework
             modelBuilder.Configurations.Add(new ENTKOMUTLARSONUCLANANMap());
             modelBuilder.Configurations.Add(new ENTKREDIKOMUTTAKIPMap());
             modelBuilder.Configurations.Add(new ENTSAYACMap());
-            modelBuilder.Configurations.Add(new ENTSAYACDURUMSUMap());
+            modelBuilder.Configurations.Add(new EntSayacOkumaVeriMap());
             modelBuilder.Configurations.Add(new ENTTUKETIMSUMap());
             modelBuilder.Configurations.Add(new ENTSATISMap());
             modelBuilder.Configurations.Add(new ENTSAYACSONDURUMSUMap());

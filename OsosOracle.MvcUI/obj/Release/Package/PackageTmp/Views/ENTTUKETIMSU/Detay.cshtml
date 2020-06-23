@@ -1,0 +1,118 @@
+
+
+@using OsosOracle.Framework.HtmlHelpers
+@model OsosOracle.MvcUI.Models.ENTTUKETIMSUModels.ENTTUKETIMSUDetayModel
+
+@section panelHeading{
+	@Html.ButtonLink(_T("Listeye Dön").ToString(), "Index", "btn btn-xs btn-info", "fa-reply")
+	@Html.ButtonLink(_T("Sil").ToString(), "Sil", "btn btn-xs btn-danger modalizer", "fa-trash", new { id = Model.ENTTUKETIMSUDetay.Id })
+	@Html.ButtonLink(_T("Düzenle").ToString(), "Guncelle","btn btn-xs btn-primary modalizer", "fa-edit", new { id = Model.ENTTUKETIMSUDetay.Id })
+
+}
+
+<div class="ajaxForm">
+
+	  
+	<div class="row static-info">
+		<div class="col-md-5 name">@_T("SAYACID")</div>
+		<div class="col-md-7 value">@Model.ENTTUKETIMSUDetay.SAYACID</div>
+	 </div>
+
+
+	<div class="row static-info">
+		<div class="col-md-5 name">@_T("TUKETIM")</div>
+		<div class="col-md-7 value">@Model.ENTTUKETIMSUDetay.TUKETIM</div>
+	 </div>
+
+
+	<div class="row static-info">
+		<div class="col-md-5 name">@_T("TUKETIM1")</div>
+		<div class="col-md-7 value">@Model.ENTTUKETIMSUDetay.TUKETIM1</div>
+	 </div>
+
+
+	<div class="row static-info">
+		<div class="col-md-5 name">@_T("TUKETIM2")</div>
+		<div class="col-md-7 value">@Model.ENTTUKETIMSUDetay.TUKETIM2</div>
+	 </div>
+
+
+	<div class="row static-info">
+		<div class="col-md-5 name">@_T("TUKETIM3")</div>
+		<div class="col-md-7 value">@Model.ENTTUKETIMSUDetay.TUKETIM3</div>
+	 </div>
+
+
+	<div class="row static-info">
+		<div class="col-md-5 name">@_T("TUKETIM4")</div>
+		<div class="col-md-7 value">@Model.ENTTUKETIMSUDetay.TUKETIM4</div>
+	 </div>
+
+
+	<div class="row static-info">
+		<div class="col-md-5 name">@_T("SAYACTARIH")</div>
+		<div class="col-md-7 value">@Model.ENTTUKETIMSUDetay.SAYACTARIH</div>
+	 </div>
+
+
+	<div class="row static-info">
+		<div class="col-md-5 name">@_T("OKUMATARIH")</div>
+		<div class="col-md-7 value">@Model.ENTTUKETIMSUDetay.OKUMATARIH</div>
+	 </div>
+
+
+	<div class="row static-info">
+		<div class="col-md-5 name">@_T("DATA")</div>
+		<div class="col-md-7 value">@Model.ENTTUKETIMSUDetay.DATA</div>
+	 </div>
+
+
+	<div class="row static-info">
+		<div class="col-md-5 name">@_T("HGUN")</div>
+		<div class="col-md-7 value">@Model.ENTTUKETIMSUDetay.HGUN</div>
+	 </div>
+
+
+	<div class="row static-info">
+		<div class="col-md-5 name">@_T("HARCANANKREDI")</div>
+		<div class="col-md-7 value">@Model.ENTTUKETIMSUDetay.HARCANANKREDI</div>
+	 </div>
+
+
+	<div class="row static-info">
+		<div class="col-md-5 name">@_T("KALANKREDI")</div>
+		<div class="col-md-7 value">@Model.ENTTUKETIMSUDetay.KALANKREDI</div>
+	 </div>
+
+
+	<div class="row static-info">
+		<div class="col-md-5 name">@_T("VERSIYON")</div>
+		<div class="col-md-7 value">@Model.ENTTUKETIMSUDetay.VERSIYON</div>
+	 </div>
+
+
+	<div class="row static-info">
+		<div class="col-md-5 name">@_T("HEADERNO")</div>
+		<div class="col-md-7 value">@Model.ENTTUKETIMSUDetay.HEADERNO</div>
+	 </div>
+
+
+	<div class="row static-info">
+		<div class="col-md-5 name">@_T("FATURAMOD")</div>
+		<div class="col-md-7 value">@Model.ENTTUKETIMSUDetay.FATURAMOD</div>
+	 </div>
+
+
+	 
+	@Html.ButtonLink(_T("Vazgeç").ToString(), "Index", "btn btn-xs btn-danger cancel", "fa-remove")
+</div>
+
+@section script
+{
+	<script type="text/javascript">
+		$(document).ready(function () {
+		//js kodunuzu buraya yazın	
+		});
+
+	</script>
+}

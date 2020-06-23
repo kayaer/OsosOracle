@@ -1,209 +1,209 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Symbols LinesOfCode="2036" PostSharpLinesOfCode="0" EnhancedTypesCount="32" SchemaVersion="1" PostSharpVersion="4.3.33.0" xmlns="http://schemas.postsharp.org/2.0/symbols">
+<Symbols LinesOfCode="2024" PostSharpLinesOfCode="0" EnhancedTypesCount="32" SchemaVersion="1" PostSharpVersion="4.3.33.0" xmlns="http://schemas.postsharp.org/2.0/symbols">
   <Class Class="#1=T:[OsosOracle.Framework]OsosOracle.Framework.Aspects.ValidationAspects.FluentValidationAspect">
-    <Instance Declaration="#2=M:[OsosOracle.Business]OsosOracle.Business.Concrete.CONDILManager::Validate(OsosOracle.Entities.Concrete.CONDIL)" Id="dc212996e1f42e6c">
+    <Instance Declaration="#2=M:[OsosOracle.Business]OsosOracle.Business.Concrete.CONDILManager::Validate(OsosOracle.Entities.Concrete.CONDIL)" Id="dc212996371a8929">
       <Target>
         <JoinPoint Advising="#1" Description="#3=Wrapped by advice(s) OnEntry" Ordinal="0" />
       </Target>
     </Instance>
-    <Instance Declaration="#4=M:[OsosOracle.Business]OsosOracle.Business.Concrete.CONKURUMManager::Validate(OsosOracle.Entities.Concrete.CONKURUM)" Id="dc212996b48d4491">
+    <Instance Declaration="#4=M:[OsosOracle.Business]OsosOracle.Business.Concrete.CONKURUMManager::Validate(OsosOracle.Entities.Concrete.CONKURUM)" Id="dc2129963182644d">
       <Target>
         <JoinPoint Advising="#1" Description="#3" />
       </Target>
     </Instance>
-    <Instance Declaration="#5=M:[OsosOracle.Business]OsosOracle.Business.Concrete.CSTHUMARKAManager::Validate(OsosOracle.Entities.Concrete.CSTHUMARKA)" Id="dc212996ce47bb43">
+    <Instance Declaration="#5=M:[OsosOracle.Business]OsosOracle.Business.Concrete.CSTHUMARKAManager::Validate(OsosOracle.Entities.Concrete.CSTHUMARKA)" Id="dc212996648bf4b7">
       <Target>
         <JoinPoint Advising="#1" Description="#3" Ordinal="2" />
       </Target>
     </Instance>
-    <Instance Declaration="#6=M:[OsosOracle.Business]OsosOracle.Business.Concrete.CSTHUMODELManager::Validate(OsosOracle.Entities.Concrete.CSTHUMODEL)" Id="dc212996749722ff">
+    <Instance Declaration="#6=M:[OsosOracle.Business]OsosOracle.Business.Concrete.CSTHUMODELManager::Validate(OsosOracle.Entities.Concrete.CSTHUMODEL)" Id="dc212996369f3058">
       <Target>
         <JoinPoint Advising="#1" Description="#3" Ordinal="3" />
       </Target>
     </Instance>
-    <Instance Declaration="#7=M:[OsosOracle.Business]OsosOracle.Business.Concrete.CSTSAYACMODELManager::Validate(OsosOracle.Entities.Concrete.CSTSAYACMODEL)" Id="dc212996b3d64c67">
+    <Instance Declaration="#7=M:[OsosOracle.Business]OsosOracle.Business.Concrete.CSTSAYACMODELManager::Validate(OsosOracle.Entities.Concrete.CSTSAYACMODEL)" Id="dc2129961b0fbfc1">
       <Target>
         <JoinPoint Advising="#1" Description="#3" Ordinal="4" />
       </Target>
     </Instance>
-    <Instance Declaration="#8=M:[OsosOracle.Business]OsosOracle.Business.Concrete.ENTABONEManager::Validate(OsosOracle.Entities.Concrete.ENTABONE)" Id="dc212996b7f656e3">
+    <Instance Declaration="#8=M:[OsosOracle.Business]OsosOracle.Business.Concrete.ENTABONEManager::Validate(OsosOracle.Entities.Concrete.ENTABONE)" Id="dc2129962f18b6f7">
       <Target>
         <JoinPoint Advising="#1" Description="#3" Ordinal="5" />
       </Target>
     </Instance>
-    <Instance Declaration="#9=M:[OsosOracle.Business]OsosOracle.Business.Concrete.ENTABONESAYACManager::Validate(OsosOracle.Entities.Concrete.ENTABONESAYAC)" Id="dc212996d29165ae">
+    <Instance Declaration="#9=M:[OsosOracle.Business]OsosOracle.Business.Concrete.ENTABONESAYACManager::Validate(OsosOracle.Entities.Concrete.ENTABONESAYAC)" Id="dc21299606598e66">
       <Target>
         <JoinPoint Advising="#1" Description="#3" Ordinal="11" />
       </Target>
     </Instance>
-    <Instance Declaration="#10=M:[OsosOracle.Business]OsosOracle.Business.Concrete.ENTHABERLESMEUNITESIManager::Validate(OsosOracle.Entities.Concrete.ENTHABERLESMEUNITESI)" Id="dc212996e2ebc997">
+    <Instance Declaration="#10=M:[OsosOracle.Business]OsosOracle.Business.Concrete.ENTHABERLESMEUNITESIManager::Validate(OsosOracle.Entities.Concrete.ENTHABERLESMEUNITESI)" Id="dc2129966f6ca634">
       <Target>
         <JoinPoint Advising="#1" Description="#3" Ordinal="12" />
       </Target>
     </Instance>
-    <Instance Declaration="#11=M:[OsosOracle.Business]OsosOracle.Business.Concrete.ENTHUSAYACManager::Validate(OsosOracle.Entities.Concrete.ENTHUSAYAC)" Id="dc2129969a59e73c">
+    <Instance Declaration="#11=M:[OsosOracle.Business]OsosOracle.Business.Concrete.ENTHUSAYACManager::Validate(OsosOracle.Entities.Concrete.ENTHUSAYAC)" Id="dc2129962f24bc75">
       <Target>
         <JoinPoint Advising="#1" Description="#3" Ordinal="13" />
       </Target>
     </Instance>
-    <Instance Declaration="#12=M:[OsosOracle.Business]OsosOracle.Business.Concrete.ENTKOMUTLARBEKLEYENManager::Validate(OsosOracle.Entities.Concrete.ENTKOMUTLARBEKLEYEN)" Id="dc21299616f62c3a">
+    <Instance Declaration="#12=M:[OsosOracle.Business]OsosOracle.Business.Concrete.ENTKOMUTLARBEKLEYENManager::Validate(OsosOracle.Entities.Concrete.ENTKOMUTLARBEKLEYEN)" Id="dc212996c77b4e76">
       <Target>
         <JoinPoint Advising="#1" Description="#3" Ordinal="14" />
       </Target>
     </Instance>
-    <Instance Declaration="#13=M:[OsosOracle.Business]OsosOracle.Business.Concrete.ENTKOMUTLARSONUCLANANManager::Validate(OsosOracle.Entities.Concrete.ENTKOMUTLARSONUCLANAN)" Id="dc2129966a664613">
+    <Instance Declaration="#13=M:[OsosOracle.Business]OsosOracle.Business.Concrete.ENTKOMUTLARSONUCLANANManager::Validate(OsosOracle.Entities.Concrete.ENTKOMUTLARSONUCLANAN)" Id="dc21299602aef0e3">
       <Target>
         <JoinPoint Advising="#1" Description="#3" Ordinal="15" />
       </Target>
     </Instance>
-    <Instance Declaration="#14=M:[OsosOracle.Business]OsosOracle.Business.Concrete.ENTKREDIKOMUTTAKIPManager::Validate(OsosOracle.Entities.Concrete.ENTKREDIKOMUTTAKIP)" Id="dc212996f4cf9722">
+    <Instance Declaration="#14=M:[OsosOracle.Business]OsosOracle.Business.Concrete.ENTKREDIKOMUTTAKIPManager::Validate(OsosOracle.Entities.Concrete.ENTKREDIKOMUTTAKIP)" Id="dc212996c6cc2792">
       <Target>
         <JoinPoint Advising="#1" Description="#3" Ordinal="16" />
       </Target>
     </Instance>
-    <Instance Declaration="#15=M:[OsosOracle.Business]OsosOracle.Business.Concrete.ENTSATISManager::Validate(OsosOracle.Entities.Concrete.ENTSATIS)" Id="dc2129969e49d32e">
+    <Instance Declaration="#15=M:[OsosOracle.Business]OsosOracle.Business.Concrete.ENTSATISManager::Validate(OsosOracle.Entities.Concrete.ENTSATIS)" Id="dc21299622b131bb">
       <Target>
         <JoinPoint Advising="#1" Description="#3" Ordinal="17" />
       </Target>
     </Instance>
-    <Instance Declaration="#16=M:[OsosOracle.Business]OsosOracle.Business.Concrete.ENTSAYACDURUMSUManager::Validate(OsosOracle.Entities.Concrete.ENTSAYACDURUMSU)" Id="dc21299610963f2d">
+    <Instance Declaration="#16=M:[OsosOracle.Business]OsosOracle.Business.Concrete.EntSayacOkumaVeriManager::Validate(OsosOracle.Entities.Concrete.EntSayacOkumaVeri)" Id="dc21299668e76aea">
       <Target>
         <JoinPoint Advising="#1" Description="#3" Ordinal="19" />
       </Target>
     </Instance>
-    <Instance Declaration="#17=M:[OsosOracle.Business]OsosOracle.Business.Concrete.ENTSAYACManager::Validate(OsosOracle.Entities.Concrete.ENTSAYAC)" Id="dc21299642ca1cd8">
+    <Instance Declaration="#17=M:[OsosOracle.Business]OsosOracle.Business.Concrete.ENTSAYACManager::Validate(OsosOracle.Entities.Concrete.ENTSAYAC)" Id="dc212996528eb677">
       <Target>
         <JoinPoint Advising="#1" Description="#3" Ordinal="20" />
       </Target>
     </Instance>
-    <Instance Declaration="#18=M:[OsosOracle.Business]OsosOracle.Business.Concrete.ENTSAYACSONDURUMSUManager::Validate(OsosOracle.Entities.Concrete.ENTSAYACSONDURUMSU)" Id="dc2129966014a921">
+    <Instance Declaration="#18=M:[OsosOracle.Business]OsosOracle.Business.Concrete.ENTSAYACSONDURUMSUManager::Validate(OsosOracle.Entities.Concrete.ENTSAYACSONDURUMSU)" Id="dc212996e46b3848">
       <Target>
         <JoinPoint Advising="#1" Description="#3" Ordinal="22" />
       </Target>
     </Instance>
-    <Instance Declaration="#19=M:[OsosOracle.Business]OsosOracle.Business.Concrete.ENTTUKETIMSUManager::Validate(OsosOracle.Entities.Concrete.ENTTUKETIMSU)" Id="dc2129963266fb52">
+    <Instance Declaration="#19=M:[OsosOracle.Business]OsosOracle.Business.Concrete.ENTTUKETIMSUManager::Validate(OsosOracle.Entities.Concrete.ENTTUKETIMSU)" Id="dc2129960ed60be5">
       <Target>
         <JoinPoint Advising="#1" Description="#3" Ordinal="23" />
       </Target>
     </Instance>
-    <Instance Declaration="#20=M:[OsosOracle.Business]OsosOracle.Business.Concrete.NESNEDEGERManager::Validate(OsosOracle.Entities.Concrete.NESNEDEGER)" Id="dc212996f8d4938d">
+    <Instance Declaration="#20=M:[OsosOracle.Business]OsosOracle.Business.Concrete.NESNEDEGERManager::Validate(OsosOracle.Entities.Concrete.NESNEDEGER)" Id="dc212996fb2dfaf6">
       <Target>
         <JoinPoint Advising="#1" Description="#3" Ordinal="24" />
       </Target>
     </Instance>
-    <Instance Declaration="#21=M:[OsosOracle.Business]OsosOracle.Business.Concrete.NESNETIPManager::Validate(OsosOracle.Entities.Concrete.NESNETIP)" Id="dc212996fa4c3b0d">
+    <Instance Declaration="#21=M:[OsosOracle.Business]OsosOracle.Business.Concrete.NESNETIPManager::Validate(OsosOracle.Entities.Concrete.NESNETIP)" Id="dc212996d2d22743">
       <Target>
         <JoinPoint Advising="#1" Description="#3" Ordinal="25" />
       </Target>
     </Instance>
-    <Instance Declaration="#22=M:[OsosOracle.Business]OsosOracle.Business.Concrete.PRMTARIFEELKManager::Validate(OsosOracle.Entities.Concrete.PRMTARIFEELK)" Id="dc212996570ba57c">
+    <Instance Declaration="#22=M:[OsosOracle.Business]OsosOracle.Business.Concrete.PRMTARIFEELKManager::Validate(OsosOracle.Entities.Concrete.PRMTARIFEELK)" Id="dc212996c7e4dc10">
       <Target>
         <JoinPoint Advising="#1" Description="#3" Ordinal="26" />
       </Target>
     </Instance>
-    <Instance Declaration="#23=M:[OsosOracle.Business]OsosOracle.Business.Concrete.PRMTARIFEGAZManager::Validate(OsosOracle.Entities.Concrete.PRMTARIFEGAZ)" Id="dc21299654410dd8">
+    <Instance Declaration="#23=M:[OsosOracle.Business]OsosOracle.Business.Concrete.PRMTARIFEGAZManager::Validate(OsosOracle.Entities.Concrete.PRMTARIFEGAZ)" Id="dc212996d9d25019">
       <Target>
         <JoinPoint Advising="#1" Description="#3" Ordinal="27" />
       </Target>
     </Instance>
-    <Instance Declaration="#24=M:[OsosOracle.Business]OsosOracle.Business.Concrete.PRMTARIFEKALORIMETREManager::Validate(OsosOracle.Entities.Concrete.PRMTARIFEKALORIMETRE)" Id="dc21299663c855b4">
+    <Instance Declaration="#24=M:[OsosOracle.Business]OsosOracle.Business.Concrete.PRMTARIFEKALORIMETREManager::Validate(OsosOracle.Entities.Concrete.PRMTARIFEKALORIMETRE)" Id="dc21299645c86446">
       <Target>
         <JoinPoint Advising="#1" Description="#3" Ordinal="28" />
       </Target>
     </Instance>
-    <Instance Declaration="#25=M:[OsosOracle.Business]OsosOracle.Business.Concrete.PRMTARIFESUManager::Validate(OsosOracle.Entities.Concrete.PRMTARIFESU)" Id="dc212996640a0010">
+    <Instance Declaration="#25=M:[OsosOracle.Business]OsosOracle.Business.Concrete.PRMTARIFESUManager::Validate(OsosOracle.Entities.Concrete.PRMTARIFESU)" Id="dc212996275e2e0e">
       <Target>
         <JoinPoint Advising="#1" Description="#3" Ordinal="29" />
       </Target>
     </Instance>
-    <Instance Declaration="#26=M:[OsosOracle.Business]OsosOracle.Business.Concrete.RPTDASHBOARDManager::Validate(OsosOracle.Entities.Concrete.RPTDASHBOARD)" Id="dc212996b2d1a604">
+    <Instance Declaration="#26=M:[OsosOracle.Business]OsosOracle.Business.Concrete.RPTDASHBOARDManager::Validate(OsosOracle.Entities.Concrete.RPTDASHBOARD)" Id="dc212996dc39f763">
       <Target>
         <JoinPoint Advising="#1" Description="#3" Ordinal="30" />
       </Target>
     </Instance>
-    <Instance Declaration="#27=M:[OsosOracle.Business]OsosOracle.Business.Concrete.SYSCSTOPERASYONManager::Validate(OsosOracle.Entities.Concrete.SYSCSTOPERASYON)" Id="dc212996362be9ab">
+    <Instance Declaration="#27=M:[OsosOracle.Business]OsosOracle.Business.Concrete.SYSCSTOPERASYONManager::Validate(OsosOracle.Entities.Concrete.SYSCSTOPERASYON)" Id="dc212996a5b88b70">
       <Target>
         <JoinPoint Advising="#1" Description="#3" Ordinal="31" />
       </Target>
     </Instance>
-    <Instance Declaration="#28=M:[OsosOracle.Business]OsosOracle.Business.Concrete.SYSGOREVManager::Validate(OsosOracle.Entities.Concrete.SYSGOREV)" Id="dc2129967a007b3e">
+    <Instance Declaration="#28=M:[OsosOracle.Business]OsosOracle.Business.Concrete.SYSGOREVManager::Validate(OsosOracle.Entities.Concrete.SYSGOREV)" Id="dc212996e1d4862a">
       <Target>
         <JoinPoint Advising="#1" Description="#3" Ordinal="32" />
       </Target>
     </Instance>
-    <Instance Declaration="#29=M:[OsosOracle.Business]OsosOracle.Business.Concrete.SYSGOREVROLManager::Validate(OsosOracle.Entities.Concrete.SYSGOREVROL)" Id="dc212996809a2f72">
+    <Instance Declaration="#29=M:[OsosOracle.Business]OsosOracle.Business.Concrete.SYSGOREVROLManager::Validate(OsosOracle.Entities.Concrete.SYSGOREVROL)" Id="dc212996e7fb38ac">
       <Target>
         <JoinPoint Advising="#1" Description="#3" Ordinal="34" />
       </Target>
     </Instance>
-    <Instance Declaration="#30=M:[OsosOracle.Business]OsosOracle.Business.Concrete.SYSKULLANICIManager::Validate(OsosOracle.Entities.Concrete.SYSKULLANICI)" Id="dc212996a13473db">
+    <Instance Declaration="#30=M:[OsosOracle.Business]OsosOracle.Business.Concrete.SYSKULLANICIManager::Validate(OsosOracle.Entities.Concrete.SYSKULLANICI)" Id="dc212996bd67799e">
       <Target>
         <JoinPoint Advising="#1" Description="#3" Ordinal="35" />
       </Target>
     </Instance>
-    <Instance Declaration="#31=M:[OsosOracle.Business]OsosOracle.Business.Concrete.SYSMENUManager::Validate(OsosOracle.Entities.Concrete.SYSMENU)" Id="dc21299602b5ac49">
+    <Instance Declaration="#31=M:[OsosOracle.Business]OsosOracle.Business.Concrete.SYSMENUManager::Validate(OsosOracle.Entities.Concrete.SYSMENU)" Id="dc2129967cf0aa7f">
       <Target>
         <JoinPoint Advising="#1" Description="#3" Ordinal="36" />
       </Target>
     </Instance>
-    <Instance Declaration="#32=M:[OsosOracle.Business]OsosOracle.Business.Concrete.SYSOPERASYONGOREVManager::Validate(OsosOracle.Entities.Concrete.SYSOPERASYONGOREV)" Id="dc21299641853bf4">
+    <Instance Declaration="#32=M:[OsosOracle.Business]OsosOracle.Business.Concrete.SYSOPERASYONGOREVManager::Validate(OsosOracle.Entities.Concrete.SYSOPERASYONGOREV)" Id="dc21299657a2ac7c">
       <Target>
         <JoinPoint Advising="#1" Description="#3" Ordinal="37" />
       </Target>
     </Instance>
-    <Instance Declaration="#33=M:[OsosOracle.Business]OsosOracle.Business.Concrete.SYSROLKULLANICIManager::Validate(OsosOracle.Entities.Concrete.SYSROLKULLANICI)" Id="dc212996440ed415">
+    <Instance Declaration="#33=M:[OsosOracle.Business]OsosOracle.Business.Concrete.SYSROLKULLANICIManager::Validate(OsosOracle.Entities.Concrete.SYSROLKULLANICI)" Id="dc2129961dbc910a">
       <Target>
         <JoinPoint Advising="#1" Description="#3" Ordinal="38" />
       </Target>
     </Instance>
-    <Instance Declaration="#34=M:[OsosOracle.Business]OsosOracle.Business.Concrete.SYSROLManager::Validate(OsosOracle.Entities.Concrete.SYSROL)" Id="dc212996988197d7">
+    <Instance Declaration="#34=M:[OsosOracle.Business]OsosOracle.Business.Concrete.SYSROLManager::Validate(OsosOracle.Entities.Concrete.SYSROL)" Id="dc212996abec0756">
       <Target>
         <JoinPoint Advising="#1" Description="#3" Ordinal="39" />
       </Target>
     </Instance>
   </Class>
   <Class Class="#35=T:[OsosOracle.Framework]OsosOracle.Framework.Aspects.TransactionAspects.TransactionScopeAspect">
-    <Instance Declaration="#36=M:[OsosOracle.Business]OsosOracle.Business.Concrete.ENTABONEManager::Sil(System.Collections.Generic.List{System.Int32})" Id="dc2129962ebf06fa">
+    <Instance Declaration="#36=M:[OsosOracle.Business]OsosOracle.Business.Concrete.ENTABONEManager::Sil(System.Collections.Generic.List{System.Int32})" Id="dc212996563df4bc">
       <Target>
         <JoinPoint Advising="#35" Description="#37=Wrapped by advice(s) OnEntry, OnSuccess, OnExit" Ordinal="6" />
       </Target>
     </Instance>
-    <Instance Declaration="#38=M:[OsosOracle.Business]OsosOracle.Business.Concrete.ENTABONEManager::AboneEkle(OsosOracle.Entities.ComplexType.ENTABONEComplexTypes.AboneIslemleri)" Id="dc2129961c9ddd1a">
+    <Instance Declaration="#38=M:[OsosOracle.Business]OsosOracle.Business.Concrete.ENTABONEManager::AboneEkle(OsosOracle.Entities.ComplexType.ENTABONEComplexTypes.AboneIslemleri)" Id="dc21299651828d22">
       <Target>
         <JoinPoint Advising="#35" Description="#37" Ordinal="7" />
       </Target>
     </Instance>
-    <Instance Declaration="#39=M:[OsosOracle.Business]OsosOracle.Business.Concrete.ENTABONEManager::YesilVadiAboneEkle(OsosOracle.Entities.ComplexType.ENTABONEComplexTypes.YesilVadiAboneIslemleri)" Id="dc2129967f03cca9">
+    <Instance Declaration="#39=M:[OsosOracle.Business]OsosOracle.Business.Concrete.ENTABONEManager::YesilVadiAboneEkle(OsosOracle.Entities.ComplexType.ENTABONEComplexTypes.YesilVadiAboneIslemleri)" Id="dc2129961ebb199c">
       <Target>
         <JoinPoint Advising="#35" Description="#37" Ordinal="8" />
       </Target>
     </Instance>
-    <Instance Declaration="#40=M:[OsosOracle.Business]OsosOracle.Business.Concrete.ENTABONEManager::AboneGuncelle(OsosOracle.Entities.ComplexType.ENTABONEComplexTypes.AboneIslemleri)" Id="dc212996d84997df">
+    <Instance Declaration="#40=M:[OsosOracle.Business]OsosOracle.Business.Concrete.ENTABONEManager::AboneGuncelle(OsosOracle.Entities.ComplexType.ENTABONEComplexTypes.AboneIslemleri)" Id="dc212996954b2579">
       <Target>
         <JoinPoint Advising="#35" Description="#37" Ordinal="9" />
       </Target>
     </Instance>
-    <Instance Declaration="#41=M:[OsosOracle.Business]OsosOracle.Business.Concrete.ENTABONEManager::AboneEkleAvm(OsosOracle.Entities.ComplexType.ENTABONEComplexTypes.AvmKaydetModel)" Id="dc212996f370736d">
+    <Instance Declaration="#41=M:[OsosOracle.Business]OsosOracle.Business.Concrete.ENTABONEManager::AboneEkleAvm(OsosOracle.Entities.ComplexType.ENTABONEComplexTypes.AvmKaydetModel)" Id="dc2129960509fe5c">
       <Target>
         <JoinPoint Advising="#35" Description="#37" Ordinal="10" />
       </Target>
     </Instance>
-    <Instance Declaration="#42=M:[OsosOracle.Business]OsosOracle.Business.Concrete.ENTSATISManager::Ekle(OsosOracle.Entities.Concrete.ENTSATIS)" Id="dc21299659e64194">
+    <Instance Declaration="#42=M:[OsosOracle.Business]OsosOracle.Business.Concrete.ENTSATISManager::Ekle(OsosOracle.Entities.Concrete.ENTSATIS)" Id="dc212996763bb123">
       <Target>
         <JoinPoint Advising="#35" Description="#37" Ordinal="18" />
       </Target>
     </Instance>
-    <Instance Declaration="#43=M:[OsosOracle.Business]OsosOracle.Business.Concrete.ENTSAYACManager::Sil(System.Collections.Generic.List{System.Int32})" Id="dc21299698373409">
+    <Instance Declaration="#43=M:[OsosOracle.Business]OsosOracle.Business.Concrete.ENTSAYACManager::Sil(System.Collections.Generic.List{System.Int32})" Id="dc2129967ee0b478">
       <Target>
         <JoinPoint Advising="#35" Description="#37" Ordinal="21" />
       </Target>
     </Instance>
-    <Instance Declaration="#44=M:[OsosOracle.Business]OsosOracle.Business.Concrete.SYSGOREVManager::GorevOperasyonEkle(OsosOracle.Entities.Concrete.SYSGOREV, System.Collections.Generic.List{System.Int32}, System.Int32)" Id="dc21299660d3ad79">
+    <Instance Declaration="#44=M:[OsosOracle.Business]OsosOracle.Business.Concrete.SYSGOREVManager::GorevOperasyonEkle(OsosOracle.Entities.Concrete.SYSGOREV, System.Collections.Generic.List{System.Int32}, System.Int32)" Id="dc212996b1d75907">
       <Target>
         <JoinPoint Advising="#35" Description="#37" Ordinal="33" />
       </Target>
     </Instance>
-    <Instance Declaration="#45=M:[OsosOracle.Business]OsosOracle.Business.Concrete.SYSROLManager::Sil(System.Collections.Generic.List{System.Int32})" Id="dc212996590de9ea">
+    <Instance Declaration="#45=M:[OsosOracle.Business]OsosOracle.Business.Concrete.SYSROLManager::Sil(System.Collections.Generic.List{System.Int32})" Id="dc2129962bd62edb">
       <Target>
         <JoinPoint Advising="#35" Description="#37" Ordinal="40" />
       </Target>

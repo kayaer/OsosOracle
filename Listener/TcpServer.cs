@@ -1,6 +1,7 @@
 ﻿using Listener.Entities;
 using Listener.Helpers;
 using log4net;
+using Newtonsoft.Json;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -232,7 +233,7 @@ namespace Listener
                 {
                     List<AmiCommand> srvList = new List<AmiCommand>();
 
-                    ByteToBit state = new ByteToBit(Convert.ToInt32(serverIslem.KonsantratorPaket.State));
+                    // ByteToBit state = new ByteToBit(Convert.ToInt32(serverIslem.KonsantratorPaket.State));
                     /*
                     if (state.Bit15 == 1) // ceza durumları kontrol ediliyor
                     {
@@ -507,6 +508,7 @@ namespace Listener
                     // AmrData.GetInstance().Kuyruk.Enqueue(rd);
                     //RabbitMq kuyruga atılıyor readout dataları
                     RabbitmqHelper.AddQueue(rd);
+                    _log.Info("READOUT DATA: " + JsonConvert.SerializeObject(rd));
                 }
                 catch (Exception ex)
                 {

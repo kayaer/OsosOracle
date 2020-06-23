@@ -30,7 +30,8 @@ namespace OsosOracle.DataLayer.Concrete.EntityFramework.Dal
                 SayacSeriNo = x.AboneSayacEfCollection.FirstOrDefault().EntSayacEf.SERINO,
                 KimlikNo=x.KimlikNo,
                 Daire=x.Daire,
-                Blok=x.Blok
+                Blok=x.Blok,
+                Adres=x.Adres
                
             });
         }

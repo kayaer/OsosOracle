@@ -51,15 +51,6 @@ namespace Listener
         }
         public void Start()
         {
-            EntHamData rd = new EntHamData();
-            rd.Data = Encoding.UTF8.GetBytes("test");
-            rd.KonsSeriNo = "123";
-            rd.Ip = "123";
-
-            // AmrData.GetInstance().Kuyruk.Enqueue(rd);
-            //RabbitMq kuyruga atılıyor readout dataları
-            RabbitmqHelper.AddQueue(rd);
-
             server.StartListen();
         }
         public void Stop()
