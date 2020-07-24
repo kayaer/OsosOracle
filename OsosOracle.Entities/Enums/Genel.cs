@@ -16,7 +16,8 @@ namespace OsosOracle.Entities.Enums
     {
         Elektromed=1,
         YesilVadi=2,
-        Mısır=3
+        Mısır=3,
+        Apex1=4
     }
 
     public enum enumSatisTipi
@@ -45,5 +46,23 @@ namespace OsosOracle.Entities.Enums
         Gaz = 5,
         MercanYd = 6,
         As25Yd = 7
+    }
+
+    public enum enumIsEmirleriDurum
+    {
+        Bekliyor = 12,
+        Cevaplandi = 13,
+        KomutGonderildi = 14
+    }
+    public enum enumIsEmirleri
+    {
+        VanaIslemi=15,//Veritabanı değerleri NEsneDeger tablosunda Deger kolonunda komut un protokol karşılığı var
+        Reset=16,
+        KrediYukle=17,
+        ZamanlanmisGorevEkleme=18,
+        ServerIpPortSet=19,
+        ApnSet=20,
+        YetkiAc=21
+        
     }
 }

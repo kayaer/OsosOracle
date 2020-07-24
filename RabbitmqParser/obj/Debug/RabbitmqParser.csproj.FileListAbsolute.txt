@@ -1,5 +1,3 @@
-C:\Projeler\Mısır\OsosOracle\RabbitmqParser\obj\Debug\RabbitmqParser.csproj.CoreCompileInputs.cache
-C:\Projeler\Mısır\OsosOracle\RabbitmqParser\obj\Debug\RabbitmqParser.csprojAssemblyReference.cache
 C:\Projeler\Mısır\OsosOracle\RabbitmqParser\bin\Debug\RabbitmqParser.exe.config
 C:\Projeler\Mısır\OsosOracle\RabbitmqParser\bin\Debug\RabbitmqParser.exe
 C:\Projeler\Mısır\OsosOracle\RabbitmqParser\bin\Debug\RabbitmqParser.pdb
@@ -67,6 +65,8 @@ C:\Projeler\Mısır\OsosOracle\RabbitmqParser\bin\Debug\System.Web.WebPages.Razo
 C:\Projeler\Mısır\OsosOracle\RabbitmqParser\bin\Debug\System.Web.Razor.xml
 C:\Projeler\Mısır\OsosOracle\RabbitmqParser\bin\Debug\System.ValueTuple.xml
 C:\Projeler\Mısır\OsosOracle\RabbitmqParser\bin\Debug\System.Web.WebPages.Deployment.xml
+C:\Projeler\Mısır\OsosOracle\RabbitmqParser\obj\Debug\RabbitmqParser.csprojAssemblyReference.cache
+C:\Projeler\Mısır\OsosOracle\RabbitmqParser\obj\Debug\RabbitmqParser.csproj.CoreCompileInputs.cache
 C:\Projeler\Mısır\OsosOracle\RabbitmqParser\obj\Debug\RabbitmqParser.csproj.CopyComplete
 C:\Projeler\Mısır\OsosOracle\RabbitmqParser\obj\Debug\RabbitmqParser.exe
 C:\Projeler\Mısır\OsosOracle\RabbitmqParser\obj\Debug\RabbitmqParser.pdb

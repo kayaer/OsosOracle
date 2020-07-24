@@ -11,7 +11,7 @@
     {
         <a href="@Model.ReturnUrl" class="btn btn-circle red-pink"><i class="fa fa-mail-reply"></i> @Dil.GeriDon</a>
     }
-    @if (Model.KurumKayitNo == enumKurum.Elektromed.GetHashCode() || Model.KurumKayitNo == enumKurum.Mısır.GetHashCode())
+    @if (Model.KurumKayitNo == enumKurum.Elektromed.GetHashCode() || Model.KurumKayitNo == enumKurum.Mısır.GetHashCode() || Model.KurumKayitNo==enumKurum.Apex1.GetHashCode())
     {
         <a id="btnKartBosaltKontaksiz" class="btn btn-xs btn-info"> <i class="fa fa-plus"></i>  @Dil.KartBosalt </a>
         <a id="btnKartTipiKontaksiz" class="btn btn-xs btn-warning"> <i class="fa fa-plus"></i>  @Dil.KartTipi </a>
@@ -279,7 +279,7 @@
             request.done(function (jqXHR) {
                 unblockUI();
 
-                if (jqXHR.KurumKayitNo == @enumKurum.Elektromed.GetHashCode() || jqXHR.KurumKayitNo == @enumKurum.Mısır.GetHashCode() ) {
+                if (jqXHR.KurumKayitNo == @enumKurum.Elektromed.GetHashCode() || jqXHR.KurumKayitNo == @enumKurum.Mısır.GetHashCode() || jqXHR.KurumKayitNo==@enumKurum.Apex1.GetHashCode()) {
 
                     if (jqXHR.EntSayacDetay.SayacModelKayitNo ==@enumSayacModeli.MercanYd.GetHashCode() || jqXHR.EntSayacDetay.SayacModelKayitNo==@enumSayacModeli.As25Yd.GetHashCode())
                     {

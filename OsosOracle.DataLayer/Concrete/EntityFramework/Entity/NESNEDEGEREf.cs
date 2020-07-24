@@ -10,12 +10,18 @@ namespace OsosOracle.DataLayer.Concrete.EntityFramework.Entity
             CstSayacModelEfCollection = new List<CSTSAYACMODELEf>();
             EntSatisTipiEfCollection = new List<ENTSATISEf>();
             EntOdemeTipiEfCollection = new List<ENTSATISEf>();
+            EntIsEmriEfCollection = new List<EntIsEmriEf>();
+            EntIsEmriDurumEfCollection = new List<EntIsEmriEf>();
         }
 
         public ICollection<CSTSAYACMODELEf> CstSayacModelEfCollection { get; set; }
 
         public ICollection<ENTSATISEf> EntSatisTipiEfCollection { get; set; }
         public ICollection<ENTSATISEf> EntOdemeTipiEfCollection { get; set; }
+
+        public ICollection<EntIsEmriEf> EntIsEmriEfCollection { get; set; }
+
+        public ICollection<EntIsEmriEf> EntIsEmriDurumEfCollection { get; set; }
         public NESNETIPEf NESNETIPNESNETIPKAYITNOEf { get; set; }
     }
 }

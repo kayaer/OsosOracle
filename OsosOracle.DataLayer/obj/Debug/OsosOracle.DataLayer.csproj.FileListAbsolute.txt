@@ -488,8 +488,6 @@ C:\Projeler\OsosOracle\OsosOracle.DataLayer\obj\Debug\OsosOracle.DataLayer.cspro
 C:\Projeler\OsosOracle\OsosOracle.DataLayer\obj\Debug\OsosOracle.DataLayer.dll
 C:\Projeler\OsosOracle\OsosOracle.DataLayer\obj\Debug\OsosOracle.DataLayer.pdb
 C:\Projeler\OsosOracle\OsosOracle.DataLayer\obj\Debug\OsosOracle.DataLayer.csproj.CoreCompileInputs.cache
-C:\Projeler\Mısır\OsosOracle\OsosOracle.DataLayer\obj\Debug\OsosOracle.DataLayer.csprojAssemblyReference.cache
-C:\Projeler\Mısır\OsosOracle\OsosOracle.DataLayer\obj\Debug\OsosOracle.DataLayer.csproj.CoreCompileInputs.cache
 C:\Projeler\Mısır\OsosOracle\OsosOracle.DataLayer\bin\Debug\OsosOracle.DataLayer.dll.config
 C:\Projeler\Mısır\OsosOracle\OsosOracle.DataLayer\bin\Debug\OsosOracle.DataLayer.dll
 C:\Projeler\Mısır\OsosOracle\OsosOracle.DataLayer\bin\Debug\OsosOracle.DataLayer.pdb
@@ -530,6 +528,8 @@ C:\Projeler\Mısır\OsosOracle\OsosOracle.DataLayer\bin\Debug\System.Web.WebPage
 C:\Projeler\Mısır\OsosOracle\OsosOracle.DataLayer\bin\Debug\System.Web.Razor.xml
 C:\Projeler\Mısır\OsosOracle\OsosOracle.DataLayer\bin\Debug\System.ValueTuple.xml
 C:\Projeler\Mısır\OsosOracle\OsosOracle.DataLayer\bin\Debug\System.Web.WebPages.Deployment.xml
+C:\Projeler\Mısır\OsosOracle\OsosOracle.DataLayer\obj\Debug\OsosOracle.DataLayer.csprojAssemblyReference.cache
+C:\Projeler\Mısır\OsosOracle\OsosOracle.DataLayer\obj\Debug\OsosOracle.DataLayer.csproj.CoreCompileInputs.cache
 C:\Projeler\Mısır\OsosOracle\OsosOracle.DataLayer\obj\Debug\OsosOracle.DataLayer.csproj.CopyComplete
 C:\Projeler\Mısır\OsosOracle\OsosOracle.DataLayer\obj\Debug\OsosOracle.DataLayer.dll
 C:\Projeler\Mısır\OsosOracle\OsosOracle.DataLayer\obj\Debug\OsosOracle.DataLayer.pdb

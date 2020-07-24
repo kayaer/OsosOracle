@@ -64,7 +64,7 @@
     <Compile Include="Abstract\IENTABONESAYACDal.cs" />
     <Compile Include="Abstract\IENTHABERLESMEUNITESIDal.cs" />
     <Compile Include="Abstract\IENTHUSAYACDal.cs" />
-    <Compile Include="Abstract\IENTKOMUTLARBEKLEYENDal.cs" />
+    <Compile Include="Abstract\IEntIsEmriDal.cs" />
     <Compile Include="Abstract\IENTKOMUTLARSONUCLANANDal.cs" />
     <Compile Include="Abstract\IENTKREDIKOMUTTAKIPDal.cs" />
     <Compile Include="Abstract\IENTSATISDal.cs" />
@@ -97,7 +97,7 @@
     <Compile Include="Concrete\EntityFramework\Dal\EfENTABONESAYACDal.cs" />
     <Compile Include="Concrete\EntityFramework\Dal\EfENTHABERLESMEUNITESIDal.cs" />
     <Compile Include="Concrete\EntityFramework\Dal\EfENTHUSAYACDal.cs" />
-    <Compile Include="Concrete\EntityFramework\Dal\EfENTKOMUTLARBEKLEYENDal.cs" />
+    <Compile Include="Concrete\EntityFramework\Dal\EfEntIsEmriDal.cs" />
     <Compile Include="Concrete\EntityFramework\Dal\EfENTKOMUTLARSONUCLANANDal.cs" />
     <Compile Include="Concrete\EntityFramework\Dal\EfENTKREDIKOMUTTAKIPDal.cs" />
     <Compile Include="Concrete\EntityFramework\Dal\EfENTSATISDal.cs" />
@@ -129,7 +129,7 @@
     <Compile Include="Concrete\EntityFramework\Entity\ENTABONESAYACEf.cs" />
     <Compile Include="Concrete\EntityFramework\Entity\ENTHABERLESMEUNITESIEf.cs" />
     <Compile Include="Concrete\EntityFramework\Entity\ENTHUSAYACEf.cs" />
-    <Compile Include="Concrete\EntityFramework\Entity\ENTKOMUTLARBEKLEYENEf.cs" />
+    <Compile Include="Concrete\EntityFramework\Entity\EntIsEmriEf.cs" />
     <Compile Include="Concrete\EntityFramework\Entity\ENTKOMUTLARSONUCLANANEf.cs" />
     <Compile Include="Concrete\EntityFramework\Entity\ENTKREDIKOMUTTAKIPEf.cs" />
     <Compile Include="Concrete\EntityFramework\Entity\ENTSATISEf.cs" />
@@ -161,7 +161,7 @@
     <Compile Include="Concrete\EntityFramework\Mappings\ENTABONESAYACMap.cs" />
     <Compile Include="Concrete\EntityFramework\Mappings\ENTHABERLESMEUNITESIMap.cs" />
     <Compile Include="Concrete\EntityFramework\Mappings\ENTHUSAYACMap.cs" />
-    <Compile Include="Concrete\EntityFramework\Mappings\ENTKOMUTLARBEKLEYENMap.cs" />
+    <Compile Include="Concrete\EntityFramework\Mappings\EntIsEmriMap.cs" />
     <Compile Include="Concrete\EntityFramework\Mappings\ENTKOMUTLARSONUCLANANMap.cs" />
     <Compile Include="Concrete\EntityFramework\Mappings\ENTKREDIKOMUTTAKIPMap.cs" />
     <Compile Include="Concrete\EntityFramework\Mappings\ENTSATISMap.cs" />

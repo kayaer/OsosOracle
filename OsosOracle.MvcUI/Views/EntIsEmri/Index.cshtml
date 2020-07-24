@@ -1,0 +1,98 @@
+@using OsosOracle.MvcUI.Infrastructure
+@using OsosOracle.Framework.HtmlHelpers
+@using OsosOracle.MvcUI.Resources
+@model  OsosOracle.MvcUI.Models.EntIsEmriModels.EntIsEmriIndexModel
+
+    @{
+        ViewBag.Title = "İş Emri İşlemleri";
+    }
+
+    @section panelHeading{
+        @Html.ButtonLink("Yeni İş Emri Ekle", "Ekle", "btn btn-xs btn-success modalizer", "fa-plus", htmlAttributes: new { Id = "btnYeniIsEmriKayit" })
+    }
+
+
+
+
+    @using (Html.BeginPortlet("İş Emri Arama", "Detaylı Arama", "fa fa-search"))
+    {
+        <form id="frmAra" class="form-bordered">
+            <div class="form-group row">
+                <div class="col-md-4">
+                    @Html.AutoComplete(t => t.EntIsEmriAra.SayacKayitNo, Enums.AutocompleteFuction.SayacGetir, Enums.AutoCompleteType.List, Dil.Sayac)
+                </div>
+               
+            </div>
+            <div class="form-actions">
+                <button type="button" class="btn btn-primary btn-sm" id="btnAra"><i class="fa fa-search"></i> Bul</button>
+            </div>
+        </form>
+
+    }
+
+
+
+    <div class="panel panel-default">
+        <div class="panel-heading">İş Emri Listesi</div>
+        <div class="panel-body">
+            <table id="tblIsEmrilistesi" class="table table-striped table-bordered table-hover table-responsive">
+                <thead>
+                    <tr>
+                        <th>İşlem Tarihi</th>
+                        <th>Sayaç Seri No </th>
+                        <th>İş Emri </th>
+                        <th>Durum </th>
+                        <th>Cevap</th>
+                        <th>İşlem Tarihi</th>
+                        <th style="width: 100px">İşlemler</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+    </div>
+
+
+
+
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            AraFiltered();
+
+            $("#btnAra").click(function (e) {
+                AraFiltered();
+            });
+
+            function AraFiltered() {
+
+
+                $('#tblIsEmrilistesi').dataTable({
+                    'language': dataTableLanguage,
+                    'processing': true,
+                    'serverSide': true,
+                    'destroy': true,
+                    'columns': [
+                        { 'data': "OlusturmaTarih" },
+                        { 'data': "SayacSeriNo" },
+                        { 'data': "IsEmriAdi" },
+                        { 'data': "IsEmriDurum" },
+                        { 'data': "Cevap" },
+                        { 'data': "GuncellemeTarih" },
+                        { 'data': "Islemler", sortable: false }
+                    ],
+                    'ajax': {
+                        'type': 'POST',
+                        'data': $("#frmAra").serializeObject(),
+                        'url': "@Url.Action("DataTablesList", "EntIsEmri")",
+                        'error': function (xhr, ajaxOptions, errorThrown) { ajaxMesajGoster(xhr.responseJSON.Mesaj); },
+                        'complete': function () { }
+                    }
+
+                });
+
+            }
+
+        });
+
+
+    </script>

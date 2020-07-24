@@ -11,6 +11,7 @@ namespace OsosOracle.DataLayer.Concrete.EntityFramework.Entity
             EntHuSayacEfCollection = new List<ENTHUSAYACEf>();
             EntSatisEfCollection = new List<ENTSATISEf>();
             EntAboneSayacEfCollection = new List<ENTABONESAYACEf>();
+            EntIsEmriEfCollection = new List<EntIsEmriEf>();
             //EntSayacSonDurumSuEfCollection = new List<ENTSAYACSONDURUMSUEf>();
         }
 
@@ -20,6 +21,7 @@ namespace OsosOracle.DataLayer.Concrete.EntityFramework.Entity
         public ICollection<ENTSATISEf> EntSatisEfCollection { get; set; }
 
         public ICollection<ENTABONESAYACEf> EntAboneSayacEfCollection { get; set; }
+        public ICollection<EntIsEmriEf> EntIsEmriEfCollection { get; set; }
 
         //public ICollection<ENTSAYACSONDURUMSUEf> EntSayacSonDurumSuEfCollection { get; set; }
         public CSTSAYACMODELEf CstSayacModelEf { get; set; }

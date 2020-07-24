@@ -132,6 +132,7 @@ namespace Listener.Helpers
                             Console.WriteLine(dongu.ToString() + "/" + Servisler.Count() + " Servis Modeme Yollandi...");
                             Console.WriteLine("Servis Id: " + servis.Id);
                             Console.WriteLine("Servis Kod: " + servis.Kod);
+                            Console.WriteLine("Servis Parametre: " + servis.Params);
                             Console.WriteLine("Servis Cevabı: " + ASCIIEncoding.ASCII.GetString(message));
 
                             if (message == null)

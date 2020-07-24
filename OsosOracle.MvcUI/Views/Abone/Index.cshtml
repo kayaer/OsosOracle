@@ -10,7 +10,7 @@
 @section panelHeading{
     @Html.ButtonLink(Dil.YeniAboneEkle, "Ekle", "btn btn-xs btn-success modalizer", "fa-plus", htmlAttributes: new { Id = "btnYeniAboneKayit" })
 
-    @if (Model.KurumKayitNo == enumKurum.Elektromed.GetHashCode() ||  Model.KurumKayitNo == enumKurum.Mısır.GetHashCode() )
+    @if (Model.KurumKayitNo == enumKurum.Elektromed.GetHashCode() ||  Model.KurumKayitNo == enumKurum.Mısır.GetHashCode() ||Model.KurumKayitNo==enumKurum.Apex1.GetHashCode() )
     {
         <a id="btnKartBosaltKontaksiz" class="btn btn-xs btn-info"> <i class="fa fa-plus"></i>  @Dil.KartBosalt </a>
         <a id="btnKartTipiKontaksiz" class="btn btn-xs btn-warning"> <i class="fa fa-plus"></i>  @Dil.KartTipi </a>

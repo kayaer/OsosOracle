@@ -18,5 +18,6 @@ namespace OsosOracle.Entities.Concrete
         public DateTime OLUSTURMATARIH { get; set; }
         public int? GUNCELLEYEN { get; set; }
         public DateTime? GUNCELLEMETARIH { get; set; }
+        public string KonsSeriNo { get; set; }
     }
 }

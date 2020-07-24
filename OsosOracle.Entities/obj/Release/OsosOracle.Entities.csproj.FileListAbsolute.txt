@@ -413,7 +413,6 @@ C:\Projeler\OsosOracle\OsosOracle.Entities\obj\Release\OsosOracle.Entities.pdb
 C:\Projeler\OsosOracle\OsosOracle.Entities\obj\Release\OsosOracle.Entities.csproj.CoreCompileInputs.cache
 C:\Projeler\Mısır\OsosOracle\OsosOracle.Entities\bin\Release\OsosOracle.Entities.dll
 C:\Projeler\Mısır\OsosOracle\OsosOracle.Entities\bin\Release\OsosOracle.Entities.pdb
-C:\Projeler\Mısır\OsosOracle\OsosOracle.Entities\bin\Release\OsosOracle.DataLayer.dll
 C:\Projeler\Mısır\OsosOracle\OsosOracle.Entities\bin\Release\OsosOracle.Framework.dll
 C:\Projeler\Mısır\OsosOracle\OsosOracle.Entities\bin\Release\System.Web.Mvc.dll
 C:\Projeler\Mısır\OsosOracle\OsosOracle.Entities\bin\Release\AutoMapper.dll
@@ -431,8 +430,6 @@ C:\Projeler\Mısır\OsosOracle\OsosOracle.Entities\bin\Release\System.ValueTuple
 C:\Projeler\Mısır\OsosOracle\OsosOracle.Entities\bin\Release\System.Web.WebPages.Deployment.dll
 C:\Projeler\Mısır\OsosOracle\OsosOracle.Entities\bin\Release\OsosOracle.Framework.pdb
 C:\Projeler\Mısır\OsosOracle\OsosOracle.Entities\bin\Release\OsosOracle.Framework.dll.config
-C:\Projeler\Mısır\OsosOracle\OsosOracle.Entities\bin\Release\OsosOracle.DataLayer.pdb
-C:\Projeler\Mısır\OsosOracle\OsosOracle.Entities\bin\Release\OsosOracle.DataLayer.dll.config
 C:\Projeler\Mısır\OsosOracle\OsosOracle.Entities\bin\Release\System.Web.Mvc.xml
 C:\Projeler\Mısır\OsosOracle\OsosOracle.Entities\bin\Release\AutoMapper.pdb
 C:\Projeler\Mısır\OsosOracle\OsosOracle.Entities\bin\Release\AutoMapper.xml
@@ -453,3 +450,6 @@ C:\Projeler\Mısır\OsosOracle\OsosOracle.Entities\obj\Release\OsosOracle.Entiti
 C:\Projeler\Mısır\OsosOracle\OsosOracle.Entities\obj\Release\OsosOracle.Entities.csproj.CopyComplete
 C:\Projeler\Mısır\OsosOracle\OsosOracle.Entities\obj\Release\OsosOracle.Entities.dll
 C:\Projeler\Mısır\OsosOracle\OsosOracle.Entities\obj\Release\OsosOracle.Entities.pdb
+C:\Projeler\Mısır\OsosOracle\OsosOracle.Entities\bin\Release\OsosOracle.DataLayer.dll
+C:\Projeler\Mısır\OsosOracle\OsosOracle.Entities\bin\Release\OsosOracle.DataLayer.pdb
+C:\Projeler\Mısır\OsosOracle\OsosOracle.Entities\bin\Release\OsosOracle.DataLayer.dll.config

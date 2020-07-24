@@ -56,8 +56,9 @@ namespace OsosOracle.Business.Concrete
         [FluentValidationAspect(typeof(ENTSAYACValidator))]
         private void Validate(ENTSAYAC entity)
         {
-            var sayac = _eNTSAYACDal.Getir(new ENTSAYACAra { SayacModelKayitNo = entity.SayacModelKayitNo, SERINO = entity.SERINO, KURUMKAYITNO = entity.KURUMKAYITNO,DURUM=1,KapakSeriNo=entity.KapakSeriNo }).FirstOrDefault();
-            if (sayac != null)
+            var kayitliSayacListesi = _eNTSAYACDal.Getir(new ENTSAYACAra { SayacModelKayitNo = entity.SayacModelKayitNo, SERINO = entity.SERINO, KURUMKAYITNO = entity.KURUMKAYITNO, DURUM = 1, KapakSeriNo = entity.KapakSeriNo });
+
+            if (kayitliSayacListesi.Count(x => x.KAYITNO != entity.KAYITNO) > 0)
             {
                 throw new NotificationException("Sayaç modeli ve seri nosu aynı olan başka bir sayaç kayıtlıdır");
             }

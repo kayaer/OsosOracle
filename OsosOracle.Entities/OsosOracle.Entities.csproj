@@ -78,9 +78,9 @@
     <Compile Include="ComplexType\ENTHUSAYACComplexTypes\ENTHUSAYACAra.cs" />
     <Compile Include="ComplexType\ENTHUSAYACComplexTypes\ENTHUSAYACDataTable.cs" />
     <Compile Include="ComplexType\ENTHUSAYACComplexTypes\ENTHUSAYACDetay.cs" />
-    <Compile Include="ComplexType\ENTKOMUTLARBEKLEYENComplexTypes\ENTKOMUTLARBEKLEYENAra.cs" />
-    <Compile Include="ComplexType\ENTKOMUTLARBEKLEYENComplexTypes\ENTKOMUTLARBEKLEYENDataTable.cs" />
-    <Compile Include="ComplexType\ENTKOMUTLARBEKLEYENComplexTypes\ENTKOMUTLARBEKLEYENDetay.cs" />
+    <Compile Include="ComplexType\EntIsEmriComplexTypes\EntIsEmriAra.cs" />
+    <Compile Include="ComplexType\EntIsEmriComplexTypes\EntIsEmriDataTable.cs" />
+    <Compile Include="ComplexType\EntIsEmriComplexTypes\EntIsEmriDetay.cs" />
     <Compile Include="ComplexType\ENTKOMUTLARSONUCLANANComplexTypes\ENTKOMUTLARSONUCLANANAra.cs" />
     <Compile Include="ComplexType\ENTKOMUTLARSONUCLANANComplexTypes\ENTKOMUTLARSONUCLANANDataTable.cs" />
     <Compile Include="ComplexType\ENTKOMUTLARSONUCLANANComplexTypes\ENTKOMUTLARSONUCLANANDetay.cs" />
@@ -159,7 +159,7 @@
     <Compile Include="Concrete\ENTABONESAYAC.cs" />
     <Compile Include="Concrete\ENTHABERLESMEUNITESI.cs" />
     <Compile Include="Concrete\ENTHUSAYAC.cs" />
-    <Compile Include="Concrete\ENTKOMUTLARBEKLEYEN.cs" />
+    <Compile Include="Concrete\EntIsEmri.cs" />
     <Compile Include="Concrete\ENTKOMUTLARSONUCLANAN.cs" />
     <Compile Include="Concrete\ENTKREDIKOMUTTAKIP.cs" />
     <Compile Include="Concrete\ENTSATIS.cs" />

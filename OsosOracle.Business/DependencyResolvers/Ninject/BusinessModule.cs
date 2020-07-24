@@ -25,7 +25,7 @@ namespace OsosOracle.Business.DependencyResolvers.Ninject
             Bind<IENTSATISService>().To<ENTSATISManager>().InSingletonScope();
             Bind<IENTHABERLESMEUNITESIService>().To<ENTHABERLESMEUNITESIManager>().InSingletonScope();
             Bind<IENTHUSAYACService>().To<ENTHUSAYACManager>().InSingletonScope();
-            Bind<IENTKOMUTLARBEKLEYENService>().To<ENTKOMUTLARBEKLEYENManager>().InSingletonScope();
+            Bind<IEntIsEmriService>().To<EntIsEmriManager>().InSingletonScope();
             Bind<IENTKOMUTLARSONUCLANANService>().To<ENTKOMUTLARSONUCLANANManager>().InSingletonScope();
             Bind<IENTKREDIKOMUTTAKIPService>().To<ENTKREDIKOMUTTAKIPManager>().InSingletonScope();
             Bind<IENTSAYACSONDURUMSUService>().To<ENTSAYACSONDURUMSUManager>().InSingletonScope();
@@ -61,7 +61,7 @@ namespace OsosOracle.Business.DependencyResolvers.Ninject
             Bind<IENTSATISDal>().To<EfENTSATISDal>().InSingletonScope();
             Bind<IENTHABERLESMEUNITESIDal>().To<EfENTHABERLESMEUNITESIDal>().InSingletonScope();
             Bind<IENTHUSAYACDal>().To<EfENTHUSAYACDal>().InSingletonScope();
-            Bind<IENTKOMUTLARBEKLEYENDal>().To<EfENTKOMUTLARBEKLEYENDal>().InSingletonScope();
+            Bind<IEntIsEmriDal>().To<EfEntIsEmriDal>().InSingletonScope();
             Bind<IENTKOMUTLARSONUCLANANDal>().To<EfENTKOMUTLARSONUCLANANDal>().InSingletonScope();
             Bind<IENTKREDIKOMUTTAKIPDal>().To<EfENTKREDIKOMUTTAKIPDal>().InSingletonScope();
             Bind<IENTSAYACSONDURUMSUDal>().To<EfENTSAYACSONDURUMSUDal>().InSingletonScope();

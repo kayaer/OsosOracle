@@ -75,7 +75,7 @@
     <Compile Include="Abstract\IENTABONEService.cs" />
     <Compile Include="Abstract\IENTHABERLESMEUNITESIService.cs" />
     <Compile Include="Abstract\IENTHUSAYACService.cs" />
-    <Compile Include="Abstract\IENTKOMUTLARBEKLEYENService.cs" />
+    <Compile Include="Abstract\IEntIsEmriService.cs" />
     <Compile Include="Abstract\IENTKOMUTLARSONUCLANANService.cs" />
     <Compile Include="Abstract\IENTKREDIKOMUTTAKIPService.cs" />
     <Compile Include="Abstract\IENTSATISService.cs" />
@@ -107,7 +107,7 @@
     <Compile Include="Concrete\ENTABONESAYACManager.cs" />
     <Compile Include="Concrete\ENTHABERLESMEUNITESIManager.cs" />
     <Compile Include="Concrete\ENTHUSAYACManager.cs" />
-    <Compile Include="Concrete\ENTKOMUTLARBEKLEYENManager.cs" />
+    <Compile Include="Concrete\EntIsEmriManager.cs" />
     <Compile Include="Concrete\ENTKOMUTLARSONUCLANANManager.cs" />
     <Compile Include="Concrete\ENTKREDIKOMUTTAKIPManager.cs" />
     <Compile Include="Concrete\ENTSATISManager.cs" />
@@ -147,7 +147,7 @@
     <Compile Include="ValidationRules\FluentValidation\ENTABONEValidator.cs" />
     <Compile Include="ValidationRules\FluentValidation\ENTHABERLESMEUNITESIValidator.cs" />
     <Compile Include="ValidationRules\FluentValidation\ENTHUSAYACValidator.cs" />
-    <Compile Include="ValidationRules\FluentValidation\ENTKOMUTLARBEKLEYENValidator.cs" />
+    <Compile Include="ValidationRules\FluentValidation\EntIsEmriValidator.cs" />
     <Compile Include="ValidationRules\FluentValidation\ENTKOMUTLARSONUCLANANValidator.cs" />
     <Compile Include="ValidationRules\FluentValidation\ENTKREDIKOMUTTAKIPValidator.cs" />
     <Compile Include="ValidationRules\FluentValidation\ENTSATISValidator.cs" />

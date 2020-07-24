@@ -491,6 +491,6 @@ C:\Projeler\Mısır\OsosOracle\OsosOracle.Entities\obj\Debug\OsosOracle.Entities
 C:\Projeler\Mısır\OsosOracle\OsosOracle.Entities\obj\Debug\OsosOracle.Entities.csproj.CopyComplete
 C:\Projeler\Mısır\OsosOracle\OsosOracle.Entities\obj\Debug\OsosOracle.Entities.dll
 C:\Projeler\Mısır\OsosOracle\OsosOracle.Entities\obj\Debug\OsosOracle.Entities.pdb
+C:\Projeler\Mısır\OsosOracle\OsosOracle.Entities\bin\Debug\OsosOracle.DataLayer.dll
 C:\Projeler\Mısır\OsosOracle\OsosOracle.Entities\bin\Debug\OsosOracle.DataLayer.pdb
 C:\Projeler\Mısır\OsosOracle\OsosOracle.Entities\bin\Debug\OsosOracle.DataLayer.dll.config
-C:\Projeler\Mısır\OsosOracle\OsosOracle.Entities\bin\Debug\OsosOracle.DataLayer.dll

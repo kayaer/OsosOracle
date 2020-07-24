@@ -497,10 +497,10 @@ C:\Projeler\Mısır\OsosOracle\OsosOracle.Framework\bin\Release\System.Web.WebPa
 C:\Projeler\Mısır\OsosOracle\OsosOracle.Framework\bin\Release\System.Web.WebPages.Deployment.xml
 C:\Projeler\Mısır\OsosOracle\OsosOracle.Framework\bin\Release\System.Web.WebPages.Razor.xml
 C:\Projeler\Mısır\OsosOracle\OsosOracle.Framework\bin\Release\OsosOracle.Framework.pssym
-C:\Projeler\Mısır\OsosOracle\OsosOracle.Framework\obj\Release\OsosOracle.Framework.csprojAssemblyReference.cache
 C:\Projeler\Mısır\OsosOracle\OsosOracle.Framework\obj\Release\OsosOracle.Framework.csproj.CoreCompileInputs.cache
 C:\Projeler\Mısır\OsosOracle\OsosOracle.Framework\obj\Release\OsosOracle.Framework.csproj.CopyComplete
 C:\Projeler\Mısır\OsosOracle\OsosOracle.Framework\obj\Release\OsosOracle.Framework.dll.postsharp
 C:\Projeler\Mısır\OsosOracle\OsosOracle.Framework\obj\Release\OsosOracle.Framework.dll
 C:\Projeler\Mısır\OsosOracle\OsosOracle.Framework\obj\Release\OsosOracle.Framework.pdb
 C:\Projeler\Mısır\OsosOracle\OsosOracle.Framework\obj\Release\PostSharpHost.config
+C:\Projeler\Mısır\OsosOracle\OsosOracle.Framework\obj\Release\OsosOracle.Framework.csprojAssemblyReference.cache

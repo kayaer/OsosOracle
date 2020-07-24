@@ -29,6 +29,7 @@ namespace OsosOracle.Entities.ComplexType.ENTSAYACComplexTypes
         public DateTime? SonSatisTarih { get; set; }
         public string KapakSeriNo { get; set; }
         public int Cap { get; set; }
+        public string KonsSeriNo { get; set; }
     }
 
 }

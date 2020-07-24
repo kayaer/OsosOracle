@@ -2,6 +2,12 @@
 using Listener.Helpers;
 using log4net;
 using Newtonsoft.Json;
+using OsosOracle.DataLayer.Concrete.EntityFramework.Dal;
+using OsosOracle.DataLayer.Concrete.EntityFramework.Entity;
+using OsosOracle.Entities.ComplexType.EntIsEmriComplexTypes;
+using OsosOracle.Entities.Concrete;
+using OsosOracle.Entities.Enums;
+using OsosOracle.Framework.Utilities.ExtensionMethods;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -37,6 +43,7 @@ namespace Listener
         {
             try
             {
+              
                 tcpListener = new TcpListener(IPAddress.Any, _port);
                 listenThread = new Thread(new ThreadStart(ListenForClients));
                 listenThread.Start();
@@ -183,11 +190,14 @@ namespace Listener
             }
 
             string headerPaket = hexCon.BytesTostr(buffer, bytesRead); // veri byte olarak geliyor. burada string e çevriliyor. bağlanır bağlanmaz headerpaket geliyor.
-
+            ElmServerIslem serverIslem = new ElmServerIslem(tcpClient);
+            CevapYaz(headerPaket);
+            _log.Info(headerPaket);
             try
             {
                 Header hd = new Header(header); // header ın parse işlemi burada oluyor.
 
+                serverIslem.KonsantratorPaket = hd;
                 if (!HeaderCheck(hd.StrPaket))
                 {
                     CevapYaz("BOZUK HEADER\r\n" + headerPaket + "\r\nKonsIp : " + KonsIp, ConsoleColor.Red);
@@ -209,7 +219,7 @@ namespace Listener
             }
 
 
-            ElmServerIslem serverIslem = new ElmServerIslem(tcpClient);
+
 
             #endregion
 
@@ -307,44 +317,37 @@ namespace Listener
 
                     #region Db Servis Kontrol // db de bekleyen bir komut varsa onu kontrol ediyoruz.
 
-                    //try
-                    //{
-                    //    EntKrediKomutTakipDataAccess dataAccessForKrediSatis = new EntKrediKomutTakipDataAccess();
-                    //    KrediKomutTakipAraQuery queryKrediSatis = new KrediKomutTakipAraQuery();
-                    //    queryKrediSatis.KonsSeriNo = serverIslem.KonsantratorPaket.KonsSeriNo;
+                    try
+                    {
+                        CevapYaz("Db komut kontrol ediliyor: " + serverIslem.KonsantratorPaket.KonsSeriNo);
+                        EfEntIsEmriDal entIsEmriDal = new EfEntIsEmriDal();
+                        var list = entIsEmriDal.DetayGetir(new EntIsEmriAra { KonsSeriNo = serverIslem.KonsantratorPaket.KonsSeriNo, IsEmriDurumKayitNo = enumIsEmirleriDurum.Bekliyor.GetHashCode() });
+                        if (list.Count > 0)
+                        {
+                            foreach (var item in list)
+                            {
+                                CevapYaz("Bulunan komut:" + item.SayacKayitNo + ": " + item.Parametre);
+                                AmiCommand komut = new AmiCommand();
+                                komut.Id = item.KayitNo.ToString();  // ServisIdUret().ToString();
+                                                                     //komut.Kod = item.IsEmriKayitNo;
+                                komut.Kod = Convert.ToInt32(item.IsEmriKod);
+                                komut.Params = item.Parametre;
+                                srvList.Add(komut);
 
-                    //    queryKrediSatis.Durum = "O";
-                    //    IEnumerable<EntKrediKomutTakip> komutforKredi = dataAccessForKrediSatis.Ara(queryKrediSatis);
+                            }
+                        }
+                        else
+                        {
+                            CevapYaz("Komut Bulunamadı :" + serverIslem.KonsantratorPaket.KonsSeriNo);
+                        }
 
 
-                    //    foreach (var item in komutforKredi)
-                    //    {
-                    //        AmiCommand komut = new AmiCommand();
-                    //        komut.Id = item.KomutId.ToString();
-                    //        komut.Kod = item.KomutKodu;
-                    //        komut.Params = item.Komut;
-                    //        srvList.Add(komut);
-                    //    }
 
-                    //    EntKomutlarBekleyenDataAccess dataAccess = new EntKomutlarBekleyenDataAccess();
-                    //    KomutlarBekleyenAraQuery query = new KomutlarBekleyenAraQuery();
-                    //    query.KonsSeriNo = serverIslem.KonsantratorPaket.KonsSeriNo;
-                    //    IEnumerable<EntKomutlarBekleyen> list = dataAccess.Ara(query);
-
-                    //    foreach (var item in list)
-                    //    {
-                    //        AmiCommand komut = new AmiCommand();
-                    //        komut.Id = item.KomutId.ToString();
-                    //        komut.Kod = item.KomutKodu;
-                    //        komut.Params = item.Komut;
-                    //        srvList.Add(komut);
-
-                    //    }
-                    //}
-                    //catch (Exception ex)
-                    //{
-                    //    CevapYaz(ex.Message);
-                    //}
+                    }
+                    catch (Exception ex)
+                    {
+                        CevapYaz(ex.Message);
+                    }
 
 
                     #endregion
@@ -487,12 +490,20 @@ namespace Listener
                             try
                             {
                                 //Sonuçlanan Komutlar Burada kayıt edilecek
-
+                                CevapYaz("Response Id:" + res.Id + "- Response KodTanim: " + res.KodTanim + " - Cevap:" + res.Cevap+"  -Sonuç :"+res.Sonuc);
+                                EfEntIsEmriDal entIsEmriDal = new EfEntIsEmriDal();
+                                var isemri = entIsEmriDal.Getir(new EntIsEmriAra { KayitNo = Convert.ToInt32(res.Id) }).FirstOrDefault();
+                                isemri.Cevap = res.Cevap;
+                                isemri.IsEmriCevap = res.Sonuc;
+                                isemri.GuncellemeTarih = DateTime.Now;
+                                isemri.IsEmriDurumKayitNo = enumIsEmirleriDurum.Cevaplandi.GetHashCode();
+                               
+                                entIsEmriDal.Guncelle(isemri.ConvertEfList<EntIsEmri, EntIsEmriEf>());
                             }
                             catch (Exception ex)
                             {
 
-                                throw;
+                                CevapYaz(ex.Message);
                             }
                         }
                     }
@@ -627,6 +638,19 @@ namespace Listener
         {
             System.Text.UTF8Encoding encoding = new System.Text.UTF8Encoding();
             return encoding.GetBytes(str);
+        }
+        private uint ServisIdUret()
+        {
+            System.Threading.Thread.Sleep(100);
+            try
+            {
+                UInt32 sId = Convert.ToUInt32((DateTime.Now.Ticks / 100000) % (0xffffffff / 2));
+                return sId;
+            }
+            catch (Exception)
+            {
+                return 0;
+            }
         }
         #endregion
     }

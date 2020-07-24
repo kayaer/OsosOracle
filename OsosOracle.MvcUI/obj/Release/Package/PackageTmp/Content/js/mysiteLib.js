@@ -1,6 +1,9 @@
 ﻿
-var baseUrl = "http://localhost:12735/Home/GetSession";
-//var baseUrl = "http://yonca.elektromed.com.tr/Home/GetSession";
+var baseUrl = "http://yonca.elektromed.com.tr/Home/GetSession";
+if (location.hostname == "localhost") {
+     baseUrl = "http://localhost:12735/Home/GetSession";
+}
+
 var sessionInformation = {};
 
 function GetSession(url) {

@@ -27,7 +27,8 @@ namespace OsosOracle.DataLayer.Concrete.EntityFramework.Dal
                 TarifeKayitNo = x.EntAboneSayacEfCollection.FirstOrDefault().TARIFEKAYITNO,
                 Cap=x.EntAboneSayacEfCollection.FirstOrDefault().PrmTarifeSuEf.SAYACCAP,
                 SonSatisTarih = x.EntAboneSayacEfCollection.FirstOrDefault().SONSATISTARIH,
-                SayacTuru=x.CstSayacModelEf.NesneDegerSayacTuruEf.KAYITNO
+                SayacTuru=x.CstSayacModelEf.NesneDegerSayacTuruEf.KAYITNO,
+                KonsSeriNo=x.KonsSeriNo
                 
 
             });
