@@ -158,7 +158,9 @@ namespace Listener
                 bytesRead = tcpClient.GetStream().Read(buffer, 0, buffer.Length);
 
                 header = new byte[bytesRead];
+
                 Buffer.BlockCopy(buffer, 0, header, 0, bytesRead);
+                
 
                 bool crc = hexCon.CrcKontrol(header);
 
@@ -519,7 +521,8 @@ namespace Listener
                     // AmrData.GetInstance().Kuyruk.Enqueue(rd);
                     //RabbitMq kuyruga atılıyor readout dataları
                     RabbitmqHelper.AddQueue(rd);
-                    _log.Info("READOUT DATA: " + JsonConvert.SerializeObject(rd));
+                    //_log.Info("READOUT DATA: " + JsonConvert.SerializeObject(rd));
+                    _log.Info("Konsserino:"+rd.KonsSeriNo+ "- Readout Data:"+data);
                 }
                 catch (Exception ex)
                 {

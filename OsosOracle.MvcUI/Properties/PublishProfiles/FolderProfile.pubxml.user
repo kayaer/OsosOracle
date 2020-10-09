@@ -16,7 +16,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/30/2020 00:20:30</publishTime>
     </File>
     <File Include="bin/ar/OsosOracle.MvcUI.resources.dll">
-      <publishTime>07/24/2020 23:30:42</publishTime>
+      <publishTime>07/25/2020 21:05:17</publishTime>
     </File>
     <File Include="bin/AutoMapper.dll">
       <publishTime>01/30/2020 00:20:28</publishTime>
@@ -226,25 +226,25 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/30/2020 00:19:58</publishTime>
     </File>
     <File Include="bin/OsosOracle.Business.dll">
-      <publishTime>07/24/2020 23:30:41</publishTime>
+      <publishTime>07/25/2020 21:05:17</publishTime>
     </File>
     <File Include="bin/OsosOracle.Business.pdb">
-      <publishTime>07/24/2020 23:30:41</publishTime>
+      <publishTime>07/25/2020 21:05:17</publishTime>
     </File>
     <File Include="bin/OsosOracle.DataLayer.dll">
-      <publishTime>07/24/2020 23:30:40</publishTime>
+      <publishTime>07/25/2020 21:05:15</publishTime>
     </File>
     <File Include="bin/OsosOracle.DataLayer.dll.config">
       <publishTime>02/25/2020 21:32:34</publishTime>
     </File>
     <File Include="bin/OsosOracle.DataLayer.pdb">
-      <publishTime>07/24/2020 23:30:40</publishTime>
+      <publishTime>07/25/2020 21:05:15</publishTime>
     </File>
     <File Include="bin/OsosOracle.Entities.dll">
-      <publishTime>07/24/2020 23:30:40</publishTime>
+      <publishTime>07/25/2020 21:05:15</publishTime>
     </File>
     <File Include="bin/OsosOracle.Entities.pdb">
-      <publishTime>07/24/2020 23:30:40</publishTime>
+      <publishTime>07/25/2020 21:05:15</publishTime>
     </File>
     <File Include="bin/OsosOracle.Framework.dll">
       <publishTime>07/24/2020 23:11:28</publishTime>
@@ -256,10 +256,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>07/24/2020 23:11:28</publishTime>
     </File>
     <File Include="bin/OsosOracle.MvcUI.dll">
-      <publishTime>07/24/2020 23:30:42</publishTime>
+      <publishTime>07/25/2020 21:05:17</publishTime>
     </File>
     <File Include="bin/OsosOracle.MvcUI.pdb">
-      <publishTime>07/24/2020 23:30:42</publishTime>
+      <publishTime>07/25/2020 21:05:17</publishTime>
     </File>
     <File Include="bin/PostSharp.dll">
       <publishTime>01/30/2020 00:20:10</publishTime>
@@ -475,7 +475,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/30/2020 00:20:16</publishTime>
     </File>
     <File Include="bin/tr/OsosOracle.MvcUI.resources.dll">
-      <publishTime>07/24/2020 23:30:42</publishTime>
+      <publishTime>07/25/2020 21:05:17</publishTime>
     </File>
     <File Include="bin/WebGrease.dll">
       <publishTime>01/30/2020 00:20:32</publishTime>
@@ -5758,10 +5758,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/30/2020 00:18:32</publishTime>
     </File>
     <File Include="Views/EntIsEmri/Index.cshtml">
-      <publishTime>07/24/2020 22:17:14</publishTime>
+      <publishTime>07/25/2020 20:46:09</publishTime>
     </File>
     <File Include="Views/EntIsEmri/Kaydet.cshtml">
-      <publishTime>07/24/2020 22:23:41</publishTime>
+      <publishTime>07/25/2020 21:02:38</publishTime>
     </File>
     <File Include="Views/ENTKOMUTLARBEKLEYEN/Detay.cshtml">
       <publishTime>01/30/2020 00:18:32</publishTime>

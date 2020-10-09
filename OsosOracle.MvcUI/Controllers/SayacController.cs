@@ -36,6 +36,17 @@ namespace OsosOracle.MvcUI.Controllers
             return View(model);
         }
 
+        //Uzaktan Okuma Sayaç Yönetim Sayfası
+        public ActionResult Index2()
+        {
+
+            var model = new ENTSAYACIndexModel
+            {
+                ENTSAYACAra = new ENTSAYACAra()
+            };
+            return View(model);
+        }
+
         public ActionResult DataTablesList(DtParameterModel dtParameterModel, ENTSAYACAra entSayacAra)
         {
 
@@ -58,6 +69,7 @@ namespace OsosOracle.MvcUI.Controllers
                     t.SERINO,
                     t.KapakSeriNo,
                     t.ACIKLAMA,
+                    t.KonsSeriNo,
                     Islemler = $" <a class='btn btn-xs btn-primary modalizer' href='{Url.Action("Guncelle", "Sayac", new { sayacKayitNo = t.KAYITNO })}' title='{Dil.Duzenle}'><i class='fa fa-th-list'></i></a>" +
                                $" <a class='btn btn-xs btn-danger modalizer' href='{Url.Action("Sil", "Sayac", new { sayacKayitNo = t.KAYITNO })}' title='{Dil.Sil}'><i class='fa fa-trash'></i></a>"
                               

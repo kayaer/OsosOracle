@@ -21,7 +21,9 @@
                 <div class="col-md-4">
                     @Html.AutoComplete(t => t.EntIsEmriAra.SayacKayitNo, Enums.AutocompleteFuction.SayacGetir, Enums.AutoCompleteType.List, Dil.Sayac)
                 </div>
-               
+                <div class="col-md-4">
+                    @Html.AutoComplete(t => t.EntIsEmriAra.IsEmriDurumKayitNo, Enums.AutocompleteFuction.IsEmriDurumGetir, Enums.AutoCompleteType.List, "İş Emri Durumu")
+                </div>
             </div>
             <div class="form-actions">
                 <button type="button" class="btn btn-primary btn-sm" id="btnAra"><i class="fa fa-search"></i> Bul</button>

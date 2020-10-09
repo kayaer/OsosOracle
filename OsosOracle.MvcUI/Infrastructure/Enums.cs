@@ -57,6 +57,8 @@ namespace OsosOracle.MvcUI.Infrastructure
             OdemeTipiGetir = 20,
             [Description("/NESNEDEGER/AjaxAra?nesneTipId=7")]
             ZamanlanmisGorevPeriyotGetir = 21,
+            [Description("/NESNEDEGER/AjaxAra?nesneTipId=5")]
+            IsEmriDurumGetir = 22,
         }
 
         public enum AutocompleteDegerFuction
@@ -103,6 +105,8 @@ namespace OsosOracle.MvcUI.Infrastructure
             OdemeTipiGetir = 20,
             [Description("/NESNEDEGER/AjaxTekDeger")]
             ZamanlanmisGorevPeriyotGetir = 21,
+            [Description("/NESNEDEGER/AjaxTekDeger")]
+            IsEmriDurumGetir = 22,
         }
 
         public enum AutocompleteCokDegerFuction
@@ -149,6 +153,8 @@ namespace OsosOracle.MvcUI.Infrastructure
             OdemeTipiGetir = 20,
             [Description("/NESNEDEGER/AjaxCokDeger")]
             ZamanlanmisGorevPeriyotGetir = 21,
+            [Description("/NESNEDEGER/AjaxCokDeger")]
+            IsEmriDurumGetir = 22,
         }
 
         public enum AutoCompleteType

@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using log4net;
+using Newtonsoft.Json;
 using OsosOracle.Business.Concrete;
 using OsosOracle.DataLayer.Concrete.EntityFramework.Dal;
 using OsosOracle.DataLayer.Concrete.EntityFramework.Entity;
@@ -6,6 +7,7 @@ using OsosOracle.Entities.Concrete;
 using OsosOracle.Framework.Utilities.ExtensionMethods;
 using RabbitMQ.Client;
 using RabbitMQ.Client.Events;
+using RabbitmqParser.Helpers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,21 +21,31 @@ namespace RabbitmqParser
         // localhost üzerinde kurulu olduğu için host adresi olarak bunu kullanıyorum.
         private readonly string _hostName = "localhost";
         private readonly string _queueName = "HamData";
-
+        private static readonly ILog _log = LogManager.GetLogger(typeof(ParserWindowsService));
         public IConnection GetRabbitMQConnection()
         {
             ConnectionFactory connectionFactory = new ConnectionFactory() { HostName = _hostName };
-            //  ConnectionFactory connectionFactory = new ConnectionFactory() { HostName = "192.168.1.152", UserName = "admin", Password = "admin" };
+            //ConnectionFactory connectionFactory = new ConnectionFactory() { HostName = "192.168.1.152", UserName = "admin", Password = "admin" };
             return connectionFactory.CreateConnection();
         }
 
         public void Consume()
         {
-            //test hamdata
+            // test hamdata
             //string testData = @"{'KonsSeriNo':'','Ip':'178.241.123.72','Data':'fEVMTTExMQ0KMjIuNi4yMCA3OjIwDQo4LjAuMC4wKDExMSkNCjguOTYuNTEuMCgxMDI2MSprKQ0KOC45Ni41MS4xKDAqaykNCjguMS44LjAoMCptMykNCjguMS44LjEoMCptMykNCjguMC45LjIoMjAtNi0yMikNCjguMC45LjEoNzoyMDozNCkNCjguMC45LjUoMSkNCjguMS4xLjAoMDAxMDExMDApDQo4LjEuMS4xKDAwMDAwMDAxKQ0KOC4xLjEuMig2NDQ5MDA1LDAsMTAyNjEsMCw4NDIxNTA0NDYsOTQ4OSwwLDAsMCwwLDAsMCwwLDAsMCwwLDAsMCwwLDAsMCwwLDAsLTEsMTAsOTQ4OSw3OSkNCjkuMC4wLjAoMDAwMDApDQo5LjAuMC4xKDE4NDksMjk4NywyMCw5OSw1MDAwLDk5OTk5OSw5OTk5OTksOTk5OTk5LDk5OTk5OSwxMDAwLDEwMDAsMTAwMCwxMDAwLDEwMDApDQo5LjAuMC4yKEwwMDM2KQ0KOS4wLjAuMygzLjU5ODAwMCw0LjAyMzAwMCkNCjkuMC4wLjQoMjIyLDEpDQo5LjAuMC41KDAsMCwwLDAsMCkNCjkuMC4wLjYoNjAsMSw5MDUyLDkwNTIpDQo5LjAuMC43KDI3LDExLDM0LDAsOTQ4OSwwKQ0K'}";
-            //var ss = JsonConvert.DeserializeObject<EntHamData>(testData);
-            //var ffdata = Encoding.UTF8.GetString(ss.Data);
-            //StartParse(ss);
+            string testData = @"{'KonsSeriNo':'359855072144409','Ip':'178.244.61.189','Data':'RFNQMDowMDA2OjM1OT
+g1NTA3MjE0NDQwOTpWIDIuMDAuNzALOjU6MToyMDEyOjgtMTAtMjAyMC0yMy00Ny0xMzoyMDowfEVMTT
+IwMjAxMDA2DQo4LjEwLjIwIDIzOjQ3DQo4LjAuMC4wKDIwMjAxMDA2KQ0KOC45Ni41MS4wKDUwMDAqay
+kNCjguOTYuNTEuMSgwKmspDQo4LjEuOC4wKDAqbTMpDQo4LjEuOC4xKDAqbTMpDQo4LjAuOS4yKDIwLT
+EwLTgpDQo4LjAuOS4xKDIzOjQ3OjI0KQ0KOC4wLjkuNSg0KQ0KOC4xLjEuMCgwMDEwMDAwMSkNCjguMS
+4xLjEoMDAwMDAwMDApDQo4LjEuMS4yKDk5MTM3MzQ1MCw1MDAwLDg0MjE1MDQ0NiwxMDM3ODkuMC4wLj
+AoMDAwMDApDQo5LjAuMC4xKDAsMCwyMCwyMCwzMDAwLDk5OTk5OSw5OTk5OTksOTk5OTk5LDk5OTk5OS
+wxMDAwLDEwMDAsMTAwMCwxMDAwLDEwMDApDQo5LjAuMC4yKFYgMi4wMC43MBcpDQo5LjAuMC4zKCVmLC
+VmKQ0KOS4wLjAuNCglbHUsJWQpDQo5LjAuMC41KCVkLCVkLCVkLCVkLCVkKQ0KOS4wLjAuNiglZCwlZC
+wlZCwlZCkNCjkuMC4wLjcoJWQsJWQsJWQsJWQsJWQsJWQpDQo = '}";
+            var ss = JsonConvert.DeserializeObject<EntHamData>(testData);
+            var ffdata = Encoding.UTF8.GetString(ss.Data);
+            StartParse(ss);
             using (var connection = GetRabbitMQConnection())
             {
                 using (var channel = connection.CreateModel())
@@ -66,7 +78,8 @@ namespace RabbitmqParser
 
             var splitPaket = HamData.Split('|');
 
-            string[] k = splitPaket[0].Split(':');//Header Paket
+            //  string[] k = splitPaket[0].Split(':');//Header Paket
+            Header hd = new Header(splitPaket[0]);
 
             List<EntSayacOkumaVeriEf> sayacOkumaList = new List<EntSayacOkumaVeriEf>();
 
@@ -81,18 +94,21 @@ namespace RabbitmqParser
                         if (string.IsNullOrEmpty(veriKontrol))
                         {
                             var sayacDurum = SayacVeriParse(splitPaket[i]);
-                            //sayacDurum.KonsSeriNo = k[1];
-                            // sayacDurum.Ip= Ip yazılacak
+                            sayacDurum.KonsSeriNo = hamdata.KonsSeriNo;
+                            sayacDurum.Ip = hamdata.Ip;
+                            sayacDurum.Rssi = hd.RSSI;
                             sayacOkumaList.Add(sayacDurum);
                         }
                         else
                         {
                             //Hatalı Data Log la
+                            _log.Error("Hatalı Data : " + HamData);
                         }
                     }
                     catch (Exception ex)
                     {
                         //Hata oluştu Logla
+                        _log.Error(ex.Message + " : " + HamData);
                     }
 
 
@@ -103,8 +119,18 @@ namespace RabbitmqParser
 
 
             EfEntSayacOkumaVeriDal dal = new EfEntSayacOkumaVeriDal();
-            dal.Ekle(sayacOkumaList);
-            Console.WriteLine("Veri Kaydedildi");
+            var data = dal.Ekle(sayacOkumaList);
+            if (sayacOkumaList.Count > 0)
+            {
+
+
+                Console.WriteLine("Veri Kaydedildi");
+            }
+            else
+            {
+                Console.WriteLine("Veri Kaydedilemedi");
+            }
+
 
 
         }
@@ -204,8 +230,8 @@ namespace RabbitmqParser
                             string dataString = gelenData.Substring(pStart + 1, pStop - (pStart + 1));
 
                             string[] data = dataString.Split(',');
-                            sayacVeri.AnaPilZayif = data[0].ToString();//iki tane var
-                            sayacVeri.AnaPilBitti = data[1].ToString();//iki tane var 
+                            //sayacVeri.AnaPilZayif = data[0].ToString();//iki tane var
+                            //sayacVeri.AnaPilBitti = data[1].ToString();//iki tane var 
                             sayacVeri.Cap = data[2].ToString();
                             sayacVeri.BaglantiSayisi = data[3].ToString();
                             sayacVeri.KritikKredi = data[4].ToString();
@@ -249,39 +275,41 @@ namespace RabbitmqParser
                     {
                         string dataString = gelenData.Substring(pStart + 1, pStop - (pStart + 1));
                         string[] data = dataString.Split(',');
-
-                        Integer2Byte IlkPulseTarih = new Integer2Byte(Convert.ToUInt16(data[0]));
-                        Integer2Byte SonPulseTarih = new Integer2Byte(Convert.ToUInt16(data[1]));
-                        Integer2Byte BorcTarih = new Integer2Byte(Convert.ToUInt16(data[2]));
-                        sayacVeri.IlkPulseTarih = TarihDuzenle(IlkPulseTarih.bir, IlkPulseTarih.iki);
-                        sayacVeri.SonPulseTarih = TarihDuzenle(SonPulseTarih.bir, SonPulseTarih.iki);
-                        sayacVeri.BorcTarih = TarihDuzenle(BorcTarih.bir, BorcTarih.iki);
-                        sayacVeri.MaxDebi = data[3];
-                        sayacVeri.MaxDebiSinir = data[4];
+                        //Geçiçi kapatıldı hata veren okuma var
+                        //Integer2Byte IlkPulseTarih = new Integer2Byte(Convert.ToUInt16(data[0]));
+                        //Integer2Byte SonPulseTarih = new Integer2Byte(Convert.ToUInt16(data[1]));
+                        //Integer2Byte BorcTarih = new Integer2Byte(Convert.ToUInt16(data[2]));
+                        //sayacVeri.IlkPulseTarih = TarihDuzenle(IlkPulseTarih.bir, IlkPulseTarih.iki);
+                        //sayacVeri.SonPulseTarih = TarihDuzenle(SonPulseTarih.bir, SonPulseTarih.iki);
+                        //sayacVeri.BorcTarih = TarihDuzenle(BorcTarih.bir, BorcTarih.iki);
+                        //sayacVeri.MaxDebi = data[3];
+                        //sayacVeri.MaxDebiSinir = data[4];
                     }
                     else if (gelenData.Contains("9.0.0.6"))
                     {
                         string dataString = gelenData.Substring(pStart + 1, pStop - (pStart + 1));
                         string[] data = dataString.Split(',');
-                        sayacVeri.DonemGun = data[0];
-                        sayacVeri.Donem = data[1];
-                        Integer2Byte VanaAcmaTarih = new Integer2Byte(Convert.ToUInt16(data[2]));
-                        sayacVeri.VanaAcmaTarih = TarihDuzenle(VanaAcmaTarih.bir, VanaAcmaTarih.iki);
-                        Integer2Byte VanaKapamaTarih = new Integer2Byte(Convert.ToUInt16(data[2]));
-                        sayacVeri.VanaKapamaTarih = TarihDuzenle(VanaKapamaTarih.bir, VanaKapamaTarih.iki);
+                        //Geçiçi olarak kapatıldı
+                        //sayacVeri.DonemGun = data[0];
+                        //sayacVeri.Donem = data[1];
+                        //Integer2Byte VanaAcmaTarih = new Integer2Byte(Convert.ToUInt16(data[2]));
+                        //sayacVeri.VanaAcmaTarih = TarihDuzenle(VanaAcmaTarih.bir, VanaAcmaTarih.iki);
+                        //Integer2Byte VanaKapamaTarih = new Integer2Byte(Convert.ToUInt16(data[2]));
+                        //sayacVeri.VanaKapamaTarih = TarihDuzenle(VanaKapamaTarih.bir, VanaKapamaTarih.iki);
 
                     }
                     else if (gelenData.Contains("9.0.0.7"))
                     {
                         string dataString = gelenData.Substring(pStart + 1, pStop - (pStart + 1));
                         string[] data = dataString.Split(',');
-                        sayacVeri.Sicaklik = data[0];
-                        sayacVeri.MinSicaklik = data[1];
-                        sayacVeri.MaxSicaklik = data[2];
-                        sayacVeri.YanginModu = data[3];
+                        //Geçiçi olarak kapatıldı
+                        //sayacVeri.Sicaklik = data[0];
+                        //sayacVeri.MinSicaklik = data[1];
+                        //sayacVeri.MaxSicaklik = data[2];
+                        //sayacVeri.YanginModu = data[3];
 
-                        Integer2Byte SonYuklenenKrediTarih = new Integer2Byte(Convert.ToUInt16(data[4]));
-                        sayacVeri.SonYuklenenKrediTarih = TarihDuzenle(SonYuklenenKrediTarih.bir, SonYuklenenKrediTarih.iki);
+                        //Integer2Byte SonYuklenenKrediTarih = new Integer2Byte(Convert.ToUInt16(data[4]));
+                        //sayacVeri.SonYuklenenKrediTarih = TarihDuzenle(SonYuklenenKrediTarih.bir, SonYuklenenKrediTarih.iki);
                     }
                     else if (gelenData.Contains("8.0.0.0"))
                     {

@@ -7,7 +7,7 @@
 
 }
 
-@using (Html.BeginPortlet("Sayaç Bilgileri Arama", "Detaylı Arama", "fa fa-search"))
+@using (Html.BeginPortlet(Dil.SayacBilgileri, Dil.DetayliArama, "fa fa-search"))
 {
     <form id="frmAra" class="form-bordered">
 		 <div class="form-group row">
@@ -37,6 +37,9 @@
         <tr>
             @* <th style="width: 30px">@_T("Id")</th>*@
             <th>@Dil.SayacSeriNo</th>
+			<th>@Dil.HaberlesmeUnitesiSeriNo</th>
+			<th>@Dil.Ip</th>
+			<th>Rssi</th>
             <th>@Dil.OKUMATARIH</th>
             <th>@Dil.CEZA1</th>
             <th>@Dil.CEZA2</th>
@@ -113,13 +116,16 @@
 
 	function AraFiltered() {
 		$('#tblENTSAYACDURUMSU').dataTable({
-			'language': dataTableLanguage,
+			'language':  GetSession(baseUrl),
 			'processing': true,
 			'serverSide': true,
 			'destroy': true,
 			'columns': [
 				//{'data': "KayitNo"},
 				{'data': "SayacId" },
+				{'data': "KonsSeriNo" },
+				{'data': "Ip" },
+				{'data': "Rssi" },
 				{'data': "OkumaTarih" },
 				{'data': "Ceza1" },
 				{'data': "Ceza2" },

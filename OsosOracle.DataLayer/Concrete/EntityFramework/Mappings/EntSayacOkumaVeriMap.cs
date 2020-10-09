@@ -78,6 +78,9 @@ namespace OsosOracle.DataLayer.Concrete.EntityFramework.Mappings
             Property(t => t.Tuketim4).HasColumnName("TUKETIM4");
             Property(t => t.HarcananKredi).HasColumnName("HARCANANKREDI");
             Property(t => t.KalanKredi).HasColumnName("KALANKREDI");
+            Property(t => t.KonsSeriNo).HasColumnName("KONSSERINO");
+            Property(t => t.Ip).HasColumnName("IP");
+            Property(t => t.Rssi).HasColumnName("RSSI");
         }
     }
 }

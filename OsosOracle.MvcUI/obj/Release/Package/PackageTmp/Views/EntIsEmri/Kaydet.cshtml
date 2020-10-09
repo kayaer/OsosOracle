@@ -40,13 +40,13 @@
 
                 <button type="submit" class="btn btn-primary" value="ZamanlanmisGorevSil" formaction="@Url.Action("ZamanlanmisGorevSil")">Zamanlanmış Görev Sil</button>
 
-                <button type="submit" class="btn btn-primary" value="ZoneSet" formaction="@Url.Action("ZoneSet")">Zone Ayarla</button>
+               @* <button type="submit" class="btn btn-primary" value="ZoneSet" formaction="@Url.Action("ZoneSet")">Zone Ayarla</button>*@
 
-                <button type="submit" class="btn btn-primary" value="CezaTemizle" formaction="@Url.Action("CezaTemizle")">Ceza Temizle</button>
+                <button type="submit" class="btn btn-primary" value="YetkiAc" formaction="@Url.Action("YetkiAc")">Yetki Aç</button>
             }
 
         </div>
-        @*<div class="col-md-6">
+        <div class="col-md-6">
             @using (Html.BeginPortlet("Sayaç Bilgi Okuma Emirleri", "Detaylı Arama", "fa fa-search"))
             {
                 <button type="submit" class="btn btn-primary" value="ServerIpOku" formaction="@Url.Action("ServerIpOku")">Server İp Oku</button>
@@ -55,20 +55,20 @@
 
                 <button type="submit" class="btn btn-primary" value="ZamanlanmisGorevOku" formaction="@Url.Action("ZamanlanmisGorevOku")">Zamanlanmış Görev Oku</button>
 
-                <button type="submit" class="btn btn-primary" value="LogOku" formaction="@Url.Action("LogOku")">Log Oku</button>
+                @*<button type="submit" class="btn btn-primary" value="LogOku" formaction="@Url.Action("LogOku")">Log Oku</button>
 
-                <button type="submit" class="btn btn-primary" value="ReadoutOku" formaction="@Url.Action("ReadoutOku")">Readout Oku</button>
+                <button type="submit" class="btn btn-primary" value="ReadoutOku" formaction="@Url.Action("ReadoutOku")">Readout Oku</button>*@
 
             }
-        </div>*@
+        </div>
     </div>
 
 
     using (Html.BeginPortlet(" Sayaç Ayar Gönderme", "Detaylı Arama", "fa fa-search"))
     {
 
-    
-        <div class="form-group row">
+
+        @*<div class="form-group row">
             <div class="col-md-3">
                 @Html.DateTimeInput(t => t.Tarih, new { placeholder = "Sayaç Tarihi" })
             </div>
@@ -78,7 +78,7 @@
             <div class="col-md-2">
                 <button type="submit" class="btn btn-primary btn-block" value="TarihSet" formaction="@Url.Action("TarihSet")">Sayaç Tarihi Güncelle</button>
             </div>
-        </div>
+        </div>*@
 
         <div class="form-group row">
             <div class="col-md-2">
@@ -116,6 +116,14 @@
             </div>
             <div class="col-md-2">
                 <button type="submit" class="btn btn-primary btn-block" value="KrediSet" formaction="@Url.Action("KrediYukle")">Kredi Yükle</button>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-md-6">
+                @Html.AutoComplete(t => t.ZamanlanmisGorev, Enums.AutocompleteFuction.ZamanlanmisGorevPeriyotGetir, Enums.AutoCompleteType.List, "Bağlantı Periyot")
+            </div>
+            <div class="col-md-2">
+                <button type="submit" class="btn btn-primary btn-block" value="KrediSet" formaction="@Url.Action("ZamanlanmisGorevEkle")">Zamanlanmiş Görev Ekle</button>
             </div>
         </div>
     }

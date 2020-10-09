@@ -38,10 +38,10 @@ namespace OsosOracle.MvcUI.Controllers
         }
 
         [HttpPost]
-        public ActionResult DataTablesList(DtParameterModel dtParameterModel, EntIsEmriAra eNTKOMUTLARBEKLEYENAra)
+        public ActionResult DataTablesList(DtParameterModel dtParameterModel, EntIsEmriAra entIsEmriAra)
         {
 
-            eNTKOMUTLARBEKLEYENAra.Ara = dtParameterModel.AramaKriteri;
+            entIsEmriAra.Ara = dtParameterModel.AramaKriteri;
 
             if (!string.IsNullOrEmpty(dtParameterModel.Search.Value))
             { //TODO: Bu bölümü düzenle
@@ -50,7 +50,7 @@ namespace OsosOracle.MvcUI.Controllers
 
 
 
-            var kayitlar = _eNTKOMUTLARBEKLEYENService.Ara(eNTKOMUTLARBEKLEYENAra);
+            var kayitlar = _eNTKOMUTLARBEKLEYENService.Ara(entIsEmriAra);
 
             var result = Json(new DataTableResult()
             {
@@ -259,11 +259,24 @@ namespace OsosOracle.MvcUI.Controllers
         [HttpPost]
         public ActionResult YetkiAc(EntIsEmriKaydetModel model)
         {
-            // var sayac = _entSayacService.DetayGetirById(model.EntIsEmri.SayacKayitNo);
+            var sayac = _entSayacService.DetayGetirById(model.EntIsEmri.SayacKayitNo);
             model.EntIsEmri.IsEmriKayitNo = enumIsEmirleri.YetkiAc.GetHashCode();
             model.EntIsEmri.IsEmriDurumKayitNo = enumIsEmirleriDurum.Bekliyor.GetHashCode();
 
-            //model.EntIsEmri.Parametre = ;
+            model.EntIsEmri.Parametre = "ELM"+sayac.SERINO;
+            Kaydet(model);
+            return Yonlendir(Url.Action("Index", "EntIsEmri", new { id = model.EntIsEmri.SayacKayitNo }), "İş Emri kaydı başarıyla gerçekleştirilmiştir.");
+
+        }
+
+        [HttpPost]
+        public ActionResult ZamanlanmisGorevSil(EntIsEmriKaydetModel model)
+        {
+            // var sayac = _entSayacService.DetayGetirById(model.EntIsEmri.SayacKayitNo);
+            model.EntIsEmri.IsEmriKayitNo = enumIsEmirleri.ZamanlanmisGorevSilme.GetHashCode();
+            model.EntIsEmri.IsEmriDurumKayitNo = enumIsEmirleriDurum.Bekliyor.GetHashCode();
+
+            model.EntIsEmri.Parametre = "ALL_TASK";
             Kaydet(model);
             return Yonlendir(Url.Action("Index", "EntIsEmri", new { id = model.EntIsEmri.SayacKayitNo }), "İş Emri kaydı başarıyla gerçekleştirilmiştir.");
 

@@ -62,7 +62,8 @@ namespace OsosOracle.Entities.Enums
         ZamanlanmisGorevEkleme=18,
         ServerIpPortSet=19,
         ApnSet=20,
-        YetkiAc=21
+        YetkiAc=21,
+        ZamanlanmisGorevSilme=22
         
     }
 }

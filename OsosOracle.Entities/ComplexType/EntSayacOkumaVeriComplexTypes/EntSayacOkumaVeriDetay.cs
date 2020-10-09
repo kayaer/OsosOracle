@@ -68,6 +68,9 @@ namespace OsosOracle.Entities.ComplexType.ENTSAYACDURUMSUComplexTypes
         public decimal Tuketim4 { get; set; }
         public decimal HarcananKredi { get; set; }
         public decimal KalanKredi { get; set; }
+        public string KonsSeriNo { get; set; }
+        public string Ip { get; set; }
+        public string Rssi { get; set; }
     }
 
 }

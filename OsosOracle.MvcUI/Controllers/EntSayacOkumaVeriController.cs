@@ -11,6 +11,7 @@ using OsosOracle.Framework.Utilities.ExtensionMethods;
 using OsosOracle.Framework.Enums;
 using OsosOracle.Framework.DataAccess.Filter;
 using OsosOracle.MvcUI.Filters;
+using OsosOracle.MvcUI.Resources;
 
 namespace OsosOracle.MvcUI.Controllers
 {
@@ -18,16 +19,18 @@ namespace OsosOracle.MvcUI.Controllers
     public class EntSayacOkumaVeriController : BaseController
     {
         private readonly IEntSayacOkumaVeriService _eNTSAYACDURUMSUService;
+        private readonly IENTSAYACService _entSayacService;
 
-        public EntSayacOkumaVeriController(IEntSayacOkumaVeriService eNTSAYACDURUMSUService)
+        public EntSayacOkumaVeriController(IEntSayacOkumaVeriService eNTSAYACDURUMSUService, IENTSAYACService entSayacService)
         {
             _eNTSAYACDURUMSUService = eNTSAYACDURUMSUService;
+            _entSayacService = entSayacService;
         }
 
 
         public ActionResult Index()
         {
-            SayfaBaslik($"Sayaç Veri İşlemleri");
+            SayfaBaslik(Dil.SayacVerileri);
             var model = new EntSayacOkumaVeriIndexModel();
             return View(model);
         }
@@ -35,7 +38,11 @@ namespace OsosOracle.MvcUI.Controllers
         [HttpPost]
         public ActionResult DataTablesList(DtParameterModel dtParameterModel, EntSayacOkumaVeriAra EntSayacOkumaVeriAra)
         {
-
+            if (EntSayacOkumaVeriAra.SayacKayitNo != null)
+            {
+                var sayac = _entSayacService.GetirById((int)EntSayacOkumaVeriAra.SayacKayitNo);
+                EntSayacOkumaVeriAra.SayacId = "ELM" + sayac.SERINO;
+            }
             EntSayacOkumaVeriAra.Ara = dtParameterModel.AramaKriteri;
 
             if (!string.IsNullOrEmpty(dtParameterModel.Search.Value))
@@ -61,7 +68,7 @@ namespace OsosOracle.MvcUI.Controllers
                     //TODO: Bu bölümü düzenle
                     t.KayitNo,
                     t.SayacId,
-                    OkumaTarih=t.OkumaTarih.ToString(),
+                    OkumaTarih = t.OkumaTarih.ToString(),
                     t.Ceza1,
                     t.Ceza2,
                     t.Ceza3,
@@ -122,7 +129,10 @@ namespace OsosOracle.MvcUI.Controllers
                     t.Tuketim4,
                     t.HarcananKredi,
                     t.KalanKredi,
-                   
+                    t.KonsSeriNo,
+                    t.Ip,
+                    t.Rssi,
+
                     Islemler = $@"<a class='btn btn-xs btn-info modalizer' href='{Url.Action("Guncelle", "ENTSAYACDURUMSU", new { id = t.KayitNo })}' title='Düzenle'><i class='fa fa-edit'></i></a>
 							   <a class='btn btn-xs btn-primary' href='{Url.Action("Detay", "ENTSAYACDURUMSU", new { id = t.KayitNo })}' title='Detay'><i class='fa fa-th-list'></i></a>
 								<a class='btn btn-xs btn-danger modalizer' href='{Url.Action("Sil", "ENTSAYACDURUMSU", new { id = t.KayitNo })}' title='Sil'><i class='fa fa-trash'></i></a>"

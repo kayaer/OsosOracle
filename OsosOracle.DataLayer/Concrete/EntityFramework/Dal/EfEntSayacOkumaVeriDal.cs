@@ -79,7 +79,10 @@ namespace OsosOracle.DataLayer.Concrete.EntityFramework.Dal
                 Tuketim3=x.Tuketim3,
                 Tuketim4=x.Tuketim4,
                 HarcananKredi=x.HarcananKredi,
-                KalanKredi=x.KalanKredi
+                KalanKredi=x.KalanKredi,
+                KonsSeriNo=x.KonsSeriNo,
+                Ip=x.Ip,
+                Rssi=x.Rssi
 
 
             });

@@ -93,6 +93,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EntHamData.cs" />
+    <Compile Include="Helpers\Header.cs" />
     <Compile Include="ParserWindowsService.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

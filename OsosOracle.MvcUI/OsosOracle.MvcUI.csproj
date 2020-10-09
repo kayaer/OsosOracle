@@ -1452,6 +1452,7 @@
     <Content Include="Views\Satis\SatisIptal.cshtml" />
     <Content Include="Views\Satis\SatisPartial.cshtml" />
     <Content Include="Views\SYSKULLANICI\Hesabim.cshtml" />
+    <Content Include="Views\Sayac\Index2.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
