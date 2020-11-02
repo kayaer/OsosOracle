@@ -296,7 +296,7 @@ namespace Listener
                     if (ZamanSenkronizasyonu) // modemin saati bozulduysa saati düzeltmek için saat komutu
                     {
                         DateTime simdi = DateTime.Now;
-                        AmiCommand srvSaat = sm.SetKonsDateTime("2", simdi);
+                        AmiCommand srvSaat = sm.SetKonsDateTime("402", simdi);
                         DateTime konsDateTime;
                         // konsantratör tarih saat hatalı ise direk saat servisini gönder. 
                         try
@@ -358,7 +358,7 @@ namespace Listener
 
                     if (PROJEKOD == 1 || PROJEKOD == 99)
                     {
-                        AmiCommand srvReadOut = sm.GetReadouts("1");
+                        AmiCommand srvReadOut = sm.GetReadouts("401");
 
                         if (serverIslem.KonsantratorPaket.Versiyon.Contains("U") || serverIslem.KonsantratorPaket.Versiyon.Contains("M"))
                         {
@@ -384,7 +384,7 @@ namespace Listener
 
                         #region close socket
 
-                        AmiCommand srvcloseSocket = sm.CloseSocket("3");
+                        AmiCommand srvcloseSocket = sm.CloseSocket("403");
                         srvList.Add(srvcloseSocket);
 
                         #endregion
@@ -393,7 +393,7 @@ namespace Listener
                     {
                         #region firmware update
 
-                        AmiCommand firmware = sm.ProgrammingMode("3");
+                        AmiCommand firmware = sm.ProgrammingMode("300");
                         srvList.Add(firmware);
 
                         #endregion

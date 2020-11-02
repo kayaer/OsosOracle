@@ -13,6 +13,7 @@ namespace OsosOracle.Entities.ComplexType.ENTSAYACDURUMSUComplexTypes
         public DateTime? OkumaTarihiBaslangic { get; set; }
 
         public DateTime? OkumaTarihiBitis { get; set; }
+        public string KonsSeriNo { get; set; }
 
     }
 }

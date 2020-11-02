@@ -1,0 +1,101 @@
+﻿@using OsosOracle.Framework.HtmlHelpers
+@using OsosOracle.MvcUI.Infrastructure
+@using OsosOracle.MvcUI.Resources
+@model  OsosOracle.MvcUI.Models.ENTSAYACModels.ENTSAYACIndexModel
+@{
+    ViewBag.Title = Dil.SayacIslemleri;
+}
+@section panelHeading{
+    @Html.ButtonLink(@Dil.SayacEkle, "Ekle", "btn btn-xs btn-success modalizer", "fa-plus")
+}
+
+
+@using (Html.BeginPortlet(Dil.SayacAra, Dil.DetayliArama, "fa fa-search"))
+{
+    <form id="frmAra" class="form-bordered">
+        <div class="form-group row">
+
+            <div class="col-md-6">
+                @Html.AutoComplete(t => t.ENTSAYACAra.SayacModelKayitNo, Enums.AutocompleteFuction.SayacModelGetir, Enums.AutoCompleteType.List, Dil.SayacModel)
+            </div>
+            <div class="col-md-6">
+                @Html.AutoComplete(t => t.ENTSAYACAra.KAYITNO, Enums.AutocompleteFuction.SayacGetir, Enums.AutoCompleteType.List, Dil.Sayac)
+            </div>
+        </div>
+        <div class="form-actions">
+            <button type="button" class="btn btn-primary btn-sm" id="btnAra"><i class="fa fa-search"></i> @Dil.Bul</button>
+        </div>
+    </form>
+
+}
+
+
+<table id="tblSayaclistesi" class="table table-striped table-bordered table-hover table-responsive">
+    <thead>
+        <tr>
+            <th>@Dil.SayacModel </th>
+            <th>@Dil.SayacSeriNo</th>
+            <th>@Dil.KapakSeriNo</th>
+            <th>@Dil.HaberlesmeUnitesiSeriNo</th>
+            <th>@Dil.Aciklama</th>
+            <th>@Dil.Islem</th>
+        </tr>
+    </thead>
+</table>
+
+
+
+
+
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+
+     
+             AraFiltered();
+             $("#btnAra").click(function (e) {
+
+                    e.preventDefault();
+                    AraFiltered();
+
+            });
+
+        function AraFiltered() {
+
+
+                $('#tblSayaclistesi').dataTable({
+                    'language': GetSession(baseUrl),
+                    'processing': true,
+                    'serverSide': true,
+                    'destroy': true,
+                    'columns': [
+                        { 'data': "SayacTipi" },
+                        { 'data': "SERINO" },
+                        { 'data': "KapakSeriNo" },
+                        { 'data': "KonsSeriNo" },
+                        { 'data': "ACIKLAMA" },
+                        { 'data': "Islemler", sortable: false }
+                    ],
+                    'ajax': {
+                        'type': 'POST',
+                        'data': $("#frmAra").serializeObject(),
+                        'url': "@Url.Action("DataTablesList", "Sayac")",
+                        'error': function (xhr, ajaxOptions, errorThrown) { ajaxMesajGoster(xhr.responseJSON.Mesaj); },
+                        'complete': function () { }
+                    }
+
+                });
+
+
+            
+
+        }
+
+    });
+
+
+</script>
+
+
+

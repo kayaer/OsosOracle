@@ -111,7 +111,10 @@ namespace OsosOracle.DataLayer.Concrete.EntityFramework.Dal
                     {
                         result = result.Where(x => x.OkumaTarih <= filtre.OkumaTarihiBitis);
                     }
-                   
+                    if (!string.IsNullOrEmpty(filtre.KonsSeriNo))
+                    {
+                        result = result.Where(x => x.KonsSeriNo == filtre.KonsSeriNo);
+                    }
                   
                 }
             }

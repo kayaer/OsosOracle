@@ -26,6 +26,7 @@ namespace OsosOracle.Entities.Concrete
         public string RtcHata { get; set; }
         public string AsiriTuketim { get; set; }
         public string Ceza4Iptal { get; set; }
+        public string ArizaA { get; set; }
         public string ArizaK { get; set; }
         public string ArizaP { get; set; }
         public string ArizaPil { get; set; }

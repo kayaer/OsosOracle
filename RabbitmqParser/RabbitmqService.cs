@@ -32,20 +32,23 @@ namespace RabbitmqParser
         public void Consume()
         {
             // test hamdata
-            //string testData = @"{'KonsSeriNo':'','Ip':'178.241.123.72','Data':'fEVMTTExMQ0KMjIuNi4yMCA3OjIwDQo4LjAuMC4wKDExMSkNCjguOTYuNTEuMCgxMDI2MSprKQ0KOC45Ni41MS4xKDAqaykNCjguMS44LjAoMCptMykNCjguMS44LjEoMCptMykNCjguMC45LjIoMjAtNi0yMikNCjguMC45LjEoNzoyMDozNCkNCjguMC45LjUoMSkNCjguMS4xLjAoMDAxMDExMDApDQo4LjEuMS4xKDAwMDAwMDAxKQ0KOC4xLjEuMig2NDQ5MDA1LDAsMTAyNjEsMCw4NDIxNTA0NDYsOTQ4OSwwLDAsMCwwLDAsMCwwLDAsMCwwLDAsMCwwLDAsMCwwLDAsLTEsMTAsOTQ4OSw3OSkNCjkuMC4wLjAoMDAwMDApDQo5LjAuMC4xKDE4NDksMjk4NywyMCw5OSw1MDAwLDk5OTk5OSw5OTk5OTksOTk5OTk5LDk5OTk5OSwxMDAwLDEwMDAsMTAwMCwxMDAwLDEwMDApDQo5LjAuMC4yKEwwMDM2KQ0KOS4wLjAuMygzLjU5ODAwMCw0LjAyMzAwMCkNCjkuMC4wLjQoMjIyLDEpDQo5LjAuMC41KDAsMCwwLDAsMCkNCjkuMC4wLjYoNjAsMSw5MDUyLDkwNTIpDQo5LjAuMC43KDI3LDExLDM0LDAsOTQ4OSwwKQ0K'}";
-            string testData = @"{'KonsSeriNo':'359855072144409','Ip':'178.244.61.189','Data':'RFNQMDowMDA2OjM1OT
-g1NTA3MjE0NDQwOTpWIDIuMDAuNzALOjU6MToyMDEyOjgtMTAtMjAyMC0yMy00Ny0xMzoyMDowfEVMTT
-IwMjAxMDA2DQo4LjEwLjIwIDIzOjQ3DQo4LjAuMC4wKDIwMjAxMDA2KQ0KOC45Ni41MS4wKDUwMDAqay
-kNCjguOTYuNTEuMSgwKmspDQo4LjEuOC4wKDAqbTMpDQo4LjEuOC4xKDAqbTMpDQo4LjAuOS4yKDIwLT
-EwLTgpDQo4LjAuOS4xKDIzOjQ3OjI0KQ0KOC4wLjkuNSg0KQ0KOC4xLjEuMCgwMDEwMDAwMSkNCjguMS
-4xLjEoMDAwMDAwMDApDQo4LjEuMS4yKDk5MTM3MzQ1MCw1MDAwLDg0MjE1MDQ0NiwxMDM3ODkuMC4wLj
-AoMDAwMDApDQo5LjAuMC4xKDAsMCwyMCwyMCwzMDAwLDk5OTk5OSw5OTk5OTksOTk5OTk5LDk5OTk5OS
-wxMDAwLDEwMDAsMTAwMCwxMDAwLDEwMDApDQo5LjAuMC4yKFYgMi4wMC43MBcpDQo5LjAuMC4zKCVmLC
-VmKQ0KOS4wLjAuNCglbHUsJWQpDQo5LjAuMC41KCVkLCVkLCVkLCVkLCVkKQ0KOS4wLjAuNiglZCwlZC
-wlZCwlZCkNCjkuMC4wLjcoJWQsJWQsJWQsJWQsJWQsJWQpDQo = '}";
-            var ss = JsonConvert.DeserializeObject<EntHamData>(testData);
-            var ffdata = Encoding.UTF8.GetString(ss.Data);
-            StartParse(ss);
+           // string testData = @"{'KonsSeriNo':'','Ip':'178.241.123.72','Data':'fEVMTTExMQ0KMjIuNi4yMCA3OjIwDQo4LjAuMC4wKDExMSkNCjguOTYuNTEuMCgxMDI2MSprKQ0KOC45Ni41MS4xKDAqaykNCjguMS44LjAoMCptMykNCjguMS44LjEoMCptMykNCjguMC45LjIoMjAtNi0yMikNCjguMC45LjEoNzoyMDozNCkNCjguMC45LjUoMSkNCjguMS4xLjAoMDAxMDExMDApDQo4LjEuMS4xKDAwMDAwMDAxKQ0KOC4xLjEuMig2NDQ5MDA1LDAsMTAyNjEsMCw4NDIxNTA0NDYsOTQ4OSwwLDAsMCwwLDAsMCwwLDAsMCwwLDAsMCwwLDAsMCwwLDAsLTEsMTAsOTQ4OSw3OSkNCjkuMC4wLjAoMDAwMDApDQo5LjAuMC4xKDE4NDksMjk4NywyMCw5OSw1MDAwLDk5OTk5OSw5OTk5OTksOTk5OTk5LDk5OTk5OSwxMDAwLDEwMDAsMTAwMCwxMDAwLDEwMDApDQo5LjAuMC4yKEwwMDM2KQ0KOS4wLjAuMygzLjU5ODAwMCw0LjAyMzAwMCkNCjkuMC4wLjQoMjIyLDEpDQo5LjAuMC41KDAsMCwwLDAsMCkNCjkuMC4wLjYoNjAsMSw5MDUyLDkwNTIpDQo5LjAuMC43KDI3LDExLDM0LDAsOTQ4OSwwKQ0K'}";
+            //string testData = @"{'KonsSeriNo':'359855072144409','Ip':'178.244.61.189','Data':'RFNQMDowMDA2OjM1OT
+            //g1NTA3MjE0NDQwOTpWIDIuMDAuNzALOjU6MToyMDEyOjgtMTAtMjAyMC0yMy00Ny0xMzoyMDowfEVMTT
+            //IwMjAxMDA2DQo4LjEwLjIwIDIzOjQ3DQo4LjAuMC4wKDIwMjAxMDA2KQ0KOC45Ni41MS4wKDUwMDAqay
+            //kNCjguOTYuNTEuMSgwKmspDQo4LjEuOC4wKDAqbTMpDQo4LjEuOC4xKDAqbTMpDQo4LjAuOS4yKDIwLT
+            //EwLTgpDQo4LjAuOS4xKDIzOjQ3OjI0KQ0KOC4wLjkuNSg0KQ0KOC4xLjEuMCgwMDEwMDAwMSkNCjguMS
+            //4xLjEoMDAwMDAwMDApDQo4LjEuMS4yKDk5MTM3MzQ1MCw1MDAwLDg0MjE1MDQ0NiwxMDM3ODkuMC4wLj
+            //AoMDAwMDApDQo5LjAuMC4xKDAsMCwyMCwyMCwzMDAwLDk5OTk5OSw5OTk5OTksOTk5OTk5LDk5OTk5OS
+            //wxMDAwLDEwMDAsMTAwMCwxMDAwLDEwMDApDQo5LjAuMC4yKFYgMi4wMC43MBcpDQo5LjAuMC4zKCVmLC
+            //VmKQ0KOS4wLjAuNCglbHUsJWQpDQo5LjAuMC41KCVkLCVkLCVkLCVkLCVkKQ0KOS4wLjAuNiglZCwlZC
+            //wlZCwlZCkNCjkuMC4wLjcoJWQsJWQsJWQsJWQsJWQsJWQpDQo = '}";
+            //var ss = JsonConvert.DeserializeObject<EntHamData>(testData);
+            //var ffdata = Encoding.UTF8.GetString(ss.Data);
+            //StartParse(ss);
+
+
+
             using (var connection = GetRabbitMQConnection())
             {
                 using (var channel = connection.CreateModel())
@@ -72,6 +75,29 @@ wlZCwlZCkNCjkuMC4wLjcoJWQsJWQsJWQsJWQsJWQsJWQpDQo = '}";
         {
 
             var encoding = new UTF8Encoding();
+
+//                        string HamData = @"DSP0:0006:359855072117272:V 2.00.16:5:1:2012:29-10-2020-11-30-21:11:0|ELM111
+//            29.10.20 11:30
+//8.0.0.0(111)
+//8.96.51.0(90647 * k)
+//8.96.51.1(9363 * k)
+//8.1.8.0(9363 * m3)
+//8.1.8.1(9363 * m3)
+//8.0.9.2(20 - 10 - 29)
+//8.0.9.1(11:30:28)
+//8.0.9.5(4)
+//8.1.1.0(00010011)
+//8.1.1.1(00000000)
+//8.1.1.2(0, 100010, 0, 76058)
+//9.0.0.0(00010)
+//9.0.0.1(67385, 68523, 20, 9999990000000000internet, 30, 2000, 4000, 8000, 16000, 1000, 1000, 1000, 1000, 1000)
+//9.0.0.2(V 2.00.16)
+//9.0.0.3(3.511, 4.412)
+//9.0.0.4(222, 1)
+//9.0.0.5(10458, 10522, 0, 0, 10)
+//9.0.0.6(30, 28, 10522, 10522)
+//9.0.0.7(0, 0, 24, 24, 0, 10522)
+//";
 
             string HamData = encoding.GetString(hamdata.Data);
             Console.WriteLine(HamData);
@@ -210,7 +236,7 @@ wlZCwlZCkNCjkuMC4wLjcoJWQsJWQsJWQsJWQsJWQsJWQpDQo = '}";
                         try
                         {
                             char[] data = gelenData.Substring(pStart + 1, pStop - (pStart + 1)).ToCharArray();
-                            sayacVeri.Ariza = data[0].ToString(); //Bunu sor iki tane arıza var
+                            sayacVeri.ArizaA = data[0].ToString(); //Bunu sor iki tane arıza var
                             sayacVeri.ArizaK = data[1].ToString();
                             sayacVeri.ArizaP = data[2].ToString();
                             sayacVeri.ArizaPil = data[3].ToString();

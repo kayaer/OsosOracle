@@ -47,7 +47,7 @@ namespace OsosOracle.MvcUI.Controllers
 
             if (!string.IsNullOrEmpty(dtParameterModel.Search.Value))
             { //TODO: Bu bölümü düzenle
-                EntSayacOkumaVeriAra.SayacId = dtParameterModel.Search.Value;
+                EntSayacOkumaVeriAra.KonsSeriNo = dtParameterModel.Search.Value;
             }
             EntSayacOkumaVeriAra.Ara.Siralama = new List<Siralama>
             {

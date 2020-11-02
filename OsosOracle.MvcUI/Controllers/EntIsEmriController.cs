@@ -201,7 +201,17 @@ namespace OsosOracle.MvcUI.Controllers
             return Yonlendir(Url.Action("Index", "EntIsEmri", new { id = model.EntIsEmri.SayacKayitNo }), "İş Emri kaydı başarıyla gerçekleştirilmiştir.");
 
         }
+        [HttpPost]
+        public ActionResult YetkiKapat(EntIsEmriKaydetModel model)
+        {
+            // var sayac = _entSayacService.DetayGetirById(model.EntIsEmri.SayacKayitNo);
+            model.EntIsEmri.IsEmriKayitNo = enumIsEmirleri.YetkiKapat.GetHashCode();
+            model.EntIsEmri.IsEmriDurumKayitNo = enumIsEmirleriDurum.Bekliyor.GetHashCode();
+            model.EntIsEmri.Parametre = "YETKI_KAPAT";
+            Kaydet(model);
+            return Yonlendir(Url.Action("Index", "EntIsEmri", new { id = model.EntIsEmri.SayacKayitNo }), "İş Emri kaydı başarıyla gerçekleştirilmiştir.");
 
+        }
         [HttpPost]
         public ActionResult KrediYukle(EntIsEmriKaydetModel model)
         { 
