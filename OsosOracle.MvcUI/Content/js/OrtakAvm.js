@@ -1,4 +1,5 @@
-﻿function OrtakAvm() {
+﻿
+function OrtakAvm() {
     this.DllNamespace = "SmartCard.OrtakAvm";
 }
 

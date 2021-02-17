@@ -1,0 +1,39 @@
+
+http://localhost:12735/PrmTarifeGaz/Index
+21:21:06 8 Aralık 2020 Salı
+  :System.InvalidCastException: Column contains NULL data
+   at Oracle.ManagedDataAccess.Client.OracleDataReader.GetDecimal(Int32 i)
+   at System.Data.Entity.Core.Objects.Internal.ShapedBufferedDataRecord.ReadDecimal(DbDataReader reader, Int32 ordinal)
+   at System.Data.Entity.Core.Objects.Internal.ShapedBufferedDataRecord.Initialize(DbDataReader reader, DbSpatialDataReader spatialDataReader, Type[] columnTypes, Boolean[] nullableColumns)
+   at System.Data.Entity.Core.Objects.Internal.ShapedBufferedDataRecord.Initialize(String providerManifestToken, DbProviderServices providerServices, DbDataReader reader, Type[] columnTypes, Boolean[] nullableColumns)
+   at System.Data.Entity.Core.Objects.Internal.BufferedDataReader.Initialize(String providerManifestToken, DbProviderServices providerServices, Type[] columnTypes, Boolean[] nullableColumns)
+   at System.Data.Entity.Core.Objects.Internal.ObjectQueryExecutionPlan.Execute[TResultType](ObjectContext context, ObjectParameterCollection parameterValues)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClassb.<GetResults>b__a()
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClassb.<GetResults>b__9()
+   at System.Data.Entity.Infrastructure.DefaultExecutionStrategy.Execute[TResult](Func`1 operation)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<System.Collections.Generic.IEnumerable<T>.GetEnumerator>b__0()
+   at System.Lazy`1.CreateValue()
+   at System.Lazy`1.LazyInitValue()
+   at System.Lazy`1.get_Value()
+   at System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   at System.Linq.Enumerable.SingleOrDefault[TSource](IEnumerable`1 source)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.<GetElementFunction>b__2[TResult](IEnumerable`1 sequence)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.ExecuteSingle[TResult](IEnumerable`1 query, Expression queryRoot)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.System.Linq.IQueryProvider.Execute[TResult](Expression expression)
+   at System.Linq.Queryable.SingleOrDefault[TSource](IQueryable`1 source)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.FindInStore(WrappedEntityKey key, String keyValuesParamName)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Find(Object[] keyValues)
+   at System.Data.Entity.DbSet`1.Find(Object[] keyValues)
+   at OsosOracle.DataLayer.Concrete.EntityFramework.Dal.EfPRMTARIFEGAZDal.Getir(Int32 id) in C:\Projeler\Mısır\OsosOracle\OsosOracle.DataLayer\Concrete\EntityFramework\Dal\EfPRMTARIFEGAZDal.cs:line 199
+   at OsosOracle.Business.Concrete.PRMTARIFEGAZManager.GetirById(Int32 id) in C:\Projeler\Mısır\OsosOracle\OsosOracle.Business\Concrete\PRMTARIFEGAZManager.cs:line 24
+   at OsosOracle.MvcUI.Controllers.PRMTARIFEGAZController.Guncelle(Int32 id) in C:\Projeler\Mısır\OsosOracle\OsosOracle.MvcUI\Controllers\PRMTARIFEGAZController.cs:line 108
+   at lambda_method(Closure , ControllerBase , Object[] )
+   at System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   at System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c.<BeginInvokeSynchronousActionMethod>b__9_0(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End(
+-------------------------------

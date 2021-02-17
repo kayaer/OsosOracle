@@ -26,6 +26,7 @@ namespace OsosOracle.Entities.ComplexType.SYSKULLANICIComplexTypes
         public string KurumAdi { get; set; }
         public string EPosta { get; set; }
         public int? Gsm { get; set; }
+        public string KurumDllAdi { get; set; }
     }
 
 }

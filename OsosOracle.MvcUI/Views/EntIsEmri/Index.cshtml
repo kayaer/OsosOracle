@@ -4,17 +4,17 @@
 @model  OsosOracle.MvcUI.Models.EntIsEmriModels.EntIsEmriIndexModel
 
     @{
-        ViewBag.Title = "İş Emri İşlemleri";
+        ViewBag.Title = "Work Order Operation";
     }
 
     @section panelHeading{
-        @Html.ButtonLink("Yeni İş Emri Ekle", "Ekle", "btn btn-xs btn-success modalizer", "fa-plus", htmlAttributes: new { Id = "btnYeniIsEmriKayit" })
+        @Html.ButtonLink(Dil.Ekle, "Ekle", "btn btn-xs btn-success modalizer", "fa-plus", htmlAttributes: new { Id = "btnYeniIsEmriKayit" })
     }
 
 
 
 
-    @using (Html.BeginPortlet("İş Emri Arama", "Detaylı Arama", "fa fa-search"))
+    @using (Html.BeginPortlet(Dil.Ara, Dil.DetayliArama, "fa fa-search"))
     {
         <form id="frmAra" class="form-bordered">
             <div class="form-group row">
@@ -26,7 +26,7 @@
                 </div>
             </div>
             <div class="form-actions">
-                <button type="button" class="btn btn-primary btn-sm" id="btnAra"><i class="fa fa-search"></i> Bul</button>
+                <button type="button" class="btn btn-primary btn-sm" id="btnAra"><i class="fa fa-search"></i> @Dil.Bul</button>
             </div>
         </form>
 
@@ -35,18 +35,18 @@
 
 
     <div class="panel panel-default">
-        <div class="panel-heading">İş Emri Listesi</div>
+        <div class="panel-heading"></div>
         <div class="panel-body">
             <table id="tblIsEmrilistesi" class="table table-striped table-bordered table-hover table-responsive">
                 <thead>
                     <tr>
-                        <th>İşlem Tarihi</th>
-                        <th>Sayaç Seri No </th>
-                        <th>İş Emri </th>
-                        <th>Durum </th>
-                        <th>Cevap</th>
-                        <th>İşlem Tarihi</th>
-                        <th style="width: 100px">İşlemler</th>
+                        <th>@Dil.IslemTarihi</th>
+                        <th>@Dil.SayacSeriNo</th>
+                        <th>İş Emri @Dil.ModemIslemleri </th>
+                        <th>@Dil.Durum </th>
+                        <th>@Dil.Cevap</th>
+                        <th>@Dil.IslemTarihi</th>
+                        <th style="width: 100px">@Dil.Islem</th>
                     </tr>
                 </thead>
             </table>

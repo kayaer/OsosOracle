@@ -26,7 +26,8 @@ namespace OsosOracle.DataLayer.Concrete.EntityFramework.Dal
                 DURUM = x.DURUM,
                 DIL = x.DIL,
                 KURUMKAYITNO = x.KURUMKAYITNO,
-                KurumAdi=x.ConKurumEf.AD
+                KurumAdi=x.ConKurumEf.AD,
+                KurumDllAdi=x.ConKurumEf.DllAdi
             
             });
         }

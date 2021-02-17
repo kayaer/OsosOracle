@@ -678,4 +678,7 @@
   <data name="Zaman" xml:space="preserve">
     <value>Zaman</value>
   </data>
+  <data name="TutarSifirdanFarkliOlmalidir" xml:space="preserve">
+    <value>Tutar 0 dan farklı olmalıdır</value>
+  </data>
 </root>

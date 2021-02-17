@@ -14,7 +14,7 @@
 
 
     <div class="panel panel-default">
-        <div class="panel-heading">Sayaç Bilgileri</div>
+        <div class="panel-heading">@Dil.SayacBilgileri</div>
         <div class="panel-body">
             <div class="form-horizontal">
                 <div class="form-group form-group-sm">
@@ -30,25 +30,25 @@
 
     <div class="form-group row">
         <div class="col-md-6">
-            @using (Html.BeginPortlet("Sayaç Operasyon Emirleri", "Detaylı Arama", "fa fa-search"))
+            @using (Html.BeginPortlet("Sayaç Operasyon Emirleri", Dil.DetayliArama, "fa fa-search"))
             {
-                <button type="submit" class="btn btn-primary" value="VanaAc" formaction="@Url.Action("VanaAc")">Vana Aç</button>
+                <button type="submit" class="btn btn-primary" value="VanaAc" formaction="@Url.Action("VanaAc")">@Dil.SayacVanaAc</button>
 
-                <button type="submit" class="btn btn-primary" value="VanaKapat" formaction="@Url.Action("VanaKapat")">Vana Kapat</button>
+                <button type="submit" class="btn btn-primary" value="VanaKapat" formaction="@Url.Action("VanaKapat")">@Dil.SayacVanaKapat</button>
 
                 @*<button type="submit" class="btn btn-primary" value="Reset" formaction="@Url.Action("Reset")">Reset</button>*@
-                   <button type="submit" class="btn btn-primary" value="YetkiKapat" formaction="@Url.Action("YetkiKapat")">Yetki Kapat</button>
+                   <button type="submit" class="btn btn-primary" value="YetkiKapat" formaction="@Url.Action("YetkiKapat")">@Dil.YetkiKapamaKartiYap </button>
 
-                <button type="submit" class="btn btn-primary" value="ZamanlanmisGorevSil" formaction="@Url.Action("ZamanlanmisGorevSil")">Zamanlanmış Görev Sil</button>
+                <button type="submit" class="btn btn-primary" value="ZamanlanmisGorevSil" formaction="@Url.Action("ZamanlanmisGorevSil")">  Zamanlanmış Görev Sil</button>
 
                @* <button type="submit" class="btn btn-primary" value="ZoneSet" formaction="@Url.Action("ZoneSet")">Zone Ayarla</button>*@
 
-                <button type="submit" class="btn btn-primary" value="YetkiAc" formaction="@Url.Action("YetkiAc")">Yetki Aç</button>
+                <button type="submit" class="btn btn-primary" value="YetkiAc" formaction="@Url.Action("YetkiAc")">@Dil.YetkiAc</button>
             }
 
         </div>
         <div class="col-md-6">
-            @using (Html.BeginPortlet("Sayaç Bilgi Okuma Emirleri", "Detaylı Arama", "fa fa-search"))
+            @using (Html.BeginPortlet("Sayaç Bilgi Okuma Emirleri", Dil.DetayliArama, "fa fa-search"))
             {
                 <button type="submit" class="btn btn-primary" value="ServerIpOku" formaction="@Url.Action("ServerIpOku")">Server İp Oku</button>
 
@@ -65,7 +65,7 @@
     </div>
 
 
-    using (Html.BeginPortlet(" Sayaç Ayar Gönderme", "Detaylı Arama", "fa fa-search"))
+    using (Html.BeginPortlet(" Sayaç Ayar Gönderme", Dil.DetayliArama, "fa fa-search"))
     {
 
 
@@ -83,13 +83,13 @@
 
         <div class="form-group row">
             <div class="col-md-2">
-                @Html.TextBoxFor(t => t.ApnAdi, new { @class = "form-control", placeholder = "Apn Adı" })
+                @Html.TextBoxFor(t => t.ApnAdi, new { @class = "form-control", placeholder = Dil.Ad})
             </div>
             <div class="col-md-2">
-                @Html.TextBoxFor(t => t.ApnUser, new { @class = "form-control", placeholder = "Apn Kullanıcı" })
+                @Html.TextBoxFor(t => t.ApnUser, new { @class = "form-control", placeholder = Dil.Kullanici })
             </div>
             <div class="col-md-2">
-                @Html.TextBoxFor(t => t.ApnPassword, new { @class = "form-control", placeholder = "Apn Password" })
+                @Html.TextBoxFor(t => t.ApnPassword, new { @class = "form-control", placeholder =Dil.Sifre })
             </div>
             <div class="col-md-2">
                 <button type="submit" class="btn btn-primary btn-block" value="ApnSet" formaction="@Url.Action("ApnSet")">Apn Set</button>
@@ -104,27 +104,27 @@
                 @Html.TextBoxFor(t => t.ServerPort, new { @class = "form-control", placeholder = "Server Port" })
             </div>
             <div class="col-md-2">
-                <button type="submit" class="btn btn-primary btn-block" value="ServerIpPortSet" formaction="@Url.Action("ServerIpPortSet")">Server Ip Set</button>
+                <button type="submit" class="btn btn-primary btn-block" value="ServerIpPortSet" formaction="@Url.Action("ServerIpPortSet")">@Dil.ServerIpGonder</button>
             </div>
         </div>
 
         <div class="form-group row">
             <div class="col-md-3">
-                @Html.TextBoxFor(t => t.KrediIslemNo, new { @class = "form-control", placeholder = "Kredi işlem no" })
+                @Html.TextBoxFor(t => t.KrediIslemNo, new { @class = "form-control", placeholder = Dil.Kredi +" işlem no" })
             </div>
             <div class="col-md-3">
-                @Html.TextBoxFor(t => t.Kredi, new { @class = "form-control int", placeholder = "Kredi" })
+                @Html.TextBoxFor(t => t.Kredi, new { @class = "form-control int", placeholder = Dil.Kredi })
             </div>
             <div class="col-md-2">
-                <button type="submit" class="btn btn-primary btn-block" value="KrediSet" formaction="@Url.Action("KrediYukle")">Kredi Yükle</button>
+                <button type="submit" class="btn btn-primary btn-block" value="KrediSet" formaction="@Url.Action("KrediYukle")">@Dil.KrediYukle</button>
             </div>
         </div>
         <div class="form-group row">
             <div class="col-md-6">
-                @Html.AutoComplete(t => t.ZamanlanmisGorev, Enums.AutocompleteFuction.ZamanlanmisGorevPeriyotGetir, Enums.AutoCompleteType.List, "Bağlantı Periyot")
+                @Html.AutoComplete(t => t.ZamanlanmisGorev, Enums.AutocompleteFuction.ZamanlanmisGorevPeriyotGetir, Enums.AutoCompleteType.List, Dil.BaglantiPeriyot)
             </div>
             <div class="col-md-2">
-                <button type="submit" class="btn btn-primary btn-block" value="KrediSet" formaction="@Url.Action("ZamanlanmisGorevEkle")">Zamanlanmiş Görev Ekle</button>
+                <button type="submit" class="btn btn-primary btn-block" value="KrediSet" formaction="@Url.Action("ZamanlanmisGorevEkle")"> Zamanlanmiş Görev Ekle</button>
             </div>
         </div>
     }

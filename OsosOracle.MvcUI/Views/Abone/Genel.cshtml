@@ -1,6 +1,7 @@
 ﻿@using OsosOracle.Framework.HtmlHelpers
 @using OsosOracle.MvcUI.Infrastructure
 @using OsosOracle.MvcUI.Resources
+@using OsosOracle.Framework.Entities
 @model  OsosOracle.MvcUI.Models.ENTABONEModels.ENTABONEIndexModel
 @{
     ViewBag.Title = Dil.AboneIslemleri;
@@ -8,17 +9,10 @@
 
 @section panelHeading{
     @Html.ButtonLink(Dil.YeniAboneEkle, "Ekle", "btn btn-xs btn-success modalizer", "fa-plus", htmlAttributes: new { Id = "btnYeniAboneKayit" })
+    <a id="btnKartBosalt" class="btn btn-xs btn-info"> <i class="fa fa-plus"></i>  @Dil.KartBosalt </a>
+    <a id="btnKartTipi" class="btn btn-xs btn-warning"> <i class="fa fa-plus"></i>  @Dil.KartTipi </a>
 
-    @if (Model.KurumKayitNo == 1 || Model.KurumKayitNo == 542  || Model.KurumKayitNo == 62 )
-    {
-        <a id="btnKartBosaltKontaksiz" class="btn btn-xs btn-info"> <i class="fa fa-plus"></i>  @Dil.KartBosalt </a>
-        <a id="btnKartTipiKontaksiz" class="btn btn-xs btn-warning"> <i class="fa fa-plus"></i>  @Dil.KartTipi </a>
-    }
-    else
-    {
-        <a id="btnKartBosaltKontakli" class="btn btn-xs btn-info"> <i class="fa fa-plus"></i>  @Dil.KartBosalt </a>
-        <a id="btnKartTipiKontakli" class="btn btn-xs btn-warning"> <i class="fa fa-plus"></i>  @Dil.KartTipi </a>
-    }
+
 }
 
 
@@ -32,7 +26,7 @@
             </div>
             <div class="col-md-6">
                 @Html.AutoComplete(t => t.ENTABONEAra.SayacKayitNo, Enums.AutocompleteFuction.SayacGetir, Enums.AutoCompleteType.List, Dil.Sayac)
-            </div>  
+            </div>
         </div>
 
         <div class="form-actions">
@@ -68,41 +62,36 @@
 
 <script type="text/javascript">
     $(document).ready(function () {
+        var Kullanici =@Html.Raw(Json.Encode((AktifKullanici)Session["User"]));
+        
 
+        $("#btnKartBosalt").click(function (e) {
+                KartBosalt();
+            });
 
-        $("#btnKartBosaltKontaksiz").click(function (e) {
-            KartBosaltKontaksiz();
-        });
-        $("#btnKartTipiKontaksiz").click(function (e) {
-            KartTipiKontaksiz();
-        });
-
-        $("#btnKartBosaltKontakli").click(function (e) {
-            KartBosaltKontakli();
-        });
-        $("#btnKartTipiKontakli").click(function (e) {
-            KartTipiKontakli();
-        });
+        $("#btnKartTipi").click(function (e) {
+                KartTipi();
+            });
 
         $("#btnKartHazirla").click(function (e) {
-            KartHazirla();
-        });
+                KartHazirla();
+            });
 
         $("#btnAra").click(function (e) {
 
-            e.preventDefault();
-            AraFiltered();
+                e.preventDefault();
+                AraFiltered();
 
-        });
+            });
 
         AraFiltered();
 
 
-        function AraFiltered() {
+            function AraFiltered() {
 
 
             $('#tblAboneListesi').dataTable({
-                'language': GetSession(baseUrl),
+                    'language': GetSession(baseUrl),
                 'processing': true,
                 'serverSide': true,
                 'destroy': true,
@@ -114,117 +103,33 @@
                     { 'data': "Islemler", sortable: false }
                 ],
                 'ajax': {
-                    'type': 'POST',
+                        'type': 'POST',
                     'data': $("#frmAra").serializeObject(),
                     'url': "@Url.Action("DataTablesList", "Abone")",
                     'error': function (xhr, ajaxOptions, errorThrown) { ajaxMesajGoster(xhr.responseJSON.Mesaj); },
                     'complete': function () { }
-                }
+                    }
 
-            });
+                });
 
-        }
+            }
 
     });
 
 
-    function KartBosaltKontakli() {
-
-        try {
-
-            var su = new ActiveXObject("SmartCard.OrtakAvm");
-            var kartTip = su.KartTipi();
-
-            if (kartTip == "Abone Karti" || kartTip == "Abone Kartı" || kartTip == "CBA " || kartTip == "Subscriber Card") {
-                var result = su.AboneBosalt();
-                if (result === "1") {
-                    ajaxMesajGoster('İşlem Başarılı');
-                } else {
-                    ajaxMesajGoster('İşlem Başarısız', 'Hata');
-                }
-                return;
-            } else if (kartTip == "Bos Kart") {
-                ajaxMesajGoster('Kart Boş');
-            }
-
-        }
-        catch (ex) {
-            ajaxMesajGoster(ex, 'Hata');
-        }
-
+    function KartBosalt() {
+        var Kullanici =@Html.Raw(Json.Encode((AktifKullanici)Session["User"]));
+        var dll = new Kullanici.KurumDllAdi();
+        dll.AboneBosalt();
+  
     }
 
-    function KartTipiKontakli() {
-
-        try {
-
-            var su = new ActiveXObject("SmartCard.OrtakAvm");
-            var kartTip = su.KartTipi();
-            if(kartTip=="Subscriber Card")
-            {
-            kartTip="Abone Kartı";
-            }else if(kartTip=="Empty Card")
-            {
-            kartTip="Boş kart";
-            }
-            ajaxMesajGoster(kartTip);
-        }
-        catch (ex) {
-            var kalorimetre = new ActiveXObject("SmartCard.OrtakAvm");
-            var kartTip = kalorimetre.KartTipi();
-            ajaxMesajGoster(kartTip);
-
-        }
-
+    function KartTipi() {
+        var Kullanici =@Html.Raw(Json.Encode((AktifKullanici)Session["User"]));
+        var dll = new Kullanici.KurumDllAdi();
+        dll.KartTipi();
     }
 
-    function KartBosaltKontaksiz() {
-        try {
-
-            var su = new ActiveXObject("SmartCard.Mcm");
-            var kartTip = su.KartTipi();
-
-            if (kartTip == "Abone Karti" || kartTip == "Abone Kartı" || kartTip == "CBA ") {
-                var result = su.AboneBosalt();
-                if (result === "1") {
-                    ajaxMesajGoster('İşlem Başarılı');
-                } else {
-                    ajaxMesajGoster('İşlem Başarısız', 'Hata');
-                }
-                return;
-            } else if (kartTip == "Bos Kart") {
-                ajaxMesajGoster('Kart Boş');
-            }
-
-        }
-        catch (ex) {
-            var gaz = new ActiveXObject("SmartCard.Gaz");
-                    var result = gaz.Bosalt();
-                    if (result === "1") {
-                        ajaxMesajGoster('İşlem Başarılı');
-                    } else {
-                        ajaxMesajGoster('İşlem Başarısız', 'Hata');
-                    }
-        }
-
-    }
-
-    function KartTipiKontaksiz() {
-
-        try {
-
-            var su = new ActiveXObject("SmartCard.Mcm");
-            var kartTip = su.KartTipi();
-            ajaxMesajGoster(kartTip);
-        }
-        catch (ex) {
-              var gaz = new ActiveXObject("SmartCard.Gaz");
-                var kartTip = gaz.KartTipi();
-                ajaxMesajGoster(kartTip);
-
-        }
-
-    }
 
   function KartHazirla(aboneKayitNo) {
                 try {

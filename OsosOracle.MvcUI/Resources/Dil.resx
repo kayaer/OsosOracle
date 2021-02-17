@@ -1323,4 +1323,7 @@
   <data name="GunlukSatisGrafigi" xml:space="preserve">
     <value>Daily Sales Chart</value>
   </data>
+  <data name="TutarSifirdanFarkliOlmalidir" xml:space="preserve">
+    <value>The amount must be different from 0</value>
+  </data>
 </root>

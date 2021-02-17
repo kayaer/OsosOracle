@@ -3364,6 +3364,15 @@ namespace OsosOracle.MvcUI.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The amount must be different from 0.
+        /// </summary>
+        public static string TutarSifirdanFarkliOlmalidir {
+            get {
+                return ResourceManager.GetString("TutarSifirdanFarkliOlmalidir", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Production.
         /// </summary>
         public static string Uretim {

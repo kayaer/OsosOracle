@@ -17,8 +17,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OsosOracle.Framework", "Oso
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartCard", "nahcivanYoncaDll\SmartCard\SmartCard\SmartCard.csproj", "{995AB6B6-78BC-40C8-B269-6CDD3E3F41BE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsApp1", "WindowsFormsApp1\WindowsFormsApp1.csproj", "{6F330820-E989-4941-AB72-4F2C3BA7569D}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabbitmqParser", "RabbitmqParser\RabbitmqParser.csproj", "{0E1915F7-EB6A-498B-B6B0-0C2F7CD24BCD}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Listener", "Listener\Listener.csproj", "{1B9CDDF5-17F6-43FE-A379-95D7245AFC8F}"
@@ -53,10 +51,6 @@ Global
 		{995AB6B6-78BC-40C8-B269-6CDD3E3F41BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{995AB6B6-78BC-40C8-B269-6CDD3E3F41BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{995AB6B6-78BC-40C8-B269-6CDD3E3F41BE}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6F330820-E989-4941-AB72-4F2C3BA7569D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6F330820-E989-4941-AB72-4F2C3BA7569D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6F330820-E989-4941-AB72-4F2C3BA7569D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6F330820-E989-4941-AB72-4F2C3BA7569D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{0E1915F7-EB6A-498B-B6B0-0C2F7CD24BCD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{0E1915F7-EB6A-498B-B6B0-0C2F7CD24BCD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0E1915F7-EB6A-498B-B6B0-0C2F7CD24BCD}.Release|Any CPU.ActiveCfg = Release|Any CPU

@@ -52,6 +52,7 @@ namespace OsosOracle.MvcUI.Models.ENTSATISModels
         public string YedekKrediOkunduBilgisi { get; set; }
         public string Kalan { get; set; }
         public string Harcanan { get; set; }
+        public string Cap { get; set; }
 
 
     }

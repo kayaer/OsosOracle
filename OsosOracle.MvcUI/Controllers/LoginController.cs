@@ -50,7 +50,7 @@ namespace OsosOracle.MvcUI.Controllers
                 }
 
 
-                AktifKullanici = new AktifKullanici { KullaniciAd=kullanici.KULLANICIAD,Dil=kullanici.DIL,Ad=kullanici.AD,Soyad=kullanici.SOYAD,KurumAdi=kullanici.KurumAdi,KurumKayitNo=kullanici.KURUMKAYITNO,KayitNo=kullanici.KAYITNO};
+                AktifKullanici = new AktifKullanici { KullaniciAd=kullanici.KULLANICIAD,Dil=kullanici.DIL,Ad=kullanici.AD,Soyad=kullanici.SOYAD,KurumAdi=kullanici.KurumAdi,KurumKayitNo=kullanici.KURUMKAYITNO,KayitNo=kullanici.KAYITNO,KurumDllAdi=kullanici.KurumDllAdi};
                 System.Web.HttpCookie cookie = new System.Web.HttpCookie("Yonca", model.KULLANICIAD);
                 cookie.Expires = DateTime.Now.AddMonths(3);
                 Response.Cookies.Add(cookie);

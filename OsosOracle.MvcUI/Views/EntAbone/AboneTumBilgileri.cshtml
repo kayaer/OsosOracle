@@ -11,7 +11,7 @@
     {
         <a href="@Model.ReturnUrl" class="btn btn-circle red-pink"><i class="fa fa-mail-reply"></i> @Dil.GeriDon</a>
     }
-    @if (Model.KurumKayitNo == enumKurum.Elektromed.GetHashCode() || Model.KurumKayitNo == enumKurum.Mısır.GetHashCode() || Model.KurumKayitNo==enumKurum.Apex1.GetHashCode())
+    @if (Model.KurumKayitNo == enumKurum.Elektromed.GetHashCode() || Model.KurumKayitNo == enumKurum.Mısır.GetHashCode() || Model.KurumKayitNo == enumKurum.Apex1.GetHashCode())
     {
         <a id="btnKartBosaltKontaksiz" class="btn btn-xs btn-info"> <i class="fa fa-plus"></i>  @Dil.KartBosalt </a>
         <a id="btnKartTipiKontaksiz" class="btn btn-xs btn-warning"> <i class="fa fa-plus"></i>  @Dil.KartTipi </a>
@@ -354,8 +354,39 @@
             });
             request.done(function (jqXHR) {
                 unblockUI();
-                var gaz = new ActiveXObject("SmartCard.Gaz");
-                var result = gaz.AboneYap(jqXHR.EntSayacDetay.SERINO,
+
+                 if (jqXHR.EntSayacDetay.SayacModelKayitNo ==@enumSayacModeli.CiniGaz.GetHashCode())
+                 {
+                     var ciniGaz = new ActiveXObject("SmartCard.CiniGaz.Main");
+                     var result = ciniGaz.AboneYap(jqXHR.EntSayacDetay.SERINO,
+                         jqXHR.AboneNo,
+                         0,//kartno
+                         jqXHR.PrmTarifeGaz.SAYACCAP,
+                         jqXHR.PrmTarifeGaz.SAYACTUR,
+                         jqXHR.PrmTarifeGaz.DONEM,
+                         jqXHR.PrmTarifeGaz.FIYAT1,
+                         jqXHR.PrmTarifeGaz.FIYAT2,
+                         jqXHR.PrmTarifeGaz.FIYAT3,
+                         jqXHR.PrmTarifeGaz.LIMIT1,
+                         jqXHR.PrmTarifeGaz.LIMIT2,
+                         jqXHR.PrmTarifeGaz.BAYRAM1GUN,
+                         jqXHR.PrmTarifeGaz.BAYRAM1AY,
+                         jqXHR.PrmTarifeGaz.BAYRAM1SURE,
+                         jqXHR.PrmTarifeGaz.BAYRAM2GUN,
+                         jqXHR.PrmTarifeGaz.BAYRAM2AY,
+                         jqXHR.PrmTarifeGaz.BAYRAM2SURE,
+                         jqXHR.PrmTarifeGaz.BAYRAM2SURE//AvansOnay
+                     );
+                      if (result === "1") {
+                                                      ajaxMesajGoster('İşlem Başarılı');
+                                                  } else {
+                                                      ajaxMesajGoster('İşlem Başarısız', 'Hata');
+                                                  }
+                 }
+                  else
+                 {
+                     var gaz = new ActiveXObject("SmartCard.Gaz");
+                     var result = gaz.AboneYap(jqXHR.EntSayacDetay.SERINO,
                                           jqXHR.AboneNo,
                                           jqXHR.PrmTarifeGaz.SAYACTUR,
                                           jqXHR.PrmTarifeGaz.SAYACCAP,
@@ -379,6 +410,9 @@
                                                   } else {
                                                       ajaxMesajGoster('İşlem Başarısız', 'Hata');
                                                   }
+                    }
+
+
 
             });
 

@@ -45,7 +45,8 @@ namespace OsosOracle.Entities.Enums
         Kalorimetre = 4,
         Gaz = 5,
         MercanYd = 6,
-        As25Yd = 7
+        As25Yd = 7,
+        CiniGaz=8
     }
 
     public enum enumIsEmirleriDurum

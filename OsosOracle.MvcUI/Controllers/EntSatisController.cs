@@ -90,6 +90,12 @@ namespace OsosOracle.MvcUI.Controllers
         {
             return View(new SatisModel());
         }
+
+        public ActionResult CiniGaz()
+        {
+            return View(new SatisModel());
+        }
+
         public JsonResult SatisPars(SatisModel model)
         {
             if (string.IsNullOrEmpty(model.HamData))
@@ -446,7 +452,7 @@ namespace OsosOracle.MvcUI.Controllers
         //[BackUpFilter]
         public JsonResult SatisYap(SatisModel model)
         {
-            if (model.SuSatisModel.Satis != null && model.SuSatisModel.Satis.SatisTipi == enumSatisTipi.Satis.GetHashCode() )
+            if (model.SuSatisModel.Satis != null && model.SuSatisModel.Satis.SatisTipi == enumSatisTipi.Satis.GetHashCode())
             {
                 if (model.SuSatisModel.Satis.KAYITNO == 0 && model.SuSatisModel.Satis.ODEME > 0)
                 {
@@ -471,7 +477,7 @@ namespace OsosOracle.MvcUI.Controllers
                 model.SuSatisModel.Satis = _entSatisService.Guncelle(model.SuSatisModel.Satis);
             }
 
-            if (model.KalorimetreSatisModel.Satis != null && model.KalorimetreSatisModel.Satis.SatisTipi == enumSatisTipi.Satis.GetHashCode() )
+            if (model.KalorimetreSatisModel.Satis != null && model.KalorimetreSatisModel.Satis.SatisTipi == enumSatisTipi.Satis.GetHashCode())
             {
                 if (model.KalorimetreSatisModel.Satis.KAYITNO == 0 && model.KalorimetreSatisModel.Satis.ODEME > 0)
                 {
@@ -546,7 +552,7 @@ namespace OsosOracle.MvcUI.Controllers
             List<SatisBilgileri> dataSource4 = new List<SatisBilgileri>();
             SatisBilgileri satisBilgileri = new SatisBilgileri();
 
-            if (model.SuSatisModel.Satis!=null && model.SuSatisModel.Satis.KAYITNO > 0)
+            if (model.SuSatisModel.Satis != null && model.SuSatisModel.Satis.KAYITNO > 0)
             {
                 ENTSATISDetay suSatisDetay = _entSatisService.DetayGetirById(model.SuSatisModel.Satis.KAYITNO);
                 var aboneSayacSu = _entAboneSayacService.DetayGetir(new ENTABONESAYACAra { SAYACKAYITNO = suSatisDetay.SAYACKAYITNO, Durum = 1 }).FirstOrDefault();
@@ -579,7 +585,7 @@ namespace OsosOracle.MvcUI.Controllers
 
 
 
-            if (model.KalorimetreSatisModel.Satis!=null && model.KalorimetreSatisModel.Satis.KAYITNO > 0)
+            if (model.KalorimetreSatisModel.Satis != null && model.KalorimetreSatisModel.Satis.KAYITNO > 0)
             {
                 ENTSATISDetay kalorimetreSatisDetay = _entSatisService.DetayGetirById(model.KalorimetreSatisModel.Satis.KAYITNO);
                 var aboneSayacKalorimetre = _entAboneSayacService.DetayGetir(new ENTABONESAYACAra { SAYACKAYITNO = kalorimetreSatisDetay.SAYACKAYITNO, Durum = 1 }).FirstOrDefault();
@@ -1070,6 +1076,404 @@ namespace OsosOracle.MvcUI.Controllers
             System.IO.File.WriteAllBytes(path, renderedBytes);
 
             return filename;
+        }
+        #endregion
+
+
+        #region ÇiniGaz
+        public JsonResult CiniGazHamdataPars(SatisModel model)
+        {
+            if (string.IsNullOrEmpty(model.HamData))
+            {
+                model.GazSatisModel.GazOkunan.HamData = "ISSUER(HX) | 67 71 65 32\n" +
+                    "ISSUER(CH) | C G A  \n" +
+                    "CihazNo | 12345677\n" +
+                    "Katsayi1 | 1000\n" +
+                    "Katsayi2 | 1000\n" +
+                    "Katsayi3 | 1000\n" +
+                    "Limit1 | 1000\n" +
+                    "Limit2 | 2000\n" +
+                    "AboneNo | 123\n" +
+                    "AnaKredi | 0\n" +
+                    "YedekKredi | 0\n" +
+                    "AkoYko | 192\n" +
+                    "AnaKrediDurum | YÜKLENMEDİ\n" +
+                    "YedekKrediDurum | YÜKLENMEDİ\n" +
+                    "IslemNo | 0\n" +
+                    "KartNo | 64\n" +
+                    "Cap | 20\n" +
+                    "Tip | 1\nDonemGun1 | 0\nVanaPulseSure | 25\nVanaCntSure | 30\nIade | 0\nMaxdebiSiniri | 0\nHaftaSonuOnay | 1\nbos | 0\nBayram1 | 529\nBayram2 | 529\nKalanKredi | 0\nHarcananKredi | 0\nGercekTuketim | 0\nKademeTuketim1 | 0\nKademeTuketim2 | 0\nKademeTuketim3 | 0\nSayacTarihi | 00 / 00 / 2000\nNegatifTuketim | 0\nDonemTuketimi | 0\nDonemTuketimi1 | 0\nDonemTuketimi2 | 0\nDonemTuketimi3 | 0\nDonemTuketimi4 | 0\nDonemTuketimi5 | 0\nDonemTuketimi6 | 0\nSonKrediTarihi | 00 / 00 / 2000\nSonPulseTarihi | 00 / 00 / 2000\nSonCezaTarihi | 00 / 00 / 2000\nSonArizaTarihi | 00 / 00 / 2000\nBorcTarihi | 00 / 00 / 2000\nVanaAcmaTarihi | 00 / 00 / 2000\nVanaKapamaTarihi | 00 / 00 / 2000\nVersiyon | 0\nVanaOperasyonSayisi | 0\nSayacDurumu | 0\nSayacDurumAciklama |\nAnaPil | 0\nDonemGun2 | 0\nKartHata | 0\nHaftaninGunu | 0\nVanaDurumu | 0\nArizaTipi | 0\nMaxdebiSeviyesi | 0\nSonTakilanYetkiKartiOzellik1 | 00 / 00 / 2000 - 0 - 0\nSonTakilanYetkiKartiOzellik2 | 00 / 00 / 2000 - 0 - 0\nSonTakilanYetkiKartiOzellik3 | 00 / 00 / 2000 - 0 - 0\nMaxDebiTarihi | 00 / 00 / 2000\nDonemTuketimi7 | 0\nDonemTuketimi8 | 0\nDonemTuketimi9 | 0\nDonemTuketimi10 | 0\nDonemTuketimi11 | 0\nDonemTuketimi12 | 0\nDonemTuketimi13 | 0\nDonemTuketimi14 | 0\nDonemTuketimi15 | 0\nDonemTuketimi16 | 0\nDonemTuketimi17 | 0\nDonemTuketimi18 | 0\nDonemTuketimi19 | 0\nDonemTuketimi20 | 0\nDonemTuketimi21 | 0\nDonemTuketimi22 | 0\nDonemTuketimi23 | 0\nDonemTuketimi24 | 0\nMektuk | 0\nIadeKalan | 0\nResetSayisi | 0\n";
+
+            }
+            else
+            {
+                model.GazSatisModel.GazOkunan.HamData = model.HamData;
+            }
+
+            string[] gazData = model.GazSatisModel.GazOkunan.HamData.Split('\n');
+
+            model.GazSatisModel.GazOkunan.CihazNo = gazData[2].Split('|')[1].Trim();
+            model.GazSatisModel.GazOkunan.AboneNo = gazData[8].Split('|')[1].Trim();
+            model.GazSatisModel.GazOkunan.Ako = gazData[12].Split('|')[1].Trim();
+            model.GazSatisModel.GazOkunan.Kredi = gazData[9].Split('|')[1].Trim();
+            model.GazSatisModel.GazOkunan.Yko = gazData[13].Split('|')[1].Trim();
+            model.GazSatisModel.GazOkunan.YedekKredi = gazData[10].Split('|')[1].Trim();
+            model.GazSatisModel.GazOkunan.Kalan = gazData[27].Split('|')[1].Trim();
+            model.GazSatisModel.GazOkunan.Harcanan = gazData[28].Split('|')[1].Trim();
+            model.GazSatisModel.GazOkunan.Cap = gazData[16].Split('|')[1].Trim();
+
+
+            var gazSayac = _entSayacService.Getir(new ENTSAYACAra { SERINO = model.GazSatisModel.GazOkunan.CihazNo.Trim(), SayacTuru = 4 }).FirstOrDefault();//Gaz Sayacı
+            if (gazSayac == null)
+            {
+                throw new NotificationException("Gaz Sayacı Bulunamadı");
+            }
+
+            model.GazSatisModel.AboneSayacDetay = _entAboneSayacService.DetayGetir(new ENTABONESAYACAra { SAYACKAYITNO = gazSayac.KAYITNO, Durum = 1 }).FirstOrDefault();
+
+
+            return Json(model, JsonRequestBehavior.AllowGet);
+        }
+
+        [HttpPost]
+        public JsonResult CiniGazHesapla(SatisModel model)
+        {
+            try
+            {
+                model.GazSatisModel.PrmTarifeGazDetay = _prmTarifeGazService.DetayGetir(new PRMTARIFEGAZAra { KAYITNO = model.GazSatisModel.AboneSayacDetay.TARIFEKAYITNO }).FirstOrDefault();
+
+                if (model.GazSatisModel.PrmTarifeGazDetay == null)
+                {
+                    throw new NotificationException(Dil.TarifeBilgileriBulunamadi);
+                }
+
+                if (model.GazSatisModel.Satis.ODEME == 0)
+                {
+                    throw new NotificationException(Dil.TutarSifirdanFarkliOlmalidir);
+                }
+
+                if (model.GazSatisModel.PrmTarifeGazDetay.TuketimKatsayi == 0)
+                {
+                    throw new NotificationException("Tarife tüketim katsayı 0 dan farklı olmalıdır");
+                }
+
+                if (model.GazSatisModel.PrmTarifeGazDetay.BIRIMFIYAT == 0)
+                {
+                    throw new NotificationException(Dil.TarifeBirimFiyatSifirdanFarkliOlmalidir);
+
+                }
+
+
+                model.GazSatisModel.Satis.Ctv = model.GazSatisModel.PrmTarifeGazDetay.Ctv * model.GazSatisModel.Satis.ODEME;
+                model.GazSatisModel.Satis.Kdv = (model.GazSatisModel.Satis.ODEME - model.GazSatisModel.Satis.Ctv) * model.GazSatisModel.PrmTarifeGazDetay.Kdv;
+                model.GazSatisModel.Satis.SatisTutari = (model.GazSatisModel.Satis.ODEME - model.GazSatisModel.Satis.Ctv - model.GazSatisModel.Satis.Kdv);
+
+                model.GazSatisModel.Satis.YEDEKKREDI = (model.GazSatisModel.PrmTarifeGazDetay.YEDEKKREDI * model.GazSatisModel.PrmTarifeGazDetay.TuketimKatsayi);
+                model.GazSatisModel.Satis.KREDI = ((model.GazSatisModel.Satis.SatisTutari * model.GazSatisModel.PrmTarifeGazDetay.TuketimKatsayi) / model.GazSatisModel.PrmTarifeGazDetay.BIRIMFIYAT);
+                //model.SuSatisModel.Satis.KREDI = Math.Round(Convert.ToDecimal( model.SuSatisModel.Satis.KREDI), 2);
+                model.GazSatisModel.Satis.KREDI = Math.Floor(Convert.ToDecimal(model.GazSatisModel.Satis.KREDI));
+
+                if (model.GazSatisModel.Satis.KREDI < model.GazSatisModel.Satis.YEDEKKREDI)
+                {
+                    throw new NotificationException(Dil.YedekKredidenAzMiktardaSatisYapilamaz);
+                }
+                if (model.GazSatisModel.GazOkunan.Ako == "YÜKLENMEDİ" && model.GazSatisModel.GazOkunan.Yko == "YÜKLENMEDİ")
+                {
+                    model.GazSatisModel.Satis.ToplamKredi = Convert.ToInt32(model.GazSatisModel.GazOkunan.Kredi) + Convert.ToInt32(model.GazSatisModel.GazOkunan.YedekKredi) + model.GazSatisModel.Satis.KREDI - model.GazSatisModel.Satis.YEDEKKREDI;
+                    model.GazSatisModel.Satis.YEDEKKREDI = model.GazSatisModel.Satis.YEDEKKREDI;
+                }
+                else if (model.GazSatisModel.GazOkunan.Ako == "YÜKLENDİ" && model.GazSatisModel.GazOkunan.Yko == "YÜKLENMEDİ")
+                {
+                    model.GazSatisModel.Satis.ToplamKredi = Convert.ToInt32(model.GazSatisModel.GazOkunan.YedekKredi) + model.GazSatisModel.Satis.KREDI - model.GazSatisModel.Satis.YEDEKKREDI;
+                    model.GazSatisModel.Satis.YEDEKKREDI = model.GazSatisModel.Satis.YEDEKKREDI;
+
+                }
+                else if (model.GazSatisModel.GazOkunan.Ako == "YÜKLENDİ" && model.GazSatisModel.GazOkunan.Yko == "YÜKLENDİ")
+                {
+
+                    model.GazSatisModel.Satis.ToplamKredi = model.GazSatisModel.Satis.KREDI - model.GazSatisModel.Satis.YEDEKKREDI;
+                    model.GazSatisModel.Satis.YEDEKKREDI = model.GazSatisModel.Satis.YEDEKKREDI;
+                }
+
+
+
+                model.GazSatisModel.Satis.ABONEKAYITNO = model.GazSatisModel.AboneSayacDetay.ABONEKAYITNO;
+                model.GazSatisModel.Satis.SAYACKAYITNO = model.GazSatisModel.AboneSayacDetay.SAYACKAYITNO;
+
+
+            }
+            catch (Exception ex)
+            {
+                throw new NotificationException(ex.Message);
+            }
+
+            return Json(model, JsonRequestBehavior.AllowGet);
+        }
+
+        public JsonResult CiniGazSatisYap(SatisModel model)
+        {
+            if (model.GazSatisModel.Satis.SatisTipi == enumSatisTipi.Satis.GetHashCode())
+            {
+                if (model.GazSatisModel.Satis.ODEME > 0)
+                {
+
+                    model.GazSatisModel.Satis.OLUSTURAN = AktifKullanici.KayitNo;
+                    model.GazSatisModel.Satis = _entSatisService.Ekle(model.GazSatisModel.Satis);
+
+                    var abone = _entAboneService.GetirById(model.GazSatisModel.Satis.ABONEKAYITNO);
+                    abone.SonSatisTarih = DateTime.Now;
+                    _entAboneService.Guncelle(abone.List());
+                }
+            }
+            else if (model.GazSatisModel.Satis.SatisTipi == enumSatisTipi.BedelsizSatis.GetHashCode())
+            {
+                model.GazSatisModel.Satis.OLUSTURAN = AktifKullanici.KayitNo;
+                model.GazSatisModel.Satis = _entSatisService.Ekle(model.SuSatisModel.Satis);
+            }
+            else if (model.SuSatisModel.Satis.SatisTipi == enumSatisTipi.SatisIptal.GetHashCode())
+            {
+                model.GazSatisModel.Satis.OLUSTURAN = AktifKullanici.KayitNo;
+                model.GazSatisModel.Satis = _entSatisService.Ekle(model.SuSatisModel.Satis);
+            }
+
+
+            return Json(CiniGazMakbuzOlustur(model), JsonRequestBehavior.AllowGet);
+        }
+
+        public string CiniGazMakbuzOlustur(SatisModel model)
+        {
+            if (AktifKullanici.Dil == enumDil.Turkce.GetHashCode())
+            {
+                ENTSATISDetay suSatisDetay = _entSatisService.DetayGetirById(model.SuSatisModel.Satis.KAYITNO);
+                ENTSATISDetay kalorimetreSatisDetay = _entSatisService.DetayGetirById(model.KalorimetreSatisModel.Satis.KAYITNO);
+
+                LocalReport lr = new LocalReport();
+                string path = Path.Combine(Server.MapPath("~/Reports"), "Report.rdlc");
+                if (System.IO.File.Exists(path))
+                {
+                    lr.ReportPath = path;
+                }
+
+                string reportType = "PDF";
+                string mimeType;
+                string encoding;
+                string fileNameExtension;
+                string deviceInfo = "<DeviceInfo>" +
+                         "  <OutputFormat>PDF</OutputFormat>" +
+                         "  <PageWidth>8.27in</PageWidth>" +
+                         "  <PageHeight>11.69in</PageHeight>" +
+                         "  <MarginTop>0.25in</MarginTop>" +
+                         "  <MarginLeft>0.4in</MarginLeft>" +
+                         "  <MarginRight>0in</MarginRight>" +
+                         "  <MarginBottom>0.25in</MarginBottom>" +
+                         "  <EmbedFonts>None</EmbedFonts>" +
+                         "</DeviceInfo>";
+
+
+                Warning[] warning;
+                string[] streams;
+                byte[] renderedBytes;
+
+                Microsoft.Reporting.WebForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WebForms.ReportDataSource();
+                List<YesilVadiMakbuzBilgileri> dataSource1 = new List<YesilVadiMakbuzBilgileri>();
+                YesilVadiMakbuzBilgileri makbuzBilgileri = new YesilVadiMakbuzBilgileri();
+
+                Microsoft.Reporting.WebForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WebForms.ReportDataSource();
+                List<KalorimetreSatisBilgileri> dataSource2 = new List<KalorimetreSatisBilgileri>();
+                KalorimetreSatisBilgileri kalorimetreSatisBilgileri = new KalorimetreSatisBilgileri();
+
+                Microsoft.Reporting.WebForms.ReportDataSource reportDataSource3 = new Microsoft.Reporting.WebForms.ReportDataSource();
+                List<SuSatisBilgileri> dataSource3 = new List<SuSatisBilgileri>();
+                SuSatisBilgileri suSatisBilgileri = new SuSatisBilgileri();
+
+                Microsoft.Reporting.WebForms.ReportDataSource reportDataSource4 = new Microsoft.Reporting.WebForms.ReportDataSource();
+                List<SatisBilgileri> dataSource4 = new List<SatisBilgileri>();
+                SatisBilgileri satisBilgileri = new SatisBilgileri();
+
+                if (suSatisDetay != null)
+                {
+                    makbuzBilgileri.AboneAdiSoyadi = suSatisDetay.AboneAdSoyad;
+                    makbuzBilgileri.AboneNo = suSatisDetay.AboneNo;
+                    makbuzBilgileri.FaturaTarihi = suSatisDetay.OLUSTURMATARIH.ToString();
+                    makbuzBilgileri.SuSayacNo = suSatisDetay.KapakSeriNo.ToString();
+
+                    suSatisBilgileri.Tarih = suSatisDetay.OLUSTURMATARIH.ToString();
+                    suSatisBilgileri.SayacTuru = "SU";
+                    suSatisBilgileri.KontorMiktar = suSatisDetay.KREDI.ToString();
+
+                    suSatisBilgileri.BakimBedeli = suSatisDetay.AylikBakimBedeli.ToString();
+                    suSatisBilgileri.Ctv = suSatisDetay.Ctv.ToString();
+                    suSatisBilgileri.Kdv = suSatisDetay.Kdv.ToString();
+                    suSatisBilgileri.Tutar = suSatisDetay.SatisTutarı.ToString();
+                    suSatisBilgileri.TotalTutar = suSatisDetay.ODEME.ToString();
+
+                }
+                if (kalorimetreSatisDetay != null)
+                {
+                    makbuzBilgileri.AboneAdiSoyadi = kalorimetreSatisDetay.AboneAdSoyad;
+                    makbuzBilgileri.AboneNo = kalorimetreSatisDetay.AboneNo;
+                    makbuzBilgileri.FaturaTarihi = kalorimetreSatisDetay.OLUSTURMATARIH.ToString();
+                    makbuzBilgileri.KalorimetreNo = kalorimetreSatisDetay.KapakSeriNo.ToString();
+
+                    kalorimetreSatisBilgileri.Tarih = kalorimetreSatisDetay.OLUSTURMATARIH.ToString();
+                    kalorimetreSatisBilgileri.SayacTuru = "KALORİMETRE";
+                    kalorimetreSatisBilgileri.KontorMiktar = kalorimetreSatisDetay.KREDI.ToString();
+
+                    kalorimetreSatisBilgileri.BakimBedeli = kalorimetreSatisDetay.AylikBakimBedeli.ToString();
+                    kalorimetreSatisBilgileri.Ctv = kalorimetreSatisDetay.Ctv.ToString();
+                    kalorimetreSatisBilgileri.Kdv = kalorimetreSatisDetay.Kdv.ToString();
+                    kalorimetreSatisBilgileri.Tutar = kalorimetreSatisDetay.SatisTutarı.ToString();
+                    kalorimetreSatisBilgileri.TotalTutar = kalorimetreSatisDetay.ODEME.ToString();
+
+
+                }
+
+                satisBilgileri.SatisTutari = (kalorimetreSatisBilgileri.Tutar.ToDecimal() + suSatisBilgileri.Tutar.ToDecimal()).ToString();
+                satisBilgileri.BakimHizmetleriBedeli = (kalorimetreSatisBilgileri.BakimBedeli.ToInt32() + suSatisBilgileri.BakimBedeli.ToInt32()).ToString();
+                satisBilgileri.CtvBedeli = (kalorimetreSatisBilgileri.Ctv.ToDecimal() + suSatisBilgileri.Ctv.ToDecimal()).ToString();
+                satisBilgileri.KdvBedeli = (kalorimetreSatisBilgileri.Kdv.ToDecimal() + suSatisBilgileri.Kdv.ToDecimal()).ToString();
+                satisBilgileri.GenelToplam = (kalorimetreSatisBilgileri.TotalTutar.ToDecimal() + suSatisBilgileri.TotalTutar.ToDecimal()).ToString();
+
+                dataSource1.Add(makbuzBilgileri);
+                reportDataSource1.Name = "DataSet1";
+                reportDataSource1.Value = dataSource1;
+                lr.DataSources.Add(reportDataSource1);
+
+                dataSource2.Add(kalorimetreSatisBilgileri);
+                reportDataSource2.Name = "DataSet2";
+                reportDataSource2.Value = dataSource2;
+                lr.DataSources.Add(reportDataSource2);
+
+                dataSource3.Add(suSatisBilgileri);
+                reportDataSource3.Name = "DataSet3";
+                reportDataSource3.Value = dataSource3;
+                lr.DataSources.Add(reportDataSource3);
+
+                dataSource4.Add(satisBilgileri);
+                reportDataSource4.Name = "DataSet4";
+                reportDataSource4.Value = dataSource4;
+                lr.DataSources.Add(reportDataSource4);
+
+
+
+
+
+                renderedBytes = lr.Render("PDF", deviceInfo, out mimeType, out encoding, out fileNameExtension, out streams, out warning);
+
+                string filename = makbuzBilgileri.AboneNo + DateTime.Now.Month + DateTime.Now.Day + DateTime.Now.Hour + DateTime.Now.Minute + ".pdf";
+                path = Server.MapPath("~/App_Data/" + filename);
+                System.IO.File.WriteAllBytes(path, renderedBytes);
+
+                return filename;
+            }
+            else
+            {
+                ENTSATISDetay suSatisDetay = _entSatisService.DetayGetirById(model.SuSatisModel.Satis.KAYITNO);
+                ENTSATISDetay gazSatisDetay = _entSatisService.DetayGetirById(model.GazSatisModel.Satis.KAYITNO);
+                LocalReport lr = new LocalReport();
+                string path = Path.Combine(Server.MapPath("~/Reports"), "SatisMakbuzIngilizce.rdlc");
+                if (System.IO.File.Exists(path))
+                {
+                    lr.ReportPath = path;
+                }
+
+                string reportType = "PDF";
+                string mimeType;
+                string encoding;
+                string fileNameExtension;
+                string deviceInfo = "<DeviceInfo>" +
+                         "  <OutputFormat>PDF</OutputFormat>" +
+                         "  <PageWidth>8.27in</PageWidth>" +
+                         "  <PageHeight>11.69in</PageHeight>" +
+                         "  <MarginTop>0.25in</MarginTop>" +
+                         "  <MarginLeft>0.4in</MarginLeft>" +
+                         "  <MarginRight>0in</MarginRight>" +
+                         "  <MarginBottom>0.25in</MarginBottom>" +
+                         "  <EmbedFonts>None</EmbedFonts>" +
+                         "</DeviceInfo>";
+
+
+                Warning[] warning;
+                string[] streams;
+                byte[] renderedBytes;
+
+                Microsoft.Reporting.WebForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WebForms.ReportDataSource();
+                List<YesilVadiMakbuzBilgileri> dataSource1 = new List<YesilVadiMakbuzBilgileri>();
+                YesilVadiMakbuzBilgileri makbuzBilgileri = new YesilVadiMakbuzBilgileri();
+
+                Microsoft.Reporting.WebForms.ReportDataSource reportDataSource3 = new Microsoft.Reporting.WebForms.ReportDataSource();
+                List<SuSatisBilgileri> dataSource3 = new List<SuSatisBilgileri>();
+                SuSatisBilgileri suSatisBilgileri = new SuSatisBilgileri();
+
+                if (suSatisDetay != null)
+                {
+                    makbuzBilgileri.KurumAdi = AktifKullanici.KurumAdi;
+                    makbuzBilgileri.AboneAdiSoyadi = suSatisDetay.AboneAdSoyad;
+                    makbuzBilgileri.AboneNo = suSatisDetay.AboneNo;
+                    makbuzBilgileri.FaturaTarihi = suSatisDetay.OLUSTURMATARIH.ToString();
+                    makbuzBilgileri.SuSayacNo = suSatisDetay.KapakSeriNo.ToString();
+                    makbuzBilgileri.FaturaNo = suSatisDetay.KAYITNO.ToString();
+
+                    suSatisBilgileri.Tarih = suSatisDetay.OLUSTURMATARIH.ToString();
+                    suSatisBilgileri.SayacTuru = "Water";
+                    suSatisBilgileri.KontorMiktar = suSatisDetay.KREDI.ToString();
+
+                    suSatisBilgileri.BakimBedeli = suSatisDetay.AylikBakimBedeli.ToString();
+                    suSatisBilgileri.Ctv = suSatisDetay.Ctv.ToString();
+                    suSatisBilgileri.Kdv = suSatisDetay.Kdv.ToString();
+                    suSatisBilgileri.Tutar = suSatisDetay.SatisTutarı.ToString();
+                    suSatisBilgileri.TotalTutar = suSatisDetay.ODEME.ToString();
+
+                }
+                if (gazSatisDetay != null)
+                {
+                    makbuzBilgileri.KurumAdi = AktifKullanici.KurumAdi;
+                    makbuzBilgileri.AboneAdiSoyadi = gazSatisDetay.AboneAdSoyad;
+                    makbuzBilgileri.AboneNo = gazSatisDetay.AboneNo;
+                    makbuzBilgileri.FaturaTarihi = gazSatisDetay.OLUSTURMATARIH.ToString();
+                    makbuzBilgileri.SuSayacNo = gazSatisDetay.KapakSeriNo.ToString();
+                    makbuzBilgileri.FaturaNo = gazSatisDetay.KAYITNO.ToString();
+
+                    suSatisBilgileri.Tarih = gazSatisDetay.OLUSTURMATARIH.ToString();
+                    suSatisBilgileri.SayacTuru = "Gas";
+                    suSatisBilgileri.KontorMiktar = gazSatisDetay.KREDI.ToString();
+
+                    suSatisBilgileri.BakimBedeli = gazSatisDetay.AylikBakimBedeli.ToString();
+                    suSatisBilgileri.Ctv = gazSatisDetay.Ctv.ToString();
+                    suSatisBilgileri.Kdv = gazSatisDetay.Kdv.ToString();
+                    suSatisBilgileri.Tutar = gazSatisDetay.SatisTutarı.ToString();
+                    suSatisBilgileri.TotalTutar = gazSatisDetay.ODEME.ToString();
+
+                }
+                dataSource1.Add(makbuzBilgileri);
+                reportDataSource1.Name = "AboneBilgileri";
+                reportDataSource1.Value = dataSource1;
+                lr.DataSources.Add(reportDataSource1);
+
+
+
+                dataSource3.Add(suSatisBilgileri);
+                reportDataSource3.Name = "SatisBilgileri";
+                reportDataSource3.Value = dataSource3;
+                lr.DataSources.Add(reportDataSource3);
+
+
+
+
+
+
+
+                renderedBytes = lr.Render("PDF", deviceInfo, out mimeType, out encoding, out fileNameExtension, out streams, out warning);
+
+                string filename = makbuzBilgileri.AboneNo + DateTime.Now.Month + DateTime.Now.Day + DateTime.Now.Hour + DateTime.Now.Minute + ".pdf";
+                path = Server.MapPath("~/App_Data/" + filename);
+                System.IO.File.WriteAllBytes(path, renderedBytes);
+
+                return filename;
+
+            }
+
+
         }
         #endregion
     }

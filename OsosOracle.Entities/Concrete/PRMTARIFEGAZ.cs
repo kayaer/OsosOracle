@@ -27,7 +27,7 @@ namespace OsosOracle.Entities.Concrete
         public int FIYAT1 { get; set; }
         public int YEDEKKREDI { get; set; }
         public int KURUMKAYITNO { get; set; }
-        public int BIRIMFIYAT { get; set; }
+        public decimal BIRIMFIYAT { get; set; }
 
 
         public int TuketimKatsayi { get; set; }

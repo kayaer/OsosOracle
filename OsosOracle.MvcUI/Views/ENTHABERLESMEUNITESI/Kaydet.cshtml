@@ -1,5 +1,6 @@
 @using OsosOracle.Framework.HtmlHelpers
 @using OsosOracle.MvcUI.Infrastructure
+@using OsosOracle.MvcUI.Resources
 @model OsosOracle.MvcUI.Models.ENTHABERLESMEUNITESIModels.ENTHABERLESMEUNITESIKaydetModel
 
 @section panelHeading
@@ -21,16 +22,16 @@
 
         <div class="form-group row">
             <div class="col-md-4">
-                @Html.AutoComplete(t => t.ENTHABERLESMEUNITESI.KURUMKAYITNO, Enums.AutocompleteFuction.KurumGetir, Enums.AutoCompleteType.List, _T("Kurum").ToString())
+                @Html.AutoComplete(t => t.ENTHABERLESMEUNITESI.KURUMKAYITNO, Enums.AutocompleteFuction.KurumGetir, Enums.AutoCompleteType.List, Dil.Kurum)
                 @Html.ValidationMessageFor(t => t.ENTHABERLESMEUNITESI.KURUMKAYITNO)
             </div>
             <div class="col-md-4">
-                @Html.AutoComplete(t => t.ENTHABERLESMEUNITESI.MARKA, Enums.AutocompleteFuction.ModemMarkaGetir, Enums.AutoCompleteType.List, _T("Modem Marka").ToString(), connectedWith: Html.NameFor(t => t.ENTHABERLESMEUNITESI.MODEL).ToString())
+                @Html.AutoComplete(t => t.ENTHABERLESMEUNITESI.MARKA, Enums.AutocompleteFuction.ModemMarkaGetir, Enums.AutoCompleteType.List, Dil.HaberlesmeUnitesiMarkalari, connectedWith: Html.NameFor(t => t.ENTHABERLESMEUNITESI.MODEL).ToString())
                 @Html.ValidationMessageFor(t => t.ENTHABERLESMEUNITESI.MARKA)
 
             </div>
             <div class="col-md-4">
-                @Html.AutoComplete(t => t.ENTHABERLESMEUNITESI.MODEL, Enums.AutocompleteFuction.ModemModelGetir, Enums.AutoCompleteType.List, _T("Modem Model").ToString())
+                @Html.AutoComplete(t => t.ENTHABERLESMEUNITESI.MODEL, Enums.AutocompleteFuction.ModemModelGetir, Enums.AutoCompleteType.List, Dil.HaberlesmeUnitesiModeli)
                 @Html.ValidationMessageFor(t => t.ENTHABERLESMEUNITESI.MODEL)
             </div>
 
@@ -40,15 +41,15 @@
 
         <div class="form-group row">
             <div class="col-md-4">
-                @Html.TextBoxFor(t => t.ENTHABERLESMEUNITESI.SERINO, new { @class = "form-control int", placeholder = _T("Seri No") })
+                @Html.TextBoxFor(t => t.ENTHABERLESMEUNITESI.SERINO, new { @class = "form-control int", placeholder =Dil.HaberlesmeUnitesiSeriNo })
                 @Html.ValidationMessageFor(t => t.ENTHABERLESMEUNITESI.SERINO)
             </div>
             <div class="col-md-4">
-                @Html.TextBoxFor(t => t.ENTHABERLESMEUNITESI.SIMTELNO, new { @class = "form-control int", placeholder = _T("Sim Tel No") })
+                @Html.TextBoxFor(t => t.ENTHABERLESMEUNITESI.SIMTELNO, new { @class = "form-control int", placeholder = Dil.SimTelNo })
                 @Html.ValidationMessageFor(t => t.ENTHABERLESMEUNITESI.SIMTELNO)
             </div>
             <div class="col-md-4">
-                @Html.TextBoxFor(t => t.ENTHABERLESMEUNITESI.IP, new { @class = "form-control", placeholder = _T("Ip") })
+                @Html.TextBoxFor(t => t.ENTHABERLESMEUNITESI.IP, new { @class = "form-control", placeholder = Dil.Ip })
                 @Html.ValidationMessageFor(t => t.ENTHABERLESMEUNITESI.IP)
 
             </div>
@@ -56,14 +57,14 @@
         </div>
 
         <div class="form-group">
-            @Html.TextAreaFor(t => t.ENTHABERLESMEUNITESI.ACIKLAMA, new { @class = "form-control int", placeholder = _T("Açıklama") })
+            @Html.TextAreaFor(t => t.ENTHABERLESMEUNITESI.ACIKLAMA, new { @class = "form-control int", placeholder = Dil.Aciklama })
             @Html.ValidationMessageFor(t => t.ENTHABERLESMEUNITESI.ACIKLAMA)
 
         </div>
 
         <div class="form-actions">
-            <button type="submit" class="btn btn-primary"><i class="fa fa-save"></i> @_T("Kaydet")</button>
-            @Html.ButtonLink(_T("Vazgeç").ToString(), "Index", "btn btn-xs btn-danger cancel", "fa-remove")
+            <button type="submit" class="btn btn-primary"><i class="fa fa-save"></i> @Dil.Kaydet</button>
+            @Html.ButtonLink(Dil.Vazgec, "Index", "btn btn-xs btn-danger cancel", "fa-remove")
         </div>
     }
 </div>

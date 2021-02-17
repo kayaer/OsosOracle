@@ -20,6 +20,7 @@ namespace OsosOracle.DataLayer.Concrete.EntityFramework.Dal
                 KAYITNO=x.KAYITNO,
                 AD = x.AD,
                 ACIKLAMA = x.ACIKLAMA,
+                DllAdi=x.DllAdi,
                 VERSIYON = x.VERSIYON
 
             });

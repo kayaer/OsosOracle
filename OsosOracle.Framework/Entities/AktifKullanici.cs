@@ -61,5 +61,6 @@ namespace OsosOracle.Framework.Entities
         }
 
         public static bool GelistiriciMi { get; set; }
+        public string KurumDllAdi { get; set; }
     }
 }

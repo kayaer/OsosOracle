@@ -148,8 +148,9 @@ namespace OsosOracle.MvcUI.Controllers
                     t.KAYITNO,
                     t.AD,
                     t.ACIKLAMA,
-                    Islemler = $@"<a class='btn btn-xs btn-info modalizer' href='{Url.Action("Guncelle", "Kurum", new { id = t.KAYITNO })}' title='Düzenle'><i class='fa fa-edit'></i></a>							 
-								<a class='btn btn-xs btn-danger modalizer ' href='{Url.Action("Sil", "Kurum", new { id = t.KAYITNO })}' title='Sil'><i class='fa fa-trash'></i></a>"
+                    t.DllAdi,
+                    Islemler = $@"<a class='btn btn-xs btn-info modalizer' href='{Url.Action("Guncelle", "Kurum", new { kayitNo = t.KAYITNO })}' title='Düzenle'><i class='fa fa-edit'></i></a>							 
+								<a class='btn btn-xs btn-danger modalizer ' href='{Url.Action("Sil", "Kurum", new { kayitNo = t.KAYITNO })}' title='Sil'><i class='fa fa-trash'></i></a>"
                 }),
                 draw = dtParameterModel.Draw,
                 recordsTotal = kayitlar.ToplamKayitSayisi,
