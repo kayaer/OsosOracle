@@ -387,7 +387,6 @@ C:\Projeler\Mısır\OsosOracle\OsosOracle.MvcUI\bin\pt\Microsoft.ReportViewer.Wi
 C:\Projeler\Mısır\OsosOracle\OsosOracle.MvcUI\bin\ru\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Projeler\Mısır\OsosOracle\OsosOracle.MvcUI\bin\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Projeler\Mısır\OsosOracle\OsosOracle.MvcUI\bin\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
-C:\Projeler\Mısır\OsosOracle\OsosOracle.MvcUI\obj\Debug\OsosOracle.MvcUI.csprojAssemblyReference.cache
 C:\Projeler\Mısır\OsosOracle\OsosOracle.MvcUI\obj\Debug\OsosOracle.MvcUI.Resources.Dil.resources
 C:\Projeler\Mısır\OsosOracle\OsosOracle.MvcUI\obj\Debug\OsosOracle.MvcUI.Resources.Dil.ar.resources
 C:\Projeler\Mısır\OsosOracle\OsosOracle.MvcUI\obj\Debug\OsosOracle.MvcUI.Resources.Dil.tr.resources
@@ -400,3 +399,4 @@ C:\Projeler\Mısır\OsosOracle\OsosOracle.MvcUI\obj\Debug\tr\OsosOracle.MvcUI.re
 C:\Projeler\Mısır\OsosOracle\OsosOracle.MvcUI\obj\Debug\OsosOracle.MvcUI.csproj.CopyComplete
 C:\Projeler\Mısır\OsosOracle\OsosOracle.MvcUI\obj\Debug\OsosOracle.MvcUI.dll
 C:\Projeler\Mısır\OsosOracle\OsosOracle.MvcUI\obj\Debug\OsosOracle.MvcUI.pdb
+C:\Projeler\Mısır\OsosOracle\OsosOracle.MvcUI\obj\Debug\OsosOracle.MvcUI.csproj.AssemblyReference.cache

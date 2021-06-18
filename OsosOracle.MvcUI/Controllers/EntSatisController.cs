@@ -827,14 +827,14 @@ namespace OsosOracle.MvcUI.Controllers
         {
             if (string.IsNullOrEmpty(model.HamData))
             {
-                model.GazSatisModel.GazOkunan.HamData = "1 | 20170608 | 123 | b | 0 | b | 0 | 0 | 0 | 01.01.2000 00:00 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0,000 | 0,000 | 0 | Close | 01.01.2000 | 01.01.2000 | 01.01.2000 | 01.01.2000 | 01.01.2000 | 01.01.2000 | 01.01.2000 | 01.01.2000 | *| *| *| *| *| *| *| *| 0 | 0 | 999999 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 0 | 10 | 17 | 1 | 20 | 16.01.2000 | *| *| *| *| 0 | 0 | 3";
+               model.HamData = "1 | 20170608 | 123 | b | 0 | b | 0 | 0 | 0 | 01.01.2000 00:00 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0,000 | 0,000 | 0 | Close | 01.01.2000 | 01.01.2000 | 01.01.2000 | 01.01.2000 | 01.01.2000 | 01.01.2000 | 01.01.2000 | 01.01.2000 | *| *| *| *| *| *| *| *| 0 | 0 | 999999 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 0 | 10 | 17 | 1 | 20 | 16.01.2000 | *| *| *| *| 0 | 0 | 3";
             }
-            else
-            {
-                model.GazSatisModel.GazOkunan.HamData = model.HamData;
-            }
-            model.GazSatisModel.GazOkunan.ParsData();
-
+            //else
+            //{
+            //    model.GazSatisModel.GazOkunan.HamData = model.HamData;
+            //}
+            //model.GazSatisModel.GazOkunan.ParsData();
+            model.GazSatisModel.GazOkunan = new GazOkunan(model.HamData);
             var gazSayac = _entSayacService.Getir(new ENTSAYACAra { SERINO = model.GazSatisModel.GazOkunan.CihazNo.Trim(), SayacTuru = 4 }).FirstOrDefault();//Gaz Sayacı
             if (gazSayac == null)
             {
@@ -955,11 +955,11 @@ namespace OsosOracle.MvcUI.Controllers
         public string GazMakbuzOlustur(SatisModel model)
         {
 
-            ENTSATISDetay suSatisDetay = _entSatisService.DetayGetirById(model.GazSatisModel.Satis.KAYITNO); //_entSatisService.DetayGetirById(model.SuSatisModel.Satis.KAYITNO);
+            ENTSATISDetay gazSatisDetay = _entSatisService.DetayGetirById(model.GazSatisModel.Satis.KAYITNO); //_entSatisService.DetayGetirById(model.SuSatisModel.Satis.KAYITNO);
             //ENTSATISDetay kalorimetreSatisDetay = _entSatisService.DetayGetirById(model.KalorimetreSatisModel.Satis.KAYITNO);
 
             LocalReport lr = new LocalReport();
-            string path = Path.Combine(Server.MapPath("~/Reports"), "Report.rdlc");
+            string path = Path.Combine(Server.MapPath("~/Reports"), "SatisMakbuzIngilizce.rdlc");
             if (System.IO.File.Exists(path))
             {
                 lr.ReportPath = path;
@@ -989,34 +989,35 @@ namespace OsosOracle.MvcUI.Controllers
             List<YesilVadiMakbuzBilgileri> dataSource1 = new List<YesilVadiMakbuzBilgileri>();
             YesilVadiMakbuzBilgileri makbuzBilgileri = new YesilVadiMakbuzBilgileri();
 
-            Microsoft.Reporting.WebForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WebForms.ReportDataSource();
-            List<KalorimetreSatisBilgileri> dataSource2 = new List<KalorimetreSatisBilgileri>();
-            KalorimetreSatisBilgileri kalorimetreSatisBilgileri = new KalorimetreSatisBilgileri();
+            //Microsoft.Reporting.WebForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WebForms.ReportDataSource();
+            //List<KalorimetreSatisBilgileri> dataSource2 = new List<KalorimetreSatisBilgileri>();
+            //KalorimetreSatisBilgileri kalorimetreSatisBilgileri = new KalorimetreSatisBilgileri();
 
             Microsoft.Reporting.WebForms.ReportDataSource reportDataSource3 = new Microsoft.Reporting.WebForms.ReportDataSource();
             List<SuSatisBilgileri> dataSource3 = new List<SuSatisBilgileri>();
             SuSatisBilgileri suSatisBilgileri = new SuSatisBilgileri();
 
-            Microsoft.Reporting.WebForms.ReportDataSource reportDataSource4 = new Microsoft.Reporting.WebForms.ReportDataSource();
-            List<SatisBilgileri> dataSource4 = new List<SatisBilgileri>();
-            SatisBilgileri satisBilgileri = new SatisBilgileri();
+            //Microsoft.Reporting.WebForms.ReportDataSource reportDataSource4 = new Microsoft.Reporting.WebForms.ReportDataSource();
+            //List<SatisBilgileri> dataSource4 = new List<SatisBilgileri>();
+            //SatisBilgileri satisBilgileri = new SatisBilgileri();
 
-            if (suSatisDetay != null)
+            if (gazSatisDetay != null)
             {
-                makbuzBilgileri.AboneAdiSoyadi = suSatisDetay.AboneAdSoyad;
-                makbuzBilgileri.AboneNo = suSatisDetay.AboneNo;
-                makbuzBilgileri.FaturaTarihi = suSatisDetay.OLUSTURMATARIH.ToString();
-                makbuzBilgileri.SuSayacNo = suSatisDetay.KapakSeriNo.ToString();
+                makbuzBilgileri.KurumAdi = AktifKullanici.KurumAdi;
+                makbuzBilgileri.AboneAdiSoyadi = gazSatisDetay.AboneAdSoyad;
+                makbuzBilgileri.AboneNo = gazSatisDetay.AboneNo;
+                makbuzBilgileri.FaturaTarihi = gazSatisDetay.OLUSTURMATARIH.ToString();
+                makbuzBilgileri.SuSayacNo = gazSatisDetay.KapakSeriNo.ToString();
 
-                suSatisBilgileri.Tarih = suSatisDetay.OLUSTURMATARIH.ToString();
-                suSatisBilgileri.SayacTuru = "GAZ";
-                suSatisBilgileri.KontorMiktar = suSatisDetay.KREDI.ToString();
+                suSatisBilgileri.Tarih = gazSatisDetay.OLUSTURMATARIH.ToString();
+                suSatisBilgileri.SayacTuru = "GAS";
+                suSatisBilgileri.KontorMiktar = gazSatisDetay.KREDI.ToString();
 
-                suSatisBilgileri.BakimBedeli = suSatisDetay.AylikBakimBedeli.ToString();
-                suSatisBilgileri.Ctv = suSatisDetay.Ctv.ToString();
-                suSatisBilgileri.Kdv = suSatisDetay.Kdv.ToString();
-                suSatisBilgileri.Tutar = suSatisDetay.SatisTutarı.ToString();
-                suSatisBilgileri.TotalTutar = suSatisDetay.ODEME.ToString();
+                suSatisBilgileri.BakimBedeli = gazSatisDetay.AylikBakimBedeli.ToString();
+                suSatisBilgileri.Ctv = gazSatisDetay.Ctv.ToString();
+                suSatisBilgileri.Kdv = gazSatisDetay.Kdv.ToString();
+                suSatisBilgileri.Tutar = gazSatisDetay.SatisTutarı.ToString();
+                suSatisBilgileri.TotalTutar = gazSatisDetay.ODEME.ToString();
 
             }
             //if (kalorimetreSatisDetay != null)
@@ -1039,31 +1040,31 @@ namespace OsosOracle.MvcUI.Controllers
 
             //}
 
-            satisBilgileri.SatisTutari = (kalorimetreSatisBilgileri.Tutar.ToDecimal() + suSatisBilgileri.Tutar.ToDecimal()).ToString();
-            satisBilgileri.BakimHizmetleriBedeli = (kalorimetreSatisBilgileri.BakimBedeli.ToDecimal() + suSatisBilgileri.BakimBedeli.ToDecimal()).ToString();
-            satisBilgileri.CtvBedeli = (kalorimetreSatisBilgileri.Ctv.ToDecimal() + suSatisBilgileri.Ctv.ToDecimal()).ToString();
-            satisBilgileri.KdvBedeli = (kalorimetreSatisBilgileri.Kdv.ToDecimal() + suSatisBilgileri.Kdv.ToDecimal()).ToString();
-            satisBilgileri.GenelToplam = (kalorimetreSatisBilgileri.TotalTutar.ToDecimal() + suSatisBilgileri.TotalTutar.ToDecimal()).ToString();
+            //satisBilgileri.SatisTutari = (kalorimetreSatisBilgileri.Tutar.ToDecimal() + suSatisBilgileri.Tutar.ToDecimal()).ToString();
+            //satisBilgileri.BakimHizmetleriBedeli = (kalorimetreSatisBilgileri.BakimBedeli.ToDecimal() + suSatisBilgileri.BakimBedeli.ToDecimal()).ToString();
+            //satisBilgileri.CtvBedeli = (kalorimetreSatisBilgileri.Ctv.ToDecimal() + suSatisBilgileri.Ctv.ToDecimal()).ToString();
+            //satisBilgileri.KdvBedeli = (kalorimetreSatisBilgileri.Kdv.ToDecimal() + suSatisBilgileri.Kdv.ToDecimal()).ToString();
+            //satisBilgileri.GenelToplam = (kalorimetreSatisBilgileri.TotalTutar.ToDecimal() + suSatisBilgileri.TotalTutar.ToDecimal()).ToString();
 
             dataSource1.Add(makbuzBilgileri);
-            reportDataSource1.Name = "DataSet1";
+            reportDataSource1.Name = "AboneBilgileri";
             reportDataSource1.Value = dataSource1;
             lr.DataSources.Add(reportDataSource1);
 
-            dataSource2.Add(kalorimetreSatisBilgileri);
-            reportDataSource2.Name = "DataSet2";
-            reportDataSource2.Value = dataSource2;
-            lr.DataSources.Add(reportDataSource2);
+            //dataSource2.Add(kalorimetreSatisBilgileri);
+            //reportDataSource2.Name = "DataSet2";
+            //reportDataSource2.Value = dataSource2;
+            //lr.DataSources.Add(reportDataSource2);
 
             dataSource3.Add(suSatisBilgileri);
-            reportDataSource3.Name = "DataSet3";
+            reportDataSource3.Name = "SatisBilgileri";
             reportDataSource3.Value = dataSource3;
             lr.DataSources.Add(reportDataSource3);
 
-            dataSource4.Add(satisBilgileri);
-            reportDataSource4.Name = "DataSet4";
-            reportDataSource4.Value = dataSource4;
-            lr.DataSources.Add(reportDataSource4);
+            //dataSource4.Add(satisBilgileri);
+            //reportDataSource4.Name = "DataSet4";
+            //reportDataSource4.Value = dataSource4;
+            //lr.DataSources.Add(reportDataSource4);
 
 
 

@@ -11,7 +11,7 @@ using OsosOracle.Framework.Utilities.ExtensionMethods;
 using OsosOracle.Framework.Enums;
 using OsosOracle.Framework.DataAccess.Filter;
 using OsosOracle.MvcUI.Filters;
-
+using OsosOracle.MvcUI.Resources;
 namespace OsosOracle.MvcUI.Controllers
 {
     [AuthorizeUser]
@@ -27,7 +27,7 @@ namespace OsosOracle.MvcUI.Controllers
 
         public ActionResult Index()
         {
-            SayfaBaslik($"Rol-Kullanıcı İşlemleri");
+           // SayfaBaslik(Dil.kullanirol);
             var model = new SYSROLKULLANICIIndexModel();
             return View(model);
         }

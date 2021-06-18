@@ -541,10 +541,10 @@ C:\Projeler\Mısır\OsosOracle\OsosOracle.Framework\bin\Debug\System.Web.WebPage
 C:\Projeler\Mısır\OsosOracle\OsosOracle.Framework\bin\Debug\System.Web.WebPages.Deployment.xml
 C:\Projeler\Mısır\OsosOracle\OsosOracle.Framework\bin\Debug\System.Web.WebPages.Razor.xml
 C:\Projeler\Mısır\OsosOracle\OsosOracle.Framework\bin\Debug\OsosOracle.Framework.pssym
-C:\Projeler\Mısır\OsosOracle\OsosOracle.Framework\obj\Debug\OsosOracle.Framework.csprojAssemblyReference.cache
 C:\Projeler\Mısır\OsosOracle\OsosOracle.Framework\obj\Debug\OsosOracle.Framework.csproj.CoreCompileInputs.cache
 C:\Projeler\Mısır\OsosOracle\OsosOracle.Framework\obj\Debug\OsosOracle.Framework.csproj.CopyComplete
 C:\Projeler\Mısır\OsosOracle\OsosOracle.Framework\obj\Debug\OsosOracle.Framework.dll.postsharp
 C:\Projeler\Mısır\OsosOracle\OsosOracle.Framework\obj\Debug\OsosOracle.Framework.dll
 C:\Projeler\Mısır\OsosOracle\OsosOracle.Framework\obj\Debug\OsosOracle.Framework.pdb
 C:\Projeler\Mısır\OsosOracle\OsosOracle.Framework\obj\Debug\PostSharpHost.config
+C:\Projeler\Mısır\OsosOracle\OsosOracle.Framework\obj\Debug\OsosOracle.Framework.csproj.AssemblyReference.cache

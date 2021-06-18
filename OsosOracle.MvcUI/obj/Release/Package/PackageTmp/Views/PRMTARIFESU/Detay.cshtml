@@ -1,0 +1,220 @@
+
+
+@using OsosOracle.Framework.HtmlHelpers
+@model OsosOracle.MvcUI.Models.PRMTARIFESUModels.PRMTARIFESUDetayModel
+
+@section panelHeading{
+	@Html.ButtonLink(_T("Listeye Dön").ToString(), "Index", "btn btn-xs btn-info", "fa-reply")
+	@Html.ButtonLink(_T("Sil").ToString(), "Sil", "btn btn-xs btn-danger modalizer", "fa-trash", new { id = Model.PRMTARIFESUDetay.Id })
+	@Html.ButtonLink(_T("Düzenle").ToString(), "Guncelle","btn btn-xs btn-primary modalizer", "fa-edit", new { id = Model.PRMTARIFESUDetay.Id })
+
+}
+
+<div class="ajaxForm">
+
+	  
+	<div class="row static-info">
+		<div class="col-md-5 name">@_T("BORCYUZDE")</div>
+		<div class="col-md-7 value">@Model.PRMTARIFESUDetay.BORCYUZDE</div>
+	 </div>
+
+
+	<div class="row static-info">
+		<div class="col-md-5 name">@_T("AD")</div>
+		<div class="col-md-7 value">@Model.PRMTARIFESUDetay.AD</div>
+	 </div>
+
+
+	<div class="row static-info">
+		<div class="col-md-5 name">@_T("YEDEKKREDI")</div>
+		<div class="col-md-7 value">@Model.PRMTARIFESUDetay.YEDEKKREDI</div>
+	 </div>
+
+
+	<div class="row static-info">
+		<div class="col-md-5 name">@_T("ACIKLAMA")</div>
+		<div class="col-md-7 value">@Model.PRMTARIFESUDetay.ACIKLAMA</div>
+	 </div>
+
+
+	<div class="row static-info">
+		<div class="col-md-5 name">@_T("DURUM")</div>
+		<div class="col-md-7 value">@Model.PRMTARIFESUDetay.DURUM</div>
+	 </div>
+
+
+	<div class="row static-info">
+		<div class="col-md-5 name">@_T("FIYAT1")</div>
+		<div class="col-md-7 value">@Model.PRMTARIFESUDetay.FIYAT1</div>
+	 </div>
+
+
+	<div class="row static-info">
+		<div class="col-md-5 name">@_T("FIYAT2")</div>
+		<div class="col-md-7 value">@Model.PRMTARIFESUDetay.FIYAT2</div>
+	 </div>
+
+
+	<div class="row static-info">
+		<div class="col-md-5 name">@_T("FIYAT3")</div>
+		<div class="col-md-7 value">@Model.PRMTARIFESUDetay.FIYAT3</div>
+	 </div>
+
+
+	<div class="row static-info">
+		<div class="col-md-5 name">@_T("FIYAT4")</div>
+		<div class="col-md-7 value">@Model.PRMTARIFESUDetay.FIYAT4</div>
+	 </div>
+
+
+	<div class="row static-info">
+		<div class="col-md-5 name">@_T("FIYAT5")</div>
+		<div class="col-md-7 value">@Model.PRMTARIFESUDetay.FIYAT5</div>
+	 </div>
+
+
+	<div class="row static-info">
+		<div class="col-md-5 name">@_T("LIMIT1")</div>
+		<div class="col-md-7 value">@Model.PRMTARIFESUDetay.LIMIT1</div>
+	 </div>
+
+
+	<div class="row static-info">
+		<div class="col-md-5 name">@_T("LIMIT2")</div>
+		<div class="col-md-7 value">@Model.PRMTARIFESUDetay.LIMIT2</div>
+	 </div>
+
+
+	<div class="row static-info">
+		<div class="col-md-5 name">@_T("LIMIT3")</div>
+		<div class="col-md-7 value">@Model.PRMTARIFESUDetay.LIMIT3</div>
+	 </div>
+
+
+	<div class="row static-info">
+		<div class="col-md-5 name">@_T("LIMIT4")</div>
+		<div class="col-md-7 value">@Model.PRMTARIFESUDetay.LIMIT4</div>
+	 </div>
+
+
+	<div class="row static-info">
+		<div class="col-md-5 name">@_T("TUKETIMKATSAYI")</div>
+		<div class="col-md-7 value">@Model.PRMTARIFESUDetay.TUKETIMKATSAYI</div>
+	 </div>
+
+
+	<div class="row static-info">
+		<div class="col-md-5 name">@_T("KREDIKATSAYI")</div>
+		<div class="col-md-7 value">@Model.PRMTARIFESUDetay.KREDIKATSAYI</div>
+	 </div>
+
+
+	<div class="row static-info">
+		<div class="col-md-5 name">@_T("SABITUCRET")</div>
+		<div class="col-md-7 value">@Model.PRMTARIFESUDetay.SABITUCRET</div>
+	 </div>
+
+
+	<div class="row static-info">
+		<div class="col-md-5 name">@_T("SAYACCAP")</div>
+		<div class="col-md-7 value">@Model.PRMTARIFESUDetay.SAYACCAP</div>
+	 </div>
+
+
+	<div class="row static-info">
+		<div class="col-md-5 name">@_T("AVANSONAY")</div>
+		<div class="col-md-7 value">@Model.PRMTARIFESUDetay.AVANSONAY</div>
+	 </div>
+
+
+	<div class="row static-info">
+		<div class="col-md-5 name">@_T("DONEMGUN")</div>
+		<div class="col-md-7 value">@Model.PRMTARIFESUDetay.DONEMGUN</div>
+	 </div>
+
+
+	<div class="row static-info">
+		<div class="col-md-5 name">@_T("BAYRAM1GUN")</div>
+		<div class="col-md-7 value">@Model.PRMTARIFESUDetay.BAYRAM1GUN</div>
+	 </div>
+
+
+	<div class="row static-info">
+		<div class="col-md-5 name">@_T("BAYRAM1AY")</div>
+		<div class="col-md-7 value">@Model.PRMTARIFESUDetay.BAYRAM1AY</div>
+	 </div>
+
+
+	<div class="row static-info">
+		<div class="col-md-5 name">@_T("BAYRAM1SURE")</div>
+		<div class="col-md-7 value">@Model.PRMTARIFESUDetay.BAYRAM1SURE</div>
+	 </div>
+
+
+	<div class="row static-info">
+		<div class="col-md-5 name">@_T("BAYRAM2GUN")</div>
+		<div class="col-md-7 value">@Model.PRMTARIFESUDetay.BAYRAM2GUN</div>
+	 </div>
+
+
+	<div class="row static-info">
+		<div class="col-md-5 name">@_T("BAYRAM2AY")</div>
+		<div class="col-md-7 value">@Model.PRMTARIFESUDetay.BAYRAM2AY</div>
+	 </div>
+
+
+	<div class="row static-info">
+		<div class="col-md-5 name">@_T("BAYRAM2SURE")</div>
+		<div class="col-md-7 value">@Model.PRMTARIFESUDetay.BAYRAM2SURE</div>
+	 </div>
+
+
+	<div class="row static-info">
+		<div class="col-md-5 name">@_T("MAXDEBI")</div>
+		<div class="col-md-7 value">@Model.PRMTARIFESUDetay.MAXDEBI</div>
+	 </div>
+
+
+	<div class="row static-info">
+		<div class="col-md-5 name">@_T("KRITIKKREDI")</div>
+		<div class="col-md-7 value">@Model.PRMTARIFESUDetay.KRITIKKREDI</div>
+	 </div>
+
+
+	<div class="row static-info">
+		<div class="col-md-5 name">@_T("KURUMKAYITNO")</div>
+		<div class="col-md-7 value">@Model.PRMTARIFESUDetay.KURUMKAYITNO</div>
+	 </div>
+
+
+	<div class="row static-info">
+		<div class="col-md-5 name">@_T("BAGLANTIPERIYOT")</div>
+		<div class="col-md-7 value">@Model.PRMTARIFESUDetay.BAGLANTIPERIYOT</div>
+	 </div>
+
+
+	<div class="row static-info">
+		<div class="col-md-5 name">@_T("YANGINMODSURE")</div>
+		<div class="col-md-7 value">@Model.PRMTARIFESUDetay.YANGINMODSURE</div>
+	 </div>
+
+
+	<div class="row static-info">
+		<div class="col-md-5 name">@_T("BIRIMFIYAT")</div>
+		<div class="col-md-7 value">@Model.PRMTARIFESUDetay.BIRIMFIYAT</div>
+	 </div>
+
+
+	 
+	@Html.ButtonLink(_T("Vazgeç").ToString(), "Index", "btn btn-xs btn-danger cancel", "fa-remove")
+</div>
+
+@section script
+{
+	<script type="text/javascript">
+		$(document).ready(function () {
+		//js kodunuzu buraya yazın	
+		});
+
+	</script>
+}

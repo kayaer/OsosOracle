@@ -1,0 +1,91 @@
+﻿@using OsosOracle.Framework.HtmlHelpers
+@using OsosOracle.MvcUI.Infrastructure
+@using OsosOracle.MvcUI.Resources
+@model OsosOracle.MvcUI.Models.ENTABONEModels.AboneGenelPartialModel
+
+<form id="frmPersonelGenelPartial">
+    @Html.HiddenFor(t => t.AboneKayitNo)
+    @Html.HiddenFor(t => t.ReturnUrl)
+</form>
+
+<div class="portlet box blue-madison">
+    <div class="portlet-title">
+        <div class="caption">
+            <i class="fa fa-user"></i><span class="caption-subject">@Dil.AboneBilgileri</span> <span class="caption-helper"> </span>
+        </div>
+        <div class="tools">
+            <a href="#" class="collapse" data-original-title="Aç/Kapa" title=""> </a>
+        </div>
+        <div class="actions">
+
+            
+        </div>
+    </div>
+    <div class="portlet-body" style="display: block;">
+        @if (!string.IsNullOrEmpty(Model.AboneGenel.Mesaj))
+        {
+            <div class="row note note-warning">
+                <div class="col-md-12" style="font-weight: bold; text-align: center; font-size: larger;">
+                    @Model.AboneGenel.Mesaj
+                </div>
+            </div>
+        }
+        <div class="row">
+            <div class="col-md-2">
+                <div class="text-center">
+                    <img src="@Url.Action("FotografGoster", "EntAbone", new {id = Model.AboneKayitNo})" alt="fotograf" style="width: 160px" id="partialImage" />
+                </div>
+            </div>
+            <div class="col-md-10">
+                <div class="row note note-info">
+                    <div class="col-md-2" style="font-weight: bold">@Dil.Ad @Dil.Soyad</div>
+                    <div class="col-md-10">@Model.AboneGenel.AdiSoyadi</div>
+                </div>
+                <div class="row note note-info">
+                    <div class="col-md-2" style="font-weight: bold">@Dil.AboneNo</div>
+                    <div class="col-md-10">@Model.AboneGenel.AboneNo</div>
+                </div>
+                <div class="row note note-info">
+                    <div class="col-md-2" style="font-weight: bold">@Dil.KimlikNo</div>
+                    <div class="col-md-10">@Model.AboneGenel.TcKimlikNo</div>
+                </div>
+                <div class="row note note-info">
+                    <div class="col-md-2" style="font-weight: bold">@Dil.SonSatisTarihi</div>
+                    <div class="col-md-10">@Model.AboneGenel.SonSatisTarihiStr</div>
+                </div>
+                <div class="row note note-info">
+                    <div class="col-md-2" style="font-weight: bold">@Dil.Durum</div>
+                    <div class="col-md-10">@Model.AboneGenel.DurumAdi</div>
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<style>
+    #partialImage {
+        display: block;
+        position: inherit;
+        z-index: 2000;
+        padding: 6px;
+        border: 1px rgba(0,0,0,.4) solid;
+        background-color: white;
+        -webkit-border-radius: 6px;
+        -moz-border-radius: 6px;
+        border-radius: 6px;
+        -webkit-box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.2);
+        -moz-box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.2);
+        box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.2);
+    }
+
+    #partialImage {
+        width: 160px;
+        height: 222px;
+        overflow: hidden;
+    }
+</style>

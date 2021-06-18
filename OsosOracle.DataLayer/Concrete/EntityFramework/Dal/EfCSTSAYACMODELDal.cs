@@ -32,7 +32,7 @@ namespace OsosOracle.DataLayer.Concrete.EntityFramework.Dal
         private IQueryable<CSTSAYACMODELEf> Filtrele(IQueryable<CSTSAYACMODELEf> result, CSTSAYACMODELAra filtre = null)
         {
             //silindi kolonu varsa silinenler gelmesin
-
+            result = result.Where(x => x.DURUM == 1);
             //TODO: filtereyi özelleştir
             if (filtre != null)
             {

@@ -77,7 +77,6 @@ namespace OsosOracle.MvcUI.Controllers
                     t.KurumAdi,
 
                     Islemler = $@"<a class='btn btn-xs btn-info modalizer' href='{Url.Action("Guncelle", "SYSKULLANICI", new { id = t.KAYITNO })}' title='{Dil.Duzenle}'><i class='fa fa-edit'></i></a>
-							   <a class='btn btn-xs btn-primary' href='{Url.Action("Detay", "SYSKULLANICI", new { id = t.KAYITNO })}' title='Detay'><i class='fa fa-th-list'></i></a>
 								<a class='btn btn-xs btn-danger modalizer' href='{Url.Action("Sil", "SYSKULLANICI", new { id = t.KAYITNO })}' title='{Dil.Sil}'><i class='fa fa-trash'></i></a>"
                 }),
                 draw = dtParameterModel.Draw,
@@ -179,7 +178,7 @@ namespace OsosOracle.MvcUI.Controllers
         {
             _sYSKULLANICIService.Sil(model.Id.List());
 
-            return Yonlendir(Url.Action("Index"), $"Kullanıcı Başarıyla silindi");
+            return Yonlendir(Url.Action("Index"),Dil.Basarili);
         }
 
 

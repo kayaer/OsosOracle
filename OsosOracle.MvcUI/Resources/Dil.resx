@@ -178,7 +178,7 @@
     <value>Search Parameters</value>
   </data>
   <data name="Ariza" xml:space="preserve">
-    <value>Fault</value>
+    <value>Error</value>
   </data>
   <data name="ARIZAA" xml:space="preserve">
     <value>Error A</value>
@@ -298,7 +298,7 @@
     <value>Penalty3</value>
   </data>
   <data name="CEZA4" xml:space="preserve">
-    <value>Temperature Error</value>
+    <value>Penalty 4</value>
   </data>
   <data name="CezaTemizle" xml:space="preserve">
     <value>Clear penalty</value>
@@ -787,7 +787,7 @@
     <value>Report List</value>
   </data>
   <data name="Rol" xml:space="preserve">
-    <value>Rol</value>
+    <value>Role</value>
   </data>
   <data name="RolEkle" xml:space="preserve">
     <value>Add Role</value>
@@ -982,7 +982,7 @@
     <value>Consumption</value>
   </data>
   <data name="Tuketim1" xml:space="preserve">
-    <value>Consumption1</value>
+    <value>Term Consumption</value>
   </data>
   <data name="Tuketim2" xml:space="preserve">
     <value>Consumption2</value>
@@ -1210,7 +1210,7 @@
     <value>Are you sure?</value>
   </data>
   <data name="Onayla" xml:space="preserve">
-    <value>Onayla</value>
+    <value>Confirm</value>
   </data>
   <data name="KartTipi" xml:space="preserve">
     <value>Card Type</value>
@@ -1325,5 +1325,20 @@
   </data>
   <data name="TutarSifirdanFarkliOlmalidir" xml:space="preserve">
     <value>The amount must be different from 0</value>
+  </data>
+  <data name="KullaniciRolTakip" xml:space="preserve">
+    <value>User Role</value>
+  </data>
+  <data name="KomutGonderildi" xml:space="preserve">
+    <value>Command Sent</value>
+  </data>
+  <data name="BorcTarihi" xml:space="preserve">
+    <value>Debt Date</value>
+  </data>
+  <data name="IlkPulseTarihi" xml:space="preserve">
+    <value>First Pulse Date</value>
+  </data>
+  <data name="SonPulseTarihi" xml:space="preserve">
+    <value>Last Pulse Date</value>
   </data>
 </root>

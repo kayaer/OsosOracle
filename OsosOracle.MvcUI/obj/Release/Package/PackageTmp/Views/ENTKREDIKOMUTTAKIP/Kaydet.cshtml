@@ -1,0 +1,133 @@
+
+@using OsosOracle.MvcUI.Infrastructure
+@using OsosOracle.Framework.HtmlHelpers
+@model OsosOracle.MvcUI.Models.ENTKREDIKOMUTTAKIPModels.ENTKREDIKOMUTTAKIPKaydetModel
+
+@section panelHeading
+{
+	
+}
+
+<div class="ajaxForm">
+
+	@using (Html.BeginForm("Kaydet", "ENTKREDIKOMUTTAKIP", FormMethod.Post))
+	{
+		@Html.AntiForgeryToken()
+		@Html.HiddenFor(t => t.ENTKREDIKOMUTTAKIP.KAYITNO)
+		@Html.HiddenFor(t => t.ENTKREDIKOMUTTAKIP.VERSIYON)
+		@Html.ValidationSummary(true)
+
+	         <div class="form-group">
+    @Html.TextBoxFor(t => t.ENTKREDIKOMUTTAKIP.GUIDID, new { @class = "form-control int", placeholder = _T("GUIDID") })
+    @Html.ValidationMessageFor(t => t.ENTKREDIKOMUTTAKIP.GUIDID)
+
+    </div>
+
+       <div class="form-group">
+    @Html.TextBoxFor(t => t.ENTKREDIKOMUTTAKIP.KONSSERINO, new { @class = "form-control int", placeholder = _T("KONSSERINO") })
+    @Html.ValidationMessageFor(t => t.ENTKREDIKOMUTTAKIP.KONSSERINO)
+
+    </div>
+
+       <div class="form-group">
+    @Html.AutoComplete(t => t.ENTKREDIKOMUTTAKIP.SATISKAYITNO, Enums.AutocompleteFuction.ENTKREDIKOMUTTAKIPSATISKAYITNOGetir, Enums.AutoCompleteType.List, _T("SATISKAYITNO").ToString())
+    @Html.ValidationMessageFor(t => t.ENTKREDIKOMUTTAKIP.SATISKAYITNO)
+
+    </div>
+
+       <div class="form-group">
+    @Html.TextBoxFor(t => t.ENTKREDIKOMUTTAKIP.ISLEMID, new { @class = "form-control int", placeholder = _T("ISLEMID") })
+    @Html.ValidationMessageFor(t => t.ENTKREDIKOMUTTAKIP.ISLEMID)
+
+    </div>
+
+       <div class="form-group">
+    @Html.TextBoxFor(t => t.ENTKREDIKOMUTTAKIP.INTERNET, new { @class = "form-control int", placeholder = _T("INTERNET") })
+    @Html.ValidationMessageFor(t => t.ENTKREDIKOMUTTAKIP.INTERNET)
+
+    </div>
+
+       <div class="form-group">
+    @Html.TextBoxFor(t => t.ENTKREDIKOMUTTAKIP.KOMUTKODU, new { @class = "form-control int", placeholder = _T("KOMUTKODU") })
+    @Html.ValidationMessageFor(t => t.ENTKREDIKOMUTTAKIP.KOMUTKODU)
+
+    </div>
+
+       <div class="form-group">
+    @Html.TextBoxFor(t => t.ENTKREDIKOMUTTAKIP.KOMUT, new { @class = "form-control int", placeholder = _T("KOMUT") })
+    @Html.ValidationMessageFor(t => t.ENTKREDIKOMUTTAKIP.KOMUT)
+
+    </div>
+
+       <div class="form-group">
+    @Html.TextBoxFor(t => t.ENTKREDIKOMUTTAKIP.KREDI, new { @class = "form-control int", placeholder = _T("KREDI") })
+    @Html.ValidationMessageFor(t => t.ENTKREDIKOMUTTAKIP.KREDI)
+
+    </div>
+
+       <div class="form-group">
+    @Html.DateInput(t => t.ENTKREDIKOMUTTAKIP.ISLEMTARIH, new { placeholder =  _T("ISLEMTARIH") })
+    @Html.ValidationMessageFor(t => t.ENTKREDIKOMUTTAKIP.ISLEMTARIH)
+
+    </div>
+
+       <div class="form-group">
+    @Html.TextBoxFor(t => t.ENTKREDIKOMUTTAKIP.KOMUTID, new { @class = "form-control int", placeholder = _T("KOMUTID") })
+    @Html.ValidationMessageFor(t => t.ENTKREDIKOMUTTAKIP.KOMUTID)
+
+    </div>
+
+       <div class="form-group">
+    @Html.TextBoxFor(t => t.ENTKREDIKOMUTTAKIP.ACIKLAMA, new { @class = "form-control int", placeholder = _T("ACIKLAMA") })
+    @Html.ValidationMessageFor(t => t.ENTKREDIKOMUTTAKIP.ACIKLAMA)
+
+    </div>
+
+       <div class="form-group">
+    @Html.TextBoxFor(t => t.ENTKREDIKOMUTTAKIP.SAYACSERINO, new { @class = "form-control int", placeholder = _T("SAYACSERINO") })
+    @Html.ValidationMessageFor(t => t.ENTKREDIKOMUTTAKIP.SAYACSERINO)
+
+    </div>
+
+       <div class="form-group">
+    @Html.TextBoxFor(t => t.ENTKREDIKOMUTTAKIP.DURUM, new { @class = "form-control int", placeholder = _T("DURUM") })
+    @Html.ValidationMessageFor(t => t.ENTKREDIKOMUTTAKIP.DURUM)
+
+    </div>
+
+       <div class="form-group">
+    @Html.DateInput(t => t.ENTKREDIKOMUTTAKIP.MAKBUZTARIH, new { placeholder =  _T("MAKBUZTARIH") })
+    @Html.ValidationMessageFor(t => t.ENTKREDIKOMUTTAKIP.MAKBUZTARIH)
+
+    </div>
+
+       <div class="form-group">
+    @Html.TextBoxFor(t => t.ENTKREDIKOMUTTAKIP.MAKBUZNO, new { @class = "form-control int", placeholder = _T("MAKBUZNO") })
+    @Html.ValidationMessageFor(t => t.ENTKREDIKOMUTTAKIP.MAKBUZNO)
+
+    </div>
+
+       <div class="form-group">
+    @Html.TextBoxFor(t => t.ENTKREDIKOMUTTAKIP.ABONENO, new { @class = "form-control int", placeholder = _T("ABONENO") })
+    @Html.ValidationMessageFor(t => t.ENTKREDIKOMUTTAKIP.ABONENO)
+
+    </div>
+
+
+	 
+		<div class="form-actions">
+			<button type="submit" class="btn btn-primary"><i class="fa fa-save"></i> @_T("Kaydet")</button>
+			@Html.ButtonLink(_T("Vazgeç").ToString(), "Index", "btn btn-xs btn-danger cancel", "fa-remove")
+		</div>
+	}
+</div>
+
+@section script
+{
+	<script type="text/javascript">
+		$(document).ready(function () {
+		//js kodunuzu buraya yazın	
+		});
+
+	</script>
+}

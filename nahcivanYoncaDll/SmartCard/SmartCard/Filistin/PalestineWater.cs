@@ -803,6 +803,12 @@ namespace SmartCard.Filistin
 
         private void GetIssuer(Int32 zone)
         {
+
+            ////deneme Kodu
+            //issue_area[0] = "E";
+            //issue_area[1] = "M";
+            ////deneme Kodu
+
             byte ZoneIndex = Convert.ToByte(zone.ToString());
             char issuechar;
 

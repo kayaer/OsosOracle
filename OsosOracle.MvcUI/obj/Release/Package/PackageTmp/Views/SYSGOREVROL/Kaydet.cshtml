@@ -1,0 +1,169 @@
+@using OsosOracle.MvcUI.Models.SYSGOREVROLModels
+@model GorevRolAtamaModel
+@{
+    ViewBag.Title = "Görev-Rol Atama";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+@using (Html.BeginForm("Kaydet", "SYSGOREVROL", FormMethod.Post))
+{
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="col-lg-6">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">Görev Listesi</div>
+                        <div class="panel-body">
+                            <table id="tblgorevlistesi" class="table table-striped table-bordered table-hover table-responsive">
+                                <thead>
+                                    <tr>
+                                        <th>Ad</th>
+                                        <th>Açıklama</th>
+                                        <th>Seç</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+                                    @for (var i = 0; i < Model.GorevListesi.Count; i++)
+                                    {
+                                        @Html.HiddenFor(m => @Model.GorevListesi[i].KayıtNo)
+                                        @Html.HiddenFor(m => @Model.GorevListesi[i].Ad)
+                                        <tr>
+                                            <td>@Model.GorevListesi[i].Ad</td>
+                                            <td>@Model.GorevListesi[i].Aciklama</td>
+                                            <td>@Html.CheckBoxFor(modelItem => Model.GorevListesi[i].Secildi)</td>
+                                        </tr>
+                                    }
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">Rol Listesi</div>
+                        <div class="panel-body">
+                            <table id="tblrollistesi" class="table table-striped table-bordered table-hover table-responsive">
+                                <thead>
+                                    <tr>
+                                        <th>Ad</th>
+                                        <th>Açıklama</th>
+                                        <th>Görev</th>
+                                        <th>Seç</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @for (var i = 0; i < Model.RolListesi.Count; i++)
+                                    {
+                                        @Html.HiddenFor(m => @Model.RolListesi[i].KayitNo)
+                                        @Html.HiddenFor(m => @Model.RolListesi[i].Ad)
+                                        <tr>
+                                            <td>@Model.RolListesi[i].Ad</td>
+                                            <td>@Model.RolListesi[i].Aciklama</td>
+
+                                            @if (Model.RolListesi[i].SysGorevList.Any())
+                                            {
+                                                <td>
+                                                    @foreach (var item in Model.RolListesi[i].SysGorevList)
+                                                    {
+                                                        <div class="row">
+
+                                                            <div class="col-xs-2"><small>@item.KAYITNO</small></div>
+                                                            <div class="col-xs-8"><small>@item.AD</small></div>
+                                                            <div class="col-xs-2">
+                                                                @*<button type="button" class="close" aria-label='Sil'>
+                                                                        <span aria-hidden="true">&times;</span>
+                                                                    </button>*@
+                                                                <a href='@Url.Action("RolGorevSil",new { rolid = Model.RolListesi[i].KayitNo, gorevid = item.KAYITNO })' class="close" aria-label="Sil">
+                                                                    <span aria-hidden="true">&times;</span>
+                                                                </a>
+                                                                @* @Html.ActionLink("Sil","RolGorevSil",new {rolid=Model.RolListesi[i].Id,gorevid=item.Id})*@
+                                                            </div>
+                                                        </div>
+                                                    }
+                                                </td>
+
+                                            }
+                                            else
+                                            {
+                                                <td></td>
+
+                                            }
+
+                                            <td>@Html.CheckBoxFor(modelItem => Model.RolListesi[i].Secildi)</td>
+                                        </tr>
+                                    }
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="pull-right">
+                        <button type="submit" class="btn btn-oval btn-primary">Ekle</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+}
+
+@*@using OsosOracle.MvcUI.Infrastructure
+    @using OsosOracle.Framework.HtmlHelpers
+    @model OsosOracle.MvcUI.Models.SYSGOREVROLModels.SYSGOREVROLKaydetModel
+
+    @section panelHeading
+    {
+
+    }
+
+    <div class="ajaxForm">
+
+        @using (Html.BeginForm("Kaydet", "SYSGOREVROL", FormMethod.Post))
+        {
+            @Html.AntiForgeryToken()
+            @Html.HiddenFor(t => t.SYSGOREVROL.KAYITNO)
+            @Html.HiddenFor(t => t.SYSGOREVROL.VERSIYON)
+            @Html.ValidationSummary(true)
+
+            <div class="form-group">
+                @Html.TextBoxFor(t => t.SYSGOREVROL.GOREVKAYITNO, new { @class = "form-control int", placeholder = _T("GOREVKAYITNO") })
+                @Html.ValidationMessageFor(t => t.SYSGOREVROL.GOREVKAYITNO)
+
+            </div>
+
+            <div class="form-group">
+                @Html.TextBoxFor(t => t.SYSGOREVROL.ROLKAYITNO, new { @class = "form-control int", placeholder = _T("ROLKAYITNO") })
+                @Html.ValidationMessageFor(t => t.SYSGOREVROL.ROLKAYITNO)
+
+            </div>
+
+            <div class="form-group">
+                @Html.TextBoxFor(t => t.SYSGOREVROL.VERSIYON, new { @class = "form-control int", placeholder = _T("VERSIYON") })
+                @Html.ValidationMessageFor(t => t.SYSGOREVROL.VERSIYON)
+
+            </div>
+
+
+
+            <div class="form-actions">
+                <button type="submit" class="btn btn-primary"><i class="fa fa-save"></i> @_T("Kaydet")</button>
+                @Html.ButtonLink(_T("Vazgeç").ToString(), "Index", "btn btn-xs btn-danger cancel", "fa-remove")
+            </div>
+        }
+    </div>
+
+    @section script
+    {
+        <script type="text/javascript">
+            $(document).ready(function () {
+                //js kodunuzu buraya yazın
+            });
+
+        </script>
+    }*@

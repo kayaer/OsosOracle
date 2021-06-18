@@ -1,0 +1,88 @@
+@using OsosOracle.MvcUI.Infrastructure
+@using OsosOracle.Framework.HtmlHelpers
+@using OsosOracle.Entities.ComplexType.CSTHUMODELComplexTypes
+@using OsosOracle.MvcUI.Resources
+@model OsosOracle.MvcUI.Models.ENTHABERLESMEUNITESIModels.ENTHABERLESMEUNITESIIndexModel
+
+@section panelHeading{
+    @Html.ButtonLink(Dil.Ekle+" " + Dil.HaberlesmeUnitesi, "Ekle", "btn btn-xs btn-success modalizer", "fa-plus")
+}
+
+@using (Html.BeginPortlet(Dil.Ara,Dil.DetayliArama, "fa fa-search"))
+{
+    <form id="frmAra" class="form-bordered">
+
+        <div class="form-group row">
+            <div class="col-md-4">
+                @Html.AutoComplete(t => t.ENTHABERLESMEUNITESIAra.MARKAKAYITNO, Enums.AutocompleteFuction.ModemMarkaGetir, Enums.AutoCompleteType.List,Dil.HaberlesmeUnitesiMarkalari, connectedWith: Html.NameFor(t => t.ENTHABERLESMEUNITESIAra.MODELKAYITNO).ToString())
+            </div>
+            <div class="col-md-4">
+                @Html.AutoComplete(t => t.ENTHABERLESMEUNITESIAra.MODELKAYITNO, Enums.AutocompleteFuction.ModemModelGetir, Enums.AutoCompleteType.List, Dil.HaberlesmeUnitesiModeli)
+            </div>
+            <div class="col-md-4">
+                @Html.TextBoxFor(t => t.ENTHABERLESMEUNITESIAra.SERINO, new { @class = "form-control int", placeholder =Dil.HaberlesmeUnitesiSeriNo })
+            </div>
+        </div>
+
+
+        <div class="form-actions">
+            <button type="button" class="btn btn-primary btn-sm" id="btnAra"><i class="fa fa-search"></i> @Dil.Ara</button>
+        </div>
+    </form>
+}
+
+
+<table id="tblENTHABERLESMEUNITESI" class="table table-striped table-bordered table-hover table-responsive">
+    <thead>
+        <tr>
+            <th>@Dil.HaberlesmeUnitesiMarkalari</th>
+            <th>@Dil.HaberlesmeUnitesiModeli</th>
+            <th>@Dil.HaberlesmeUnitesiSeriNo</th>
+            <th>@Dil.SimTelNo</th>
+            <th>@_T("Ip")</th>
+            <th>@Dil.Aciklama</th>
+            <th>@Dil.Kurum</th>
+
+            <th style="width: 100px">@Dil.Islem</th>
+        </tr>
+    </thead>
+</table>
+@section script{
+    <script type="text/javascript">
+	$(document).ready(function () {
+		AraFiltered();
+		$("#btnAra").click(function(e) {
+				e.preventDefault();
+				AraFiltered();
+		});
+	});
+
+	function AraFiltered() {
+		$('#tblENTHABERLESMEUNITESI').dataTable({
+			'language': GetSession(baseUrl),
+			'processing': true,
+			'serverSide': true,
+			'destroy': true,
+            'columns': [
+                {'data': "MARKA" },
+                {'data': "MODEL" },
+				{'data': "SERINO"},
+				{'data': "SIMTELNO"},
+				{'data': "IP"},
+				{'data': "ACIKLAMA"},
+                {'data': "Kurum"},
+				{'data': "Islemler", sortable: false}
+			],
+			'ajax': {
+				'type': 'POST',
+				'data': $("#frmAra").serializeObject(),
+				'url': "@Url.Action("DataTablesList", "ENTHABERLESMEUNITESI")",
+				'error': function(xhr, ajaxOptions, errorThrown) { ajaxMesajGoster(xhr.responseJSON.Mesaj); },
+				'complete': function() { }
+		   }
+
+		});
+	 }
+
+    </script>
+}

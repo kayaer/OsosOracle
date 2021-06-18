@@ -1,0 +1,71 @@
+
+@using OsosOracle.Framework.HtmlHelpers
+@using OsosOracle.MvcUI.Infrastructure
+@model OsosOracle.MvcUI.Models.CONDILModels.CONDILIndexModel
+
+@section panelHeading{
+	@Html.ButtonLink(_T("Yeni CONDIL").ToString(), "Ekle", "btn btn-xs btn-success modalizer", "fa-plus")
+}
+
+@using (Html.BeginPortlet("CONDIL Arama", "Detaylı Arama", "fa fa-search"))
+{
+<form id="frmAra" class="form-bordered">
+
+	<div class="form-group">
+    @Html.TextBoxFor(t => t.CONDILAra.DIL, new { @class = "form-control int", placeholder = _T("DIL") })
+</div>
+
+
+
+	<div class="form-actions">
+		<button type="button" class="btn btn-primary btn-sm" id="btnAra"><i class="fa fa-search"></i> @_T("Bul")</button>
+	</div>
+</form>
+}
+
+
+<table id="tblCONDIL" class="table table-striped table-bordered table-hover table-responsive">
+	<thead>
+		<tr>
+			<th style="width: 30px">@_T("Id")</th>
+						<th>@_T("DIL")</th>
+
+			<th style="width: 100px">@_T("İşlemler")</th>
+		</tr>
+	</thead>
+</table>
+@section script{
+<script type="text/javascript">
+	$(document).ready(function () {
+		AraFiltered();
+		$("#btnAra").click(function(e) {
+				e.preventDefault();
+				AraFiltered();
+		});
+	});
+
+	function AraFiltered() {
+		$('#tblCONDIL').dataTable({
+			'language': dataTableLanguage,
+			'processing': true,
+			'serverSide': true,
+			'destroy': true,
+			'columns': [
+				{'data': "KAYITNO"},
+								{'data': "DIL"},
+
+				{'data': "Islemler", sortable: false}
+			],
+			'ajax': {
+				'type': 'POST',
+				'data': $("#frmAra").serializeObject(),
+				'url': "@Url.Action("DataTablesList", "CONDIL")",
+				'error': function(xhr, ajaxOptions, errorThrown) { ajaxMesajGoster(xhr.responseJSON.Mesaj); },
+				'complete': function() { }
+		   }
+			
+		});
+	 }
+   
+</script>
+}

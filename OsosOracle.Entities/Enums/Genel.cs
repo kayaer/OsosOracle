@@ -46,7 +46,8 @@ namespace OsosOracle.Entities.Enums
         Gaz = 5,
         MercanYd = 6,
         As25Yd = 7,
-        CiniGaz=8
+        CiniGaz=8,
+        ULWM20 = 9
     }
 
     public enum enumIsEmirleriDurum

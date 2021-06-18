@@ -681,4 +681,19 @@
   <data name="TutarSifirdanFarkliOlmalidir" xml:space="preserve">
     <value>Tutar 0 dan farklı olmalıdır</value>
   </data>
+  <data name="KullaniciRolTakip" xml:space="preserve">
+    <value>Kullanıcı-Rol Takip</value>
+  </data>
+  <data name="KomutGonderildi" xml:space="preserve">
+    <value>Komut Gönderildi</value>
+  </data>
+  <data name="BorcTarihi" xml:space="preserve">
+    <value>Borç Tarihi</value>
+  </data>
+  <data name="IlkPulseTarihi" xml:space="preserve">
+    <value>İlk Pulse Tarihi</value>
+  </data>
+  <data name="SonPulseTarihi" xml:space="preserve">
+    <value>Son Pulse Tarihi</value>
+  </data>
 </root>

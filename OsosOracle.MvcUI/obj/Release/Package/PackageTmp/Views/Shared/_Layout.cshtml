@@ -1,0 +1,173 @@
+﻿@*<!DOCTYPE html>*@
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+   
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>@ViewBag.Title</title>
+    <link rel="icon" href="~/Content/images/favicon.png">
+    <!-- =============== VENDOR STYLES ===============-->
+    @Styles.Render("~/bundles/fontawesome")
+    @Styles.Render("~/bundles/simpleLineIcons")
+    @Styles.Render("~/bundles/animatecss")
+    @Styles.Render("~/bundles/whirl")
+    <!-- =============== PAGE VENDOR STYLES =============== -->
+    @if (IsSectionDefined("Styles"))
+    {@RenderSection("Styles", required: false)}
+
+    <!-- =============== BOOTSTRAP STYLES ===============-->
+    <link href="@Styles.Url("~/Content/app/css/bootstrap.css")" rel="stylesheet" type="text/css" id="bscss" />
+    <!-- =============== APP STYLES ===============-->
+    <link href="@Styles.Url("~/Content/app/css/app.css")" rel="stylesheet" type="text/css" id="maincss" />
+    <link href="@Styles.Url("~/Content/mvc-override.css")" rel="stylesheet" type="text/css" />
+
+    <!-- =============== Benim eklediklerim ===============-->
+    <link href="~/Content/css/layout.css" rel="stylesheet" />
+    <link href="~/Content/css/site.css" rel="stylesheet" />
+    <link href="~/Content/lib/summernote/summernote.css" rel="stylesheet" />
+    <link href="~/Content/lib/DataTables/datatables.min.css" rel="stylesheet" />
+    <link href="~/Content/lib/DataTables/plugins/bootstrap/datatables.bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/lib/bootstrap-switch/css/bootstrap-switch.min.css" rel="stylesheet" />
+    <link href="~/Content/lib/Keyboard/jQKeyboard.css" rel="stylesheet" />
+    <link href="~/Content/lib/bootstrap-datetimepicker/css/bootstrap-datetimepicker.css" rel="stylesheet" />
+    <link href="~/Content/lib/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet" />
+    <link href="~/Content/lib/bootstrap-datepicker/css/bootstrap-datepicker3.css" rel="stylesheet" />
+    <link href="~/Content/lib/bootstrap-timepicker/css/bootstrap-timepicker.css" rel="stylesheet" />
+
+
+    <link href="~/Content/lib/jquery-ui/jquery-ui.min.css" rel="stylesheet" />
+    <link href="~/Content/css/components-rounded.css" rel="stylesheet" />
+    <link href="~/Content/css/plugins.css" rel="stylesheet" />
+    @RenderSection("style", false)
+    <script src="~/Content/lib/jquery/jquery.min.js"></script>
+    <script src="~/Content/lib/jquery-ui/jquery-ui.min.js"></script>
+    <script src="~/Content/lib/bootstrap/js/bootstrap.js"></script>
+    <script src="~/Content/lib/summernote/summernote.js"></script>
+    <script src="~/Content/lib/jquery.blockui.min.js"></script>
+    <script src="~/Content/lib/bootbox.min.js"></script>
+    <script src="~/Content/lib/DataTables/datatables.min.js"></script>
+    <script src="~/Content/lib/DataTables/plugins/bootstrap/datatables.bootstrap.js"></script>
+    <script src="~/Content/lib/bootstrap-switch/js/bootstrap-switch.min.js"></script>
+    <script src="~/Content/lib/jquery.validation/jquery.validate.min.js"></script>
+    <script src="~/Content/lib/jquery.validation/jquery.validate.unobtrusive.min.js"></script>
+    <script src="~/Content/lib/jquery.unobtrusive.ajax/jquery.unobtrusive-ajax.min.js"></script>
+    <script src="~/Content/lib/jquery-masked-input/jquery.maskedinput.js"></script>
+
+    <script src="~/Content/lib/moment.min.js"></script>
+    <script src="~/Content/lib/bootstrap-daterangepicker/daterangepicker.min.js"></script>
+    <script src="~/Content/lib/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+    <script src="~/Content/lib/bootstrap-timepicker/js/bootstrap-timepicker.min.js"></script>
+    <script src="~/Content/lib/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js"></script>
+    <script src="~/Content/lib/bootstrap-datepicker/locales/bootstrap-datepicker.tr.min.js"></script>
+    <script src="~/Content/lib/typeahead/typeahead.bundle.min.js"></script>
+
+    @*<script src="~/Content/lib/jstree/jstree.min.js"></script>*@
+    <script src="~/Content/lib/bootstrap/js/bootbox.min.js"></script>
+    <script src="~/Content/lib/floatlabels.min.js"></script>
+    <script src="~/Content/lib/url.js"></script>
+    <script src="~/Content/lib/jquery.peity.min.js"></script>
+    <script src="~/Content/lib/bootstrap-fileinput/js/fileinput.min.js"></script>
+    <script src="~/Content/lib/bootstrap-fileinput/js/fileinput_locale_tr.js"></script>
+    <script src="~/Content/lib/bootstrap-fileinput/js/fileinput_config.js"></script>
+    <script src="~/Content/lib/jquery-confirm-master/js/jquery-confirm.js"></script>
+
+
+    <script src="~/Content/lib/underscore.js"></script>
+
+    <script src="~/Content/lib/decimal.min.js"></script>
+    <script src="~/Content/lib/sweetToolTip/sweet-tooltip.js"></script>
+    <script src="~/Content/lib/handlebars-v4.0.5.js"></script>
+    <script src="~/Content/lib/jquery.fileDownload.js"></script>
+
+
+    <script src="~/Content/js/app.js"></script>
+    <script src="~/Content/lib/Keyboard/jQKeyboard.js"></script>
+    <script src="~/Content/js/mysiteLib.js"></script>
+    <script src="~/Content/js/siteLib.js"></script>
+    <script src="~/Content/js/site.js"></script>
+  
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+    @RenderSection("script", false)
+
+</head>
+<body>
+    <div class="wrapper" id="bdy">
+        <!-- top navbar-->
+        <header class="topnavbar-wrapper">
+            @Html.Partial("_TopNavbar")
+        </header>
+        <!-- sidebar-->
+        <aside class="aside">
+            @*  @Html.Partial("_Sidebar")*@
+            @Html.Action("MenuItems", "Home", new { area = "" })
+        </aside>
+        <!-- offsidebar-->
+        <aside class="offsidebar hide">
+            @*    @Html.Partial("_Offsidebar")*@
+        </aside>
+        <!-- Main section-->
+        <section>
+            <div class="page-container">
+                <div class="page-content-wrapper">
+                    <!-- Page content-->
+                    <div class="page-content">
+                        <div class="page-bar">
+                            <ul class="page-breadcrumb">
+                                <li>
+                                    <a href="/"><i class="fa fa-home"></i> </a>
+                                    <i class="fa fa-circle"></i>
+                                </li>
+                                <li>
+                                    <span>@ViewBag.Title</span>
+                                </li>
+                            </ul>
+                            <div class="page-toolbar">
+                                <div class="button-group pull-right">
+                                    @RenderSection("panelHeading", required: false)
+                                </div>
+                            </div>
+                        </div>
+                        @Html.Partial("_Notification")
+                        <div class="row">
+
+
+                            <div class="col-md-12">
+
+                                @RenderBody()
+
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Page footer-->
+        <footer>
+            @Html.Partial("_Footer")
+        </footer>
+    </div>
+    @if (IsSectionDefined("BodyArea"))
+    {@RenderSection("BodyArea", required: false)}
+    <!-- =============== VENDOR SCRIPTS ===============-->
+    @* @Scripts.Render("~/bundles/modernizr")*@
+    @* @Scripts.Render("~/bundles/matchMedia")*@
+
+
+    @Scripts.Render("~/bundles/storage")
+    @Scripts.Render("~/bundles/animo")
+    @Scripts.Render("~/bundles/slimscroll")
+    @Scripts.Render("~/bundles/screenfull")
+    @Scripts.Render("~/bundles/localize")
+    <!-- =============== PAGE VENDOR SCRIPTS ===============-->
+    @RenderSection("scripts", required: false)
+    <!-- =============== APP SCRIPTS ===============-->
+    @Scripts.Render("~/bundles/Angle")
+
+   
+
+</body>
+</html>

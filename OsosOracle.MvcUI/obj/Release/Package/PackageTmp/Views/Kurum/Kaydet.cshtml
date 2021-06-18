@@ -1,0 +1,49 @@
+﻿@using OsosOracle.Framework.HtmlHelpers
+@using OsosOracle.MvcUI.Infrastructure
+@using OsosOracle.MvcUI.Resources
+
+@model OsosOracle.MvcUI.Models.CONKURUMModels.CONKURUMKaydetModel
+
+
+
+<div class="ajaxForm">
+
+    @using (Html.BeginForm("Kaydet", "Kurum", FormMethod.Post))
+    {
+        @Html.AntiForgeryToken()
+        @Html.HiddenFor(t => t.CONKURUM.KAYITNO)
+        @Html.HiddenFor(t => t.CONKURUM.VERSIYON)
+        @Html.HiddenFor(t => t.CONKURUM.OLUSTURAN)
+        @Html.HiddenFor(t => t.CONKURUM.GUNCELLEYEN)
+        @Html.ValidationSummary(true)
+
+        <div class="form-group">
+            @Html.TextBoxFor(t => t.CONKURUM.AD, new { @class = "form-control", placeholder = Dil.Ad })
+            @Html.ValidationMessageFor(t => t.CONKURUM.AD)
+        </div>
+        <div class="form-group">
+            @Html.TextAreaFor(t => t.CONKURUM.ACIKLAMA, new { @class = "form-control", placeholder = Dil.Aciklama })
+            @Html.ValidationMessageFor(t => t.CONKURUM.ACIKLAMA)
+
+        </div>
+         <div class="form-group">
+            @Html.TextAreaFor(t => t.CONKURUM.DllAdi, new { @class = "form-control", placeholder = "Dll Adi" })
+            @Html.ValidationMessageFor(t => t.CONKURUM.DllAdi)
+
+        </div>
+        <div class="form-actions">
+            <button type="submit" class="btn btn-primary"><i class="fa fa-save"></i> @Dil.Kaydet</button>
+            @Html.ButtonLink(Dil.Vazgec, "Index", "btn btn-xs btn-danger cancel", "fa-remove")
+        </div>
+    }
+</div>
+
+@section script
+{
+    <script type="text/javascript">
+        $(document).ready(function () {
+            //js kodunuzu buraya yazın
+        });
+
+    </script>
+}

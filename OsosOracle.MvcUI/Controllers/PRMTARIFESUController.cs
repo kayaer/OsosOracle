@@ -156,7 +156,7 @@ namespace OsosOracle.MvcUI.Controllers
                 _pRMTARIFESUService.Ekle(pRMTARIFESUKaydetModel.PRMTARIFESU.List());
             }
 
-            return Yonlendir(Url.Action("Index"), $"Su tarife kayıdı başarıyla gerçekleştirilmiştir.");
+            return Yonlendir(Url.Action("Index"), Dil.Basarili);
             //return Yonlendir(Url.Action("Detay","PRMTARIFESU",new{id=pRMTARIFESUKaydetModel.PRMTARIFESU.Id}), $"PRMTARIFESU kayıdı başarıyla gerçekleştirilmiştir.");
         }
 
@@ -174,7 +174,7 @@ namespace OsosOracle.MvcUI.Controllers
         {
             _pRMTARIFESUService.Sil(model.Id.List());
 
-            return Yonlendir(Url.Action("Index"), $"PRMTARIFESU Başarıyla silindi");
+            return Yonlendir(Url.Action("Index"),Dil.Basarili);
         }
 
 

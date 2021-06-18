@@ -1,0 +1,365 @@
+﻿@using OsosOracle.MvcUI.Resources
+@using OsosOracle.Entities.Enums
+@model OsosOracle.MvcUI.Models.ENTSATISModels.Yeni.SatisModel
+<div class="">
+    <button id="btnKartOku" type="button" class="btn btn-danger btn-sm">@Dil.KartOku </button>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        <div id="user_content">
+            <div class="panel panel-default">
+                <div class="panel-heading">@Dil.AboneBilgileri</div>
+                <div class="panel-body">
+                    <div class="form-horizontal">
+                        <div class="form-group">
+                            <div class="col-md-6">
+                                @Html.TextBoxFor(t => t.SuSatisModel.AboneSayacDetay.AboneAdSoyad, new { @class = "form-control", placeholder = Dil.Ad + ' ' + Dil.Soyad })
+                            </div>
+                            <div class="col-md-6">
+                                @Html.TextBoxFor(t => t.SuSatisModel.AboneSayacDetay.AboneNo, new { @class = "form-control", placeholder = Dil.AboneNo })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-md-12">
+                                @Html.TextBoxFor(t => t.SuSatisModel.AboneSayacDetay.SuTarifeAdi, new { @class = "form-control", placeholder = Dil.Su + ' ' + Dil.Tarife })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-md-6">
+                                @Html.TextBoxFor(t => t.SuSatisModel.SogukSuOkunan.Kredi, new { @class = "form-control", placeholder = Dil.Su + ' ' + Dil.Kredi })
+                            </div>
+                            <div class="col-md-6">
+                                @Html.TextBoxFor(t => t.SuSatisModel.SogukSuOkunan.YedekKredi, new { @class = "form-control", placeholder = Dil.Su + ' ' + Dil.YedekKredi })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-6">
+                                @Html.TextBoxFor(t => t.SuSatisModel.SogukSuOkunan.AkoMesaj, new { @class = "form-control", placeholder = _T("Su Ana Kredi Okundu Bilgisi") })
+                            </div>
+                            <div class="col-md-6">
+                                @Html.TextBoxFor(t => t.SuSatisModel.SogukSuOkunan.YkoMesaj, new { @class = "form-control", placeholder = _T("Su Yedek Kredi Okundu Bilgisi") })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-12">
+                                @Html.TextBoxFor(t => t.KalorimetreSatisModel.AboneSayacDetay.KalorimetreTarifeAdi, new { @class = "form-control", placeholder = Dil.Kalorimetre + ' ' + Dil.Tarife })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-6">
+                                @Html.TextBoxFor(t => t.KalorimetreSatisModel.KalorimetreOkunan.Kredi, new { @class = "form-control", placeholder = Dil.Kalorimetre + ' ' + Dil.Kredi })
+                            </div>
+                            <div class="col-md-6">
+                                @Html.TextBoxFor(t => t.KalorimetreSatisModel.KalorimetreOkunan.AkoMesaj, new { @class = "form-control", placeholder = "Kalorimetre Bilgisi" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-6">
+                                @Html.TextBoxFor(t => t.KalorimetreSatisModel.KalorimetreOkunan.Kalan, new { @class = "form-control", placeholder = Dil.Kalorimetre + ' ' + Dil.KALANKREDI })
+                            </div>
+                            <div class="col-md-6">
+                                @Html.TextBoxFor(t => t.KalorimetreSatisModel.KalorimetreOkunan.Harcanan, new { @class = "form-control", placeholder = Dil.Kalorimetre + ' ' + Dil.HARCANANKREDI })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-12">
+                                @Html.TextBoxFor(t => t.SuSatisModel.AboneSayacDetay.SonSatisTarihi, new { @class = "form-control", placeholder = Dil.SonSatisTarihi })
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="panel panel-default">
+            <div class="panel-heading">@Dil.Su @Dil.Sayac</div>
+            <div class="panel-body">
+                <div class="form-horizontal">
+
+                    <div class="col-sm-12">
+                        <input id="txtSuSayacyuklenecek" class="form-control" type="text" placeholder="Yüklenecek M3">
+                    </div>
+                    <div class="col-sm-12">
+
+                    </div>
+                    <div class="col-sm-12">
+
+                    </div><div class="col-sm-12">
+
+                    </div>
+                    <div class="col-sm-12">
+                        <button type="submit" class="btn btn-danger btn-sm pull-right" name="submitButton" id="btnSuSayacKrediYukle">
+                            @Dil.KrediYukle
+                        </button>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="col-md-6"></div>
+    <div class="col-md-6">
+        <div class="panel panel-default">
+            <div class="panel-heading">@Dil.Kalorimetre @Dil.Sayac</div>
+            <div class="panel-body">
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <div class="col-sm-12">
+                            <input id="txtKalorimetreyuklenecek" class="form-control" type="text" placeholder="Yüklenecek M3">
+                        </div>
+                        <div class="col-sm-12">
+
+                        </div>
+                        <div class="col-sm-12">
+
+                        </div><div class="col-sm-12">
+
+                        </div>
+                        <div class="col-sm-12">
+                            <button type="submit" class="btn btn-danger btn-sm pull-right" name="submitButton" id="btnKalorimetreKrediYukle">
+                                @Dil.KrediYukle
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</div>
+<script src="~/Content/js/OrtakAvm.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        var SatisModel=@Html.Raw(Json.Encode(Model));
+        $("#btnKartOku").click(function (e) {
+            blockUI();
+            try {
+                //Ortak Avm Dll Kullanılıyor
+                var ortakAvm = new OrtakAvm();
+                SatisModel.HamData = ortakAvm.AboneOku();
+                var model = JSON.stringify(SatisModel)
+
+                var request = $.ajax({
+                       url: "@Url.Action("BedelsizSatisPars", "EntSatis")",
+                       method: "POST",
+                       async: true,
+                       dataType: "json",
+                       contentType: "application/json",
+                       data: model
+
+                   });
+
+                   request.done(function (jqXHR) {
+                       unblockUI();
+                       SatisModel = jqXHR;
+                       $("#@Html.IdFor(t => t.SuSatisModel.AboneSayacDetay.AboneAdSoyad)").val(jqXHR.SuSatisModel.AboneSayacDetay.AboneAdSoyad).blur();
+                       $("#@Html.IdFor(t => t.SuSatisModel.AboneSayacDetay.AboneNo)").val(jqXHR.SuSatisModel.AboneSayacDetay.AboneNo).blur();
+                       $("#@Html.IdFor(t => t.SuSatisModel.AboneSayacDetay.SuTarifeAdi)").val(jqXHR.SuSatisModel.AboneSayacDetay.SuTarifeAdi).blur();
+                       $("#@Html.IdFor(t => t.SuSatisModel.SogukSuOkunan.Kredi)").val(jqXHR.SuSatisModel.SogukSuOkunan.Kredi).blur();
+                       $("#@Html.IdFor(t => t.SuSatisModel.SogukSuOkunan.YedekKredi)").val(jqXHR.SuSatisModel.SogukSuOkunan.YedekKredi).blur();
+                       $("#@Html.IdFor(t => t.SuSatisModel.SogukSuOkunan.AkoMesaj)").val(jqXHR.SuSatisModel.SogukSuOkunan.AkoMesaj).blur();
+                       $("#@Html.IdFor(t => t.SuSatisModel.SogukSuOkunan.YkoMesaj)").val(jqXHR.SuSatisModel.SogukSuOkunan.YkoMesaj).blur();
+                       $("#@Html.IdFor(t => t.KalorimetreSatisModel.AboneSayacDetay.KalorimetreTarifeAdi)").val(jqXHR.KalorimetreSatisModel.AboneSayacDetay.KalorimetreTarifeAdi).blur();
+                       $("#@Html.IdFor(t => t.KalorimetreSatisModel.KalorimetreOkunan.Kredi)").val(jqXHR.KalorimetreSatisModel.KalorimetreOkunan.Kredi).blur();
+                       $("#@Html.IdFor(t => t.KalorimetreSatisModel.KalorimetreOkunan.YedekKredi)").val(jqXHR.KalorimetreSatisModel.KalorimetreOkunan.YedekKredi).blur();
+                       $("#@Html.IdFor(t => t.KalorimetreSatisModel.KalorimetreOkunan.AkoMesaj)").val(jqXHR.KalorimetreSatisModel.KalorimetreOkunan.AkoMesaj).blur();
+                       $("#@Html.IdFor(t => t.KalorimetreSatisModel.KalorimetreOkunan.Kalan)").val(jqXHR.KalorimetreSatisModel.KalorimetreOkunan.Kalan).blur();
+                       $("#@Html.IdFor(t => t.KalorimetreSatisModel.KalorimetreOkunan.Harcanan)").val(jqXHR.KalorimetreSatisModel.KalorimetreOkunan.Harcanan).blur();
+                       $("#@Html.IdFor(t => t.SuSatisModel.AboneSayacDetay.SonSatisTarihi)").val(jqXHR.SuSatisModel.AboneSayacDetay.SonSatisTarihiStr).blur();
+                   });
+                   request.fail(function (jqXHR, textStatus) {
+                       unblockUI();
+                       var msg = jQuery.parseJSON(jqXHR.responseText);
+                       ajaxMesajGoster(msg.Mesaj);
+                   });
+
+
+                unblockUI();
+            } catch (e) {
+                unblockUI();
+                ajaxMesajGoster(e);
+            }
+
+
+         });
+
+        $("#btnSuSayacKrediYukle").click(function (e) {
+            var AboneKayitNo = SatisModel.SuSatisModel.AboneSayacDetay.ABONEKAYITNO;//  $("#@Html.IdFor(t => t.SuSatisModel.AboneSayacDetay.ABONEKAYITNO)").val();
+            var SayacKayitNo = SatisModel.SuSatisModel.AboneSayacDetay.SAYACKAYITNO;// $("#@Html.IdFor(t => t.SuSatisModel.AboneSayacDetay.SAYACKAYITNO)").val();
+            var tarifeurl = "@Url.Action("SuTarifeGetir", "AboneSayac")" + "?&sayacKayitNo=" + SayacKayitNo + "&aboneKayitNo=" + AboneKayitNo;
+
+            var request = $.ajax({
+                       url: tarifeurl,
+                       method: "GET",
+                       contentType: "application/json"
+                   });
+
+                   request.done(function (jqXHR) {
+
+                       if (jqXHR != null) {
+                           SatisModel.SuSatisModel.Satis.KREDI = parseInt($("#txtSuSayacyuklenecek").val());
+                           SatisModel.SuSatisModel.PrmTarifeSuDetay = jqXHR;
+
+                           if (SuKrediYukle(SatisModel) == "1") {
+
+
+                               SatisModel.SuSatisModel.Satis.YEDEKKREDI = jqXHR.YEDEKKREDI;
+                               SatisModel.SuSatisModel.Satis.ABONEKAYITNO = AboneKayitNo;
+                               SatisModel.SuSatisModel.Satis.SAYACKAYITNO = SayacKayitNo;
+                               SatisModel.SuSatisModel.Satis.SatisTipi = @enumSatisTipi.BedelsizSatis.GetHashCode();//BEDELSİZ SATIŞ
+                               var model=JSON.stringify(SatisModel)
+
+                               var request = $.ajax({
+                                          url: "@Url.Action("SatisYap", "EntSatis")",
+                                          method: "POST",
+                                          async: true,
+                                          dataType: "json",
+                                          contentType: "application/json",
+                                          data: model
+
+                                      });
+
+                                      request.done(function (jqXHR) {
+
+                                          //SatisModel = jqXHR;
+                                          @*SatisModel = @Html.Raw(Json.Encode(Model));
+                                          var url = '@Url.Action("MakbuzIndir","Satis")' + '?filename=' + jqXHR;
+                                          window.location.href = url;*@
+                                            var url = '@Url.Action("MakbuzIndir","Satis")' + '?filename=' + jqXHR;
+                                            window.location.href = url;
+                                            ajaxMesajGoster('@Dil.Basarili');
+                                            setTimeout(function () { location.reload(); }, 2000);
+
+                                      });
+                                      request.fail(function (jqXHR, textStatus) {
+                                          unblockUI();
+                                          var msg = jQuery.parseJSON(jqXHR.responseText);
+                                          ajaxMesajGoster(msg.Mesaj);
+                                      });
+                           } else {
+                               ajaxMesajGoster("Karta yazılamadı");
+                           }
+                       } else {
+                           ajaxMesajGoster('@Dil.TarifeBilgileriBulunamadi');
+                       }
+
+                   });
+
+                   request.fail(function (jqXHR, textStatus) {
+                       unblockUI();
+                       var msg = jQuery.parseJSON(jqXHR.responseText);
+                       ajaxMesajGoster(msg.Mesaj);
+                   });
+
+
+        });
+
+
+
+
+        $("#btnKalorimetreKrediYukle").click(function (e) {
+            var AboneKayitNo = SatisModel.KalorimetreSatisModel.AboneSayacDetay.ABONEKAYITNO;//  $("#@Html.IdFor(t => t.SuSatisModel.AboneSayacDetay.ABONEKAYITNO)").val();
+            var SayacKayitNo = SatisModel.KalorimetreSatisModel.AboneSayacDetay.SAYACKAYITNO;// $("#@Html.IdFor(t => t.SuSatisModel.AboneSayacDetay.SAYACKAYITNO)").val();
+            var tarifeurl = "@Url.Action("KalorimetreTarifeGetir", "AboneSayac")" + "?&sayacKayitNo=" + SayacKayitNo + "&aboneKayitNo=" + AboneKayitNo;
+
+            var request = $.ajax({
+                       url: tarifeurl,
+                       method: "GET",
+                       contentType: "application/json"
+                   });
+
+                   request.done(function (jqXHR) {
+
+                       if (jqXHR != null) {
+                           SatisModel.KalorimetreSatisModel.Satis.KREDI = parseInt($("#txtKalorimetreyuklenecek").val());
+                           SatisModel.KalorimetreSatisModel.PrmTarifeKALORIMETREDetay = jqXHR;
+                           if (KalorimetreKrediYukle(SatisModel) == "1") {
+
+
+                               SatisModel.KalorimetreSatisModel.Satis.YEDEKKREDI = jqXHR.YEDEKKREDI;
+                               SatisModel.KalorimetreSatisModel.Satis.ABONEKAYITNO = AboneKayitNo;
+                               SatisModel.KalorimetreSatisModel.Satis.SAYACKAYITNO = SayacKayitNo;
+                               SatisModel.KalorimetreSatisModel.Satis.SatisTipi = @enumSatisTipi.BedelsizSatis.GetHashCode();//BEDELSİZ SATIŞ
+                               var model=JSON.stringify(SatisModel)
+
+                               var request = $.ajax({
+                                          url: "@Url.Action("SatisYap", "EntSatis")",
+                                          method: "POST",
+                                          async: true,
+                                          dataType: "json",
+                                          contentType: "application/json",
+                                          data: model
+
+                                      });
+
+                                      request.done(function (jqXHR) {
+                                            var url = '@Url.Action("MakbuzIndir","Satis")' + '?filename=' + jqXHR;
+                                            window.location.href = url;
+                                            ajaxMesajGoster('@Dil.Basarili');
+                                            setTimeout(function () { location.reload(); }, 2000);
+
+                                      });
+                                      request.fail(function (jqXHR, textStatus) {
+                                          unblockUI();
+                                          var msg = jQuery.parseJSON(jqXHR.responseText);
+                                          ajaxMesajGoster(msg.Mesaj);
+                                      });
+                           } else {
+                               ajaxMesajGoster("Karta yazılamadı");
+                           }
+                       } else {
+                           ajaxMesajGoster("Tarife bilgileri çekilemedi");
+                       }
+
+                   });
+
+                   request.fail(function (jqXHR, textStatus) {
+                       unblockUI();
+                       var msg = jQuery.parseJSON(jqXHR.responseText);
+                       ajaxMesajGoster(msg.Mesaj);
+                   });
+
+
+
+        });
+
+        function SuKrediYukle(SuSatisModel) {
+
+
+
+            if (SatisModel.SuSatisModel.SogukSuOkunan.Ako == "b") {
+                SatisModel.SuSatisModel.Satis.ToplamKredi = SatisModel.SuSatisModel.Satis.KREDI + parseInt(SatisModel.SuSatisModel.SogukSuOkunan.Kredi);
+            } else
+            {
+                SatisModel.SuSatisModel.Satis.ToplamKredi = SatisModel.SuSatisModel.Satis.KREDI;
+            }
+             //Ortak Avm Dll Kullanılıyor
+            var ortakAvm = new OrtakAvm();
+            return ortakAvm.SuKrediYukle(SuSatisModel.SuSatisModel);
+        }
+
+        function KalorimetreKrediYukle(KalorimetreSatisModel) {
+
+            var yuklenecekM3;
+            if (SatisModel.KalorimetreSatisModel.KalorimetreOkunan.Ako == "b") {
+                SatisModel.KalorimetreSatisModel.Satis.ToplamKredi = SatisModel.KalorimetreSatisModel.Satis.KREDI + parseInt(SatisModel.KalorimetreSatisModel.KalorimetreOkunan.Kredi);
+            }
+              //Ortak Avm Dll Kullanılıyor
+            var ortakAvm = new OrtakAvm();
+            return ortakAvm.KalorimetreKrediYukle(KalorimetreSatisModel.KalorimetreSatisModel);
+        }
+
+    });
+</script>

@@ -37,7 +37,7 @@ namespace OsosOracle.MvcUI.Controllers
 
         public ActionResult Index()
         {
-            SayfaBaslik($"Görev İşlemleri");
+            SayfaBaslik(Dil.GorevIslemleri);
             var model = new SYSGOREVIndexModel();
             return View(model);
         }

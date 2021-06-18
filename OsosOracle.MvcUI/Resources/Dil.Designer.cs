@@ -304,7 +304,7 @@ namespace OsosOracle.MvcUI.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Fault.
+        ///   Looks up a localized string similar to Error.
         /// </summary>
         public static string Ariza {
             get {
@@ -637,6 +637,15 @@ namespace OsosOracle.MvcUI.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Debt Date.
+        /// </summary>
+        public static string BorcTarihi {
+            get {
+                return ResourceManager.GetString("BorcTarihi", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Percent of debt.
         /// </summary>
         public static string BorcYuzde {
@@ -718,7 +727,7 @@ namespace OsosOracle.MvcUI.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Temperature Error.
+        ///   Looks up a localized string similar to Penalty 4.
         /// </summary>
         public static string CEZA4 {
             get {
@@ -1420,6 +1429,15 @@ namespace OsosOracle.MvcUI.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to First Pulse Date.
+        /// </summary>
+        public static string IlkPulseTarihi {
+            get {
+                return ResourceManager.GetString("IlkPulseTarihi", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Index.
         /// </summary>
         public static string Index {
@@ -1771,6 +1789,15 @@ namespace OsosOracle.MvcUI.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Command Sent.
+        /// </summary>
+        public static string KomutGonderildi {
+            get {
+                return ResourceManager.GetString("KomutGonderildi", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Command Operations.
         /// </summary>
         public static string KomutIslemleri {
@@ -1974,6 +2001,15 @@ namespace OsosOracle.MvcUI.Resources {
         public static string KullaniciRolEkle {
             get {
                 return ResourceManager.GetString("KullaniciRolEkle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to User Role.
+        /// </summary>
+        public static string KullaniciRolTakip {
+            get {
+                return ResourceManager.GetString("KullaniciRolTakip", resourceCulture);
             }
         }
         
@@ -2356,7 +2392,7 @@ namespace OsosOracle.MvcUI.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Onayla.
+        ///   Looks up a localized string similar to Confirm.
         /// </summary>
         public static string Onayla {
             get {
@@ -2509,7 +2545,7 @@ namespace OsosOracle.MvcUI.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Rol.
+        ///   Looks up a localized string similar to Role.
         /// </summary>
         public static string Rol {
             get {
@@ -3094,6 +3130,15 @@ namespace OsosOracle.MvcUI.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Last Pulse Date.
+        /// </summary>
+        public static string SonPulseTarihi {
+            get {
+                return ResourceManager.GetString("SonPulseTarihi", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Last Sales Date.
         /// </summary>
         public static string SonSatisTarihi {
@@ -3283,7 +3328,7 @@ namespace OsosOracle.MvcUI.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Consumption1.
+        ///   Looks up a localized string similar to Term Consumption.
         /// </summary>
         public static string Tuketim1 {
             get {

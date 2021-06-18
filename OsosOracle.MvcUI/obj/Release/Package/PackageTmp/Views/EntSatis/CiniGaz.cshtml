@@ -1,0 +1,284 @@
+﻿@using OsosOracle.MvcUI.Resources
+@using OsosOracle.Entities.Enums
+@model OsosOracle.MvcUI.Models.ENTSATISModels.Yeni.SatisModel
+
+@Html.HiddenFor(t => t.SuSatisModel.Satis.ODEME)
+<div class="">
+    <button id="btnKartOku" type="button" class="btn btn-danger btn-sm">@Dil.KartOku </button>
+</div>
+<div class="row">
+    <div class="col-md-6">
+        <div id="user_content">
+            <div class="panel panel-default">
+                <div class="panel-heading">@Dil.AboneBilgileri</div>
+                <div class="panel-body">
+                    <div class="form-horizontal">
+                        <div class="form-group">
+                            <div class="col-md-12">
+                                @Html.TextBox("Ad1", "", new { @class = "form-control", placeholder = Dil.Ad + " " + Dil.Soyad, Id = "txtAboneAdSoyad" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-md-12">
+                                @Html.TextBox("Ad2", "", new { @class = "form-control", placeholder = Dil.AboneNo, Id = "txtAboneNo" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-12">
+                                @Html.TextBox("Ad2", "", new { @class = "form-control", placeholder = Dil.SayacSeriNo, Id = "txtSayacSeriNo" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-12">
+                                @Html.TextBox("Ad3", "", new { @class = "form-control", placeholder = Dil.TarifeAdi, Id = "txtTarifeAdi" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-12">
+                                @Html.TextBox("Ad5", "", new { @class = "form-control", placeholder = Dil.Kredi, Id = "txtKredi" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-12">
+                                @Html.TextBox("Ad6", "", new { @class = "form-control", placeholder = Dil.YedekKredi, Id = "txtYedekKredi" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-12">
+                                @Html.TextBox("Ad9", "", new { @class = "form-control", placeholder = Dil.SonSatisTarihi })
+                            </div>
+                        </div>
+                         <div class="form-group">
+                            <div class="col-md-12">
+                                @Html.TextBox("Ad10", "", new { @class = "form-control", placeholder = Dil.AnaKrediOkundu, Id = "txtAnaKrediOkundu" })
+                            </div>
+                        </div>
+                         <div class="form-group">
+                            <div class="col-md-12">
+                                @Html.TextBox("Ad11", "", new { @class = "form-control", placeholder = Dil.YedekKrediOkundu, Id = "txtYedekKrediOkundu" })
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="panel panel-default">
+            <div class="panel-heading">@Dil.SatisBilgileri</div>
+            <div class="panel-body">
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <div class="col-sm-12">
+                            <div class="col-sm-6">
+                                <input type="text" class="form-control" placeholder=@Dil.Tutar id="txtGazTutar" />
+                            </div>
+                            <div class="col-sm-6">
+                                <input type="text" class="form-control" placeholder=@Dil.Kredi id="txtGazKredi" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-12">
+                            <div class="col-sm-6">
+
+                            </div>
+                            <div class="col-sm-6">
+                                <input type="text" class="form-control" placeholder=@Dil.YedekKredi id="txtGazYedekKredi" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-12">
+                            <div class="col-sm-6">
+
+                            </div>
+                            <div class="col-sm-6">
+                                <input type="text" class="form-control" placeholder=@Dil.ToplamKredi id="txtGazToplamKredi" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-danger btn-sm pull-right" name="submitButton" id="btnKrediYukle">
+                            @Dil.KrediYukle
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+        var SatisModel=@Html.Raw(Json.Encode(Model));
+        var okunanData = "";
+
+        $("#btnKartOku").click(function (e) {
+              blockUI();
+            try {
+                
+            //var aboneIslem = new ActiveXObject("SmartCard.CiniGaz.Main");
+            //okunanData = aboneIslem.AboneOku();
+              
+            SatisModel.HamData = okunanData;
+            var model=JSON.stringify(SatisModel)
+                var request = $.ajax({
+                       url: "@Url.Action("CiniGazHamdataPars", "EntSatis")",
+                       method: "POST",
+                       async: true,
+                       dataType: "json",
+                       contentType: "application/json",
+                       data: model
+
+                   });
+
+                   request.done(function (jqXHR) {
+                       unblockUI();
+                       SatisModel = jqXHR;
+                       $("#txtAboneAdSoyad").val(jqXHR.GazSatisModel.AboneSayacDetay.AboneAdSoyad);
+                       $("#txtAboneNo").val(jqXHR.GazSatisModel.AboneSayacDetay.AboneNo);
+                       $("#txtTarifeAdi").val(jqXHR.GazSatisModel.AboneSayacDetay.GazTarifeAdi);
+                       $("#txtKredi").val(jqXHR.GazSatisModel.GazOkunan.Kredi);
+                       $("#txtYedekKredi").val(jqXHR.GazSatisModel.GazOkunan.YedekKredi);
+                       $("#txtSayacSeriNo").val(jqXHR.GazSatisModel.GazOkunan.CihazNo);
+
+                       if (jqXHR.GazSatisModel.GazOkunan.Ako == "b") {
+                           $("#txtAnaKrediOkundu").val('@Dil.Okunmadı');
+                       } else {
+                             $("#txtAnaKrediOkundu").val('@Dil.Okundu');
+                       }
+
+                       if (jqXHR.GazSatisModel.GazOkunan.Yko == "b") {
+                           $("#txtYedekKrediOkundu").val('@Dil.Okunmadı');
+                       } else {
+                             $("#txtYedekKrediOkundu").val('@Dil.Okundu');
+                       }
+
+                   });
+                   request.fail(function (jqXHR, textStatus) {
+                       unblockUI();
+                       var msg = jQuery.parseJSON(jqXHR.responseText);
+                       ajaxMesajGoster(msg.Mesaj);
+                   });
+
+              
+                unblockUI();
+            } catch (e) {
+                   unblockUI();
+                ajaxMesajGoster(e);
+                 
+            }
+        });
+
+        
+        $('#txtGazTutar').blur(function () {
+            blockUI();
+            SatisModel.HamData = okunanData;
+            SatisModel.GazSatisModel.Satis.ODEME = parseInt( $("#txtGazTutar").val());
+            var model=JSON.stringify(SatisModel)
+                var request = $.ajax({
+                       url: "@Url.Action("CiniGazHesapla", "EntSatis")",
+                       method: "POST",
+                       async: true,
+                       dataType: "json",
+                       contentType: "application/json",
+                       data: model
+
+                   });
+
+                   request.done(function (jqXHR) {
+                       unblockUI();
+                       SatisModel = jqXHR;
+                       $("#txtGazKredi").val(jqXHR.GazSatisModel.Satis.KREDI);
+                       $("#txtGazYedekKredi").val(jqXHR.GazSatisModel.Satis.YEDEKKREDI);
+                       $("#txtGazToplamKredi").val(jqXHR.GazSatisModel.Satis.ToplamKredi);
+                     
+
+                   });
+                   request.fail(function (jqXHR, textStatus) {
+                       unblockUI();
+                       var msg = jQuery.parseJSON(jqXHR.responseText);
+                       ajaxMesajGoster(msg.Mesaj);
+                   });
+
+
+        });
+
+        
+        $("#btnKrediYukle").click(function (e) {
+             blockUI();
+            var result = "1";
+            if (SatisModel.GazSatisModel.Satis.ODEME > 0) {
+                SatisModel.GazSatisModel.Satis.SatisTipi = @enumSatisTipi.Satis.GetHashCode();//Satış
+                result= KrediYukle(SatisModel.GazSatisModel);
+            }
+
+            if (result == "1") {
+
+                var model = JSON.stringify(SatisModel)
+                var request = $.ajax({
+                    url: "@Url.Action("CiniGazSatisYap", "EntSatis")",
+                    method: "POST",
+                    async: true,
+                    dataType: "json",
+                    contentType: "application/json",
+                    data: model
+
+                });
+
+                request.done(function (jqXHR) {
+                    unblockUI();
+
+
+                    var url = '@Url.Action("MakbuzIndir","Satis")' + '?filename=' + jqXHR;
+                    window.location.href = url;
+                    ajaxMesajGoster('@Dil.Basarili');
+                    setTimeout(function () { location.reload(); }, 3000);
+
+
+                });
+                request.fail(function (jqXHR, textStatus) {
+                    unblockUI();
+                    var msg = jQuery.parseJSON(jqXHR.responseText);
+                    ajaxMesajGoster(msg.Mesaj);
+                });
+
+            } else {
+                ajaxMesajGoster('@Dil.Basarisiz');
+            }
+
+        });
+
+
+        function KrediYukle(satisKaydetModel) {
+            return "1";
+            var mcm = new ActiveXObject("SmartCard.CiniGaz.Main");
+            result = mcm.AboneYaz(satisKaydetModel.GazOkunan.CihazNo,
+                satisKaydetModel.Satis.ToplamKredi,
+                satisKaydetModel.Satis.YEDEKKREDI,
+                satisKaydetModel.PrmTarifeGazDetay.TUKETIMLIMIT,
+                satisKaydetModel.PrmTarifeGazDetay.AKSAMSAAT,
+                satisKaydetModel.PrmTarifeGazDetay.SABAHSAAT,
+                satisKaydetModel.PrmTarifeGazDetay.PULSE,
+                satisKaydetModel.PrmTarifeGazDetay.BAYRAM1GUN,
+                satisKaydetModel.PrmTarifeGazDetay.BAYRAM1AY,
+                satisKaydetModel.PrmTarifeGazDetay.BAYRAM1SURE,
+                satisKaydetModel.PrmTarifeGazDetay.BAYRAM2GUN,
+                satisKaydetModel.PrmTarifeGazDetay.BAYRAM2AY,
+                satisKaydetModel.PrmTarifeGazDetay.BAYRAM2SURE,
+                satisKaydetModel.PrmTarifeGazDetay.KRITIKKREDI);
+            return result;
+            
+
+        }
+
+    });
+</script>

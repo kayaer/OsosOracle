@@ -61,8 +61,8 @@ C:\Projeler\Mısır\OsosOracle\Listener\bin\Debug\System.Web.WebPages.Razor.xml
 C:\Projeler\Mısır\OsosOracle\Listener\bin\Debug\System.Web.Razor.xml
 C:\Projeler\Mısır\OsosOracle\Listener\bin\Debug\System.ValueTuple.xml
 C:\Projeler\Mısır\OsosOracle\Listener\bin\Debug\System.Web.WebPages.Deployment.xml
-C:\Projeler\Mısır\OsosOracle\Listener\obj\Debug\Listener.csprojAssemblyReference.cache
 C:\Projeler\Mısır\OsosOracle\Listener\obj\Debug\Listener.csproj.CoreCompileInputs.cache
 C:\Projeler\Mısır\OsosOracle\Listener\obj\Debug\Listener.csproj.CopyComplete
 C:\Projeler\Mısır\OsosOracle\Listener\obj\Debug\Listener.exe
 C:\Projeler\Mısır\OsosOracle\Listener\obj\Debug\Listener.pdb
+C:\Projeler\Mısır\OsosOracle\Listener\obj\Debug\Listener.csproj.AssemblyReference.cache

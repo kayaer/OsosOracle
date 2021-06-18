@@ -1,0 +1,86 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model OsosOracle.MvcUI.Models.CodeGenModels.CodeGenModel
+<div class="ajaxForm">
+
+
+    @using (Html.BeginForm("KodUret", "CodeGen", FormMethod.Post))
+    {
+        @Html.AntiForgeryToken()
+
+
+        <div class="form-group">
+            @Html.TextBoxFor(t => t.DbserverIp, new { @class = "form-control", placeholder = "Database Server ip/Ad" })
+            @Html.ValidationMessageFor(t => t.DbserverIp)
+        </div>
+
+        <div class="form-group">
+            @Html.TextBoxFor(t => t.KullaniciAdi, new { @class = "form-control", placeholder = "Database Kullanıcı Adı" })
+            @Html.ValidationMessageFor(t => t.KullaniciAdi)
+        </div>
+
+
+        <div class="form-group">
+            @Html.TextBoxFor(t => t.Sifre, new { @class = "form-control", placeholder = "Database Şifre" })
+            @Html.ValidationMessageFor(t => t.Sifre)
+        </div>
+
+
+            <div class="form-group">
+                @Html.TextBoxFor(t => t.DatabaseAdi, new { @class = "form-control", placeholder = "Database Adı" })
+                @Html.ValidationMessageFor(t => t.DatabaseAdi)
+            </div>
+
+            <div class="form-group">
+                @Html.TextBoxFor(t => t.SemaAdi, new { @class = "form-control", placeholder = "Şema Adı"})
+                @Html.ValidationMessageFor(t => t.SemaAdi)
+            </div>
+
+
+            <div class="form-group">
+                <a href="#" id="GetTables" class="btn btn-primary">Tabloları Listele</a> <a href="#" id="GetViews" class="btn btn-primary">Viewleri Listele</a>
+            </div>
+            <div class="form-group">
+                <select class="form-control" multiple="multiple" size="16" id="tableList" name="@Html.NameFor(t=>t.Tablolar)"></select>
+
+            </div>
+
+
+
+            <div class="form-group">
+                @Html.TextBoxFor(t => t.ProjeAdi, new { @class = "form-control", placeholder = "Proje NameSpace" })
+                @Html.ValidationMessageFor(t => t.ProjeAdi)
+            </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary"><i class="fa fa-flash"></i> Üret</button>
+                  @*  @Html.ButtonLink(_T("Vazgeç").ToString(), "Index", "btn btn-xs btn-danger cancel", "fa-remove")*@
+                </div>
+
+    }
+</div>
+<script src="~/scripts/jquery-2.2.4.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#GetTables,#GetViews").on("click", function () {
+            var url = "/CodeGen/" + $(this).attr("id");
+            var data = $(".ajaxForm form").serialize();
+            var jqxhr = $.post(url, data)
+                .done(function(result) {
+                    $("#tableList").html("");
+                    $.each(result,
+                        function(i, field) {
+                            $("#tableList").append("<option value='" + field.Name + "'>" + field.Name + "</option>");
+                            $("#tableList").attr("size", i+1);
+                        });
+
+                })
+                .fail(function (xhr) { ajaxMesajGoster(xhr.responseJSON.Mesaj); });
+        });
+
+    });
+
+</script>

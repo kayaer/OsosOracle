@@ -64,7 +64,6 @@ namespace OsosOracle.MvcUI.Controllers
                     t.Kurum,
 
                     Islemler = $@"<a class='btn btn-xs btn-info modalizer' href='{Url.Action("Guncelle", "SYSROL", new { id = t.KAYITNO })}' title='{Dil.Duzenle}'><i class='fa fa-edit'></i></a>
-							  
 								<a class='btn btn-xs btn-danger modalizer' href='{Url.Action("Sil", "SYSROL", new { id = t.KAYITNO })}' title='{Dil.Sil}'><i class='fa fa-trash'></i></a>"
                 }),
                 draw = dtParameterModel.Draw,
@@ -132,7 +131,7 @@ namespace OsosOracle.MvcUI.Controllers
                 _sYSROLService.Ekle(sYSROLKaydetModel.SYSROL.List());
             }
 
-            return Yonlendir(Url.Action("Index"), $"Rol kaydı başarıyla gerçekleştirilmiştir.");
+            return Yonlendir(Url.Action("Index"), Dil.Basarili);
         }
 
 
@@ -150,7 +149,7 @@ namespace OsosOracle.MvcUI.Controllers
             try
             {
                 _sYSROLService.Sil(model.Id.List());
-                return Yonlendir(Url.Action("Index"), $"Rol Başarıyla silindi");
+                return Yonlendir(Url.Action("Index"), Dil.Basarili);
             }
             catch (Exception ex)
             {

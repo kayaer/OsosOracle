@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OsosOracle.MvcUI.Resources;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -38,6 +39,7 @@ namespace OsosOracle.MvcUI.Models.ENTSATISModels
             YedekKredi = gazData[6];
             Kalan = gazData[7];
             Harcanan = gazData[8];
+           
             return this;
         }
         public string HamData { get; set; }
@@ -47,9 +49,9 @@ namespace OsosOracle.MvcUI.Models.ENTSATISModels
         public string Kredi { get; set; }
         public string YedekKredi { get; set; }
         public string Ako { get; set; }
-        public string AnaKrediOkunduBilgisi { get; set; }
+        public string AkoMesaj { get => Ako == "*" ? Dil.Okundu : Dil.Okunmadı; }
         public string Yko { get; set; }
-        public string YedekKrediOkunduBilgisi { get; set; }
+        public string YkoMesaj { get => Yko == "*" ? Dil.Okundu : Dil.Okunmadı; }
         public string Kalan { get; set; }
         public string Harcanan { get; set; }
         public string Cap { get; set; }

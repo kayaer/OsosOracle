@@ -13,7 +13,7 @@ using OsosOracle.Framework.DataAccess.Filter;
 using OsosOracle.MvcUI.Filters;
 using System;
 using OsosOracle.Entities.Enums;
-
+using OsosOracle.MvcUI.Resources;
 namespace OsosOracle.MvcUI.Controllers
 {
     [AuthorizeUser]
@@ -32,7 +32,7 @@ namespace OsosOracle.MvcUI.Controllers
 
         public ActionResult Index()
         {
-            SayfaBaslik($"İş Emri İşlemleri");
+           // SayfaBaslik(Dil.ise);
             var model = new EntIsEmriIndexModel();
             return View(model);
         }
@@ -68,7 +68,7 @@ namespace OsosOracle.MvcUI.Controllers
                     OlusturmaTarih=t.OlusturmaTarih.ToString(),
                     GuncellemeTarih = t.GuncellemeTarih.ToString(),
                     t.Cevap,
-                    Islemler = $@"<a class='btn btn-xs btn-danger modalizer' href='{Url.Action("Sil", "EntIsEmri", new { id = t.KayitNo })}' title='Sil'><i class='fa fa-trash'></i></a>"
+                    Islemler = $@"<a class='btn btn-xs btn-danger modalizer' href='{Url.Action("Sil", "EntIsEmri", new { id = t.KayitNo })}' title='{Dil.Sil}'><i class='fa fa-trash'></i></a>"
                 }),
                 draw = dtParameterModel.Draw,
                 recordsTotal = kayitlar.ToplamKayitSayisi,
@@ -138,7 +138,7 @@ namespace OsosOracle.MvcUI.Controllers
                 _eNTKOMUTLARBEKLEYENService.Ekle(eNTKOMUTLARBEKLEYENKaydetModel.EntIsEmri.List());
             }
 
-            return Yonlendir(Url.Action("Index"), $"Bekleyen Komut kayıdı başarıyla gerçekleştirilmiştir.");
+            return Yonlendir(Url.Action("Index"), Dil.Basarili);
             //return Yonlendir(Url.Action("Detay","ENTKOMUTLARBEKLEYEN",new{id=eNTKOMUTLARBEKLEYENKaydetModel.ENTKOMUTLARBEKLEYEN.Id}), $"ENTKOMUTLARBEKLEYEN kayıdı başarıyla gerçekleştirilmiştir.");
         }
 
@@ -156,7 +156,7 @@ namespace OsosOracle.MvcUI.Controllers
         {
             _eNTKOMUTLARBEKLEYENService.Sil(model.Id.List());
 
-            return Yonlendir(Url.Action("Index"), $"Bekleyen Komut Başarıyla silindi");
+            return Yonlendir(Url.Action("Index"), Dil.Basarili);
         }
 
 
@@ -172,7 +172,7 @@ namespace OsosOracle.MvcUI.Controllers
 
 
             Kaydet(model);
-            return Yonlendir(Url.Action("Index", "EntIsEmri", new { id = model.EntIsEmri.SayacKayitNo }), "İş Emri kaydı başarıyla gerçekleştirilmiştir.");
+            return Yonlendir(Url.Action("Index", "EntIsEmri", new { id = model.EntIsEmri.SayacKayitNo }), Dil.Basarili);
 
         }
 
@@ -187,7 +187,7 @@ namespace OsosOracle.MvcUI.Controllers
 
 
             Kaydet(model);
-            return Yonlendir(Url.Action("Index", "EntIsEmri", new { id = model.EntIsEmri.SayacKayitNo }), "İş Emri kaydı başarıyla gerçekleştirilmiştir.");
+            return Yonlendir(Url.Action("Index", "EntIsEmri", new { id = model.EntIsEmri.SayacKayitNo }), Dil.Basarili);
 
         }
         [HttpPost]
@@ -198,7 +198,7 @@ namespace OsosOracle.MvcUI.Controllers
             model.EntIsEmri.IsEmriDurumKayitNo = enumIsEmirleriDurum.Bekliyor.GetHashCode();
             model.EntIsEmri.Parametre = "RESET";
             Kaydet(model);
-            return Yonlendir(Url.Action("Index", "EntIsEmri", new { id = model.EntIsEmri.SayacKayitNo }), "İş Emri kaydı başarıyla gerçekleştirilmiştir.");
+            return Yonlendir(Url.Action("Index", "EntIsEmri", new { id = model.EntIsEmri.SayacKayitNo }), Dil.Basarili);
 
         }
         [HttpPost]
@@ -209,7 +209,7 @@ namespace OsosOracle.MvcUI.Controllers
             model.EntIsEmri.IsEmriDurumKayitNo = enumIsEmirleriDurum.Bekliyor.GetHashCode();
             model.EntIsEmri.Parametre = "YETKI_KAPAT";
             Kaydet(model);
-            return Yonlendir(Url.Action("Index", "EntIsEmri", new { id = model.EntIsEmri.SayacKayitNo }), "İş Emri kaydı başarıyla gerçekleştirilmiştir.");
+            return Yonlendir(Url.Action("Index", "EntIsEmri", new { id = model.EntIsEmri.SayacKayitNo }), Dil.Basarili);
 
         }
         [HttpPost]
@@ -222,7 +222,7 @@ namespace OsosOracle.MvcUI.Controllers
             //string komut = String.Concat(Flag, SayacSeriNo, "-7-0-*-*-0", ",", islemId, ",", credit);
             model.EntIsEmri.Parametre = String.Concat("ELM", sayac.SERINO, "-7-0-*-*-0", ",", rnd.Next(1, 100), ",", model.Kredi);
             Kaydet(model);
-            return Yonlendir(Url.Action("Index", "EntIsEmri", new { id = model.EntIsEmri.SayacKayitNo }), "İş Emri kaydı başarıyla gerçekleştirilmiştir.");
+            return Yonlendir(Url.Action("Index", "EntIsEmri", new { id = model.EntIsEmri.SayacKayitNo }), Dil.Basarili);
 
         }
 
@@ -236,7 +236,7 @@ namespace OsosOracle.MvcUI.Controllers
 
             model.EntIsEmri.Parametre = _nesneDegerService.DetayGetirById(model.ZamanlanmisGorev).DEGER;
             Kaydet(model);
-            return Yonlendir(Url.Action("Index", "EntIsEmri", new { id = model.EntIsEmri.SayacKayitNo }), "İş Emri kaydı başarıyla gerçekleştirilmiştir.");
+            return Yonlendir(Url.Action("Index", "EntIsEmri", new { id = model.EntIsEmri.SayacKayitNo }), Dil.Basarili);
 
         }
 
@@ -249,7 +249,7 @@ namespace OsosOracle.MvcUI.Controllers
 
             model.EntIsEmri.Parametre = "1-" + model.ServerIp + "-" + model.ServerPort;
             Kaydet(model);
-            return Yonlendir(Url.Action("Index", "EntIsEmri", new { id = model.EntIsEmri.SayacKayitNo }), "İş Emri kaydı başarıyla gerçekleştirilmiştir.");
+            return Yonlendir(Url.Action("Index", "EntIsEmri", new { id = model.EntIsEmri.SayacKayitNo }), Dil.Basarili);
 
         }
 
@@ -262,7 +262,7 @@ namespace OsosOracle.MvcUI.Controllers
 
             model.EntIsEmri.Parametre = model.ApnAdi;
             Kaydet(model);
-            return Yonlendir(Url.Action("Index", "EntIsEmri", new { id = model.EntIsEmri.SayacKayitNo }), "İş Emri kaydı başarıyla gerçekleştirilmiştir.");
+            return Yonlendir(Url.Action("Index", "EntIsEmri", new { id = model.EntIsEmri.SayacKayitNo }), Dil.Basarili);
 
         }
 
@@ -275,7 +275,7 @@ namespace OsosOracle.MvcUI.Controllers
 
             model.EntIsEmri.Parametre = "ELM"+sayac.SERINO;
             Kaydet(model);
-            return Yonlendir(Url.Action("Index", "EntIsEmri", new { id = model.EntIsEmri.SayacKayitNo }), "İş Emri kaydı başarıyla gerçekleştirilmiştir.");
+            return Yonlendir(Url.Action("Index", "EntIsEmri", new { id = model.EntIsEmri.SayacKayitNo }), Dil.Basarili);
 
         }
 
@@ -288,7 +288,7 @@ namespace OsosOracle.MvcUI.Controllers
 
             model.EntIsEmri.Parametre = "ALL_TASK";
             Kaydet(model);
-            return Yonlendir(Url.Action("Index", "EntIsEmri", new { id = model.EntIsEmri.SayacKayitNo }), "İş Emri kaydı başarıyla gerçekleştirilmiştir.");
+            return Yonlendir(Url.Action("Index", "EntIsEmri", new { id = model.EntIsEmri.SayacKayitNo }), Dil.Basarili);
 
         }
         #endregion

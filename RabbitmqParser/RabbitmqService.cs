@@ -3,7 +3,9 @@ using Newtonsoft.Json;
 using OsosOracle.Business.Concrete;
 using OsosOracle.DataLayer.Concrete.EntityFramework.Dal;
 using OsosOracle.DataLayer.Concrete.EntityFramework.Entity;
+using OsosOracle.Entities.ComplexType.EntIsEmriComplexTypes;
 using OsosOracle.Entities.Concrete;
+using OsosOracle.Entities.Enums;
 using OsosOracle.Framework.Utilities.ExtensionMethods;
 using RabbitMQ.Client;
 using RabbitMQ.Client.Events;
@@ -31,8 +33,21 @@ namespace RabbitmqParser
 
         public void Consume()
         {
+            //Console.WriteLine("Ent İş Emri Sorgulanıyor");
+            //EfEntIsEmriDal entIsEmriDal = new EfEntIsEmriDal();
+            //var list = entIsEmriDal.DetayGetir(new EntIsEmriAra { KonsSeriNo = "359855074432786", IsEmriDurumKayitNo = enumIsEmirleriDurum.Bekliyor.GetHashCode() });
+            //if (list.Count > 0)
+            //{
+            //    Console.WriteLine("Komut Bulundu");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Komut Bulunamadı");
+            //}
+
+
             // test hamdata
-           // string testData = @"{'KonsSeriNo':'','Ip':'178.241.123.72','Data':'fEVMTTExMQ0KMjIuNi4yMCA3OjIwDQo4LjAuMC4wKDExMSkNCjguOTYuNTEuMCgxMDI2MSprKQ0KOC45Ni41MS4xKDAqaykNCjguMS44LjAoMCptMykNCjguMS44LjEoMCptMykNCjguMC45LjIoMjAtNi0yMikNCjguMC45LjEoNzoyMDozNCkNCjguMC45LjUoMSkNCjguMS4xLjAoMDAxMDExMDApDQo4LjEuMS4xKDAwMDAwMDAxKQ0KOC4xLjEuMig2NDQ5MDA1LDAsMTAyNjEsMCw4NDIxNTA0NDYsOTQ4OSwwLDAsMCwwLDAsMCwwLDAsMCwwLDAsMCwwLDAsMCwwLDAsLTEsMTAsOTQ4OSw3OSkNCjkuMC4wLjAoMDAwMDApDQo5LjAuMC4xKDE4NDksMjk4NywyMCw5OSw1MDAwLDk5OTk5OSw5OTk5OTksOTk5OTk5LDk5OTk5OSwxMDAwLDEwMDAsMTAwMCwxMDAwLDEwMDApDQo5LjAuMC4yKEwwMDM2KQ0KOS4wLjAuMygzLjU5ODAwMCw0LjAyMzAwMCkNCjkuMC4wLjQoMjIyLDEpDQo5LjAuMC41KDAsMCwwLDAsMCkNCjkuMC4wLjYoNjAsMSw5MDUyLDkwNTIpDQo5LjAuMC43KDI3LDExLDM0LDAsOTQ4OSwwKQ0K'}";
+            // string testData = @"{'KonsSeriNo':'','Ip':'178.241.123.72','Data':'fEVMTTExMQ0KMjIuNi4yMCA3OjIwDQo4LjAuMC4wKDExMSkNCjguOTYuNTEuMCgxMDI2MSprKQ0KOC45Ni41MS4xKDAqaykNCjguMS44LjAoMCptMykNCjguMS44LjEoMCptMykNCjguMC45LjIoMjAtNi0yMikNCjguMC45LjEoNzoyMDozNCkNCjguMC45LjUoMSkNCjguMS4xLjAoMDAxMDExMDApDQo4LjEuMS4xKDAwMDAwMDAxKQ0KOC4xLjEuMig2NDQ5MDA1LDAsMTAyNjEsMCw4NDIxNTA0NDYsOTQ4OSwwLDAsMCwwLDAsMCwwLDAsMCwwLDAsMCwwLDAsMCwwLDAsLTEsMTAsOTQ4OSw3OSkNCjkuMC4wLjAoMDAwMDApDQo5LjAuMC4xKDE4NDksMjk4NywyMCw5OSw1MDAwLDk5OTk5OSw5OTk5OTksOTk5OTk5LDk5OTk5OSwxMDAwLDEwMDAsMTAwMCwxMDAwLDEwMDApDQo5LjAuMC4yKEwwMDM2KQ0KOS4wLjAuMygzLjU5ODAwMCw0LjAyMzAwMCkNCjkuMC4wLjQoMjIyLDEpDQo5LjAuMC41KDAsMCwwLDAsMCkNCjkuMC4wLjYoNjAsMSw5MDUyLDkwNTIpDQo5LjAuMC43KDI3LDExLDM0LDAsOTQ4OSwwKQ0K'}";
             //string testData = @"{'KonsSeriNo':'359855072144409','Ip':'178.244.61.189','Data':'RFNQMDowMDA2OjM1OT
             //g1NTA3MjE0NDQwOTpWIDIuMDAuNzALOjU6MToyMDEyOjgtMTAtMjAyMC0yMy00Ny0xMzoyMDowfEVMTT
             //IwMjAxMDA2DQo4LjEwLjIwIDIzOjQ3DQo4LjAuMC4wKDIwMjAxMDA2KQ0KOC45Ni41MS4wKDUwMDAqay
@@ -74,7 +89,8 @@ namespace RabbitmqParser
         private void StartParse(EntHamData hamdata)
         {
 
-            var encoding = new UTF8Encoding();
+          
+                var encoding = new UTF8Encoding();
 
 //                        string HamData = @"DSP0:0006:359855072117272:V 2.00.16:5:1:2012:29-10-2020-11-30-21:11:0|ELM111
 //            29.10.20 11:30
@@ -302,26 +318,26 @@ namespace RabbitmqParser
                         string dataString = gelenData.Substring(pStart + 1, pStop - (pStart + 1));
                         string[] data = dataString.Split(',');
                         //Geçiçi kapatıldı hata veren okuma var
-                        //Integer2Byte IlkPulseTarih = new Integer2Byte(Convert.ToUInt16(data[0]));
-                        //Integer2Byte SonPulseTarih = new Integer2Byte(Convert.ToUInt16(data[1]));
-                        //Integer2Byte BorcTarih = new Integer2Byte(Convert.ToUInt16(data[2]));
-                        //sayacVeri.IlkPulseTarih = TarihDuzenle(IlkPulseTarih.bir, IlkPulseTarih.iki);
-                        //sayacVeri.SonPulseTarih = TarihDuzenle(SonPulseTarih.bir, SonPulseTarih.iki);
-                        //sayacVeri.BorcTarih = TarihDuzenle(BorcTarih.bir, BorcTarih.iki);
-                        //sayacVeri.MaxDebi = data[3];
-                        //sayacVeri.MaxDebiSinir = data[4];
+                        Integer2Byte IlkPulseTarih = new Integer2Byte(Convert.ToUInt16(data[0]));
+                        Integer2Byte SonPulseTarih = new Integer2Byte(Convert.ToUInt16(data[1]));
+                        Integer2Byte BorcTarih = new Integer2Byte(Convert.ToUInt16(data[2]));
+                        sayacVeri.IlkPulseTarih = TarihDuzenle(IlkPulseTarih.bir, IlkPulseTarih.iki);
+                        sayacVeri.SonPulseTarih = TarihDuzenle(SonPulseTarih.bir, SonPulseTarih.iki);
+                        sayacVeri.BorcTarih = TarihDuzenle(BorcTarih.bir, BorcTarih.iki);
+                        sayacVeri.MaxDebi = data[3];
+                        sayacVeri.MaxDebiSinir = data[4];
                     }
                     else if (gelenData.Contains("9.0.0.6"))
                     {
                         string dataString = gelenData.Substring(pStart + 1, pStop - (pStart + 1));
                         string[] data = dataString.Split(',');
                         //Geçiçi olarak kapatıldı
-                        //sayacVeri.DonemGun = data[0];
-                        //sayacVeri.Donem = data[1];
-                        //Integer2Byte VanaAcmaTarih = new Integer2Byte(Convert.ToUInt16(data[2]));
-                        //sayacVeri.VanaAcmaTarih = TarihDuzenle(VanaAcmaTarih.bir, VanaAcmaTarih.iki);
-                        //Integer2Byte VanaKapamaTarih = new Integer2Byte(Convert.ToUInt16(data[2]));
-                        //sayacVeri.VanaKapamaTarih = TarihDuzenle(VanaKapamaTarih.bir, VanaKapamaTarih.iki);
+                        sayacVeri.DonemGun = data[0];
+                        sayacVeri.Donem = data[1];
+                        Integer2Byte VanaAcmaTarih = new Integer2Byte(Convert.ToUInt16(data[2]));
+                        sayacVeri.VanaAcmaTarih = TarihDuzenle(VanaAcmaTarih.bir, VanaAcmaTarih.iki);
+                        Integer2Byte VanaKapamaTarih = new Integer2Byte(Convert.ToUInt16(data[2]));
+                        sayacVeri.VanaKapamaTarih = TarihDuzenle(VanaKapamaTarih.bir, VanaKapamaTarih.iki);
 
                     }
                     else if (gelenData.Contains("9.0.0.7"))
@@ -329,10 +345,10 @@ namespace RabbitmqParser
                         string dataString = gelenData.Substring(pStart + 1, pStop - (pStart + 1));
                         string[] data = dataString.Split(',');
                         //Geçiçi olarak kapatıldı
-                        //sayacVeri.Sicaklik = data[0];
-                        //sayacVeri.MinSicaklik = data[1];
-                        //sayacVeri.MaxSicaklik = data[2];
-                        //sayacVeri.YanginModu = data[3];
+                        sayacVeri.Sicaklik = data[0];
+                        sayacVeri.MinSicaklik = data[1];
+                        sayacVeri.MaxSicaklik = data[2];
+                        sayacVeri.YanginModu = data[3];
 
                         //Integer2Byte SonYuklenenKrediTarih = new Integer2Byte(Convert.ToUInt16(data[4]));
                         //sayacVeri.SonYuklenenKrediTarih = TarihDuzenle(SonYuklenenKrediTarih.bir, SonYuklenenKrediTarih.iki);

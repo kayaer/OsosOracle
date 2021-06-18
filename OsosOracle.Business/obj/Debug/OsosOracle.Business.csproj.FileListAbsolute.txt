@@ -591,10 +591,10 @@ C:\Projeler\Mısır\OsosOracle\OsosOracle.Business\bin\Debug\System.Web.WebPages
 C:\Projeler\Mısır\OsosOracle\OsosOracle.Business\bin\Debug\System.Web.Razor.xml
 C:\Projeler\Mısır\OsosOracle\OsosOracle.Business\bin\Debug\System.Web.WebPages.Deployment.xml
 C:\Projeler\Mısır\OsosOracle\OsosOracle.Business\bin\Debug\OsosOracle.Business.pssym
-C:\Projeler\Mısır\OsosOracle\OsosOracle.Business\obj\Debug\OsosOracle.Business.csprojAssemblyReference.cache
 C:\Projeler\Mısır\OsosOracle\OsosOracle.Business\obj\Debug\OsosOracle.Business.csproj.CoreCompileInputs.cache
 C:\Projeler\Mısır\OsosOracle\OsosOracle.Business\obj\Debug\OsosOracle.Business.csproj.CopyComplete
 C:\Projeler\Mısır\OsosOracle\OsosOracle.Business\obj\Debug\OsosOracle.Business.dll.postsharp
 C:\Projeler\Mısır\OsosOracle\OsosOracle.Business\obj\Debug\OsosOracle.Business.dll
 C:\Projeler\Mısır\OsosOracle\OsosOracle.Business\obj\Debug\OsosOracle.Business.pdb
 C:\Projeler\Mısır\OsosOracle\OsosOracle.Business\obj\Debug\PostSharpHost.config
+C:\Projeler\Mısır\OsosOracle\OsosOracle.Business\obj\Debug\OsosOracle.Business.csproj.AssemblyReference.cache
